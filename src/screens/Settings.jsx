@@ -7,7 +7,7 @@ import { Confirm, Sheet } from '../components/ui.jsx';
 import { convertLegacyRecipe } from '../lib/legacy.js';
 
 export default function Settings({ onClose }) {
-  const { user, userRecipes, saveRecipe, household, me, memberCount, createInvite, joinHousehold, leaveHousehold } = useData();
+  const { user, userRecipes, saveRecipe, household, me, overrideIds, restoreAllSeeds, memberCount, createInvite, joinHousehold, leaveHousehold } = useData();
   const [code, setCode] = React.useState('');
   const [joinCode, setJoinCode] = React.useState('');
   const [confirmJoin, setConfirmJoin] = React.useState(false);
@@ -61,6 +61,7 @@ export default function Settings({ onClose }) {
           {memberCount > 1 && <button onClick={() => setConfirmLeave(true)} className="text-xs font-bold text-red-500">Esci da questo nucleo</button>}
           {err && <p className="text-xs text-red-500">{err}</p>}
         </div>
+        {overrideIds.length > 0 && <button onClick={() => { restoreAllSeeds(); setMsg('Ricette precaricate ripristinate.'); }} className="w-full p-4 bg-slate-50 rounded-2xl flex items-center gap-3 text-slate-700 font-bold active:scale-[0.98]">Ripristina le ricette precaricate ({overrideIds.length} modificate o eliminate)</button>}
         <button onClick={exportAll} className={btn}><Download className="w-5 h-5" /> Esporta copia di sicurezza</button>
         <button onClick={() => fileRef.current?.click()} className={btn}><Upload className="w-5 h-5" /> Importa ricette da file JSON</button>
         <input ref={fileRef} type="file" accept="application/json,.json" className="hidden" onChange={importFile} />

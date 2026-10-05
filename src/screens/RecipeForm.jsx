@@ -1,11 +1,11 @@
 import React from 'react';
 import { Camera, Plus, Trash2, X, Pencil } from 'lucide-react';
-import { CATEGORIES, FOOD_EMOJIS, getCategoryEmoji } from '../lib/format.js';
+import { DEFAULT_EMOJI, FOOD_EMOJIS } from '../lib/format.js';
 import { GROUPS, UNITS, guessGroup } from '../lib/groups.js';
 import { compressImage } from '../lib/image.js';
 
 export const emptyRecipe = () => ({
-  id: null, own: true, title: '', category: 'Pranzo', time: 'media', minutes: '', diet: 'vegan', takeaway: false, emoji: null, photo: null,
+  id: null, own: true, title: '', time: 'media', minutes: '', diet: 'vegan', takeaway: false, emoji: null, photo: null,
   ingredients: [{ name: '', qty: '', unit: 'g', group: 'other' }], stepsText: '', notes: '', source: null,
 });
 
@@ -59,7 +59,7 @@ export default function RecipeForm({ data, onChange, onClose, onSave }) {
 
       <div className="bg-white p-5 rounded-3xl shadow-soft space-y-4">
         <div className="relative h-44 rounded-2xl overflow-hidden bg-brand-50 flex items-center justify-center">
-          {data.photo ? <img src={data.photo} alt="" className="w-full h-full object-cover" /> : <button onClick={() => setEmojiOpen(!emojiOpen)} aria-label="Scegli emoji" className="text-7xl relative">{data.emoji || getCategoryEmoji(data.category)}<span className="absolute -bottom-1 -right-3 bg-white p-1.5 rounded-full shadow"><Pencil className="w-3.5 h-3.5 text-slate-500" /></span></button>}
+          {data.photo ? <img src={data.photo} alt="" className="w-full h-full object-cover" /> : <button onClick={() => setEmojiOpen(!emojiOpen)} aria-label="Scegli emoji" className="text-7xl relative">{data.emoji || DEFAULT_EMOJI}<span className="absolute -bottom-1 -right-3 bg-white p-1.5 rounded-full shadow"><Pencil className="w-3.5 h-3.5 text-slate-500" /></span></button>}
           <div className="absolute bottom-3 right-3 flex gap-2">
             {data.photo && <button onClick={() => onChange({ ...data, photo: null })} className="px-3 py-2 bg-white/90 rounded-full text-xs font-bold text-red-500 active:scale-95">Togli foto</button>}
             <button onClick={() => fileRef.current?.click()} disabled={photoBusy} className="px-4 py-2 bg-white/90 rounded-full text-sm font-bold text-brand-700 flex items-center gap-2 active:scale-95"><Camera className="w-4 h-4" /> {photoBusy ? '...' : data.photo ? 'Cambia' : 'Foto del piatto'}</button>
@@ -72,8 +72,7 @@ export default function RecipeForm({ data, onChange, onClose, onSave }) {
           </div>
         )}
         <div><label className={label} htmlFor="r-title">Titolo</label><input id="r-title" className={`${input} font-display font-bold text-lg`} placeholder="Es. Pasta al pesto" value={data.title} onChange={(e) => onChange({ ...data, title: e.target.value })} /></div>
-        <div className="grid grid-cols-2 gap-3">
-          <div><label className={label}>Categoria</label><select className={input} value={data.category} onChange={(e) => onChange({ ...data, category: e.target.value })}>{CATEGORIES.map((c) => <option key={c}>{c}</option>)}</select></div>
+        <div className="grid grid-cols-1 gap-3">
           <div><label className={label}>Tempo</label><select className={input} value={data.time} onChange={(e) => onChange({ ...data, time: e.target.value })}><option value="breve">Breve (fino a 20 min)</option><option value="media">Media (20-45 min)</option><option value="lunga">Lunga (oltre 45)</option></select></div>
         </div>
         <div>

@@ -2,38 +2,26 @@
 //
 // Le ricette sono scritte per UNA porzione di riferimento. Per ogni persona e pasto si può indicare:
 //  - mult: moltiplicatore generale della porzione (es. 0,5 per un bambino);
-//  - targets: dose in grammi per componente (carb, protein, veg, fat, fruit, dairy).
-// Se per una componente c'è una dose e la ricetta ne contiene (in g/ml), tutti gli ingredienti di quella
-// componente vengono scalati per arrivarci; altrimenti si applica il moltiplicatore.
+//  - plan: il piano alimentare scritto dalla nutrizionista (vedi dietPlan.js). Gli ingredienti della ricetta che
+//    corrispondono a un alimento del piano prendono la quantità indicata; gli altri seguono il moltiplicatore.
+import { applyPlanDoses } from './dietPlan.js';
+import { SLOTS } from './meals.js';
 
-export const SLOTS = ['Colazione', 'Spuntino 1', 'Pranzo', 'Spuntino 2', 'Cena'];
-export const SLOT_CATEGORY = { Colazione: 'Colazione', 'Spuntino 1': 'Spuntino', Pranzo: 'Pranzo', 'Spuntino 2': 'Spuntino', Cena: 'Cena' };
-
-const isMass = (u) => u === 'g' || u === 'ml';
-
-export const groupBase = (ingredients) => {
-  const base = {};
-  for (const i of ingredients) {
-    if (isMass(i.unit) && i.qty > 0) base[i.group] = (base[i.group] || 0) + i.qty;
-  }
-  return base;
-};
+export { SLOTS };
 
 export const mealOf = (member, slot) => {
   const m = member?.meals?.[slot] || {};
   // gli ospiti hanno una sola porzione (member.mult) valida per ogni pasto
   const mult = Number(m.mult) > 0 ? Number(m.mult) : Number(member?.mult) > 0 ? Number(member.mult) : 1;
-  return { eats: m.eats !== false, mult, targets: m.targets || {}, note: m.note || '' };
+  return { eats: m.eats !== false, mult, plan: m.plan || [], planText: m.planText || '', note: m.note || '' };
 };
 
 export const scaleRecipe = (recipe, meal) => {
-  const base = groupBase(recipe.ingredients || []);
-  return (recipe.ingredients || []).map((i) => {
-    const target = Number(meal.targets?.[i.group]);
-    // La dose per componente scala solo gli ingredienti pesati (g/ml): spezie, spicchi e cucchiai seguono la porzione generale
-    const factor = target > 0 && base[i.group] > 0 && isMass(i.unit) ? target / base[i.group] : meal.mult;
-    return { ...i, qty: i.unit === 'q.b.' ? 0 : i.qty * factor };
-  });
+  const base = (recipe.ingredients || []).map((i) => ({ ...i, qty: i.unit === 'q.b.' ? 0 : i.qty * meal.mult }));
+  if (!meal.plan?.length) return base;
+  // il piano indica quantità assolute: si applicano alle quantità della ricetta per una porzione, non a quelle moltiplicate
+  const planned = applyPlanDoses((recipe.ingredients || []).map((i) => ({ ...i })), meal.plan);
+  return base.map((b, k) => (planned[k].qty !== (recipe.ingredients[k].qty) ? { ...b, qty: planned[k].qty } : b));
 };
 
 // Chi c'è a un pasto: chi di solito lo mangia, meno gli assenti di quel giorno, più gli ospiti.

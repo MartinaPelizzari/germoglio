@@ -31,6 +31,3 @@ export const guessGroup = (name = '') => {
   for (const [group, words] of KEYWORDS) if (words.some((w) => n.includes(w))) return group;
   return 'other';
 };
-
-export const slotForCategory = (category) =>
-  ({ Colazione: 'Colazione', Spuntino: 'Spuntino 1', Pranzo: 'Pranzo', Cena: 'Cena', Contorno: 'Pranzo' })[category] || 'Pranzo';

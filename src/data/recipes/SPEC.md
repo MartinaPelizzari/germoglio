@@ -40,3 +40,11 @@ Regole:
 Diritto d'autore: NON copiare il testo delle fonti. Gli elenchi di ingredienti sono fatti, ma il procedimento va riscritto con parole tue, con la tua struttura. Non inserire foto né link a foto.
 
 Stile: italiano naturale e corretto, con accenti e apostrofi giusti (è, perché, l'olio). Nessuna lineetta lunga (usa virgole o due punti). Niente emoji nei testi, tranne il campo `emoji`.
+
+## Aggiornamenti (ricette dal web)
+
+- `category` è un indizio interno (non compare più nell'app): serve solo a capire se un piatto va bene per colazione, spuntino o pasto principale quando nessuno ha un piano scritto. Usa Colazione, Spuntino, Pranzo (o Cena) per i piatti principali, Contorno per i contorni.
+- `diet`: una ricetta con pesce è "pescetarian" (va bene anche agli onnivori: l'app lo sa), con carne "omnivore".
+- Ricette prese dal web: `source` è OBBLIGATORIO con nome del sito e URL della pagina che hai davvero aperto con WebFetch. Se non riesci ad aprire la pagina, non aggiungere la ricetta. Il procedimento va riscritto con parole tue (mai copiato); gli ingredienti si riportano come fatti, riscalati a UNA porzione adulta.
+- Id con prefisso `web-` (es. `web-pranzo-pasta-ceci`).
+- Preferisci piatti equilibrati (una fonte di carboidrati, una di proteine e verdure) o contorni/colazioni/spuntini chiaramente completi.

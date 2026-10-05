@@ -1,15 +1,9 @@
-import colazione from './recipes/colazione.json';
-import spuntino from './recipes/spuntino.json';
-import pranzo from './recipes/pranzo.json';
-import cena from './recipes/cena.json';
-import contorno from './recipes/contorno.json';
-import pranzoOnnivoro from './recipes/pranzo-onnivoro.json';
-import cenaOnnivoro from './recipes/cena-onnivoro.json';
-import colazioneOnnivoro from './recipes/colazione-onnivoro.json';
-import asporto from './recipes/asporto.json';
+// Ricettario precaricato: tutti i file JSON della cartella recipes. Uguale per tutti; in app si possono
+// modificare o eliminare (le modifiche stanno nel nucleo e non toccano questi file).
+const files = import.meta.glob('./recipes/*.json', { eager: true });
 
-// Ricettario precaricato: uguale per tutti, in sola lettura. Le ricette personali stanno su Firestore.
-export const SEED_RECIPES = [...colazione, ...colazioneOnnivoro, ...pranzo, ...pranzoOnnivoro, ...asporto, ...cena, ...cenaOnnivoro, ...spuntino, ...contorno].map((r) => ({
-  ...r,
-  seed: true,
-}));
+export const SEED_RECIPES = Object.values(files)
+  .flatMap((m) => m.default)
+  .map((r) => ({ ...r, seed: true }));
+
+export const SEED_IDS = new Set(SEED_RECIPES.map((r) => r.id));

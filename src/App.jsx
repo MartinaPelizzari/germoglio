@@ -2,7 +2,7 @@ import React from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { BookOpen, Calendar, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, User, Users } from 'lucide-react';
 import { auth } from './firebase.js';
-import { DataProvider, useData } from './hooks/data.jsx';
+import { DataProvider, isFreeProfile, useData } from './hooks/data.jsx';
 import { Confirm, Spinner } from './components/ui.jsx';
 import AuthScreen from './screens/AuthScreen.jsx';
 import Onboarding from './screens/Onboarding.jsx';
@@ -33,14 +33,14 @@ function ViewSwitch({ value, onChange }) {
 }
 
 export function Main() {
-  const { household, me, memberCount, saveProfile, saveRecipe, deleteRecipe, user } = useData();
+  const { household, me, memberCount, saveProfile, claimProfile, saveRecipe, deleteRecipe, user } = useData();
   const [tab, setTabState] = React.useState('planner');
   const tabRef = React.useRef('planner');
   const tabHist = React.useRef([]);
   const [weekDate, setWeekDate] = React.useState(new Date());
   const [dayIndex, setDayIndex] = React.useState(todayIndex());
   const [shopDays, setShopDays] = React.useState([0, 1, 2, 3, 4, 5, 6]);
-  const [filters, setFilters] = React.useState({ cat: 'Tutte', time: 'Tutte', diet: 'Tutte', origin: 'tutte', q: '', free: [] });
+  const [filters, setFilters] = React.useState({ time: 'Tutte', diet: 'Tutte', origin: 'tutte', q: '', free: [], contains: [] });
   const [draft, setDraft] = React.useState(emptyRecipe());
   const [confirm, setConfirm] = React.useState(null);
   const [settings, setSettings] = React.useState(false);
@@ -66,11 +66,11 @@ export function Main() {
   const changeView = (v) => { setViewMode(v); try { localStorage.setItem('viewMode', v); } catch { /* ignora */ } };
 
   if (household === undefined) return <div className="h-full flex items-center justify-center"><Spinner /></div>;
-  if (!me) return <Onboarding user={user} index={household.members.length} onDone={saveProfile} />;
+  if (!me) return <Onboarding user={user} index={household.members.length} freeProfiles={household.members.filter(isFreeProfile)} onClaim={claimProfile} onDone={saveProfile} />;
 
   const edit = (r) => { setDraft(toDraft(r)); setTab('add'); };
   const duplicate = (r) => { setDraft({ ...toDraft(r), id: null, own: true, source: r.source || null, title: r.title }); setTab('add'); };
-  const askDelete = (r) => setConfirm({ title: 'Eliminare la ricetta?', msg: 'Questa azione non può essere annullata.', action: () => { deleteRecipe(r.id); setConfirm(null); } });
+  const askDelete = (r) => setConfirm({ title: 'Eliminare la ricetta?', msg: r.seed ? 'La ricetta sparisce dall\'elenco. Puoi ripristinarla da Impostazioni.' : 'Questa azione non può essere annullata.', action: () => { deleteRecipe(r.id); setConfirm(null); } });
   const closeDraft = () => {
     const dirty = draft.title || draft.ingredients[0]?.name;
     const exit = () => { setDraft(emptyRecipe()); setConfirm(null); setTab('recipes'); };

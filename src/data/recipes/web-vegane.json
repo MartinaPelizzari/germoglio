@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "web-pranzo-insalata-farro-carote-ceci",
+    "title": "Insalata di farro, carote al forno e ceci con pesto di mandorle",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Formaggio vegetale tipo feta",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mandorle pelate",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il farro in acqua salata per il tempo indicato sulla confezione, poi scolatelo e lasciatelo raffreddare.",
+      "Tagliate le carote a rondelle, conditele con un filo d'olio e sale e cuocetele in forno a 210 °C per circa 30 minuti, finché risultano dorate.",
+      "Frullate le mandorle con l'aglio, il lievito alimentare, un cucchiaio d'olio, un pizzico di sale e un cubetto di ghiaccio per ottenere un pesto cremoso.",
+      "Mescolate in una ciotola farro, carote, ceci e formaggio vegetale a dadini.",
+      "Condite con il pesto, completate con i semi di zucca e servite a temperatura ambiente."
+    ],
+    "source": {
+      "name": "Cucina Botanica",
+      "url": "https://www.cucinabotanica.com/ricette/insalata-di-farro-e-carote-colorate/"
+    },
+    "notes": "Dosi riportate a una porzione ipotizzando 4 porzioni (la fonte non le indica). In frigorifero si conserva 3 giorni."
+  },
+  {
+    "id": "web-pranzo-insalata-farro-ceci-verdure-pesto",
+    "title": "Insalata di farro, ceci e verdure con pesto",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Melanzana",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 8,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pinoli",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il farro in acqua salata secondo i tempi della confezione e scolatelo.",
+      "Tagliate a dadini melanzana, zucchina e peperone e fateli rosolare in padella con un filo d'olio e sale, a fuoco vivace e col coperchio, per circa 5 minuti.",
+      "Frullate basilico, pinoli, lievito alimentare, olio e un pizzico di sale per fare un pesto veloce.",
+      "Unite in una ciotola farro, verdure, pomodorini a metà e ceci, poi condite con il pesto e lasciate riposare."
+    ],
+    "source": {
+      "name": "IoScelgoVeg",
+      "url": "https://www.ioscelgoveg.it/ricette/insalata-di-farro-ceci-e-verdure-con-pesto/"
+    },
+    "notes": "Ottima da preparare in anticipo. Dosi a una porzione ipotizzando 4 porzioni (la fonte indica 3-4)."
+  },
+  {
+    "id": "web-cena-zuppa-orzo-patate-zucca-tofu",
+    "title": "Zuppa d'orzo con patate, zucca e tofu affumicato",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "zuppa",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 45,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Patate",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu affumicato",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucca",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salvia",
+        "qty": 2,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Paprika",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 300,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate la salvia e fatela insaporire in una pentola con l'olio e la paprika.",
+      "Aggiungete carota, sedano e cipolla a dadini con un pizzico di sale e fateli appassire per qualche minuto.",
+      "Unite zucca e patata a cubetti e fate saltare per un paio di minuti.",
+      "Versate l'orzo sciacquato e coprite con il brodo bollente.",
+      "Cuocete a fuoco dolce per circa 20 minuti, aggiungendo il tofu a dadini a metà cottura e altro brodo se serve.",
+      "Servite ben caldo; in un thermos regge benissimo fino all'ora di pranzo."
+    ],
+    "source": {
+      "name": "Vegolosi.it",
+      "url": "https://www.vegolosi.it/ricette-vegane-semplici-veloci/zuppa-orzo-patate-zucca-tofu-affumicato/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Si conserva 2 giorni in frigorifero."
+  },
+  {
+    "id": "web-cena-spezzatino-seitan-patate-carote",
+    "title": "Spezzatino di seitan con patate e carote",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "seitan",
+      "secondo"
+    ],
+    "ingredients": [
+      {
+        "name": "Seitan",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 120,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Porro",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 90,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 7,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Paprika",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 100,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fate un soffritto con cipolla, parte della carota e aglio, poi aggiungete porro, un po' di patata, salvia, alloro e la passata.",
+      "Cuocete per 15 minuti e frullate il sugo con il minipimer fino a renderlo cremoso.",
+      "Aggiungete le restanti patate e carote a pezzi più grandi e allungate con il brodo.",
+      "Rosolate a parte il seitan a dadini con curcuma, paprika e salsa di soia.",
+      "Unite il seitan al sugo e lasciate insaporire 10 minuti, finché le patate sono tenere.",
+      "Completate con prezzemolo fresco e servite."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/spezzatino-di-seitan-la-ricetta/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Si conserva 3 giorni in frigorifero e si può congelare."
+  },
+  {
+    "id": "web-pranzo-spaghetti-riso-tofu-verdure",
+    "title": "Spaghetti di riso con tofu e verdure al wok",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍜",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "tofu",
+      "orientale"
+    ],
+    "ingredients": [
+      {
+        "name": "Spaghetti di riso integrali",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Porro",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cavolo cappuccio viola",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 3,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.125,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Tamari",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Immergete gli spaghetti in acqua bollente per 4-5 minuti, mescolando con una forchetta, poi scolateli.",
+      "Tagliate il tofu a striscioline e le verdure in diagonale; tritate aglio e zenzero.",
+      "Rosolate il tofu in un wok con olio e peperoncino, sfumate con tamari e limone e mettetelo da parte con il sesamo.",
+      "Nello stesso wok soffriggete aglio e zenzero, aggiungete le verdure e saltatele a fuoco alto.",
+      "Unite spaghetti e tofu, saltate con un goccio di tamari e servite caldo."
+    ],
+    "source": {
+      "name": "IoScelgoVeg",
+      "url": "https://www.ioscelgoveg.it/ricette/spaghetti-di-riso-con-tofu-e-verdure/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Al posto del cavolo viola vanno bene le zucchine."
+  },
+  {
+    "id": "web-pranzo-insalata-riso-tofu-olive",
+    "title": "Insalata di riso con tofu marinato e olive",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "riso",
+      "tofu",
+      "freddo"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive denocciolate",
+        "qty": 18,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Capperi dissalati",
+        "qty": 0.25,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano secco",
+        "qty": 0.25,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 5,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate il tofu a cubetti e marinatelo con origano, succo di limone e salsa di soia, meglio dalla sera prima.",
+      "Cuocete il riso in acqua salata, scolatelo e raffreddatelo sotto l'acqua fredda.",
+      "Tagliate i pomodorini in quarti e uniteli a olive e capperi.",
+      "Mescolate riso, verdure e tofu marinato, condite con olio, pepe e basilico fresco.",
+      "Fate riposare in frigorifero almeno 30 minuti prima di servire o di chiudere nel contenitore."
+    ],
+    "source": {
+      "name": "Il Club delle Ricette",
+      "url": "https://www.ilclubdellericette.it/ricetta/insalata-di-riso-vegan-con-tofu-e-olive"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Si conserva 2-3 giorni in frigorifero."
+  },
+  {
+    "id": "web-cena-minestra-pasta-lenticchie",
+    "title": "Minestra di pasta e lenticchie",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "zuppa"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta (cannolicchi)",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie secche",
+        "qty": 75,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mettete in ammollo le lenticchie per un paio d'ore, poi scolatele; tritate finemente cipolla, carota e sedano.",
+      "Fate rosolare il trito nell'olio a fuoco basso, poi unite la passata e lasciate insaporire 3-4 minuti.",
+      "Aggiungete le lenticchie e il brodo e cuocete finché sono tenere (circa un'ora in pentola normale, meno in pentola a pressione), allungando con acqua se serve.",
+      "Portate a bollore, aggiustate di sale e calate la pasta, mescolando spesso fino a cottura al dente.",
+      "Spegnete, lasciate riposare 2 minuti e servite con pepe e un filo d'olio."
+    ],
+    "source": {
+      "name": "GialloZafferano (Il chicco di mais)",
+      "url": "https://blog.giallozafferano.it/ilchiccodimais/minestra-di-pasta-e-lenticchie-ricetta-vegana/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4)."
+  },
+  {
+    "id": "web-pranzo-pasta-lenticchie-rosse-zucchine-carote",
+    "title": "Pasta di lenticchie rosse con zucchine e carote",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta di lenticchie rosse",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 0.25,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affettate sottili zucchine e carote e cuocetele in un tegame coperto con aglio tritato, olio, sale, pepe e qualche cucchiaio d'acqua per 10 minuti.",
+      "Lessate la pasta al dente in acqua salata, conservandone un mestolo di cottura.",
+      "Versate la pasta nel tegame con le verdure, unite la curcuma e amalgamate per un paio di minuti, aggiungendo acqua di cottura se serve.",
+      "Servite con basilico spezzettato e mandorle tritate."
+    ],
+    "source": {
+      "name": "GialloZafferano (Ricettando con Dany)",
+      "url": "https://blog.giallozafferano.it/ricettandocondany/pasta-di-lenticchie-rosse-con-zucchine-e-carote/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). La pasta di lenticchie unisce carboidrati e proteine, per questo è classificata come proteica."
+  },
+  {
+    "id": "web-pranzo-buddha-bowl-quinoa-ceci-patata-dolce",
+    "title": "Buddha bowl con quinoa, ceci croccanti e patata dolce",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥙",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "quinoa"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Patata dolce",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Avocado",
+        "qty": 50,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Misticanza",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori datterini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Amido di mais",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Paprika",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Aceto balsamico",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di sesamo nero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il forno a 180 °C. Condite i ceci con amido, lievito alimentare, paprika, un cucchiaio d'olio e sale e distribuiteli su una teglia.",
+      "Tagliate la patata dolce a cubetti, mescolatela con olio, aceto balsamico e un pizzico di sale e mettetela nella stessa teglia.",
+      "Infornate per 20-25 minuti, rigirando a metà cottura.",
+      "Intanto cuocete la quinoa ben sciacquata in acqua salata per 15-20 minuti e scolatela.",
+      "Componete la bowl con quinoa, ceci, patata, misticanza, datterini e avocado a fette; condite con tahina allungata con un po' d'acqua e semi di sesamo."
+    ],
+    "source": {
+      "name": "IoScelgoVeg",
+      "url": "https://www.ioscelgoveg.it/ricette/vegan-buddha-bowl-con-quinoa-e-ceci-al-forno/"
+    },
+    "notes": "Dosi a una porzione (fonte per 2). La fonte propone anche una salsa a base di yogurt vegetale e tahina o maionese vegetale."
+  },
+  {
+    "id": "web-cena-padellata-tempeh-curcuma-patate-zucchine",
+    "title": "Padellata di tempeh alla curcuma con patate e zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥘",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "tempeh",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Tempeh",
+        "qty": 85,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 130,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 130,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini datterini",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino fresco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 60,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate e asciugate il tempeh, tagliatelo a dadini e rosolatelo in padella con olio e curcuma fino a doratura.",
+      "Nel frattempo tagliate patate e zucchine a cubetti piccoli.",
+      "Nella stessa padella saltate le patate con olio, sale e rosmarino; quando iniziano a dorarsi unite le zucchine.",
+      "Bagnate con un po' di brodo, aggiungete il tempeh rosolato e i datterini affettati e coprite.",
+      "Cuocete a fuoco basso per circa 15 minuti, mescolando e aggiungendo liquido se necessario, poi pepate e servite."
+    ],
+    "source": {
+      "name": "Una vegetariana in cucina",
+      "url": "https://unavegetarianaincucina.it/tempeh-curcuma-patate-zucchine/"
+    },
+    "notes": "Dosi a una porzione ipotizzando 3 porzioni (fonte per 3-4)."
+  },
+  {
+    "id": "web-cena-zuppa-farro-fagioli-borlotti",
+    "title": "Zuppa di farro e fagioli borlotti",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 75,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli borlotti secchi",
+        "qty": 45,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Alloro",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Paprika",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mettete i fagioli in ammollo per 12 ore; tagliate sedano, carote e cipolla a cubetti.",
+      "Fate rosolare le verdure in pentola con olio, alloro, salvia, rosmarino e paprika.",
+      "Aggiungete i fagioli scolati e copriteli con il brodo; fate sobbollire per circa 25 minuti.",
+      "Unite il farro sciacquato e cuocete altri 20-25 minuti, finché è morbido.",
+      "Frullate un mestolo di zuppa e rimettetelo in pentola per renderla cremosa, poi aggiustate di sale e pepe."
+    ],
+    "source": {
+      "name": "Vegolosi.it",
+      "url": "https://www.vegolosi.it/ricette-vegane/zuppa-di-fagioli-e-farro/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Si conserva 3 giorni in frigorifero."
+  },
+  {
+    "id": "web-cena-minestra-riso-integrale-lenticchie",
+    "title": "Minestra di riso integrale e lenticchie",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "zuppa"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie secche",
+        "qty": 33,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Alloro",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Salvia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 2,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Paprika",
+        "qty": 0.125,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate l'olio in una pentola con alloro, salvia e rosmarino tritato.",
+      "Aggiungete sedano, carota e cipolla a dadini e fateli soffriggere brevemente.",
+      "Unite riso integrale e lenticchie sciacquati e copriteli con il brodo caldo.",
+      "Portate a bollore e cuocete per 40-45 minuti, finché riso e lenticchie sono teneri.",
+      "Regolate di sale e insaporite con salsa di soia, paprika e il succo di zenzero ottenuto grattugiandolo e strizzandolo."
+    ],
+    "source": {
+      "name": "Vegolosi.it",
+      "url": "https://www.vegolosi.it/ricette-vegane-semplici-veloci/minestra-di-riso-e-lenticchie/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Prezzemolo fresco a fine cottura, a piacere."
+  },
+  {
+    "id": "web-cena-polpette-patate-ceci-capperi",
+    "title": "Polpette di patate, ceci e capperi",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "patate"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 125,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di ceci",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "protein"
+      },
+      {
+        "name": "Farina di mandorle",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Capperi",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "veg"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbucciate le patate, tagliatele a cubetti e lessatele per circa 15 minuti; schiacciatele ancora calde e lasciatele raffreddare.",
+      "Unite alle patate capperi tritati, prezzemolo, olio, lievito alimentare, farina di mandorle e i ceci schiacciati.",
+      "Aggiungete pangrattato e farina di ceci fino a ottenere un impasto lavorabile e fatelo riposare un'ora in frigorifero.",
+      "Formate delle polpette schiacciate e cuocetele in padella antiaderente a fiamma media, qualche minuto per lato, fino a doratura."
+    ],
+    "source": {
+      "name": "Vegolosi.it",
+      "url": "https://www.vegolosi.it/ricette-vegane/polpette-vegane-patate-ai-ceci-e-capperi/"
+    },
+    "notes": "Dosi a una porzione (fonte per 4). Si conservano 3 giorni in frigorifero. Accompagnatele con un'insalata di stagione."
+  },
+  {
+    "id": "web-pranzo-riso-saltato-carciofi-ceci-lenticchie",
+    "title": "Riso saltato con carciofi, ceci e lenticchie",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "riso",
+      "legumi",
+      "schiscetta"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati cotto",
+        "qty": 125,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carciofi",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulite i carciofi eliminando le foglie dure, affettateli e teneteli in acqua con il succo di limone.",
+      "Scaldate l'olio con l'aglio a fuoco basso, aggiungete i carciofi scolati e fateli saltare con sale e pepe.",
+      "Versate il riso già cotto e sgranato e fatelo insaporire.",
+      "Unite ceci e lenticchie e proseguite per qualche minuto, aggiungendo un po' d'acqua se necessario.",
+      "Aggiustate di sale e completate con prezzemolo tritato."
+    ],
+    "source": {
+      "name": "GialloZafferano (Nota dolce)",
+      "url": "https://blog.giallozafferano.it/notadolce/riso-saltato-con-carciofi-ceci-ricetta/"
+    },
+    "notes": "Dosi a una porzione (fonte per 2). Ottimo per riciclare riso e legumi avanzati."
+  },
+  {
+    "id": "web-pranzo-insalata-orzo-verdure-piselli",
+    "title": "Insalata di orzo con finocchio, spinaci e piselli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "orzo",
+      "freddo"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Piselli surgelati",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Finocchio",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Timo fresco",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete l'orzo in acqua salata per 20-30 minuti, poi scolatelo e lasciatelo raffreddare.",
+      "Rosolate cipolla e finocchio affettati sottili in padella con l'olio, il timo e un pizzico di sale, finché sono appassiti.",
+      "Aggiungete i piselli con poca acqua e cuocete coperto per 5 minuti, poi unite gli spinaci tagliati grossolanamente per altri 5 minuti.",
+      "Unite l'orzo alle verdure, spremete il limone e mescolate bene.",
+      "Servite tiepida o fredda, anche nel contenitore da portare al lavoro."
+    ],
+    "source": {
+      "name": "GialloZafferano (MSP)",
+      "url": "https://blog.giallozafferano.it/msp/ricetta-insalata-di-orzo-con-verdure-e-piselli/"
+    },
+    "notes": "Dosi della fonte, già per una porzione (spinaci ridotti da 300 a 150 g). Si conserva 3-4 giorni in frigorifero."
+  },
+  {
+    "id": "web-cena-spezzatino-seitan-patate-soia",
+    "title": "Spezzatino di seitan e patate alla soia",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "seitan",
+      "secondo"
+    ],
+    "ingredients": [
+      {
+        "name": "Seitan",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 120,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Timo",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate la cipolla e fatela appassire nell'olio in una casseruola.",
+      "Aggiungete le patate a tocchetti e il brodo salato, profumate con rosmarino, timo e pepe.",
+      "Coprite e cuocete a fuoco dolce per circa 10 minuti, mescolando ogni tanto.",
+      "Unite il seitan a cubetti e la salsa di soia e proseguite per altri 10 minuti, finché le patate sono tenere.",
+      "Servite caldo o a temperatura ambiente."
+    ],
+    "source": {
+      "name": "GialloZafferano (Ricettando con Dany)",
+      "url": "https://blog.giallozafferano.it/ricettandocondany/ricetta-spezzatino-di-seitan-con-patate/"
+    },
+    "notes": "Dosi a una porzione (fonte per 2). Si conserva 2 giorni in frigorifero. Un contorno di verdure cotte lo completa."
+  },
+  {
+    "id": "web-cena-polpette-patate-crema-lenticchie-curry",
+    "title": "Polpette di patate e crema di lenticchie al curry",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 85,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Crema di lenticchie e curry",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fecola di patate",
+        "qty": 4,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbucciate le patate, tagliatele a cubetti e lessatele in acqua salata per 10-15 minuti, poi schiacciatele ancora calde e lasciatele intiepidire.",
+      "Condite il purè con sale, pepe, un cucchiaio d'olio, la fecola e la crema di lenticchie, e mescolate bene.",
+      "Formate palline della dimensione di una noce.",
+      "Passatele in un mix di sesamo, pangrattato e un filo d'olio, poi disponetele su carta forno.",
+      "Infornate a 200 °C per 15 minuti e terminate con 3 minuti di grill."
+    ],
+    "source": {
+      "name": "Vegolosi.it",
+      "url": "https://www.vegolosi.it/ricette-vegane-semplici-veloci/polpette-vegane-di-patate-e-hummus-al-curry/"
+    },
+    "notes": "Dosi a una porzione (fonte per 6). Per ottenere più proteine accompagnatele con legumi o tofu e un contorno di verdure."
+  },
+  {
+    "id": "web-pranzo-hamburger-lenticchie-patata",
+    "title": "Hamburger di lenticchie e patata",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie verdi secche",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 55,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di mais fioretto",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "veg"
+      },
+      {
+        "name": "Salvia",
+        "qty": 2,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Curry",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate le lenticchie in acqua salata per circa 20 minuti con un pezzetto di alga kombu o una foglia di alloro, poi scolatele e raffreddatele.",
+      "Lessate a parte la patata, lasciatela raffreddare e frullatela con le lenticchie, il prezzemolo e la salvia.",
+      "Trasferite in una ciotola, aggiungete curry, olio e sale e incorporate la farina fino a un impasto modellabile.",
+      "Formate due burger con un coppapasta su carta forno e infornate a 180 °C per circa 10 minuti per lato."
+    ],
+    "source": {
+      "name": "Vegolosi.it",
+      "url": "https://www.vegolosi.it/ricette-vegane/hamburger-di-lenticchie-vegani/"
+    },
+    "notes": "Dosi per 2 burger (la fonte ne fa 6). Si conservano 1-2 giorni in frigorifero e si congelano. Servirli con insalata o verdure cotte e pane integrale."
+  }
+]

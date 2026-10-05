@@ -20,7 +20,7 @@ export const buildRecency = (plans, targetWeekId) => {
     for (const slots of Object.values(p.days || {})) {
       for (const data of Object.values(slots || {})) {
         for (const item of data?.items || []) {
-          if (item.leftoverOf) continue;
+          if (item.leftoverOf || !item.recipeId) continue;
           if (!map.has(item.recipeId) || map.get(item.recipeId) > ago) map.set(item.recipeId, ago);
         }
       }

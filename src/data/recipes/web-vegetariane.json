@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "web-pranzo-polpette-lenticchie-forno",
+    "title": "Polpette di lenticchie al forno con insalata",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🥗",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "polpette"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie cotte",
+        "qty": 250,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pancarré",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "carb"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla le lenticchie con il pancarré, l'uovo, il parmigiano, la paprika, la curcuma, sale e pepe fino a ottenere un impasto omogeneo.",
+      "Forma delle palline da circa 20 g, schiacciale e metti al centro un cubetto di mozzarella, poi richiudile bene.",
+      "Sciogli la farina in 85 ml di acqua per ottenere una pastella densa. Passa le polpette prima nella pastella e poi nel pangrattato, premendo appena.",
+      "Disponile su una teglia con carta forno, irrorale con un filo d'olio e cuocile a 180 gradi per 30-35 minuti, girandole a metà cottura.",
+      "Servile tiepide con l'insalata mista condita a piacere."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/ricetta-polpette-di-lenticchie/"
+    },
+    "notes": "La fonte le frigge per 5 minuti in olio di semi: qui è usata la variante al forno indicata nella stessa pagina. Si conservano 2-3 giorni in frigorifero."
+  },
+  {
+    "id": "web-pranzo-frittata-zucchine-basilico",
+    "title": "Frittata di zucchine e basilico con pane",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "zucchine"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uova",
+        "qty": 1.25,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 18,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Latte",
+        "qty": 12,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Trita finemente la cipolla e falla appassire per qualche minuto in un filo d'olio.",
+      "Aggiungi le zucchine a cubetti e cuocile fino a farle colorire, poi lasciale intiepidire.",
+      "In una ciotola sbatti uova, latte, parmigiano, sale e pepe, spezza il basilico con le mani e unisci le zucchine.",
+      "Versa il composto in una padella antiaderente unta, copri e cuoci a fuoco medio per 10 minuti.",
+      "Gira la frittata aiutandoti con un piatto e cuocila altri 8-10 minuti senza coperchio. Servila con il pane."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Allacciate il grembiule",
+      "url": "https://blog.giallozafferano.it/allacciateilgrembiule/frittata-di-zucchine/"
+    },
+    "notes": "In alternativa cuocila in forno a 180 gradi per circa 25 minuti. Ottima anche fredda."
+  },
+  {
+    "id": "web-pranzo-risotto-zucca-gorgonzola",
+    "title": "Risotto zucca e gorgonzola",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 80,
+    "emoji": "🎃",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "zucca"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso carnaroli",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucca",
+        "qty": 125,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Gorgonzola",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 18,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Latte",
+        "qty": 25,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Burro",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Amido di mais",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "carb"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 300,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia la zucca a cubetti, condiscila con olio, sale e salvia e cuocila in forno a 180 gradi per circa 30 minuti, poi frullala in una crema.",
+      "Prepara la fonduta: scalda il latte con metà del gorgonzola fino a farlo sciogliere, aggiungi l'amido stemperato in poco latte freddo e cuoci finché diventa liscia.",
+      "Tosta il riso in una casseruola, sfuma con il vino bianco e cuocilo aggiungendo il brodo caldo poco alla volta.",
+      "Qualche minuto prima del termine incorpora la crema di zucca.",
+      "Spegni il fuoco e manteca con il gorgonzola rimasto, il burro freddo e il parmigiano. Servi con la fonduta sopra."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/risotto-zucca-e-gorgonzola-ricetta/"
+    },
+    "notes": "Per un piatto più completo accompagnalo con un contorno di verdure crude."
+  },
+  {
+    "id": "web-pranzo-insalata-farro-feta-pomodorini",
+    "title": "Insalata di farro con feta e pomodorini",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥗",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Feta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olive",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Controlla e sciacqua il farro, poi cuocilo in acqua salata per 35-40 minuti e scolalo.",
+      "Lascia raffreddare il farro, stendendolo su un piatto o passandolo sotto l'acqua fredda.",
+      "Taglia i pomodorini a pezzetti, la feta a dadini e le olive a rondelle.",
+      "Unisci tutto in una ciotola, condisci con olio, sale e origano, copri e riponi in frigorifero fino al momento di servire."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Ricette del cuore",
+      "url": "https://blog.giallozafferano.it/ricettedelcuoreblog/insalata-farro-feta/"
+    },
+    "notes": "Si conserva in frigorifero fino a 3 giorni. Per le dosi la fonte indica 4 persone, con aglio facoltativo omesso."
+  },
+  {
+    "id": "web-pranzo-zuppa-ceci-lenticchie",
+    "title": "Zuppa di ceci e lenticchie con pane",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "zuppa",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lenticchie",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carota",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Concentrato di pomodoro",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Trita sedano, carota e cipolla e falli rosolare in olio per qualche istante.",
+      "Aggiungi le lenticchie e la patata a cubetti, copri con il brodo bollente e cuoci per 30 minuti.",
+      "Unisci i ceci scolati e il concentrato di pomodoro, aggiungi brodo se serve e prosegui per altri 20 minuti.",
+      "Completa con prezzemolo tritato e pepe. Servi con il pane."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/ricetta-zuppa-di-ceci-e-lenticchie/"
+    },
+    "notes": "Il giorno dopo è ancora più buona. Si trasporta bene in un thermos."
+  },
+  {
+    "id": "web-pranzo-polpette-verdure-ceci",
+    "title": "Polpette di verdure e ceci al forno",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 77,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 55,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 65,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Maggiorana",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia melanzane, peperoni e zucchine a cubetti e saltali in padella con un po' d'olio, le erbe, sale e pepe fino a doratura, poi sminuzzali.",
+      "Frulla i ceci con un cucchiaio d'olio e un pizzico di sale in un tritatutto.",
+      "Mescola i ceci con le verdure e aggiungi pangrattato a poco a poco fino a ottenere un composto morbido ma modellabile.",
+      "Forma delle polpettine, passale in pangrattato condito con olio e disponile su carta forno.",
+      "Cuocile a 180 gradi per 20 minuti, finché sono leggermente dorate. Servile con il pane."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane/polpette-di-verdure-estive-e-ceci/"
+    },
+    "notes": "La fonte è per 4-6 persone: qui le dosi sono divise per 3. Si conservano 3-4 giorni in frigorifero. Con il pane diventano un pasto completo."
+  },
+  {
+    "id": "web-cena-torta-salata-ricotta-spinaci",
+    "title": "Torta salata ricotta e spinaci",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 75,
+    "emoji": "🥧",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "torta salata",
+      "spinaci"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta sfoglia",
+        "qty": 55,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 138,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 28,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai appassire gli spinaci in padella con aglio e olio per circa 10 minuti, poi strizzali con cura e tritali finemente.",
+      "Mescola spinaci, ricotta ben scolata, parmigiano, la maggior parte dell'uovo, sale e noce moscata.",
+      "Rivesti una tortiera con la pasta sfoglia, versa il ripieno e livellalo.",
+      "Ripiega i bordi verso l'interno e spennella con l'uovo rimasto.",
+      "Cuoci a 180 gradi per circa 30 minuti, poi lasciala riposare e servila tiepida."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/la-ricetta-torta-salata-ricotta-e-spinaci/"
+    },
+    "notes": "Dosi divise per 4 (un disco di sfoglia, 4 persone). Si conserva 1-2 giorni in frigorifero."
+  },
+  {
+    "id": "web-pranzo-pasta-ricotta-zucchine",
+    "title": "Pasta con ricotta e zucchine",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "qty": 88,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 75,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Acqua di cottura della pasta",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le zucchine a cubetti e cuocile in padella con olio e sale, tenendole ancora un po' croccanti.",
+      "Lessa la pasta in acqua salata e, prima di scolarla, preleva un po' di acqua di cottura.",
+      "In una ciotola lavora la ricotta con l'acqua di cottura fino a renderla cremosa.",
+      "Scola la pasta al dente, uniscila alla crema di ricotta e aggiungi le zucchine. Mescola e servi."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) La cucina di Vane",
+      "url": "https://blog.giallozafferano.it/lacucinadivane/pasta-ricotta-zucchine/"
+    },
+    "notes": "Con la pasta integrale è ancora più saziante."
+  },
+  {
+    "id": "web-pranzo-gnocchi-ricotta-pomodoro-basilico",
+    "title": "Gnocchi di ricotta al pomodoro e basilico",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍅",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Ricotta",
+        "qty": 125,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori maturi",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola bene la ricotta e mescolala con uovo, parmigiano, farina, sale, noce moscata e basilico tritato finemente, fino a formare un panetto.",
+      "Dividi l'impasto in salsicciotti, taglia gli gnocchi e, se vuoi, passali sulla rigagnocchi.",
+      "Incidi i pomodori, sbollentali, spellali e tagliali a pezzetti. Falli cuocere per 10 minuti con aglio e olio, poi aggiungi sale, pepe e basilico.",
+      "Lessa gli gnocchi in acqua salata e scolali non appena vengono a galla.",
+      "Saltali nel sugo a fuoco basso, spegni e completa con un po' di basilico fresco."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Gusto amore e fantasie",
+      "url": "https://blog.giallozafferano.it/gustoamoreefantasie/ricetta-gnocchi-di-ricotta-e-basilico/"
+    },
+    "notes": "La fonte è per 4-5 porzioni: dosi divise per 4."
+  },
+  {
+    "id": "web-cena-frittata-patate-cipolla-forno",
+    "title": "Frittata di patate e cipolla al forno",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥔",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 1.33,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipollotti",
+        "qty": 33,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le patate a cubetti e rosolale in padella con olio e sale per 10-15 minuti, finché sono morbide.",
+      "Affetta i cipollotti e cuocili a fuoco basso con un po' d'olio e un goccio d'acqua per circa 5 minuti.",
+      "Sbatti le uova con sale e pepe e unisci patate e cipollotti ormai tiepidi, ben sgocciolati dall'olio.",
+      "Versa il composto in una tortiera rivestita di carta forno e cuoci a 180 gradi ventilato per 20-25 minuti, finché è rappresa e dorata.",
+      "Servi a spicchi, tiepida o fredda, con l'insalata mista."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/frittata-di-patate-e-cipolla-al-forno/"
+    },
+    "notes": "Versione alleggerita della tortilla spagnola. Dosi divise per 3."
+  },
+  {
+    "id": "web-cena-orzotto-zucchine-stracchino",
+    "title": "Orzotto con zucchine, zafferano e stracchino",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🌾",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "orzo",
+      "zucchine"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 75,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipollotto",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Stracchino",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zafferano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 250,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Soffriggi il cipollotto a rondelle in un filo d'olio, poi aggiungi le zucchine a cubetti e cuocile per 10 minuti.",
+      "Unisci l'orzo e tostalo bene, poi sfuma con il vino bianco.",
+      "Cuoci l'orzo aggiungendo il brodo caldo poco alla volta, per circa 30 minuti.",
+      "Verso fine cottura scioglici lo zafferano in un po' di brodo e uniscilo.",
+      "Fuori dal fuoco manteca con lo stracchino e servi subito."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Delizie in pentola",
+      "url": "https://blog.giallozafferano.it/delizieinpentola/orzotto-con-zucchine-zafferano-e-stracchino/"
+    },
+    "notes": "Dosi divise per 4. Per più proteine aggiungi un uovo sodo o un po' di parmigiano."
+  },
+  {
+    "id": "web-cena-polpette-ricotta-spinaci-sugo",
+    "title": "Polpette di ricotta e spinaci al sugo",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍅",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Ricotta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci surgelati",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mollica di pane",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci gli spinaci, lasciali raffreddare e strizzali molto bene, poi tritali.",
+      "Prepara il sugo: rosola cipolla, carota e sedano tritati in olio, aggiungi passata e un po' d'acqua e cuoci per 15-20 minuti.",
+      "Frulla la mollica al mixer e mescolala con ricotta sgocciolata, uovo, parmigiano, spinaci, sale e pepe.",
+      "Forma polpette grandi come una noce con le mani inumidite e adagiale nel sugo caldo.",
+      "Copri e cuoci 10 minuti, poi girale e prosegui per altri 5-10 minuti. Servi nel sughetto."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) La cucina sottosopra",
+      "url": "https://blog.giallozafferano.it/lacucinasottosopra/polpette-ricotta-e-spinaci/"
+    },
+    "notes": "Dosi divise per 2 (fonte per 2-3 persone). Accompagna con pane o riso per completare il piatto."
+  },
+  {
+    "id": "web-pranzo-pasta-norma",
+    "title": "Pasta alla Norma al forno",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍆",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "melanzane"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "qty": 95,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 125,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 125,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta salata",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le melanzane a cubetti, salale e lasciale riposare circa un'ora per eliminare l'umidità, poi asciugale.",
+      "Cuocile in forno a 200 gradi per circa 15 minuti con un filo d'olio, in alternativa alla frittura della ricetta originale.",
+      "Soffriggi l'aglio in olio, aggiungi i pelati schiacciati e cuoci a fuoco lento per 10 minuti, poi spegni e unisci il basilico.",
+      "Lessa la pasta al dente, scolala e saltala nel sugo insieme alle melanzane.",
+      "Completa con abbondante ricotta salata grattugiata."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Allacciate il grembiule",
+      "url": "https://blog.giallozafferano.it/allacciateilgrembiule/pasta-norma/"
+    },
+    "notes": "Nei minuti totali non è compreso il riposo delle melanzane. Dosi divise per 4."
+  },
+  {
+    "id": "web-cena-crespelle-ricotta-spinaci",
+    "title": "Crespelle ricotta e spinaci gratinate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 42,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "crespelle",
+      "spinaci"
+    ],
+    "ingredients": [
+      {
+        "name": "Crespelle",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 32,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 125,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Burro",
+        "qty": 13,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci gli spinaci in un tegame con poca acqua e sale finché sono morbidi, poi strizzali e tritali.",
+      "Mescola spinaci, ricotta ben scolata, buona parte del parmigiano, sale, pepe e noce moscata.",
+      "Spalma il ripieno sulle crespelle ancora tiepide e piegale in quattro a triangolo.",
+      "Sistemale leggermente sovrapposte in una pirofila imburrata, spolvera con il parmigiano rimasto e distribuisci fiocchetti di burro.",
+      "Gratina in forno a 200 gradi per 7-8 minuti e lascia assestare un attimo prima di servire."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/crespelle-ricotta-e-spinaci/"
+    },
+    "notes": "La fonte usa 8 crespelle per 4 persone: puoi prepararle in casa o usarne di già pronte. Dosi divise per 4."
+  },
+  {
+    "id": "web-cena-risotto-asparagi",
+    "title": "Risotto agli asparagi",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 105,
+    "emoji": "🌿",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "asparagi"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso carnaroli",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Asparagi",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Grana padano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Burro",
+        "qty": 13,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Scalogno",
+        "qty": 10,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Acqua",
+        "qty": 500,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Prepara un brodo con carota, sedano, cipolla, i gambi degli asparagi e l'acqua, cuocendolo per circa 30 minuti.",
+      "Separa le punte dai gambi, taglia i gambi a rondelle. Rosola lo scalogno in olio, aggiungi metà delle rondelle con un mestolo di brodo e cuoci 5 minuti, poi frulla per ottenere una crema.",
+      "Scotta le punte in acqua bollente salata per 2-3 minuti e raffreddale in acqua ghiacciata.",
+      "Tosta il riso in olio e portalo a cottura con il brodo caldo, aggiungendo a metà le rondelle rimaste.",
+      "Verso la fine unisci la crema di asparagi, poi manteca fuori dal fuoco con burro freddo e grana. Servi con le punte, pepe e un filo d'olio."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/risotto-agli-asparagi-la-ricetta/"
+    },
+    "notes": "Dosi divise per 4. Il brodo è incluso nei tempi."
+  },
+  {
+    "id": "web-pranzo-zymaropita-zucchine-feta",
+    "title": "Zymaropita, torta salata greca di zucchine e feta",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 80,
+    "emoji": "🥧",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "torta salata",
+      "feta"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 125,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 63,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte",
+        "qty": 45,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Feta",
+        "qty": 75,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Grattugia le zucchine, trita la cipolla, salale e lasciale in un colino per 20 minuti, poi strizzale bene.",
+      "Mescola uova, latte e olio, aggiungi la farina e sbriciola dentro la feta.",
+      "Incorpora zucchine e cipolla all'impasto, senza aggiungere altro sale perché la feta è già sapida.",
+      "Versa in una teglia con carta forno e distribuisci fiocchetti di burro in superficie.",
+      "Cuoci in forno statico a 200 gradi per 40-50 minuti, finché è dorata. Lascia riposare qualche minuto prima di tagliarla."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/ricetta-zymaropita-torta-salata-greca-di-zucchine/"
+    },
+    "notes": "Fonte per 4-6 porzioni: dosi divise per 4. Ottima fredda."
+  },
+  {
+    "id": "web-pranzo-insalata-quinoa-ceci-spezie",
+    "title": "Insalata di quinoa e ceci speziati",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 110,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni sott'olio",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive taggiasche",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Rosola i ceci in padella con un filo d'olio, la curcuma e la paprika per 4-5 minuti.",
+      "Sciacqua la quinoa, tostala con un po' d'olio e coprila con acqua bollente salata, circa il doppio del suo volume. Cuoci a fiamma media finché il liquido è assorbito.",
+      "Lascia raffreddare la quinoa, poi uniscila ai ceci.",
+      "Aggiungi pomodorini a metà, cipolla a rondelle, peperoni, olive e rucola, mescola con un filo d'olio e servi."
+    ],
+    "source": {
+      "name": "Giallo Zafferano (blog) Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/insalata-di-quinoa-e-ceci-con-spezie-e-verdure/"
+    },
+    "notes": "Fonte per 2 porzioni. Per una versione vegetariana più ricca aggiungi della feta."
+  },
+  {
+    "id": "web-pranzo-burger-fagioli-panino",
+    "title": "Burger di fagioli nel panino con insalata",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli borlotti cotti",
+        "qty": 31,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fagioli rossi cotti",
+        "qty": 31,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Panino integrale",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla carota a cubetti, cipolla, fagioli ben scolati, prezzemolo, sale e pepe fino a un composto grossolano.",
+      "Forma un medaglione compatto di circa 8 cm, aiutandoti con un coppapasta.",
+      "Passalo nel pangrattato coprendo bene anche i bordi.",
+      "Cuocilo in padella con un filo d'olio per circa 4 minuti per lato, girandolo con delicatezza.",
+      "Servilo nel panino con l'insalata mista."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/burger-di-fagioli/"
+    },
+    "notes": "Dosi divise per 4: un burger a persona, completato dal panino. Si conserva 1-2 giorni in frigorifero."
+  }
+]

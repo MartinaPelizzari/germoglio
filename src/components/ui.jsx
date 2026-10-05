@@ -1,7 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
-import { getCategoryEmoji, categoryTint } from '../lib/format.js';
+import { DEFAULT_EMOJI } from '../lib/format.js';
 import { pushOverlay } from '../lib/backstack.js';
 
 // Le schermate sovrapposte vanno disegnate a livello della pagina intera: dentro la pagina le animazioni creano
@@ -67,26 +67,26 @@ export const Avatar = ({ member, size = 'w-8 h-8 text-base', active = true, onCl
       title={title || member.name}
       aria-label={member.name}
       aria-pressed={onClick ? active : undefined}
-      className={`${size} rounded-full flex items-center justify-center shrink-0 transition-all ${active ? 'ring-2 ring-offset-1' : 'opacity-30 grayscale'} ${onClick ? 'active:scale-90' : ''}`}
+      className={`${size} rounded-full flex items-center justify-center shrink-0 overflow-hidden transition-all ${active ? 'ring-2 ring-offset-1' : 'opacity-30 grayscale'} ${onClick ? 'active:scale-90' : ''}`}
       style={{ background: `${member.color}22`, '--tw-ring-color': member.color }}
     >
-      {member.emoji}
+      {member.photo ? <img src={member.photo} alt="" className="w-full h-full object-cover" /> : member.emoji}
     </Tag>
   );
 };
 
 // Foto del piatto, oppure emoji su sfondo colorato
 export const RecipeThumb = ({ recipe, className = 'w-14 h-14 rounded-xl text-2xl' }) => (
-  <div className={`${className} flex items-center justify-center overflow-hidden shrink-0 ${recipe.photo ? '' : categoryTint(recipe.category)}`}>
-    {recipe.photo ? <img src={recipe.photo} alt="" className="w-full h-full object-cover" /> : <span>{recipe.emoji || getCategoryEmoji(recipe.category)}</span>}
+  <div className={`${className} flex items-center justify-center overflow-hidden shrink-0 ${recipe.photo ? '' : 'bg-brand-50'}`}>
+    {recipe.photo ? <img src={recipe.photo} alt="" className="w-full h-full object-cover" /> : <span>{recipe.emoji || DEFAULT_EMOJI}</span>}
   </div>
 );
 
 const DIET_STYLE = {
   vegan: ['bg-brand-100 text-brand-700', 'Vegana'],
   vegetarian: ['bg-amber-100 text-amber-700', 'Vegetariana'],
-  pescetarian: ['bg-sky-100 text-sky-700', 'Pescetariana'],
-  omnivore: ['bg-rose-100 text-rose-700', 'Onnivora'],
+  pescetarian: ['bg-sky-100 text-sky-700', 'Con pesce'],
+  omnivore: ['bg-rose-100 text-rose-700', 'Con carne'],
 };
 export const DietBadge = ({ diet }) => {
   const [cls, label] = DIET_STYLE[diet] || DIET_STYLE.omnivore;

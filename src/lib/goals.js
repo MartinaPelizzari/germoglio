@@ -1,27 +1,16 @@
 // Frequenze settimanali indicate dalla nutrizionista (es. legumi 3 volte a settimana).
 // Il conteggio è in pasti: un pasto con ceci e un altro con lenticchie sono 2 pasti con legumi.
 import { eatersOf } from './scale.js';
+import { FOOD_TYPES, foodLabel } from './foodTypes.js';
+import { resolveItem } from './items.js';
 
-export const FOOD_TYPES = [
-  { id: 'legumi', label: 'Legumi', words: ['ceci', 'lenticchie', 'fagioli', 'piselli', 'fave', 'edamame', 'lupini', 'hummus', 'farina di ceci', 'soia gialla', 'cicerchie', 'borlotti', 'cannellini', 'tofu', 'tempeh'] },
-  { id: 'pesce', label: 'Pesce', words: ['tonno', 'salmone', 'merluzzo', 'gamberi', 'gamberetti', 'acciughe', 'alici', 'orata', 'branzino', 'pesce', 'calamari', 'polpo', 'cozze', 'vongole', 'sgombro', 'sardine', 'baccalà', 'trota', 'seppie'] },
-  { id: 'carne-bianca', label: 'Carne bianca', words: ['pollo', 'tacchino', 'coniglio'] },
-  { id: 'carne-rossa', label: 'Carne rossa', words: ['manzo', 'maiale', 'vitello', 'agnello', 'salsiccia', 'bistecca', 'macinato', 'hamburger', 'polpette di carne', 'ragù di carne'] },
-  { id: 'salumi', label: 'Salumi', words: ['prosciutto', 'pancetta', 'speck', 'bresaola', 'salame', 'mortadella', 'guanciale', 'wurstel'] },
-  { id: 'uova', label: 'Uova', words: ['uova', 'uovo', 'frittata', 'omelette'] },
-  { id: 'formaggi', label: 'Formaggi', words: ['formaggio', 'parmigiano', 'ricotta', 'feta', 'mozzarella', 'pecorino', 'grana', 'caprino', 'stracchino', 'mascarpone', 'scamorza', 'halloumi'] },
-  { id: 'frutta-secca', label: 'Frutta secca e semi', words: ['noci', 'mandorl', 'nocciol', 'pistacch', 'anacard', 'pinoli', 'semi di', 'arachid', 'tahin'] },
-  { id: 'cereali-integrali', label: 'Cereali integrali', words: ['integral', 'farro', 'orzo', 'avena', 'quinoa', 'grano saraceno', 'miglio', 'riso nero', 'bulgur'] },
-  { id: 'verdure-foglia', label: 'Verdure a foglia', words: ['spinaci', 'bietol', 'rucola', 'lattuga', 'insalata', 'cavolo nero', 'radicchio', 'valeriana', 'cicoria', 'cime di rapa', 'broccol'] },
-];
+export { FOOD_TYPES, foodLabel };
 
 export const GOAL_MODES = [
   { id: 'min', label: 'almeno' },
   { id: 'exact', label: 'esattamente' },
   { id: 'max', label: 'al massimo' },
 ];
-
-export const foodLabel = (id) => FOOD_TYPES.find((f) => f.id === id)?.label || id;
 
 const cache = new WeakMap();
 export const recipeFoods = (recipe) => {
@@ -42,7 +31,7 @@ export const weekSets = (plan, household, recipeMap) => {
   for (const [day, slots] of Object.entries(plan?.days || {})) {
     for (const [slot, data] of Object.entries(slots || {})) {
       for (const item of data?.items || []) {
-        const recipe = recipeMap.get(item.recipeId);
+        const recipe = resolveItem(item, recipeMap);
         if (!recipe) continue;
         const foods = recipeFoods(recipe);
         for (const m of eatersOf(item, household, slot, data)) {

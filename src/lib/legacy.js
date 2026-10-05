@@ -9,7 +9,6 @@ export const convertLegacyRecipe = (old) => {
     .filter(Boolean);
   return {
     title: old.title || 'Senza titolo',
-    category: old.category || 'Pranzo',
     time: old.time || 'media',
     minutes: null,
     emoji: old.emoji || null,

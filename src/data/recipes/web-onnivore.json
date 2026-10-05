@@ -1,0 +1,1541 @@
+[
+  {
+    "id": "web-cena-salmone-patate-forno",
+    "title": "Salmone al forno con patate e zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "salmone",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Salmone (trancio)",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Erbe aromatiche miste",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 190 gradi. Sbuccia le patate e affettale sottili, poi taglia le zucchine a rondelle.",
+      "Ungi una pirofila e distribuisci metà delle patate e delle zucchine, salando leggermente.",
+      "Appoggia il trancio di salmone, aggiungi lo spicchio d'aglio e copri con le verdure rimaste.",
+      "Profuma con le erbe aromatiche, il pepe e un filo d'olio, poi aggiungi un goccio d'acqua sul fondo della teglia.",
+      "Inforna per circa 25 minuti, finché le patate sono tenere, e completa con qualche fogliolina di menta."
+    ],
+    "source": {
+      "name": "GialloZafferano (La cucina di Loredana)",
+      "url": "https://blog.giallozafferano.it/lacucinadiloredana/ricetta-salmone-con-patate-al-forno/"
+    },
+    "notes": "Le zucchine sono un contorno aggiunto rispetto alla fonte. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-cena-merluzzo-patate-pomodorini",
+    "title": "Merluzzo al forno con patate e pomodorini",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "merluzzo",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Filetto di merluzzo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 250,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodorini datterini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 190 gradi e fodera una teglia con carta da forno.",
+      "Sbuccia le patate, tagliale a cubetti regolari, sciacquale e asciugale bene.",
+      "Disponi in teglia patate e pomodorini tagliati a metà, poi condisci con sale, origano, rosmarino, prezzemolo tritato e olio.",
+      "Appoggia il filetto di merluzzo tra le verdure e mescola un po' perché prenda il condimento.",
+      "Cuoci per 30-35 minuti, fino a quando patate e pesce sono ben cotti."
+    ],
+    "source": {
+      "name": "GialloZafferano (La cucina di Vane)",
+      "url": "https://blog.giallozafferano.it/lacucinadivane/merluzzo-al-forno-con-patate-e-pomodorini/"
+    },
+    "notes": "Va bene anche il merluzzo surgelato. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-pranzo-insalata-riso-tonno",
+    "title": "Insalata di riso con tonno e yogurt greco",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍚",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "riso",
+      "insalata",
+      "freddo"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso per insalate",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tonno al naturale",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Yogurt greco 0%",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Maionese light",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci il riso in acqua salata per il tempo indicato sulla confezione.",
+      "Scolalo e raffreddalo subito sotto l'acqua corrente, poi lascialo asciugare bene nello scolapasta.",
+      "In una ciotola mescola yogurt, maionese e olio fino a ottenere una crema.",
+      "Unisci riso, pomodorini a pezzetti, mozzarella a dadini, rucola e tonno ben sgocciolato.",
+      "Aggiusta di sale e pepe e tieni in frigorifero per mezz'ora prima di servire o di portare in ufficio."
+    ],
+    "source": {
+      "name": "GialloZafferano (Ricette pane e dolci)",
+      "url": "https://blog.giallozafferano.it/ricettepanedolci/insalata-di-riso-con-tonno-ricetta-leggera/"
+    },
+    "notes": "Si conserva in frigorifero per un paio di giorni. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-pranzo-pasta-gamberi-zucchine",
+    "title": "Pasta con gamberi e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍤",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "gamberi"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Gamberi sgusciati",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Formaggio fresco spalmabile",
+        "qty": 15,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zafferano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i gamberi, asciugali e tagliali a pezzetti.",
+      "Saltali un minuto in padella con un po' d'olio a fuoco vivace, salali e mettili da parte.",
+      "Nella stessa padella cuoci le zucchine a cubetti con l'aglio, il sale e un filo d'olio per pochi minuti.",
+      "Cuoci la pasta al dente. Sciogli lo zafferano in un mestolo d'acqua di cottura e mescolalo al formaggio spalmabile.",
+      "Salta la pasta con le zucchine, i gamberi e la crema allo zafferano, aggiungendo acqua se serve, e finisci con prezzemolo e pepe."
+    ],
+    "source": {
+      "name": "GialloZafferano (Pelle di pollo)",
+      "url": "https://blog.giallozafferano.it/pelledipollo/ricetta-pasta-gamberi-e-zucchine-con-zafferano/"
+    },
+    "notes": "Dosi originali per 2 persone, divise per 2. Il formaggio è facoltativo."
+  },
+  {
+    "id": "web-cena-orata-forno-patate",
+    "title": "Orata al forno con patate e pomodorini",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "orata",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Orata intera pulita",
+        "qty": 250,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi. Sbuccia le patate, tagliale a bastoncini, sciacquale e condiscile con sale, pepe, origano e olio.",
+      "Metti l'orata in una pirofila, condiscila con olio, sale, pepe e prezzemolo.",
+      "Riempi la pancia del pesce con l'aglio e il limone a pezzetti.",
+      "Fodera la leccarda con carta da forno e sistema accanto all'orata le patate e i pomodorini tagliati a metà.",
+      "Cuoci per 25-30 minuti e servi subito."
+    ],
+    "source": {
+      "name": "GialloZafferano (Ricette del cuore)",
+      "url": "https://blog.giallozafferano.it/ricettedelcuoreblog/ricetta-orata-al-forno-con-patate/"
+    },
+    "notes": "I pomodorini sono una variante suggerita dalla fonte. Orata intera: 1 kg per 4 persone, diviso per 4."
+  },
+  {
+    "id": "web-pranzo-pasta-acciughe-pangrattato",
+    "title": "Pasta con acciughe, pangrattato e pomodoro",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍝",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "acciughe"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acciughe sott'olio",
+        "qty": 3,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "In una padella scalda l'olio a fiamma bassa con l'aglio e, se ti piace, un pezzetto di peperoncino.",
+      "Aggiungi le acciughe e lasciale sciogliere, bagnando con un cucchiaio d'acqua di cottura della pasta.",
+      "Unisci il pangrattato e fallo tostare mescolando, poi togli l'aglio.",
+      "Versa la passata con l'origano e cuoci per circa cinque minuti.",
+      "Scola la pasta al dente, saltala nel condimento con un po' d'acqua di cottura e servi."
+    ],
+    "source": {
+      "name": "GialloZafferano (Le ricette di Libellula)",
+      "url": "https://blog.giallozafferano.it/ricettedilibellula/pasta-acciughe-pangrattato-pomodoro/"
+    },
+    "notes": "Dosi originali per 2 persone, divise per 2. Per un piatto più completo aggiungi un contorno di verdure."
+  },
+  {
+    "id": "web-pranzo-couscous-gamberi-verdure",
+    "title": "Couscous con gamberi e verdure",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍤",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "couscous",
+      "gamberi",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Couscous precotto",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 80,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Gamberi sgusciati",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 10,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curry",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Porta a bollore l'acqua e versala sul couscous in una ciotola, copri e lascia riposare cinque minuti.",
+      "Taglia zucchine e carote a listarelle e trita grossolanamente la cipolla.",
+      "Rosola le verdure in padella con l'olio, prima a fuoco vivo e poi medio con il coperchio.",
+      "Dopo cinque minuti unisci i gamberi e cuocili finché diventano rosa.",
+      "Sgrana il couscous con una forchetta, uniscilo in padella con la salsa di soia, il curry e un pizzico di sale e mescola a fuoco vivo."
+    ],
+    "source": {
+      "name": "GialloZafferano (Ricette che passione)",
+      "url": "https://blog.giallozafferano.it/ricettechepassione/couscous-con-verdure-e-gamberi/"
+    },
+    "notes": "Dosi originali per 2 persone, divise per 2. Ottimo anche tiepido in contenitore."
+  },
+  {
+    "id": "web-cena-pasta-tonno-fresco-pomodorini",
+    "title": "Pasta con tonno fresco, pomodorini e olive",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍝",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "tonno"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "qty": 90,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tonno fresco",
+        "qty": 75,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 75,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 5,
+        "unit": "pz",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia i pomodorini a metà, affetta finemente la cipolla e riduci il tonno a cubetti.",
+      "Fai appassire la cipolla nell'olio, poi aggiungi i pomodorini, sala e cuoci per circa dieci minuti.",
+      "Unisci il tonno e le olive a rondelle e cuoci a fiamma viva per cinque minuti, senza esagerare per non indurire il pesce.",
+      "Intanto cuoci la pasta in acqua salata e scolala al dente.",
+      "Saltala nella padella con il condimento e il basilico spezzettato."
+    ],
+    "source": {
+      "name": "GialloZafferano (Mela, cannella e fantasia)",
+      "url": "https://blog.giallozafferano.it/melacannellaefantasia/pasta-con-tonno-fresco/"
+    },
+    "notes": "Dosi originali per 2 persone (tonno 100 g), divise per 2; il tonno è portato a 75 g come suggerisce la fonte per chi non è a dieta."
+  },
+  {
+    "id": "web-cena-spiedini-pollo-patate",
+    "title": "Spiedini di pollo, pancetta e patate",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🍢",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "pollo",
+      "forno",
+      "spiedini"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo",
+        "qty": 175,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pancetta tesa",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 90,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Foglie di alloro",
+        "qty": 2,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Paprica",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi. Sbuccia le patate, affettale sottili e tienile in acqua fredda per eliminare un po' d'amido, poi asciugale.",
+      "Taglia il pollo a cubetti medi e condiscilo con olio e paprica.",
+      "Avvolgi ogni cubetto in una fettina di pancetta.",
+      "Infila negli spiedini il pollo alternato alle fette di patata, inserendo qua e là le foglie di alloro.",
+      "Sistema gli spiedini in una pirofila unta e cuocili per 35-40 minuti, girandoli a metà cottura.",
+      "Servi con l'insalata mista condita a piacere."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/spiedini-di-pollo-e-patate-ricetta/"
+    },
+    "notes": "Insalata mista aggiunta come contorno. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-cena-polpette-tacchino-ricotta",
+    "title": "Polpette di tacchino e ricotta con insalata",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍖",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "tacchino",
+      "polpette",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Macinato di tacchino",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uovo",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 18,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Origano secco",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino secco",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi in modalità ventilata.",
+      "In una ciotola amalgama il macinato con la ricotta, l'uovo, origano, rosmarino e sale, poi aggiungi il pangrattato fino a un composto omogeneo.",
+      "Con le mani leggermente umide forma polpette grandi come una noce.",
+      "Disponile su una teglia con carta da forno, irrorale con l'olio e cuocile per 15-20 minuti.",
+      "Servile con l'insalata e il pane. In alternativa cuocile in padella per circa 20 minuti con l'aglio."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/polpette-di-tacchino-ricetta/"
+    },
+    "notes": "Pane e insalata aggiunti come accompagnamento. Dosi originali per 4 persone, divise per 4. Buone anche fredde."
+  },
+  {
+    "id": "web-cena-straccetti-manzo-rucola",
+    "title": "Straccetti di manzo con rucola e pomodorini",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥩",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "manzo",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Fettine di manzo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 75,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Glassa di aceto balsamico",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava e asciuga rucola e pomodorini, poi taglia i pomodorini a metà.",
+      "Batti le fettine di manzo, tagliale a striscioline e infarinale leggermente.",
+      "Scalda l'olio con l'aglio e rosola gli straccetti per pochi minuti, finché sono dorati.",
+      "Sala, pepa, unisci i pomodorini e salta ancora per un minuto, poi aggiungi metà della rucola.",
+      "Servi sul resto della rucola con un filo di glassa balsamica e il pane accanto."
+    ],
+    "source": {
+      "name": "GialloZafferano (Renata Briano)",
+      "url": "https://blog.giallozafferano.it/renatabriano/ricetta-straccetti-di-manzo-con-rucola-pomodorini-e-aceto-balsamico/"
+    },
+    "notes": "Il pane è un accompagnamento aggiunto. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-pranzo-insalata-pollo-farro",
+    "title": "Insalata di pollo e farro",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥗",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "farro",
+      "insalata",
+      "pollo"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Songino",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Radicchio",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacqua il farro, cuocilo in acqua salata, scolalo e lascialo raffreddare.",
+      "Pulisci le carote, tagliale a rondelle e lessale per circa dieci minuti, oppure usale crude.",
+      "Cuoci il pollo a straccetti in padella con poco olio, finché è dorato e cotto all'interno.",
+      "In una ciotola mescola songino, radicchio, carote e pomodorini a metà.",
+      "Aggiungi farro e pollo, condisci con olio, sale e pepe e fai riposare in frigorifero coperto per un'ora."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/insalata-di-pollo-e-farro.htm"
+    },
+    "notes": "Dosi originali per 4 persone, divise per 4. Ideale da portare in contenitore."
+  },
+  {
+    "id": "web-cena-scaloppine-vitello-limone",
+    "title": "Scaloppine di vitello al limone con patate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍋",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "vitello",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Fesa di vitello a fette",
+        "qty": 110,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Maizena",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "carb"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa le patate a pezzi in acqua salata, scolale e tienile in caldo.",
+      "Infarina le fettine di vitello da entrambi i lati.",
+      "Fai sciogliere burro, olio e aglio in una padella antiaderente e rosola le scaloppine per due minuti per lato.",
+      "Sfuma con il succo di limone, cuoci a fuoco dolce per 2-3 minuti e togli la carne dalla padella.",
+      "Sciogli la maizena in poca acqua fredda, versala nel fondo di cottura e mescola fino a una salsina cremosa, poi rimetti le scaloppine a insaporire.",
+      "Servi con le patate e l'insalata."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/scaloppine-al-limone-la-ricetta/"
+    },
+    "notes": "Patate e insalata sono un contorno aggiunto. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-cena-filetto-maiale-patate-erbe",
+    "title": "Filetto di maiale impanato con patate",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍖",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "maiale",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Filetto di maiale",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane grattugiato alle erbe",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Timo",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi ventilato.",
+      "Spennella il filetto con l'olio e passalo nel pane grattugiato aromatizzato, poi mettilo al centro di una teglia con carta da forno.",
+      "Sbuccia le patate, tagliale a cubetti e sbollentale cinque minuti da quando l'acqua bolle, poi scolale.",
+      "Condisci le patate con un filo d'olio e un po' del pane grattugiato e disponile attorno alla carne con i rametti di timo.",
+      "Cuoci per circa 50 minuti, poi taglia il filetto a fette e servi con l'insalata."
+    ],
+    "source": {
+      "name": "GialloZafferano (Le ricette di iocucinofacile)",
+      "url": "https://blog.giallozafferano.it/iocucinofacile/ricetta-filetto-di-maiale-al-forno-con-patate/"
+    },
+    "notes": "L'insalata mista è suggerita dalla fonte come accompagnamento. Dosi originali per 4 persone, divise per 4."
+  },
+  {
+    "id": "web-cena-involtini-tacchino-provola",
+    "title": "Involtini di tacchino con prosciutto e provola",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🍖",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "tacchino",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Fettine di petto di tacchino",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Provola",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Salvia",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Batti le fettine di tacchino, tagliale a metà e condiscile con sale e pepe.",
+      "Su ogni pezzo distribuisci prosciutto cotto, un po' di provola e qualche foglia di salvia.",
+      "Arrotola gli involtini, chiudili con uno stecchino e passali nella farina.",
+      "Rosolali nell'olio su tutti i lati a fiamma viva, poi sfuma con il vino bianco.",
+      "Aggiungi un paio di mestoli d'acqua calda e cuoci coperto per circa 30 minuti, a fuoco dolce.",
+      "Intanto lessa le patate e servile insieme agli involtini e all'insalata."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/involtini-di-tacchino-la-ricetta/"
+    },
+    "notes": "Peso delle fettine stimato perché la fonte indica solo il numero di fette (6 fette per 4 persone). Patate e insalata aggiunte come contorno."
+  },
+  {
+    "id": "web-pranzo-pollo-curry-riso-basmati",
+    "title": "Pollo al curry con riso basmati",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍛",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "pollo",
+      "riso",
+      "curry"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo",
+        "qty": 160,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte",
+        "qty": 80,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Mela verde",
+        "qty": 30,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "carb"
+      },
+      {
+        "name": "Curry",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Porta a bollore l'acqua per il riso. Affetta la cipolla e fai appassire a fuoco basso con olio e curry.",
+      "Taglia il pollo a tocchetti, infarinalo e rosolalo a fuoco vivace con la cipolla, aggiungendo le zucchine a dadini.",
+      "Versa il latte, abbassa la fiamma e cuoci per circa dieci minuti, mescolando spesso, finché la salsa si addensa.",
+      "Intanto cuoci il riso e, a metà cottura, aggiungi la mela verde tritata.",
+      "Scola il riso, servilo con il pollo al centro e completa con timo fresco."
+    ],
+    "source": {
+      "name": "GialloZafferano (Noce moscata)",
+      "url": "https://blog.giallozafferano.it/nocemoscata/pollo-al-curry-con-riso-basmati/"
+    },
+    "notes": "Dosi originali per 4-6 persone, divise per 5. Le zucchine sono un contorno aggiunto. Il latte si può sostituire con latte di cocco."
+  },
+  {
+    "id": "web-pranzo-pollo-peperoni-padella",
+    "title": "Bocconcini di pollo e peperoni in padella",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🫑",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "pollo",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Timo",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i peperoni eliminando picciolo e semi e tagliali a tocchetti di circa un centimetro e mezzo.",
+      "Cuocili in padella coperta con aglio e olio a fiamma moderata, mescolando spesso e aggiungendo un po' d'acqua se servono.",
+      "Sala, poi unisci il petto di pollo a bocconcini.",
+      "Condisci con timo e origano e prosegui per circa 15 minuti, finché il pollo è cotto.",
+      "Servi con il pane. Si può preparare in anticipo e scaldare prima di mangiare."
+    ],
+    "source": {
+      "name": "GialloZafferano (Studenti ai fornelli)",
+      "url": "https://blog.giallozafferano.it/studentiaifornelli/pollo-e-peperoni-in-padella/"
+    },
+    "notes": "Il pane è un accompagnamento aggiunto. Dosi originali per 2 persone, divise per 2."
+  },
+  {
+    "id": "web-cena-spezzatino-manzo-patate",
+    "title": "Spezzatino di manzo con patate",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 120,
+    "emoji": "🥘",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "manzo",
+      "stufato"
+    ],
+    "ingredients": [
+      {
+        "name": "Manzo per spezzatino",
+        "qty": 200,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 75,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 25,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Brodo",
+        "qty": 125,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 0.75,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia la carne a cubetti di circa quattro centimetri.",
+      "Rosola la cipolla nell'olio, aggiungi la carne e fai colorire su tutti i lati, poi sfuma con il vino bianco.",
+      "Unisci sedano e carote a pezzetti, il rosmarino e i pelati, poi copri con il brodo caldo.",
+      "Cuoci coperto a fuoco dolce per un'ora.",
+      "Aggiungi le patate a cubetti, sala e pepa, e cuoci altri 40 minuti. Servi ben caldo, anche scaldato il giorno dopo."
+    ],
+    "source": {
+      "name": "Cookaround",
+      "url": "https://www.cookaround.com/ricetta/Spezzatino-di-manzo.html"
+    },
+    "notes": "Dosi originali per 4 persone, divise per 4. Cottura lunga: si può preparare in anticipo e porzionare."
+  }
+]

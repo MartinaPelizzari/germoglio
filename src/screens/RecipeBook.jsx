@@ -3,22 +3,26 @@ import { Heart, Search, SlidersHorizontal } from 'lucide-react';
 import { useData } from '../hooks/data.jsx';
 import { DietBadge, RecipeThumb } from '../components/ui.jsx';
 import RecipeDetail from './RecipeDetail.jsx';
-import { CATEGORIES, timeLabel } from '../lib/format.js';
+import { timeLabel } from '../lib/format.js';
 import { ALLERGENS, recipeAllergens } from '../lib/allergens.js';
+import { DIETS, recipeLevel } from '../lib/diet.js';
+import { FOOD_TYPES, recipeFoods } from '../lib/goals.js';
 
 export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, onDelete }) {
   const { recipes, favorites, toggleFavorite } = useData();
   const [sel, setSel] = React.useState(null);
   const [showFilters, setShowFilters] = React.useState(false);
-  const { cat, time, diet, origin, q } = filters;
+  const { time, diet, origin, q } = filters;
   const free = filters.free || [];
+  const contains = filters.contains || [];
   const set = (patch) => setFilters({ ...filters, ...patch });
 
   const list = recipes.filter((r) => {
-    if (cat !== 'Tutte' && r.category !== cat) return false;
     if (time !== 'Tutte' && r.time !== time) return false;
+    // "Adatte a": una ricetta con pesce va bene a pescetariani e onnivori, una vegana a tutti
     if (diet === 'asporto') { if (!r.takeaway) return false; }
-    else if (diet !== 'Tutte' && (r.diet || 'omnivore') !== diet) return false;
+    else if (diet !== 'Tutte' && recipeLevel(r) > DIETS.find((d) => d.id === diet).level) return false;
+    if (contains.some((f) => !recipeFoods(r).has(f))) return false;
     if (origin === 'mie' && !r.own) return false;
     if (origin === 'preferite' && !favorites.has(r.id)) return false;
     if (free.some((a) => recipeAllergens(r).has(a))) return false;
@@ -39,17 +43,18 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
           </div>
           <button onClick={() => setShowFilters(!showFilters)} aria-label="Filtri" className={`p-3 rounded-2xl ${showFilters ? 'bg-brand-500 text-white' : 'bg-white text-slate-400 shadow-soft'}`}><SlidersHorizontal className="w-6 h-6" /></button>
         </div>
-        <div className="flex gap-2 overflow-x-auto no-scrollbar px-1">
-          {['Tutte', ...CATEGORIES].map((c) => <button key={c} onClick={() => set({ cat: c })} className={pill(cat === c)}>{c}</button>)}
-        </div>
         {showFilters && (
           <div className="space-y-2 px-1 animate-fade-in">
             <div className="flex gap-2 overflow-x-auto no-scrollbar">
               {[['Tutte', 'Ogni tempo'], ['breve', 'Breve'], ['media', 'Media'], ['lunga', 'Lunga']].map(([v, l]) => <button key={v} onClick={() => set({ time: v })} className={pill(time === v)}>{l}</button>)}
             </div>
             <div className="flex gap-2 overflow-x-auto no-scrollbar">
-              {[['Tutte', 'Ogni dieta'], ['vegan', 'Vegane'], ['vegetarian', 'Vegetariane'], ['pescetarian', 'Pescetariane'], ['omnivore', 'Onnivore'], ['asporto', 'Asporto']].map(([v, l]) => <button key={v} onClick={() => set({ diet: v })} className={pill(diet === v)}>{l}</button>)}
+              {[['Tutte', 'Ogni dieta'], ['vegan', 'Adatte ai vegani'], ['vegetarian', 'Ai vegetariani'], ['pescetarian', 'Ai pescetariani'], ['omnivore', 'Agli onnivori'], ['asporto', 'Asporto']].map(([v, l]) => <button key={v} onClick={() => set({ diet: v })} className={pill(diet === v)}>{l}</button>)}
               {[['tutte', 'Ovunque'], ['preferite', 'Preferite'], ['mie', 'Le mie'], ['base', 'Precaricate']].map(([v, l]) => <button key={v} onClick={() => set({ origin: v })} className={pill(origin === v)}>{l}</button>)}
+            </div>
+            <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
+              <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0">Con</span>
+              {FOOD_TYPES.filter((f) => ['legumi', 'pesce', 'carne-bianca', 'carne-rossa', 'salumi', 'uova', 'formaggi', 'frutta-secca'].includes(f.id)).map((f) => <button key={f.id} onClick={() => set({ contains: contains.includes(f.id) ? contains.filter((x) => x !== f.id) : [...contains, f.id] })} className={pill(contains.includes(f.id))}>{f.label}</button>)}
             </div>
             <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
               <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0">Senza</span>
@@ -69,7 +74,7 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
             <div className="flex-1 py-1 min-w-0">
               <h3 className="font-display font-bold text-base text-slate-800 leading-tight mb-1.5 line-clamp-2">{r.title}</h3>
               <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-400">
-                <span className="uppercase">{r.category}</span><span>•</span><span>{timeLabel(r)}</span><DietBadge diet={r.diet} />
+                <span>{timeLabel(r)}</span><DietBadge diet={r.diet} />
               </div>
             </div>
           </div>

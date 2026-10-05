@@ -4,6 +4,8 @@ import { recipeAllergens } from '../src/lib/allergens.js';
 import { recipeFoods, weekCounts, goalStatus } from '../src/lib/goals.js';
 import { applyPantry } from '../src/lib/pantry.js';
 import { buildRecency, weekIdToMonday, weeksBetween } from '../src/lib/usage.js';
+import { eatersOf } from '../src/lib/scale.js';
+import { resolveItem } from '../src/lib/items.js';
 
 const dir = new URL('../src/data/recipes/', import.meta.url);
 const recipes = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).flatMap((f) => JSON.parse(fs.readFileSync(new URL(f, dir), 'utf8')));
@@ -57,8 +59,7 @@ let ko = 0;
 for (let run = 0; run < 20; run++) {
   const days = generateWeek(recipes, house, { favorites: new Set([recipes[0].id]), recency: new Map() });
   for (let d = 0; d < 7; d++) for (const [slot, data] of Object.entries(days[d])) {
-    const eaters = house.members.filter((m) => mealOf(m, slot).eats);
-    for (const it of data.items) { const p = problemsFor(map.get(it.recipeId), house, d, slot, eaters); if (p.length) { ko++; if (ko < 4) console.log('KO', d, slot, map.get(it.recipeId).title, p); } }
+    for (const it of data.items) { const eaters = eatersOf(it, house, slot, data); const p = problemsFor(resolveItem(it, map), house, d, slot, eaters); if (p.length) { ko++; if (ko < 4) console.log('KO', d, slot, map.get(it.recipeId).title, p); } }
   }
   if (run === 0) {
     const lunch = [0, 1, 2, 3, 4].map((d) => days[d].Pranzo.items.map((i) => `${map.get(i.recipeId).title}${i.leftoverOf ? ' (avanzo)' : ''}`).join(' + '));
@@ -71,7 +72,7 @@ for (let run = 0; run < 20; run++) {
 console.log('Violazioni su 20 settimane:', ko);
 
 // ---- assenti, ospiti, vista personale
-const { slotPeople, eatersOf } = await import('../src/lib/scale.js');
+const { slotPeople } = await import('../src/lib/scale.js');
 const { mealConstraints } = await import('../src/lib/diet.js');
 const { buildShoppingList } = await import('../src/lib/shopping.js');
 const guest = { id: 'g-1', name: 'Ospite', diet: 'vegan', mult: 1.5, intolerances: [], meals: {} };
@@ -88,4 +89,4 @@ const sum = (l) => Math.round(l.filter((i) => i.unit === 'g').reduce((a, i) => a
 console.log('Grammi totali spesa:', sum(total), '| solo A:', sum(onlyA), '| solo M (assente):', sum(onlyM), '| ospite x1,5 → totale ≈ A*2,5:', Math.round(sum(onlyA) * 2.5));
 const gen = generateWeek(recipes, house2, { existing: { 2: { Cena: dinner } } });
 const gd = gen[2].Cena;
-console.log('Cena con ospite vegano:', gd.items.map((i) => `${map.get(i.recipeId).title} [${map.get(i.recipeId).diet}]`).join(' + '), '| ospite mantenuto:', gd.guests?.length === 1, '| assente mantenuto:', gd.absent?.[0] === 'm');
+console.log('Cena con ospite vegano e M assente:', gd.items.map((i) => `${resolveItem(i, map).title} [${resolveItem(i, map).diet}] → ${(i.eaters || ['tutti']).join('+')}`).join(' ; '), '| ospite mantenuto:', gd.guests?.length === 1, '| assente mantenuto:', gd.absent?.[0] === 'm');

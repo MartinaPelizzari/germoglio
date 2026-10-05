@@ -4,19 +4,16 @@ App web (installabile sul telefono come PWA) per pianificare i pasti della famig
 
 ## Come funziona
 
-- **Un account a testa.** Ognuno accede con email e password o con Google e ha il proprio profilo: dieta (vegana, vegetariana, pescetariana, onnivora), intolleranze, ingredienti da evitare, pasti che mangia, porzione o grammi per componente e frequenze settimanali indicate dalla nutrizionista. Il profilo lo modifica solo il suo proprietario.
-- **Nucleo familiare.** Da Impostazioni si crea un codice d'invito (vale 48 ore). Chi lo inserisce entra nel nucleo e il suo profilo viene copiato. Il nucleo condivide menù, ricette, lista della spesa, dispensa, preferiti e regole condivise. Chi non entra in un nucleo usa l'app da solo.
-- **Vista famiglia e vista personale.** In Planner e Spesa un selettore passa da "Famiglia" (tutti) a "Solo io" (solo i miei pasti, le mie dosi e la mia spesa).
-- **Assenze e ospiti.** Su ogni pasto si tocca un avatar per segnare chi non c'è; con "Ospite" si aggiunge una persona (dieta, porzione, intolleranze) solo per quel pasto. Dieta, dosi e spesa si adeguano.
-- **Pasti equilibrati.** "Proponi" sceglie piatti adatti a tutti quelli presenti e completa il pasto se mancano carboidrati, proteine o verdure.
+- **Un account a testa.** Ognuno accede con email e password o con Google e ha il proprio profilo, con foto: dieta (vegana, vegetariana, pescetariana, onnivora), intolleranze, ingredienti da evitare, pasti che mangia, piano alimentare e frequenze settimanali. Il profilo lo modifica solo il suo proprietario.
+- **Persone senza app.** Chi non usa l'app si aggiunge da Famiglia ("Persona senza app"): lo modificano tutti. Se poi quella persona si installa l'app, entra nel nucleo e "reclama" il suo profilo: da quel momento lo modifica solo lei. Finché nessuno lo reclama resta libero.
+- **Nucleo familiare.** Da Impostazioni si crea un codice d'invito (vale 48 ore). Chi lo inserisce entra nel nucleo e il suo profilo viene copiato. Il nucleo condivide menù, ricette, lista della spesa, dispensa, preferiti e regole.
+- **Piano della nutrizionista.** Per ogni pasto si scrive il piano come è stato dato ("150 g yogurt oppure 30 g pane", una riga vuota separa ciò che si mangia insieme) o si incolla il piano intero. L'app lo legge, propone ricette che lo rispettano, mette le dosi indicate e, per ciò che nessuna ricetta copre, aggiunge l'alimento semplice. Il Planner segnala cosa manca. Se una persona non ha un piano, l'app propone pasti equilibrati (carboidrati, proteine, verdure).
+- **Menu separati per dieta.** A pranzo e a cena, se nessuna regola impone lo stesso piatto, chi segue una dieta diversa ha il suo menu (per esempio una vegetariana e due onnivore).
 - **Regole condivise.** Ad esempio "pranzo in settimana: vegetariano, d'asporto, stesso piatto per 2 giorni". Chi ha una dieta più ampia si adegua nei pasti coperti dalla regola.
-- **Dosi per persona.** Ogni ricetta è scritta per una porzione; l'app calcola le quantità di ciascuno e le somma.
-- **Preferiti e storico.** La proposta evita i piatti fatti nelle ultime settimane e privilegia i preferiti.
-- **Frequenze settimanali.** Ad esempio legumi almeno 3 volte: la proposta ne tiene conto e il Planner mostra l'avanzamento.
-- **Avanzi.** "Riporta come avanzo" su un piatto, o la regola "stesso piatto per 2-3 giorni".
-- **Intolleranze.** Senza glutine, lattosio, uova, frutta a guscio, soia, pesce: filtro e vincolo delle proposte.
-- **Dispensa.** Ciò che hai già in casa viene tolto dalla lista della spesa.
-- **Ricettario.** Circa 170 ricette precaricate più le tue, con foto del piatto.
+- **Vista famiglia e vista personale.** In Planner e Spesa un selettore passa da "Famiglia" a "Solo io".
+- **Assenze e ospiti.** Su ogni pasto si segna chi non c'è e si aggiungono ospiti (dieta, porzione, intolleranze) solo per quel pasto.
+- **Preferiti e storico, frequenze settimanali, avanzi, intolleranze, dispensa, lista della spesa** per settimana e giorni, raggruppata per reparto.
+- **Ricettario.** Circa 220 ricette, in parte da pagine di cucina italiane (con la fonte citata e il procedimento riscritto), con foto del piatto. Tutte si possono modificare, copiare o eliminare, anche quelle precaricate (da Impostazioni si ripristinano). Non c'è più una classificazione in pranzo, cena, ecc.: le ricette si scelgono dal piano di ognuno; un indizio automatico evita solo, per esempio, un dolce a cena quando nessuno ha un piano. Filtri: adatte a (una ricetta con pesce va bene a pescetariani e onnivori), contiene (legumi, pesce, carne, uova, formaggi...), senza (glutine, lattosio...), tempo, asporto, preferite.
 
 ## Avvio in locale
 
@@ -45,13 +42,13 @@ Sul telefono: apri l'indirizzo in Safari (iPhone) o Chrome (Android) e scegli "A
 
 ## Aggiungere ricette al ricettario precaricato
 
-Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC.md`). Dopo ogni modifica esegui `npm run check:recipes`. Le ricette create nell'app restano nel nucleo e non toccano questi file.
+Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC.md`). Dopo ogni modifica esegui `npm run check:recipes`; `node scripts/check-sources.mjs` controlla che le pagine citate come fonte esistano. Le ricette create nell'app restano nel nucleo e non toccano questi file.
 
 ## Struttura
 
 - `src/lib`: logica (dosi, diete e regole, proposta dei pasti, obiettivi, spesa, dispensa, storico).
 - `src/screens`: schermate. `src/hooks/data.jsx`: dati su Firestore.
-- Dati su Firestore: `users/<uid>` (puntatore al nucleo), `households/<id>` (account con accesso) e, sotto di esso, `profiles/<uid>`, `settings/household` (regole), `settings/prefs`, `recipes`, `plans/<settimana>`, `shopping`, `shoppingExtras`, `pantry`; `invites/<codice>` per gli inviti.
+- Dati su Firestore: `users/<uid>` (puntatore al nucleo), `households/<id>` (account con accesso) e, sotto di esso, `profiles/<id>`, `settings/household` (regole), `settings/prefs`, `recipes`, `plans/<settimana>`, `shopping`, `shoppingExtras`, `pantry`; `invites/<codice>` per gli inviti.
 - `_vecchia-versione/`: la versione precedente, tenuta solo come archivio.
 
 ## Limiti noti
@@ -59,6 +56,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Le foto sono ridotte (800 px) e salvate nel documento della ricetta: niente Firebase Storage, quindi nessun piano a pagamento.
 - Intolleranze e frequenze sono stimate da parole chiave negli ingredienti: possono sbagliare. Per le allergie controlla sempre l'etichetta.
 - La dispensa non scala da sola quando cucini.
+- Il piano della nutrizionista si legge con regole semplici sul testo (quantità, unità, "oppure", righe vuote): se una riga non viene capita, l'anteprima "Ho capito" lo mostra subito. L'abbinamento alle ricette confronta i nomi degli alimenti e può sbagliare.
 - Le ricette importate dal vecchio formato (Impostazioni > Importa da JSON) hanno dieta sconosciuta e valgono come onnivore finché non la imposti.
 - Le regole di sicurezza del nucleo condiviso non sono state provate con l'emulatore Firebase: provale con due account.
 - Entrando in un altro nucleo si perde la vista sui dati del vecchio (ricette e menù): esporta prima una copia da Impostazioni.

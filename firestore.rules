@@ -34,10 +34,23 @@ service cloud.firestore {
             && get(/databases/$(database)/documents/invites/$(request.resource.data.joinCode)).data.expiresAt > request.time)
       );
 
-      // Profilo personale: tutti nel nucleo lo leggono, lo scrive solo il suo proprietario
+      // Persone del nucleo. Le legge chiunque sia nel nucleo.
+      // Le scrive: il proprietario (profilo con il suo uid, oppure reclamato da lui); chiunque, finché è una persona
+      // senza app (managed) non ancora reclamata. Nessuno può intestare un reclamo a un altro account.
       match /profiles/{pid} {
         allow read: if isMember(hid);
-        allow write: if isMember(hid) && pid == request.auth.uid;
+        allow create: if isMember(hid)
+          && (pid == request.auth.uid || request.resource.data.managed == true)
+          && (!('claimedBy' in request.resource.data) || request.resource.data.claimedBy == request.auth.uid);
+        allow update: if isMember(hid)
+          && (!('claimedBy' in request.resource.data) || request.resource.data.claimedBy == request.auth.uid)
+          && (pid == request.auth.uid
+              || resource.data.get('claimedBy', null) == request.auth.uid
+              || (resource.data.get('managed', false) == true && resource.data.get('claimedBy', null) == null));
+        allow delete: if isMember(hid)
+          && (pid == request.auth.uid
+              || resource.data.get('claimedBy', null) == request.auth.uid
+              || (resource.data.get('managed', false) == true && resource.data.get('claimedBy', null) == null));
       }
 
       // Dati condivisi del nucleo

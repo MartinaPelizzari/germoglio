@@ -2,21 +2,22 @@ import React from 'react';
 import { Clock, ExternalLink, Pencil, Copy, Trash2, ChevronLeft, ShoppingCart, Heart } from 'lucide-react';
 import { useData } from '../hooks/data.jsx';
 import { DietBadge, Portal, useBackClose } from '../components/ui.jsx';
-import { categoryTint, getCategoryEmoji, timeLabel } from '../lib/format.js';
+import { DEFAULT_EMOJI, timeLabel } from '../lib/format.js';
+import { recipeKind } from '../lib/meals.js';
 import { formatQty, mealOf, scaleRecipe, sumIngredients } from '../lib/scale.js';
-import { GROUP_LABEL, slotForCategory } from '../lib/groups.js';
 import { allergenLabel, recipeAllergens } from '../lib/allergens.js';
 import { agoLabel } from '../lib/usage.js';
 
 // context (facoltativo): { slot, eaters: [member] } quando si apre da un pasto pianificato
 export default function RecipeDetail({ recipe, context, onClose, onEdit, onDuplicate, onDelete }) {
   useBackClose(onClose);
-  const { household, favorites, toggleFavorite, lastUse } = useData();
+  const { household, favorites, toggleFavorite, lastUse, restoreRecipe } = useData();
   const fav = favorites.has(recipe.id);
   const allergens = [...recipeAllergens(recipe)];
   const ago = lastUse.get(recipe.id);
   const members = context?.eaters?.length ? context.eaters : household.members;
-  const slot = context?.slot || slotForCategory(recipe.category);
+  const kind = recipeKind(recipe);
+  const slot = context?.slot || (kind === 'colazione' ? 'Colazione' : kind === 'spuntino' ? 'Spuntino 1' : 'Pranzo');
   const [view, setView] = React.useState(context ? 'all' : 'base');
 
   React.useEffect(() => {
@@ -33,12 +34,11 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
     }
     const m = members.find((x) => x.id === view) || household.members.find((x) => x.id === view);
     const meal = mealOf(m, slot);
-    const t = Object.keys(meal.targets).filter((k) => Number(meal.targets[k]) > 0);
-    const why = t.length ? `Dosi su misura per ${m.name} (${slot.toLowerCase()}): ${t.map((k) => `${GROUP_LABEL[k].toLowerCase()} ${meal.targets[k]} g`).join(', ')}.` : meal.mult !== 1 ? `Porzione di ${m.name} x ${String(meal.mult).replace('.', ',')}.` : `Porzione standard di ${m.name}.`;
+    const why = meal.plan.length ? `Dosi dal piano alimentare di ${m.name} (${slot.toLowerCase()}) per gli ingredienti che corrispondono.` : meal.mult !== 1 ? `Porzione di ${m.name} x ${String(meal.mult).replace('.', ',')}.` : `Porzione standard di ${m.name}.`;
     return { list: scaleRecipe(recipe, meal), note: why };
   }, [view, recipe, members, slot, household]);
 
-  const tint = categoryTint(recipe.category);
+  const tint = 'bg-brand-50';
   const modes = [{ id: context ? 'all' : 'base', label: context ? 'Tutti' : 'Base' }, ...members.map((m) => ({ id: m.id, label: m.name }))];
 
   return (
@@ -47,27 +47,22 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
       <div className="w-full max-w-md h-full bg-white flex flex-col relative animate-slide-up overflow-hidden shadow-2xl">
         <div className="overflow-y-auto flex-1">
           <div className={`relative h-64 ${tint} flex items-center justify-center`}>
-            {recipe.photo ? <img src={recipe.photo} alt={recipe.title} className="w-full h-full object-cover" /> : <span style={{ fontSize: '7rem' }}>{recipe.emoji || getCategoryEmoji(recipe.category)}</span>}
+            {recipe.photo ? <img src={recipe.photo} alt={recipe.title} className="w-full h-full object-cover" /> : <span style={{ fontSize: '7rem' }}>{recipe.emoji || DEFAULT_EMOJI}</span>}
             <button onClick={onClose} aria-label="Chiudi" className="absolute top-5 left-5 mt-[var(--safe-top)] p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><ChevronLeft className="w-6 h-6 text-slate-800" /></button>
             <div className="absolute top-5 right-5 mt-[var(--safe-top)] flex gap-2">
               <button onClick={() => toggleFavorite(recipe.id)} aria-label={fav ? 'Togli dai preferiti' : 'Aggiungi ai preferiti'} aria-pressed={fav} className="p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><Heart className={`w-5 h-5 ${fav ? 'fill-rose-500 text-rose-500' : 'text-slate-600'}`} /></button>
-              {recipe.own ? (
-                <>
-                  <button onClick={onEdit} aria-label="Modifica ricetta" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-brand-700 active:scale-95"><Pencil className="w-5 h-5" /></button>
-                  <button onClick={onDelete} aria-label="Elimina ricetta" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-red-500 active:scale-95"><Trash2 className="w-5 h-5" /></button>
-                </>
-              ) : (
-                <button onClick={onDuplicate} aria-label="Salva una copia da modificare" className="px-4 py-3 bg-white/70 backdrop-blur-md rounded-full text-brand-700 font-bold text-sm flex items-center gap-2 active:scale-95"><Copy className="w-4 h-4" /> Copia e modifica</button>
-              )}
+              {!recipe.isFood && <button onClick={onDuplicate} aria-label="Salva una copia" title="Salva una copia" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-slate-600 active:scale-95"><Copy className="w-5 h-5" /></button>}
+              <button onClick={onEdit} aria-label="Modifica ricetta" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-brand-700 active:scale-95"><Pencil className="w-5 h-5" /></button>
+              <button onClick={onDelete} aria-label="Elimina ricetta" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-red-500 active:scale-95"><Trash2 className="w-5 h-5" /></button>
             </div>
           </div>
           <div className="px-6 pt-6 pb-32 -mt-6 relative bg-white rounded-t-[32px]">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="px-3 py-1 bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider rounded-full">{recipe.category}</span>
               <DietBadge diet={recipe.diet} />
               <span className="flex items-center gap-1 text-xs text-slate-500 font-semibold"><Clock className="w-3.5 h-3.5" /> {timeLabel(recipe)}</span>
             </div>
             <h1 className="font-display font-extrabold text-3xl text-slate-900 mb-2 leading-tight">{recipe.title}</h1>
+            {recipe.overridden && <button onClick={() => { restoreRecipe(recipe.id); onClose(); }} className="text-xs font-bold text-brand-700 underline mb-2 block">Questa ricetta è stata modificata: ripristina l'originale</button>}
             {ago !== undefined && <p className="text-xs text-slate-400 mb-1">Ultima volta in menù: {agoLabel(ago)}</p>}
             {allergens.length > 0 && <p className="text-xs text-slate-500 mb-2">Contiene (stima dagli ingredienti): {allergens.map((a) => allergenLabel(a).toLowerCase()).join(', ')}</p>}
             {recipe.source?.url && (

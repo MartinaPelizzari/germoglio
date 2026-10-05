@@ -1,0 +1,1468 @@
+[
+  {
+    "id": "web-colazione-porridge-avena-banana",
+    "title": "Porridge d'avena con banana e burro di arachidi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "porridge",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Burro di arachidi",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa i fiocchi d'avena in un pentolino con il latte di soia e un pizzico di sale.",
+      "Porta a bollore mescolando e cuoci a fuoco dolce per 7-8 minuti, finché la crema è densa al punto giusto.",
+      "Taglia la banana a rondelle.",
+      "Trasferisci il porridge in una ciotola o in un contenitore da portare via e completa con la banana e il burro di arachidi."
+    ],
+    "source": {
+      "name": "Cucina Botanica",
+      "url": "https://www.cucinabotanica.com/ricette/porridge/"
+    },
+    "notes": "Con i fiocchi d'avena tritati la cottura si riduce a 2-3 minuti."
+  },
+  {
+    "id": "web-colazione-overnight-porridge-frutti-bosco",
+    "title": "Overnight porridge con frutti di bosco e crema di nocciole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫐",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "porridge",
+      "da preparare la sera"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 60,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di chia",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Crema di nocciole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "In una ciotola mescola i fiocchi d'avena con il latte di soia, lo yogurt, lo sciroppo d'acero e i semi di chia.",
+      "Lascia riposare il composto per 10 minuti, così l'avena inizia ad assorbire il liquido.",
+      "In un vasetto di vetro alterna uno strato di composto e uno di frutti di bosco, poi ripeti.",
+      "Completa con altra frutta e la crema di nocciole, chiudi il vasetto e metti in frigorifero per tutta la notte."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane-semplici-veloci/overnight-porridge-vegan-con-frutta-fresca-e-crema-di-nocciole/"
+    },
+    "notes": "Si conserva in frigorifero per 2 giorni. Il tempo indicato non comprende il riposo notturno."
+  },
+  {
+    "id": "web-colazione-granola-fichi-noci-yogurt",
+    "title": "Granola ai fichi e noci con yogurt di soia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "granola",
+      "yogurt"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Noci",
+        "qty": 12,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di girasole",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Fichi secchi",
+        "qty": 14,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Taglia i fichi secchi a dadini e lasciali in ammollo in acqua tiepida per 15 minuti, poi scolali.",
+      "Mescola i fiocchi d'avena con le noci tritate, i semi di girasole e un pizzico di cannella.",
+      "Aggiungi sciroppo d'acero, olio e fichi, e amalgama bene.",
+      "Stendi il composto su una placca rivestita di carta forno e inforna a 200 °C per circa 15 minuti, girandolo a metà cottura.",
+      "Lascia raffreddare del tutto, poi servi la granola sullo yogurt di soia."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane/granola-ai-fichi-secchi-e-noci/"
+    },
+    "notes": "La ricetta originale è per un vasetto intero: moltiplicando le dosi per 5 si ottiene granola per diverse colazioni, da conservare in barattolo ermetico fino a un mese."
+  },
+  {
+    "id": "web-colazione-toast-burro-arachidi-banana",
+    "title": "Toast integrale con burro di arachidi, banana e cioccolato",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍌",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "toast",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Burro di arachidi",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 20,
+        "unit": "g",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le fette di pane integrale in tostapane, forno o padella.",
+      "Spalma il burro di arachidi sulle fette ancora calde.",
+      "Taglia la banana a rondelle e distribuiscila sul pane.",
+      "Grattugia il cioccolato fondente sopra e mangia subito."
+    ],
+    "source": {
+      "name": "Il Club delle Ricette",
+      "url": "https://www.ilclubdellericette.it/ricetta/toast-al-burro-di-arachidi-e-banane"
+    },
+    "notes": "Per un gusto più delicato usa il burro di mandorle."
+  },
+  {
+    "id": "web-colazione-pane-ricotta-albicocche-nocciole",
+    "title": "Pane tostato con ricotta, albicocche secche e nocciole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pane",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Albicocche secche",
+        "qty": 3,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Lavora la ricotta con il miele fino a ottenere una crema liscia.",
+      "Taglia le albicocche secche a pezzetti e pesta leggermente le nocciole in granella.",
+      "Tosta il pane e spalmaci la crema di ricotta.",
+      "Completa con le albicocche e la granella di nocciole."
+    ],
+    "source": {
+      "name": "GialloZafferano (blog Mamma sana pancia piena)",
+      "url": "https://blog.giallozafferano.it/msp/pane-tostato-ricotta-frutta-secca/"
+    },
+    "notes": "Accompagna con un frutto fresco e una bevanda calda per una colazione completa."
+  },
+  {
+    "id": "web-colazione-uova-strapazzate-pomodori-toast",
+    "title": "Uova strapazzate cremose con pomodori e toast",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "uova",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 2,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Cipollotto",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "dairy"
+      },
+      {
+        "name": "Yogurt naturale",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia i pomodori a fette spesse e rosolali in una padella antiaderente appena unta, a fuoco basso, salando a metà cottura.",
+      "Sbatti le uova con il latte, il cipollotto a rondelle, il basilico, sale e pepe, finché il composto è spumoso.",
+      "Tosta il pane.",
+      "Versa le uova in un padellino leggermente unto e mescola a fuoco dolce finché sono cremose per tre quarti.",
+      "Spegni il fuoco, aggiungi lo yogurt e mescola ancora, così l'uovo finisce di rapprendersi senza seccarsi.",
+      "Servi subito le uova sul toast, con i pomodori a lato."
+    ],
+    "source": {
+      "name": "GialloZafferano (blog Mamma sana pancia piena)",
+      "url": "https://blog.giallozafferano.it/msp/uova-strapazzate-light/"
+    },
+    "notes": "Da gustare subito, perché l'uovo continua a rapprendersi."
+  },
+  {
+    "id": "web-colazione-yogurt-greco-avena-frutti-bosco",
+    "title": "Yogurt greco con avena, cocco e frutti di bosco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥛",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "yogurt",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 150,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cocco rapè",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Metti i fiocchi d'avena in una ciotola o in un vasetto e mescolali con il miele.",
+      "Pressa leggermente con il dorso di un cucchiaio per formare una base compatta.",
+      "Aggiungi lo yogurt greco e il cocco rapè.",
+      "Completa con i frutti di bosco e servi subito, oppure lascia riposare in frigorifero per mezz'ora."
+    ],
+    "source": {
+      "name": "GialloZafferano (blog Cucino per passione)",
+      "url": "https://blog.giallozafferano.it/cucinoperpassione/ricetta-yogurt-greco-e-frutta/"
+    },
+    "notes": "Si conserva in frigorifero per un giorno."
+  },
+  {
+    "id": "web-colazione-chia-pudding-cocco-mango",
+    "title": "Chia pudding al latte di cocco con mango e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥭",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "da preparare la sera"
+    ],
+    "ingredients": [
+      {
+        "name": "Latte di cocco",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Semi di chia",
+        "qty": 25,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Mango",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Banana",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cocco rapè",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Versa il latte di cocco in un barattolo con chiusura, aggiungi i semi di chia e mescola bene.",
+      "Chiudi e metti in frigorifero per una notte, finché il composto si addensa.",
+      "Il giorno dopo frulla il mango con la banana fino a ottenere una crema liscia.",
+      "Versa la crema di frutta sul pudding e completa con il cocco rapè."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/veg-blogger/chia-pudding-con-mango-e-banana-al-latte-di-cocco/"
+    },
+    "notes": "Si conserva in frigorifero per due giorni. Il tempo indicato non comprende il riposo notturno."
+  },
+  {
+    "id": "web-spuntino-ceci-croccanti-paprica",
+    "title": "Ceci croccanti al forno con paprica e rosmarino",
+    "category": "Spuntino",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌰",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "croccante"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Paprica dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola i ceci, sciacquali e asciugali con cura con un canovaccio pulito.",
+      "Mettili in una ciotola con paprica, rosmarino tritato e sale, poi unisci la farina e mescola.",
+      "Condisci con l'olio e amalgama in modo che ogni cece sia ricoperto.",
+      "Distribuisci i ceci su una teglia con carta forno e cuoci a 180 °C per circa 20 minuti, fino a doratura.",
+      "Lascia intiepidire: diventano più croccanti raffreddandosi."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/ceci-al-forno/"
+    },
+    "notes": "Si conservano al massimo due giorni in un barattolo ermetico a temperatura ambiente."
+  },
+  {
+    "id": "web-spuntino-energy-balls-datteri-arachidi",
+    "title": "Energy balls ai datteri e arachidi",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍫",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "datteri",
+      "senza cottura"
+    ],
+    "ingredients": [
+      {
+        "name": "Datteri",
+        "qty": 4,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Arachidi",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Noci",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Burro di arachidi",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla insieme le noci e le arachidi fino a ridurle in granella fine.",
+      "Aggiungi i datteri snocciolati e il burro di arachidi e frulla finché il composto diventa compatto e omogeneo.",
+      "Forma delle palline con le mani leggermente umide.",
+      "Passale nel cacao e conservale in frigorifero."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/veg-blogger/energy-balls-vegane-con-arachidi/"
+    },
+    "notes": "Si conservano in frigorifero fino a una settimana. Si possono rotolare anche nella farina di carrube."
+  },
+  {
+    "id": "web-spuntino-hummus-ceci-pane-tostato",
+    "title": "Hummus di ceci con pane tostato",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥙",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      }
+    ],
+    "steps": [
+      "Metti nel mixer i ceci con la tahina, il succo di limone, un po' d'olio, una puntina d'aglio e il sale.",
+      "Frulla aggiungendo poca acqua alla volta, finché la crema è morbida e liscia.",
+      "Trasferisci l'hummus in una ciotola e decora con prezzemolo tritato e un filo d'olio.",
+      "Servi con il pane tostato."
+    ],
+    "source": {
+      "name": "GialloZafferano (blog Timo e lenticchie)",
+      "url": "https://blog.giallozafferano.it/timoelenticchie/hummus-di-ceci/"
+    },
+    "notes": "Con ceci secchi ammollati e cotti in pentola a pressione il risultato è ancora più cremoso. Ottimo anche con carote e finocchi crudi."
+  },
+  {
+    "id": "web-spuntino-bruschetta-pomodoro-basilico",
+    "title": "Bruschetta al pomodoro e basilico",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "bruschetta",
+      "estate"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane casereccio",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia i pomodorini a pezzetti e condiscili con sale, pepe, origano, basilico spezzettato a mano e metà dell'olio.",
+      "Affetta il pane e tostalo in forno per un paio di minuti.",
+      "Strofina le fette ancora calde con lo spicchio d'aglio.",
+      "Distribuisci i pomodori sul pane, completa con l'olio rimasto e qualche foglia di basilico, e servi subito."
+    ],
+    "source": {
+      "name": "GialloZafferano (blog Una spia in cucina)",
+      "url": "https://blog.giallozafferano.it/unaspiaincucina/bruschette-al-pomodoro-e-basilico-ricetta-classica/"
+    }
+  },
+  {
+    "id": "web-spuntino-muffin-salati-hummus-olive",
+    "title": "Muffin salati vegani con hummus, olive e pomodorini",
+    "category": "Spuntino",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧁",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "muffin",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 42,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di ceci",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lievito per torte salate",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Hummus di ceci",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 40,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 2,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno statico a 180 °C.",
+      "Mescola la farina, la farina di ceci, il lievito e un pizzico di sale.",
+      "Aggiungi hummus, olio e latte di soia e amalgama, poi unisci le olive tritate grossolanamente.",
+      "Riempi gli stampini da muffin per tre quarti e decora ognuno con un pomodorino e qualche seme di zucca.",
+      "Cuoci per circa 30 minuti e lascia intiepidire prima di mangiare."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane-semplici-veloci/muffin-salati-vegan-con-hummus-alle-erbe/"
+    },
+    "notes": "Le dosi corrispondono a circa 2 muffin; per una teglia da 12 moltiplica per 6. Si conservano 2-3 giorni in un contenitore ermetico."
+  },
+  {
+    "id": "web-spuntino-barrette-sesamo-frutti-rossi",
+    "title": "Barrette ai semi e frutti rossi secchi",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "barrette",
+      "semi"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchero di canna integrale",
+        "qty": 25,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Frutti rossi secchi",
+        "qty": 25,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Semi di sesamo e di zucca",
+        "qty": 25,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Malto di riso",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 8,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Tosta i semi in forno a 180 °C per 5-6 minuti.",
+      "In un pentolino porta a bollore lo zucchero con il malto, un po' di succo di limone e acqua.",
+      "Unisci frutti rossi secchi, fiocchi d'avena e semi e mescola finché lo sciroppo è assorbito.",
+      "Stendi il composto su carta forno leggermente oliata, coprilo e appiattiscilo con il mattarello a circa 1 cm di spessore.",
+      "Lascia raffreddare, poi tieni in frigorifero per un paio d'ore e taglia a barrette."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane-semplici-veloci/barrette-ai-semi-di-sesamo-e-frutti-rossi/"
+    },
+    "notes": "Le dosi corrispondono a una barretta abbondante; la ricetta originale è per 6 e si conserva due settimane in una scatola di latta. Il tempo indicato non comprende il riposo."
+  },
+  {
+    "id": "web-contorno-fagioli-uccelletto",
+    "title": "Fagioli cannellini all'uccelletto",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🫘",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "toscana"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 90,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai rosolare lo spicchio d'aglio con qualche foglia di salvia nell'olio, a fuoco dolce.",
+      "Aggiungi i fagioli ben scolati e lasciali insaporire per un paio di minuti.",
+      "Versa la passata con un goccio d'acqua e cuoci per circa 20 minuti, finché il sugo diventa denso.",
+      "Elimina l'aglio, regola di sale e termina con pepe nero e un filo d'olio a crudo."
+    ],
+    "source": {
+      "name": "Cookist",
+      "url": "https://www.cookist.it/fagioli-alluccelletto-la-ricetta/"
+    },
+    "notes": "Si conserva in frigorifero al massimo 2 giorni."
+  },
+  {
+    "id": "web-contorno-spinaci-ceci-andalusi",
+    "title": "Spinaci e ceci alla andalusa",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "spinaci"
+    ],
+    "ingredients": [
+      {
+        "name": "Spinaci",
+        "qty": 125,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Pane raffermo",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di vino bianco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cumino in semi",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Paprica dolce",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggi l'aglio con il peperoncino e il cumino in una parte dell'olio, poi toglilo e tosta il pane nello stesso olio.",
+      "Frulla l'aglio, il pane, la paprica e l'aceto con un po' d'acqua per ottenere una crema, il majado.",
+      "In una padella unisci i ceci, il majado diluito con acqua calda e gli spinaci (se surgelati, scongelali e strizzali).",
+      "Sala e cuoci per circa 10 minuti, finché gli spinaci sono morbidi e il fondo è cremoso."
+    ],
+    "source": {
+      "name": "Il Cuore in Pentola",
+      "url": "https://www.ilcuoreinpentola.it/ricette/ricette-straniere/ricette-spagnole/spinaci-e-ceci/"
+    }
+  },
+  {
+    "id": "web-contorno-insalata-lenticchie-carote-marocchina",
+    "title": "Insalata di lenticchie e carote alla marocchina",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie cotte",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carote",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fruit"
+      },
+      {
+        "name": "Semi misti",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Senape",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Paprica dolce",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Metti l'uvetta in ammollo in acqua tiepida per 15 minuti, poi strizzala.",
+      "Grattugia le carote in una ciotola e uniscile alle lenticchie scolate.",
+      "Affetta sottilmente la cipolla rossa e il sedano e aggiungili all'insalata.",
+      "In una ciotolina emulsiona olio, limone, sciroppo d'acero, senape e spezie.",
+      "Versa il condimento sull'insalata, aggiungi uvetta, semi e prezzemolo, sala e mescola."
+    ],
+    "source": {
+      "name": "GialloZafferano (blog Ricettando con Dany)",
+      "url": "https://blog.giallozafferano.it/ricettandocondany/ricetta-insalata-marocchina-di-lenticchie-e-carote/"
+    },
+    "notes": "Si conserva in frigorifero per 2 giorni. Si può sostituire l'uvetta con albicocche secche."
+  },
+  {
+    "id": "web-contorno-broccoli-finocchi-ceci-forno",
+    "title": "Broccoli, finocchi e ceci al forno al curry",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "forno",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Broccoli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Finocchio",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividi il broccolo in cimette e taglia il finocchio a fettine, poi disponili in una teglia con carta forno, salati e oliati.",
+      "Sciacqua e asciuga bene i ceci e condiscili in un piatto con curry, sale e olio.",
+      "Unisci i ceci alle verdure nella teglia.",
+      "Inforna a 180 °C in modalità statica per circa 20 minuti.",
+      "Completa con il succo di limone prima di servire."
+    ],
+    "source": {
+      "name": "Diversamente Latte",
+      "url": "https://www.diversamentelatte.it/broccoli-finocchi-e-ceci-al-forno/"
+    },
+    "notes": "Se avanza, si può frullare con frutta secca, semi e limone per condire la pasta."
+  },
+  {
+    "id": "web-contorno-insalata-ceci-cremosa-pistacchi",
+    "title": "Insalata di ceci cremosa con sedano e pistacchi",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Sedano",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pistacchi sgusciati",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 20,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Capperi",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Aceto di mele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla il latte e lo yogurt di soia con un pizzico di sale e l'aceto, poi versa l'olio a filo per ottenere una maionese.",
+      "Aggiungi i capperi e un cucchiaio di ceci e frulla fino a una crema liscia.",
+      "Taglia a cubetti sedano e cetriolo e trita la cipolla.",
+      "Unisci in una ciotola i ceci rimasti con le verdure e i pistacchi tritati grossolanamente.",
+      "Condisci con la crema ai capperi, aggiungi il prezzemolo e lascia insaporire in frigorifero per mezz'ora, se possibile."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane/insalata-di-ceci-cremosa/"
+    },
+    "notes": "Le quantità della crema sono piccole: conviene prepararne una dose maggiore con il frullatore a immersione. Con patate lesse a cubetti diventa un piatto unico."
+  },
+  {
+    "id": "web-contorno-cavolfiore-forno-curcuma",
+    "title": "Cavolfiore al forno alla curcuma",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "forno",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolfiore",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma in polvere",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Erbe aromatiche miste",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 180 °C e taglia il cavolfiore a fette dello spessore di 1-1,5 cm.",
+      "Disponi le fette in una teglia antiaderente e salale e pepale su entrambi i lati.",
+      "Mescola olio, un po' d'acqua, curcuma ed erbe aromatiche e pennella le fette da entrambe le parti.",
+      "Inforna per 15 minuti, aggiungi un goccio d'acqua in teglia e prosegui per altri 15 minuti.",
+      "Servi caldo o tiepido con prezzemolo tritato."
+    ],
+    "source": {
+      "name": "Ricette Vegolose",
+      "url": "https://www.ricettevegolose.com/2019/03/cavolfiore-al-forno-light-alla-curcuma/"
+    },
+    "notes": "Per un piatto più completo abbinalo a cereali e legumi."
+  }
+]

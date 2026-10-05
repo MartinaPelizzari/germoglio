@@ -1,9 +1,10 @@
 import React from 'react';
 import { newProfile } from '../hooks/data.jsx';
+import { Avatar } from '../components/ui.jsx';
 
 import { DIETS } from '../lib/diet.js';
 
-export default function Onboarding({ user, index = 0, onDone }) {
+export default function Onboarding({ user, index = 0, freeProfiles = [], onClaim, onDone }) {
   const [name, setName] = React.useState((user.displayName || '').split(' ')[0] || '');
   const [diet, setDiet] = React.useState('vegetarian');
   return (
@@ -13,6 +14,17 @@ export default function Onboarding({ user, index = 0, onDone }) {
           <h1 className="font-display font-extrabold text-2xl text-slate-900">Ciao!</h1>
           <p className="text-sm text-slate-500 mt-1">Per configurare il tuo profilo personale mi servono il tuo nome e la dieta che segui.</p>
         </div>
+        {freeProfiles.length > 0 && (
+          <div className="bg-brand-50 rounded-2xl p-4 space-y-2">
+            <p className="text-sm text-brand-800 font-semibold">Qualcuno ha già creato un profilo per te? Toccalo e diventa tuo.</p>
+            {freeProfiles.map((p) => (
+              <button key={p.id} onClick={() => onClaim(p.id)} className="w-full bg-white rounded-xl p-2.5 flex items-center gap-3 text-left active:scale-95">
+                <Avatar member={p} size="w-9 h-9 text-lg" /><span className="font-bold text-slate-700">{p.name || 'Senza nome'}</span>
+              </button>
+            ))}
+            <p className="text-xs text-slate-500">Altrimenti crea un nuovo profilo qui sotto.</p>
+          </div>
+        )}
         <div>
           <label className="block text-xs font-bold text-slate-400 uppercase mb-2">Come ti chiami?</label>
           <input className="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-brand-500 font-bold" value={name} onChange={(e) => setName(e.target.value)} placeholder="Il tuo nome" />
