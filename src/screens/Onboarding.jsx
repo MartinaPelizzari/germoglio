@@ -1,12 +1,29 @@
 import React from 'react';
 import { newProfile } from '../hooks/data.jsx';
 import { Avatar } from '../components/ui.jsx';
-
+import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
 import { DIETS } from '../lib/diet.js';
 
 export default function Onboarding({ user, index = 0, freeProfiles = [], onClaim, onDone }) {
   const [name, setName] = React.useState((user.displayName || '').split(' ')[0] || '');
   const [diet, setDiet] = React.useState('vegetarian');
+  const [step, setStep] = React.useState(1);
+  const finish = (texts) => onDone({ ...newProfile(user.uid, name.trim(), diet, index), meals: texts ? mealsFromTexts(texts) : {} });
+
+  if (step === 2) {
+    return (
+      <div className="min-h-[100dvh] flex justify-center px-4 py-6 bg-surface-ground pt-safe pb-safe overflow-y-auto">
+        <div className="w-full max-w-sm bg-white p-5 rounded-3xl shadow-soft space-y-4 animate-fade-in h-fit">
+          <div>
+            <h1 className="font-display font-extrabold text-2xl text-slate-900">Il tuo piano alimentare</h1>
+            <p className="text-sm text-slate-500 mt-1">Se hai il piano della nutrizionista in PDF, caricalo: lo leggo e lo controlli prima di salvarlo. Puoi anche saltare e scriverlo più tardi dal tuo profilo.</p>
+          </div>
+          <PlanImport applyLabel="Salva il profilo con questo piano" onApply={finish} onSkip={() => finish(null)} />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-surface-ground pt-safe pb-safe">
       <div className="w-full max-w-sm bg-white p-6 rounded-3xl shadow-soft space-y-5 animate-fade-in">
@@ -37,8 +54,8 @@ export default function Onboarding({ user, index = 0, freeProfiles = [], onClaim
             ))}
           </div>
         </div>
-        <button disabled={!name.trim()} onClick={() => onDone(newProfile(user.uid, name.trim(), diet, index))} className="w-full py-4 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95 disabled:opacity-50">
-          Inizia
+        <button disabled={!name.trim()} onClick={() => setStep(2)} className="w-full py-4 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95 disabled:opacity-50">
+          Avanti
         </button>
       </div>
     </div>

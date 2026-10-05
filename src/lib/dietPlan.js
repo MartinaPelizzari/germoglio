@@ -11,12 +11,13 @@
 import { guessGroup } from './groups.js';
 import { FOOD_TYPES } from './foodTypes.js';
 
-const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
-const STOP = new Set(['di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo']);
+const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+const STOP = new Set(['di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'soffiato', 'soffiata', 'soffiati', 'basmati', 'volonta']);
 const stem = (t) => (t.length > 4 ? t.slice(0, -1) : t);
 const tokens = (s) => norm(s).split(' ').filter((t) => t && !STOP.has(t)).map(stem);
 
 const UNIT_MAP = { g: 'g', gr: 'g', grammi: 'g', grammo: 'g', kg: 'kg', ml: 'ml', cl: 'cl', dl: 'dl', l: 'l', lt: 'l', pz: 'pz', pezzi: 'pz', pezzo: 'pz', fetta: 'fetta', fette: 'fetta', cucchiaio: 'cucchiai', cucchiai: 'cucchiai', cucchiaino: 'cucchiaini', cucchiaini: 'cucchiaini', vasetto: 'vasetto', vasetti: 'vasetto', frutto: 'pz', frutti: 'pz', porzione: 'pz', porzioni: 'pz', tazza: 'tazza', tazze: 'tazza', bicchiere: 'bicchiere', bicchieri: 'bicchiere' };
+const NUMBER_WORDS = { un: 1, uno: 1, una: 1, due: 2, tre: 3, quattro: 4, cinque: 5, sei: 6 };
 
 const toBase = (qty, unit, name) => {
   const n = norm(name);
@@ -33,25 +34,58 @@ const toBase = (qty, unit, name) => {
 };
 
 const num = (s) => parseFloat(String(s).replace(',', '.'));
+const wordNum = (w) => (/^\d/.test(w) ? num(w) : NUMBER_WORDS[w.toLowerCase()]);
 
-// "150 g yogurt", "2 fette di pane (60 g)", "yogurt 150 g", "frutta fresca di stagione"
+// Frequenze nelle note: "[due volte a settimana]", "[fino a 6 uova a settimana]"
+const readFrequency = (note) => {
+  let m = note.match(/\b(una|uno|un|due|tre|quattro|cinque|\d+)\s+volt[ae]\s+(?:a|alla)\s+settimana/i);
+  if (m) return { maxPerWeek: wordNum(m[1]) };
+  m = note.match(/fino a\s+(\d+)\s*([a-zà-ù]+)?\s+(?:a|alla)\s+settimana/i);
+  if (m) return { maxQtyPerWeek: num(m[1]) };
+  return null;
+};
+// "evitando fichi, cachi, uva e mango", "evitiamo la soia"
+const readAvoid = (note) => {
+  const m = note.match(/evit(?:ando|iamo|are|a|i)\s+([^.;()\[\]]+)/i);
+  if (!m) return [];
+  return m[1].split(/,|\se\s|\so\s/).map((w) => norm(w).replace(/^(la|il|lo|le|gli|i|l)\s+/, '').trim()).filter((w) => w && w.split(' ').length <= 2 && w.length > 2);
+};
+
+// "150 g yogurt", "2 fette di pane (60 g)", "yogurt 150 g [due volte a settimana]", "frutta fresca"
 export const parseOption = (raw) => {
   let text = raw.replace(/^[\s\-•*·]+/, '').trim();
   if (!text) return null;
   const original = text;
-  // grammi tra parentesi: prevalgono ("2 fette di pane (60 g)")
+  const notes = [];
   let paren = null;
+  // grammi tra parentesi: prevalgono ("2 fette di pane (60 g)")
   const pm = text.match(/\(\s*(\d+(?:[.,]\d+)?)\s*(g|gr|ml|kg|cl|dl|l)\s*\)/i);
   if (pm) { paren = [num(pm[1]), UNIT_MAP[pm[2].toLowerCase()]]; text = text.replace(pm[0], ' ').trim(); }
+  // note tra parentesi quadre o tonde
+  text = text.replace(/\[([^\]]*)\]|\(([^)]*)\)/g, (_, a, b) => { notes.push((a ?? b).trim()); return ' '; }).replace(/\s+/g, ' ').trim();
+  // spiegazioni dopo i due punti ("frutta fresca: è buona abitudine ...")
+  const colon = text.match(/^([^:]{3,60}):\s+(.+)$/);
+  if (colon) { text = colon[1]; notes.push(colon[2]); }
+  // combinazioni: "4 fette biscottate + un velo di marmellata"
+  let extra = '';
+  const plus = text.split(/\s\+\s/);
+  if (plus.length > 1) { text = plus[0]; extra = plus.slice(1).join(' + '); }
+  text = text.replace(/^fino a\s+/i, (m) => { notes.push('fino a'); return ''; });
+  const upTo = notes.includes('fino a');
 
   let qty = 0, unit = 'q.b.', name = text;
+  const range = text.match(/^(\d+)\s+o\s+(\d+)\s+(.*)$/);
   const qf = text.match(/^(\d+(?:[.,]\d+)?)\s*([a-zA-ZÀ-ÿ.]+)?\s*(?:di\s+|d')?(.*)$/);
+  const wf = text.match(/^(un|uno|una|due|tre|quattro|cinque)\s+(.*)$/i);
   const nf = text.match(/^(.*?)[\s:(-]+(\d+(?:[.,]\d+)?)\s*([a-zA-Z]+)\s*\)?\s*$/);
-  if (qf) {
+  if (range) { qty = num(range[1]); unit = 'pz'; name = range[3]; notes.push(`da ${range[1]} a ${range[2]}`); }
+  else if (qf) {
     qty = num(qf[1]);
     const w = (qf[2] || '').replace(/\.$/, '').toLowerCase();
-    if (UNIT_MAP[w]) { unit = UNIT_MAP[w]; name = qf[3] || w; } // "1 frutto", "1 vasetto": la parola è anche l'alimento
+    if (UNIT_MAP[w]) { unit = UNIT_MAP[w]; name = qf[3] || w; if (w.startsWith('fett') && /^biscott/i.test(name)) name = `fette ${name}`; } // "1 frutto", "1 vasetto": la parola è anche l'alimento
     else { unit = 'pz'; name = `${qf[2] || ''} ${qf[3]}`; }
+  } else if (wf && !/^(velo|po|pizzico)\b/i.test(wf[2])) {
+    qty = wordNum(wf[1]); unit = 'pz'; name = wf[2];
   } else if (nf && UNIT_MAP[nf[3].toLowerCase()]) {
     qty = num(nf[2]); unit = UNIT_MAP[nf[3].toLowerCase()]; name = nf[1];
   }
@@ -60,16 +94,61 @@ export const parseOption = (raw) => {
   if (paren) [qty, unit] = paren;
   else if (qty) [qty, unit] = toBase(qty, unit, name);
   if (!qty) unit = 'q.b.';
-  return { text: original, name, qty, unit, group: guessGroup(name) };
+
+  const noteText = notes.filter((n) => n && n !== 'fino a').join(' · ');
+  const freq = readFrequency(notes.join(' '));
+  const out = { text: original, name, qty, unit, group: guessGroup(name) };
+  if (upTo) out.upTo = true;
+  if (extra) out.extra = extra;
+  if (noteText) out.note = noteText;
+  if (freq?.maxPerWeek) out.maxPerWeek = freq.maxPerWeek;
+  else if (freq?.maxQtyPerWeek) out.maxPerWeek = qty > 0 ? Math.max(1, Math.floor(freq.maxQtyPerWeek / qty)) : freq.maxQtyPerWeek;
+  const avoid = readAvoid(notes.join('. '));
+  if (avoid.length) out.avoid = avoid;
+  return out;
 };
 
-// Testo di un pasto -> gruppi di alternative
+const POOL_RE = /^fino a\s+(\d+)\s+volte\s+(?:a|alla)\s+settimana\b.*$/i;
+
+// Testo di un pasto -> gruppi di alternative.
+//  - alternative: una per riga, oppure separate da "oppure", "o", "/";
+//  - quantità e unità dell'ultima alternativa valgono anche per quelle scritte senza ("90 g di riso / pasta di farro");
+//  - gruppi diversi (da mangiare insieme): riga vuota, riga "+", oppure " + " in una riga singola con due quantità;
+//  - una riga "Fino a 3 volte a settimana: ..." limita le alternative che seguono (insieme) a quel numero di pasti.
 export const parseSlotPlan = (text = '') => {
   const blocks = text.replace(/\r/g, '').split(/\n\s*\n+|\n\s*\+\s*\n|\n\s*(?:più|piu|inoltre)\s*\n/i)
-    .flatMap((b) => (b.includes('\n') ? [b] : b.split(/\s\+\s/)));
-  return blocks
-    .map((b) => ({ options: b.split(/\n|;|\s+(?:oppure|o)\s+|\s\/\s/i).map(parseOption).filter(Boolean) }))
-    .filter((g) => g.options.length);
+    .flatMap((b) => (!b.includes('\n') && /\d.*\s\+\s.*\d/.test(b) ? b.split(/\s\+\s/) : [b]));
+  const groups = [];
+  for (const block of blocks) {
+    const options = [];
+    let pool = null;
+    for (const rawLine of block.split('\n')) {
+      const line = rawLine.trim();
+      if (!line) continue;
+      const pm = line.replace(/^[\s•*\-]+/, '').match(POOL_RE);
+      if (pm) { pool = { key: `pool${groups.length}`, max: Number(pm[1]) }; continue; }
+      // protegge le note tra parentesi prima di spezzare le alternative
+      const held = [];
+      const safe = line.replace(/\[[^\]]*\]|\([^)]*\)/g, (m) => { held.push(m); return `\u0001${held.length - 1}\u0001`; });
+      const parts = safe.split(/;|\s+oppure\s+|\s+o\s+(?!\d)|\s*\/\s+|\s\/\s|(?<=[a-zà-ù])\/(?=\s?[a-zà-ù])/i).map((p) => p.trim()).filter(Boolean);
+      let shared = null; // quantità condivisa dalle alternative senza numero
+      const lineStart = options.length;
+      for (const part of parts) {
+        const restored = part.replace(/\u0001(\d+)\u0001/g, (_, i) => held[Number(i)]);
+        let opt = parseOption(restored);
+        if (!opt) continue;
+        if (opt.qty > 0) shared = { qty: opt.qty, unit: opt.unit };
+        else if (shared && !/^(un|una|uno|\d)/i.test(restored)) { opt = { ...opt, qty: shared.qty, unit: shared.unit }; }
+        if (pool) opt.pool = pool;
+        options.push(opt);
+      }
+      // "evitiamo la soia" scritto alla fine di una riga con più alternative vale per tutte
+      const avoidAll = [...new Set(options.slice(lineStart).flatMap((o) => o.avoid || []))];
+      if (avoidAll.length) options.slice(lineStart).forEach((o) => { o.avoid = avoidAll; });
+    }
+    if (options.length) groups.push({ options });
+  }
+  return groups;
 };
 
 const HEADINGS = [
@@ -104,14 +183,33 @@ export const splitFullPlan = (text = '') => {
   return Object.fromEntries(Object.entries(out).map(([k, v]) => [k, v.trim()]).filter(([, v]) => v));
 };
 
-export const describeOption = (o) => (o.qty > 0 ? `${o.qty % 1 ? o.qty.toFixed(1).replace('.', ',') : o.qty} ${o.unit === 'q.b.' ? '' : o.unit} ${o.name}`.replace(/\s+/g, ' ').trim() : o.name);
+export const describeOption = (o) => {
+  const dose = o.qty > 0 ? `${o.upTo ? 'fino a ' : ''}${o.qty % 1 ? o.qty.toFixed(1).replace('.', ',') : o.qty} ${o.unit === 'q.b.' ? '' : o.unit} ${o.name}`.replace(/\s+/g, ' ').trim() : o.name;
+  return o.extra ? `${dose} + ${o.extra}` : dose;
+};
+
+// Etichetta breve con le restrizioni settimanali, per l'anteprima
+export const optionLimits = (o) => [o.maxPerWeek ? `max ${o.maxPerWeek} ${o.maxPerWeek === 1 ? 'volta' : 'volte'} a settimana` : '', o.pool ? `con le altre dell'elenco max ${o.pool.max} volte a settimana` : ''].filter(Boolean).join(', ');
 
 // ---- abbinamento alle ricette
 
 const GENERIC = { frutt: { group: 'fruit' }, verdur: { group: 'veg' }, ortagg: { group: 'veg' }, cereal: { group: 'carb' }, legum: { food: ['legumi'] }, carn: { food: ['carne-bianca', 'carne-rossa'] }, pesc: { food: ['pesce'] }, formagg: { food: ['formaggi'] } };
+// Espressioni di due parole che non si capiscono dai singoli termini
+const PHRASES = { 'frutta fresca': { group: 'fruit' }, 'frutta secca': { food: ['frutta-secca'] }, 'verdure cotte': { group: 'veg' }, 'cioccolato fondente': { words: ['cioccolato fondente', 'cioccolato'] } };
 const foodWords = (id) => FOOD_TYPES.find((f) => f.id === id)?.words || [];
 
 export const optionMatches = (opt, ing) => {
+  const name = (ing.name || '').toLowerCase();
+  if ((opt.avoid || []).some((w) => norm(name).includes(w))) return false;
+  const phrase = PHRASES[norm(opt.name).split(' ').slice(0, 2).join(' ')];
+  if (phrase) {
+    if (phrase.group) {
+      if (phrase.group === 'fruit' && norm(opt.name).startsWith('frutta fresca') && /datter|uvetta|secc|marmellat|confettur|succo|sciropp|cocco/.test(name)) return false; // la frutta fresca non è secca né in vasetto
+      return (ing.group || guessGroup(ing.name)) === phrase.group;
+    }
+    if (phrase.words) return phrase.words.some((w) => name.includes(w));
+    return phrase.food.some((f) => foodWords(f).some((w) => name.includes(w)));
+  }
   const o = tokens(opt.name);
   if (!o.length) return false;
   const i = tokens(ing.name);
@@ -119,8 +217,7 @@ export const optionMatches = (opt, ing) => {
   const g = GENERIC[o[0]];
   if (o.length === 1 && g) {
     if (g.group) return (ing.group || guessGroup(ing.name)) === g.group;
-    const n = ing.name.toLowerCase();
-    return g.food.some((f) => foodWords(f).some((w) => n.includes(w)));
+    return g.food.some((f) => foodWords(f).some((w) => name.includes(w)));
   }
   return false;
 };

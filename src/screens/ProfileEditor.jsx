@@ -6,27 +6,22 @@ import { SLOTS, mealOf } from '../lib/scale.js';
 import { DIETS } from '../lib/diet.js';
 import { ALLERGENS } from '../lib/allergens.js';
 import { FOOD_TYPES, GOAL_MODES } from '../lib/goals.js';
-import { describeOption, parseSlotPlan, splitFullPlan } from '../lib/dietPlan.js';
+import { parseSlotPlan } from '../lib/dietPlan.js';
+import PlanBox from '../components/PlanBox.jsx';
+import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
 import { compressImage } from '../lib/image.js';
 
 const MULTS = [0.5, 0.75, 1, 1.25, 1.5, 2];
-const PLACEHOLDER = '150 g yogurt oppure 30 g pane\n\n1 frutto';
 
-// Piano scritto di un pasto: testo libero + anteprima di come l'app lo ha letto
-function PlanBox({ text, onText }) {
-  const groups = React.useMemo(() => parseSlotPlan(text), [text]);
+// Importa il piano da PDF o testo e lo applica ai pasti dopo la verifica
+function PlanImportBlock({ member, onChange }) {
+  const [open, setOpen] = React.useState(false);
   return (
-    <div className="space-y-2">
-      <textarea className="w-full p-3 bg-white rounded-xl text-sm min-h-[110px] border-none focus:ring-2 focus:ring-brand-500" placeholder={PLACEHOLDER} value={text} onChange={(e) => onText(e.target.value)} aria-label="Piano del pasto" />
-      {groups.length > 0 ? (
-        <div className="bg-white rounded-xl p-3 space-y-1.5">
-          <p className="text-[10px] font-bold text-slate-400 uppercase">Ho capito</p>
-          {groups.map((g, i) => (
-            <p key={i} className="text-xs text-slate-600"><b className="text-slate-400">{i + 1}.</b> {g.options.map(describeOption).join('  oppure  ')}</p>
-          ))}
-        </div>
+    <div className="mb-3">
+      {!open ? (
+        <button onClick={() => setOpen(true)} className="w-full py-3 bg-brand-50 text-brand-700 font-bold rounded-xl active:scale-95">Carica il PDF del piano o incolla il testo</button>
       ) : (
-        <p className="text-[11px] text-slate-400">Un'alternativa per riga (o separate da "oppure"). Una riga vuota separa ciò che si mangia insieme.</p>
+        <PlanImport applyLabel="Applica ai pasti" onApply={(texts) => { onChange({ ...member, meals: mealsFromTexts(texts, member.meals) }); setOpen(false); }} onSkip={() => setOpen(false)} />
       )}
     </div>
   );
@@ -35,8 +30,6 @@ function PlanBox({ text, onText }) {
 export default function ProfileEditor({ member, mine, onChange, onClaim, onDelete, onClose }) {
   const [openSlot, setOpenSlot] = React.useState(null);
   const [confirm, setConfirm] = React.useState(false);
-  const [paste, setPaste] = React.useState('');
-  const [pasteMsg, setPasteMsg] = React.useState('');
   const [photoBusy, setPhotoBusy] = React.useState(false);
   const fileRef = React.useRef(null);
   const free = isFreeProfile(member);
@@ -44,17 +37,6 @@ export default function ProfileEditor({ member, mine, onChange, onClaim, onDelet
   const patchMeal = (slot, patch) => onChange({ ...member, meals: { ...member.meals, [slot]: { ...(member.meals?.[slot] || {}), ...patch } } });
   const setPlanText = (slot, text) => patchMeal(slot, { planText: text, plan: parseSlotPlan(text) });
   const patchGoal = (id, patch) => onChange({ ...member, goals: member.goals.map((g) => (g.id === id ? { ...g, ...patch } : g)) });
-
-  const readFullPlan = () => {
-    const parts = splitFullPlan(paste);
-    const found = Object.keys(parts);
-    if (!found.length) return setPasteMsg('Non ho trovato i titoli dei pasti (Colazione, Pranzo, Cena...). Scrivi ogni pasto su una riga a sé.');
-    const meals = { ...member.meals };
-    for (const [slot, text] of Object.entries(parts)) meals[slot] = { ...(meals[slot] || {}), planText: text, plan: parseSlotPlan(text) };
-    onChange({ ...member, meals });
-    setPasteMsg(`Piano letto per: ${found.join(', ')}. Controlla ogni pasto qui sotto.`);
-    setPaste('');
-  };
 
   const pickPhoto = async (e) => {
     const f = e.target.files?.[0];
@@ -132,12 +114,7 @@ export default function ProfileEditor({ member, mine, onChange, onClaim, onDelet
         <div>
           <h4 className="font-display font-bold text-lg text-slate-800 mb-1">Piano alimentare</h4>
           <p className="text-xs text-slate-400 mb-3">Scrivi cosa può mangiare in ogni pasto, come l'ha scritto la nutrizionista. L'app propone ricette che rispettano il piano e mette le dosi indicate. Esempio: "150 g yogurt oppure 30 g pane".</p>
-          <div className="bg-slate-50 rounded-2xl p-3 space-y-2 mb-3">
-            <p className={label}>Incolla il piano completo</p>
-            <textarea className="w-full p-3 bg-white rounded-xl text-sm min-h-[110px] border-none focus:ring-2 focus:ring-brand-500" placeholder={'Colazione\n150 g yogurt oppure 30 g pane\n\nPranzo\n80 g pasta\n\n200 g verdure\n...'} value={paste} onChange={(e) => setPaste(e.target.value)} aria-label="Piano completo" />
-            <button disabled={!paste.trim()} onClick={readFullPlan} className="w-full py-2.5 bg-brand-600 text-white font-bold rounded-xl text-sm disabled:opacity-40 active:scale-95">Leggi il piano</button>
-            {pasteMsg && <p className="text-xs text-brand-700">{pasteMsg}</p>}
-          </div>
+          <PlanImportBlock member={member} onChange={onChange} />
 
           <div className="space-y-2">
             {SLOTS.map((slot) => {

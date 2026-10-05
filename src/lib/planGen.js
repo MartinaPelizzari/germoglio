@@ -3,7 +3,7 @@ import { kindFits, recipeKind, slotKind } from './meals.js';
 import { fits, mealConstraints, menuClusters, memberLevel, recipeLevel, rulesFor } from './diet.js';
 import { recipeFoods } from './goals.js';
 import { recencyPenalty } from './usage.js';
-import { coveredGroupIndexes, describeOption, foodDiet } from './dietPlan.js';
+import { coveredGroupIndexes, describeOption, foodDiet, optionMatches, planMatches } from './dietPlan.js';
 import { recipeAllergens } from './allergens.js';
 import { containsAvoided } from './diet.js';
 import { resolveItem } from './items.js';
@@ -24,10 +24,18 @@ export const coarseRequired = (slot) => (slotKind(slot) === 'principale' ? ['car
 export const planPairs = (eaters, slot) =>
   eaters.flatMap((e) => mealOf(e, slot).plan.map((group, gi) => ({ eater: e, gi, group })));
 
-const covers = (recipe, pair, slot) => coveredGroupIndexes(recipe, mealOf(pair.eater, slot).plan).includes(pair.gi);
+// Limiti settimanali del piano ("due volte a settimana", "fino a 3 volte a settimana" per un elenco)
+const norm = (s) => s.toLowerCase().replace(/[^a-zà-ù0-9]+/g, ' ').trim();
+const useKeys = (eaterId, slot, opt) => [opt.maxPerWeek ? [`o:${eaterId}:${norm(opt.name)}`, opt.maxPerWeek] : null, opt.pool ? [`p:${eaterId}:${slot}:${opt.pool.key}`, opt.pool.max] : null].filter(Boolean);
+const optionAvailable = (state, eaterId, slot, opt) => !state || useKeys(eaterId, slot, opt).every(([k, max]) => (state.optUse.get(k) || 0) < max);
 
-export const uncoveredPairs = (recipes, eaters, slot) =>
-  planPairs(eaters, slot).filter((p) => !recipes.some((r) => covers(r, p, slot)));
+const covers = (recipe, pair, slot, state) => {
+  const m = planMatches(recipe, mealOf(pair.eater, slot).plan)[pair.gi];
+  return Boolean(m) && optionAvailable(state, pair.eater.id, slot, m.option);
+};
+
+export const uncoveredPairs = (recipes, eaters, slot, state) =>
+  planPairs(eaters, slot).filter((p) => !recipes.some((r) => covers(r, p, slot, state)));
 
 export const pairLabel = (pair) => pair.group.options.slice(0, 2).map(describeOption).join(' o ');
 
@@ -40,8 +48,8 @@ const optionFitsPerson = (opt, person) => {
   return level <= memberLevel(person) && !allergic && !avoided;
 };
 
-const pickOption = (pair, state) => {
-  const opts = pair.group.options.filter((o) => optionFitsPerson(o, pair.eater));
+const pickOption = (pair, slot, state) => {
+  const opts = pair.group.options.filter((o) => optionFitsPerson(o, pair.eater) && optionAvailable(state, pair.eater.id, slot, o));
   const pool = opts.length ? opts : pair.group.options;
   return [...pool].sort((a, b) => (state.used.get(`food:${a.name}`) || 0) - (state.used.get(`food:${b.name}`) || 0) || Math.random() - 0.5)[0];
 };
@@ -51,6 +59,7 @@ const entry = (recipe, eaters) => ({ instanceId: crypto.randomUUID(), recipeId: 
 // ---- stato e punteggio
 export const newState = ({ favorites, recency, counts } = {}) => ({
   used: new Map(),
+  optUse: new Map(), // limiti settimanali del piano: chiave -> pasti già usati
   favorites: favorites || new Set(),
   recency: recency || new Map(),
   counts: counts || {}, // memberId -> foodId -> Set di "giorno|pasto"
@@ -70,12 +79,28 @@ const goalBonus = (recipe, eaters, state) => {
   return bonus;
 };
 
-const baseScore = (recipe, eaters, state, preferLevel) =>
+// Ingredienti sostanziosi (proteine, latticini) che il piano di quel pasto non prevede: es. legumi a pranzo se il piano
+// a pranzo prevede solo cereali e verdure. È un malus, non un divieto.
+const excess = (recipe, eaters, slot) => {
+  let n = 0;
+  for (const e of eaters) {
+    const plan = mealOf(e, slot).plan;
+    if (!plan.length) continue;
+    for (const ing of recipe.ingredients || []) {
+      if (!['protein', 'dairy'].includes(ing.group) || (['g', 'ml'].includes(ing.unit) ? ing.qty < 25 : ing.unit !== 'pz' || ing.qty < 1)) continue;
+      if (!plan.some((g) => g.options.some((o) => optionMatches(o, ing)))) n++;
+    }
+  }
+  return eaters.length ? n / eaters.length : 0;
+};
+
+const baseScore = (recipe, eaters, state, preferLevel, slot) =>
   - (state.used.get(recipe.id) || 0) * 6
   - recencyPenalty(state.recency.get(recipe.id))
   + (state.favorites.has(recipe.id) ? 5 : 0)
   + goalBonus(recipe, eaters, state)
   + (preferLevel !== undefined && recipeLevel(recipe) === preferLevel ? 8 : 0)
+  - (slot ? excess(recipe, eaters, slot) * 4 : 0)
   + Math.random() * 5;
 
 const best = (pool, scoreFn) => (pool.length ? pool.map((r) => [r, scoreFn(r)]).sort((a, b) => b[1] - a[1])[0][0] : null);
@@ -90,6 +115,9 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
   let relaxed = false;
   let pool = recipes.filter((r) => kindFits(r, slot) && fits(r, constraints));
   if (!pool.length && constraints.takeaway) { pool = recipes.filter((r) => kindFits(r, slot) && fits(r, constraints, { ignoreTakeaway: true })); relaxed = true; }
+  // "evitando fichi, cachi, uva e mango", "evitiamo la soia": le ricette con quegli ingredienti non vanno bene in quel pasto
+  const avoidWords = [...new Set(eaters.flatMap((e) => mealOf(e, slot).plan.flatMap((g) => g.options.flatMap((o) => o.avoid || []))))];
+  if (avoidWords.length) pool = pool.filter((r) => !(r.ingredients || []).some((i) => avoidWords.some((w) => i.name.toLowerCase().includes(w))));
   const pref = split ? level : undefined;
   const chosen = [];
   const items = [];
@@ -97,18 +125,18 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
   const pairs = planPairs(eaters, slot);
   if (pairs.length) {
     for (let n = 0; n < 3; n++) {
-      const rem = uncoveredPairs(chosen, eaters, slot);
+      const rem = uncoveredPairs(chosen, eaters, slot, state);
       if (!rem.length) break;
-      const gain = (r) => rem.filter((p) => covers(r, p, slot)).length;
-      const pick = best(pool.filter((r) => !chosen.includes(r) && gain(r) > 0), (r) => gain(r) * 10 + baseScore(r, eaters, state, pref));
+      const gain = (r) => rem.filter((p) => covers(r, p, slot, state)).length;
+      const pick = best(pool.filter((r) => !chosen.includes(r) && gain(r) > 0), (r) => gain(r) * 10 + baseScore(r, eaters, state, pref, slot));
       if (!pick) break;
       chosen.push(pick);
     }
     chosen.forEach((r) => items.push(entry(r, ids)));
     // gruppi non coperti da nessuna ricetta: alimenti semplici dal piano
     const foods = new Map();
-    for (const p of uncoveredPairs(chosen, eaters, slot)) {
-      const opt = pickOption(p, state);
+    for (const p of uncoveredPairs(chosen, eaters, slot, state)) {
+      const opt = pickOption(p, slot, state);
       const key = opt.name.toLowerCase();
       if (!foods.has(key)) foods.set(key, { food: { name: opt.name, qty: opt.qty, unit: opt.unit, group: opt.group }, eaters: new Set() });
       foods.get(key).eaters.add(p.eater.id);
@@ -119,7 +147,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
 
   const required = coarseRequired(slot);
   const mainPool = pool.filter((r) => (main ? recipeKind(r) === 'principale' : true));
-  const first = best(mainPool.length ? mainPool : pool, (r) => required.filter((g) => coveredGroups([r]).has(g)).length * 10 + baseScore(r, eaters, state, pref));
+  const first = best(mainPool.length ? mainPool : pool, (r) => required.filter((g) => coveredGroups([r]).has(g)).length * 10 + baseScore(r, eaters, state, pref, slot));
   if (!first) return { items: [], relaxed };
   chosen.push(first);
   for (let n = 0; n < 2; n++) {
@@ -143,6 +171,14 @@ export const registerMeal = (state, items, clusterEaters, day, slot, recipeMap, 
     if (!recipe) continue;
     const eaters = Array.isArray(it.eaters) ? (everyone || clusterEaters).filter((e) => it.eaters.includes(e.id)) : clusterEaters;
     for (const f of recipeFoods(recipe)) for (const m of eaters) ((state.counts[m.id] ||= {})[f] ||= new Set()).add(`${day}|${slot}`);
+    // limiti settimanali del piano: ogni pasto che usa un'alternativa limitata la consuma
+    for (const m of eaters) {
+      const seen = new Set();
+      planMatches(recipe, mealOf(m, slot).plan).forEach((mt) => {
+        if (!mt) return;
+        for (const [k] of useKeys(m.id, slot, mt.option)) if (!seen.has(k)) { seen.add(k); state.optUse.set(k, (state.optUse.get(k) || 0) + 1); }
+      });
+    }
   }
 };
 
@@ -192,6 +228,6 @@ export const swapRecipe = (recipes, current, constraints, ctx = {}, slot) => {
   const kind = recipeKind(current);
   const had = planPairs(eaters, slot).filter((p) => covers(current, p, slot));
   const pool = recipes.filter((r) => r.id !== current.id && recipeKind(r) === kind && fits(r, constraints));
-  const pick = best(pool, (r) => had.filter((p) => covers(r, p, slot)).length * 10 + baseScore(r, eaters, state));
+  const pick = best(pool, (r) => had.filter((p) => covers(r, p, slot, state)).length * 10 + baseScore(r, eaters, state, undefined, slot));
   return pick ? entry(pick) : null;
 };
