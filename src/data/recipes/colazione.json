@@ -1,0 +1,869 @@
+[
+  {
+    "id": "colazione-porridge-avena-mela",
+    "title": "Porridge d'avena con mela e cannella",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "porridge",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Mela",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa i fiocchi d'avena e il latte di soia in un pentolino e porta a leggero bollore.",
+      "Cuoci a fuoco basso per circa 5 minuti, mescolando, finché la crema si addensa.",
+      "Nel frattempo taglia la mela a cubetti e falla saltare un minuto in padella con metà della cannella.",
+      "Versa il porridge in una ciotola e completa con la mela, le noci spezzettate, la cannella rimasta e lo sciroppo d'acero."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pancake-vegani-banana",
+    "title": "Pancake vegani alla banana",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "pancake",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 0",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Banana matura",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 90,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiaccia la banana con una forchetta fino a ottenere una purea omogenea.",
+      "Unisci il latte di soia e mescola, poi aggiungi la farina setacciata insieme al lievito fino a formare una pastella densa.",
+      "Scalda una padella antiaderente appena unta con l'olio e versa piccoli mestoli di pastella.",
+      "Cuoci circa 2 minuti per lato, quando compaiono le bollicine in superficie girali.",
+      "Servi impilati con i frutti di bosco e lo sciroppo d'acero."
+    ],
+    "source": null,
+    "notes": "Si possono conservare in frigo due giorni e riscaldare in tostapane."
+  },
+  {
+    "id": "colazione-toast-crema-mandorle-banana",
+    "title": "Toast integrale con crema di mandorle e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "toast",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Crema di mandorle",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Semi di chia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le fette di pane finché diventano dorate e croccanti.",
+      "Spalma la crema di mandorle ancora sul pane tiepido.",
+      "Affetta la banana a rondelle e disponila sopra.",
+      "Cospargi con i semi di chia e una spolverata di cannella."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-yogurt-soia-granola-frutti-bosco",
+    "title": "Yogurt di soia con granola e frutti di bosco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍓",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "yogurt",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 200,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola vegana",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sciroppo d'agave",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Metti lo yogurt di soia in una ciotola o in un bicchiere alto.",
+      "Aggiungi uno strato di frutti di bosco, lavati e asciugati.",
+      "Completa con la granola e i semi di zucca poco prima di mangiare, per mantenerli croccanti.",
+      "Dolcifica con lo sciroppo d'agave se lo yogurt è molto acidulo."
+    ],
+    "source": null,
+    "notes": "Controlla che la granola non contenga miele."
+  },
+  {
+    "id": "colazione-smoothie-bowl-mango-spinaci",
+    "title": "Smoothie bowl al mango e spinaci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥭",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "smoothie",
+      "fresco"
+    ],
+    "ingredients": [
+      {
+        "name": "Mango congelato",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Banana congelata",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di mandorla",
+        "qty": 100,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Cocco rapè",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di lino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Kiwi",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Frullare mango, banana, spinaci e latte di mandorla fino a ottenere una crema spessa e liscia.",
+      "Se serve aggiungi un goccio di latte, ma mantieni la consistenza da cucchiaio.",
+      "Versa nella ciotola e livella la superficie.",
+      "Decora con il kiwi a fettine, il cocco rapè e i semi di lino."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-torta-mele-vegana",
+    "title": "Torta vegana alle mele da colazione",
+    "category": "Colazione",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍰",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "torta",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mele",
+        "qty": 1.5,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Latte di avena",
+        "qty": 40,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 15,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi e fodera uno stampo con carta forno.",
+      "Sbuccia le mele, tagliale a pezzetti e irrorale con il limone per non farle scurire.",
+      "Mescola farina, zucchero, lievito e cannella, poi unisci latte e olio fino a ottenere un impasto morbido.",
+      "Incorpora due terzi delle mele e versa nello stampo, disponendo il resto in superficie.",
+      "Cuoci per 40 minuti circa, finché uno stecchino esce asciutto.",
+      "Lascia raffreddare prima di sformare."
+    ],
+    "source": null,
+    "notes": "Una fetta si conserva bene due o tre giorni sotto una campana."
+  },
+  {
+    "id": "colazione-pane-marmellata-integrale",
+    "title": "Pane integrale con marmellata e mandorle",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pane",
+      "classico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Marmellata di albicocche",
+        "qty": 30,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Tè verde",
+        "qty": 200,
+        "unit": "ml",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affetta il pane e, se ti piace, tostalo leggermente.",
+      "Spalma la marmellata in modo uniforme.",
+      "Trita grossolanamente le mandorle e distribuiscile sopra.",
+      "Accompagna con una tazza di tè verde."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-tofu-scramble-curcuma",
+    "title": "Tofu scramble alla curcuma con spinaci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍳",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "salato",
+      "proteico"
+    ],
+    "ingredients": [
+      {
+        "name": "Tofu",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola il tofu, pressalo con un panno e sbriciolalo grossolanamente con le mani.",
+      "Scalda l'olio in padella e fai appassire gli spinaci con i pomodorini a pezzetti per due minuti.",
+      "Aggiungi il tofu, la curcuma e il sale e cuoci 5 minuti mescolando, finché si asciuga.",
+      "Spegni e unisci il lievito alimentare e il pepe.",
+      "Servi con il pane tostato."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-overnight-oats-cacao-lamponi",
+    "title": "Overnight oats cacao e lamponi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫙",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "overnight",
+      "da preparare prima"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di avena",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Semi di chia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Lamponi",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "In un barattolo mescola fiocchi d'avena, cacao, semi di chia e sciroppo d'acero.",
+      "Versa il latte e mescola bene per evitare grumi di cacao.",
+      "Chiudi e lascia in frigorifero per almeno 6 ore, meglio tutta la notte.",
+      "Al mattino mescola, aggiungi i lamponi e servi freddo."
+    ],
+    "source": null,
+    "notes": "Il tempo indicato è quello di preparazione, a cui si aggiunge il riposo in frigo."
+  },
+  {
+    "id": "colazione-porridge-quinoa-cacao",
+    "title": "Porridge di quinoa e cacao con pera",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍫",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "porridge",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 45,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pera",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacqua bene la quinoa sotto l'acqua corrente per eliminare l'amaro.",
+      "Cuocila nel latte di soia a fuoco basso per 15-18 minuti, finché ha assorbito quasi tutto il liquido.",
+      "Mescola il cacao e lo sciroppo d'acero a fine cottura.",
+      "Taglia la pera a dadini e tosta le nocciole in padella.",
+      "Servi il porridge caldo con pera e nocciole."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-toast-avocado-pomodorini",
+    "title": "Toast all'avocado e pomodorini",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥑",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "toast",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fat"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta il pane fino a renderlo croccante.",
+      "Schiaccia l'avocado con il succo di limone e un pizzico di sale.",
+      "Spalma la crema sul pane e disponi i pomodorini tagliati a metà.",
+      "Completa con i semi di sesamo."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-yogurt-greco-miele-noci",
+    "title": "Yogurt greco con miele, noci e fichi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥛",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "yogurt",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 170,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Fichi freschi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      }
+    ],
+    "steps": [
+      "Versa lo yogurt in una ciotola.",
+      "Taglia i fichi a spicchi e spezzetta le noci.",
+      "Disponi frutta e noci sullo yogurt e aggiungi i fiocchi d'avena.",
+      "Finisci con un filo di miele."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-omelette-spinaci-feta",
+    "title": "Omelette morbida agli spinaci e feta",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "uova",
+      "salato",
+      "proteico"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Feta",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai appassire gli spinaci in padella con un po' d'olio per un paio di minuti, poi toglili e strizzali.",
+      "Sbatti le uova con sale e pepe.",
+      "Versa le uova nella padella calda, cuoci a fuoco medio e, quando iniziano ad addensarsi, aggiungi spinaci e feta sbriciolata.",
+      "Piega l'omelette a metà e cuoci un altro minuto.",
+      "Servi con il pane tostato."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pancake-ricotta-limone",
+    "title": "Pancake alla ricotta e limone",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pancake",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 0",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte intero",
+        "qty": 40,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Mescola ricotta, uovo, latte e scorza di limone fino a ottenere una crema liscia.",
+      "Aggiungi la farina setacciata con il lievito e amalgama senza lavorare troppo.",
+      "Cuoci cucchiaiate di impasto in una padella antiaderente a fuoco medio-basso, circa 2 minuti per lato.",
+      "Servi con i mirtilli e un filo di miele."
+    ],
+    "source": null
+  }
+]

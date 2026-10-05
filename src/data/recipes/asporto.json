@@ -1,0 +1,1333 @@
+[
+  {
+    "id": "pranzo-asporto-insalata-farro-ceci",
+    "title": "Insalata di farro, ceci e verdure croccanti",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "legumi",
+      "meal prep"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa il farro in acqua salata per il tempo indicato sulla confezione, poi scolalo e lascialo intiepidire su un vassoio.",
+      "Taglia pomodorini, cetriolo e carota a dadini piccoli, in modo che stiano comodi nella forchetta.",
+      "Sciacqua i ceci e uniscili al farro insieme alle verdure.",
+      "Condisci con olio, limone, origano e sale, mescola bene e assaggia.",
+      "Trasferisci in un contenitore ermetico e chiudi."
+    ],
+    "source": null,
+    "notes": "Si conserva in frigo fino a 3 giorni. Ottima fredda, da portare in contenitore a chiusura ermetica con una borsa termica; il condimento può restare già mescolato."
+  },
+  {
+    "id": "pranzo-asporto-insalata-orzo-lenticchie",
+    "title": "Insalata di orzo, lenticchie e carote",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "legumi",
+      "meal prep"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di mele",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci l'orzo in acqua salata, scolalo e raffreddalo sotto l'acqua corrente.",
+      "Grattugia la carota e affetta sottilmente sedano e cipolla rossa.",
+      "Mescola orzo, lenticchie sciacquate e verdure in una ciotola capiente.",
+      "Prepara un'emulsione con olio, aceto, sale e prezzemolo tritato, versala sull'insalata e amalgama.",
+      "Lascia insaporire qualche minuto, poi invasa."
+    ],
+    "source": null,
+    "notes": "Dura 3 giorni in frigo. Si mangia fredda; con il tempo si insaporisce, quindi è perfetta da preparare la sera prima."
+  },
+  {
+    "id": "pranzo-asporto-pasta-fredda-tofu-olive",
+    "title": "Pasta fredda con tofu, pomodorini e olive",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pasta fredda",
+      "tofu"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci la pasta al dente, scolala e raffreddala con acqua fredda, poi condiscila con mezzo cucchiaio d'olio perché non si attacchi.",
+      "Taglia il tofu a cubetti e rosolalo in padella con un po' d'olio e sale finché è dorato.",
+      "Dividi i pomodorini a metà, snocciola le olive e spezzetta la rucola.",
+      "Unisci tutto alla pasta fredda con basilico e il resto dell'olio.",
+      "Mescola e metti nel contenitore."
+    ],
+    "source": null,
+    "notes": "Regge 2 giorni in frigo. Buona fredda; aggiungi la rucola solo la mattina se vuoi che resti croccante."
+  },
+  {
+    "id": "pranzo-asporto-pasta-fredda-ricotta-zucchine",
+    "title": "Pasta fredda con ricotta, zucchine e menta",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥒",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta fredda",
+      "vegetariano"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta fresca",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa la pasta in acqua salata, scolala e lasciala raffreddare.",
+      "Taglia le zucchine a rondelle sottili e saltale in padella con l'olio finché sono dorate ma ancora sode.",
+      "Lavora la ricotta con un goccio d'acqua di cottura, sale, scorza di limone e menta tritata.",
+      "Condisci la pasta con la crema di ricotta e le zucchine tiepide.",
+      "Lascia raffreddare completamente prima di chiudere il contenitore."
+    ],
+    "source": null,
+    "notes": "In frigo fino a 2 giorni. Si mangia fredda, anche fuori frigo per qualche ora se la borsa è termica."
+  },
+  {
+    "id": "pranzo-asporto-bowl-riso-nero-edamame",
+    "title": "Bowl di riso nero, edamame e carote",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "riso",
+      "soia"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso nero",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Edamame sgusciati",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cavolo rosso",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci il riso nero in abbondante acqua salata per circa 35 minuti, poi scolalo.",
+      "Scotta gli edamame per 3 minuti in acqua bollente e scolali.",
+      "Taglia carota e cavolo rosso a julienne sottile.",
+      "Condisci il riso con salsa di soia e lime, poi componi la bowl con edamame e verdure.",
+      "Cospargi di sesamo al momento di mangiare, se vuoi."
+    ],
+    "source": null,
+    "notes": "Si conserva 3 giorni in frigo. Si può mangiare freddo o scaldare 1 minuto al microonde, tenendo le verdure crude a parte."
+  },
+  {
+    "id": "pranzo-asporto-bowl-quinoa-fagioli-avocado",
+    "title": "Bowl di quinoa, fagioli neri e mais",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥑",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "quinoa",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli neri cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mais in scatola",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Avocado",
+        "qty": 50,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacqua la quinoa e cuocila in acqua salata per 12 minuti, poi sgranala con una forchetta e lasciala raffreddare.",
+      "Scola fagioli e mais e taglia i pomodorini a metà.",
+      "Condisci quinoa, fagioli e verdure con lime, paprika e sale.",
+      "Taglia l'avocado a cubetti e mettilo sopra solo al momento di mangiare."
+    ],
+    "source": null,
+    "notes": "Tieni l'avocado a parte in un contenitorino con qualche goccia di lime perché non annerisca. La bowl si mangia fredda e dura 3 giorni."
+  },
+  {
+    "id": "pranzo-asporto-wrap-hummus-verdure",
+    "title": "Wrap con hummus e verdure grigliate",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "hummus"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina o tortilla di grano",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus di ceci",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Valeriana",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia zucchine e peperone a strisce e grigliale o cuocile in padella con l'olio e un pizzico di sale.",
+      "Scalda brevemente la piadina in padella per renderla morbida.",
+      "Spalma l'hummus su tutta la superficie, lasciando un bordo libero.",
+      "Distribuisci verdure e valeriana al centro, ripiega i lati e arrotola stretto.",
+      "Avvolgi nella carta forno o in pellicola e taglia a metà."
+    ],
+    "source": null,
+    "notes": "Meglio consumarlo entro la giornata. Buono freddo; per evitare che si inumidisca avvolgilo ben stretto in carta forno e tieni le verdure ben scolate."
+  },
+  {
+    "id": "pranzo-asporto-piadina-stracchino-rucola",
+    "title": "Piadina con stracchino, rucola e pomodori secchi",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🫓",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "piadina",
+      "formaggio"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Stracchino",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori secchi sott'olio",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scalda la piadina in una padella antiaderente da entrambi i lati.",
+      "Spalma lo stracchino su metà piadina.",
+      "Aggiungi la rucola e i pomodori secchi ben scolati, tagliati a strisce.",
+      "Richiudi a mezzaluna, taglia a metà e avvolgi nella carta."
+    ],
+    "source": null,
+    "notes": "Si mangia tiepida o a temperatura ambiente, entro la mattinata. Non conservarla più di un giorno."
+  },
+  {
+    "id": "pranzo-asporto-polpette-lenticchie-zucca",
+    "title": "Polpette di lenticchie e zucca",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie cotte",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucca cotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiaccia grossolanamente lenticchie e zucca con una forchetta.",
+      "Soffriggi la cipolla tritata con metà olio e uniscila all'impasto insieme a rosmarino e sale.",
+      "Aggiungi il pangrattato e mescola fino a ottenere un composto che si modella.",
+      "Forma delle palline e disponile su una teglia con carta forno.",
+      "Cuoci a 200 gradi per 20 minuti, girandole a metà cottura."
+    ],
+    "source": null,
+    "notes": "In frigo fino a 4 giorni, si congelano bene. Buone fredde o scaldate 1 minuto al microonde; portale in contenitore rigido per non romperle."
+  },
+  {
+    "id": "pranzo-asporto-burger-ceci-spinaci",
+    "title": "Burger di ceci e spinaci",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "burger vegetale",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci cotti",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 35,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cumino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Strizza bene gli spinaci cotti e tritali.",
+      "Frulla i ceci a impulsi con limone, cumino e sale, lasciandoli un po' grossolani.",
+      "Unisci spinaci e pangrattato e impasta con le mani.",
+      "Forma due burger, pressandoli bene, e spennellali d'olio.",
+      "Cuocili in forno a 200 gradi per 20 minuti, girandoli una volta."
+    ],
+    "source": null,
+    "notes": "In frigo 4 giorni, congelabili. Si mangiano anche freddi dentro un panino o scaldati; trasportali separati dal pane per non farlo inumidire."
+  },
+  {
+    "id": "pranzo-asporto-torta-ceci-zucchine",
+    "title": "Torta salata di farina di ceci e zucchine",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥧",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "torta salata",
+      "farina di ceci"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di ceci",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Acqua",
+        "qty": 110,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito per torte salate",
+        "qty": 2,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola le farine con il lievito e il sale, poi versa l'acqua a filo sbattendo per evitare grumi.",
+      "Aggiungi metà olio e lascia riposare la pastella 10 minuti.",
+      "Taglia le zucchine a rondelle sottili e incorporale al composto.",
+      "Versa in uno stampo piccolo unto d'olio e cuoci a 190 gradi per 30 minuti, finché è dorata.",
+      "Lascia raffreddare prima di tagliarla a quadrotti."
+    ],
+    "source": null,
+    "notes": "In frigo fino a 4 giorni. Ottima fredda o tiepida; scaldala 30 secondi al microonde se vuoi. Trasportala già porzionata in un contenitore piatto."
+  },
+  {
+    "id": "pranzo-asporto-frittatine-patate-zucchine",
+    "title": "Frittatine a cubotti di patate e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano grattugiato",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa le patate con la buccia, sbucciale e tagliale a dadini.",
+      "Salta le zucchine a cubetti in padella per 5 minuti.",
+      "Sbatti le uova con parmigiano e sale, poi unisci patate e zucchine.",
+      "Versa tutto in una teglia piccola oliata e cuoci a 180 gradi per 20 minuti.",
+      "Fai raffreddare e taglia a cubotti regolari."
+    ],
+    "source": null,
+    "notes": "In frigo 3 giorni. Buona fredda in contenitore; se preferisci scaldala 1 minuto al microonde."
+  },
+  {
+    "id": "pranzo-asporto-sandwich-tempeh-carote",
+    "title": "Sandwich con tempeh, carote e hummus",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥪",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "sandwich",
+      "tempeh"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale in cassetta",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Tempeh",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Hummus di ceci",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia il tempeh a fette sottili e rosolalo in padella con olio e salsa di soia finché è dorato.",
+      "Grattugia la carota e lava la lattuga.",
+      "Spalma l'hummus sulle fette di pane.",
+      "Componi il sandwich con tempeh, carota e lattuga e chiudi.",
+      "Taglia a metà e avvolgi nella carta forno."
+    ],
+    "source": null,
+    "notes": "Da mangiare entro la giornata. Buono a temperatura ambiente; tieni la lattuga separata se il viaggio è lungo."
+  },
+  {
+    "id": "pranzo-asporto-riso-freddo-uova-piselli",
+    "title": "Riso freddo con uova sode, piselli e mais",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍙",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "riso freddo",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso parboiled",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Piselli",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mais in scatola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci il riso in acqua salata, scolalo e raffreddalo sotto acqua fredda.",
+      "Cuoci le uova per 9 minuti dall'ebollizione, sgusciale e tagliale a spicchi.",
+      "Lessa piselli e carota a dadini per 5 minuti e scolali.",
+      "Unisci riso, verdure e mais, condisci con olio e sale.",
+      "Aggiungi le uova sopra e chiudi il contenitore."
+    ],
+    "source": null,
+    "notes": "Conserva in frigo e consuma entro 2 giorni. Si mangia freddo; tieni sempre la borsa termica con ghiaccio per le uova."
+  },
+  {
+    "id": "pranzo-asporto-couscous-ceci-uvetta",
+    "title": "Couscous con ceci, verdure e uvetta",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "couscous",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Couscous",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 10,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa il couscous in una ciotola con un pizzico di sale e curcuma e coprilo con acqua bollente pari al suo volume.",
+      "Lascia riposare coperto per 5 minuti, poi sgrana con una forchetta e un po' d'olio.",
+      "Cuoci zucchine e peperone a dadini in padella per 8 minuti.",
+      "Unisci ceci, verdure e uvetta al couscous e mescola."
+    ],
+    "source": null,
+    "notes": "Dura 3 giorni in frigo. Si mangia freddo o scaldato leggermente; resta soffice anche dopo ore."
+  },
+  {
+    "id": "pranzo-asporto-vellutata-zucca-lenticchie",
+    "title": "Vellutata di zucca e lenticchie rosse da thermos",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍜",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "zuppa",
+      "thermos",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucca",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lenticchie rosse decorticate",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curry",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggi la cipolla tritata nell'olio per 3 minuti.",
+      "Aggiungi zucca e patate a cubetti, il curry e le lenticchie sciacquate.",
+      "Copri d'acqua calda, sala e cuoci 25 minuti con coperchio.",
+      "Frulla con il minipimer fino a ottenere una crema liscia.",
+      "Versala bollente nel thermos."
+    ],
+    "source": null,
+    "notes": "Nel thermos preriscaldato resta calda per ore. Si conserva 4 giorni in frigo e si scalda in pochi minuti; è buona anche tiepida."
+  },
+  {
+    "id": "spuntino-asporto-barrette-avena-datteri",
+    "title": "Barrette di avena e datteri",
+    "category": "Spuntino",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍫",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "barrette",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Datteri",
+        "qty": 40,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Burro di mandorle",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Ammolla i datteri in acqua calda per 10 minuti, poi scolali e frullali a crema.",
+      "Mescola la crema con fiocchi d'avena, burro di mandorle, cannella e mandorle tritate.",
+      "Pressa il composto in una teglia piccola rivestita di carta forno.",
+      "Cuoci a 180 gradi per 15 minuti, lascia raffreddare e taglia a barrette."
+    ],
+    "source": null,
+    "notes": "Si conservano 5 giorni in scatola chiusa. Si mangiano a temperatura ambiente, perfette in borsa."
+  },
+  {
+    "id": "spuntino-asporto-hummus-bastoncini",
+    "title": "Hummus con bastoncini di verdure",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "verdure crude"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Carota",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla i ceci con tahina, limone, sale e due cucchiai d'acqua fino a una crema liscia.",
+      "Taglia carota, sedano e cetriolo a bastoncini.",
+      "Metti l'hummus in un barattolino e le verdure in un contenitore a parte."
+    ],
+    "source": null,
+    "notes": "L'hummus resta buono 4 giorni in frigo. Si mangia freddo; porta tutto in borsa termica."
+  },
+  {
+    "id": "spuntino-asporto-muffin-salati-zucchine",
+    "title": "Muffin salati al formaggio e zucchine",
+    "category": "Spuntino",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧁",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "muffin",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Formaggio fresco spalmabile",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte",
+        "qty": 50,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Lievito per torte salate",
+        "qty": 3,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Grattugia le zucchine e strizzale bene.",
+      "Sbatti uovo, latte e formaggio, poi aggiungi farina, lievito e sale.",
+      "Incorpora le zucchine e versa in due stampini da muffin.",
+      "Cuoci a 180 gradi per 25 minuti, fino a doratura."
+    ],
+    "source": null,
+    "notes": "Si conservano 3 giorni in frigo. Buoni freddi o scaldati 20 secondi al microonde."
+  },
+  {
+    "id": "spuntino-asporto-palline-cacao-mandorle",
+    "title": "Palline energetiche al cacao e mandorle",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍪",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "energy balls",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Datteri",
+        "qty": 40,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Trita finemente le mandorle e frulla i datteri snocciolati con il cacao.",
+      "Unisci mandorle e avena e impasta fino a ottenere un composto compatto.",
+      "Forma 4 palline con le mani leggermente umide.",
+      "Falle rassodare in frigo per 15 minuti."
+    ],
+    "source": null,
+    "notes": "In frigo 7 giorni. Si portano a temperatura ambiente in una scatolina; buone senza scaldare."
+  }
+]

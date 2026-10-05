@@ -1,0 +1,110 @@
+import React from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { BookOpen, Calendar, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, User, Users } from 'lucide-react';
+import { auth } from './firebase.js';
+import { DataProvider, useData } from './hooks/data.jsx';
+import { Confirm, Spinner } from './components/ui.jsx';
+import AuthScreen from './screens/AuthScreen.jsx';
+import Onboarding from './screens/Onboarding.jsx';
+import Planner from './screens/Planner.jsx';
+import RecipeBook from './screens/RecipeBook.jsx';
+import RecipeForm, { emptyRecipe, fromDraft, toDraft } from './screens/RecipeForm.jsx';
+import Shopping from './screens/Shopping.jsx';
+import Family from './screens/Family.jsx';
+import Settings from './screens/Settings.jsx';
+import { todayIndex } from './lib/dates.js';
+
+const NavBtn = ({ icon: Icon, label, active, onClick }) => (
+  <button onClick={onClick} aria-label={label} className={`flex flex-col items-center justify-center w-16 active:scale-90 transition-all ${active ? 'text-brand-600' : 'text-slate-400'}`}>
+    <div className={`p-1.5 rounded-xl ${active ? 'bg-brand-50' : ''}`}><Icon className="w-6 h-6" strokeWidth={2} /></div>
+    <span className={`text-[10px] font-semibold ${active ? 'opacity-100' : 'opacity-60'}`}>{label}</span>
+  </button>
+);
+
+// Vista famiglia (tutti) o personale (solo io): si ricorda l'ultima scelta
+const loadView = () => { try { return localStorage.getItem('viewMode') === 'me' ? 'me' : 'family'; } catch { return 'family'; } };
+
+function ViewSwitch({ value, onChange }) {
+  const opt = (id, label, Icon) => (
+    <button onClick={() => onChange(id)} aria-pressed={value === id} className={`flex-1 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${value === id ? 'bg-white shadow text-brand-600' : 'text-slate-500'}`}><Icon className="w-3.5 h-3.5" /> {label}</button>
+  );
+  return <div className="flex bg-slate-100 p-1 rounded-xl mb-4" role="group" aria-label="Vista">{opt('family', 'Famiglia', Users)}{opt('me', 'Solo io', User)}</div>;
+}
+
+function Main() {
+  const { household, me, memberCount, saveProfile, saveRecipe, deleteRecipe, user } = useData();
+  const [tab, setTab] = React.useState('planner');
+  const [weekDate, setWeekDate] = React.useState(new Date());
+  const [dayIndex, setDayIndex] = React.useState(todayIndex());
+  const [shopDays, setShopDays] = React.useState([0, 1, 2, 3, 4, 5, 6]);
+  const [filters, setFilters] = React.useState({ cat: 'Tutte', time: 'Tutte', diet: 'Tutte', origin: 'tutte', q: '', free: [] });
+  const [draft, setDraft] = React.useState(emptyRecipe());
+  const [confirm, setConfirm] = React.useState(null);
+  const [settings, setSettings] = React.useState(false);
+  const [viewMode, setViewMode] = React.useState(loadView);
+  const scrollRef = React.useRef(null);
+
+  React.useEffect(() => { scrollRef.current?.scrollTo(0, 0); }, [tab]);
+  const changeView = (v) => { setViewMode(v); try { localStorage.setItem('viewMode', v); } catch { /* ignora */ } };
+
+  if (household === undefined) return <div className="h-[100dvh] flex items-center justify-center"><Spinner /></div>;
+  if (!me) return <Onboarding user={user} index={household.members.length} onDone={saveProfile} />;
+
+  const edit = (r) => { setDraft(toDraft(r)); setTab('add'); };
+  const duplicate = (r) => { setDraft({ ...toDraft(r), id: null, own: true, source: r.source || null, title: r.title }); setTab('add'); };
+  const askDelete = (r) => setConfirm({ title: 'Eliminare la ricetta?', msg: 'Questa azione non può essere annullata.', action: () => { deleteRecipe(r.id); setConfirm(null); } });
+  const closeDraft = () => {
+    const dirty = draft.title || draft.ingredients[0]?.name;
+    const exit = () => { setDraft(emptyRecipe()); setConfirm(null); setTab('recipes'); };
+    if (dirty) setConfirm({ title: 'Annullare le modifiche?', msg: 'Se esci ora, perderai i dati non salvati.', action: exit });
+    else exit();
+  };
+  const save = () => {
+    if (!draft.title.trim()) return alert('Manca il titolo!');
+    saveRecipe(fromDraft(draft));
+    setDraft(emptyRecipe());
+    setTab('recipes');
+  };
+  const shared = memberCount > 1 || household.members.length > 1;
+
+  return (
+    <div className="h-[100dvh] w-full flex flex-col bg-surface-ground text-slate-800 overflow-hidden">
+      <header className="glass fixed top-0 w-full z-20 px-5 flex justify-between items-center pt-safe" style={{ height: 'calc(4rem + env(safe-area-inset-top))' }}>
+        <div className="flex items-center gap-2"><div className="bg-brand-100 p-2 rounded-xl text-brand-600"><Leaf className="w-5 h-5" /></div><h1 className="font-display font-bold text-xl text-slate-900 tracking-tight">Germoglio</h1></div>
+        <button onClick={() => setSettings(true)} aria-label="Impostazioni" className="p-2.5 rounded-full text-slate-500 active:scale-90"><SettingsIcon className="w-5 h-5" /></button>
+      </header>
+
+      <main ref={scrollRef} className="flex-1 overflow-y-auto overflow-x-hidden px-4 pb-32" style={{ paddingTop: 'calc(5.5rem + env(safe-area-inset-top))' }}>
+        <div className="max-w-md mx-auto min-h-full" key={tab}>
+          {(tab === 'planner' || tab === 'shopping') && shared && <ViewSwitch value={viewMode} onChange={changeView} />}
+          {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} viewMode={shared ? viewMode : 'family'} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
+          {tab === 'recipes' && <RecipeBook filters={filters} setFilters={setFilters} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
+          {tab === 'add' && <RecipeForm data={draft} onChange={setDraft} onClose={closeDraft} onSave={save} />}
+          {tab === 'family' && <Family />}
+          {tab === 'shopping' && <Shopping weekDate={weekDate} setWeekDate={setWeekDate} days={shopDays} setDays={setShopDays} viewMode={shared ? viewMode : 'family'} />}
+        </div>
+      </main>
+
+      <nav className="glass-nav fixed bottom-0 w-full z-30 pb-safe">
+        <div className="flex justify-around items-center px-2 pt-3 pb-5 max-w-md mx-auto">
+          <NavBtn icon={Calendar} label="Planner" active={tab === 'planner'} onClick={() => setTab('planner')} />
+          <NavBtn icon={BookOpen} label="Ricette" active={tab === 'recipes'} onClick={() => setTab('recipes')} />
+          <button onClick={() => setTab('add')} aria-label="Aggiungi ricetta" className="relative -top-6 bg-brand-500 text-white rounded-2xl p-4 shadow-glow active:scale-95"><Plus className="w-7 h-7" /></button>
+          <NavBtn icon={ShoppingCart} label="Spesa" active={tab === 'shopping'} onClick={() => setTab('shopping')} />
+          <NavBtn icon={Users} label="Famiglia" active={tab === 'family'} onClick={() => setTab('family')} />
+        </div>
+      </nav>
+
+      {settings && <Settings onClose={() => setSettings(false)} />}
+      {confirm && <Confirm title={confirm.title} msg={confirm.msg} onConfirm={confirm.action} onCancel={() => setConfirm(null)} />}
+    </div>
+  );
+}
+
+export default function App() {
+  const [user, setUser] = React.useState(undefined);
+  React.useEffect(() => onAuthStateChanged(auth, setUser), []);
+  if (user === undefined) return <div className="h-[100dvh] flex items-center justify-center"><Spinner /></div>;
+  if (!user) return <AuthScreen />;
+  return <DataProvider user={user}><Main /></DataProvider>;
+}

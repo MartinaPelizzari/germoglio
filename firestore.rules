@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isMember(hid) {
+      return signedIn() && request.auth.uid in get(/databases/$(database)/documents/households/$(hid)).data.memberUids;
+    }
+
+    // Puntatore dell'account al proprio nucleo
+    match /users/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // Codici d'invito: si legge un codice solo conoscendolo (niente elenco); li crea chi è nel nucleo
+    match /invites/{code} {
+      allow get: if signedIn();
+      allow create: if signedIn()
+        && request.resource.data.createdBy == request.auth.uid
+        && isMember(request.resource.data.hid);
+      allow delete: if signedIn() && resource.data.createdBy == request.auth.uid;
+    }
+
+    match /households/{hid} {
+      allow create: if signedIn() && request.resource.data.memberUids == [request.auth.uid];
+      allow read: if signedIn() && request.auth.uid in resource.data.memberUids;
+      allow update: if signedIn() && (
+        // chi è già nel nucleo (anche per uscirne)
+        request.auth.uid in resource.data.memberUids
+        // oppure chi entra con un codice valido: può solo aggiungere se stesso
+        || (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['memberUids', 'joinCode'])
+            && request.resource.data.memberUids == resource.data.memberUids.concat([request.auth.uid])
+            && get(/databases/$(database)/documents/invites/$(request.resource.data.joinCode)).data.hid == hid
+            && get(/databases/$(database)/documents/invites/$(request.resource.data.joinCode)).data.expiresAt > request.time)
+      );
+
+      // Profilo personale: tutti nel nucleo lo leggono, lo scrive solo il suo proprietario
+      match /profiles/{pid} {
+        allow read: if isMember(hid);
+        allow write: if isMember(hid) && pid == request.auth.uid;
+      }
+
+      // Dati condivisi del nucleo
+      match /{coll}/{docId} {
+        allow read, write: if coll in ['recipes', 'plans', 'shopping', 'shoppingExtras', 'pantry', 'settings'] && isMember(hid);
+      }
+    }
+
+    // Il resto è chiuso (compresi i vecchi dati condivisi della versione sincronizzata)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

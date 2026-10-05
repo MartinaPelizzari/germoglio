@@ -1,0 +1,1937 @@
+[
+  {
+    "id": "pranzo-pasta-ceci-rosmarino",
+    "title": "Pasta e ceci al rosmarino",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate carota e sedano e fateli appassire in una pentola con l'olio e lo spicchio d'aglio schiacciato.",
+      "Aggiungete la passata e il rosmarino tritato, poi lasciate insaporire per qualche minuto.",
+      "Unite i ceci e un bicchiere d'acqua. Schiacciate una parte dei ceci con una forchetta per rendere la zuppa cremosa.",
+      "Versate altra acqua calda, portate a bollore e cuocete la pasta direttamente nel sugo, mescolando spesso.",
+      "Regolate di sale, lasciate riposare due minuti e servite con un filo d'olio a crudo."
+    ],
+    "source": null,
+    "notes": "Si conserva in frigo un giorno: ravvivatela con un po' d'acqua calda."
+  },
+  {
+    "id": "pranzo-pasta-fagioli-borlotti",
+    "title": "Pasta e fagioli borlotti",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "tradizione"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli borlotti cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Salvia",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete cipolla, carota e sedano tritati con l'olio finché si ammorbidiscono.",
+      "Aggiungete i pelati schiacciati e la salvia e cuocete per cinque minuti.",
+      "Unite i fagioli e coprite con acqua calda. Frullate con il minipimer circa un terzo del contenuto per ottenere densità.",
+      "Calate la pasta nella zuppa e cuocetela mescolando, aggiungendo acqua se si asciuga troppo.",
+      "Servite tiepida con olio a crudo e pepe a piacere."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pasta-pesto-basilico-fagiolini",
+    "title": "Pasta al pesto di basilico con fagiolini",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pesto",
+      "pasta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta trofie",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Patate",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Basilico fresco",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pinoli",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frullate basilico, pinoli, olio, lievito alimentare, aglio e un pizzico di sale fino a ottenere un pesto omogeneo.",
+      "Tagliate le patate a dadini e i fagiolini a pezzi.",
+      "Cuocete patate e fagiolini nell'acqua salata per qualche minuto, poi aggiungete le trofie.",
+      "Scolate tenendo da parte un mestolino di acqua e unite i cannellini caldi.",
+      "Condite con il pesto allungato con l'acqua di cottura e servite subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pasta-pesto-rucola-pistacchi",
+    "title": "Pasta al pesto di rucola e pistacchi",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥜",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pesto",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Rucola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pistacchi sgusciati",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Tofu",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mettete la pasta a cuocere in abbondante acqua salata.",
+      "Frullate rucola, pistacchi, olio, limone, lievito alimentare e un pizzico di sale.",
+      "Sbriciolate il tofu e rosolatelo in padella per cinque minuti finché prende colore.",
+      "Scolate la pasta e conservate un po' d'acqua di cottura.",
+      "Mescolate pasta, pesto e tofu, allungando con l'acqua se serve."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-ragu-lenticchie-pasta",
+    "title": "Pasta al ragù di lenticchie",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "lenticchie",
+      "pasta"
+    ],
+    "ingredients": [
+      {
+        "name": "Spaghetti",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie secche",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Alloro",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate le lenticchie e lessatele in acqua con l'alloro per circa venticinque minuti, poi scolatele.",
+      "Preparate un soffritto con cipolla, carota e sedano tritati finemente nell'olio.",
+      "Aggiungete le lenticchie e la passata e cuocete a fuoco dolce per dieci minuti, schiacciandone alcune.",
+      "Cuocete gli spaghetti al dente e scolateli.",
+      "Saltate la pasta nel ragù con un poco di acqua di cottura e servite."
+    ],
+    "source": null,
+    "notes": "Il ragù si prepara in anticipo e si congela in porzioni."
+  },
+  {
+    "id": "pranzo-risotto-zucca-rosmarino",
+    "title": "Risotto alla zucca e rosmarino",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🎃",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "autunno"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucca",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate la zucca a cubetti e stufatela con un poco di brodo fino a renderla morbida, poi schiacciatene metà.",
+      "Soffriggete la cipolla nell'olio, aggiungete il riso e tostatelo per due minuti.",
+      "Sfumate con il vino e proseguite aggiungendo brodo caldo un mestolo per volta.",
+      "A metà cottura unite la zucca e il rosmarino.",
+      "Aggiungete i cannellini a fine cottura, mantecate con un filo d'olio e fate riposare un minuto."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-risotto-asparagi-piselli",
+    "title": "Risotto con asparagi e piselli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "primavera"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Arborio",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Asparagi",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Scalogno",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate gli asparagi a rondelle tenendo da parte le punte.",
+      "Fate appassire lo scalogno nell'olio, aggiungete il riso e tostatelo.",
+      "Cuocete il riso con il brodo caldo aggiunto poco alla volta, mescolando spesso.",
+      "A metà cottura unite i gambi degli asparagi e i piselli, a fine cottura le punte.",
+      "Spegnete, aggiungete il limone e un filo d'olio, coprite e servite dopo due minuti."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-insalata-farro-ceci-verdure",
+    "title": "Insalata di farro, ceci e verdure",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di vino",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il farro in acqua salata per circa venti minuti, scolatelo e fatelo raffreddare.",
+      "Tagliate pomodorini e cetriolo a pezzetti.",
+      "Condite il farro con olio, aceto e sale.",
+      "Unite ceci, verdure, olive e rucola.",
+      "Mescolate e lasciate insaporire almeno dieci minuti prima di servire."
+    ],
+    "source": null,
+    "notes": "Ottima da portare in ufficio."
+  },
+  {
+    "id": "pranzo-insalata-orzo-feta-vegetariana",
+    "title": "Insalata d'orzo con feta e peperoni",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥗",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Feta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Peperone",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Origano",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete l'orzo in acqua salata per circa venticinque minuti e raffreddatelo sotto l'acqua fredda.",
+      "Tagliate il peperone e il cetriolo a dadini.",
+      "Preparate un'emulsione con olio, limone, origano e sale.",
+      "Mescolate orzo, verdure, ceci e olive con il condimento.",
+      "Aggiungete la feta a cubetti all'ultimo e servite."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-insalata-riso-nero-tofu",
+    "title": "Insalata di riso nero con tofu e mango",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "riso nero",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso nero",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mango",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Cuocete il riso nero in abbondante acqua per circa trentacinque minuti e scolatelo.",
+      "Tagliate il tofu a cubi e rosolatelo con la salsa di soia fino a dorarlo.",
+      "Tagliate a bastoncini carota e cetriolo e il mango a dadini.",
+      "Preparate il condimento con lime e olio di sesamo.",
+      "Mescolate tutti gli ingredienti e servite a temperatura ambiente."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-bowl-tofu-riso-broccoli",
+    "title": "Bowl di tofu, riso e broccoli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥡",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "tofu"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Cuocete il riso e tenetelo al caldo.",
+      "Tagliate il tofu a cubetti e rosolatelo nell'olio finché diventa dorato.",
+      "Aggiungete zenzero grattugiato e salsa di soia e fate caramellare un minuto.",
+      "Cuocete a vapore broccoli e carota per otto minuti.",
+      "Componete la bowl con riso, tofu e verdure, cospargendo di sesamo."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-bowl-tempeh-quinoa",
+    "title": "Bowl di tempeh, quinoa e verdure al forno",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "tempeh"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tempeh",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scaldate il forno a 200 gradi e tagliate le verdure a pezzi.",
+      "Marinate il tempeh a fette con soia, paprika e un poco d'olio.",
+      "Cuocete verdure e tempeh in forno per venticinque minuti.",
+      "Intanto cuocete la quinoa per quindici minuti.",
+      "Servite con la salsa di tahina diluita con un cucchiaio d'acqua."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-burger-lenticchie",
+    "title": "Burger di lenticchie e avena",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "lenticchie"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie cotte",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane da hamburger",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Carota",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frullate grossolanamente lenticchie, carota grattugiata e cipolla.",
+      "Aggiungete i fiocchi d'avena, paprika e sale e mescolate fino a un composto lavorabile.",
+      "Formate un burger e fatelo riposare dieci minuti.",
+      "Cuocetelo in padella con l'olio, tre minuti per lato, oppure in forno a 200 gradi.",
+      "Servitelo nel pane con insalata e pomodoro."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-polpette-ceci-sugo",
+    "title": "Polpette di ceci al sugo con couscous",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "ceci",
+      "polpette"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 140,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Couscous",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 5,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frullate i ceci con prezzemolo, aglio, pangrattato e sale, lasciando il composto un po' grezzo.",
+      "Formate polpette piccole con le mani umide.",
+      "Rosolatele nell'olio finché sono colorite.",
+      "Versate la passata e cuocete per dieci minuti con il coperchio.",
+      "Preparate il couscous con acqua bollente e servitelo con le polpette."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-gnocchi-pomodoro-lenticchie",
+    "title": "Gnocchi di patate con sugo di lenticchie",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "gnocchi",
+      "lenticchie"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie rosse decorticate",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico fresco",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata nell'olio.",
+      "Aggiungete le lenticchie rosse e i pelati schiacciati, con mezzo bicchiere d'acqua.",
+      "Cuocete per quindici minuti finché le lenticchie si sfaldano e il sugo si addensa.",
+      "Lessate gli gnocchi e scolateli appena salgono a galla.",
+      "Conditeli con il sugo e il basilico."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-zuppa-minestrone-orzo",
+    "title": "Minestrone sostanzioso con orzo e fagioli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Patate",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Verza",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate tutte le verdure a dadini regolari.",
+      "Fatele rosolare dolcemente nell'olio per cinque minuti.",
+      "Versate il brodo e unite l'orzo.",
+      "Cuocete per venticinque minuti, aggiungendo i fagioli negli ultimi dieci.",
+      "Servite con olio a crudo e pepe."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-vellutata-lenticchie-carote",
+    "title": "Vellutata di carote e lenticchie rosse con crostini",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "vellutata",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie rosse decorticate",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete cipolla e carota a rondelle nell'olio.",
+      "Aggiungete lenticchie, curcuma e brodo caldo.",
+      "Cuocete per venti minuti, poi frullate fino a una crema.",
+      "Tostate il pane a dadini in forno o in padella.",
+      "Servite la vellutata con i crostini."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-wrap-hummus-verdure",
+    "title": "Wrap con hummus e verdure croccanti",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🌯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina integrale",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus di ceci",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate la piadina in una padella antiaderente per un minuto per lato.",
+      "Spalmate l'hummus su tutta la superficie.",
+      "Grattugiate la carota e affettate sottilmente il cetriolo.",
+      "Distribuite verdure e insalata, con una spruzzata di limone.",
+      "Arrotolate stretto e tagliate a metà."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-piadina-tofu-rucola",
+    "title": "Piadina con tofu al paprika e rucola",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🌯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "piadina",
+      "tofu"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Paprika affumicata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate il tofu a fettine sottili.",
+      "Rosolatele nell'olio con paprika e sale per tre minuti per lato.",
+      "Scaldate la piadina.",
+      "Farcitela con tofu, pomodoro a fette e rucola.",
+      "Chiudetela a metà e servite subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-curry-ceci-spinaci-riso",
+    "title": "Curry di ceci e spinaci con riso basmati",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍛",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "curry",
+      "ceci"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 50,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete il riso basmati e tenetelo da parte.",
+      "Soffriggete cipolla e zenzero nell'olio, poi unite il curry per un minuto.",
+      "Aggiungete passata, latte di cocco e ceci.",
+      "Cuocete per dieci minuti, poi unite gli spinaci finché appassiscono.",
+      "Servite il curry sul riso."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-orecchiette-cime-rapa",
+    "title": "Orecchiette con cime di rapa e ceci",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "puglia"
+    ],
+    "ingredients": [
+      {
+        "name": "Orecchiette",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cime di rapa",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulite le cime di rapa, tenendo foglie e cimette.",
+      "Lessate le cime in acqua salata per cinque minuti e poi cuocete nella stessa acqua le orecchiette.",
+      "Rosolate aglio e peperoncino nell'olio, unite i ceci e il pangrattato.",
+      "Aggiungete le cime scolate e spadellate un paio di minuti.",
+      "Scolate le orecchiette, saltatele con il condimento e servite."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-parmigiana-melanzane-vegana",
+    "title": "Parmigiana di melanzane vegana",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "forno",
+      "melanzane"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tofu",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Basilico fresco",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affettate le melanzane e cuocetele in forno o in padella, in modo da ammorbidirle.",
+      "Frullate il tofu con il lievito alimentare e un pizzico di sale per ottenere una crema.",
+      "Create strati in una pirofila: sugo, melanzane, crema di tofu e basilico.",
+      "Ripetete gli strati, terminando con sugo e pane sbriciolato.",
+      "Cuocete a 190 gradi per venticinque minuti. Fate riposare prima di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-riso-lenticchie-cipolle",
+    "title": "Riso e lenticchie con cipolle dorate",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "lenticchie",
+      "riso"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie secche",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cumino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate le lenticchie per venti minuti e scolatele.",
+      "Cuocete il riso a parte fino a che è al dente.",
+      "Affettate la cipolla e fatela dorare lentamente nell'olio con il cumino.",
+      "Mescolate riso e lenticchie con metà delle cipolle.",
+      "Servite con le cipolle rimaste e gli spinaci freschi."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-couscous-verdure-ceci-uvetta",
+    "title": "Couscous alle verdure con ceci e uvetta",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥘",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "couscous",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Couscous",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 10,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mettete il couscous in una ciotola, copritelo con acqua bollente e lasciatelo gonfiare.",
+      "Tagliate a dadini zucchine e carota e saltatele in padella con l'olio.",
+      "Aggiungete ceci, uvetta e curcuma.",
+      "Sgranate il couscous con una forchetta.",
+      "Unite le verdure e le mandorle spezzettate prima di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pasta-zucchine-ricotta",
+    "title": "Pasta cremosa alle zucchine e ricotta",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Piselli",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate le zucchine a rondelle e saltatele nell'olio fino a doratura.",
+      "Cuocete la pasta in acqua salata, aggiungendo i piselli per gli ultimi tre minuti.",
+      "Mescolate la ricotta con un mestolo di acqua di cottura per renderla cremosa.",
+      "Scolate la pasta e piselli e uniteli alle zucchine.",
+      "Condite con la ricotta, la menta spezzettata e un po' di pepe."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-riso-uova-verdure-saltato",
+    "title": "Riso saltato con uova e verdure",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "riso",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Piselli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Cuocete il riso e lasciatelo raffreddare un poco.",
+      "Tagliate carota e zucchine a cubetti e saltatele con i piselli.",
+      "Spingete le verdure da un lato e strapazzate le uova nell'olio.",
+      "Unite il riso e la salsa di soia, mescolando a fuoco vivo.",
+      "Servite caldo."
+    ],
+    "source": null
+  }
+]

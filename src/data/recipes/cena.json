@@ -1,0 +1,1895 @@
+[
+  {
+    "id": "cena-tofu-teriyaki",
+    "title": "Tofu teriyaki con riso",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍱",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "tofu",
+      "orientale"
+    ],
+    "ingredients": [
+      {
+        "name": "Tofu",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Amido di mais",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "carb"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Metti il tofu sotto un peso per 10 minuti, poi tagliala a fette di circa mezzo centimetro.",
+      "Lessa il riso in acqua salata e cuoci i broccoli a cimette al vapore per 6 minuti.",
+      "Mescola la salsa di soia con lo sciroppo d'acero, lo zenzero grattugiato, l'amido e due cucchiai d'acqua.",
+      "Dora il tofu nell'olio per due minuti per lato, poi versa la salsa e lascia addensare per un minuto.",
+      "Servi il tofu laccato sul riso con i broccoli e una spolverata di sesamo."
+    ],
+    "source": {
+      "name": "Cucina Botanica",
+      "url": "https://www.cucinabotanica.com/ricette/tofu-teriyaki-in-padella-secondo-piatto-vegan/"
+    }
+  },
+  {
+    "id": "cena-tofu-marinato-forno",
+    "title": "Tofu marinato al forno con patate",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "tofu",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Tofu",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Aglio in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia il tofu a cubi e lascialo marinare per 20 minuti con soia, paprika, limone, aglio in polvere e un cucchiaio d'olio.",
+      "Accendi il forno a 200 gradi e taglia patate e peperoni a pezzi regolari.",
+      "Disponi le verdure su una teglia con l'olio restante e il sale e inforna per 15 minuti.",
+      "Aggiungi il tofu con la sua marinata e prosegui per altri 20 minuti, girando a metà cottura.",
+      "Servi quando il tofu è dorato e le patate sono morbide dentro."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-tempeh-agrodolce",
+    "title": "Tempeh in agrodolce con quinoa",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥢",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "tempeh",
+      "agrodolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Tempeh",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Quinoa",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Aceto di riso",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Sciacqua la quinoa e cuocila in acqua salata per 12 minuti, poi scolala.",
+      "Taglia il tempeh a dadini e rosolalo nell'olio finché è dorato su ogni lato.",
+      "Aggiungi carote a bastoncini e zucchine a rondelle e saltale per 5 minuti a fuoco vivace.",
+      "Sciogli soia, aceto e sciroppo in un po' d'acqua e versali in padella, lasciando restringere.",
+      "Servi il tempeh sopra la quinoa con le verdure."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-seitan-limone",
+    "title": "Seitan al limone con patate saltate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍋",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "seitan",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Seitan",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 180,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "veg"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa le patate a cubetti per 10 minuti e i fagiolini per 6, poi scolali.",
+      "Taglia il seitan a fettine e infarinalo leggermente.",
+      "Rosolalo nell'olio per due minuti per lato, poi sfuma con il limone e mezzo bicchiere d'acqua.",
+      "Fai restringere il sugo, quindi aggiungi le patate e saltale un paio di minuti.",
+      "Completa con prezzemolo tritato e servi con i fagiolini."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-frittata-ceci",
+    "title": "Frittata di ceci con zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍳",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "farina di ceci",
+      "senza uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di ceci",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipollotto",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 100,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Lievito alimentare",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti la farina con l'acqua, la curcuma, il lievito alimentare e il sale fino a ottenere una pastella liscia, poi lasciala riposare 10 minuti.",
+      "Affetta cipollotto e zucchine e stufali in padella con metà dell'olio per 6 minuti.",
+      "Versa la pastella sulle verdure e cuoci a fuoco medio con il coperchio per 5 minuti.",
+      "Gira la frittata con l'aiuto di un piatto e cuoci l'altro lato per altri 4 minuti.",
+      "Servila a spicchi con il pane tostato."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-frittata-verdure",
+    "title": "Frittata di verdure al forno",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥚",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "uova",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le verdure a dadini e stufale in padella con l'olio per 8 minuti.",
+      "Sbatti le uova con parmigiano e sale.",
+      "Versa le uova sulle verdure e cuoci a fuoco dolce per 3 minuti.",
+      "Passa la padella nel forno a 190 gradi per 10 minuti, finché la superficie è gonfia e dorata.",
+      "Servi tiepida con il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-falafel-forno",
+    "title": "Falafel al forno con insalata e pita",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "ceci",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci secchi ammollati",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane pita",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "veg"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tahin",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scola i ceci ammollati per una notte, senza cuocerli, e frullali con cipolla, aglio, prezzemolo, cumino e sale fino a un composto granuloso.",
+      "Forma delle palline schiacciate e disponile su una teglia unta d'olio.",
+      "Cuoci a 200 gradi per 25 minuti, girandole a metà cottura.",
+      "Prepara una salsa diluendo il tahin con acqua e limone fino a renderlo cremoso.",
+      "Servi i falafel nella pita con cetrioli e pomodori a pezzi e la salsa."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-cotolette-melanzane",
+    "title": "Cotolette di melanzane al forno",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "melanzane",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di ceci",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Acqua",
+        "qty": 50,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Hummus",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le melanzane a fette spesse un centimetro, salale e lasciale a riposo 10 minuti, poi tamponale.",
+      "Mescola farina di ceci, acqua e sale per ottenere una pastella fluida.",
+      "Passa le fette nella pastella e poi nel pangrattato mescolato alla paprika.",
+      "Disponile su carta forno, condiscile con l'olio e inforna a 200 gradi per 25 minuti, girandole una volta.",
+      "Servi con l'hummus e il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-polpettone-lenticchie",
+    "title": "Polpettone di lenticchie",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 65,
+    "emoji": "🍞",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "lenticchie",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie cotte",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane raffermo",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Patate",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Lessa la patata, schiacciala e lasciala intiepidire.",
+      "Soffriggi cipolla e carota tritate con metà dell'olio per 8 minuti.",
+      "Schiaccia a metà le lenticchie e uniscile a patata, soffritto, pane ammollato e strizzato, rosmarino e soia.",
+      "Forma un cilindro compatto su carta forno e spennellalo con l'olio.",
+      "Cuoci a 190 gradi per 40 minuti e lascia riposare 10 minuti prima di affettare."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-spezzatino-soia",
+    "title": "Spezzatino di soia con piselli",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "soia",
+      "stufato"
+    ],
+    "ingredients": [
+      {
+        "name": "Bocconcini di soia secchi",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Piselli",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 120,
+        "unit": "ml",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Reidrata i bocconcini in acqua calda con un pizzico di sale per 10 minuti e strizzali.",
+      "Soffriggi cipolla e carota tritate nell'olio, poi aggiungi la soia e rosolala per 5 minuti.",
+      "Sfuma con il vino e unisci la passata con mezzo bicchiere d'acqua.",
+      "Aggiungi le patate a pezzi e cuoci coperto per 20 minuti.",
+      "Unisci i piselli, cuoci altri 5 minuti e servi caldo."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-spezzatino-funghi",
+    "title": "Spezzatino di funghi con polenta",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍄",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "funghi",
+      "polenta"
+    ],
+    "ingredients": [
+      {
+        "name": "Funghi champignon",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Farina di mais per polenta istantanea",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "ml",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salvia",
+        "qty": 3,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Vino rosso",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i funghi e tagliali a spicchi grossi.",
+      "Rosola la cipolla con la salvia, poi aggiungi i funghi a fuoco alto finché perdono l'acqua.",
+      "Sfuma con il vino, unisci passata e fagioli e cuoci 15 minuti a fuoco medio.",
+      "Prepara la polenta versando la farina a pioggia in acqua salata bollente e mescolando per 5 minuti.",
+      "Servi lo spezzatino sulla polenta."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-minestrone",
+    "title": "Minestrone con fagioli e pasta",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pasta corta integrale",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Patate",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cavolo verza",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia tutte le verdure a dadini piccoli.",
+      "Fai appassire carote e patate nell'olio per 5 minuti.",
+      "Aggiungi le altre verdure, i pelati e il brodo caldo e cuoci per 25 minuti.",
+      "Unisci i fagioli e la pasta e cuoci finché la pasta è al dente.",
+      "Lascia riposare qualche minuto e servi con un filo d'olio a crudo."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-zuppa-lenticchie",
+    "title": "Zuppa di lenticchie rosse e zucca",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍜",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "lenticchie"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie rosse decorticate",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucca",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 50,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Soffriggi la cipolla nell'olio con il curry per un paio di minuti.",
+      "Aggiungi la zucca a cubetti e le lenticchie sciacquate.",
+      "Versa il brodo e cuoci per 20 minuti, finché tutto è tenero.",
+      "Frulla in parte la zuppa e unisci il latte di cocco.",
+      "Servi con il pane tostato."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-farinata",
+    "title": "Farinata di ceci con insalata di fagioli",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "farina di ceci",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di ceci",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Acqua",
+        "qty": 150,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Rucola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola farina, acqua e sale con una frusta e lascia riposare la pastella 30 minuti, eliminando la schiuma.",
+      "Scalda il forno a 250 gradi con una teglia unta con un cucchiaio d'olio.",
+      "Versa la pastella nella teglia calda, aggiungi il rosmarino e cuoci per 15 minuti, finché è dorata.",
+      "Condisci fagioli e rucola con l'olio rimasto e sale.",
+      "Servi la farinata a spicchi con l'insalata e il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pizza-verdure",
+    "title": "Pizza al padellino con verdure grigliate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pizza",
+      "lievitato"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 0",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 60,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Lievito di birra secco",
+        "qty": 1,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Tofu",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Origano",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Impasta farina, acqua, lievito, sale e un cucchiaio d'olio, poi lascia lievitare 30 minuti.",
+      "Stendi l'impasto in una padella unta.",
+      "Spalma i pelati schiacciati con origano e sale.",
+      "Aggiungi le zucchine a fette sottili e il tofu sbriciolato condito con l'olio rimasto.",
+      "Cuoci in forno a 230 gradi per 12 minuti, finché i bordi sono dorati."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-piadina-hummus",
+    "title": "Piadina con hummus e verdure",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🌯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "piadina",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Griglia le zucchine a fettine in padella con poco olio per 4 minuti per lato.",
+      "Scalda la piadina in una padella asciutta per un minuto per lato.",
+      "Spalma l'hummus sulla piadina.",
+      "Aggiungi zucchine, pomodori a fette e rucola, poi sala leggermente.",
+      "Chiudi a libro e taglia a metà prima di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-focaccia-ceci",
+    "title": "Focaccia con crema di ceci e olive",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🫓",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "focaccia",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 0",
+        "qty": 90,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 60,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Lievito di birra secco",
+        "qty": 1,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Impasta farina, acqua, lievito, sale e un cucchiaio d'olio e lascia lievitare 40 minuti.",
+      "Frulla i ceci con un cucchiaio d'olio, sale e poca acqua fino a ottenere una crema.",
+      "Stendi l'impasto in teglia e cuoci in forno a 220 gradi per 15 minuti.",
+      "Spalma la crema di ceci sulla focaccia calda.",
+      "Completa con olive e pomodorini a metà e servi tiepida."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-shakshuka",
+    "title": "Shakshuka con pane",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "uova",
+      "pomodoro"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Paprika affumicata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Soffriggi cipolla e peperone a pezzetti nell'olio per 8 minuti.",
+      "Aggiungi le spezie e i pelati schiacciati, poi cuoci 10 minuti finché il sugo si restringe.",
+      "Con il dorso del cucchiaio crea due incavi e rompi dentro le uova.",
+      "Copri e cuoci per 5 minuti, finché gli albumi sono rappresi ma i tuorli ancora morbidi.",
+      "Servi dalla padella con il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-uova-diavola",
+    "title": "Uova alla diavola con patate al vapore",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥚",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "uova",
+      "freddo"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 20,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Senape",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cetriolini",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Cuoci le uova in acqua bollente per 9 minuti, raffreddale e sgusciale.",
+      "Taglia le uova a metà e metti i tuorli in una ciotola.",
+      "Schiaccia i tuorli con yogurt, senape e cetriolini tritati e riempi gli albumi con la crema.",
+      "Cuoci le patate a tocchetti al vapore per 15 minuti.",
+      "Servi le uova con paprika, patate e insalata."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-burger-fagioli",
+    "title": "Burger di fagioli neri",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "fagioli"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli neri cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane per hamburger",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Paprika affumicata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Schiaccia i fagioli lasciandone interi alcuni e mescolali ad avena, cipolla tritata, paprika e sale.",
+      "Forma un burger compatto e lascialo riposare 10 minuti.",
+      "Cuoci in padella con l'olio per cinque minuti per lato, finché ha una crosticina.",
+      "Scalda il pane.",
+      "Farcisci con burger, pomodoro e insalata."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-quiche-vegana",
+    "title": "Quiche vegana di tofu e spinaci",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 65,
+    "emoji": "🥧",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "quiche",
+      "tofu"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tofu",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lievito alimentare",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 50,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Impasta farina, un cucchiaio d'olio, sale e due cucchiai d'acqua e stendi la pasta in uno stampo piccolo.",
+      "Cuocila a 180 gradi per 10 minuti.",
+      "Frulla il tofu con latte di soia, lievito alimentare, curcuma, olio e sale.",
+      "Salta gli spinaci in padella, strizzali e distribuiscili sulla base.",
+      "Versa la crema e cuoci per 35 minuti, finché è soda e dorata."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-sformato-zucchine",
+    "title": "Sformato di zucchine e ricotta",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🥘",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "sformato",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Grattugia le zucchine, salale e strizzale bene.",
+      "Mescola ricotta, uovo e parmigiano e unisci le zucchine.",
+      "Ungi uno stampo con olio e distribuisci metà del pangrattato.",
+      "Versa il composto, copri con il pangrattato rimasto e cuoci a 180 gradi per 35 minuti.",
+      "Lascia intiepidire, sforma e servi con il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-involtini-verza",
+    "title": "Involtini di verza e lenticchie",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "verza",
+      "lenticchie"
+    ],
+    "ingredients": [
+      {
+        "name": "Foglie di verza",
+        "qty": 3,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "ml",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Sbollenta le foglie di verza per 3 minuti e asciugale.",
+      "Cuoci il riso e mescolalo alle lenticchie e alla cipolla rosolata nell'olio, aggiungendo la soia.",
+      "Farcisci ogni foglia e arrotolala a pacchetto.",
+      "Disponi gli involtini in una pirofila con la passata.",
+      "Cuoci a 180 gradi coperti per 30 minuti."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-hummus-bowl",
+    "title": "Hummus bowl con verdure arrostite",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥙",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "ceci"
+    ],
+    "ingredients": [
+      {
+        "name": "Hummus",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso integrale cotto",
+        "qty": 120,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucca",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cavolo rosso",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia la zucca a cubetti e arrostiscila a 200 gradi con l'olio per 25 minuti.",
+      "Condisci i ceci con sale e paprika e scaldali in padella.",
+      "Affetta sottilmente il cavolo.",
+      "Metti il riso in una ciotola con l'hummus al centro.",
+      "Distribuisci zucca, ceci e cavolo, poi aggiungi i semi."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-ratatouille-ceci",
+    "title": "Ratatouille con ceci",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "verdure",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Basilico",
+        "qty": 5,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia tutte le verdure a cubetti.",
+      "Rosola melanzane e peperoni nell'olio per 8 minuti.",
+      "Aggiungi zucchine e pomodori e cuoci 20 minuti a fuoco medio.",
+      "Unisci i ceci e cuoci ancora 5 minuti.",
+      "Completa con basilico spezzettato e servi con il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-mousse-ceci-pane",
+    "title": "Mousse salata di ceci e pomodori secchi",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🫘",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crema",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori secchi",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale tostato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Metti in ammollo i pomodori secchi in acqua calda per 5 minuti.",
+      "Frulla ceci, pomodori, olio e limone fino a una mousse liscia, aggiungendo acqua se serve.",
+      "Taglia i cetrioli a bastoncini.",
+      "Tosta il pane.",
+      "Servi la mousse su bruschette con i cetrioli."
+    ],
+    "source": null
+  }
+]

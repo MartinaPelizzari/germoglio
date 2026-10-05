@@ -1,0 +1,1699 @@
+[
+  {
+    "id": "cena-petto-pollo-limone",
+    "title": "Petto di pollo al limone con patate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍋",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "pollo",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le patate a tocchetti e lessale per 10 minuti, poi scolale.",
+      "Affetta il petto di pollo in fettine sottili e infarinale leggermente.",
+      "Rosola il pollo nell'olio per tre minuti per lato, poi sfuma con il limone e un po' d'acqua.",
+      "In un'altra padella salta le zucchine a rondelle con le patate fino a doratura.",
+      "Unisci il pollo al sugo di cottura, aggiusta di sale e completa con il prezzemolo tritato."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-arrosto-vitello-patate",
+    "title": "Arrosto di vitello con patate al forno",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 75,
+    "emoji": "🍖",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "arrosto",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Arrosto di vitello",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 220,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 180 gradi e lega l'arrosto con lo spago, salandolo e aromatizzandolo con rosmarino.",
+      "Rosola la carne in una casseruola con metà olio fino a dorarla su tutti i lati.",
+      "Sfuma con il vino bianco e lascia evaporare.",
+      "Disponi in teglia la carne, le patate a pezzi, le carote e la cipolla tagliata, condisci con il resto dell'olio.",
+      "Inforna per circa un'ora, bagnando con il fondo di cottura, poi lascia riposare cinque minuti e affetta."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-bistecca-rucola",
+    "title": "Tagliata di manzo con rucola e pane",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥩",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "manzo",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Controfiletto di manzo",
+        "qty": 160,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Grana Padano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aceto balsamico",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tira fuori la carne dal frigo 20 minuti prima e asciugala con carta da cucina.",
+      "Scalda bene una padella e cuoci il controfiletto tre minuti per lato, poi salalo e lascialo riposare.",
+      "Taglia la carne a fettine oblique.",
+      "Disponi rucola e pomodorini tagliati a metà nel piatto, adagia la carne e completa con scaglie di grana, olio e balsamico.",
+      "Servi con il pane tostato."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-hamburger-manzo-insalata",
+    "title": "Hamburger di manzo con insalata e pane",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍔",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "manzo"
+    ],
+    "ingredients": [
+      {
+        "name": "Macinato di manzo",
+        "qty": 140,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Panino integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodoro",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Senape",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Condisci il macinato con sale e pepe e forma un hamburger di circa due centimetri di spessore.",
+      "Scalda una piastra o una padella antiaderente con pochissimo olio.",
+      "Cuoci l'hamburger quattro minuti per lato, finché è ben cotto all'interno.",
+      "Tosta il panino, spalmalo di senape e farcisci con lattuga, pomodoro a fette e carne."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-polpette-sugo",
+    "title": "Polpette di manzo al sugo con polenta",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "sugo"
+    ],
+    "ingredients": [
+      {
+        "name": "Macinato di manzo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Polenta istantanea",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uovo",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "ml",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano Reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Impasta carne, mezzo uovo sbattuto, pangrattato, parmigiano e sale, poi forma delle polpettine.",
+      "Scalda la passata con l'olio e il basilico in una pentola larga.",
+      "Immergi le polpette nel sugo e cuocile con coperchio per 20 minuti a fuoco dolce.",
+      "Prepara la polenta con acqua salata seguendo i tempi della confezione.",
+      "Servi le polpette con il loro sugo sopra la polenta."
+    ],
+    "source": null,
+    "notes": "Si conservano due giorni in frigorifero e si scaldano bene."
+  },
+  {
+    "id": "cena-scaloppine-limone",
+    "title": "Scaloppine al limone con riso e spinaci",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍋",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "vitello",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Fettine di vitello",
+        "qty": 140,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa il riso in acqua salata e scolalo.",
+      "Infarina leggermente le fettine, scuotendo l'eccesso.",
+      "Sciogli il burro con metà olio e rosola le scaloppine un minuto e mezzo per lato.",
+      "Versa il limone con due cucchiai d'acqua e lascia stringere il fondo.",
+      "Salta gli spinaci in padella con il resto dell'olio e sale, e servi tutto insieme."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-spezzatino-patate",
+    "title": "Spezzatino di manzo con patate",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 100,
+    "emoji": "🥘",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "spezzatino",
+      "stufato"
+    ],
+    "ingredients": [
+      {
+        "name": "Spezzatino di manzo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 80,
+        "unit": "ml",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 100,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Trita cipolla, sedano e una carota e falli appassire nell'olio.",
+      "Aggiungi la carne e rosolala bene su tutti i lati.",
+      "Versa la passata e il brodo caldo, copri e cuoci a fuoco basso per un'ora e un quarto.",
+      "Unisci le patate a tocchetti e l'altra carota a rondelle e prosegui per altri 25 minuti.",
+      "Regola di sale e servi caldo."
+    ],
+    "source": null,
+    "notes": "Il giorno dopo è ancora più saporito."
+  },
+  {
+    "id": "cena-involtini-prosciutto-salvia",
+    "title": "Involtini di vitello, prosciutto e salvia",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌿",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "involtini",
+      "vitello"
+    ],
+    "ingredients": [
+      {
+        "name": "Fettine di vitello",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Purè di patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Batti le fettine, adagia su ciascuna prosciutto e una foglia di salvia, poi arrotola e chiudi con uno stuzzicadenti.",
+      "Fai sciogliere il burro in padella e rosola gli involtini su tutti i lati.",
+      "Sfuma con il vino e cuoci coperto per dieci minuti con un goccio d'acqua.",
+      "Lessa i fagiolini in acqua salata per otto minuti.",
+      "Servi gli involtini con il fondo di cottura, il purè e i fagiolini."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-frittata-prosciutto-zucchine",
+    "title": "Frittata al forno con prosciutto e zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍳",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Parmigiano Reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 190 gradi e taglia le zucchine a rondelle sottili.",
+      "Saltale in padella con l'olio per cinque minuti.",
+      "Sbatti le uova con il parmigiano e un pizzico di sale, poi aggiungi il prosciutto a striscioline e le zucchine.",
+      "Versa il composto in una teglia piccola oliata e cuoci 15 minuti, finché è dorato.",
+      "Servi a spicchi con il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pollo-peperoni",
+    "title": "Pollo ai peperoni con couscous",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🫑",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "pollo",
+      "peperoni"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Couscous",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 50,
+        "unit": "ml",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il pollo a bocconcini e i peperoni a listarelle.",
+      "Soffriggi la cipolla affettata nell'olio, poi aggiungi il pollo e doralo.",
+      "Unisci peperoni, paprika e passata, copri e cuoci per 15 minuti.",
+      "Idrata il couscous con acqua bollente salata in pari volume, copri e lascia gonfiare cinque minuti.",
+      "Sgranalo con una forchetta e servilo con il pollo."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-cotoletta-forno-insalata",
+    "title": "Cotoletta di pollo al forno con insalata",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍗",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "pollo",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uovo",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 200 gradi e taglia il petto in due fettine sottili.",
+      "Passa le fettine nell'uovo sbattuto salato e poi nel pangrattato, premendo bene.",
+      "Taglia le patate a spicchi, condiscile con un po' d'olio e infornale per dieci minuti.",
+      "Aggiungi in teglia le cotolette irrorate con il resto dell'olio e cuoci altri 20 minuti, girandole a metà.",
+      "Servi con insalata e pomodori."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-tacchino-funghi",
+    "title": "Fesa di tacchino ai funghi con riso",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍄",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "tacchino",
+      "funghi"
+    ],
+    "ingredients": [
+      {
+        "name": "Fesa di tacchino",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Funghi champignon",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Metti a cuocere il riso integrale in abbondante acqua salata.",
+      "Taglia il tacchino a fettine e rosolale nell'olio due minuti per lato, poi tienile da parte.",
+      "Nella stessa padella fai dorare l'aglio e salta i funghi affettati per otto minuti.",
+      "Rimetti il tacchino e cuoci un minuto per insaporire.",
+      "Servi con il riso e il prezzemolo tritato."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-maiale-mele-spinaci",
+    "title": "Filetto di maiale alle mele con spinaci",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍎",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "maiale",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Filetto di maiale",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mela",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il filetto a medaglioni e salalo.",
+      "Rosolali nel burro tre minuti per lato e sfuma con il vino.",
+      "Aggiungi la mela a fettine e cuoci coperto per cinque minuti finché si ammorbidisce.",
+      "Fai appassire gli spinaci in padella con un po' d'acqua e sale.",
+      "Servi i medaglioni con le mele, gli spinaci e il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-saltimbocca-romana",
+    "title": "Saltimbocca alla romana con patate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥓",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "vitello",
+      "romana"
+    ],
+    "ingredients": [
+      {
+        "name": "Fettine di vitello",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto crudo",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Burro",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa le patate e i fagiolini in acqua salata, poi scolali.",
+      "Su ogni fettina di vitello appoggia una fetta di prosciutto e una foglia di salvia e fissa con uno stuzzicadenti.",
+      "Sciogli il burro e cuoci i saltimbocca un paio di minuti per lato, partendo dal lato del vitello.",
+      "Sfuma con il vino e lascia ridurre il fondo.",
+      "Servi con le patate e i fagiolini."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pizzaiola-manzo",
+    "title": "Fettine alla pizzaiola con pane",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍅",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "manzo",
+      "pomodoro"
+    ],
+    "ingredients": [
+      {
+        "name": "Fettine di manzo",
+        "qty": 140,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda l'olio con l'aglio schiacciato in una padella ampia.",
+      "Aggiungi i pelati spezzettati, sale e origano e cuoci cinque minuti.",
+      "Adagia le fettine nel sugo e cuocile coperte per cinque minuti, girandole una volta.",
+      "Elimina l'aglio e servi con il pane per la scarpetta."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-salmone-forno-patate",
+    "title": "Salmone al forno con patate e broccoli",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "salmone",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Filetto di salmone",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Aneto",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 200 gradi e taglia le patate a spicchi sottili.",
+      "Cuoci le patate in teglia con metà olio per 15 minuti.",
+      "Aggiungi i broccoli a cimette e il salmone, condito con sale, limone e il resto dell'olio.",
+      "Inforna altri 12 minuti.",
+      "Completa con l'aneto prima di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-merluzzo-pomodorini-olive",
+    "title": "Merluzzo con pomodorini e olive",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍅",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "merluzzo",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Filetto di merluzzo",
+        "qty": 170,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive taggiasche",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Capperi",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda l'olio e fai cuocere i pomodorini tagliati a metà per cinque minuti.",
+      "Aggiungi olive e capperi.",
+      "Adagia il merluzzo nel sugo, copri e cuoci per dieci minuti.",
+      "Completa con prezzemolo tritato e servi con il pane."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-orata-cartoccio",
+    "title": "Orata al cartoccio con zucchine e riso",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🐠",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "orata",
+      "cartoccio"
+    ],
+    "ingredients": [
+      {
+        "name": "Orata pulita",
+        "qty": 200,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 190 gradi.",
+      "Su un foglio di carta forno adagia l'orata, le zucchine a rondelle, olio, sale e fettine di limone.",
+      "Chiudi bene il cartoccio e cuoci per 25 minuti.",
+      "Nel frattempo lessa il riso.",
+      "Apri il cartoccio, spolvera di prezzemolo e servi con il riso."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-gamberi-zucchine-padella",
+    "title": "Gamberi e zucchine in padella con pane",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🦐",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "gamberi",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Gamberi sgusciati",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda l'olio con aglio e peperoncino.",
+      "Aggiungi le zucchine a julienne e saltale per quattro minuti.",
+      "Unisci i gamberi e cuocili due o tre minuti, finché diventano rosa.",
+      "Spruzza il limone e servi con il pane tostato."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-insalata-tonno-fagioli",
+    "title": "Insalata di tonno, fagioli e cipolla",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥗",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "tonno",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Tonno al naturale",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di vino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola bene i fagioli e il tonno.",
+      "Affetta sottile la cipolla e taglia i pomodorini a metà.",
+      "Mescola tutto in una ciotola con olio, aceto e sale.",
+      "Lascia insaporire cinque minuti e servi con il pane."
+    ],
+    "source": null,
+    "notes": "Ottima anche fredda in contenitore."
+  },
+  {
+    "id": "cena-polpette-tonno-patate",
+    "title": "Polpette di tonno e patate al forno",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧆",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "tonno",
+      "polpette"
+    ],
+    "ingredients": [
+      {
+        "name": "Tonno al naturale",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 180,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uovo",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa le patate, schiacciale e lasciale raffreddare un po'.",
+      "Mescola con il tonno scolato, mezzo uovo, prezzemolo e sale.",
+      "Forma delle polpettine e passale nel pangrattato.",
+      "Disponile in teglia con l'olio e cuoci a 200 gradi per 20 minuti, girandole a metà.",
+      "Servi con l'insalata."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-fritto-forno-pesce",
+    "title": "Frittura leggera di pesce al forno",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍤",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "frittura",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Calamari",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Gamberi sgusciati",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendi il forno a 220 gradi e taglia i calamari ad anelli.",
+      "Condiscili con i gamberi, un po' d'olio e sale, poi rotola nel pangrattato.",
+      "Taglia le patate a bastoncini e condiscile con olio e sale.",
+      "Cuoci su teglia con carta forno per 20 minuti, girando a metà.",
+      "Servi con limone e insalata."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-zuppa-pesce-semplice",
+    "title": "Zuppa di pesce con crostoni",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍲",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "zuppa",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pesce misto (merluzzo e cozze)",
+        "qty": 180,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggi aglio e peperoncino nell'olio e aggiungi i pelati.",
+      "Cuoci il sugo per dieci minuti.",
+      "Unisci il pesce a pezzi e le cozze pulite, copri e cuoci per dieci minuti.",
+      "Tosta il pane.",
+      "Servi la zuppa con prezzemolo e i crostoni."
+    ],
+    "source": null,
+    "notes": "Si scalda bene in thermos."
+  },
+  {
+    "id": "cena-pasta-sgombro-pomodorini",
+    "title": "Pasta con sgombro e pomodorini",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍝",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "sgombro"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Sgombro sott'olio",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci la pasta in acqua salata.",
+      "Intanto scalda in padella i pomodorini tagliati con un po' d'olio per cinque minuti.",
+      "Aggiungi lo sgombro sgocciolato e sminuzzalo.",
+      "Scola la pasta e mantecala nel condimento.",
+      "Completa con rucola e origano."
+    ],
+    "source": null
+  }
+]

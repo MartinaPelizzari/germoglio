@@ -1,0 +1,288 @@
+[
+  {
+    "id": "colazione-uova-strapazzate-pane-cotto",
+    "title": "Uova strapazzate con pane tostato e prosciutto cotto",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍳",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "proteica",
+      "salata"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta il pane.",
+      "Sbatti le uova con un pizzico di sale.",
+      "Scalda l'olio in padella, versa le uova e mescola dolcemente finché sono cremose.",
+      "Servi con il prosciutto e i pomodorini a fette."
+    ],
+    "source": null,
+    "notes": "Meglio mangiarle appena fatte."
+  },
+  {
+    "id": "colazione-toast-tacchino-avocado",
+    "title": "Toast con tacchino e avocado",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥪",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "salata",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale in cassetta",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Fesa di tacchino",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le fette di pane.",
+      "Schiaccia l'avocado con limone e pepe.",
+      "Spalmalo su una fetta, aggiungi il tacchino e chiudi con l'altra."
+    ],
+    "source": null,
+    "notes": "Si può portare via avvolto nella carta forno."
+  },
+  {
+    "id": "colazione-pane-salmone-formaggio",
+    "title": "Pane tostato con salmone e formaggio fresco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "salata",
+      "omega 3"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane di segale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Formaggio fresco spalmabile",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aneto",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta il pane.",
+      "Spalma il formaggio fresco.",
+      "Aggiungi il salmone e il cetriolo a fettine.",
+      "Completa con aneto."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-porridge-salato-uovo-bacon",
+    "title": "Porridge d'avena salato con uovo e speck",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥣",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "salata",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 200,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Speck",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci l'avena nell'acqua con un pizzico di sale per 5 minuti.",
+      "Rosola lo speck a listarelle in padella e cuoci l'uovo all'occhio di bue.",
+      "Salta gli spinaci un minuto.",
+      "Versa il porridge in una ciotola e completa con uovo, speck e spinaci."
+    ],
+    "source": null,
+    "notes": "Si mangia caldo."
+  },
+  {
+    "id": "colazione-frittata-tonno-pane",
+    "title": "Frittata al forno con tonno e pane",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍞",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "salata",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Tonno al naturale",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le zucchine a cubetti e cuocile in padella con l'olio per 5 minuti.",
+      "Sbatti le uova con sale e tonno sgocciolato.",
+      "Unisci le zucchine, versa in uno stampo piccolo e cuoci a 180 gradi per 15 minuti.",
+      "Servi con il pane."
+    ],
+    "source": null,
+    "notes": "Avanzata, si conserva un giorno in frigo."
+  }
+]

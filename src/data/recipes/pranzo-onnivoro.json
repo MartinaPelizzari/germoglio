@@ -1,0 +1,1573 @@
+[
+  {
+    "id": "pranzo-insalata-farro-pollo-zucchine",
+    "title": "Insalata di farro con pollo e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥗",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "insalata di cereali",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori datterini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete il farro in acqua salata per il tempo indicato sulla confezione, poi scolatelo e fatelo raffreddare stendendolo su un piatto.",
+      "Tagliate il pollo a straccetti e rosolatelo in padella con un cucchiaino d'olio per sei o sette minuti, finché è dorato e cotto all'interno.",
+      "Grigliate o saltate le zucchine a rondelle in una padella calda, quindi salatele.",
+      "Mescolate in una ciotola farro, pollo, zucchine e datterini tagliati a metà.",
+      "Condite con l'olio rimasto, il limone e il basilico spezzettato. Lasciate insaporire almeno dieci minuti prima di chiudere il contenitore."
+    ],
+    "source": null,
+    "notes": "Si conserva in frigo fino a due giorni."
+  },
+  {
+    "id": "pranzo-pasta-fredda-prosciutto-pomodorini",
+    "title": "Pasta fredda con prosciutto cotto e pomodorini",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "pasta fredda",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori datterini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate la pasta in acqua salata e scolatela un minuto prima del tempo indicato, poi passatela sotto l'acqua fredda per fermare la cottura.",
+      "Tagliate i pomodorini a spicchi e conditeli con sale, origano e metà dell'olio.",
+      "Tagliate il prosciutto a listarelle; snocciolate e affettate le olive.",
+      "Unite alla pasta pomodorini, prosciutto, olive e rucola spezzettata.",
+      "Aggiungete l'olio rimasto, mescolate bene e lasciate riposare in frigo almeno mezz'ora."
+    ],
+    "source": null,
+    "notes": "Meglio condirla poche ore prima: dopo un giorno la pasta tende a asciugarsi."
+  },
+  {
+    "id": "pranzo-wrap-tacchino-insalata-avocado",
+    "title": "Wrap di tacchino, insalata e avocado",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🌯",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina o tortilla",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Fesa di tacchino arrosto a fette",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Avocado",
+        "qty": 40,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiacciate l'avocado con una forchetta, aggiungete il limone e un pizzico di sale.",
+      "Scaldate la piadina per mezzo minuto per renderla morbida e spalmatevi la crema di avocado.",
+      "Distribuite la lattuga lavata e asciugata, il pomodoro a fettine e il tacchino.",
+      "Arrotolate la piadina stringendo bene i bordi e tagliatela a metà.",
+      "Avvolgetela in carta forno o in un foglio di alluminio per portarla via."
+    ],
+    "source": null,
+    "notes": "Meglio mangiarlo entro la mattinata, così la piadina non si inumidisce."
+  },
+  {
+    "id": "pranzo-polpette-manzo-sugo-riso",
+    "title": "Polpette di manzo al sugo con riso",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍖",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Macinato di manzo",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uovo",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pane raffermo",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Ammollate il pane nell'acqua e strizzatelo, poi impastatelo con macinato, mezzo uovo sbattuto, parmigiano, prezzemolo tritato e sale.",
+      "Formate delle polpettine grandi come una noce.",
+      "Soffriggete la cipolla tritata nell'olio, versate la passata e un po' d'acqua e lasciate sobbollire cinque minuti.",
+      "Immergete le polpette nel sugo e cuocetele con il coperchio per circa venti minuti, girandole a metà.",
+      "Nel frattempo lessate il riso, scolatelo e servitelo con le polpette e il sugo."
+    ],
+    "source": null,
+    "notes": "Il mezzo uovo si ottiene sbattendone uno e usandone metà; il resto va nell'impasto di un'altra preparazione."
+  },
+  {
+    "id": "pranzo-frittata-prosciutto-zucchine-pane",
+    "title": "Frittata di zucchine e prosciutto cotto con pane",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍳",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate le zucchine a dadini e cuocetele in padella con l'olio per cinque minuti, salandole appena.",
+      "Sbattete le uova con il parmigiano e un pizzico di sale.",
+      "Aggiungete alle uova le zucchine intiepidite e il prosciutto a striscioline.",
+      "Versate il composto nella padella antiaderente e cuocete a fuoco dolce con il coperchio per cinque minuti.",
+      "Giratela con l'aiuto di un piatto e cuocete ancora tre minuti. Servitela tiepida o fredda con il pane."
+    ],
+    "source": null,
+    "notes": "Fredda è ottima anche dentro un panino."
+  },
+  {
+    "id": "pranzo-pasta-ragu-carne-classico",
+    "title": "Pasta al ragù di carne",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 90,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "tradizione",
+      "domenica"
+    ],
+    "ingredients": [
+      {
+        "name": "Tagliatelle all'uovo",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Macinato misto di manzo e maiale",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Vino rosso",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate finemente carota, sedano e cipolla e fateli appassire a fuoco dolce nell'olio per dieci minuti.",
+      "Alzate la fiamma, aggiungete il macinato e sgranatelo con un cucchiaio di legno finché perde l'acqua e si colora.",
+      "Sfumate con il vino e lasciatelo evaporare.",
+      "Versate la passata, salate, abbassate la fiamma e cuocete con il coperchio socchiuso per un'ora, aggiungendo acqua calda se si asciuga troppo.",
+      "Lessate le tagliatelle, saltatele nel ragù e servitele con il parmigiano."
+    ],
+    "source": null,
+    "notes": "Il ragù si può preparare in quantità e congelare in porzioni."
+  },
+  {
+    "id": "pranzo-risotto-salsiccia-radicchio",
+    "title": "Risotto con salsiccia e radicchio",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "autunnale"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salsiccia fresca",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Radicchio rosso",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Vino rosso",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata nell'olio, poi aggiungete la salsiccia privata del budello e sgranatela per cinque minuti.",
+      "Unite il radicchio a listarelle e fatelo ammorbidire per due minuti.",
+      "Tostate il riso nel condimento per un minuto e sfumate con il vino.",
+      "Portate a cottura per circa sedici minuti aggiungendo il brodo caldo un mestolo alla volta.",
+      "Spegnete, mantecate con il parmigiano e lasciate riposare un minuto coperto."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pollo-patate-forno-fagiolini",
+    "title": "Pollo al forno con patate e fagiolini",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🍗",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "forno",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cosce di pollo senza pelle",
+        "qty": 160,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il forno a 200 gradi e tagliate le patate a tocchetti.",
+      "Mescolate in una teglia pollo, patate, aglio, rosmarino, olio, sale e il succo del limone.",
+      "Infornate per quaranta minuti, girando i pezzi a metà cottura.",
+      "Nel frattempo lessate i fagiolini per otto minuti e scolateli.",
+      "Aggiungeteli in teglia per gli ultimi cinque minuti, così prendono sapore dal fondo di cottura."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-bowl-riso-pollo-verdure",
+    "title": "Bowl di riso, pollo e verdure croccanti",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥣",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "bowl",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso integrale",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Edamame o piselli",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso integrale e lasciatelo intiepidire.",
+      "Tagliate il pollo a cubetti e rosolatelo in padella con un filo d'olio, poi bagnatelo con la salsa di soia e lasciate caramellare un minuto.",
+      "Tagliate carota e cetriolo a bastoncini sottili e sbollentate i piselli per due minuti.",
+      "Mescolate olio di sesamo e limone in una ciotolina.",
+      "Componete la bowl con il riso alla base, le verdure e il pollo, e condite con la salsina."
+    ],
+    "source": null,
+    "notes": "Tenete il condimento a parte se la bowl va in frigo fino a pranzo."
+  },
+  {
+    "id": "pranzo-pasta-salsiccia-broccoli",
+    "title": "Orecchiette con salsiccia e broccoli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "tradizione"
+    ],
+    "ingredients": [
+      {
+        "name": "Orecchiette",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salsiccia fresca",
+        "qty": 90,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividete i broccoli in cimette e lessatele nell'acqua che userete per la pasta, scolandole dopo cinque minuti con una schiumarola.",
+      "In padella scaldate l'olio con l'aglio e il peperoncino, aggiungete la salsiccia sbriciolata e rosolatela per otto minuti.",
+      "Unite i broccoli e schiacciatene una parte con la forchetta per creare una cremina.",
+      "Cuocete le orecchiette nella stessa acqua dei broccoli.",
+      "Scolatele al dente, saltatele in padella con un mestolino di acqua di cottura e servite."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-torta-salata-prosciutto-spinaci",
+    "title": "Torta salata con prosciutto cotto e spinaci",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥧",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "torta salata",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta sfoglia",
+        "qty": 75,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uovo",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il forno a 190 gradi e stendete la sfoglia in uno stampo piccolo con la sua carta forno.",
+      "Fate appassire gli spinaci in padella con il solo velo d'acqua del lavaggio, strizzateli e tritateli.",
+      "Mescolate ricotta, mezzo uovo, parmigiano, un pizzico di sale e gli spinaci.",
+      "Versate il composto sulla sfoglia, distribuite il prosciutto a pezzetti e ripiegate i bordi verso l'interno.",
+      "Infornate per circa trenta minuti, finché la superficie è dorata. Lasciate raffreddare prima di tagliare."
+    ],
+    "source": null,
+    "notes": "Dosi pensate per uno stampo da una porzione; per quattro persone moltiplicate per quattro e usate una tortiera da 24 cm."
+  },
+  {
+    "id": "pranzo-insalata-patate-pollo-yogurt",
+    "title": "Insalata di patate, pollo e fagiolini",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥔",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "insalata",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Petto di pollo lessato",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Senape",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate le patate con la buccia per circa venti minuti, pelatele e tagliatele a pezzi.",
+      "Lessate i fagiolini per otto minuti e tagliateli a tocchetti.",
+      "Sfilacciate il pollo e affettate sottile la cipolla.",
+      "Preparate la salsa mescolando yogurt, senape, olio e sale.",
+      "Unite tutti gli ingredienti, condite e lasciate riposare in frigo per mezz'ora."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-burger-manzo-patate-spinaci",
+    "title": "Burger di manzo con patate al forno e spinaci",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍔",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 180,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Macinato di manzo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il forno a 200 gradi, tagliate le patate a spicchi e conditele con olio, rosmarino e sale.",
+      "Infornate le patate per circa trentacinque minuti, girandole una volta.",
+      "Impastate il macinato con la cipolla tritata finissima e un pizzico di sale, quindi formate un burger.",
+      "Cuocetelo in una padella ben calda per quattro minuti per lato.",
+      "Saltate gli spinaci in padella per due minuti e serviteli con burger e patate."
+    ],
+    "source": null,
+    "notes": "Burger e patate stanno bene in un contenitore e si scaldano in pochi minuti."
+  },
+  {
+    "id": "pranzo-maiale-lonza-cous-cous-peperoni",
+    "title": "Lonza di maiale con cous cous e peperoni",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥩",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "maiale",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lonza di maiale a fette",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate peperoni e cipolla a listarelle e cuoceteli in padella con l'olio per dodici minuti, finché sono morbidi.",
+      "Cospargete le fette di lonza con paprika e sale.",
+      "Rosolate la lonza in una padella antiaderente per tre minuti per lato e lasciatela riposare un minuto.",
+      "Versate sul cous cous la stessa quantità di acqua bollente salata, coprite e lasciate gonfiare cinque minuti, poi sgranatelo con una forchetta.",
+      "Servite la lonza a fettine sopra il cous cous con i peperoni."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-insalata-riso-tonno-classica",
+    "title": "Insalata di riso con tonno, uova e verdure",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "insalata di riso",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tonno sgocciolato",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mais",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive verdi",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso in acqua salata, scolatelo al dente e raffreddatelo sotto l'acqua corrente.",
+      "Fate rassodare l'uovo in acqua bollente per nove minuti, sgusciatelo e tagliatelo a spicchi.",
+      "Tagliate pomodorini e peperone a dadini e scolate il mais.",
+      "Mescolate il riso con le verdure, il tonno sgranato e le olive a rondelle.",
+      "Condite con olio e sale, aggiungete l'uovo e lasciate riposare in frigo almeno un'ora."
+    ],
+    "source": null,
+    "notes": "Si conserva fino a due giorni in frigo."
+  },
+  {
+    "id": "pranzo-pasta-alici-pangrattato-broccoli",
+    "title": "Pasta con alici, broccoli e pangrattato",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍝",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "pesce azzurro"
+    ],
+    "ingredients": [
+      {
+        "name": "Spaghetti",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Alici sott'olio",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tostate il pangrattato in una padella asciutta con un filo d'olio finché diventa dorato, poi mettetelo da parte.",
+      "Lessate i broccoli a cimette nell'acqua della pasta per cinque minuti e scolateli.",
+      "In una padella scaldate l'olio con aglio e peperoncino, sciogliete le alici a fuoco basso e unite i broccoli schiacciati.",
+      "Cuocete gli spaghetti nella stessa acqua e scolateli al dente.",
+      "Saltateli in padella con un po' d'acqua di cottura e serviteli con il pangrattato croccante."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-salmone-forno-patate-zucchine",
+    "title": "Salmone al forno con patate e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pesce",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 180,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Filetto di salmone",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aneto o prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il forno a 200 gradi e tagliate patate e zucchine a rondelle sottili.",
+      "Disponetele in una teglia, conditele con olio e sale e infornate per quindici minuti.",
+      "Adagiate il salmone sopra le verdure, irrorate con il limone e cospargete di erbe aromatiche.",
+      "Cuocete ancora dodici minuti, finché il pesce si sfalda facilmente.",
+      "Servite subito con una fettina di limone."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-wrap-tonno-hummus-rucola",
+    "title": "Wrap di tonno, hummus e rucola",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🌯",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina o tortilla",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Tonno sgocciolato",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Hummus",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sgocciolate il tonno e conditelo con il limone.",
+      "Scaldate brevemente la piadina in padella e spalmatela con l'hummus.",
+      "Distribuite rucola, pomodoro a fettine e tonno.",
+      "Chiudete il wrap stringendo bene e tagliatelo a metà.",
+      "Avvolgetelo in carta forno per portarlo con voi."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-merluzzo-pomodorini-cous-cous",
+    "title": "Merluzzo ai pomodorini con cous cous",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pesce",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Filetto di merluzzo",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive taggiasche",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Capperi",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate l'olio con l'aglio in una padella e aggiungete i pomodorini tagliati a metà.",
+      "Cuocete due minuti, unite olive e capperi e lasciate che i pomodorini rilascino il loro succo.",
+      "Adagiate il merluzzo nel sugo, coprite e cuocete a fuoco dolce per otto minuti, girandolo con delicatezza.",
+      "Preparate il cous cous versandovi acqua bollente salata pari al suo peso, coprendo per cinque minuti e sgranandolo.",
+      "Servite il merluzzo con il suo sugo, il cous cous e il prezzemolo tritato."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-gamberi-zucchine-spaghetti",
+    "title": "Spaghetti con gamberi e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍤",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "frutti di mare"
+    ],
+    "ingredients": [
+      {
+        "name": "Spaghetti",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Gamberi sgusciati",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 20,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Grattugiate le zucchine con la grattugia a fori larghi oppure tagliatele a julienne.",
+      "Rosolate l'aglio nell'olio, aggiungete i gamberi e cuoceteli due minuti per lato; sfumate con il vino e toglieteli dalla padella.",
+      "Nello stesso fondo cuocete le zucchine per quattro minuti con un pizzico di sale.",
+      "Cuocete gli spaghetti, scolateli al dente e saltateli con le zucchine.",
+      "Rimettete i gamberi, mescolate con il prezzemolo e servite."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-insalata-farro-salmone-affumicato",
+    "title": "Insalata di farro con salmone affumicato e finocchi",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥗",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "insalata di cereali",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Finocchio",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Arancia",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete il farro in acqua salata, scolatelo e lasciatelo raffreddare.",
+      "Affettate il finocchio molto sottile e mettetelo in acqua fredda per qualche minuto per renderlo croccante.",
+      "Pelate l'arancia al vivo e tagliatela a pezzetti.",
+      "Emulsionate olio, limone, sale e pepe.",
+      "Mescolate farro, finocchio scolato e arancia, condite e completate con il salmone a striscioline."
+    ],
+    "source": null,
+    "notes": "Aggiungete il salmone al momento di mangiare se l'insalata resta in frigo a lungo."
+  },
+  {
+    "id": "pranzo-frittata-tonno-patate-spinaci",
+    "title": "Frittata di tonno e patate con insalata",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍳",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "da portare via"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 150,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Tonno sgocciolato",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate le patate, pelatele e tagliatele a cubetti.",
+      "Appassite la cipolla tritata nell'olio, poi unite le patate e rosolatele per tre minuti.",
+      "Sbattete le uova con il sale e mescolatevi il tonno sgranato.",
+      "Versate le uova nella padella con le patate e cuocete a fuoco basso con il coperchio per sei minuti, poi giratela e finite la cottura.",
+      "Servitela tiepida o fredda con l'insalata condita con un filo d'olio."
+    ],
+    "source": null
+  }
+]

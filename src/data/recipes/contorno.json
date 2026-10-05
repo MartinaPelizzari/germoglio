@@ -1,0 +1,1025 @@
+[
+  {
+    "id": "contorno-zucchine-trifolate",
+    "title": "Zucchine trifolate",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥒",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava le zucchine, eliminane le estremità e tagliale a rondelle o a mezzelune sottili.",
+      "Scalda l'olio in una padella ampia con lo spicchio d'aglio schiacciato e fallo profumare per un minuto.",
+      "Aggiungi le zucchine e cuocile a fiamma vivace, mescolando spesso, per 8-10 minuti, finché sono dorate ma ancora sode.",
+      "Elimina l'aglio, sala a fine cottura e completa con prezzemolo tritato."
+    ],
+    "source": null,
+    "notes": "Salare alla fine evita che le zucchine rilascino troppa acqua."
+  },
+  {
+    "id": "contorno-broccoli-ripassati",
+    "title": "Broccoli ripassati in padella",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "peperoncino"
+    ],
+    "ingredients": [
+      {
+        "name": "Broccoli",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividi i broccoli in cimette e lessali in acqua salata per 5-6 minuti, poi scolali bene.",
+      "In una padella scalda l'olio con l'aglio e un pizzico di peperoncino.",
+      "Aggiungi i broccoli e ripassali per 5 minuti a fuoco medio, schiacciandone alcuni con la forchetta in modo che si insaporiscano.",
+      "Assaggia, regola di sale e servi caldi."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-spinaci-agro",
+    "title": "Spinaci all'agro",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "limone",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Spinaci freschi",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava gli spinaci in più acque e scolali senza strizzarli.",
+      "Cuocili in una pentola con l'acqua rimasta sulle foglie, a coperchio chiuso, per 4-5 minuti.",
+      "Scolali, lasciali intiepidire e strizzali leggermente.",
+      "Condiscili con olio, succo di limone e sale, mescolando bene prima di servire."
+    ],
+    "source": null,
+    "notes": "Ottimi anche freddi, il giorno dopo."
+  },
+  {
+    "id": "contorno-carote-forno-spezie",
+    "title": "Carote al forno con spezie",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "autunno",
+      "forno",
+      "spezie"
+    ],
+    "ingredients": [
+      {
+        "name": "Carote",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Pela le carote e tagliale a bastoncini o per il lungo, in pezzi di dimensione simile.",
+      "Mescolale in una ciotola con olio, cumino, paprika e sale, poi stendile su una teglia con carta forno senza sovrapporle.",
+      "Cuoci per 30 minuti circa, girandole a metà, finché i bordi sono caramellati e la polpa è tenera."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-peperoni-padella",
+    "title": "Peperoni in padella",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🫑",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "colorato"
+    ],
+    "ingredients": [
+      {
+        "name": "Peperoni misti",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina picciolo, semi e filamenti dai peperoni e tagliali a strisce larghe.",
+      "Affetta la cipolla e falla appassire nell’olio per 3 minuti.",
+      "Unisci i peperoni, copri e cuoci a fuoco medio per 20-25 minuti, mescolando ogni tanto e aggiungendo un cucchiaio d’acqua se si asciugano troppo.",
+      "Sala, profuma con origano e servi tiepidi o a temperatura ambiente."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-finocchi-gratinati-vegani",
+    "title": "Finocchi gratinati vegani",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "forno",
+      "gratin"
+    ],
+    "ingredients": [
+      {
+        "name": "Finocchi",
+        "qty": 300,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi. Pulisci i finocchi, tagliali a spicchi e lessali per 8 minuti in acqua salata, poi scolali.",
+      "Mescola il pangrattato con il lievito alimentare, la curcuma, un pizzico di sale e metà dell’olio fino a ottenere un composto sabbioso.",
+      "Disponi i finocchi in una pirofila unta e distribuisci il composto sulla superficie.",
+      "Irrora con l'olio rimasto e cuoci per 20-25 minuti, finché la copertura è dorata e croccante."
+    ],
+    "source": {
+      "name": "greenMe",
+      "url": "https://www.greenme.it/salute-e-alimentazione/ricette/finocchi-gratinati-curcuma-vegan/"
+    },
+    "notes": "Per una crosta più ricca aggiungi un cucchiaio di mandorle tritate."
+  },
+  {
+    "id": "contorno-cavolfiore-arrosto",
+    "title": "Cavolfiore arrosto",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolfiore",
+        "qty": 300,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika affumicata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 220 gradi.",
+      "Dividi il cavolfiore in cimette di medie dimensioni e asciugale bene.",
+      "Condiscile con olio, paprika e sale e distribuiscile su una teglia, ben distanziate.",
+      "Cuoci per 25-30 minuti girandole una volta, finché sono dorate ai bordi.",
+      "Spremi qualche goccia di limone sopra e servi subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-insalata-mista-semi",
+    "title": "Insalata mista con semi",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "veloce",
+      "semi"
+    ],
+    "ingredients": [
+      {
+        "name": "Insalata mista",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di mele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava e asciuga bene le foglie di insalata.",
+      "Taglia i pomodori a spicchi e grattugia la carota a julienne.",
+      "Tosta i semi in un padellino asciutto per un paio di minuti, finché profumano.",
+      "Condisci con olio, aceto e sale, mescola e cospargi i semi tostati."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-insalata-cavolo-cappuccio-mela",
+    "title": "Insalata di cavolo cappuccio e mela",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍏",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "autunno",
+      "croccante"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolo cappuccio",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mela",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Senape",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affetta il cavolo cappuccio il più sottile possibile e massaggialo per un minuto con un pizzico di sale per ammorbidirlo.",
+      "Taglia la mela a bastoncini e irrorala subito con un po’ di limone perché non annerisca.",
+      "Prepara la salsa emulsionando olio, limone rimasto e senape.",
+      "Unisci cavolo, mela e noci spezzettate, condisci e lascia riposare 10 minuti prima di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-pomodori-ripieni-leggeri",
+    "title": "Pomodori ripieni leggeri",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍅",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "forno",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pomodori tondi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "carb"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 0.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi. Taglia la calotta ai pomodori e svuotali con un cucchiaino, lasciando le pareti intatte.",
+      "Tritaci la polpa e mescolala con ricotta, pangrattato, basilico spezzettato e un pizzico di sale.",
+      "Sala leggermente l’interno dei pomodori e riempili con il composto.",
+      "Sistemali in una pirofila, completa con un filo d’olio e cuoci per 30-35 minuti."
+    ],
+    "source": null,
+    "notes": "Per la versione vegana usa tofu sbriciolato al posto della ricotta."
+  },
+  {
+    "id": "contorno-melanzane-forno",
+    "title": "Melanzane al forno",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Aglio in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Taglia le melanzane a fette spesse circa un centimetro o a tocchetti.",
+      "Condiscile con olio, origano, aglio in polvere e sale, mescolando bene perché assorbano il condimento.",
+      "Distribuiscile su una teglia con carta forno e cuoci per 30 minuti, girandole a metà, finché sono morbide e dorate."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-fagiolini-aglio",
+    "title": "Fagiolini all'aglio",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🫛",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagiolini",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i fagiolini eliminando le punte e lessali in acqua salata per 8-10 minuti.",
+      "Scolali e tienili da parte.",
+      "Scalda l'olio con l'aglio a fettine in una padella, senza farlo scurire.",
+      "Unisci i fagiolini, salta per 3-4 minuti e finisci con prezzemolo tritato."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-bietole-ripassate",
+    "title": "Bietole ripassate",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "verdure a foglia"
+    ],
+    "ingredients": [
+      {
+        "name": "Bietole",
+        "qty": 300,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava le bietole, separa le coste dalle foglie e taglia le coste a pezzetti.",
+      "Lessa prima le coste per 5 minuti, poi aggiungi le foglie per altri 3 minuti.",
+      "Scolale e strizzale leggermente.",
+      "Ripassale in padella con olio, aglio e un pizzico di peperoncino per 4-5 minuti, regolando di sale."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-patate-forno",
+    "title": "Patate al forno",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🥔",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "forno",
+      "rosmarino"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Lava le patate e tagliale a tocchetti, con la buccia se sono novelle o ben spazzolate.",
+      "Mescolale con olio, rosmarino tritato, aglio in camicia e sale.",
+      "Disponile su una teglia in un solo strato e cuoci per 40-45 minuti, girandole due volte, finché sono croccanti fuori e morbide dentro."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-pure-zucca",
+    "title": "Purè di zucca",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🎃",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "autunno",
+      "cremoso"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucca",
+        "qty": 300,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina buccia e semi della zucca e tagliala a cubetti.",
+      "Cuocila a vapore o in poca acqua salata per 15-20 minuti, finché si schiaccia senza fatica.",
+      "Scolala bene e passala con lo schiacciapatate o un frullatore a immersione.",
+      "Incorpora olio, un pizzico di noce moscata e sale, mescolando fino a una crema liscia.",
+      "Servi caldo con qualche ago di rosmarino."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-verdure-grigliate",
+    "title": "Verdure grigliate",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "griglia"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto balsamico",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia zucchine e melanzane a fette nel senso della lunghezza e i peperoni a falde larghe.",
+      "Scalda bene una piastra o una griglia.",
+      "Cuoci le verdure per 3-4 minuti per lato, finché compaiono i segni della griglia e sono tenere.",
+      "Condiscile ancora calde con olio, aceto balsamico, origano e sale."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-radicchio-padella",
+    "title": "Radicchio in padella",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "amarognolo"
+    ],
+    "ingredients": [
+      {
+        "name": "Radicchio",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto balsamico",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il radicchio a spicchi o a listarelle, secondo la varietà.",
+      "Soffriggi la cipolla affettata sottile nell’olio per 3 minuti.",
+      "Aggiungi il radicchio e cuoci a fuoco vivace per 8 minuti, mescolando.",
+      "Sfuma con l’aceto balsamico, sala e lascia evaporare per un minuto."
+    ],
+    "source": null,
+    "notes": "L’aceto bilancia il gusto amarognolo."
+  },
+  {
+    "id": "contorno-asparagi-uovo-sodo",
+    "title": "Asparagi con uovo sodo",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌱",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "primavera",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Asparagi",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai sodo l’uovo in acqua bollente per 9 minuti, poi raffreddalo e sgusciarlo.",
+      "Elimina la parte legnosa degli asparagi e lessali in acqua salata per 6-8 minuti, a seconda dello spessore.",
+      "Scolali e disponili su un piatto.",
+      "Schiaccia l’uovo con la forchetta insieme a olio, limone, sale e pepe e distribuiscilo sugli asparagi."
+    ],
+    "source": null
+  }
+]

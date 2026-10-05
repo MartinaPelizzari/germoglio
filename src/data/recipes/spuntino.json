@@ -1,0 +1,669 @@
+[
+  {
+    "id": "spuntino-hummus-bastoncini-verdura",
+    "title": "Hummus con bastoncini di verdura",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Carota",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frullare i ceci con tahina, limone, aglio, sale e due cucchiai di acqua fredda fino a ottenere una crema liscia.",
+      "Assaggia e regola di sale e limone.",
+      "Pela la carota e taglia carota, sedano e cetriolo a bastoncini.",
+      "Servi l'hummus in una ciotolina circondato dalle verdure."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-energy-balls-datteri-cocco",
+    "title": "Energy balls datteri e cocco",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🟤",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "energy balls",
+      "frutta secca"
+    ],
+    "ingredients": [
+      {
+        "name": "Datteri",
+        "qty": 40,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cocco rapè",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Se i datteri sono duri, ammollali in acqua calda per 10 minuti e scolali.",
+      "Trita le mandorle nel mixer, poi aggiungi datteri, fiocchi d'avena e cacao e frulla fino a ottenere un impasto che si compatta.",
+      "Forma tre o quattro palline con le mani leggermente umide.",
+      "Rotolale nel cocco rapè e tienile in frigo fino al momento di mangiarle."
+    ],
+    "source": null,
+    "notes": "Si conservano in frigorifero fino a una settimana."
+  },
+  {
+    "id": "spuntino-mela-cannella",
+    "title": "Mela e cannella",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍎",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "frutta",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava la mela e tagliala a spicchi, eliminando il torsolo.",
+      "Irrora con il limone per evitare che scurisca.",
+      "Cospargi con la cannella e mescola delicatamente."
+    ],
+    "source": null,
+    "notes": "Per una versione calda, scalda gli spicchi 1 minuto al microonde."
+  },
+  {
+    "id": "spuntino-banana-burro-mandorle",
+    "title": "Banana e burro di mandorle",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍌",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "frutta",
+      "frutta secca"
+    ],
+    "ingredients": [
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Burro di mandorle",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di chia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Sbuccia la banana e tagliala a rondelle spesse.",
+      "Spalma un po' di burro di mandorle su ogni rondella.",
+      "Cospargi con i semi di chia."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-barrette-avena-datteri",
+    "title": "Barrette di avena, datteri e noci",
+    "category": "Spuntino",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍫",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "barrette",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Datteri",
+        "qty": 40,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di avena",
+        "qty": 20,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi.",
+      "Frulla i datteri con il latte di avena fino a ottenere una pasta densa.",
+      "Mescola la pasta con i fiocchi d'avena, le noci tritate e la cannella.",
+      "Stendi l'impasto in una teglia rivestita di carta forno, spesso circa un centimetro, e cuoci 25 minuti.",
+      "Lascia raffreddare completamente e taglia a barrette."
+    ],
+    "source": null,
+    "notes": "Le dosi sono per una porzione: conviene prepararne una teglia intera e conservarle in una scatola."
+  },
+  {
+    "id": "spuntino-pudding-chia-cocco-mango",
+    "title": "Pudding di chia al cocco con mango",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥥",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "da preparare prima"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 25,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Mango",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola i semi di chia con il latte di cocco e lo sciroppo d'acero in un bicchiere.",
+      "Dopo 5 minuti mescola di nuovo per evitare i grumi.",
+      "Lascia riposare in frigo almeno 3 ore, finché si addensa.",
+      "Servi con il mango a cubetti."
+    ],
+    "source": null,
+    "notes": "Il tempo indicato è la preparazione, il riposo in frigo si aggiunge."
+  },
+  {
+    "id": "spuntino-yogurt-soia-frutta",
+    "title": "Yogurt di soia con pesca e mandorle",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍑",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "yogurt",
+      "frutta"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 150,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Pesca",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Lava la pesca e tagliala a cubetti.",
+      "Versa lo yogurt in una ciotola e aggiungi la frutta.",
+      "Completa con le mandorle a lamelle o tritate."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-crostini-crema-avocado",
+    "title": "Crostini con crema di avocado e semi",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥑",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "crostini",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il pane a fettine e tostale in forno o in padella.",
+      "Schiaccia l'avocado con limone, sale e pepe.",
+      "Spalma la crema sui crostini e cospargi con i semi di zucca."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-popcorn-speziati-paprika",
+    "title": "Popcorn speziati alla paprika",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍿",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "salato",
+      "croccante"
+    ],
+    "ingredients": [
+      {
+        "name": "Mais per popcorn",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda una pentola con coperchio con l'olio e due chicchi di mais.",
+      "Quando scoppiano, versa il resto del mais, copri e scuoti la pentola di tanto in tanto.",
+      "Togli dal fuoco quando gli scoppi si diradano.",
+      "Condisci con paprika, lievito alimentare e sale e mescola bene."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-cioccolato-fondente-noci",
+    "title": "Cioccolato fondente e noci",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍫",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cioccolato",
+      "frutta secca"
+    ],
+    "ingredients": [
+      {
+        "name": "Cioccolato fondente 70%",
+        "qty": 20,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Spezza il cioccolato in quadretti.",
+      "Servilo insieme alle noci, da gustare un pezzetto alternato all'altro."
+    ],
+    "source": null,
+    "notes": "Verifica in etichetta che il fondente non contenga latte."
+  },
+  {
+    "id": "spuntino-arancia-melograno",
+    "title": "Arancia e melograno",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍊",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "frutta",
+      "fresco"
+    ],
+    "ingredients": [
+      {
+        "name": "Arancia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Melograno",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Menta fresca",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbuccia l'arancia al vivo e tagliala a rondelle.",
+      "Sgrana il melograno.",
+      "Disponi le rondelle in un piatto, cospargi con i chicchi e decora con qualche foglia di menta."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-mix-frutta-secca-uvetta",
+    "title": "Mix di frutta secca e uvetta",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥜",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "frutta secca",
+      "senza cottura"
+    ],
+    "ingredients": [
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 15,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Pesa la frutta secca e mescolala con l'uvetta in una ciotola.",
+      "Porta con te in un contenitore piccolo oppure mangia subito."
+    ],
+    "source": null,
+    "notes": "Scegli frutta secca non salata e non tostata con zuccheri aggiunti."
+  },
+  {
+    "id": "spuntino-yogurt-greco-miele-mandorle",
+    "title": "Yogurt greco con miele e mandorle",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍯",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "yogurt",
+      "proteico"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Versa lo yogurt in una coppetta.",
+      "Trita grossolanamente le mandorle.",
+      "Completa con le mandorle e un filo di miele."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-crostini-ricotta-fichi",
+    "title": "Crostini con ricotta e fichi",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🧀",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "crostini",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Fichi freschi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le fette di pane.",
+      "Spalma la ricotta sui crostini.",
+      "Taglia i fichi a spicchi e adagiali sopra.",
+      "Finisci con un filo di miele."
+    ],
+    "source": null
+  }
+]
