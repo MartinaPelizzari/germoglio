@@ -4,12 +4,12 @@ import { db } from '../firebase.js';
 import { SEED_RECIPES } from '../data/seed.js';
 import { addWeeks, getWeekId } from '../lib/dates.js';
 import { weeksBetween } from '../lib/usage.js';
+import { MEMBER_COLORS, MEMBER_EMOJIS } from '../lib/people.js';
 
 export const Ctx = React.createContext(null);
 export const useData = () => React.useContext(Ctx);
 
-export const MEMBER_COLORS = ['#10b981', '#f97316', '#6366f1', '#ec4899', '#eab308', '#06b6d4', '#8b5cf6', '#ef4444'];
-export const MEMBER_EMOJIS = ['🙂', '😎', '🧒', '👧', '👦', '👩', '👨', '👵', '👴', '🐻', '🦊', '🐱'];
+export { MEMBER_COLORS, MEMBER_EMOJIS };
 
 // Profilo personale: ogni account modifica solo il proprio
 export const newProfile = (uid, name, diet, index = 0) => ({
@@ -155,7 +155,7 @@ export function DataProvider({ user, children }) {
     };
   }, [uid, user, hid, household, me, recipes, recipeMap, userRecipes, prefs, favorites, pantry, plans, lastUse, memberCount]);
 
-  if (!hid) return <div className="h-[100dvh] flex items-center justify-center"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-500" /></div>;
+  if (!hid) return <div className="h-full flex items-center justify-center"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-500" /></div>;
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 

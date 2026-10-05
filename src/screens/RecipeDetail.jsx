@@ -1,7 +1,7 @@
 import React from 'react';
 import { Clock, ExternalLink, Pencil, Copy, Trash2, ChevronLeft, ShoppingCart, Heart } from 'lucide-react';
 import { useData } from '../hooks/data.jsx';
-import { Avatar, DietBadge } from '../components/ui.jsx';
+import { DietBadge, Portal, useBackClose } from '../components/ui.jsx';
 import { categoryTint, getCategoryEmoji, timeLabel } from '../lib/format.js';
 import { formatQty, mealOf, scaleRecipe, sumIngredients } from '../lib/scale.js';
 import { GROUP_LABEL, slotForCategory } from '../lib/groups.js';
@@ -10,6 +10,7 @@ import { agoLabel } from '../lib/usage.js';
 
 // context (facoltativo): { slot, eaters: [member] } quando si apre da un pasto pianificato
 export default function RecipeDetail({ recipe, context, onClose, onEdit, onDuplicate, onDelete }) {
+  useBackClose(onClose);
   const { household, favorites, toggleFavorite, lastUse } = useData();
   const fav = favorites.has(recipe.id);
   const allergens = [...recipeAllergens(recipe)];
@@ -41,14 +42,14 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
   const modes = [{ id: context ? 'all' : 'base', label: context ? 'Tutti' : 'Base' }, ...members.map((m) => ({ id: m.id, label: m.name }))];
 
   return (
-    <div role="dialog" aria-modal="true" className="fixed inset-0 z-[60] flex justify-center">
+    <Portal><div role="dialog" aria-modal="true" className="fixed inset-0 z-[60] flex justify-center">
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
-      <div className="w-full max-w-md h-[100dvh] bg-white flex flex-col relative animate-slide-up overflow-hidden shadow-2xl">
+      <div className="w-full max-w-md h-full bg-white flex flex-col relative animate-slide-up overflow-hidden shadow-2xl">
         <div className="overflow-y-auto flex-1">
           <div className={`relative h-64 ${tint} flex items-center justify-center`}>
             {recipe.photo ? <img src={recipe.photo} alt={recipe.title} className="w-full h-full object-cover" /> : <span style={{ fontSize: '7rem' }}>{recipe.emoji || getCategoryEmoji(recipe.category)}</span>}
-            <button onClick={onClose} aria-label="Chiudi" className="absolute top-5 left-5 mt-[env(safe-area-inset-top)] p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><ChevronLeft className="w-6 h-6 text-slate-800" /></button>
-            <div className="absolute top-5 right-5 mt-[env(safe-area-inset-top)] flex gap-2">
+            <button onClick={onClose} aria-label="Chiudi" className="absolute top-5 left-5 mt-[var(--safe-top)] p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><ChevronLeft className="w-6 h-6 text-slate-800" /></button>
+            <div className="absolute top-5 right-5 mt-[var(--safe-top)] flex gap-2">
               <button onClick={() => toggleFavorite(recipe.id)} aria-label={fav ? 'Togli dai preferiti' : 'Aggiungi ai preferiti'} aria-pressed={fav} className="p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><Heart className={`w-5 h-5 ${fav ? 'fill-rose-500 text-rose-500' : 'text-slate-600'}`} /></button>
               {recipe.own ? (
                 <>
@@ -106,6 +107,6 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
           </div>
         </div>
       </div>
-    </div>
+    </div></Portal>
   );
 }

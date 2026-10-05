@@ -31,7 +31,7 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
 
   return (
     <div className="animate-fade-in">
-      <div className="sticky top-0 bg-surface-ground z-10 py-2 space-y-3 mb-3">
+      <div className="sticky top-0 -mx-4 px-4 -mt-4 pt-4 pb-2 bg-surface-ground z-10 space-y-3 mb-3">
         <div className="flex gap-2 px-1">
           <div className="relative flex-1">
             <Search className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />

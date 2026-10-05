@@ -25,7 +25,7 @@ npm install
 npm run dev
 ```
 
-Controlli: `npm run check:recipes` (valida le ricette), `node scripts/selftest.mjs` e `node scripts/selftest-features.mjs` (logica di dosi, diete, obiettivi, dispensa, assenze, ospiti), `node scripts/render-test.mjs` (rendering delle schermate).
+Controlli: `npm run check:recipes` (valida le ricette), `node scripts/selftest.mjs` e `node scripts/selftest-features.mjs` (logica di dosi, diete, obiettivi, dispensa, assenze, ospiti), `node scripts/render-test.mjs` (rendering delle schermate). Per provare la vista mobile con dati finti e le aree sicure di iPhone simulate: `npx vite --config scripts/harness/vite.config.js` e apri l'indirizzo con una finestra stretta (390 px).
 
 ## Configurazione Firebase (una volta sola)
 

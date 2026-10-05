@@ -152,9 +152,9 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         <button onClick={() => { setWeekDate(addWeeks(weekDate, 1)); setDayIndex(0); }} aria-label="Settimana successiva" className="p-2 rounded-full active:scale-90"><ChevronRight className="text-slate-400" /></button>
       </div>
 
-      <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2 px-1" role="tablist">
+      <div className="flex gap-1.5 pb-2" role="tablist">
         {DAYS.map((day, idx) => (
-          <button key={day} onClick={() => setDayIndex(idx)} role="tab" aria-selected={dayIndex === idx} className={`flex-1 min-w-[3rem] h-[4.5rem] rounded-2xl flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95 ${dayIndex === idx ? 'bg-brand-500 text-white shadow-glow' : 'bg-white text-slate-400 shadow-sm'}`}>
+          <button key={day} onClick={() => setDayIndex(idx)} role="tab" aria-selected={dayIndex === idx} className={`flex-1 min-w-0 h-[4.5rem] rounded-2xl flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95 ${dayIndex === idx ? 'bg-brand-500 text-white shadow-glow' : 'bg-white text-slate-400 shadow-sm'}`}>
             <span className="text-xs font-medium opacity-80">{day}</span>
             <span className="font-display font-bold text-lg">{dayNumber(weekDate, idx)}</span>
           </button>

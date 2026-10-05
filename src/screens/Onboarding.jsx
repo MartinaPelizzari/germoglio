@@ -10,8 +10,8 @@ export default function Onboarding({ user, index = 0, onDone }) {
     <div className="min-h-[100dvh] flex items-center justify-center px-6 bg-surface-ground pt-safe pb-safe">
       <div className="w-full max-w-sm bg-white p-6 rounded-3xl shadow-soft space-y-5 animate-fade-in">
         <div>
-          <h1 className="font-display font-extrabold text-2xl text-slate-900">Benvenuta!</h1>
-          <p className="text-sm text-slate-500 mt-1">Due domande veloci. Questo è il tuo profilo personale. Tua madre e tua sorella creano il loro con il loro account e poi vi unite nello stesso nucleo.</p>
+          <h1 className="font-display font-extrabold text-2xl text-slate-900">Ciao!</h1>
+          <p className="text-sm text-slate-500 mt-1">Per configurare il tuo profilo personale mi servono il tuo nome e la dieta che segui.</p>
         </div>
         <div>
           <label className="block text-xs font-bold text-slate-400 uppercase mb-2">Come ti chiami?</label>

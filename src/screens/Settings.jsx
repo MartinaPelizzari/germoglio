@@ -46,7 +46,7 @@ export default function Settings({ onClose }) {
         <p className="text-sm text-slate-500">Accesso come <b className="text-slate-700">{user.email}</b></p>
         <div className="bg-slate-50 rounded-2xl p-4 space-y-3">
           <h4 className="font-display font-bold text-slate-800 flex items-center gap-2"><Users className="w-5 h-5 text-brand-600" /> Nucleo condiviso</h4>
-          <p className="text-xs text-slate-500">{memberCount > 1 ? `Questo nucleo ha ${memberCount} account: vedono e modificano gli stessi menù, ricette, lista della spesa e dispensa.` : 'Per ora solo il tuo account. Invita tua madre e tua sorella per condividere menù, spesa e dispensa.'}</p>
+          <p className="text-xs text-slate-500">{memberCount > 1 ? `Questo nucleo ha ${memberCount} account: vedono e modificano gli stessi menù, ricette, lista della spesa e dispensa.` : 'Per ora solo il tuo account. Crea un codice di invito per condividere menù, spesa e dispensa con altre persone.'}</p>
           {code ? (
             <div className="bg-white rounded-xl p-3 text-center">
               <p className="font-mono text-2xl tracking-widest text-slate-800">{code}</p>

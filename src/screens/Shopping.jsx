@@ -93,7 +93,7 @@ export default function Shopping({ weekDate, setWeekDate, days, setDays, viewMod
             {showCovered && covered.map((i) => <p key={i.key} className="text-sm text-slate-400 py-1.5 flex justify-between"><span>{i.name}</span><span className="text-xs">{i.why}</span></p>)}
           </div>
         )}
-        <button onClick={() => setAdding(true)} aria-label="Aggiungi prodotto" className="fixed bottom-28 right-6 bg-brand-500 text-white p-4 rounded-full shadow-glow active:scale-90 z-10"><Plus className="w-6 h-6" /></button>
+        <button onClick={() => setAdding(true)} aria-label="Aggiungi prodotto" style={{ bottom: 'calc(5.5rem + var(--safe-bottom))' }} className="fixed right-5 bg-brand-500 text-white p-4 rounded-full shadow-glow active:scale-90 z-10"><Plus className="w-6 h-6" /></button>
       </div>
 
       {pantryOpen && <Pantry onClose={() => setPantryOpen(false)} />}

@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 html, body, #root { height: 100%; }
+#root { height: 100dvh; }
 body {
   font-family: 'Inter Variable', Inter, sans-serif;
   background-color: #fafafa;
@@ -16,6 +17,8 @@ h1, h2, h3, h4, .font-display { font-family: 'Outfit Variable', Outfit, sans-ser
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 .glass { background: rgba(255,255,255,.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,.05); }
 .glass-nav { background: rgba(255,255,255,.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(0,0,0,.05); }
-.pt-safe { padding-top: env(safe-area-inset-top); }
-.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+/* Aree sicure di iPhone (notch in alto, barra Home in basso). Le variabili permettono di simularle nei test. */
+:root { --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px); }
+.pt-safe { padding-top: var(--safe-top); }
+.pb-safe { padding-bottom: var(--safe-bottom); }
 input, select, textarea { font-size: 16px; } /* evita lo zoom automatico su iPhone */

@@ -1,6 +1,19 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 import { getCategoryEmoji, categoryTint } from '../lib/format.js';
+import { pushOverlay } from '../lib/backstack.js';
+
+// Le schermate sovrapposte vanno disegnate a livello della pagina intera: dentro la pagina le animazioni creano
+// livelli che le farebbero finire sotto intestazione e barra di navigazione.
+export const Portal = ({ children }) => (typeof document === 'undefined' ? children : createPortal(children, document.body));
+
+// Chiude la schermata con il gesto indietro del telefono
+export const useBackClose = (onClose) => {
+  const ref = React.useRef(onClose);
+  ref.current = onClose;
+  React.useEffect(() => pushOverlay(() => ref.current()), []);
+};
 
 export const Spinner = () => (
   <div className="flex justify-center items-center h-full py-10">
@@ -10,13 +23,14 @@ export const Spinner = () => (
 
 // Pannello a comparsa dal basso con scroll interno e blocco dello scroll della pagina
 export function Sheet({ title, onClose, children, full = false, z = 70 }) {
+  useBackClose(onClose);
   React.useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = prev; };
   }, []);
   return (
-    <div role="dialog" aria-modal="true" className="fixed inset-0 flex items-end justify-center sm:items-center" style={{ zIndex: z }}>
+    <Portal><div role="dialog" aria-modal="true" className="fixed inset-0 flex items-end justify-center sm:items-center" style={{ zIndex: z }}>
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-fade-in" onClick={onClose} />
       <div className={`bg-white w-full max-w-md ${full ? 'h-[92dvh]' : 'max-h-[88dvh]'} rounded-t-[32px] sm:rounded-3xl flex flex-col shadow-2xl animate-slide-up overflow-hidden relative`}>
         <div className="p-5 flex items-center justify-between border-b border-slate-100 shrink-0">
@@ -25,13 +39,14 @@ export function Sheet({ title, onClose, children, full = false, z = 70 }) {
         </div>
         <div className="overflow-y-auto flex-1 pb-safe">{children}</div>
       </div>
-    </div>
+    </div></Portal>
   );
 }
 
 export function Confirm({ title, msg, confirmLabel = 'Sì', onConfirm, onCancel }) {
+  useBackClose(onCancel);
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in" onClick={onCancel}>
+    <Portal><div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in" onClick={onCancel}>
       <div className="bg-white w-full max-w-xs rounded-3xl p-6 shadow-2xl animate-scale-in" onClick={(e) => e.stopPropagation()}>
         <h3 className="font-display font-bold text-xl text-slate-900 mb-2">{title}</h3>
         {msg && <p className="text-sm text-slate-500 mb-6 leading-relaxed">{msg}</p>}
@@ -40,7 +55,7 @@ export function Confirm({ title, msg, confirmLabel = 'Sì', onConfirm, onCancel 
           <button onClick={onConfirm} className="flex-1 py-3 bg-red-500 text-white font-bold rounded-xl active:scale-95">{confirmLabel}</button>
         </div>
       </div>
-    </div>
+    </div></Portal>
   );
 }
 

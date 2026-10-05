@@ -13,6 +13,7 @@ import Shopping from './screens/Shopping.jsx';
 import Family from './screens/Family.jsx';
 import Settings from './screens/Settings.jsx';
 import { todayIndex } from './lib/dates.js';
+import { pushTabState, setTabBackHandler } from './lib/backstack.js';
 
 const NavBtn = ({ icon: Icon, label, active, onClick }) => (
   <button onClick={onClick} aria-label={label} className={`flex flex-col items-center justify-center w-16 active:scale-90 transition-all ${active ? 'text-brand-600' : 'text-slate-400'}`}>
@@ -31,9 +32,11 @@ function ViewSwitch({ value, onChange }) {
   return <div className="flex bg-slate-100 p-1 rounded-xl mb-4" role="group" aria-label="Vista">{opt('family', 'Famiglia', Users)}{opt('me', 'Solo io', User)}</div>;
 }
 
-function Main() {
+export function Main() {
   const { household, me, memberCount, saveProfile, saveRecipe, deleteRecipe, user } = useData();
-  const [tab, setTab] = React.useState('planner');
+  const [tab, setTabState] = React.useState('planner');
+  const tabRef = React.useRef('planner');
+  const tabHist = React.useRef([]);
   const [weekDate, setWeekDate] = React.useState(new Date());
   const [dayIndex, setDayIndex] = React.useState(todayIndex());
   const [shopDays, setShopDays] = React.useState([0, 1, 2, 3, 4, 5, 6]);
@@ -44,10 +47,25 @@ function Main() {
   const [viewMode, setViewMode] = React.useState(loadView);
   const scrollRef = React.useRef(null);
 
+  // Ogni cambio di scheda entra nella cronologia, così il gesto indietro torna alla scheda precedente
+  const setTab = (t) => {
+    if (t === tabRef.current) return;
+    tabHist.current.push(tabRef.current);
+    pushTabState();
+    tabRef.current = t;
+    setTabState(t);
+  };
+  React.useEffect(() => {
+    setTabBackHandler(() => {
+      const prev = tabHist.current.pop();
+      if (prev) { tabRef.current = prev; setTabState(prev); }
+    });
+    return () => setTabBackHandler(null);
+  }, []);
   React.useEffect(() => { scrollRef.current?.scrollTo(0, 0); }, [tab]);
   const changeView = (v) => { setViewMode(v); try { localStorage.setItem('viewMode', v); } catch { /* ignora */ } };
 
-  if (household === undefined) return <div className="h-[100dvh] flex items-center justify-center"><Spinner /></div>;
+  if (household === undefined) return <div className="h-full flex items-center justify-center"><Spinner /></div>;
   if (!me) return <Onboarding user={user} index={household.members.length} onDone={saveProfile} />;
 
   const edit = (r) => { setDraft(toDraft(r)); setTab('add'); };
@@ -68,13 +86,15 @@ function Main() {
   const shared = memberCount > 1 || household.members.length > 1;
 
   return (
-    <div className="h-[100dvh] w-full flex flex-col bg-surface-ground text-slate-800 overflow-hidden">
-      <header className="glass fixed top-0 w-full z-20 px-5 flex justify-between items-center pt-safe" style={{ height: 'calc(4rem + env(safe-area-inset-top))' }}>
-        <div className="flex items-center gap-2"><div className="bg-brand-100 p-2 rounded-xl text-brand-600"><Leaf className="w-5 h-5" /></div><h1 className="font-display font-bold text-xl text-slate-900 tracking-tight">Germoglio</h1></div>
-        <button onClick={() => setSettings(true)} aria-label="Impostazioni" className="p-2.5 rounded-full text-slate-500 active:scale-90"><SettingsIcon className="w-5 h-5" /></button>
+    <div className="h-full w-full flex flex-col bg-surface-ground text-slate-800 overflow-hidden">
+      <header className="glass shrink-0 z-20 px-5 pt-safe">
+        <div className="h-14 flex justify-between items-center">
+          <div className="flex items-center gap-2"><div className="bg-brand-100 p-2 rounded-xl text-brand-600"><Leaf className="w-5 h-5" /></div><h1 className="font-display font-bold text-xl text-slate-900 tracking-tight">Germoglio</h1></div>
+          <button onClick={() => setSettings(true)} aria-label="Impostazioni" className="p-2.5 -mr-2 rounded-full text-slate-500 active:scale-90"><SettingsIcon className="w-5 h-5" /></button>
+        </div>
       </header>
 
-      <main ref={scrollRef} className="flex-1 overflow-y-auto overflow-x-hidden px-4 pb-32" style={{ paddingTop: 'calc(5.5rem + env(safe-area-inset-top))' }}>
+      <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden px-4 pt-4 pb-10" style={{ overscrollBehaviorY: 'contain', WebkitOverflowScrolling: 'touch' }}>
         <div className="max-w-md mx-auto min-h-full" key={tab}>
           {(tab === 'planner' || tab === 'shopping') && shared && <ViewSwitch value={viewMode} onChange={changeView} />}
           {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} viewMode={shared ? viewMode : 'family'} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
@@ -85,11 +105,11 @@ function Main() {
         </div>
       </main>
 
-      <nav className="glass-nav fixed bottom-0 w-full z-30 pb-safe">
-        <div className="flex justify-around items-center px-2 pt-3 pb-5 max-w-md mx-auto">
+      <nav className="glass-nav shrink-0 z-30 pb-safe">
+        <div className="flex justify-around items-end px-2 pt-2 pb-1 max-w-md mx-auto">
           <NavBtn icon={Calendar} label="Planner" active={tab === 'planner'} onClick={() => setTab('planner')} />
           <NavBtn icon={BookOpen} label="Ricette" active={tab === 'recipes'} onClick={() => setTab('recipes')} />
-          <button onClick={() => setTab('add')} aria-label="Aggiungi ricetta" className="relative -top-6 bg-brand-500 text-white rounded-2xl p-4 shadow-glow active:scale-95"><Plus className="w-7 h-7" /></button>
+          <button onClick={() => setTab('add')} aria-label="Aggiungi ricetta" className="relative -top-4 bg-brand-500 text-white rounded-2xl p-3.5 shadow-glow active:scale-95"><Plus className="w-6 h-6" /></button>
           <NavBtn icon={ShoppingCart} label="Spesa" active={tab === 'shopping'} onClick={() => setTab('shopping')} />
           <NavBtn icon={Users} label="Famiglia" active={tab === 'family'} onClick={() => setTab('family')} />
         </div>
@@ -104,7 +124,7 @@ function Main() {
 export default function App() {
   const [user, setUser] = React.useState(undefined);
   React.useEffect(() => onAuthStateChanged(auth, setUser), []);
-  if (user === undefined) return <div className="h-[100dvh] flex items-center justify-center"><Spinner /></div>;
+  if (user === undefined) return <div className="h-full flex items-center justify-center"><Spinner /></div>;
   if (!user) return <AuthScreen />;
   return <DataProvider user={user}><Main /></DataProvider>;
 }
