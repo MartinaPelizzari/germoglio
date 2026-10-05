@@ -3,7 +3,7 @@ import { kindFits, recipeKind, slotKind } from './meals.js';
 import { fits, mealConstraints, menuClusters, memberLevel, recipeLevel, rulesFor } from './diet.js';
 import { recipeFoods } from './goals.js';
 import { recencyPenalty } from './usage.js';
-import { coveredGroupIndexes, describeOption, foodDiet, optionMatches, planMatches } from './dietPlan.js';
+import { describeOption, foodDiet, planMatches, planViolations } from './dietPlan.js';
 import { recipeAllergens } from './allergens.js';
 import { containsAvoided } from './diet.js';
 import { resolveItem } from './items.js';
@@ -79,31 +79,21 @@ const goalBonus = (recipe, eaters, state) => {
   return bonus;
 };
 
-// Ingredienti sostanziosi (proteine, latticini) che il piano di quel pasto non prevede: es. legumi a pranzo se il piano
-// a pranzo prevede solo cereali e verdure. È un malus, non un divieto.
-const excess = (recipe, eaters, slot) => {
-  let n = 0;
-  for (const e of eaters) {
-    const plan = mealOf(e, slot).plan;
-    if (!plan.length) continue;
-    for (const ing of recipe.ingredients || []) {
-      if (!['protein', 'dairy'].includes(ing.group) || (['g', 'ml'].includes(ing.unit) ? ing.qty < 25 : ing.unit !== 'pz' || ing.qty < 1)) continue;
-      if (!plan.some((g) => g.options.some((o) => optionMatches(o, ing)))) n++;
-    }
-  }
-  return eaters.length ? n / eaters.length : 0;
-};
+// Una ricetta va bene per chi ha un piano solo se non contiene ingredienti sostanziosi che quel pasto non prevede
+const withinPlan = (recipe, eaters, slot) => eaters.every((e) => planViolations(recipe, mealOf(e, slot).plan).length === 0);
 
 const baseScore = (recipe, eaters, state, preferLevel, slot) =>
-  - (state.used.get(recipe.id) || 0) * 6
+  - (state.used.get(recipe.id) || 0) * 12
   - recencyPenalty(state.recency.get(recipe.id))
   + (state.favorites.has(recipe.id) ? 5 : 0)
   + goalBonus(recipe, eaters, state)
   + (preferLevel !== undefined && recipeLevel(recipe) === preferLevel ? 8 : 0)
-  - (slot ? excess(recipe, eaters, slot) * 4 : 0)
   + Math.random() * 5;
 
-const best = (pool, scoreFn) => (pool.length ? pool.map((r) => [r, scoreFn(r)]).sort((a, b) => b[1] - a[1])[0][0] : null);
+const best = (pool, scoreFn, min = -Infinity) => {
+  const top = pool.map((r) => [r, scoreFn(r)]).sort((a, b) => b[1] - a[1])[0];
+  return top && top[1] > min ? top[0] : null;
+};
 
 // ---- un menu per un gruppo di persone con vincoli comuni
 // Con il piano scritto: sceglie ricette che coprono i gruppi del piano di ognuno, poi aggiunge alimenti semplici.
@@ -121,6 +111,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
   const pref = split ? level : undefined;
   const chosen = [];
   const items = [];
+  if (eaters.some((e) => mealOf(e, slot).plan.length)) pool = pool.filter((r) => withinPlan(r, eaters, slot));
 
   const pairs = planPairs(eaters, slot);
   if (pairs.length) {
@@ -128,7 +119,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
       const rem = uncoveredPairs(chosen, eaters, slot, state);
       if (!rem.length) break;
       const gain = (r) => rem.filter((p) => covers(r, p, slot, state)).length;
-      const pick = best(pool.filter((r) => !chosen.includes(r) && gain(r) > 0), (r) => gain(r) * 10 + baseScore(r, eaters, state, pref, slot));
+      const pick = best(pool.filter((r) => !chosen.includes(r) && gain(r) > 0), (r) => gain(r) * 10 + baseScore(r, eaters, state, pref, slot), 0);
       if (!pick) break;
       chosen.push(pick);
     }
@@ -197,7 +188,7 @@ export const generateWeek = (recipes, household, ctx = {}) => {
       if (!people.length) continue;
       const batch = Math.max(1, ...rulesFor(household, d, slot).map((r) => r.batch || 1));
       const items = [];
-      for (const cluster of menuClusters(household, d, slot, people)) {
+      for (const cluster of menuClusters(household, d, slot, people, prevData)) {
         const c = mealConstraints(household, d, slot, cluster.eaters);
         const key = `${slot}:${cluster.eaters.map((e) => e.id).sort().join(',')}`;
         const prev = carry[key];
@@ -213,7 +204,7 @@ export const generateWeek = (recipes, household, ctx = {}) => {
         registerMeal(state, menu, cluster.eaters, d, slot, recipeMap, people);
         items.push(...menu);
       }
-      if (items.length) days[d][slot] = { items, ...(prevData?.absent?.length ? { absent: prevData.absent } : {}), ...(prevData?.guests?.length ? { guests: prevData.guests } : {}) };
+      if (items.length) days[d][slot] = { items, ...(prevData?.absent?.length ? { absent: prevData.absent } : {}), ...(prevData?.guests?.length ? { guests: prevData.guests } : {}), ...(prevData?.joined && Object.keys(prevData.joined).length ? { joined: prevData.joined } : {}), ...(prevData?.mode ? { mode: prevData.mode } : {}) };
     }
   }
   return days;

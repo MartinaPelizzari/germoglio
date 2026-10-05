@@ -12,6 +12,7 @@ import RecipeForm, { emptyRecipe, fromDraft, toDraft } from './screens/RecipeFor
 import Shopping from './screens/Shopping.jsx';
 import Family from './screens/Family.jsx';
 import Settings from './screens/Settings.jsx';
+import ProfileEditor from './screens/ProfileEditor.jsx';
 import { todayIndex } from './lib/dates.js';
 import { pushTabState, setTabBackHandler } from './lib/backstack.js';
 
@@ -33,7 +34,7 @@ function ViewSwitch({ value, onChange }) {
 }
 
 export function Main() {
-  const { household, me, memberCount, saveProfile, claimProfile, saveRecipe, deleteRecipe, user } = useData();
+  const { household, me, memberCount, saveProfile, claimProfile, joinHousehold, saveRecipe, deleteRecipe, user } = useData();
   const [tab, setTabState] = React.useState('planner');
   const tabRef = React.useRef('planner');
   const tabHist = React.useRef([]);
@@ -45,7 +46,16 @@ export function Main() {
   const [confirm, setConfirm] = React.useState(null);
   const [settings, setSettings] = React.useState(false);
   const [viewMode, setViewMode] = React.useState(loadView);
+  const [joined, setJoined] = React.useState(false); // appena entrato in un nucleo con un codice
+  const [review, setReview] = React.useState(false); // dopo aver reclamato un profilo: controllo dei dati
+  const [saveError, setSaveError] = React.useState('');
   const scrollRef = React.useRef(null);
+  React.useEffect(() => {
+    let t;
+    const on = (e) => { setSaveError(e.detail); clearTimeout(t); t = setTimeout(() => setSaveError(''), 12000); };
+    window.addEventListener('germoglio-error', on);
+    return () => { window.removeEventListener('germoglio-error', on); clearTimeout(t); };
+  }, []);
 
   // Ogni cambio di scheda entra nella cronologia, così il gesto indietro torna alla scheda precedente
   const setTab = (t) => {
@@ -66,7 +76,19 @@ export function Main() {
   const changeView = (v) => { setViewMode(v); try { localStorage.setItem('viewMode', v); } catch { /* ignora */ } };
 
   if (household === undefined) return <div className="h-full flex items-center justify-center"><Spinner /></div>;
-  if (!me) return <Onboarding user={user} index={household.members.length} freeProfiles={household.members.filter(isFreeProfile)} onClaim={claimProfile} onDone={saveProfile} />;
+  if (!me) {
+    return (
+      <Onboarding
+        user={user}
+        index={household.members.length}
+        joined={joined}
+        freeProfiles={household.members.filter(isFreeProfile)}
+        onJoin={async (code) => { await joinHousehold(code); setJoined(true); }}
+        onClaim={async (id) => { await claimProfile(id); setReview(true); }}
+        onDone={saveProfile}
+      />
+    );
+  }
 
   const edit = (r) => { setDraft(toDraft(r)); setTab('add'); };
   const duplicate = (r) => { setDraft({ ...toDraft(r), id: null, own: true, source: r.source || null, title: r.title }); setTab('add'); };
@@ -115,6 +137,15 @@ export function Main() {
         </div>
       </nav>
 
+      {review && <ProfileEditor member={me} mine title="Controlla i tuoi dati" intro="Questo profilo era stato creato da qualcuno della famiglia. Controlla che nome, dieta, intolleranze e piano alimentare siano giusti e correggi quello che non torna." onChange={saveProfile} onClose={() => setReview(false)} />}
+      {saveError && (
+        <div role="alert" className="fixed left-3 right-3 z-[120] bg-red-600 text-white text-sm rounded-2xl p-4 shadow-2xl" style={{ top: 'calc(var(--safe-top) + 0.75rem)' }}>
+          <div className="flex gap-3">
+            <p className="flex-1">{saveError === 'permission-denied' ? 'Non ho il permesso di salvare. Quasi sempre vuol dire che le regole di Firebase non sono aggiornate: apri Firestore, scheda Regole, incolla il file firestore.rules e premi Pubblica.' : `Non sono riuscito a salvare (${saveError}). Controlla la connessione e riprova.`}</p>
+            <button onClick={() => setSaveError('')} aria-label="Chiudi avviso" className="font-bold shrink-0">✕</button>
+          </div>
+        </div>
+      )}
       {settings && <Settings onClose={() => setSettings(false)} />}
       {confirm && <Confirm title={confirm.title} msg={confirm.msg} onConfirm={confirm.action} onCancel={() => setConfirm(null)} />}
     </div>

@@ -13,7 +13,9 @@ export const mealOf = (member, slot) => {
   const m = member?.meals?.[slot] || {};
   // gli ospiti hanno una sola porzione (member.mult) valida per ogni pasto
   const mult = Number(m.mult) > 0 ? Number(m.mult) : Number(member?.mult) > 0 ? Number(member.mult) : 1;
-  return { eats: m.eats !== false, mult, plan: m.plan || [], planText: m.planText || '', note: m.note || '' };
+  // "Pasti che voglio vedere" del profilo: quelli non scelti non vengono pianificati né mostrati per quella persona
+  const wanted = !member?.visibleSlots || member.visibleSlots.includes(slot);
+  return { eats: m.eats !== false && wanted, mult, plan: m.plan || [], planText: m.planText || '', note: m.note || '' };
 };
 
 export const scaleRecipe = (recipe, meal) => {

@@ -8,6 +8,7 @@ import { ALLERGENS } from '../lib/allergens.js';
 import { FOOD_TYPES, GOAL_MODES } from '../lib/goals.js';
 import { parseSlotPlan } from '../lib/dietPlan.js';
 import PlanBox from '../components/PlanBox.jsx';
+import { VisibleSlots } from '../components/SlotPicker.jsx';
 import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
 import { compressImage } from '../lib/image.js';
 
@@ -27,7 +28,7 @@ function PlanImportBlock({ member, onChange }) {
   );
 }
 
-export default function ProfileEditor({ member, mine, onChange, onClaim, onDelete, onClose }) {
+export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onDelete, onClose }) {
   const [openSlot, setOpenSlot] = React.useState(null);
   const [confirm, setConfirm] = React.useState(false);
   const [photoBusy, setPhotoBusy] = React.useState(false);
@@ -51,8 +52,9 @@ export default function ProfileEditor({ member, mine, onChange, onClaim, onDelet
   const label = 'text-[10px] font-bold text-slate-400 uppercase mb-2';
 
   return (
-    <Sheet title={member.name || 'Persona'} onClose={onClose} full>
+    <Sheet title={title || member.name || 'Persona'} onClose={onClose} full>
       <div className="p-5 space-y-6">
+        {intro && <p className="text-sm text-brand-800 bg-brand-50 rounded-2xl p-4">{intro}</p>}
         {free && !mine && (
           <div className="bg-brand-50 rounded-2xl p-4 space-y-2">
             <p className="text-sm text-brand-800">Questa persona non ha un account: la modificate tutti. Se è il tuo profilo, reclamalo: da quel momento lo modifichi solo tu.</p>
@@ -81,6 +83,7 @@ export default function ProfileEditor({ member, mine, onChange, onClaim, onDelet
           <p className={label}>Dieta</p>
           <div className="grid grid-cols-2 gap-2">{DIETS.map((d) => <button key={d.id} onClick={() => onChange({ ...member, diet: d.id })} className={chip(member.diet === d.id)}>{d.label}</button>)}</div>
         </div>
+        <VisibleSlots member={member} onChange={onChange} />
         <div>
           <p className={label}>Da evitare (allergie, cibi che non mangia)</p>
           <input className="w-full p-3 bg-slate-50 rounded-xl border-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Es. glutine, arachidi, funghi (separati da virgola)" value={member.avoid || ''} onChange={(e) => onChange({ ...member, avoid: e.target.value })} aria-label="Ingredienti da evitare" />
@@ -123,7 +126,6 @@ export default function ProfileEditor({ member, mine, onChange, onClaim, onDelet
               return (
                 <div key={slot} className="border border-slate-100 rounded-2xl overflow-hidden">
                   <div className="flex items-center p-3 gap-3">
-                    <input type="checkbox" className="w-5 h-5 accent-emerald-500" checked={meal.eats} onChange={(e) => patchMeal(slot, { eats: e.target.checked })} aria-label={`Mangia a ${slot}`} />
                     <span className={`flex-1 font-bold ${meal.eats ? 'text-slate-700' : 'text-slate-300'}`}>{slot}</span>
                     {meal.eats && <span className="text-xs text-slate-400">{meal.plan.length ? `piano: ${meal.plan.length} ${meal.plan.length === 1 ? 'gruppo' : 'gruppi'}` : meal.mult !== 1 ? `x ${String(meal.mult).replace('.', ',')}` : 'standard'}</span>}
                     {meal.eats && <button onClick={() => setOpenSlot(open ? null : slot)} aria-label={`Dettagli ${slot}`} className="p-1"><ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} /></button>}

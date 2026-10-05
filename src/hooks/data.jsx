@@ -5,6 +5,7 @@ import { SEED_IDS, SEED_RECIPES } from '../data/seed.js';
 import { addWeeks, getWeekId } from '../lib/dates.js';
 import { weeksBetween } from '../lib/usage.js';
 import { MEMBER_COLORS, MEMBER_EMOJIS } from '../lib/people.js';
+import { DEFAULT_SHARED } from '../lib/diet.js';
 
 export const Ctx = React.createContext(null);
 export const useData = () => React.useContext(Ctx);
@@ -104,7 +105,7 @@ export function DataProvider({ user, children }) {
   const favorites = React.useMemo(() => new Set(prefs.favorites || []), [prefs]);
   const me = profiles?.find((p) => p.claimedBy === uid) || profiles?.find((p) => p.id === uid) || null;
   // "household" è ciò che usa tutta la logica: persone del nucleo (i profili) e regole condivise
-  const household = React.useMemo(() => (profiles ? { members: profiles, rules: settings.rules || [] } : undefined), [profiles, settings]);
+  const household = React.useMemo(() => (profiles ? { members: profiles, rules: settings.rules || [], sharedSlots: settings.sharedSlots ?? DEFAULT_SHARED } : undefined), [profiles, settings]);
 
   // recipeId -> settimane dall'ultima volta, contando fino alla settimana corrente
   const lastUse = React.useMemo(() => {
@@ -124,7 +125,8 @@ export function DataProvider({ user, children }) {
   const value = React.useMemo(() => {
     const ref = (...p) => doc(db, 'households', hid, ...p);
     const col = (...p) => collection(db, 'households', hid, ...p);
-    const log = (e) => console.error(e);
+    // Gli errori di salvataggio (es. regole di Firebase non aggiornate) si mostrano all'utente invece di restare nascosti
+    const log = (e) => { console.error(e); window.dispatchEvent(new CustomEvent('germoglio-error', { detail: e?.code || e?.message || 'errore' })); };
     return {
       uid, user, hid, household, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, lastUse, memberCount,
       // Le scritture non vengono attese: offline Firestore le mette in coda e le invia al ritorno della rete
@@ -143,7 +145,9 @@ export function DataProvider({ user, children }) {
         if (profiles.some((p) => p.id === uid)) await deleteDoc(ref('profiles', uid)).catch(log);
       },
       deleteProfile: (id) => { deleteDoc(ref('profiles', id)).catch(log); },
-      saveRules: (rules) => { setDoc(ref('settings', 'household'), { rules }).catch(log); },
+      // Impostazioni condivise del nucleo: regole e pasti condivisi
+      saveSettings: (patch) => { setDoc(ref('settings', 'household'), { ...settings, ...patch }).catch(log); },
+      saveRules: (rules) => { setDoc(ref('settings', 'household'), { ...settings, rules }).catch(log); },
       saveRecipe: (r) => {
         const { id, own, seed, overridden, ...data } = r;
         const clean = JSON.parse(JSON.stringify({ ...data, updatedAt: new Date().toISOString() }));
@@ -196,7 +200,7 @@ export function DataProvider({ user, children }) {
         await setDoc(doc(db, 'users', uid), { householdId: fresh.id });
       },
     };
-  }, [uid, user, hid, household, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, lastUse, memberCount]);
+  }, [uid, user, hid, household, settings, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, lastUse, memberCount]);
 
   if (!hid) return <div className="h-full flex items-center justify-center"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-500" /></div>;
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

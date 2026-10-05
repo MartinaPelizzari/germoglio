@@ -12,7 +12,7 @@ import { guessGroup } from './groups.js';
 import { FOOD_TYPES } from './foodTypes.js';
 
 const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
-const STOP = new Set(['di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'soffiato', 'soffiata', 'soffiati', 'basmati', 'volonta']);
+const STOP = new Set(['di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'basmati', 'volonta']);
 const stem = (t) => (t.length > 4 ? t.slice(0, -1) : t);
 const tokens = (s) => norm(s).split(' ').filter((t) => t && !STOP.has(t)).map(stem);
 
@@ -48,7 +48,7 @@ const readFrequency = (note) => {
 const readAvoid = (note) => {
   const m = note.match(/evit(?:ando|iamo|are|a|i)\s+([^.;()\[\]]+)/i);
   if (!m) return [];
-  return m[1].split(/,|\se\s|\so\s/).map((w) => norm(w).replace(/^(la|il|lo|le|gli|i|l)\s+/, '').trim()).filter((w) => w && w.split(' ').length <= 2 && w.length > 2);
+  return m[1].split(/\s(?:per|perch[eé]|in quanto)\s/)[0].split(/,|\se\s|\so\s/).map((w) => norm(w).replace(/^(la|il|lo|le|gli|i|l)\s+/, '').trim()).filter((w) => w && w.split(' ').length <= 2 && w.length > 2);
 };
 
 // "150 g yogurt", "2 fette di pane (60 g)", "yogurt 150 g [due volte a settimana]", "frutta fresca"
@@ -198,29 +198,32 @@ const GENERIC = { frutt: { group: 'fruit' }, verdur: { group: 'veg' }, ortagg: {
 const PHRASES = { 'frutta fresca': { group: 'fruit' }, 'frutta secca': { food: ['frutta-secca'] }, 'verdure cotte': { group: 'veg' }, 'cioccolato fondente': { words: ['cioccolato fondente', 'cioccolato'] } };
 const foodWords = (id) => FOOD_TYPES.find((f) => f.id === id)?.words || [];
 
-export const optionMatches = (opt, ing) => {
+// 2 = corrispondenza per parole ("pane integrale" con "Pane integrale tostato"), 1 = categoria generica ("frutta fresca"
+// con una mela, "cereali" con il riso), 0 = nessuna
+export const matchScore = (opt, ing) => {
   const name = (ing.name || '').toLowerCase();
-  if ((opt.avoid || []).some((w) => norm(name).includes(w))) return false;
+  if ((opt.avoid || []).some((w) => norm(name).includes(w))) return 0;
   const phrase = PHRASES[norm(opt.name).split(' ').slice(0, 2).join(' ')];
   if (phrase) {
     if (phrase.group) {
-      if (phrase.group === 'fruit' && norm(opt.name).startsWith('frutta fresca') && /datter|uvetta|secc|marmellat|confettur|succo|sciropp|cocco/.test(name)) return false; // la frutta fresca non è secca né in vasetto
-      return (ing.group || guessGroup(ing.name)) === phrase.group;
+      if (phrase.group === 'fruit' && norm(opt.name).startsWith('frutta fresca') && /datter|uvetta|secc|marmellat|confettur|succo|sciropp|cocco/.test(name)) return 0; // la frutta fresca non è secca né in vasetto
+      return (ing.group || guessGroup(ing.name)) === phrase.group ? 1 : 0;
     }
-    if (phrase.words) return phrase.words.some((w) => name.includes(w));
-    return phrase.food.some((f) => foodWords(f).some((w) => name.includes(w)));
+    if (phrase.words) return phrase.words.some((w) => name.includes(w)) ? 2 : 0;
+    return phrase.food.some((f) => foodWords(f).some((w) => name.includes(w))) ? 2 : 0;
   }
   const o = tokens(opt.name);
-  if (!o.length) return false;
+  if (!o.length) return 0;
   const i = tokens(ing.name);
-  if (o.every((t) => i.includes(t))) return true;
+  if (o.every((t) => i.includes(t))) return 2;
   const g = GENERIC[o[0]];
   if (o.length === 1 && g) {
-    if (g.group) return (ing.group || guessGroup(ing.name)) === g.group;
-    return g.food.some((f) => foodWords(f).some((w) => name.includes(w)));
+    if (g.group) return (ing.group || guessGroup(ing.name)) === g.group ? 1 : 0;
+    return g.food.some((f) => foodWords(f).some((w) => name.includes(w))) ? 1 : 0;
   }
-  return false;
+  return 0;
 };
+export const optionMatches = (opt, ing) => matchScore(opt, ing) > 0;
 
 const compatUnit = (a, b) => a === b || (['g', 'ml'].includes(a) && ['g', 'ml'].includes(b));
 
@@ -228,12 +231,38 @@ const compatUnit = (a, b) => a === b || (['g', 'ml'].includes(a) && ['g', 'ml'].
 export const planMatches = (recipe, groups) => {
   const used = new Set();
   return (groups || []).map((g) => {
+    let best = null;
     for (const opt of g.options) {
-      const idx = (recipe.ingredients || []).map((ing, k) => (!used.has(k) && optionMatches(opt, ing) ? k : -1)).filter((k) => k >= 0);
-      if (idx.length) { idx.forEach((k) => used.add(k)); return { option: opt, idx }; }
+      const idx = [];
+      let score = 0;
+      (recipe.ingredients || []).forEach((ing, k) => {
+        if (used.has(k)) return;
+        const sc = matchScore(opt, ing);
+        if (sc > 0) { idx.push(k); score = Math.max(score, sc); }
+      });
+      if (idx.length && (!best || score > best.score)) best = { option: opt, idx, score };
     }
-    return null;
+    if (!best) return null;
+    best.idx.forEach((k) => used.add(k));
+    return { option: best.option, idx: best.idx };
   });
+};
+
+// Ingredienti sostanziosi della ricetta che il piano di quel pasto non prevede (es. pane in uno spuntino di sola frutta).
+// Contano carboidrati, proteine, latticini, frutta e grassi in quantità importanti; verdure, spezie e condimenti no.
+const SUBSTANTIAL = { carb: 20, protein: 20, dairy: 20, fruit: 20, fat: 8, other: 8 };
+const SWEETS = /cioccolat|zucchero|miele|marmellat|confettur|sciroppo|cacao|nutella/i;
+export const planViolations = (recipe, groups) => {
+  if (!groups?.length) return [];
+  const out = [];
+  for (const ing of recipe.ingredients || []) {
+    const min = SUBSTANTIAL[ing.group];
+    if (!min || ing.unit === 'q.b.' || (ing.group === 'other' && !SWEETS.test(ing.name))) continue; // tra "altro" contano solo i dolcificanti e il cioccolato
+    const big = ['g', 'ml'].includes(ing.unit) ? ing.qty >= min : ing.unit === 'pz' && ing.qty >= (ing.group === 'fat' ? 0.5 : 1) && ['carb', 'protein', 'fruit', 'fat'].includes(ing.group);
+    if (!big) continue;
+    if (!groups.some((g) => g.options.some((o) => optionMatches(o, ing)))) out.push(ing.name);
+  }
+  return out;
 };
 
 export const coveredGroupIndexes = (recipe, groups) => planMatches(recipe, groups).map((m, gi) => (m ? gi : -1)).filter((gi) => gi >= 0);

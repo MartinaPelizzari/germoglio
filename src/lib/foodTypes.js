@@ -7,7 +7,7 @@ export const FOOD_TYPES = [
   { id: 'salumi', label: 'Salumi', words: ['prosciutto', 'pancetta', 'speck', 'bresaola', 'salame', 'mortadella', 'guanciale', 'wurstel'] },
   { id: 'uova', label: 'Uova', words: ['uova', 'uovo', 'frittata', 'omelette'] },
   { id: 'formaggi', label: 'Formaggi', words: ['formaggio', 'parmigiano', 'ricotta', 'feta', 'mozzarella', 'pecorino', 'grana', 'caprino', 'stracchino', 'mascarpone', 'scamorza', 'halloumi'] },
-  { id: 'frutta-secca', label: 'Frutta secca e semi', words: ['noci', 'mandorl', 'nocciol', 'pistacch', 'anacard', 'pinoli', 'semi di', 'arachid', 'tahin'] },
+  { id: 'frutta-secca', label: 'Frutta secca e semi', words: ['frutta secca', 'noci', 'mandorl', 'nocciol', 'pistacch', 'anacard', 'pinoli', 'semi di', 'arachid', 'tahin'] },
   { id: 'cereali-integrali', label: 'Cereali integrali', words: ['integral', 'farro', 'orzo', 'avena', 'quinoa', 'grano saraceno', 'miglio', 'riso nero', 'bulgur'] },
   { id: 'verdure-foglia', label: 'Verdure a foglia', words: ['spinaci', 'bietol', 'rucola', 'lattuga', 'insalata', 'cavolo nero', 'radicchio', 'valeriana', 'cicoria', 'cime di rapa', 'broccol'] },
 ];

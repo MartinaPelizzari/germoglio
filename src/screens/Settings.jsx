@@ -1,18 +1,30 @@
 import React from 'react';
 import { signOut } from 'firebase/auth';
-import { Copy, Download, LogOut, Upload, Users } from 'lucide-react';
+import { Check, Copy, Download, LogOut, Upload, Users } from 'lucide-react';
 import { auth } from '../firebase.js';
 import { useData } from '../hooks/data.jsx';
 import { Confirm, Sheet } from '../components/ui.jsx';
+import { VisibleSlots } from '../components/SlotPicker.jsx';
 import { convertLegacyRecipe } from '../lib/legacy.js';
 
 export default function Settings({ onClose }) {
-  const { user, userRecipes, saveRecipe, household, me, overrideIds, restoreAllSeeds, memberCount, createInvite, joinHousehold, leaveHousehold } = useData();
+  const { user, userRecipes, saveRecipe, saveProfile, household, me, overrideIds, restoreAllSeeds, memberCount, createInvite, joinHousehold, leaveHousehold } = useData();
   const [code, setCode] = React.useState('');
   const [joinCode, setJoinCode] = React.useState('');
   const [confirmJoin, setConfirmJoin] = React.useState(false);
   const [confirmLeave, setConfirmLeave] = React.useState(false);
   const [err, setErr] = React.useState('');
+  const [copied, setCopied] = React.useState(false);
+  const copyCode = async () => {
+    try { await navigator.clipboard.writeText(code); }
+    catch { // browser senza accesso agli appunti: copia dal campo selezionato
+      const t = document.createElement('textarea'); t.value = code; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); } catch { /* ignora */ }
+      t.remove();
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
   const [msg, setMsg] = React.useState('');
   const fileRef = React.useRef(null);
 
@@ -44,6 +56,7 @@ export default function Settings({ onClose }) {
     <Sheet title="Impostazioni" onClose={onClose}>
       <div className="p-5 space-y-3">
         <p className="text-sm text-slate-500">Accesso come <b className="text-slate-700">{user.email}</b></p>
+        {me && <div className="bg-slate-50 rounded-2xl p-4"><VisibleSlots member={me} onChange={saveProfile} /></div>}
         <div className="bg-slate-50 rounded-2xl p-4 space-y-3">
           <h4 className="font-display font-bold text-slate-800 flex items-center gap-2"><Users className="w-5 h-5 text-brand-600" /> Nucleo condiviso</h4>
           <p className="text-xs text-slate-500">{memberCount > 1 ? `Questo nucleo ha ${memberCount} account: vedono e modificano gli stessi menù, ricette, lista della spesa e dispensa.` : 'Per ora solo il tuo account. Crea un codice di invito per condividere menù, spesa e dispensa con altre persone.'}</p>
@@ -51,7 +64,7 @@ export default function Settings({ onClose }) {
             <div className="bg-white rounded-xl p-3 text-center">
               <p className="font-mono text-2xl tracking-widest text-slate-800">{code}</p>
               <p className="text-[11px] text-slate-400 mt-1">Vale 48 ore. Chi lo inserisce vede tutti i dati del nucleo.</p>
-              <button onClick={() => navigator.clipboard?.writeText(code)} className="mt-2 text-xs font-bold text-brand-700 flex items-center gap-1 mx-auto"><Copy className="w-3 h-3" /> Copia</button>
+              <button onClick={copyCode} aria-live="polite" className={`mt-2 px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 mx-auto active:scale-95 ${copied ? 'bg-brand-100 text-brand-700' : 'bg-slate-100 text-slate-600'}`}>{copied ? <><Check className="w-3.5 h-3.5" /> Codice copiato</> : <><Copy className="w-3.5 h-3.5" /> Copia il codice</>}</button>
             </div>
           ) : <button onClick={async () => { setErr(''); try { setCode(await createInvite()); } catch { setErr('Non riesco a creare il codice.'); } }} className="w-full py-2.5 bg-white rounded-xl text-sm font-bold text-brand-700 active:scale-95">Crea un codice d'invito</button>}
           <div className="flex gap-2">

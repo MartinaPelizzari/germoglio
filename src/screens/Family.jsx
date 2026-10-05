@@ -3,8 +3,9 @@ import { Briefcase, ChevronRight, Plus, Trash2, UserPlus } from 'lucide-react';
 import { useData, canEditProfile, isFreeProfile } from '../hooks/data.jsx';
 import { Avatar, Sheet } from '../components/ui.jsx';
 import ProfileEditor from './ProfileEditor.jsx';
+import SlotPicker from '../components/SlotPicker.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
-import { DIETS, dietLabel } from '../lib/diet.js';
+import { DIETS, dietLabel, sharedSlotsOf } from '../lib/diet.js';
 import { DAYS } from '../lib/dates.js';
 
 const CAPS = [{ id: null, label: 'Nessun limite' }, ...DIETS.slice(0, 3).map((d) => ({ id: d.id, label: `Tutti ${d.label.toLowerCase().replace(/a$/, 'i')}` }))];
@@ -42,7 +43,7 @@ function RuleEditor({ rule, onChange, onDelete, onClose }) {
 
 
 export default function Family() {
-  const { uid, household, me, saveProfile, saveRules, addManagedProfile, claimProfile, deleteProfile } = useData();
+  const { uid, household, me, saveProfile, saveRules, saveSettings, addManagedProfile, claimProfile, deleteProfile } = useData();
   const [editId, setEditId] = React.useState(null);
   const [ruleId, setRuleId] = React.useState(null);
   const rules = household.rules || [];
@@ -79,6 +80,11 @@ export default function Family() {
           </button>
         );
       })}
+      <div className="pt-4">
+        <h2 className="font-display font-bold text-xl text-slate-900 mb-1">Pasti condivisi</h2>
+        <p className="text-sm text-slate-500 mb-3">Impostazione di base: i pasti scelti qui sono uguali per tutta la famiglia (con menu separati solo per chi segue una dieta diversa), gli altri sono individuali. Per un singolo giorno puoi cambiare un pasto dal Planner, toccando "Condiviso con la famiglia · cambia" (o "Individuale · cambia") sopra il pasto.</p>
+        <div className="bg-white rounded-2xl p-4 shadow-soft"><SlotPicker allowEmpty value={sharedSlotsOf(household)} onChange={(v) => saveSettings({ sharedSlots: v })} /></div>
+      </div>
       <div className="pt-4">
         <div className="flex items-center justify-between mb-2">
           <h2 className="font-display font-bold text-xl text-slate-900">Regole condivise</h2>

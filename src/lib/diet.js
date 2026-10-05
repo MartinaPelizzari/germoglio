@@ -1,5 +1,6 @@
 import { eatersOf, mealOf, slotPeople } from './scale.js';
 import { allergenLabel, recipeAllergens } from './allergens.js';
+import { planViolations } from './dietPlan.js';
 
 // Livelli dal più restrittivo al più ampio: una ricetta va bene per chi ha un livello pari o superiore.
 export const DIETS = [
@@ -38,9 +39,22 @@ export const mealConstraints = (household, day, slot, eaters) => {
   };
 };
 
-// Menu separati: a pranzo e a cena, se nessuna regola impone lo stesso piatto a tutti, chi segue una dieta
-// diversa ha il suo menu (es. una vegetariana e due onnivore). Gli altri pasti restano uno solo.
-export const menuClusters = (household, day, slot, people) => {
+// Pasti condivisi dalla famiglia (un solo pranzo/una sola cena per tutti, con menu separati solo per dieta diversa);
+// gli altri sono individuali: ognuno ha il suo menu e può aggiungervi dei familiari.
+export const DEFAULT_SHARED = ['Pranzo', 'Cena'];
+export const sharedSlotsOf = (household) => household.sharedSlots ?? DEFAULT_SHARED;
+// data.mode ('shared' | 'individual') è la scelta fatta sul singolo pasto; senza, vale l'impostazione di base della famiglia
+export const isSharedSlot = (household, slot, data) => (data?.mode ? data.mode === 'shared' : sharedSlotsOf(household).includes(slot));
+
+// data = pasto già pianificato: { joined: { idDiChiOspita: [idDeiFamiliariAggiunti] } }
+export const menuClusters = (household, day, slot, people, data) => {
+  if (!isSharedSlot(household, slot, data)) {
+    const joined = data?.joined || {};
+    const hostOf = (p) => people.find((h) => h.id !== p.id && (joined[h.id] || []).includes(p.id));
+    const hosts = people.filter((p) => !hostOf(p));
+    const clusters = hosts.map((h) => ({ level: memberLevel(h), host: h, eaters: [h, ...people.filter((p) => (joined[h.id] || []).includes(p.id))] }));
+    return clusters.map((c) => ({ ...c, split: clusters.length > 1 }));
+  }
   const main = slot === 'Pranzo' || slot === 'Cena';
   const cap = ruleCap(rulesFor(household, day, slot));
   const by = new Map();
@@ -74,6 +88,8 @@ export const problemsFor = (recipe, household, day, slot, eaters) => {
     else {
       const bad = (m.intolerances || []).filter((a) => recipeAllergens(recipe).has(a));
       if (bad.length) out.push(`${m.name}: contiene ${bad.map((a) => allergenLabel(a).toLowerCase()).join(', ')}`);
+      const off = planViolations(recipe, mealOf(m, slot).plan);
+      if (off.length) out.push(`${m.name}: fuori dal piano (${[...new Set(off)].slice(0, 3).join(', ').toLowerCase()})`);
     }
   }
   if (rules.some((r) => r.takeaway) && !recipe.takeaway && !recipe.isFood) out.push('non adatta all\'asporto');

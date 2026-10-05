@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Briefcase, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus, Wand2 } from 'lucide-react';
+import { AlertTriangle, Briefcase, User, Users, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus, Wand2 } from 'lucide-react';
 import { useData, useWeekPlan } from '../hooks/data.jsx';
 import { Avatar, Confirm, RecipeThumb, Sheet } from '../components/ui.jsx';
 import RecipePicker from './RecipePicker.jsx';
@@ -10,7 +10,7 @@ import { SLOTS, eatersOf, formatQty, mealOf, scaleRecipe, slotPeople } from '../
 import { coarseRequired, generateWeek, missingGroups, newState, pairLabel, proposeMenu, registerMeal, swapRecipe, uncoveredPairs } from '../lib/planGen.js';
 import { goalStatus, foodLabel, weekCounts, weekSets } from '../lib/goals.js';
 import { buildRecency } from '../lib/usage.js';
-import { mealConstraints, menuClusters, problemsFor, rulesFor } from '../lib/diet.js';
+import { isSharedSlot, mealConstraints, menuClusters, problemsFor, rulesFor } from '../lib/diet.js';
 import { resolveItem } from '../lib/items.js';
 import { GROUPS } from '../lib/groups.js';
 import { DEFAULT_EMOJI, timeLabel } from '../lib/format.js';
@@ -31,6 +31,8 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const [goalsOpen, setGoalsOpen] = React.useState(false);
   const [leftover, setLeftover] = React.useState(null);
   const [guestFor, setGuestFor] = React.useState(null);
+  const [joinFor, setJoinFor] = React.useState(null); // pasto individuale a cui aggiungere familiari
+  const [modeFor, setModeFor] = React.useState(null); // { slot, mode }: cambio tra pasto condiviso e individuale
   const recency = React.useMemo(() => buildRecency(plans, weekId), [plans, weekId]);
 
   const data = (slot) => plan.days?.[dayIndex]?.[slot];
@@ -39,12 +41,26 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const resolve = (item) => resolveItem(item, recipeMap);
   const eatersFor = (item, slot) => eatersOf(item, household, slot, data(slot));
   const constraintsFor = (slot, eaters = people(slot)) => mealConstraints(household, dayIndex, slot, eaters.length ? eaters : household.members);
+  const shared = (slot) => isSharedSlot(household, slot, data(slot));
+  // Nei pasti individuali ognuno vede solo il proprio menu (e quello di chi ci ha aggiunto); i pasti condivisi li vedono tutti
+  const mineOnly = (slot) => personal || !shared(slot);
   // Vista personale: solo i pasti e i piatti in cui ci sono io
   const iEat = (item, slot) => eatersFor(item, slot).some((m) => m.id === me?.id);
-  const visibleSlots = SLOTS.filter((s) => (personal ? (people(s).some((m) => m.id === me.id) || items(s).some((it) => iEat(it, s))) : people(s).length || items(s).length));
+  const mySlots = me?.visibleSlots || SLOTS;
+  const visibleSlots = SLOTS.filter((s) => mySlots.includes(s) && (mineOnly(s) ? (me && (people(s).some((m) => m.id === me.id) || items(s).some((it) => iEat(it, s)))) : (people(s).length || items(s).length)));
   const hasPlan = Object.keys(plan.days || {}).length > 0;
   const entry = (sel, eaters) => ({ instanceId: crypto.randomUUID(), ...(sel.food ? { food: sel.food } : { recipeId: sel.recipe.id }), ...(eaters ? { eaters } : {}) });
   const save = (slot, list) => saveSlot(dayIndex, slot, { items: list });
+  // Nei pasti individuali un piatto aggiunto a mano è il mio (e di chi ho aggiunto al mio pasto)
+  const defaultEaters = (slot) => (isSharedSlot(household, slot) || !me ? undefined : [me.id, ...(data(slot)?.joined?.[me.id] || [])]);
+  // Aggiunge o toglie familiari al mio pasto individuale: il loro menu individuale di quel pasto viene sostituito dal mio
+  const setJoined = (slot, ids) => {
+    const prev = data(slot)?.joined?.[me.id] || [];
+    const list = items(slot)
+      .filter((it) => !(Array.isArray(it.eaters) && it.eaters.length === 1 && ids.includes(it.eaters[0]) && !prev.includes(it.eaters[0])))
+      .map((it) => (Array.isArray(it.eaters) && it.eaters.includes(me.id) ? { ...it, eaters: [me.id, ...ids] } : it));
+    saveSlot(dayIndex, slot, { items: list, joined: { ...(data(slot)?.joined || {}), [me.id]: ids } });
+  };
   const setAbsent = (slot, id) => { const cur = data(slot)?.absent || []; saveSlot(dayIndex, slot, { items: items(slot), absent: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] }); };
   const setGuests = (slot, guests) => saveSlot(dayIndex, slot, { items: items(slot), guests });
 
@@ -58,19 +74,41 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   // Proposta per un pasto: un menu per ogni gruppo di persone con dieta diversa (se nessuna regola impone lo stesso piatto)
   const proposeSlot = (slot) => {
     const ppl = people(slot);
+    const shared = isSharedSlot(household, slot, data(slot));
     const without = { days: { ...plan.days, [dayIndex]: { ...(plan.days?.[dayIndex] || {}), [slot]: undefined } } };
     const state = newState({ favorites, recency, counts: weekSets(without, household, recipeMap) });
     const out = [];
     let relaxed = false;
-    for (const cluster of menuClusters(household, dayIndex, slot, ppl)) {
+    const all = menuClusters(household, dayIndex, slot, ppl, data(slot));
+    // pasto individuale: si rifà solo il mio menu, quello degli altri non si tocca
+    const mine = shared || !me || !ppl.some((p) => p.id === me.id) ? all : all.filter((c) => c.eaters.some((e) => e.id === me.id));
+    for (const cluster of mine) {
       const r = proposeMenu(recipes, constraintsFor(slot, cluster.eaters), slot, state, cluster);
       relaxed = relaxed || r.relaxed;
       registerMeal(state, r.items, cluster.eaters, dayIndex, slot, recipeMap, ppl);
       out.push(...r.items);
     }
-    if (!out.length) return setNotice(`Nessuna proposta adatta a tutti per ${slot.toLowerCase()}. Controlla dieta, piano e regole in Famiglia.`);
+    if (!out.length) return setNotice(`Nessuna proposta adatta per ${slot.toLowerCase()}. Controlla dieta, piano e regole in Famiglia.`);
     setNotice(relaxed ? "Non ho trovato ricette d'asporto adatte: ne ho proposta una normale." : '');
-    save(slot, out);
+    const mineIds = new Set(mine.flatMap((c) => c.eaters.map((e) => e.id)));
+    const keep = shared ? [] : items(slot).filter((it) => !eatersFor(it, slot).some((e) => mineIds.has(e.id)));
+    save(slot, [...keep, ...out]);
+  };
+
+  // Passa un singolo pasto di questo giorno da condiviso a individuale (o viceversa) e ricalcola i menu di tutti
+  const changeMode = (slot, mode) => {
+    const d0 = data(slot) || {};
+    const nd = { ...d0, mode, joined: undefined };
+    const ppl = slotPeople(household, slot, d0);
+    setModeFor(null);
+    const state = newState({ favorites, recency, counts: {} });
+    const out = [];
+    for (const cluster of menuClusters(household, dayIndex, slot, ppl, nd)) {
+      const r = proposeMenu(recipes, constraintsFor(slot, cluster.eaters), slot, state, cluster);
+      registerMeal(state, r.items, cluster.eaters, dayIndex, slot, recipeMap, ppl);
+      out.push(...r.items);
+    }
+    saveSlot(dayIndex, slot, { items: out, mode, joined: Object.fromEntries(Object.keys(d0.joined || {}).map((k) => [k, []])) });
   };
 
   const pick = (sel) => {
@@ -78,7 +116,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     setPicker(null);
     const list = items(slot);
     if (action === 'replace') save(slot, list.map((it, i) => (i === index ? { ...entry(sel), ...(it.eaters ? { eaters: it.eaters } : {}) } : it)));
-    else save(slot, [...list, entry(sel, pair ? [pair.eater.id] : undefined)]);
+    else save(slot, [...list, entry(sel, pair ? [pair.eater.id] : defaultEaters(slot))]);
   };
 
   const swap = (slot, index) => {
@@ -112,11 +150,11 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const recs = items(slot).map((it) => ({ r: resolve(it), it })).filter((x) => x.r);
     const out = [];
     for (const p of people(slot)) {
-      if (personal && p.id !== me.id) continue;
+      if (mineOnly(slot) && p.id !== me.id) continue;
       const mine = recs.filter(({ it }) => eatersFor(it, slot).some((e) => e.id === p.id)).map((x) => x.r);
       if (mealOf(p, slot).plan.length) uncoveredPairs(mine, [p], slot).forEach((pair) => out.push({ key: `${p.id}:${pair.gi}`, label: `${people(slot).length > 1 ? `${p.name}: ` : ''}${pairLabel(pair)}`, pair }));
     }
-    const noPlan = people(slot).filter((p) => !mealOf(p, slot).plan.length && (!personal || p.id === me.id));
+    const noPlan = people(slot).filter((p) => !mealOf(p, slot).plan.length && (!mineOnly(slot) || p.id === me.id));
     if (noPlan.length && recs.length) {
       const mine = recs.filter(({ it }) => eatersFor(it, slot).some((e) => noPlan.some((n) => n.id === e.id))).map((x) => x.r);
       missingGroups(coarseRequired(slot), mine).forEach((g) => out.push({ key: `g:${g}`, label: GROUP_NAME[g], group: g }));
@@ -168,7 +206,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const menusOf = (slot) => {
     const groups = new Map();
     items(slot).forEach((it, i) => {
-      if (personal && !iEat(it, slot)) return;
+      if (mineOnly(slot) && !iEat(it, slot)) return;
       const eaters = eatersFor(it, slot);
       const key = eaters.map((e) => e.id).sort().join(',');
       if (!groups.has(key)) groups.set(key, { eaters, list: [] });
@@ -244,7 +282,11 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                 </div>
                 <button onClick={() => proposeSlot(slot)} aria-label={`Proponi ${slot}`} className="px-3 py-2 bg-slate-50 rounded-full text-slate-600 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Proponi</button>
               </div>
-              {!personal && (
+              <button onClick={() => setModeFor({ slot, mode: isSharedSlot(household, slot, data(slot)) ? 'individual' : 'shared' })} aria-label={`Pasto ${isSharedSlot(household, slot, data(slot)) ? 'condiviso' : 'individuale'}: tocca per cambiare`} className="mb-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-bold text-slate-600 active:scale-95">
+                {isSharedSlot(household, slot, data(slot)) ? <Users className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
+                {isSharedSlot(household, slot, data(slot)) ? 'Condiviso con la famiglia' : 'Individuale'} · cambia
+              </button>
+              {isSharedSlot(household, slot, data(slot)) ? (!personal && (
                 <div className="flex items-center gap-1.5 flex-wrap mb-3">
                   {household.members.filter((m) => mealOf(m, slot).eats).map((m) => {
                     const here = !(data(slot)?.absent || []).includes(m.id);
@@ -254,6 +296,14 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                     <button key={g.id} onClick={() => setGuests(slot, data(slot).guests.filter((x) => x.id !== g.id))} title={`Togli ${g.name}`} aria-label={`Togli ospite ${g.name}`} className="px-2 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-600 active:scale-95">{g.emoji} {g.name} ✕</button>
                   ))}
                   <button onClick={() => setGuestFor(slot)} aria-label="Aggiungi ospite" className="px-2.5 py-1.5 rounded-full bg-slate-50 text-[11px] font-bold text-slate-500 flex items-center gap-1 active:scale-95"><UserPlus className="w-3.5 h-3.5" /> Ospite</button>
+                </div>
+              )) : me && people(slot).some((p) => p.id === me.id) && (
+                <div className="flex items-center gap-1.5 flex-wrap mb-3">
+                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1">Pasto individuale</span>
+                  {(data(slot)?.joined?.[me.id] || []).map((id) => { const m = household.members.find((x) => x.id === id); return m ? <Avatar key={id} member={m} title={`${m.name} mangia con te`} /> : null; })}
+                  {household.members.some((m) => m.id !== me.id && mealOf(m, slot).eats) && (
+                    <button onClick={() => setJoinFor(slot)} aria-label="Aggiungi un familiare al mio pasto" className="px-2.5 py-1.5 rounded-full bg-slate-50 text-[11px] font-bold text-slate-500 flex items-center gap-1 active:scale-95"><UserPlus className="w-3.5 h-3.5" /> Aggiungi persone</button>
+                  )}
                 </div>
               )}
               {rules.length > 0 && (
@@ -307,6 +357,22 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         </Sheet>
       )}
 
+      {joinFor && (
+        <Sheet title={`Mangia con te: ${joinFor.toLowerCase()}`} onClose={() => setJoinFor(null)}>
+          <div className="p-5 space-y-3">
+            <p className="text-sm text-slate-500">Chi aggiungi mangia lo stesso menu del tuo (con le sue dosi). Il suo menu individuale di questo pasto viene sostituito.</p>
+            {household.members.filter((m) => m.id !== me.id && mealOf(m, joinFor).eats).map((m) => {
+              const on = (data(joinFor)?.joined?.[me.id] || []).includes(m.id);
+              const ids = data(joinFor)?.joined?.[me.id] || [];
+              return (
+                <button key={m.id} onClick={() => setJoined(joinFor, on ? ids.filter((x) => x !== m.id) : [...ids, m.id])} className={`w-full p-3 rounded-2xl flex items-center gap-3 text-left active:scale-[0.98] ${on ? 'bg-brand-50 ring-2 ring-brand-300' : 'bg-slate-50'}`}>
+                  <Avatar member={m} size="w-10 h-10 text-xl" /><span className="flex-1 font-bold text-slate-700">{m.name}</span><span className="text-xs font-bold text-brand-700">{on ? 'Aggiunto' : 'Aggiungi'}</span>
+                </button>
+              );
+            })}
+          </div>
+        </Sheet>
+      )}
       {guestFor && <GuestSheet slot={guestFor} onClose={() => setGuestFor(null)} onAdd={(g) => { setGuests(guestFor, [...(data(guestFor)?.guests || []), g]); setGuestFor(null); }} />}
       {leftover && (
         <Sheet title="Riporta come avanzo" onClose={() => setLeftover(null)}>
@@ -332,6 +398,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           onDelete={() => { const r = view.recipe; setView(null); onDelete(r); }}
         />
       )}
+      {modeFor && <Confirm title={modeFor.mode === 'shared' ? 'Rendere condiviso questo pasto?' : 'Rendere individuale questo pasto?'} msg={`Vale solo per ${DAYS[dayIndex]} ${dayNumber(weekDate, dayIndex)}, ${modeFor.slot.toLowerCase()}. I menu di questo pasto vengono ricalcolati per tutti.`} confirmLabel="Cambia" onConfirm={() => changeMode(modeFor.slot, modeFor.mode)} onCancel={() => setModeFor(null)} />}
       {confirm && <Confirm title="Rifare la settimana?" msg="Il menù attuale di questa settimana verrà sostituito da una nuova proposta." confirmLabel="Rifai" onConfirm={generate} onCancel={() => setConfirm(false)} />}
     </div>
   );
