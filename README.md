@@ -75,3 +75,23 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Ricerca e fonti: `docs/fabbisogni.md` e `docs/porzioni.md`; valori nutrizionali per 100 g in `src/data/nutrition/` (fonte voce per voce, copertura 98% degli ingredienti delle ricette: `node scripts/check-nutrition.mjs`).
 - Limiti dichiarati: le stime vanno validate da un dietista prima di un uso più ampio; le mappature attività-PAL e le soglie di deficit sono scelte di progetto indicate come tali nel documento.
 - Prova: `node scripts/selftest-needs.mjs`.
+
+## Check-in e segnalazioni
+
+- Chi sceglie "Creiamo insieme la dieta" risponde alle domande su corpo e abitudini; chi ha il piano della nutrizionista non ne riceve (il piano non viene mai modificato dall'app). La scelta si cambia da Profilo > Piano alimentare.
+- Una domanda breve a settimana "Come ti senti?" (energia, digestione, sonno, fame) con risposte bene / così così / non bene, mai peso né calorie; si disattiva dal profilo e "Non ora" la rimanda di 7 giorni.
+- Il pulsante con il cuore in alto apre "Ho una segnalazione da fare": sintomo, da quanto tempo, segnali d'allarme. Con un segnale d'allarme l'app consiglia di sentire un medico e non cambia nulla; altrimenti dà consigli e, solo per i piani creati dall'app, può ritoccarli (energia +5%, poi +10% al massimo; più legumi per il ferro), un cambio alla volta e non prima di 14 giorni dall'ultimo. Dopo 14 giorni chiede com'è andata.
+- Base e fonti: `docs/benessere.md`; regole in `src/lib/wellbeing.js`; prova: `node scripts/selftest-wellbeing.mjs`. Le cadenze e le soglie di ritocco sono scelte di progetto da far validare a un dietista o a un medico.
+
+## Settimane pianificate in anticipo
+
+- Non c'è più "Proponi la settimana": l'app tiene sempre pianificate le prossime 16 settimane (circa 4 mesi, `src/hooks/useAutoWeeks.js`). Quando ne passa una, ne aggiunge una in fondo, tenendo conto dei piatti già pianificati per non ripeterli.
+- Le settimane proposte dall'app sono segnate `auto`; una modifica a mano toglie il segno e la settimana non viene più toccata. Se cambi il piano alimentare di una persona (o dieta, intolleranze, pasti visibili), alla chiusura del profilo le settimane `auto` si rifanno da sole.
+- Un singolo pasto si può comunque rifare con "Proponi" sul pasto.
+- Nei pasti individuali si vede solo chi li mangia; i pasti condivisi mostrano tutti. La lista della spesa è sempre per tutto il nucleo, anche per i pasti individuali di ognuno.
+
+## Lista della spesa: righe accorpate
+
+- Lo stesso ingrediente scritto in modi diversi finisce in una sola riga: maiuscole, singolare e plurale, parole che non cambiano cosa si compra ("fresco", "in polvere", "congelato", "parmigiano reggiano"/"parmigiano") e ordine delle parole (`canonicalName` in `src/lib/scale.js`).
+- Le unità diverse si convertono quando ha senso: g e ml alla pari (1 ml = 1 g), un cucchiaio 12 e un cucchiaino 4, un pezzo il suo peso medio (100 g se non si conosce) quando c'è già una quantità in g o ml, "q.b." assorbito da una quantità vera. Ceci cotti e secchi, farine diverse, pelati e pomodori restano separati.
+- Le conversioni sono approssimate (per esempio 1 ml = 1 g): vanno bene per la spesa, non per la dieta. Prova: `node scripts/selftest-shopping.mjs`.
