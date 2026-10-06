@@ -30,6 +30,9 @@ export const lookup = (name) => {
   return best && best.score >= 0.5 ? best.v : null;
 };
 
+// Peso di un pezzo, se lo conosciamo (altrimenti null)
+export const pieceGrams = (name) => PIECE.find(([re]) => re.test(norm(name)))?.[1] ?? null;
+
 export const gramsOf = (ing) => {
   if (['g', 'ml'].includes(ing.unit)) return ing.qty;
   if (ing.unit === 'pz') { const hit = PIECE.find(([re]) => re.test(norm(ing.name))); return ing.qty * (hit ? hit[1] : 50); }

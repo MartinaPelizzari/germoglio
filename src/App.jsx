@@ -1,6 +1,6 @@
 import React from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { BookOpen, Calendar, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, User, Users } from 'lucide-react';
+import { BookOpen, Calendar, HeartPulse, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, User, Users } from 'lucide-react';
 import { auth } from './firebase.js';
 import { DataProvider, isFreeProfile, useData } from './hooks/data.jsx';
 import { Confirm, Spinner } from './components/ui.jsx';
@@ -12,7 +12,9 @@ import RecipeForm, { emptyRecipe, fromDraft, toDraft } from './screens/RecipeFor
 import Shopping from './screens/Shopping.jsx';
 import Family from './screens/Family.jsx';
 import Settings from './screens/Settings.jsx';
+import { CheckInCard, ReportSheet } from './components/Wellbeing.jsx';
 import ProfileEditor from './screens/ProfileEditor.jsx';
+import { useAutoWeeks } from './hooks/useAutoWeeks.js';
 import { todayIndex } from './lib/dates.js';
 import { pushTabState, setTabBackHandler } from './lib/backstack.js';
 
@@ -35,6 +37,7 @@ function ViewSwitch({ value, onChange }) {
 
 export function Main() {
   const { household, me, memberCount, saveProfile, claimProfile, joinHousehold, saveRecipe, deleteRecipe, user } = useData();
+  useAutoWeeks();
   const [tab, setTabState] = React.useState('planner');
   const tabRef = React.useRef('planner');
   const tabHist = React.useRef([]);
@@ -45,6 +48,7 @@ export function Main() {
   const [draft, setDraft] = React.useState(emptyRecipe());
   const [confirm, setConfirm] = React.useState(null);
   const [settings, setSettings] = React.useState(false);
+  const [report, setReport] = React.useState(undefined); // undefined = chiusa, null = scelta del sintomo, stringa = sintomo
   const [viewMode, setViewMode] = React.useState(loadView);
   const [joined, setJoined] = React.useState(false); // appena entrato in un nucleo con un codice
   const [review, setReview] = React.useState(false); // dopo aver reclamato un profilo: controllo dei dati
@@ -112,13 +116,17 @@ export function Main() {
       <header className="glass shrink-0 z-20 px-5 pt-safe">
         <div className="h-14 flex justify-between items-center">
           <div className="flex items-center gap-2"><div className="bg-brand-100 p-2 rounded-xl text-brand-600"><Leaf className="w-5 h-5" /></div><h1 className="font-display font-bold text-xl text-slate-900 tracking-tight">Germoglio</h1></div>
+          <div className="flex items-center">
+          <button onClick={() => setReport(null)} aria-label="Ho una segnalazione da fare" title="Ho una segnalazione da fare" className="p-2.5 rounded-full text-slate-500 active:scale-90"><HeartPulse className="w-5 h-5" /></button>
           <button onClick={() => setSettings(true)} aria-label="Impostazioni" className="p-2.5 -mr-2 rounded-full text-slate-500 active:scale-90"><SettingsIcon className="w-5 h-5" /></button>
+          </div>
         </div>
       </header>
 
       <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden px-4 pt-4 pb-10" style={{ overscrollBehaviorY: 'contain', WebkitOverflowScrolling: 'touch' }}>
         <div className="max-w-md mx-auto min-h-full" key={tab}>
-          {(tab === 'planner' || tab === 'shopping') && shared && <ViewSwitch value={viewMode} onChange={changeView} />}
+          {tab === 'planner' && <CheckInCard onReport={setReport} />}
+          {tab === 'planner' && shared && <ViewSwitch value={viewMode} onChange={changeView} />}
           {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} viewMode={shared ? viewMode : 'family'} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
           {tab === 'recipes' && <RecipeBook filters={filters} setFilters={setFilters} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
           {tab === 'add' && <RecipeForm data={draft} onChange={setDraft} onClose={closeDraft} onSave={save} />}
@@ -146,6 +154,7 @@ export function Main() {
           </div>
         </div>
       )}
+      {report !== undefined && <ReportSheet symptom={report} onClose={() => setReport(undefined)} />}
       {settings && <Settings onClose={() => setSettings(false)} />}
       {confirm && <Confirm title={confirm.title} msg={confirm.msg} onConfirm={confirm.action} onCancel={() => setConfirm(null)} />}
     </div>

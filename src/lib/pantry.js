@@ -1,4 +1,4 @@
-import { normalizeIngredient } from './scale.js';
+import { canonicalName, normalizeIngredient } from './scale.js';
 
 export const STAPLES = ['Sale', 'Pepe', 'Olio extravergine d\'oliva', 'Zucchero', 'Aceto', 'Farina', 'Spezie', 'Lievito alimentare'];
 
@@ -14,7 +14,7 @@ export const applyPantry = (list, pantry) => {
     if (p.always) always.push(norm(p.name));
     else {
       const n = normalizeIngredient({ name: p.name, qty: p.qty, unit: p.unit });
-      const k = `${norm(n.name)}|${n.unit}`;
+      const k = `${canonicalName(n.name)}|${n.unit}`;
       stock.set(k, (stock.get(k) || 0) + n.qty);
     }
   }
@@ -23,7 +23,7 @@ export const applyPantry = (list, pantry) => {
   for (const i of list) {
     const n = norm(i.name);
     if (always.some((a) => n.includes(a))) { covered.push({ ...i, why: 'Ce l\'hai sempre' }); continue; }
-    const have = stock.get(`${n}|${i.unit}`) || 0;
+    const have = stock.get(`${canonicalName(i.name)}|${i.unit}`) || 0;
     if (i.unit === 'q.b.' ? have > 0 : have >= i.qty && have > 0) covered.push({ ...i, why: 'In dispensa' });
     else needed.push(have > 0 ? { ...i, qty: i.qty - have, have } : i);
   }

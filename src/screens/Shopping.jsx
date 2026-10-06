@@ -16,7 +16,7 @@ const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 export default function Shopping({ weekDate, setWeekDate, days, setDays, viewMode }) {
   const { hid, household, me, recipeMap, pantry, savePantryItem } = useData();
-  const personal = viewMode === 'me' && me;
+  const personal = false; // la spesa è sempre per tutto il nucleo, anche per i pasti individuali di ognuno
   const weekId = getWeekId(weekDate);
   const { plan } = useWeekPlan(hid, weekId);
   const [checked, setChecked] = React.useState({});

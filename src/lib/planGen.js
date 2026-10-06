@@ -169,6 +169,11 @@ const borrowOk = (recipe, eaters, slot, state) => eaters.every((e) => {
 
 export const withinPlan = (recipe, eaters, slot, state) => eaters.every((e) => planViolations(recipe, planFor(e, slot, state).groups).length === 0);
 
+// Ingredienti principali di un piatto (i primi due dell'elenco): servono a non mettere nello stesso pasto due piatti con la stessa base
+const MAIN_STOP = new Set(['di', 'al', 'alla', 'con', 'e', 'olio', 'sale', 'acqua', 'pepe', 'intero', 'fresco', 'fresca', 'naturale', 'integrale', 'bianco']);
+const mainIngredients = (recipe) => new Set((recipe.ingredients || []).slice(0, 2).flatMap((i) => norm(i.name || '').split(' ').filter((w) => w.length > 3 && !MAIN_STOP.has(w))));
+const sameBase = (recipe, chosen) => chosen.some((c) => { const a = mainIngredients(c); return [...mainIngredients(recipe)].some((w) => a.has(w)); });
+
 const baseScore = (recipe, eaters, state, preferLevel, slot) =>
   - (state.used.get(recipe.id) || 0) * 12
   - recencyPenalty(state.recency.get(recipe.id))
@@ -204,7 +209,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
       const rem = uncoveredPairs(chosen, eaters, slot, state);
       if (!rem.length) break;
       const gain = (r) => rem.filter((p) => covers(r, p, slot, state)).length;
-      const pick = best(pool.filter((r) => !chosen.includes(r) && gain(r) > 0), (r) => gain(r) * 10 + optionalGain(r, eaters, slot, state) * 6 + baseScore(r, eaters, state, pref, slot), 0);
+      const pick = best(pool.filter((r) => !chosen.includes(r) && gain(r) > 0), (r) => gain(r) * 10 + optionalGain(r, eaters, slot, state) * 6 - (chosen.length && sameBase(r, chosen) ? 25 : 0) + baseScore(r, eaters, state, pref, slot), 0);
       if (!pick) break;
       chosen.push(pick);
     }

@@ -3,6 +3,7 @@ import { newProfile } from '../hooks/data.jsx';
 import { Avatar } from '../components/ui.jsx';
 import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
 import BodyForm, { bodyComplete } from '../components/BodyForm.jsx';
+import { NeedsSummary } from '../components/PlanSource.jsx';
 import { DIETS } from '../lib/diet.js';
 import { ALLERGENS } from '../lib/allergens.js';
 import { computeNeeds } from '../lib/needs.js';
@@ -110,14 +111,13 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
           </div>
           {blocked && <p className="text-sm text-amber-800 bg-amber-50 rounded-2xl p-4">{blocked.text}</p>}
           <button disabled={!needs || !!blocked} onClick={() => setStep('review')} className="w-full py-4 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95 disabled:opacity-50">Calcola il mio piano</button>
-          <button onClick={() => finish(null, { body })} className="w-full py-3 text-slate-600 font-bold bg-slate-50 rounded-2xl active:scale-95">Salta, userò le porzioni standard</button>
+          <button onClick={() => finish(null, { body, planSource: 'auto' })} className="w-full py-3 text-slate-600 font-bold bg-slate-50 rounded-2xl active:scale-95">Salta, userò le porzioni standard</button>
         </div>
       </div>
     );
   }
 
   if (step === 'review' && auto) {
-    const gap = Math.abs(auto.estKcal - needs.kcal) > needs.kcal * 0.08;
     return (
       <div className="min-h-[100dvh] flex justify-center px-4 py-6 bg-surface-ground pt-safe pb-safe overflow-y-auto">
         <div className="w-full max-w-sm bg-white p-5 rounded-3xl shadow-soft space-y-4 animate-fade-in h-fit">
@@ -125,16 +125,8 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
             <h1 className="font-display font-extrabold text-2xl text-slate-900">La tua dieta equilibrata</h1>
             <p className="text-sm text-slate-500 mt-1">Ho costruito un piano pasto per pasto con porzioni e frequenze delle linee guida italiane (CREA, LARN). Controllalo e cambia quello che non ti va: poi ti preparo la settimana.</p>
           </div>
-          {!needs.hideNumbers && (
-            <div className="bg-brand-50 rounded-2xl p-4 text-sm text-brand-900 space-y-1">
-              <p><b>Energia stimata:</b> circa {needs.kcal} kcal al giorno (metabolismo basale {needs.bmr}, attività {needs.pal.toString().replace('.', ',')}{needs.workout ? `, allenamenti +${needs.workout}` : ''}).</p>
-              <p><b>Proteine:</b> circa {needs.protein} g · <b>fibra:</b> almeno {needs.fiber} g · carboidrati 45-60% e grassi 20-35% dell'energia.</p>
-              {gap && <p className="text-xs">Il piano qui sotto copre circa {auto.estKcal} kcal: per arrivare al tuo fabbisogno aggiungi uno spuntino o aumenta le porzioni.</p>}
-            </div>
-          )}
-          {needs.notes.map((n) => <p key={n} className="text-xs text-slate-500">{n}</p>)}
-          {needs.watch.length > 0 && <p className="text-xs text-slate-500">Con la tua dieta conviene tenere d'occhio: {needs.watch.join(', ')}. Prima di prendere integratori parlane con il medico o con un dietista.</p>}
-          <PlanImport hideUpload skipLabel="Indietro" initial={auto.texts} applyLabel="Crea la settimana con questo piano" onApply={(t) => finish(t, { body, autoPlan: true })} onSkip={() => setStep('body')} />
+          <NeedsSummary needs={needs} estKcal={auto.estKcal} />
+          <PlanImport hideUpload skipLabel="Indietro" initial={auto.texts} applyLabel="Crea la settimana con questo piano" onApply={(t) => finish(t, { body, autoPlan: true, planSource: 'auto' })} onSkip={() => setStep('body')} />
           <p className="text-[11px] text-slate-400">Sono stime generali, non una prescrizione medica o dietetica. Se hai patologie o dubbi, rivolgiti a un professionista.</p>
         </div>
       </div>
@@ -149,7 +141,7 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
             <h1 className="font-display font-extrabold text-2xl text-slate-900">Il tuo piano alimentare</h1>
             <p className="text-sm text-slate-500 mt-1">Se hai il piano della nutrizionista in PDF, caricalo: lo leggo e lo controlli prima di salvarlo. Puoi anche saltare e scriverlo più tardi dal tuo profilo.</p>
           </div>
-          <PlanImport applyLabel="Salva il profilo con questo piano" onApply={finish} onSkip={() => finish(null)} />
+          <PlanImport applyLabel="Salva il profilo con questo piano" onApply={(t) => finish(t, { planSource: 'nutritionist' })} onSkip={() => finish(null)} />
         </div>
       </div>
     );

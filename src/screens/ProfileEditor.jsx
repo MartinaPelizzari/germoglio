@@ -1,6 +1,7 @@
 import React from 'react';
 import { Camera, ChevronDown, Plus, Trash2, X } from 'lucide-react';
-import { MEMBER_COLORS, MEMBER_EMOJIS, isFreeProfile } from '../hooks/data.jsx';
+import PlanSource from '../components/PlanSource.jsx';
+import { MEMBER_COLORS, MEMBER_EMOJIS, isFreeProfile, useData } from '../hooks/data.jsx';
 import { Confirm, Sheet, Avatar } from '../components/ui.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
 import { DIETS } from '../lib/diet.js';
@@ -30,7 +31,12 @@ function PlanImportBlock({ member, onChange }) {
 }
 
 export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onRelease, canClaim = true, onDelete, onClose }) {
+  const { refreshFutureWeeks } = useData();
   const [openSlot, setOpenSlot] = React.useState(null);
+  // alla chiusura, se è cambiato qualcosa che influisce sui pasti, le settimane future proposte dall'app si rifanno
+  const signature = (m) => JSON.stringify([m.meals, m.diet, m.intolerances, m.avoid, m.visibleSlots, m.balance, m.goals]);
+  const initial = React.useRef(signature(member));
+  const close = () => { if (signature(member) !== initial.current) refreshFutureWeeks(); onClose(); };
   const [confirm, setConfirm] = React.useState(false);
   const [photoBusy, setPhotoBusy] = React.useState(false);
   const fileRef = React.useRef(null);
@@ -53,7 +59,7 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
   const label = 'text-[10px] font-bold text-slate-400 uppercase mb-2';
 
   return (
-    <Sheet title={title || member.name || 'Persona'} onClose={onClose} full>
+    <Sheet title={title || member.name || 'Persona'} onClose={close} full>
       <div className="p-5 space-y-6">
         {intro && <p className="text-sm text-brand-800 bg-brand-50 rounded-2xl p-4">{intro}</p>}
         {onRelease && (
@@ -122,10 +128,12 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
         </div>
 
         <div>
-          <h4 className="font-display font-bold text-lg text-slate-800 mb-1">Piano alimentare</h4>
+          <h4 className="font-display font-bold text-lg text-slate-800 mb-3">Piano alimentare</h4>
+          <div className="mb-5"><PlanSource member={member} onChange={onChange} /></div>
+          {member.planSource && <label className="flex items-start gap-3 mb-5 text-sm text-slate-700"><input type="checkbox" className="w-5 h-5 mt-0.5 accent-emerald-500" checked={!member.checkinOff} onChange={(e) => onChange({ ...member, checkinOff: !e.target.checked })} /> Una domanda a settimana su come mi sento (la tolgo quando voglio)</label>}
           <div className="mb-4"><BalanceMode member={member} onChange={onChange} /></div>
           <p className="text-xs text-slate-400 mb-3">Scrivi cosa può mangiare in ogni pasto, come l'ha scritto la nutrizionista. L'app propone ricette che rispettano il piano e mette le dosi indicate. Esempio: "150 g yogurt oppure 30 g pane".</p>
-          <PlanImportBlock member={member} onChange={onChange} />
+          {member.planSource !== 'auto' && <PlanImportBlock member={member} onChange={onChange} />}
 
           <div className="space-y-2">
             {SLOTS.map((slot) => {

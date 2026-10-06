@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Briefcase, User, Users, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus, Wand2 } from 'lucide-react';
+import { AlertTriangle, Briefcase, User, Users, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus } from 'lucide-react';
 import { useData, useWeekPlan } from '../hooks/data.jsx';
 import { Avatar, Confirm, RecipeThumb, Sheet } from '../components/ui.jsx';
 import RecipePicker from './RecipePicker.jsx';
@@ -30,7 +30,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const [picker, setPicker] = React.useState(null); // { slot, action, index, pair, group }
   const [menu, setMenu] = React.useState(null);
   const [view, setView] = React.useState(null);
-  const [confirm, setConfirm] = React.useState(false);
   const [notice, setNotice] = React.useState('');
   const [goalsOpen, setGoalsOpen] = React.useState(false);
   const [leftover, setLeftover] = React.useState(null);
@@ -69,7 +68,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const iEat = (item, slot) => eatersFor(item, slot).some((m) => m.id === me?.id);
   const mySlots = me?.visibleSlots || SLOTS;
   const visibleSlots = SLOTS.filter((s) => mySlots.includes(s) && (mineOnly(s) ? (me && (people(s).some((m) => m.id === me.id) || items(s).some((it) => iEat(it, s)))) : (people(s).length || items(s).length)));
-  const hasPlan = Object.keys(plan.days || {}).length > 0;
   const entry = (sel, eaters) => ({ instanceId: crypto.randomUUID(), ...(sel.food ? { food: sel.food } : { recipeId: sel.recipe.id }), ...(eaters ? { eaters } : {}) });
   const save = (slot, list) => saveSlot(dayIndex, slot, { items: list });
   // Nei pasti individuali un piatto aggiunto a mano è il mio (e di chi ho aggiunto al mio pasto)
@@ -84,13 +82,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   };
   const setAbsent = (slot, id) => { const cur = data(slot)?.absent || []; saveSlot(dayIndex, slot, { items: items(slot), absent: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] }); };
   const setGuests = (slot, guests) => saveSlot(dayIndex, slot, { items: items(slot), guests });
-
-  const generate = () => {
-    if (!recipes.length) return;
-    replaceAll(generateWeek(recipes, household, { favorites, recency, existing: plan.days }));
-    setConfirm(false);
-    setNotice('');
-  };
 
   // Proposta per un pasto: un menu per ogni gruppo di persone con dieta diversa (se nessuna regola impone lo stesso piatto)
   const proposeSlot = (slot) => {
@@ -250,7 +241,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         )}
         <div className="flex justify-between items-center">
           <div className="flex gap-1.5" role="group" aria-label="Chi lo mangia">
-            {[...household.members, ...(data(slot)?.guests || [])].filter((m) => people(slot).some((p) => p.id === m.id) || eaters.some((e) => e.id === m.id)).map((m) => {
+            {[...household.members, ...(data(slot)?.guests || [])].filter((m) => (mineOnly(slot) ? eaters.some((e) => e.id === m.id) : people(slot).some((p) => p.id === m.id) || eaters.some((e) => e.id === m.id))).map((m) => {
               const on = eaters.some((e) => e.id === m.id);
               return <Avatar key={m.id} member={m} active={on} onClick={() => toggleEater(slot, index, m.id)} title={`${m.name}: ${on ? 'mangia' : 'non mangia'}`} />;
             })}
@@ -301,7 +292,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         ))}
       </div>
 
-      {membersWithGoals.length > 0 && (
+      {membersWithGoals.length > 0 && me?.planSource !== 'auto' && (
         <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
           <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
             <Target className="w-5 h-5 text-brand-600" />
@@ -329,7 +320,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
       )}
 
 
-      {me && isDayBalanced(me) && dayPlanned(me) && (
+      {me && me.planSource !== 'auto' && isDayBalanced(me) && dayPlanned(me) && (
         <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
           <button onClick={() => setDayOpen(!dayOpen)} className="w-full p-4 flex items-center gap-2 text-left">
             <Target className="w-5 h-5 text-brand-600" />
@@ -346,9 +337,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           )}
         </div>
       )}
-      <button onClick={() => (hasPlan ? setConfirm(true) : generate())} className="w-full bg-slate-900 text-white py-4 rounded-2xl font-display font-bold shadow-lg flex items-center justify-center gap-2 active:scale-95">
-        <Wand2 className="w-5 h-5" /> Proponi la settimana
-      </button>
       {notice && <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-2xl">{notice}</p>}
 
       <div className="space-y-4">
@@ -486,7 +474,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         />
       )}
       {modeFor && <Confirm title={modeFor.mode === 'shared' ? 'Rendere condiviso questo pasto?' : 'Rendere individuale questo pasto?'} msg={`Vale solo per ${DAYS[dayIndex]} ${dayNumber(weekDate, dayIndex)}, ${modeFor.slot.toLowerCase()}. I menu di questo pasto vengono ricalcolati per tutti.`} confirmLabel="Cambia" onConfirm={() => changeMode(modeFor.slot, modeFor.mode)} onCancel={() => setModeFor(null)} />}
-      {confirm && <Confirm title="Rifare la settimana?" msg="Il menù attuale di questa settimana verrà sostituito da una nuova proposta." confirmLabel="Rifai" onConfirm={generate} onCancel={() => setConfirm(false)} />}
     </div>
   );
 }

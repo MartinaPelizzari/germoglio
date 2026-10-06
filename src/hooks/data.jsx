@@ -57,6 +57,7 @@ export function DataProvider({ user, children }) {
   const [userRecipes, setUserRecipes] = React.useState([]);
   const [pantry, setPantry] = React.useState([]);
   const [plans, setPlans] = React.useState([]);
+  const [plansLoaded, setPlansLoaded] = React.useState(false);
   const [memberCount, setMemberCount] = React.useState(1);
   const creating = React.useRef(false);
 
@@ -83,7 +84,7 @@ export function DataProvider({ user, children }) {
       onSnapshot(collection(...h('recipes')), (s) => setUserRecipes(s.docs.map((d) => ({ ...d.data(), id: d.id, own: true })))),
       onSnapshot(collection(...h('pantry')), (s) => setPantry(s.docs.map((d) => ({ ...d.data(), id: d.id })))),
       // Piani delle ultime settimane e di quelle future: servono per lo storico
-      onSnapshot(query(collection(...h('plans')), where(documentId(), '>=', cutoff)), (s) => setPlans(s.docs.map((d) => ({ id: d.id, ...d.data() })))),
+      onSnapshot(query(collection(...h('plans')), where(documentId(), '>=', cutoff)), (s) => { setPlans(s.docs.map((d) => ({ id: d.id, ...d.data() }))); setPlansLoaded(true); }),
     ];
     return () => unsubs.forEach((u) => u());
   }, [hid]);
@@ -128,7 +129,7 @@ export function DataProvider({ user, children }) {
     // Gli errori di salvataggio (es. regole di Firebase non aggiornate) si mostrano all'utente invece di restare nascosti
     const log = (e) => { console.error(e); window.dispatchEvent(new CustomEvent('germoglio-error', { detail: e?.code || e?.message || 'errore' })); };
     return {
-      uid, user, hid, household, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, lastUse, memberCount,
+      uid, user, hid, household, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, plansLoaded, lastUse, memberCount,
       // Le scritture non vengono attese: offline Firestore le mette in coda e le invia al ritorno della rete
       saveProfile: (p) => { setDoc(ref('profiles', p.id || uid), stripId(p)).catch(log); },
       // Persona del nucleo senza app (es. un familiare): la modifica chiunque finché nessuno la reclama
@@ -150,6 +151,16 @@ export function DataProvider({ user, children }) {
         const target = profiles.find((p) => p.id === id);
         if (!target || target.claimedBy !== uid) return;
         await updateDoc(ref('profiles', id), { claimedBy: deleteField() }).catch(log);
+      },
+      // Settimane pianificate in anticipo: si scrivono solo se nessuno le ha già create (due telefoni aperti insieme non si sovrascrivono)
+      createWeek: async (weekId, days) => {
+        try { await runTransaction(db, async (tx) => { const r = ref('plans', weekId); if (!(await tx.get(r)).exists()) tx.set(r, { days, auto: true }); }); }
+        catch { /* offline o già creata: si ritenterà */ }
+      },
+      // Dopo un cambio di piano alimentare: le settimane proposte dall'app e mai toccate a mano si rifanno da capo
+      refreshFutureWeeks: async () => {
+        const now = getWeekId(new Date());
+        await Promise.all(plans.filter((p) => p.id >= now && p.auto === true).map((p) => deleteDoc(ref('plans', p.id)).catch(log)));
       },
       deleteProfile: (id) => { deleteDoc(ref('profiles', id)).catch(log); },
       // Impostazioni condivise del nucleo: regole e pasti condivisi
@@ -209,7 +220,7 @@ export function DataProvider({ user, children }) {
         await setDoc(doc(db, 'users', uid), { householdId: fresh.id });
       },
     };
-  }, [uid, user, hid, household, settings, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, lastUse, memberCount]);
+  }, [uid, user, hid, household, settings, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, plansLoaded, lastUse, memberCount]);
 
   if (!hid) return <div className="h-full flex items-center justify-center"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-500" /></div>;
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
@@ -225,7 +236,8 @@ export function useWeekPlan(hid, weekId) {
     return onSnapshot(doc(db, 'households', hid, 'plans', weekId), (s) => setState({ plan: s.exists() ? s.data() : { days: {} }, loaded: true, exists: s.exists() }));
   }, [hid, weekId]);
   const ref = doc(db, 'households', hid, 'plans', weekId);
-  const saveSlot = (day, slot, data) => setDoc(ref, { days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
+  // una modifica a mano toglie la settimana dalle "proposte automatiche": non verrà rifatta da sola
+  const saveSlot = (day, slot, data) => setDoc(ref, { auto: false, days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
   const replaceAll = (days) => setDoc(ref, { days }).catch(console.error);
   const createIfMissing = async (days) => {
     try { await runTransaction(db, async (tx) => { if (!(await tx.get(ref)).exists()) tx.set(ref, { days, auto: true }); }); }

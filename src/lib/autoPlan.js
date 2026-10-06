@@ -34,8 +34,8 @@ const lunchCarb = [
 ];
 const lunchBread = [{ t: 'pane', g: 50, carb: 1, step: 10, d: ALL }, { t: 'pane integrale', g: 50, carb: 1, step: 10, d: ALL }, { t: 'pane senza glutine', g: 50, carb: 1, step: 10, d: ALL, alt: ['glutine'] }];
 const dinnerBread = [{ t: 'pane', g: 40, carb: 1, step: 10, d: ALL }, { t: 'patate', g: 150, carb: 1, w: 2, d: ALL }, { t: 'pane integrale', g: 40, carb: 1, step: 10, d: ALL }, { t: 'pane senza glutine', g: 40, carb: 1, step: 10, d: ALL, alt: ['glutine'] }];
-const protein = (e, diet) => [
-  { t: 'legumi cotti', g: 150, w: diet === 'omnivore' || diet === 'pescetarian' ? 3 : 0, d: ALL },
+const protein = (e, diet, extra = 0) => [
+  { t: 'legumi cotti', g: 150, w: diet === 'omnivore' || diet === 'pescetarian' ? 3 + extra : extra ? 4 + extra : 0, d: ALL },
   { t: 'uova', g: 100, w: Math.round(lerp(e, 2, 3, 4)), d: NOVEG },
   { t: 'pesce', g: 150, w: Math.round(lerp(e, 2, 2, 3)) + (diet === 'pescetarian' ? 1 : 0), d: ['omnivore', 'pescetarian'] },
   { t: 'petto di pollo', g: 100, w: Math.round(lerp(e, 1, 2, 3)), d: ['omnivore'] },
@@ -70,7 +70,7 @@ const kcalOf = (o, s, pf) => {
 const slotGroups = (slot, ctx) => {
   const { diet, intol, e, fruitSlots } = ctx;
   const U = (o) => usable(o, diet, intol);
-  const prot = U(protein(e, diet).map((o) => ({ ...o, prot: 1 })));
+  const prot = U(protein(e, diet, ctx.legumes).map((o) => ({ ...o, prot: 1 })));
   const withFruit = fruitSlots.has(slot) ? [U([FRUIT])] : [];
   switch (slot) {
     case 'Colazione': return [U(dairy), U(breakfastCarb), ...withFruit];
@@ -83,12 +83,12 @@ const slotGroups = (slot, ctx) => {
 };
 
 // eaten: pasti che la persona consuma; restituisce { texts, estKcal, scale }
-export const buildAutoPlan = ({ diet = 'omnivore', intolerances = [], kcal, protein: pg = 65, eaten = SLOTS }) => {
-  const e = clamp(kcal, 1200, 3200);
+export const buildAutoPlan = ({ diet = 'omnivore', intolerances = [], kcal, protein: pg = 65, eaten = SLOTS, tweaks = {} }) => {
+  const e = clamp(kcal * (1 + (tweaks.kcalPct || 0) / 100), 1200, 3200);
   const nFruit = Math.round(lerp(e, 2, 3, 3));
   const order = ['Spuntino 1', 'Spuntino 2', 'Colazione', 'Cena', 'Pranzo'].filter((s) => eaten.includes(s));
   const fruitSlots = new Set(order.slice(0, nFruit));
-  const ctx = { diet, intol: intolerances, e, fruitSlots };
+  const ctx = { diet, intol: intolerances, e, fruitSlots, legumes: tweaks.legumes || 0 };
   const pf = clamp(pg / 65, 0.8, 1.6);
   const oilKcal = 240 + 100; // olio dei condimenti (3 porzioni da 10 ml al giorno) e verdure, che stanno nelle ricette
   const groupsBySlot = Object.fromEntries(eaten.map((s) => [s, slotGroups(s, ctx).filter((g) => g.length)]));

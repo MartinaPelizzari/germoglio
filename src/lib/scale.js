@@ -1,3 +1,4 @@
+import { pieceGrams } from './nutrition.js';
 // Calcolo delle dosi per persona e per pasto.
 //
 // Le ricette sono scritte per UNA porzione di riferimento. Per ogni persona e pasto si può indicare:
@@ -61,19 +62,69 @@ export const normalizeIngredient = (i) => {
   return { name, qty, unit, group: i.group || 'other' };
 };
 
-export const ingredientKey = (i) => `${i.name.toLowerCase().replace(/\s+/g, ' ')}|${i.unit}`;
 
-// Somma ingredienti uguali (stesso nome e unità)
+// Nome "canonico" per riconoscere lo stesso ingrediente scritto in modi diversi: maiuscole, accenti, singolare e plurale,
+// descrizioni che non cambiano cosa si compra ("fresco", "maturo"), parole in ordine diverso.
+const DESCRIPTORS = new Set(['fresco', 'fresca', 'freschi', 'fresche', 'intero', 'intera', 'interi', 'intere', 'maturo', 'matura', 'maturi', 'mature', 'bio', 'biologico', 'biologica', 'di', 'del', 'della', 'dei', 'delle', 'd', 'a', 'al', 'alla', 'e', 'il', 'la', 'le', 'lo', 'un', 'una', 'qb', 'in', 'grattugiato', 'grattugiata', 'polvere', 'congelato', 'congelata', 'congelati', 'congelate', 'lessato', 'lessata', 'lessati', 'lessate']);
+// Varianti che al supermercato sono lo stesso prodotto
+const ALIAS = [[/pepe (nero|macinato|bianco)/g, 'pepe'], [/parmigiano reggiano|grana padano/g, 'parmigiano'], [/latte (parzialmente scremato|scremato|intero)/g, 'latte']];
+export const canonicalName = (name = '') => {
+  const lower = ALIAS.reduce((t, [re, to]) => t.replace(re, to), name.toLowerCase());
+  const words = lower.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9 ]/g, ' ').split(/\s+/)
+    .filter((w) => w && !DESCRIPTORS.has(w))
+    .map((w) => (w.length > 3 && /[aeio]$/.test(w) ? w.slice(0, -1) : w));
+  return words.sort().join(' ');
+};
+
+export const ingredientKey = (i) => `${canonicalName(i.name)}|${i.unit}`;
+
+const SPOON = { cucchiai: 12, cucchiaini: 4 }; // ml (o g) per cucchiaio e cucchiaino
+const UNIT_RANK = ['g', 'ml', 'pz'];
+
+// Somma ingredienti uguali. Lo stesso ingrediente scritto con nomi quasi uguali ("Pomodori", "pomodoro fresco") o con
+// unità diverse (g, ml, cucchiai, pezzi) finisce in una sola riga, quando le unità si possono convertire con ragionevolezza:
+// g e ml si trattano alla pari (1 ml = 1 g), un cucchiaio vale 12, un cucchiaino 4, un pezzo il suo peso medio se noto.
 export const sumIngredients = (lists) => {
-  const acc = new Map();
+  const byName = new Map();
   for (const i of lists.flat()) {
     const n = normalizeIngredient(i);
     if (!n.name) continue;
-    const k = ingredientKey(n);
-    if (!acc.has(k)) acc.set(k, { ...n, key: k });
-    else acc.get(k).qty += n.qty;
+    const cn = canonicalName(n.name);
+    if (!byName.has(cn)) byName.set(cn, { names: new Map(), units: new Map(), group: n.group, cn });
+    const e = byName.get(cn);
+    e.names.set(n.name, (e.names.get(n.name) || 0) + 1);
+    const u = e.units.get(n.unit) || { qty: 0, qb: false };
+    u.qty += n.qty;
+    u.qb = u.qb || n.unit === 'q.b.';
+    e.units.set(n.unit, u);
+    if (e.group === 'other' && n.group !== 'other') e.group = n.group;
   }
-  return [...acc.values()];
+  const out = [];
+  for (const e of byName.values()) {
+    const name = [...e.names].sort((a, b) => b[1] - a[1])[0][0];
+    const units = new Map([...e.units].map(([u, v]) => [u, v.qty]));
+    const mass = units.has('g') || units.has('ml');
+    // cucchiaini in cucchiai; con una quantità in g o ml i cucchiai diventano g o ml
+    if (units.has('cucchiaini') && !mass && units.has('cucchiai')) { units.set('cucchiai', units.get('cucchiai') + units.get('cucchiaini') / 3); units.delete('cucchiaini'); }
+    if (mass) for (const sp of Object.keys(SPOON)) if (units.has(sp)) { units.set('g', (units.get('g') || 0) + units.get(sp) * SPOON[sp]); units.delete(sp); }
+    // i pezzi diventano grammi se si conosce il peso medio e c'è già una quantità in g o ml
+    if (units.has('pz') && (units.has('g') || units.has('ml'))) {
+      const w = pieceGrams(name) ?? 100; // peso medio di un pezzo: se non lo conosciamo, 100 g
+      { units.set('g', (units.get('g') || 0) + units.get('pz') * w); units.delete('pz'); }
+    }
+    // g e ml insieme: una riga sola, nell'unità con più quantità
+    if (units.has('g') && units.has('ml')) {
+      const keep = units.get('ml') > units.get('g') ? 'ml' : 'g';
+      const other = keep === 'g' ? 'ml' : 'g';
+      units.set(keep, units.get(keep) + units.get(other));
+      units.delete(other);
+    }
+    // "q.b." insieme a una quantità vera: resta la quantità
+    if (units.size > 1 && units.has('q.b.')) units.delete('q.b.');
+    const ordered = [...units].sort((a, b) => (UNIT_RANK.indexOf(a[0]) + 1 || 9) - (UNIT_RANK.indexOf(b[0]) + 1 || 9));
+    for (const [unit, qty] of ordered) out.push({ name, qty, unit, group: e.group, key: `${e.cn}|${unit}` });
+  }
+  return out;
 };
 
 export const formatQty = (qty, unit) => {
