@@ -19,7 +19,8 @@ const members = [
   { id: 'u3', name: 'Sorella', diet: 'omnivore', emoji: '😎', color: '#6366f1', intolerances: ['glutine'], goals: [], meals: {}, createdAt: '3' },
 ];
 const rules = [];
-const store = { members, plan: { days: generateWeek(recipes, { members, rules }) }, listeners: new Set(), favorites: [], pantry: [], extras: [] };
+const store = { members, plan: { days: generateWeek(recipes, { members, rules }) }, listeners: new Set(), favorites: [], pantry: [], extras: [], plans: [] };
+window.__store = store; window.__creates = 0;
 const emit = () => store.listeners.forEach((l) => l());
 const useStore = () => { const [, f] = React.useReducer((x) => x + 1, 0); React.useEffect(() => { store.listeners.add(f); return () => store.listeners.delete(f); }, []); };
 
@@ -36,10 +37,10 @@ export function DataProvider({ children }) {
   useStore();
   const value = React.useMemo(() => ({
     uid: 'u1', user: { uid: 'u1', displayName: 'Martina' }, hid: 'h1', household: { members: store.members.slice(), rules, sharedSlots: ['Pranzo', 'Cena'] }, me: store.members[0], recipes, recipeMap: new Map(recipes.map((r) => [r.id, r])),
-    userRecipes: [], prefs: { favorites: store.favorites }, favorites: new Set(store.favorites), pantry: store.pantry, plans: [], plansLoaded: false, createWeek() {}, refreshFutureWeeks() {}, lastUse: new Map(), memberCount: 3,
+    userRecipes: [], prefs: { favorites: store.favorites }, favorites: new Set(store.favorites), pantry: store.pantry, plans: store.plans, plansLoaded: true, createWeek: async (id, days, sig) => { window.__creates++; const cur = store.plans.find((p) => p.id === id); if (!cur) store.plans = [...store.plans, { id, days, auto: true, sig }]; else if (cur.auto === true && cur.sig !== sig) store.plans = store.plans.map((p) => (p.id === id ? { id, days, auto: true, sig } : p)); emit(); }, lastUse: new Map(), memberCount: 3,
     saveProfile: (p) => { store.members = store.members.map((m) => (m.id === p.id ? { ...m, ...p } : m)); emit(); }, saveRules() {}, saveSettings() {}, saveRecipe() {}, deleteRecipe() {}, toggleFavorite: (id) => { store.favorites = store.favorites.includes(id) ? store.favorites.filter((x) => x !== id) : [...store.favorites, id]; emit(); },
     savePantryItem: (i) => { store.pantry = [...store.pantry, { ...i, id: String(Math.random()) }]; emit(); }, deletePantryItem: (id) => { store.pantry = store.pantry.filter((p) => p.id !== id); emit(); },
     uid2: 1, overrideIds: [], restoreAllSeeds() {}, restoreRecipe() {}, addManagedProfile: () => { const id = 'p-' + Math.random().toString(36).slice(2, 7); store.members = [...store.members, { id, name: '', diet: 'omnivore', emoji: '🙂', color: '#10b981', managed: true, intolerances: [], goals: [], meals: {}, createdAt: String(Date.now()) }]; emit(); return id; }, claimProfile() {}, deleteProfile() {}, createInvite: async () => 'ABCD2345', joinHousehold: async () => {}, leaveHousehold: async () => {},
-  }), [store.favorites.length, store.pantry.length, store.members]); // eslint-disable-line
+  }), [store.favorites.length, store.pantry.length, store.members, store.plans]); // eslint-disable-line
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

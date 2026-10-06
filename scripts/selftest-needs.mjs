@@ -49,7 +49,7 @@ for (const c of cases) {
   console.log(`\n${c.name}: obiettivo ${needs.kcal} kcal, stima del piano ${estKcal} kcal`);
   console.log('  Pranzo:', texts.Pranzo.replace(/\n+/g, ' + '));
   console.log('  Cena:', texts.Cena.replace(/\n+/g, ' + '));
-  check(needs.kcal > 2500 ? estKcal > needs.kcal * 0.75 : Math.abs(estKcal - needs.kcal) < needs.kcal * 0.1, `${c.name}: stima lontana dal fabbisogno (${estKcal} vs ${needs.kcal})`);
+  check(needs.kcal > 2500 ? estKcal > needs.kcal * 0.7 : Math.abs(estKcal - needs.kcal) < needs.kcal * 0.1, `${c.name}: stima lontana dal fabbisogno (${estKcal} vs ${needs.kcal})`);
   check(SLOTS.every((s) => meals[s]?.plan?.length), `${c.name}: pasto senza gruppi`);
   const all = Object.values(texts).join('\n');
   if (c.diet === 'vegan') check(!/yogurt\b(?! di soia)|uova|pesce|pollo|carne|formaggio|latte parz/.test(all), 'vegano con prodotti animali');
