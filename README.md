@@ -86,7 +86,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 ## Settimane pianificate in anticipo
 
 - Non c'è più "Proponi la settimana": l'app tiene sempre pianificate le prossime 16 settimane (circa 4 mesi, `src/hooks/useAutoWeeks.js`). Quando ne passa una, ne aggiunge una in fondo, tenendo conto dei piatti già pianificati per non ripeterli.
-- Le settimane proposte dall'app sono segnate `auto`; una modifica a mano toglie il segno e la settimana non viene più toccata. Se cambi il piano alimentare di una persona (o dieta, intolleranze, pasti visibili), alla chiusura del profilo le settimane `auto` si rifanno da sole.
+- Le settimane proposte dall'app sono segnate `auto` e portano l'impronta (`sig`) di persone, diete, piani, pasti condivisi e regole con cui sono state fatte: una modifica a mano toglie il segno `auto` e la settimana non viene più toccata; se l'impronta cambia (per esempio dopo aver cambiato il piano di qualcuno), le settimane `auto` si rifanno da sole, una ogni pochi secondi. Ogni settimana si tenta una sola volta per sessione, così un errore di scrittura non provoca cicli.
 - Un singolo pasto si può comunque rifare con "Proponi" sul pasto.
 - Nei pasti individuali si vede solo chi li mangia; i pasti condivisi mostrano tutti. La lista della spesa è sempre per tutto il nucleo, anche per i pasti individuali di ognuno.
 

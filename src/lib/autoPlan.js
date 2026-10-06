@@ -76,7 +76,7 @@ const slotGroups = (slot, ctx) => {
     case 'Colazione': return [U(dairy), U(breakfastCarb), ...withFruit];
     case 'Spuntino 1': return [U([FRUIT])];
     case 'Spuntino 2': return [U([FRUIT, YOGURT, SOY_YOGURT, NUTS])];
-    case 'Pranzo': return [U(lunchCarb), U([VEG]), U(lunchBread), ...withFruit];
+    case 'Pranzo': return [U(lunchCarb), prot, U([VEG]), ...withFruit];
     case 'Cena': return [prot, U([VEG]), U(dinnerBread), ...withFruit];
     default: return [];
   }

@@ -25,8 +25,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const { hid, household, me, recipes, recipeMap, favorites, plans, saveRecipe } = useData();
   const personal = viewMode === 'me' && me;
   const weekId = getWeekId(weekDate);
-  const { plan, loaded, exists, saveSlot, replaceAll, createIfMissing } = useWeekPlan(hid, weekId);
-  const autoDone = React.useRef(new Set());
+  const { plan, saveSlot, replaceAll } = useWeekPlan(hid, weekId);
   const [picker, setPicker] = React.useState(null); // { slot, action, index, pair, group }
   const [menu, setMenu] = React.useState(null);
   const [view, setView] = React.useState(null);
@@ -39,14 +38,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const [joinFor, setJoinFor] = React.useState(null); // pasto individuale a cui aggiungere familiari
   const [modeFor, setModeFor] = React.useState(null); // { slot, mode }: cambio tra pasto condiviso e individuale
   const recency = React.useMemo(() => buildRecency(plans, weekId), [plans, weekId]);
-
-  // La settimana si precompila da sola la prima volta che la apri (oggi e settimane future), senza premere nulla
-  React.useEffect(() => {
-    if (!loaded || exists || autoDone.current.has(weekId) || !me || !recipes.length) return;
-    if (weekId < getWeekId(new Date())) return; // niente settimane passate
-    autoDone.current.add(weekId);
-    createIfMissing(generateWeek(recipes, household, { favorites, recency }));
-  }, [loaded, exists, weekId, me, recipes.length]);
 
   const data = (slot) => plan.days?.[dayIndex]?.[slot];
   const items = (slot) => data(slot)?.items || [];

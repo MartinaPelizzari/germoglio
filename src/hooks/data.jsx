@@ -152,15 +152,16 @@ export function DataProvider({ user, children }) {
         if (!target || target.claimedBy !== uid) return;
         await updateDoc(ref('profiles', id), { claimedBy: deleteField() }).catch(log);
       },
-      // Settimane pianificate in anticipo: si scrivono solo se nessuno le ha già create (due telefoni aperti insieme non si sovrascrivono)
-      createWeek: async (weekId, days) => {
-        try { await runTransaction(db, async (tx) => { const r = ref('plans', weekId); if (!(await tx.get(r)).exists()) tx.set(r, { days, auto: true }); }); }
-        catch { /* offline o già creata: si ritenterà */ }
-      },
-      // Dopo un cambio di piano alimentare: le settimane proposte dall'app e mai toccate a mano si rifanno da capo
-      refreshFutureWeeks: async () => {
-        const now = getWeekId(new Date());
-        await Promise.all(plans.filter((p) => p.id >= now && p.auto === true).map((p) => deleteDoc(ref('plans', p.id)).catch(log)));
+      // Settimane pianificate in anticipo: si scrivono solo se non esistono o se sono ancora proposte automatiche da aggiornare
+      // (una settimana toccata a mano non si sovrascrive mai; due telefoni aperti insieme non si pestano i piedi)
+      createWeek: async (weekId, days, sig) => {
+        try {
+          await runTransaction(db, async (tx) => {
+            const r = ref('plans', weekId);
+            const snap = await tx.get(r);
+            if (!snap.exists() || (snap.data().auto === true && snap.data().sig !== sig)) tx.set(r, { days, auto: true, sig });
+          });
+        } catch { /* offline o già creata: nessun tentativo ripetuto */ }
       },
       deleteProfile: (id) => { deleteDoc(ref('profiles', id)).catch(log); },
       // Impostazioni condivise del nucleo: regole e pasti condivisi

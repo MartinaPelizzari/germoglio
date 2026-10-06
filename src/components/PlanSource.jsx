@@ -6,7 +6,6 @@ import { buildAutoPlan } from '../lib/autoPlan.js';
 import { SLOTS } from '../lib/meals.js';
 import { mealOf } from '../lib/scale.js';
 import { mealsFromTexts } from './PlanImport.jsx';
-import { useData } from '../hooks/data.jsx';
 
 // Riepilogo di fabbisogni e avvertenze, usato in onboarding e nel profilo
 export function NeedsSummary({ needs, estKcal }) {
@@ -38,7 +37,6 @@ export const autoPlanFor = (member) => {
 // "Hai un piano alimentare o vuoi che creiamo insieme la dieta giusta per te?"
 // Con il piano della nutrizionista non si fanno domande: il piano è già fatto su misura.
 export default function PlanSource({ member, onChange }) {
-  const { refreshFutureWeeks } = useData();
   const source = member.planSource || '';
   const [ask, setAsk] = React.useState(false);
   const body = member.body || { workouts: 0 };
@@ -47,7 +45,6 @@ export default function PlanSource({ member, onChange }) {
   const apply = () => {
     if (!result?.texts) return;
     onChange({ ...member, body, autoPlan: true, meals: mealsFromTexts(result.texts, member.meals) });
-    refreshFutureWeeks();
     setAsk(false);
   };
   return (

@@ -14,7 +14,7 @@ const TONE = { emergency: 'bg-red-50 text-red-800', urgent: 'bg-red-50 text-red-
 
 // "Ho una segnalazione da fare": sintomo, segnali d'allarme, da quanto tempo; poi consigli e, se è il caso, un ritocco al piano
 export function ReportSheet({ symptom: initial, onClose }) {
-  const { me, saveProfile, refreshFutureWeeks } = useData();
+  const { me, saveProfile } = useData();
   const [symptom, setSymptom] = React.useState(initial || null);
   const [flags, setFlags] = React.useState([]);
   const [weeks, setWeeks] = React.useState(0);
@@ -38,7 +38,6 @@ export function ReportSheet({ symptom: initial, onClose }) {
     const { texts } = autoPlanFor(updated);
     if (!texts) return;
     saveProfile({ ...updated, meals: mealsFromTexts(texts, updated.meals), reports: me.reports || [] });
-    refreshFutureWeeks();
     setApplied(true);
     setAsk(false);
   };
