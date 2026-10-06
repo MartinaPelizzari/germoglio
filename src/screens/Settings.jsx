@@ -5,6 +5,7 @@ import { auth } from '../firebase.js';
 import { useData } from '../hooks/data.jsx';
 import { Confirm, Sheet } from '../components/ui.jsx';
 import { VisibleSlots } from '../components/SlotPicker.jsx';
+import BalanceMode from '../components/BalanceMode.jsx';
 import { convertLegacyRecipe } from '../lib/legacy.js';
 
 export default function Settings({ onClose }) {
@@ -56,7 +57,7 @@ export default function Settings({ onClose }) {
     <Sheet title="Impostazioni" onClose={onClose}>
       <div className="p-5 space-y-3">
         <p className="text-sm text-slate-500">Accesso come <b className="text-slate-700">{user.email}</b></p>
-        {me && <div className="bg-slate-50 rounded-2xl p-4"><VisibleSlots member={me} onChange={saveProfile} /></div>}
+        {me && <div className="bg-slate-50 rounded-2xl p-4 space-y-5"><VisibleSlots member={me} onChange={saveProfile} /><BalanceMode member={me} onChange={saveProfile} /></div>}
         <div className="bg-slate-50 rounded-2xl p-4 space-y-3">
           <h4 className="font-display font-bold text-slate-800 flex items-center gap-2"><Users className="w-5 h-5 text-brand-600" /> Nucleo condiviso</h4>
           <p className="text-xs text-slate-500">{memberCount > 1 ? `Questo nucleo ha ${memberCount} account: vedono e modificano gli stessi menù, ricette, lista della spesa e dispensa.` : 'Per ora solo il tuo account. Crea un codice di invito per condividere menù, spesa e dispensa con altre persone.'}</p>

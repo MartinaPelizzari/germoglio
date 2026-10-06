@@ -7,7 +7,7 @@ import { readPlanFile } from '../lib/pdfLoad.js';
 
 // Carica il piano da un PDF (o incollando il testo), lo legge e lo mostra pasto per pasto da controllare e correggere.
 // Quando l'utente conferma, onApply riceve { pasto: testo }.
-export default function PlanImport({ initial = {}, onApply, applyLabel = 'Usa questo piano', onSkip }) {
+export default function PlanImport({ initial = {}, onApply, applyLabel = 'Usa questo piano', onSkip, skipLabel, hideUpload = false }) {
   const [texts, setTexts] = React.useState(initial);
   const [paste, setPaste] = React.useState('');
   const [busy, setBusy] = React.useState(false);
@@ -41,7 +41,7 @@ export default function PlanImport({ initial = {}, onApply, applyLabel = 'Usa qu
 
   return (
     <div className="space-y-4">
-      <div className="bg-slate-50 rounded-2xl p-4 space-y-3">
+      {!hideUpload && <div className="bg-slate-50 rounded-2xl p-4 space-y-3">
         <button onClick={() => fileRef.current?.click()} disabled={busy} className="w-full py-3 bg-brand-600 text-white font-bold rounded-xl flex items-center justify-center gap-2 active:scale-95 disabled:opacity-60"><FileText className="w-5 h-5" /> {busy ? 'Leggo il PDF...' : 'Carica il PDF del piano'}</button>
         <input ref={fileRef} type="file" accept="application/pdf,.pdf" className="hidden" onChange={onFile} />
         <p className="text-[11px] text-slate-400 flex items-start gap-1.5"><ShieldCheck className="w-4 h-4 shrink-0 text-brand-600" /> Il PDF viene letto sul tuo telefono e non viene inviato a nessuno. Se il file è una scansione (un'immagine) non si può leggere: incolla il testo.</p>
@@ -53,7 +53,7 @@ export default function PlanImport({ initial = {}, onApply, applyLabel = 'Usa qu
           </div>
         </details>
         {msg && <p className="text-xs text-brand-700">{msg}</p>}
-      </div>
+      </div>}
 
       {found.length > 0 && (
         <div className="space-y-3">
@@ -66,7 +66,7 @@ export default function PlanImport({ initial = {}, onApply, applyLabel = 'Usa qu
           <button onClick={() => onApply(Object.fromEntries(found.map((s) => [s, texts[s]])))} className="w-full py-3.5 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95">{applyLabel}</button>
         </div>
       )}
-      {onSkip && <button onClick={onSkip} className="w-full py-2 text-sm font-semibold text-slate-400">{found.length ? 'Salta, lo faccio dopo' : 'Salta per ora'}</button>}
+      {onSkip && <button onClick={onSkip} className="w-full py-2 text-sm font-semibold text-slate-400">{skipLabel || (found.length ? 'Salta, lo faccio dopo' : 'Salta per ora')}</button>}
     </div>
   );
 }

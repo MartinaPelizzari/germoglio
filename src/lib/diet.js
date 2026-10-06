@@ -1,4 +1,4 @@
-import { eatersOf, mealOf, slotPeople } from './scale.js';
+import { eatersOf, mealOf, mealOfItem, slotPeople } from './scale.js';
 import { allergenLabel, recipeAllergens } from './allergens.js';
 import { planViolations } from './dietPlan.js';
 
@@ -78,7 +78,7 @@ export const fits = (recipe, c, { ignoreTakeaway = false } = {}) =>
   (ignoreTakeaway || !c.takeaway || recipe.takeaway);
 
 // Motivi per cui un piatto già nel piano non va bene a qualcuno (per mostrare un avviso)
-export const problemsFor = (recipe, household, day, slot, eaters) => {
+export const problemsFor = (recipe, household, day, slot, eaters, item) => {
   const rules = rulesFor(household, day, slot);
   const cap = ruleCap(rules);
   const out = [];
@@ -88,7 +88,7 @@ export const problemsFor = (recipe, household, day, slot, eaters) => {
     else {
       const bad = (m.intolerances || []).filter((a) => recipeAllergens(recipe).has(a));
       if (bad.length) out.push(`${m.name}: contiene ${bad.map((a) => allergenLabel(a).toLowerCase()).join(', ')}`);
-      const off = planViolations(recipe, mealOf(m, slot).plan);
+      const off = planViolations(recipe, mealOfItem(m, slot, item).plan);
       if (off.length) out.push(`${m.name}: fuori dal piano (${[...new Set(off)].slice(0, 3).join(', ').toLowerCase()})`);
     }
   }

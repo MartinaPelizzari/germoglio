@@ -1,0 +1,1378 @@
+[
+ {
+  "name": "patate",
+  "kcal": 72.0,
+  "protein": 2.0,
+  "carbs": 16.0,
+  "fat": 0.1,
+  "fiber": 1.8,
+  "sugars": 1.0,
+  "satFat": null,
+  "iron": 0.6,
+  "calcium": 10.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Patate, crude (cod. 006500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006500"
+  }
+ },
+ {
+  "name": "aglio",
+  "kcal": 53.0,
+  "protein": 8.4,
+  "carbs": 1.0,
+  "fat": 0.8,
+  "fiber": 4.3,
+  "sugars": 1.0,
+  "satFat": 0.15,
+  "iron": 1.2,
+  "calcium": 15.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Aglio (cod. 005000)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005000"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "olio extravergine d'oliva",
+  "kcal": 899.0,
+  "protein": 0.0,
+  "carbs": 0.0,
+  "fat": 99.9,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 15.3,
+  "iron": 0.2,
+  "calcium": 0.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Olio di oliva extra vergine (cod. 009210)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/009210"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "tofu",
+  "kcal": 144,
+  "protein": 17.3,
+  "carbs": 2.78,
+  "fat": 8.72,
+  "fiber": 2.3,
+  "sugars": null,
+  "satFat": 1.26,
+  "iron": 2.66,
+  "calcium": 683,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 172475: Tofu, raw, firm, prepared with calcium sulfate",
+   "url": "https://fdc.nal.usda.gov/food-details/172475/nutrients"
+  },
+  "note": "Tofu crudo, compatto (firm)"
+ },
+ {
+  "name": "insalata mista",
+  "kcal": 22.0,
+  "protein": 1.8,
+  "carbs": 2.2,
+  "fat": 0.4,
+  "fiber": 1.5,
+  "sugars": 2.2,
+  "satFat": null,
+  "iron": 0.8,
+  "calcium": 45.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Lattuga, fresca (cod. 005410)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005410"
+  },
+  "note": "Sostituzione: lattuga fresca (CREA), come equivalente di insalata mista"
+ },
+ {
+  "name": "lenticchie cotte",
+  "kcal": 109.0,
+  "protein": 6.9,
+  "carbs": 16.3,
+  "fat": 0.4,
+  "fiber": 8.3,
+  "sugars": 0.7,
+  "satFat": null,
+  "iron": 3.0,
+  "calcium": 29.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Lenticchie, secche, cotte, bollite (cod. 004505)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004505"
+  },
+  "note": "Lenticchie secche cotte, bollite"
+ },
+ {
+  "name": "ricotta",
+  "kcal": 146.0,
+  "protein": 8.8,
+  "carbs": 3.5,
+  "fat": 10.9,
+  "fiber": 0.0,
+  "sugars": 3.5,
+  "satFat": 7.41,
+  "iron": 0.4,
+  "calcium": 295.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Ricotta di vacca (cod. 166820)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/166820"
+  },
+  "note": "Ricotta di vacca. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "pomodori",
+  "kcal": 23.0,
+  "protein": 1.0,
+  "carbs": 3.5,
+  "fat": 0.2,
+  "fiber": 2.0,
+  "sugars": 3.5,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 9.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pomodori, maturi, freschi (cod. 006610)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006610"
+  },
+  "note": "Pomodori maturi freschi"
+ },
+ {
+  "name": "yogurt di soia naturale",
+  "kcal": 72.0,
+  "protein": 5.0,
+  "carbs": 3.9,
+  "fat": 4.2,
+  "fiber": null,
+  "sugars": 3.9,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Soia, yogurt (cod. 509030)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/509030"
+  },
+  "note": "Voce CREA 'Soia, yogurt'"
+ },
+ {
+  "name": "sedano",
+  "kcal": 23.0,
+  "protein": 2.3,
+  "carbs": 2.4,
+  "fat": 0.2,
+  "fiber": 1.6,
+  "sugars": 2.2,
+  "satFat": null,
+  "iron": 0.5,
+  "calcium": 31.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Sedano, crudo (cod. 005680)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005680"
+  }
+ },
+ {
+  "name": "yogurt greco",
+  "kcal": 115.0,
+  "protein": 6.4,
+  "carbs": 2.0,
+  "fat": 9.1,
+  "fiber": 0.0,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 150.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Yogurt greco, da latte intero (cod. 150020)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/150020"
+  },
+  "note": "Yogurt greco da latte intero"
+ },
+ {
+  "name": "rucola",
+  "kcal": 30.0,
+  "protein": 2.6,
+  "carbs": 3.9,
+  "fat": 0.3,
+  "fiber": 0.9,
+  "sugars": 3.9,
+  "satFat": null,
+  "iron": 5.2,
+  "calcium": 309.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Rucola o Ruchetta, fresca (cod. 005460)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005460"
+  }
+ },
+ {
+  "name": "quinoa",
+  "kcal": 376.0,
+  "protein": 15.4,
+  "carbs": 57.8,
+  "fat": 8.1,
+  "fiber": 12.2,
+  "sugars": 5.3,
+  "satFat": 2.72,
+  "iron": 3.6,
+  "calcium": 46.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Quinoa, cruda (cod. 000096)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000096"
+  },
+  "note": "Quinoa cruda (peso a secco). Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "uovo",
+  "kcal": 128.0,
+  "protein": 12.4,
+  "carbs": null,
+  "fat": 8.7,
+  "fiber": 0.0,
+  "sugars": null,
+  "satFat": 3.96,
+  "iron": 1.5,
+  "calcium": 48.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Uova di gallina, intero (cod. 181100)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/181100"
+  },
+  "note": "Uovo di gallina intero crudo; CREA indica tracce (tr) per carboidrati e zuccheri, riportati come null. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "pasta corta",
+  "kcal": 341.0,
+  "protein": 13.5,
+  "carbs": 72.7,
+  "fat": 1.2,
+  "fiber": 1.7,
+  "sugars": 2.2,
+  "satFat": 0.25,
+  "iron": 1.4,
+  "calcium": 22.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pasta di semola (cod. 000800)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000800"
+  },
+  "note": "Pasta di semola secca, cruda. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "banana",
+  "kcal": 76.0,
+  "protein": 1.2,
+  "carbs": 17.4,
+  "fat": 0.3,
+  "fiber": 1.8,
+  "sugars": 14.8,
+  "satFat": null,
+  "iron": 0.8,
+  "calcium": 7.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Banane, fresche (cod. 007510)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007510"
+  }
+ },
+ {
+  "name": "fettine di manzo",
+  "kcal": 103.0,
+  "protein": 21.8,
+  "carbs": 0.0,
+  "fat": 1.8,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.7,
+  "iron": 1.8,
+  "calcium": 4.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Bovino adulto o vitellone, fesa, crudo (cod. 101160)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/101160"
+  },
+  "note": "Sostituzione: bovino adulto, fesa, crudo. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "hummus",
+  "kcal": 237,
+  "protein": 7.78,
+  "carbs": 15.0,
+  "fat": 17.8,
+  "fiber": 5.5,
+  "sugars": 0.62,
+  "satFat": 2.56,
+  "iron": 2.54,
+  "calcium": 47.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 174289: Hummus, commercial",
+   "url": "https://fdc.nal.usda.gov/food-details/174289/nutrients"
+  }
+ },
+ {
+  "name": "fagioli neri cotti",
+  "kcal": 132,
+  "protein": 8.86,
+  "carbs": 23.7,
+  "fat": 0.54,
+  "fiber": 8.7,
+  "sugars": 0.32,
+  "satFat": 0.139,
+  "iron": 2.1,
+  "calcium": 27.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 173735: Beans, black, mature seeds, cooked, boiled, without salt",
+   "url": "https://fdc.nal.usda.gov/food-details/173735/nutrients"
+  },
+  "note": "Fagioli neri cotti, bolliti, senza sale"
+ },
+ {
+  "name": "spaghetti",
+  "kcal": 341.0,
+  "protein": 13.5,
+  "carbs": 72.7,
+  "fat": 1.2,
+  "fiber": 1.7,
+  "sugars": 2.2,
+  "satFat": 0.25,
+  "iron": 1.4,
+  "calcium": 22.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pasta di semola (cod. 000800)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000800"
+  },
+  "note": "Sostituzione: pasta di semola secca, cruda. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "farina di ceci",
+  "kcal": 387,
+  "protein": 22.4,
+  "carbs": 57.8,
+  "fat": 6.69,
+  "fiber": 10.8,
+  "sugars": 10.8,
+  "satFat": 0.693,
+  "iron": 4.86,
+  "calcium": 45.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 174288: Chickpea flour (besan)",
+   "url": "https://fdc.nal.usda.gov/food-details/174288/nutrients"
+  }
+ },
+ {
+  "name": "lenticchie secche",
+  "kcal": 319.0,
+  "protein": 22.7,
+  "carbs": 51.1,
+  "fat": 1.0,
+  "fiber": 13.8,
+  "sugars": 1.8,
+  "satFat": 0.18,
+  "iron": 8.0,
+  "calcium": 57.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Lenticchie, secche (cod. 004500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004500"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "fesa di tacchino",
+  "kcal": 107.0,
+  "protein": 24.0,
+  "carbs": 0.0,
+  "fat": 1.2,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.45,
+  "iron": 0.8,
+  "calcium": 8.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Tacchino, fesa, crudo (cod. 106850)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/106850"
+  },
+  "note": "Tacchino, fesa, crudo. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "manzo per spezzatino",
+  "kcal": 145.0,
+  "protein": 20.5,
+  "carbs": 0.0,
+  "fat": 7.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 2.56,
+  "iron": 1.3,
+  "calcium": 10.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Bovino adulto o vitellone, tagli anteriori, crudo (cod. 101120)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/101120"
+  },
+  "note": "Sostituzione: bovino adulto, tagli anteriori, crudo. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "riso integrale",
+  "kcal": 341.0,
+  "protein": 7.5,
+  "carbs": 77.4,
+  "fat": 1.9,
+  "fiber": 1.9,
+  "sugars": 1.2,
+  "satFat": null,
+  "iron": 1.6,
+  "calcium": 32.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Riso, integrale (cod. 000110)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000110"
+  },
+  "note": "Riso integrale crudo (peso a secco)"
+ },
+ {
+  "name": "pesce misto (merluzzo e cozze)",
+  "kcal": 78.0,
+  "protein": 14.3,
+  "carbs": 1.7,
+  "fat": 1.5,
+  "fiber": 0.0,
+  "sugars": 0.1,
+  "satFat": 0.44,
+  "iron": 3.2,
+  "calcium": 56.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Merluzzo o nasello (cod. 121410) + Cozza o mitilo (cod. 127120)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/121410"
+  },
+  "note": "Sostituzione: media 50/50 di merluzzo o nasello (CREA 121410) e cozza o mitilo (CREA 127120); le proporzioni reali nella ricetta non sono note. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali. Seconda fonte: https://www.alimentinutrizione.it/tabelle-nutrizionali/127120"
+ },
+ {
+  "name": "cetrioli",
+  "kcal": 16.0,
+  "protein": 0.7,
+  "carbs": 1.8,
+  "fat": 0.5,
+  "fiber": 0.8,
+  "sugars": 1.8,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 16.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cetrioli, freschi (cod. 005220)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005220"
+  }
+ },
+ {
+  "name": "arrosto di vitello",
+  "kcal": 107.0,
+  "protein": 20.7,
+  "carbs": 0.0,
+  "fat": 2.7,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 1.21,
+  "iron": 2.3,
+  "calcium": 14.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Vitello, filetto, crudo (cod. 101520)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/101520"
+  },
+  "note": "Sostituzione: vitello, filetto, crudo (unico taglio di vitello in CREA). Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "gnocchi di patate",
+  "kcal": 164.0,
+  "protein": 3.9,
+  "carbs": 37.9,
+  "fat": 0.3,
+  "fiber": 1.9,
+  "sugars": 1.4,
+  "satFat": null,
+  "iron": 0.6,
+  "calcium": 14.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Gnocchi di patate, crudi (cod. 006590)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006590"
+  },
+  "note": "Gnocchi di patate crudi"
+ },
+ {
+  "name": "cipollotto",
+  "kcal": 32,
+  "protein": 1.83,
+  "carbs": 7.34,
+  "fat": 0.19,
+  "fiber": 2.6,
+  "sugars": 2.33,
+  "satFat": 0.032,
+  "iron": 1.48,
+  "calcium": 72.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170005: Onions, spring or scallions (includes tops and bulb), raw",
+   "url": "https://fdc.nal.usda.gov/food-details/170005/nutrients"
+  },
+  "note": "Cipollotto (spring onion) con parte verde, crudo"
+ },
+ {
+  "name": "panino integrale",
+  "kcal": 224.0,
+  "protein": 8.5,
+  "carbs": 44.1,
+  "fat": 1.3,
+  "fiber": 6.5,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 2.5,
+  "calcium": 25.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane di tipo integrale (cod. 000550)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000550"
+  },
+  "note": "Sostituzione: pane di tipo integrale"
+ },
+ {
+  "name": "timo",
+  "kcal": 101,
+  "protein": 5.56,
+  "carbs": 24.4,
+  "fat": 1.68,
+  "fiber": 14.0,
+  "sugars": null,
+  "satFat": 0.467,
+  "iron": 17.4,
+  "calcium": 405,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 173470: Thyme, fresh",
+   "url": "https://fdc.nal.usda.gov/food-details/173470/nutrients"
+  },
+  "note": "Timo fresco"
+ },
+ {
+  "name": "fichi freschi",
+  "kcal": 63.0,
+  "protein": 0.9,
+  "carbs": 14.2,
+  "fat": 0.2,
+  "fiber": 2.0,
+  "sugars": 14.2,
+  "satFat": null,
+  "iron": 0.5,
+  "calcium": 43.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fichi, freschi (cod. 007050)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007050"
+  }
+ },
+ {
+  "name": "fettine di petto di tacchino",
+  "kcal": 107.0,
+  "protein": 24.0,
+  "carbs": 0.0,
+  "fat": 1.2,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.45,
+  "iron": 0.8,
+  "calcium": 8.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Tacchino, fesa, crudo (cod. 106850)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/106850"
+  },
+  "note": "Sostituzione: tacchino, fesa (petto), crudo. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "fesa di vitello a fette",
+  "kcal": 107.0,
+  "protein": 20.7,
+  "carbs": 0.0,
+  "fat": 2.7,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 1.21,
+  "iron": 2.3,
+  "calcium": 14.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Vitello, filetto, crudo (cod. 101520)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/101520"
+  },
+  "note": "Sostituzione: vitello, filetto, crudo (unico taglio di vitello in CREA). Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "zucca cotta",
+  "kcal": 29.0,
+  "protein": 1.1,
+  "carbs": 3.5,
+  "fat": 0.1,
+  "fiber": 5.5,
+  "sugars": 2.5,
+  "satFat": null,
+  "iron": 0.9,
+  "calcium": 20.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Zucca gialla, fresca (cod. 005720)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005720"
+  },
+  "note": "Sostituzione: zucca gialla fresca (cruda); non c'e' la voce cotta in CREA"
+ },
+ {
+  "name": "patata dolce",
+  "kcal": 86,
+  "protein": 1.57,
+  "carbs": 20.1,
+  "fat": 0.05,
+  "fiber": 3.0,
+  "sugars": 4.18,
+  "satFat": 0.018,
+  "iron": 0.61,
+  "calcium": 30.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168482: Sweet potato, raw, unprepared",
+   "url": "https://fdc.nal.usda.gov/food-details/168482/nutrients"
+  },
+  "note": "Patata dolce cruda"
+ },
+ {
+  "name": "vino rosso",
+  "kcal": 75.0,
+  "protein": null,
+  "carbs": null,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": null,
+  "satFat": 0.0,
+  "iron": 1.0,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Bevanda alcolica, Vino da pasto rosso (cod. 405020)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/405020"
+  },
+  "note": "Vino da pasto rosso. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "pane raffermo",
+  "kcal": 268.0,
+  "protein": 8.1,
+  "carbs": 59.5,
+  "fat": 0.5,
+  "fiber": 3.8,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 17.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane bianco (cod. 000530)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000530"
+  },
+  "note": "Sostituzione: pane bianco"
+ },
+ {
+  "name": "tagliatelle all'uovo",
+  "kcal": 346.0,
+  "protein": 13.0,
+  "carbs": 71.0,
+  "fat": 2.4,
+  "fiber": 3.2,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 2.1,
+  "calcium": 22.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pasta all'uovo, secca (cod. 000870)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000870"
+  },
+  "note": "Pasta all'uovo secca, cruda"
+ },
+ {
+  "name": "pane casereccio",
+  "kcal": 268.0,
+  "protein": 8.1,
+  "carbs": 59.5,
+  "fat": 0.5,
+  "fiber": 3.8,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 17.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane bianco (cod. 000530)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000530"
+  },
+  "note": "Sostituzione: pane bianco"
+ },
+ {
+  "name": "riso parboiled",
+  "kcal": 338.0,
+  "protein": 7.4,
+  "carbs": 81.3,
+  "fat": 0.3,
+  "fiber": 0.5,
+  "sugars": 0.3,
+  "satFat": null,
+  "iron": 2.9,
+  "calcium": 60.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Riso, parboiled (cod. 000120)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000120"
+  },
+  "note": "Riso parboiled crudo (peso a secco)"
+ },
+ {
+  "name": "semi di chia",
+  "kcal": 486,
+  "protein": 16.5,
+  "carbs": 42.1,
+  "fat": 30.7,
+  "fiber": 34.4,
+  "sugars": null,
+  "satFat": 3.33,
+  "iron": 7.72,
+  "calcium": 631,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170554: Seeds, chia seeds, dried",
+   "url": "https://fdc.nal.usda.gov/food-details/170554/nutrients"
+  }
+ },
+ {
+  "name": "farina di mais per polenta istantanea",
+  "kcal": 341.0,
+  "protein": 8.7,
+  "carbs": 73.5,
+  "fat": 2.7,
+  "fiber": 3.1,
+  "sugars": 1.5,
+  "satFat": 0.34,
+  "iron": 1.8,
+  "calcium": 6.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Farina di mais (cod. 000260)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000260"
+  },
+  "note": "Sostituzione: farina di mais. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "polenta istantanea",
+  "kcal": 323.0,
+  "protein": 8.0,
+  "carbs": 72.7,
+  "fat": 0.7,
+  "fiber": 6.2,
+  "sugars": 0.6,
+  "satFat": null,
+  "iron": 0.4,
+  "calcium": 7.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Polenta, cruda (cod. 000075)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000075"
+  },
+  "note": "Sostituzione: polenta cruda (farina)"
+ },
+ {
+  "name": "pane di segale",
+  "kcal": 228.0,
+  "protein": 8.3,
+  "carbs": 45.4,
+  "fat": 1.7,
+  "fiber": 4.6,
+  "sugars": 1.8,
+  "satFat": null,
+  "iron": 2.5,
+  "calcium": 80.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane di segale (cod. 000510)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000510"
+  }
+ },
+ {
+  "name": "mele",
+  "kcal": 44.0,
+  "protein": 0.2,
+  "carbs": 10.0,
+  "fat": null,
+  "fiber": 2.6,
+  "sugars": 10.0,
+  "satFat": null,
+  "iron": 0.1,
+  "calcium": 2.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mele, fresche, con buccia (cod. 007120)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007120"
+  },
+  "note": "Mele fresche con buccia"
+ },
+ {
+  "name": "verza",
+  "kcal": 29.0,
+  "protein": 2.0,
+  "carbs": 3.8,
+  "fat": 0.1,
+  "fiber": 2.9,
+  "sugars": 3.8,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cavolo verza, cruda (cod. 005210)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005210"
+  },
+  "note": "Cavolo verza, crudo"
+ },
+ {
+  "name": "albicocche secche",
+  "kcal": 286.0,
+  "protein": 5.0,
+  "carbs": 66.5,
+  "fat": 0.5,
+  "fiber": 6.0,
+  "sugars": 66.5,
+  "satFat": null,
+  "iron": 5.0,
+  "calcium": 67.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Albicocche, secche (cod. 007030)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007030"
+  }
+ },
+ {
+  "name": "pancarré",
+  "kcal": 268.0,
+  "protein": 8.1,
+  "carbs": 59.5,
+  "fat": 0.5,
+  "fiber": 3.8,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 17.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane bianco (cod. 000530)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000530"
+  },
+  "note": "Sostituzione: pane bianco"
+ },
+ {
+  "name": "mirtilli",
+  "kcal": 49.0,
+  "protein": 0.9,
+  "carbs": 10.1,
+  "fat": 0.2,
+  "fiber": 3.1,
+  "sugars": 10.1,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 41.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mirtilli, freschi (cod. 007760)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007760"
+  }
+ },
+ {
+  "name": "cavolo cappuccio viola",
+  "kcal": 22.0,
+  "protein": 1.9,
+  "carbs": 2.7,
+  "fat": 0.2,
+  "fiber": 1.0,
+  "sugars": 2.7,
+  "satFat": null,
+  "iron": 1.0,
+  "calcium": 60.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cavolo cappuccio, rosso, crudo (cod. 005190)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005190"
+  },
+  "note": "Cavolo cappuccio rosso, crudo"
+ },
+ {
+  "name": "mollica di pane",
+  "kcal": 268.0,
+  "protein": 8.1,
+  "carbs": 59.5,
+  "fat": 0.5,
+  "fiber": 3.8,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 17.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane bianco (cod. 000530)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000530"
+  },
+  "note": "Sostituzione: pane bianco"
+ },
+ {
+  "name": "curcuma",
+  "kcal": 312,
+  "protein": 9.68,
+  "carbs": 67.1,
+  "fat": 3.25,
+  "fiber": 22.7,
+  "sugars": 3.21,
+  "satFat": 1.84,
+  "iron": 55.0,
+  "calcium": 168,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 172231: Spices, turmeric, ground",
+   "url": "https://fdc.nal.usda.gov/food-details/172231/nutrients"
+  },
+  "note": "Curcuma in polvere"
+ },
+ {
+  "name": "granola vegana",
+  "kcal": 374.0,
+  "protein": 9.7,
+  "carbs": 71.7,
+  "fat": 6.0,
+  "fiber": 6.4,
+  "sugars": 26.2,
+  "satFat": 0.25,
+  "iron": 5.6,
+  "calcium": 110.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Muesli (cod. 003040)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/003040"
+  },
+  "note": "Sostituzione: muesli (CREA); la granola contiene di norma piu' grassi e zuccheri. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "tofu affumicato",
+  "kcal": 144,
+  "protein": 17.3,
+  "carbs": 2.78,
+  "fat": 8.72,
+  "fiber": 2.3,
+  "sugars": null,
+  "satFat": 1.26,
+  "iron": 2.66,
+  "calcium": 683,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 172475: Tofu, raw, firm, prepared with calcium sulfate",
+   "url": "https://fdc.nal.usda.gov/food-details/172475/nutrients"
+  },
+  "note": "Sostituzione: tofu crudo compatto (USDA); la versione affumicata ha composizione simile ma non identica"
+ },
+ {
+  "name": "semi di sesamo",
+  "kcal": 573,
+  "protein": 17.7,
+  "carbs": 23.4,
+  "fat": 49.7,
+  "fiber": 11.8,
+  "sugars": 0.3,
+  "satFat": 6.96,
+  "iron": 14.6,
+  "calcium": 975,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170150: Seeds, sesame seeds, whole, dried",
+   "url": "https://fdc.nal.usda.gov/food-details/170150/nutrients"
+  },
+  "note": "Semi di sesamo interi secchi"
+ },
+ {
+  "name": "cacao amaro in polvere",
+  "kcal": 355.0,
+  "protein": 20.4,
+  "carbs": 11.5,
+  "fat": 25.6,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": 14.3,
+  "calcium": 51.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cacao amaro, in polvere (cod. 508010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/508010"
+  }
+ },
+ {
+  "name": "parmigiano",
+  "kcal": 397.0,
+  "protein": 32.4,
+  "carbs": null,
+  "fat": 29.7,
+  "fiber": 0.0,
+  "sugars": null,
+  "satFat": 19.6,
+  "iron": 0.2,
+  "calcium": 1159.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Parmigiano Reggiano DOP (cod. 166000)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/166000"
+  },
+  "note": "Parmigiano Reggiano DOP. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "pistacchi sgusciati",
+  "kcal": 629.0,
+  "protein": 18.1,
+  "carbs": 8.1,
+  "fat": 56.1,
+  "fiber": 10.6,
+  "sugars": 4.5,
+  "satFat": 5.97,
+  "iron": 7.3,
+  "calcium": 131.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pistacchi (cod. 008600)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008600"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "provola",
+  "kcal": 334.0,
+  "protein": 25.0,
+  "carbs": 1.0,
+  "fat": 25.6,
+  "fiber": 0.0,
+  "sugars": 1.0,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 512.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Scamorza (cod. 167200)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/167200"
+  },
+  "note": "Sostituzione: scamorza (formaggio a pasta filata simile)"
+ },
+ {
+  "name": "cocco rapè",
+  "kcal": 669.0,
+  "protein": 5.6,
+  "carbs": 16.4,
+  "fat": 62.0,
+  "fiber": 13.7,
+  "sugars": 16.4,
+  "satFat": 57.33,
+  "iron": 3.6,
+  "calcium": 23.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cocco, essiccato (cod. 007530)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007530"
+  },
+  "note": "Cocco essiccato. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "succo di lime",
+  "kcal": 25,
+  "protein": 0.42,
+  "carbs": 8.42,
+  "fat": 0.07,
+  "fiber": 0.4,
+  "sugars": 1.69,
+  "satFat": 0.008,
+  "iron": 0.09,
+  "calcium": 14.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168156: Lime juice, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/168156/nutrients"
+  },
+  "note": "Succo di lime crudo"
+ },
+ {
+  "name": "capperi",
+  "kcal": 23,
+  "protein": 2.36,
+  "carbs": 4.89,
+  "fat": 0.86,
+  "fiber": 3.2,
+  "sugars": 0.41,
+  "satFat": 0.233,
+  "iron": 1.67,
+  "calcium": 40.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 172238: Capers, canned",
+   "url": "https://fdc.nal.usda.gov/food-details/172238/nutrients"
+  },
+  "note": "Capperi in scatola (sotto sale/salamoia, inclusi)"
+ },
+ {
+  "name": "cetriolini",
+  "kcal": 12,
+  "protein": 0.5,
+  "carbs": 2.41,
+  "fat": 0.3,
+  "fiber": 1.0,
+  "sugars": 1.07,
+  "satFat": 0.079,
+  "iron": 0.26,
+  "calcium": 57.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168558: Pickles, cucumber, dill or kosher dill",
+   "url": "https://fdc.nal.usda.gov/food-details/168558/nutrients"
+  },
+  "note": "Sostituzione: cetrioli sottaceto all'aneto (USDA)"
+ },
+ {
+  "name": "crema di mandorle",
+  "kcal": 614,
+  "protein": 21.0,
+  "carbs": 18.8,
+  "fat": 55.5,
+  "fiber": 10.3,
+  "sugars": 4.43,
+  "satFat": 4.15,
+  "iron": 3.49,
+  "calcium": 347,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168588: Nuts, almond butter, plain, without salt added",
+   "url": "https://fdc.nal.usda.gov/food-details/168588/nutrients"
+  },
+  "note": "Burro di mandorle, naturale, senza sale"
+ },
+ {
+  "name": "curry",
+  "kcal": 325,
+  "protein": 14.3,
+  "carbs": 55.8,
+  "fat": 14.0,
+  "fiber": 53.2,
+  "sugars": 2.76,
+  "satFat": 1.65,
+  "iron": 19.1,
+  "calcium": 525,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170924: Spices, curry powder",
+   "url": "https://fdc.nal.usda.gov/food-details/170924/nutrients"
+  },
+  "note": "Curry in polvere"
+ },
+ {
+  "name": "zenzero fresco",
+  "kcal": 80,
+  "protein": 1.82,
+  "carbs": 17.8,
+  "fat": 0.75,
+  "fiber": 2.0,
+  "sugars": 1.7,
+  "satFat": 0.203,
+  "iron": 0.6,
+  "calcium": 16.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 169231: Ginger root, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/169231/nutrients"
+  },
+  "note": "Radice di zenzero cruda"
+ },
+ {
+  "name": "olive verdi",
+  "kcal": 148.0,
+  "protein": 0.8,
+  "carbs": 1.0,
+  "fat": 15.0,
+  "fiber": 3.0,
+  "sugars": 1.0,
+  "satFat": null,
+  "iron": 1.6,
+  "calcium": 64.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Olive, verdi (cod. 008820)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008820"
+  }
+ },
+ {
+  "name": "origano secco",
+  "kcal": 265,
+  "protein": 9.0,
+  "carbs": 68.9,
+  "fat": 4.28,
+  "fiber": 42.5,
+  "sugars": 4.09,
+  "satFat": 1.55,
+  "iron": 36.8,
+  "calcium": 1600.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 171328: Spices, oregano, dried",
+   "url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+  }
+ },
+ {
+  "name": "lievito per dolci",
+  "kcal": 53,
+  "protein": 0.0,
+  "carbs": 27.7,
+  "fat": 0.0,
+  "fiber": 0.2,
+  "sugars": 0.0,
+  "satFat": 0.0,
+  "iron": 11.0,
+  "calcium": 5880.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 172803: Leavening agents, baking powder, double-acting, sodium aluminum sulfate",
+   "url": "https://fdc.nal.usda.gov/food-details/172803/nutrients"
+  },
+  "note": "Lievito in polvere a doppia azione (sodio alluminio solfato); contiene calcio per via degli agenti lievitanti"
+ },
+ {
+  "name": "crema di nocciole",
+  "kcal": 537.0,
+  "protein": 6.9,
+  "carbs": 58.1,
+  "fat": 32.4,
+  "fiber": null,
+  "sugars": 58.1,
+  "satFat": null,
+  "iron": 3.6,
+  "calcium": 143.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Crema di nocciole e cacao (cod. 203500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/203500"
+  },
+  "note": "Sostituzione: crema di nocciole e cacao (CREA); non c'e' la crema di sole nocciole"
+ },
+ {
+  "name": "maionese light",
+  "kcal": 333,
+  "protein": 0.9,
+  "carbs": 6.7,
+  "fat": 33.3,
+  "fiber": 0.0,
+  "sugars": 4.2,
+  "satFat": 4.62,
+  "iron": 0.0,
+  "calcium": 0.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168094: Mayonnaise, reduced-calorie or diet, cholesterol-free",
+   "url": "https://fdc.nal.usda.gov/food-details/168094/nutrients"
+  },
+  "note": "Sostituzione: maionese ridotta in calorie (USDA); i prodotti light commerciali variano per ricetta"
+ },
+ {
+  "name": "farina di mandorle",
+  "kcal": 628.0,
+  "protein": 22.0,
+  "carbs": 4.6,
+  "fat": 55.3,
+  "fiber": 12.7,
+  "sugars": 3.7,
+  "satFat": 4.63,
+  "iron": 3.0,
+  "calcium": 240.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mandorle dolci, secche (cod. 008540)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008540"
+  },
+  "note": "Sostituzione: mandorle dolci secche (stessa composizione della farina di mandorle). Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "origano",
+  "kcal": 265,
+  "protein": 9.0,
+  "carbs": 68.9,
+  "fat": 4.28,
+  "fiber": 42.5,
+  "sugars": 4.09,
+  "satFat": 1.55,
+  "iron": 36.8,
+  "calcium": 1600.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 171328: Spices, oregano, dried",
+   "url": "https://fdc.nal.usda.gov/food-details/171328/nutrients"
+  },
+  "note": "Sostituzione: origano secco"
+ },
+ {
+  "name": "scorza di limone",
+  "kcal": 47,
+  "protein": 1.5,
+  "carbs": 16.0,
+  "fat": 0.3,
+  "fiber": 10.6,
+  "sugars": 4.17,
+  "satFat": 0.039,
+  "iron": 0.8,
+  "calcium": 134,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 167749: Lemon peel, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/167749/nutrients"
+  },
+  "note": "Scorza di limone cruda"
+ },
+ {
+  "name": "aceto di vino bianco",
+  "kcal": 18,
+  "protein": 0.0,
+  "carbs": 0.04,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": 0.04,
+  "satFat": 0.0,
+  "iron": 0.03,
+  "calcium": 6.0,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 172237: Vinegar, distilled",
+   "url": "https://fdc.nal.usda.gov/food-details/172237/nutrients"
+  },
+  "note": "Sostituzione: aceto distillato (USDA); la voce aceto di vino bianco non e' stata trovata"
+ },
+ {
+  "name": "maizena",
+  "kcal": 328.0,
+  "protein": 0.3,
+  "carbs": 87.0,
+  "fat": null,
+  "fiber": 0.0,
+  "sugars": 1.5,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mais, amido (cod. 000300)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000300"
+  },
+  "note": "Mais, amido"
+ },
+ {
+  "name": "fecola di patate",
+  "kcal": 346.0,
+  "protein": 1.4,
+  "carbs": 90.7,
+  "fat": 0.0,
+  "fiber": null,
+  "sugars": 9.1,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 10.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fecola di patate (cod. 504100)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/504100"
+  }
+ },
+ {
+  "name": "menta fresca",
+  "kcal": 49.0,
+  "protein": 3.8,
+  "carbs": 5.3,
+  "fat": 0.7,
+  "fiber": 3.8,
+  "sugars": 5.3,
+  "satFat": null,
+  "iron": 9.5,
+  "calcium": 210.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Menta, fresca (cod. 006810)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006810"
+  }
+ },
+ {
+  "name": "pepe",
+  "kcal": 311.0,
+  "protein": 11.4,
+  "carbs": 49.0,
+  "fat": 3.3,
+  "fiber": 25.9,
+  "sugars": null,
+  "satFat": null,
+  "iron": 11.2,
+  "calcium": 430.0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pepe nero (cod. 006820)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006820"
+  },
+  "note": "Pepe nero"
+ },
+ {
+  "name": "timo fresco",
+  "kcal": 101,
+  "protein": 5.56,
+  "carbs": 24.4,
+  "fat": 1.68,
+  "fiber": 14.0,
+  "sugars": null,
+  "satFat": 0.467,
+  "iron": 17.4,
+  "calcium": 405,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 173470: Thyme, fresh",
+   "url": "https://fdc.nal.usda.gov/food-details/173470/nutrients"
+  }
+ }
+]

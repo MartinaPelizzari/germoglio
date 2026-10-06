@@ -1,0 +1,1405 @@
+[
+ {
+  "name": "brodo vegetale",
+  "kcal": 5,
+  "protein": 0.24,
+  "carbs": 0.93,
+  "fat": 0.07,
+  "fiber": 0,
+  "sugars": 0.55,
+  "satFat": 0.028,
+  "iron": 0.06,
+  "calcium": 3,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171583",
+   "url": "https://fdc.nal.usda.gov/food-details/171583/nutrients"
+  }
+ },
+ {
+  "name": "pane integrale",
+  "kcal": 252,
+  "protein": 12.4,
+  "carbs": 42.7,
+  "fat": 3.5,
+  "fiber": 6,
+  "sugars": 4.34,
+  "satFat": 0.72,
+  "iron": 2.47,
+  "calcium": 161,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 172688",
+   "url": "https://fdc.nal.usda.gov/food-details/172688/nutrients"
+  },
+  "note": "Pane integrale confezionato USDA"
+ },
+ {
+  "name": "uova",
+  "kcal": 143,
+  "protein": 12.6,
+  "carbs": 0.72,
+  "fat": 9.51,
+  "fiber": 0,
+  "sugars": 0.37,
+  "satFat": 3.13,
+  "iron": 1.75,
+  "calcium": 56,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171287",
+   "url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+  },
+  "note": "Uovo intero crudo"
+ },
+ {
+  "name": "acqua",
+  "kcal": 0,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 0,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 0,
+  "iron": 0,
+  "calcium": 3,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 173647",
+   "url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+  },
+  "note": "Acqua di rubinetto"
+ },
+ {
+  "name": "zucca",
+  "kcal": 26,
+  "protein": 1,
+  "carbs": 6.5,
+  "fat": 0.1,
+  "fiber": 0.5,
+  "sugars": 2.76,
+  "satFat": 0.052,
+  "iron": 0.8,
+  "calcium": 21,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168448",
+   "url": "https://fdc.nal.usda.gov/food-details/168448/nutrients"
+  }
+ },
+ {
+  "name": "melanzane",
+  "kcal": 25,
+  "protein": 0.98,
+  "carbs": 5.88,
+  "fat": 0.18,
+  "fiber": 3,
+  "sugars": 3.53,
+  "satFat": 0.034,
+  "iron": 0.23,
+  "calcium": 9,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169228",
+   "url": "https://fdc.nal.usda.gov/food-details/169228/nutrients"
+  }
+ },
+ {
+  "name": "latte di soia",
+  "kcal": 33,
+  "protein": 2.88,
+  "carbs": 1.65,
+  "fat": 1.65,
+  "fiber": 0.4,
+  "sugars": 0.41,
+  "satFat": 0.21,
+  "iron": 0.44,
+  "calcium": 123,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 175223",
+   "url": "https://fdc.nal.usda.gov/food-details/175223/nutrients"
+  },
+  "note": "Bevanda di soia non zuccherata (SILK Unsweetened, voce USDA SR Legacy), arricchita di calcio"
+ },
+ {
+  "name": "limone",
+  "kcal": 29,
+  "protein": 1.1,
+  "carbs": 9.32,
+  "fat": 0.3,
+  "fiber": 2.8,
+  "sugars": 2.5,
+  "satFat": 0.039,
+  "iron": 0.6,
+  "calcium": 26,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 167746",
+   "url": "https://fdc.nal.usda.gov/food-details/167746/nutrients"
+  },
+  "note": "Polpa senza buccia"
+ },
+ {
+  "name": "cetriolo",
+  "kcal": 15,
+  "protein": 0.65,
+  "carbs": 3.63,
+  "fat": 0.11,
+  "fiber": 0.5,
+  "sugars": 1.67,
+  "satFat": 0.037,
+  "iron": 0.28,
+  "calcium": 16,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168409",
+   "url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+  }
+ },
+ {
+  "name": "macinato di manzo",
+  "kcal": 215,
+  "protein": 18.6,
+  "carbs": 0,
+  "fat": 15,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 5.71,
+  "iron": 2.09,
+  "calcium": 15,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171796",
+   "url": "https://fdc.nal.usda.gov/food-details/171796/nutrients"
+  },
+  "note": "Macinato 85% magro, crudo"
+ },
+ {
+  "name": "filetto di merluzzo",
+  "kcal": 82,
+  "protein": 17.8,
+  "carbs": 0,
+  "fat": 0.67,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 0.13,
+  "iron": 0.38,
+  "calcium": 16,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171955",
+   "url": "https://fdc.nal.usda.gov/food-details/171955/nutrients"
+  },
+  "note": "Merluzzo atlantico crudo"
+ },
+ {
+  "name": "peperone",
+  "kcal": 26,
+  "protein": 0.99,
+  "carbs": 6.03,
+  "fat": 0.3,
+  "fiber": 2.1,
+  "sugars": 4.2,
+  "satFat": 0.059,
+  "iron": 0.43,
+  "calcium": 7,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170108",
+   "url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+  },
+  "note": "Peperone rosso crudo"
+ },
+ {
+  "name": "tempeh",
+  "kcal": 192,
+  "protein": 20.3,
+  "carbs": 7.64,
+  "fat": 10.8,
+  "fiber": 0,
+  "sugars": null,
+  "satFat": 2.54,
+  "iron": 2.7,
+  "calcium": 111,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 174272",
+   "url": "https://fdc.nal.usda.gov/food-details/174272/nutrients"
+  },
+  "note": "Zuccheri non dichiarati in fonte"
+ },
+ {
+  "name": "orzo perlato",
+  "kcal": 352,
+  "protein": 9.91,
+  "carbs": 77.7,
+  "fat": 1.16,
+  "fiber": 15.6,
+  "sugars": 0.8,
+  "satFat": 0.24,
+  "iron": 2.5,
+  "calcium": 29,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170284",
+   "url": "https://fdc.nal.usda.gov/food-details/170284/nutrients"
+  },
+  "note": "Crudo (secco)"
+ },
+ {
+  "name": "avocado",
+  "kcal": 160,
+  "protein": 2,
+  "carbs": 8.53,
+  "fat": 14.7,
+  "fiber": 6.7,
+  "sugars": 0.66,
+  "satFat": 2.13,
+  "iron": 0.55,
+  "calcium": 12,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171705",
+   "url": "https://fdc.nal.usda.gov/food-details/171705/nutrients"
+  }
+ },
+ {
+  "name": "riso carnaroli",
+  "kcal": 360,
+  "protein": 6.61,
+  "carbs": 79.3,
+  "fat": 0.58,
+  "fiber": null,
+  "sugars": null,
+  "satFat": 0.16,
+  "iron": 0.8,
+  "calcium": 9,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169760",
+   "url": "https://fdc.nal.usda.gov/food-details/169760/nutrients"
+  },
+  "note": "Riso bianco a grano medio crudo; fibra e zuccheri non dichiarati in fonte"
+ },
+ {
+  "name": "finocchi",
+  "kcal": 31,
+  "protein": 1.24,
+  "carbs": 7.3,
+  "fat": 0.2,
+  "fiber": 3.1,
+  "sugars": 3.93,
+  "satFat": 0.09,
+  "iron": 0.73,
+  "calcium": 49,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169385",
+   "url": "https://fdc.nal.usda.gov/food-details/169385/nutrients"
+  }
+ },
+ {
+  "name": "prosciutto cotto",
+  "kcal": 138,
+  "protein": 15.7,
+  "carbs": 1.7,
+  "fat": 7.6,
+  "fiber": 0,
+  "sugars": null,
+  "satFat": null,
+  "iron": 0.49,
+  "calcium": null,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/Prosciutto_cotto.html"
+  },
+  "note": "Alcuni valori non disponibili in fonte (null)"
+ },
+ {
+  "name": "tonno al naturale",
+  "kcal": 90,
+  "protein": 19,
+  "carbs": 0.08,
+  "fat": 0.94,
+  "fiber": null,
+  "sugars": null,
+  "satFat": 0.22,
+  "iron": 1.67,
+  "calcium": 18,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 334194",
+   "url": "https://fdc.nal.usda.gov/food-details/334194/nutrients"
+  },
+  "note": "Tonno light in acqua, sgocciolato; fibra e zuccheri non dichiarati"
+ },
+ {
+  "name": "peperoni misti",
+  "kcal": 26,
+  "protein": 0.99,
+  "carbs": 6.03,
+  "fat": 0.3,
+  "fiber": 2.1,
+  "sugars": 4.2,
+  "satFat": 0.059,
+  "iron": 0.43,
+  "calcium": 7,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170108",
+   "url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+  },
+  "note": "Valore del peperone rosso crudo usato per peperoni misti"
+ },
+ {
+  "name": "parmigiano reggiano",
+  "kcal": 392,
+  "protein": 35.8,
+  "carbs": 3.22,
+  "fat": 25,
+  "fiber": 0,
+  "sugars": 0.11,
+  "satFat": 14.8,
+  "iron": 0.82,
+  "calcium": 1184,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170848",
+   "url": "https://fdc.nal.usda.gov/food-details/170848/nutrients"
+  },
+  "note": "Parmigiano (Parmesan hard) USDA"
+ },
+ {
+  "name": "farina integrale",
+  "kcal": 340,
+  "protein": 13.2,
+  "carbs": 72,
+  "fat": 2.5,
+  "fiber": 10.7,
+  "sugars": 0.41,
+  "satFat": 0.43,
+  "iron": 3.6,
+  "calcium": 34,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168893",
+   "url": "https://fdc.nal.usda.gov/food-details/168893/nutrients"
+  },
+  "note": "Farina di frumento integrale"
+ },
+ {
+  "name": "radicchio",
+  "kcal": 23,
+  "protein": 1.43,
+  "carbs": 4.48,
+  "fat": 0.25,
+  "fiber": 0.9,
+  "sugars": 0.6,
+  "satFat": 0.06,
+  "iron": 0.57,
+  "calcium": 19,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168564",
+   "url": "https://fdc.nal.usda.gov/food-details/168564/nutrients"
+  }
+ },
+ {
+  "name": "feta",
+  "kcal": 265,
+  "protein": 14.2,
+  "carbs": 3.88,
+  "fat": 21.5,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 13.3,
+  "iron": 0.65,
+  "calcium": 493,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 173420",
+   "url": "https://fdc.nal.usda.gov/food-details/173420/nutrients"
+  }
+ },
+ {
+  "name": "orata pulita",
+  "kcal": 121,
+  "protein": 20.7,
+  "carbs": 1,
+  "fat": 3.8,
+  "fiber": 0,
+  "sugars": null,
+  "satFat": 0.88,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/orata-filetti.htm"
+  },
+  "note": "Filetti di orata; ferro, calcio e zuccheri non disponibili in fonte"
+ },
+ {
+  "name": "pomodori maturi",
+  "kcal": 18,
+  "protein": 0.88,
+  "carbs": 3.89,
+  "fat": 0.2,
+  "fiber": 1.2,
+  "sugars": 2.63,
+  "satFat": 0.028,
+  "iron": 0.27,
+  "calcium": 10,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170457",
+   "url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+  }
+ },
+ {
+  "name": "riso",
+  "kcal": 360,
+  "protein": 6.61,
+  "carbs": 79.3,
+  "fat": 0.58,
+  "fiber": null,
+  "sugars": null,
+  "satFat": 0.16,
+  "iron": 0.8,
+  "calcium": 9,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169760",
+   "url": "https://fdc.nal.usda.gov/food-details/169760/nutrients"
+  },
+  "note": "Riso bianco a grano medio crudo; fibra e zuccheri non dichiarati in fonte"
+ },
+ {
+  "name": "salsiccia fresca",
+  "kcal": 290,
+  "protein": 13.9,
+  "carbs": 2.97,
+  "fat": 24.3,
+  "fiber": 0,
+  "sugars": 1.19,
+  "satFat": 8.62,
+  "iron": 1.77,
+  "calcium": 12,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171631",
+   "url": "https://fdc.nal.usda.gov/food-details/171631/nutrients"
+  },
+  "note": "Salsiccia di maiale italiana cruda"
+ },
+ {
+  "name": "cosce di pollo senza pelle",
+  "kcal": 116,
+  "protein": 19.4,
+  "carbs": 0,
+  "fat": 3.71,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 0.95,
+  "iron": 0.76,
+  "calcium": 9,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 173614",
+   "url": "https://fdc.nal.usda.gov/food-details/173614/nutrients"
+  },
+  "note": "Fuso/coscia (drumstick), solo carne, crudo"
+ },
+ {
+  "name": "spezzatino di manzo",
+  "kcal": 128,
+  "protein": 21.8,
+  "carbs": 0.16,
+  "fat": 4.48,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 1.86,
+  "iron": 2.12,
+  "calcium": 13,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171206",
+   "url": "https://fdc.nal.usda.gov/food-details/171206/nutrients"
+  },
+  "note": "Spalla (chuck) per spezzatino, magro e grasso, crudo"
+ },
+ {
+  "name": "cime di rapa",
+  "kcal": 22,
+  "protein": 3.17,
+  "carbs": 2.85,
+  "fat": 0.49,
+  "fiber": 2.7,
+  "sugars": 0.38,
+  "satFat": 0.083,
+  "iron": 2.14,
+  "calcium": 108,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170381",
+   "url": "https://fdc.nal.usda.gov/food-details/170381/nutrients"
+  },
+  "note": "Broccoletti di rapa (broccoli raab) crudi"
+ },
+ {
+  "name": "salsa di soia",
+  "kcal": 53,
+  "protein": 8.14,
+  "carbs": 4.93,
+  "fat": 0.57,
+  "fiber": 0.8,
+  "sugars": 0.4,
+  "satFat": 0.073,
+  "iron": 1.45,
+  "calcium": 33,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 174277",
+   "url": "https://fdc.nal.usda.gov/food-details/174277/nutrients"
+  },
+  "note": "Shoyu"
+ },
+ {
+  "name": "pasta sfoglia",
+  "kcal": 560,
+  "protein": 5.6,
+  "carbs": 45.9,
+  "fat": 40.6,
+  "fiber": 1.6,
+  "sugars": 0.9,
+  "satFat": 15.8,
+  "iron": 1.3,
+  "calcium": 84,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/alimentazione/pasta-sfoglia.html"
+  },
+  "note": "Fonte: articolo my-personaltrainer.it (valori per 100 g di parte edibile)"
+ },
+ {
+  "name": "pane integrale in cassetta",
+  "kcal": 252,
+  "protein": 12.4,
+  "carbs": 42.7,
+  "fat": 3.5,
+  "fiber": 6,
+  "sugars": 4.34,
+  "satFat": 0.72,
+  "iron": 2.47,
+  "calcium": 161,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 172688",
+   "url": "https://fdc.nal.usda.gov/food-details/172688/nutrients"
+  },
+  "note": "Stesso valore del pane integrale confezionato"
+ },
+ {
+  "name": "piadina o tortilla",
+  "kcal": 306,
+  "protein": 8.2,
+  "carbs": 49.4,
+  "fat": 7.99,
+  "fiber": 3.5,
+  "sugars": 3.71,
+  "satFat": 2.92,
+  "iron": 3.63,
+  "calcium": 146,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 175037",
+   "url": "https://fdc.nal.usda.gov/food-details/175037/nutrients"
+  },
+  "note": "Tortilla di farina refrigerata USDA"
+ },
+ {
+  "name": "cavolo rosso",
+  "kcal": 31,
+  "protein": 1.43,
+  "carbs": 7.37,
+  "fat": 0.16,
+  "fiber": 2.1,
+  "sugars": 3.83,
+  "satFat": 0.021,
+  "iron": 0.8,
+  "calcium": 45,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169977",
+   "url": "https://fdc.nal.usda.gov/food-details/169977/nutrients"
+  }
+ },
+ {
+  "name": "mandorle",
+  "kcal": 584,
+  "protein": 21.5,
+  "carbs": 20,
+  "fat": 51.1,
+  "fiber": 10.8,
+  "sugars": null,
+  "satFat": 3.79,
+  "iron": 3.74,
+  "calcium": 254,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 2346393",
+   "url": "https://fdc.nal.usda.gov/food-details/2346393/nutrients"
+  },
+  "note": "Mandorle crude intere; zuccheri non dichiarati"
+ },
+ {
+  "name": "calamari",
+  "kcal": 92,
+  "protein": 15.6,
+  "carbs": 3.08,
+  "fat": 1.38,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 0.36,
+  "iron": 0.68,
+  "calcium": 32,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 174223",
+   "url": "https://fdc.nal.usda.gov/food-details/174223/nutrients"
+  }
+ },
+ {
+  "name": "petto di pollo lessato",
+  "kcal": 165,
+  "protein": 31,
+  "carbs": 0,
+  "fat": 3.57,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 1.01,
+  "iron": 1.04,
+  "calcium": 15,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171477",
+   "url": "https://fdc.nal.usda.gov/food-details/171477/nutrients"
+  },
+  "note": "Valore del petto cotto arrosto (nessun dato lessato in SR Legacy)"
+ },
+ {
+  "name": "carciofi",
+  "kcal": 47,
+  "protein": 3.27,
+  "carbs": 10.5,
+  "fat": 0.15,
+  "fiber": 5.4,
+  "sugars": 0.99,
+  "satFat": 0.036,
+  "iron": 1.28,
+  "calcium": 44,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169205",
+   "url": "https://fdc.nal.usda.gov/food-details/169205/nutrients"
+  }
+ },
+ {
+  "name": "insalata",
+  "kcal": 15,
+  "protein": 1.36,
+  "carbs": 2.87,
+  "fat": 0.15,
+  "fiber": 1.3,
+  "sugars": 0.78,
+  "satFat": 0.02,
+  "iron": 0.86,
+  "calcium": 36,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169249",
+   "url": "https://fdc.nal.usda.gov/food-details/169249/nutrients"
+  },
+  "note": "Lattuga a foglia verde cruda"
+ },
+ {
+  "name": "stracchino",
+  "kcal": 300,
+  "protein": 18.5,
+  "carbs": 0,
+  "fat": 25.1,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 567,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/Stracchino.htm"
+  },
+  "note": "Carboidrati in tracce; grassi saturi non disponibili in fonte"
+ },
+ {
+  "name": "cavolo verza",
+  "kcal": 27,
+  "protein": 2,
+  "carbs": 6.1,
+  "fat": 0.1,
+  "fiber": 3.1,
+  "sugars": 2.27,
+  "satFat": 0.013,
+  "iron": 0.4,
+  "calcium": 35,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170388",
+   "url": "https://fdc.nal.usda.gov/food-details/170388/nutrients"
+  }
+ },
+ {
+  "name": "radicchio rosso",
+  "kcal": 23,
+  "protein": 1.43,
+  "carbs": 4.48,
+  "fat": 0.25,
+  "fiber": 0.9,
+  "sugars": 0.6,
+  "satFat": 0.06,
+  "iron": 0.57,
+  "calcium": 19,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168564",
+   "url": "https://fdc.nal.usda.gov/food-details/168564/nutrients"
+  },
+  "note": "Radicchio crudo"
+ },
+ {
+  "name": "pomodorini datterini",
+  "kcal": 18,
+  "protein": 0.88,
+  "carbs": 3.89,
+  "fat": 0.2,
+  "fiber": 1.2,
+  "sugars": 2.63,
+  "satFat": 0.028,
+  "iron": 0.27,
+  "calcium": 10,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170457",
+   "url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+  },
+  "note": "Valore del pomodoro rosso maturo crudo"
+ },
+ {
+  "name": "formaggio fresco spalmabile",
+  "kcal": 350,
+  "protein": 6.15,
+  "carbs": 5.52,
+  "fat": 34.4,
+  "fiber": 0,
+  "sugars": 3.76,
+  "satFat": 20.2,
+  "iron": 0.11,
+  "calcium": 97,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 173418",
+   "url": "https://fdc.nal.usda.gov/food-details/173418/nutrients"
+  },
+  "note": "Cream cheese USDA"
+ },
+ {
+  "name": "porro",
+  "kcal": 61,
+  "protein": 1.5,
+  "carbs": 14.2,
+  "fat": 0.3,
+  "fiber": 1.8,
+  "sugars": 3.9,
+  "satFat": 0.04,
+  "iron": 2.1,
+  "calcium": 59,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169246",
+   "url": "https://fdc.nal.usda.gov/food-details/169246/nutrients"
+  }
+ },
+ {
+  "name": "peperoncino",
+  "kcal": 40,
+  "protein": 1.87,
+  "carbs": 8.81,
+  "fat": 0.44,
+  "fiber": 1.5,
+  "sugars": 5.3,
+  "satFat": 0.042,
+  "iron": 1.03,
+  "calcium": 14,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170106",
+   "url": "https://fdc.nal.usda.gov/food-details/170106/nutrients"
+  },
+  "note": "Peperoncino rosso fresco crudo"
+ },
+ {
+  "name": "banana matura",
+  "kcal": 89,
+  "protein": 1.09,
+  "carbs": 22.8,
+  "fat": 0.33,
+  "fiber": 2.6,
+  "sugars": 12.2,
+  "satFat": 0.11,
+  "iron": 0.26,
+  "calcium": 5,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 173944",
+   "url": "https://fdc.nal.usda.gov/food-details/173944/nutrients"
+  }
+ },
+ {
+  "name": "pera",
+  "kcal": 57,
+  "protein": 0.36,
+  "carbs": 15.2,
+  "fat": 0.14,
+  "fiber": 3.1,
+  "sugars": 9.75,
+  "satFat": 0.022,
+  "iron": 0.18,
+  "calcium": 9,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169118",
+   "url": "https://fdc.nal.usda.gov/food-details/169118/nutrients"
+  }
+ },
+ {
+  "name": "acciughe sott'olio",
+  "kcal": 210,
+  "protein": 28.9,
+  "carbs": 0,
+  "fat": 9.71,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 2.2,
+  "iron": 4.63,
+  "calcium": 232,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 174183",
+   "url": "https://fdc.nal.usda.gov/food-details/174183/nutrients"
+  },
+  "note": "Acciughe europee in olio, sgocciolate"
+ },
+ {
+  "name": "melograno",
+  "kcal": 83,
+  "protein": 1.67,
+  "carbs": 18.7,
+  "fat": 1.17,
+  "fiber": 4,
+  "sugars": 13.7,
+  "satFat": 0.12,
+  "iron": 0.3,
+  "calcium": 10,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169134",
+   "url": "https://fdc.nal.usda.gov/food-details/169134/nutrients"
+  }
+ },
+ {
+  "name": "gorgonzola",
+  "kcal": 324,
+  "protein": 19.1,
+  "carbs": 1,
+  "fat": 27.1,
+  "fiber": 0,
+  "sugars": null,
+  "satFat": 13.1,
+  "iron": null,
+  "calcium": 401,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/gorgonzola.htm"
+  },
+  "note": "Ferro e zuccheri non disponibili in fonte"
+ },
+ {
+  "name": "semi di zucca",
+  "kcal": 559,
+  "protein": 30.2,
+  "carbs": 10.7,
+  "fat": 49,
+  "fiber": 6,
+  "sugars": 1.4,
+  "satFat": 8.66,
+  "iron": 8.82,
+  "calcium": 46,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170556",
+   "url": "https://fdc.nal.usda.gov/food-details/170556/nutrients"
+  },
+  "note": "Semi di zucca secchi"
+ },
+ {
+  "name": "paprika dolce",
+  "kcal": 282,
+  "protein": 14.1,
+  "carbs": 54,
+  "fat": 12.9,
+  "fiber": 34.9,
+  "sugars": 10.3,
+  "satFat": 2.14,
+  "iron": 21.1,
+  "calcium": 229,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171329",
+   "url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+  }
+ },
+ {
+  "name": "latte intero",
+  "kcal": 61,
+  "protein": 3.15,
+  "carbs": 4.8,
+  "fat": 3.25,
+  "fiber": 0,
+  "sugars": 5.05,
+  "satFat": 1.86,
+  "iron": 0.03,
+  "calcium": 113,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171265",
+   "url": "https://fdc.nal.usda.gov/food-details/171265/nutrients"
+  },
+  "note": "Latte intero 3,25% USDA"
+ },
+ {
+  "name": "pasta corta (cannolicchi)",
+  "kcal": 371,
+  "protein": 13,
+  "carbs": 74.7,
+  "fat": 1.51,
+  "fiber": 3.2,
+  "sugars": 2.67,
+  "satFat": 0.28,
+  "iron": 1.3,
+  "calcium": 21,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168927",
+   "url": "https://fdc.nal.usda.gov/food-details/168927/nutrients"
+  },
+  "note": "Pasta secca"
+ },
+ {
+  "name": "rosmarino",
+  "kcal": 131,
+  "protein": 3.31,
+  "carbs": 20.7,
+  "fat": 5.86,
+  "fiber": 14.1,
+  "sugars": null,
+  "satFat": 2.84,
+  "iron": 6.65,
+  "calcium": 317,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 173473",
+   "url": "https://fdc.nal.usda.gov/food-details/173473/nutrients"
+  },
+  "note": "Rosmarino fresco; zuccheri non dichiarati"
+ },
+ {
+  "name": "fagioli rossi cotti",
+  "kcal": 127,
+  "protein": 8.67,
+  "carbs": 22.8,
+  "fat": 0.5,
+  "fiber": 7.4,
+  "sugars": 0.32,
+  "satFat": 0.072,
+  "iron": 2.94,
+  "calcium": 28,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 175194",
+   "url": "https://fdc.nal.usda.gov/food-details/175194/nutrients"
+  },
+  "note": "Fagioli rossi bolliti senza sale"
+ },
+ {
+  "name": "marmellata di albicocche",
+  "kcal": 242,
+  "protein": 0.7,
+  "carbs": 64.4,
+  "fat": 0.2,
+  "fiber": 0.3,
+  "sugars": 43.4,
+  "satFat": 0.01,
+  "iron": 0.49,
+  "calcium": 20,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170645",
+   "url": "https://fdc.nal.usda.gov/food-details/170645/nutrients"
+  }
+ },
+ {
+  "name": "scalogno",
+  "kcal": 72,
+  "protein": 2.5,
+  "carbs": 16.8,
+  "fat": 0.1,
+  "fiber": 3.2,
+  "sugars": 7.87,
+  "satFat": 0.017,
+  "iron": 1.2,
+  "calcium": 37,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170499",
+   "url": "https://fdc.nal.usda.gov/food-details/170499/nutrients"
+  }
+ },
+ {
+  "name": "mela verde",
+  "kcal": 52,
+  "protein": 0.26,
+  "carbs": 13.8,
+  "fat": 0.17,
+  "fiber": 2.4,
+  "sugars": 10.4,
+  "satFat": 0.028,
+  "iron": 0.12,
+  "calcium": 6,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171688",
+   "url": "https://fdc.nal.usda.gov/food-details/171688/nutrients"
+  },
+  "note": "Valore della mela cruda con buccia (generica)"
+ },
+ {
+  "name": "burro di mandorle",
+  "kcal": 614,
+  "protein": 21,
+  "carbs": 18.8,
+  "fat": 55.5,
+  "fiber": 10.3,
+  "sugars": 4.43,
+  "satFat": 4.15,
+  "iron": 3.49,
+  "calcium": 347,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168588",
+   "url": "https://fdc.nal.usda.gov/food-details/168588/nutrients"
+  },
+  "note": "Senza sale aggiunto"
+ },
+ {
+  "name": "miele",
+  "kcal": 304,
+  "protein": 0.6,
+  "carbs": 80.3,
+  "fat": 0,
+  "fiber": 0,
+  "sugars": 80.3,
+  "satFat": 0,
+  "iron": 0.5,
+  "calcium": 5,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/miele.htm"
+  },
+  "note": "Zuccheri solubili 80,3 g come da fonte"
+ },
+ {
+  "name": "pomodori secchi",
+  "kcal": 258,
+  "protein": 14.1,
+  "carbs": 55.8,
+  "fat": 2.97,
+  "fiber": 12.3,
+  "sugars": 37.6,
+  "satFat": 0.43,
+  "iron": 9.09,
+  "calcium": 110,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 168567",
+   "url": "https://fdc.nal.usda.gov/food-details/168567/nutrients"
+  },
+  "note": "Secchi, non sott'olio"
+ },
+ {
+  "name": "cioccolato fondente 70%",
+  "kcal": 598,
+  "protein": 7.79,
+  "carbs": 45.9,
+  "fat": 42.6,
+  "fiber": 10.9,
+  "sugars": 24,
+  "satFat": 24.5,
+  "iron": 11.9,
+  "calcium": 73,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170273",
+   "url": "https://fdc.nal.usda.gov/food-details/170273/nutrients"
+  },
+  "note": "Cioccolato fondente 70-85% cacao"
+ },
+ {
+  "name": "paprika",
+  "kcal": 282,
+  "protein": 14.1,
+  "carbs": 54,
+  "fat": 12.9,
+  "fiber": 34.9,
+  "sugars": 10.3,
+  "satFat": 2.14,
+  "iron": 21.1,
+  "calcium": 229,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171329",
+   "url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+  }
+ },
+ {
+  "name": "amido di mais",
+  "kcal": 381,
+  "protein": 0.26,
+  "carbs": 91.3,
+  "fat": 0.05,
+  "fiber": 0.9,
+  "sugars": 0,
+  "satFat": 0.009,
+  "iron": 0.47,
+  "calcium": 2,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169698",
+   "url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+  }
+ },
+ {
+  "name": "paprika affumicata",
+  "kcal": 282,
+  "protein": 14.1,
+  "carbs": 54,
+  "fat": 12.9,
+  "fiber": 34.9,
+  "sugars": 10.3,
+  "satFat": 2.14,
+  "iron": 21.1,
+  "calcium": 229,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171329",
+   "url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+  },
+  "note": "Valore della paprika generica"
+ },
+ {
+  "name": "arachidi",
+  "kcal": 567,
+  "protein": 25.8,
+  "carbs": 16.1,
+  "fat": 49.2,
+  "fiber": 8.5,
+  "sugars": 4.72,
+  "satFat": 6.28,
+  "iron": 4.58,
+  "calcium": 92,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 172430",
+   "url": "https://fdc.nal.usda.gov/food-details/172430/nutrients"
+  },
+  "note": "Arachidi crude"
+ },
+ {
+  "name": "basilico",
+  "kcal": 23,
+  "protein": 3.15,
+  "carbs": 2.65,
+  "fat": 0.64,
+  "fiber": 1.6,
+  "sugars": 0.3,
+  "satFat": 0.041,
+  "iron": 3.17,
+  "calcium": 177,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 172232",
+   "url": "https://fdc.nal.usda.gov/food-details/172232/nutrients"
+  },
+  "note": "Basilico fresco"
+ },
+ {
+  "name": "parmigiano grattugiato",
+  "kcal": 392,
+  "protein": 35.8,
+  "carbs": 3.22,
+  "fat": 25,
+  "fiber": 0,
+  "sugars": 0.11,
+  "satFat": 14.8,
+  "iron": 0.82,
+  "calcium": 1184,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170848",
+   "url": "https://fdc.nal.usda.gov/food-details/170848/nutrients"
+  },
+  "note": "Valore del parmigiano (Parmesan hard) USDA"
+ },
+ {
+  "name": "latte parzialmente scremato",
+  "kcal": 46,
+  "protein": 3.5,
+  "carbs": 5,
+  "fat": 1.5,
+  "fiber": 0,
+  "sugars": null,
+  "satFat": 0.89,
+  "iron": 0.1,
+  "calcium": 120,
+  "source": {
+   "name": "Tabelle di composizione INRAN/CREA (via my-personaltrainer.it)",
+   "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/latte-pastorizzatopscremato.htm"
+  },
+  "note": "Latte pastorizzato parzialmente scremato; zuccheri non riportati"
+ },
+ {
+  "name": "pane grattugiato alle erbe",
+  "kcal": 395,
+  "protein": 13.3,
+  "carbs": 72,
+  "fat": 5.3,
+  "fiber": 4.5,
+  "sugars": 6.2,
+  "satFat": 1.2,
+  "iron": 4.83,
+  "calcium": 183,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 174928",
+   "url": "https://fdc.nal.usda.gov/food-details/174928/nutrients"
+  },
+  "note": "Valore del pangrattato secco semplice"
+ },
+ {
+  "name": "farina di mais fioretto",
+  "kcal": 362,
+  "protein": 8.12,
+  "carbs": 76.9,
+  "fat": 3.59,
+  "fiber": 7.3,
+  "sugars": 0.64,
+  "satFat": 0.51,
+  "iron": 3.45,
+  "calcium": 6,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 169697",
+   "url": "https://fdc.nal.usda.gov/food-details/169697/nutrients"
+  },
+  "note": "Farina di mais gialla integrale"
+ },
+ {
+  "name": "aglio in polvere",
+  "kcal": 331,
+  "protein": 16.6,
+  "carbs": 72.7,
+  "fat": 0.73,
+  "fiber": 9,
+  "sugars": 2.43,
+  "satFat": 0.25,
+  "iron": 5.65,
+  "calcium": 79,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171325",
+   "url": "https://fdc.nal.usda.gov/food-details/171325/nutrients"
+  }
+ },
+ {
+  "name": "cumino",
+  "kcal": 375,
+  "protein": 17.8,
+  "carbs": 44.2,
+  "fat": 22.3,
+  "fiber": 10.5,
+  "sugars": 2.25,
+  "satFat": 1.53,
+  "iron": 66.4,
+  "calcium": 931,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170923",
+   "url": "https://fdc.nal.usda.gov/food-details/170923/nutrients"
+  },
+  "note": "Semi di cumino"
+ },
+ {
+  "name": "cumino in semi",
+  "kcal": 375,
+  "protein": 17.8,
+  "carbs": 44.2,
+  "fat": 22.3,
+  "fiber": 10.5,
+  "sugars": 2.25,
+  "satFat": 1.53,
+  "iron": 66.4,
+  "calcium": 931,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170923",
+   "url": "https://fdc.nal.usda.gov/food-details/170923/nutrients"
+  }
+ },
+ {
+  "name": "paprica",
+  "kcal": 282,
+  "protein": 14.1,
+  "carbs": 54,
+  "fat": 12.9,
+  "fiber": 34.9,
+  "sugars": 10.3,
+  "satFat": 2.14,
+  "iron": 21.1,
+  "calcium": 229,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171329",
+   "url": "https://fdc.nal.usda.gov/food-details/171329/nutrients"
+  },
+  "note": "Stesso valore di paprika"
+ },
+ {
+  "name": "tamari",
+  "kcal": 60,
+  "protein": 10.5,
+  "carbs": 5.57,
+  "fat": 0.1,
+  "fiber": 0.8,
+  "sugars": 1.7,
+  "satFat": 0.011,
+  "iron": 2.38,
+  "calcium": 20,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 174278",
+   "url": "https://fdc.nal.usda.gov/food-details/174278/nutrients"
+  }
+ },
+ {
+  "name": "concentrato di pomodoro",
+  "kcal": 82,
+  "protein": 4.32,
+  "carbs": 18.9,
+  "fat": 0.47,
+  "fiber": 4.1,
+  "sugars": 12.2,
+  "satFat": 0.1,
+  "iron": 2.98,
+  "calcium": 36,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170459",
+   "url": "https://fdc.nal.usda.gov/food-details/170459/nutrients"
+  },
+  "note": "Doppio concentrato senza sale aggiunto"
+ },
+ {
+  "name": "cannella",
+  "kcal": 247,
+  "protein": 3.99,
+  "carbs": 80.6,
+  "fat": 1.24,
+  "fiber": 53.1,
+  "sugars": 2.17,
+  "satFat": 0.34,
+  "iron": 8.32,
+  "calcium": 1002,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171320",
+   "url": "https://fdc.nal.usda.gov/food-details/171320/nutrients"
+  },
+  "note": "Cannella in polvere"
+ },
+ {
+  "name": "noce moscata",
+  "kcal": 525,
+  "protein": 5.84,
+  "carbs": 49.3,
+  "fat": 36.3,
+  "fiber": 20.8,
+  "sugars": 2.99,
+  "satFat": 25.9,
+  "iron": 3.04,
+  "calcium": 184,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 171326",
+   "url": "https://fdc.nal.usda.gov/food-details/171326/nutrients"
+  },
+  "note": "Noce moscata in polvere"
+ },
+ {
+  "name": "maggiorana",
+  "kcal": 271,
+  "protein": 12.7,
+  "carbs": 60.6,
+  "fat": 7.04,
+  "fiber": 40.3,
+  "sugars": 4.09,
+  "satFat": 0.53,
+  "iron": 82.7,
+  "calcium": 1990,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy/Foundation), FDC 170928",
+   "url": "https://fdc.nal.usda.gov/food-details/170928/nutrients"
+  },
+  "note": "Maggiorana secca"
+ }
+]

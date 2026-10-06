@@ -1,4 +1,4 @@
-import { eatersOf, mealOf, scaleRecipe, sumIngredients } from './scale.js';
+import { eatersOf, mealOfItem, scaleRecipe, sumIngredients } from './scale.js';
 import { resolveItem } from './items.js';
 
 // Costruisce la lista della spesa dai pasti pianificati: per ogni piatto somma le dosi di chi lo mangia.
@@ -14,7 +14,7 @@ export const buildShoppingList = ({ plan, days, recipeMap, household, onlyMember
         if (!recipe) continue;
         for (const member of eatersOf(item, household, slot, data)) {
           if (onlyMemberId && member.id !== onlyMemberId) continue;
-          lists.push(scaleRecipe(recipe, mealOf(member, slot)));
+          lists.push(scaleRecipe(recipe, mealOfItem(member, slot, item)));
         }
       }
     }

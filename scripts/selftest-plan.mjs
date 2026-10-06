@@ -82,5 +82,24 @@ check(uncoveredPairs(martinaItems, [house.members[0]], 'Colazione').length === 0
 // --- spesa con alimenti semplici
 const list = buildShoppingList({ plan: { days: { 0: { Colazione: bf } } }, days: [0], recipeMap: map, household: house });
 console.log('Spesa colazione lunedì:', list.map((i) => `${i.name} ${Math.round(i.qty)}${i.unit}`).join(' | '));
+// --- ricetta fuori piano: spiegazione e adattamento
+{
+  const { planReport, adaptRecipe } = await import('../src/lib/adapt.js');
+  const { planAllows, swapRecipe } = await import('../src/lib/planGen.js');
+  const { mealConstraints } = await import('../src/lib/diet.js');
+  const me = { id: 'm', name: 'Martina', diet: 'vegetarian', meals: { Cena: { plan: parseSlotPlan('2 uova oppure 150 g tofu\n\n60 g pane oppure 40 g riso basmati') } } };
+  const fr = recipes.find((r) => /Frittata di ceci/i.test(r.title));
+  const rep = planReport(fr, me.meals.Cena.plan, 'Cena');
+  console.log('\nFrittata di ceci a cena →', rep.issues.map((i) => i.why).join(' | '));
+  check(rep.issues.some((i) => /farina di ceci/i.test(i.ing.name)), 'segnala la farina di ceci');
+  const ch = Object.fromEntries(rep.issues.map((i) => [i.index, i.options.length ? { action: 'replace', option: i.options[0] } : { action: 'remove' }]));
+  const ad = adaptRecipe(fr, rep.issues, ch, 'Cena');
+  check(planReport(ad, me.meals.Cena.plan, 'Cena').issues.length === 0, 'la versione adattata rispetta il piano');
+  check(ad.id === null && ad.title.includes('adattata'), 'copia personale');
+  const c = mealConstraints({ members: [me], rules: [] }, 0, 'Cena', [me]);
+  let bad = 0;
+  for (let i = 0; i < 30; i++) { const n = swapRecipe(recipes, recipes.find((r) => /Tofu marinato/.test(r.title)), c, {}, 'Cena'); if (n && !planAllows(map.get(n.recipeId), [me], 'Cena')) bad++; }
+  check(bad === 0, 'il cambio a caso rispetta il piano');
+}
 console.log(ko ? `\n${ko} problemi` : '\nTutto ok.');
 process.exit(ko ? 1 : 0);

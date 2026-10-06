@@ -3,28 +3,26 @@ import { Heart, Plus, Search } from 'lucide-react';
 import { useData } from '../hooks/data.jsx';
 import { Sheet, RecipeThumb, DietBadge } from '../components/ui.jsx';
 import { timeLabel } from '../lib/format.js';
-import { coveredGroups, pairLabel } from '../lib/planGen.js';
+import { coveredGroups, pairLabel, planAllows } from '../lib/planGen.js';
 import { fits } from '../lib/diet.js';
 import { kindFits } from '../lib/meals.js';
-import { coveredGroupIndexes, describeOption } from '../lib/dietPlan.js';
+import { describeOption, planMatches } from '../lib/dietPlan.js';
 import { GROUP_LABEL } from '../lib/groups.js';
 import { agoLabel } from '../lib/usage.js';
-import { mealOf } from '../lib/scale.js';
 
 // slot e constraints: pasto e vincoli di chi mangia. pair: gruppo del piano da completare (con la persona).
 // group: componente da completare (senza piano). onSelect riceve { recipe } oppure { food } (alimento semplice).
-export default function RecipePicker({ title, slot, constraints, pair, group, recipes, onSelect, onClose }) {
+export default function RecipePicker({ title, slot, constraints, pair, group, recipes, dayState, onSelect, onClose }) {
   const { favorites, lastUse } = useData();
   const [q, setQ] = React.useState('');
   const [onlyFit, setOnlyFit] = React.useState(Boolean(constraints));
   const [onlySlot, setOnlySlot] = React.useState(Boolean(slot) && !pair);
-  const plan = pair ? mealOf(pair.eater, slot).plan : null;
   const lq = q.toLowerCase();
   const list = recipes.filter((r) =>
     (!onlySlot || kindFits(r, slot)) &&
     (!group || coveredGroups([r]).has(group)) &&
-    (!pair || coveredGroupIndexes(r, plan).includes(pair.gi)) &&
-    (!onlyFit || fits(r, constraints)) &&
+    (!pair || planMatches(r, [pair.group])[0]) &&
+    (!onlyFit || (fits(r, constraints) && (!slot || planAllows(r, constraints.eaters || [], slot, dayState ? { day: dayState } : undefined)))) &&
     (r.title.toLowerCase().includes(lq) || (r.ingredients || []).some((i) => i.name.toLowerCase().includes(lq)))
   ).sort((a, b) => Number(favorites.has(b.id)) - Number(favorites.has(a.id)) || (lastUse.get(b.id) ?? 99) - (lastUse.get(a.id) ?? 99));
 
@@ -39,7 +37,7 @@ export default function RecipePicker({ title, slot, constraints, pair, group, re
           {pair && <span>Per completare il piano di {pair.eater.name}: <b>{pairLabel(pair)}</b></span>}
           {group && <span>Per completare: <b>{GROUP_LABEL[group]}</b></span>}
           {slot && !pair && <label className="flex items-center gap-2 font-semibold"><input type="checkbox" className="accent-emerald-500" checked={onlySlot} onChange={(e) => setOnlySlot(e.target.checked)} /> Adatte a questo pasto</label>}
-          {constraints && <label className="flex items-center gap-2 font-semibold"><input type="checkbox" className="accent-emerald-500" checked={onlyFit} onChange={(e) => setOnlyFit(e.target.checked)} /> Solo adatte a chi mangia{constraints.takeaway ? ' (asporto)' : ''}</label>}
+          {constraints && <label className="flex items-center gap-2 font-semibold"><input type="checkbox" className="accent-emerald-500" checked={onlyFit} onChange={(e) => setOnlyFit(e.target.checked)} /> Solo adatte a chi mangia e al suo piano{constraints.takeaway ? ' (asporto)' : ''}</label>}
         </div>
       </div>
       <div className="p-4 space-y-3 bg-surface-ground min-h-full">

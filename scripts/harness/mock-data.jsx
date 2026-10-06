@@ -13,7 +13,7 @@ export const newProfile = (uid, name, diet, index = 0) => ({ id: uid, name, diet
 
 const recipes = SEED_RECIPES.map((r) => ({ ...r, own: false }));
 const members = [
-  { id: 'u1', name: 'Martina', diet: 'vegetarian', emoji: '👩', color: '#10b981', intolerances: [], goals: [{ id: 'g', food: 'legumi', times: 3, mode: 'min' }], meals: { Colazione: { planText: '150 g yogurt oppure 30 g pane\n\n1 frutto', plan: parseSlotPlan('150 g yogurt oppure 30 g pane\n\n1 frutto') }, Pranzo: { planText: '80 g pasta\n\n200 g verdure', plan: parseSlotPlan('80 g pasta\n\n200 g verdure') } }, createdAt: '1' },
+  { id: 'u1', name: 'Martina', diet: 'vegetarian', balance: 'day', emoji: '👩', color: '#10b981', intolerances: [], goals: [{ id: 'g', food: 'legumi', times: 3, mode: 'min' }], meals: { Colazione: { planText: '150 g yogurt oppure 30 g pane\n\n1 frutto', plan: parseSlotPlan('150 g yogurt oppure 30 g pane\n\n1 frutto') }, Pranzo: { planText: '80 g pasta\n\n200 g verdure', plan: parseSlotPlan('80 g pasta\n\n200 g verdure') }, 'Spuntino 1': { plan: parseSlotPlan('250 g frutta fresca\n\n10 g frutta secca') }, 'Spuntino 2': { plan: parseSlotPlan('250 g frutta fresca\n\n20 g cioccolato fondente') } }, createdAt: '1' },
   { id: 'u2', name: 'Mamma', diet: 'omnivore', emoji: '👵', color: '#f97316', intolerances: [], goals: [], meals: {}, createdAt: '2' },
   { id: 'p-9', name: 'Papà', diet: 'omnivore', emoji: '👨', color: '#8b5cf6', managed: true, intolerances: [], goals: [], meals: {}, createdAt: '4' },
   { id: 'u3', name: 'Sorella', diet: 'omnivore', emoji: '😎', color: '#6366f1', intolerances: ['glutine'], goals: [], meals: {}, createdAt: '3' },
@@ -26,7 +26,7 @@ const useStore = () => { const [, f] = React.useReducer((x) => x + 1, 0); React.
 export function useWeekPlan() {
   useStore();
   return {
-    plan: store.plan,
+    plan: store.plan, loaded: true, exists: true, createIfMissing: async () => {},
     saveSlot: (d, slot, data) => { store.plan = { days: { ...store.plan.days, [d]: { ...(store.plan.days[d] || {}), [slot]: { ...(store.plan.days[d]?.[slot] || {}), ...data } } } }; emit(); },
     replaceAll: (days) => { store.plan = { days }; emit(); },
   };

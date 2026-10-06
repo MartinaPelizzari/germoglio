@@ -1,5 +1,5 @@
 import React from 'react';
-import { addDoc, arrayRemove, arrayUnion, collection, deleteDoc, deleteField, doc, documentId, getDoc, onSnapshot, query, setDoc, Timestamp, updateDoc, where } from 'firebase/firestore';
+import { addDoc, runTransaction, arrayRemove, arrayUnion, collection, deleteDoc, deleteField, doc, documentId, getDoc, onSnapshot, query, setDoc, Timestamp, updateDoc, where } from 'firebase/firestore';
 import { db } from '../firebase.js';
 import { SEED_IDS, SEED_RECIPES } from '../data/seed.js';
 import { addWeeks, getWeekId } from '../lib/dates.js';
@@ -140,9 +140,16 @@ export function DataProvider({ user, children }) {
       // "Questo profilo sono io": da quel momento lo modifica solo il suo proprietario
       claimProfile: async (id) => {
         const target = profiles.find((p) => p.id === id);
-        if (!target || !isFreeProfile(target)) return;
+        // un account è una sola persona: se ne ha già reclamata una, non può reclamarne un'altra
+        if (!target || !isFreeProfile(target) || profiles.some((p) => p.claimedBy === uid)) return;
         await setDoc(ref('profiles', id), { ...stripId(target), claimedBy: uid });
         if (profiles.some((p) => p.id === uid)) await deleteDoc(ref('profiles', uid)).catch(log);
+      },
+      // "Non sono io": la persona torna libera e la modificano tutti
+      releaseProfile: async (id) => {
+        const target = profiles.find((p) => p.id === id);
+        if (!target || target.claimedBy !== uid) return;
+        await updateDoc(ref('profiles', id), { claimedBy: deleteField() }).catch(log);
       },
       deleteProfile: (id) => { deleteDoc(ref('profiles', id)).catch(log); },
       // Impostazioni condivise del nucleo: regole e pasti condivisi
@@ -151,8 +158,10 @@ export function DataProvider({ user, children }) {
       saveRecipe: (r) => {
         const { id, own, seed, overridden, ...data } = r;
         const clean = JSON.parse(JSON.stringify({ ...data, updatedAt: new Date().toISOString() }));
-        if (id && (own || seed)) setDoc(ref('recipes', id), clean).catch(log);
-        else addDoc(col('recipes'), { ...clean, createdAt: new Date().toISOString() }).catch(log);
+        if (id && (own || seed)) { setDoc(ref('recipes', id), clean).catch(log); return id; }
+        const created = doc(col('recipes'));
+        setDoc(created, { ...clean, createdAt: new Date().toISOString() }).catch(log);
+        return created.id;
       },
       deleteRecipe: (id) => {
         if (SEED_IDS.has(id)) setDoc(ref('recipes', id), { deleted: true }).catch(log); // precaricata: si nasconde
@@ -207,10 +216,20 @@ export function DataProvider({ user, children }) {
 }
 
 // Piano settimanale: households/<hid>/plans/<weekId> con { days: { 0: { Pranzo: { items, absent, guests } } } }
+// loaded/exists: il piano è già arrivato dal database / esiste. createIfMissing scrive il piano proposto solo se nessuno
+// l'ha già creato (per la settimana precompilata: due telefoni aperti insieme non si sovrascrivono).
 export function useWeekPlan(hid, weekId) {
-  const [plan, setPlan] = React.useState({ days: {} });
-  React.useEffect(() => onSnapshot(doc(db, 'households', hid, 'plans', weekId), (s) => setPlan(s.exists() ? s.data() : { days: {} })), [hid, weekId]);
-  const saveSlot = (day, slot, data) => setDoc(doc(db, 'households', hid, 'plans', weekId), { days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
-  const replaceAll = (days) => setDoc(doc(db, 'households', hid, 'plans', weekId), { days }).catch(console.error);
-  return { plan, saveSlot, replaceAll };
+  const [state, setState] = React.useState({ plan: { days: {} }, loaded: false, exists: false });
+  React.useEffect(() => {
+    setState({ plan: { days: {} }, loaded: false, exists: false });
+    return onSnapshot(doc(db, 'households', hid, 'plans', weekId), (s) => setState({ plan: s.exists() ? s.data() : { days: {} }, loaded: true, exists: s.exists() }));
+  }, [hid, weekId]);
+  const ref = doc(db, 'households', hid, 'plans', weekId);
+  const saveSlot = (day, slot, data) => setDoc(ref, { days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
+  const replaceAll = (days) => setDoc(ref, { days }).catch(console.error);
+  const createIfMissing = async (days) => {
+    try { await runTransaction(db, async (tx) => { if (!(await tx.get(ref)).exists()) tx.set(ref, { days, auto: true }); }); }
+    catch { /* offline o già creato: si ritenterà */ }
+  };
+  return { plan: state.plan, loaded: state.loaded, exists: state.exists, saveSlot, replaceAll, createIfMissing };
 }

@@ -16,6 +16,8 @@ const { default: GuestSheet } = await load('/src/screens/GuestSheet.jsx');
 const { default: Pantry } = await load('/src/screens/Pantry.jsx');
 const { default: Settings } = await load('/src/screens/Settings.jsx');
 const { default: ProfileEditor } = await load('/src/screens/ProfileEditor.jsx');
+const { default: AdaptSheet } = await load('/src/screens/AdaptSheet.jsx');
+const { parseSlotPlan } = await load('/src/lib/dietPlan.js');
 const { default: Onboarding } = await load('/src/screens/Onboarding.jsx');
 
 const recipes = SEED_RECIPES.map((r) => ({ ...r, own: false }));
@@ -41,6 +43,7 @@ const checks = {
   Pantry: () => wrap(React.createElement(Pantry, { onClose: noop })),
   Settings: () => wrap(React.createElement(Settings, { onClose: noop })),
   ProfileEditor: () => wrap(React.createElement(ProfileEditor, { member: { ...household.members[0], managed: true, meals: { Colazione: { planText: '150 g yogurt oppure 30 g pane', plan: [] } } }, mine: false, onChange: noop, onClaim: noop, onDelete: noop, onClose: noop })),
+  AdaptSheet: () => wrap(React.createElement(AdaptSheet, { recipe: recipes.find((r) => /Frittata di ceci/i.test(r.title)), person: { ...household.members[0], meals: { Cena: { plan: parseSlotPlan('2 uova oppure 150 g tofu\n\n60 g pane') } } }, slot: 'Cena', onCreate: noop, onClose: noop })),
   Onboarding: () => wrap(React.createElement(Onboarding, { user: { uid: 'x', displayName: 'Martina Rossi' }, onDone: noop })),
 };
 let bad = 0;

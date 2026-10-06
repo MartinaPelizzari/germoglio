@@ -1,7 +1,7 @@
 import React from 'react';
 import { Briefcase, ChevronRight, Plus, Trash2, UserPlus } from 'lucide-react';
 import { useData, canEditProfile, isFreeProfile } from '../hooks/data.jsx';
-import { Avatar, Sheet } from '../components/ui.jsx';
+import { Avatar, Confirm, Sheet } from '../components/ui.jsx';
 import ProfileEditor from './ProfileEditor.jsx';
 import SlotPicker from '../components/SlotPicker.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
@@ -43,7 +43,8 @@ function RuleEditor({ rule, onChange, onDelete, onClose }) {
 
 
 export default function Family() {
-  const { uid, household, me, saveProfile, saveRules, saveSettings, addManagedProfile, claimProfile, deleteProfile } = useData();
+  const { uid, household, me, saveProfile, saveRules, saveSettings, addManagedProfile, claimProfile, releaseProfile, deleteProfile } = useData();
+  const [confirmClaim, setConfirmClaim] = React.useState(false);
   const [editId, setEditId] = React.useState(null);
   const [ruleId, setRuleId] = React.useState(null);
   const rules = household.rules || [];
@@ -103,13 +104,18 @@ export default function Family() {
         </div>
       </div>
       {editingRule && <RuleEditor rule={editingRule} onClose={() => setRuleId(null)} onChange={(r) => saveRules(rules.map((x) => (x.id === r.id ? r : x)))} onDelete={() => { saveRules(rules.filter((x) => x.id !== editingRule.id)); setRuleId(null); }} />}
+      {confirmClaim && editing && (
+        <Confirm title="Sostituire il tuo profilo?" msg={`Il tuo profilo attuale (${me?.name || 'senza nome'}) verrà eliminato e al suo posto userai quello di ${editing.name || 'questa persona'}, con i suoi dati. Un account è una sola persona.`} confirmLabel="Sì, sostituisci" onCancel={() => setConfirmClaim(false)} onConfirm={() => { claimProfile(editing.id); setConfirmClaim(false); setEditId(null); }} />
+      )}
       {editing && (
         <ProfileEditor
           member={editing}
           mine={editing.id === me?.id}
           onChange={saveProfile}
           onClose={() => setEditId(null)}
-          onClaim={() => { claimProfile(editing.id); setEditId(null); }}
+          canClaim={!household.members.some((m) => m.claimedBy === uid)}
+          onClaim={() => (me ? setConfirmClaim(true) : (claimProfile(editing.id), setEditId(null)))}
+          onRelease={editing.claimedBy === uid && editing.id !== me?.id ? () => { releaseProfile(editing.id); setEditId(null); } : undefined}
           onDelete={() => { deleteProfile(editing.id); setEditId(null); }}
         />
       )}

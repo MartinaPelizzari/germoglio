@@ -1,0 +1,1175 @@
+[
+  {
+    "name": "zucchine",
+    "kcal": 17,
+    "protein": 1.2,
+    "carbs": 3.1,
+    "fat": 0.3,
+    "fiber": 1,
+    "sugars": 2.5,
+    "satFat": 0.1,
+    "iron": 0.4,
+    "calcium": 16,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Squash, summer, zucchini, raw",
+      "url": "https://www.nutritionvalue.org/Squash%2C_raw%2C_includes_skin%2C_zucchini%2C_summer_nutritional_value.html"
+    }
+  },
+  {
+    "name": "pomodorini",
+    "kcal": 18,
+    "protein": 0.88,
+    "carbs": 3.89,
+    "fat": 0.2,
+    "fiber": 1.2,
+    "sugars": 2.63,
+    "satFat": 0.03,
+    "iron": 0.27,
+    "calcium": 10,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Tomatoes, red, ripe, raw",
+      "url": "https://www.nutritionvalue.org/Tomatoes%2C_year_round_average%2C_raw%2C_ripe%2C_red_nutritional_value.html"
+    }
+  },
+  {
+    "name": "pomodori datterini",
+    "kcal": 18,
+    "protein": 0.88,
+    "carbs": 3.89,
+    "fat": 0.2,
+    "fiber": 1.2,
+    "sugars": 2.63,
+    "satFat": 0.03,
+    "iron": 0.27,
+    "calcium": 10,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Tomatoes, red, ripe, raw",
+      "url": "https://www.nutritionvalue.org/Tomatoes%2C_year_round_average%2C_raw%2C_ripe%2C_red_nutritional_value.html"
+    }
+  },
+  {
+    "name": "pomodori tondi",
+    "kcal": 18,
+    "protein": 0.88,
+    "carbs": 3.89,
+    "fat": 0.2,
+    "fiber": 1.2,
+    "sugars": 2.63,
+    "satFat": 0.03,
+    "iron": 0.27,
+    "calcium": 10,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Tomatoes, red, ripe, raw",
+      "url": "https://www.nutritionvalue.org/Tomatoes%2C_year_round_average%2C_raw%2C_ripe%2C_red_nutritional_value.html"
+    }
+  },
+  {
+    "name": "cipolla",
+    "kcal": 40,
+    "protein": 1.1,
+    "carbs": 9.4,
+    "fat": 0.1,
+    "fiber": 1.7,
+    "sugars": 4.2,
+    "satFat": 0.04,
+    "iron": 0.21,
+    "calcium": 23,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Onions, raw",
+      "url": "https://www.nutritionvalue.org/Onions%2C_raw_nutritional_value.html"
+    }
+  },
+  {
+    "name": "petto di pollo",
+    "kcal": 120,
+    "protein": 22.5,
+    "carbs": 0,
+    "fat": 2.6,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0.6,
+    "iron": 0.4,
+    "calcium": 5,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Chicken breast, boneless skinless, raw",
+      "url": "https://www.nutritionvalue.org/Chicken%2C_raw%2C_meat_only%2C_boneless%2C_skinless%2C_breast%2C_broiler_or_fryers_nutritional_value.html"
+    },
+    "note": "Crudo."
+  },
+  {
+    "name": "spinaci",
+    "kcal": 23,
+    "protein": 2.9,
+    "carbs": 3.6,
+    "fat": 0.4,
+    "fiber": 2.2,
+    "sugars": 0.4,
+    "satFat": 0.06,
+    "iron": 2.7,
+    "calcium": 99,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Spinach, raw",
+      "url": "https://www.nutritionvalue.org/Spinach%2C_raw_nutritional_value.html"
+    }
+  },
+  {
+    "name": "spinaci freschi",
+    "kcal": 23,
+    "protein": 2.9,
+    "carbs": 3.6,
+    "fat": 0.4,
+    "fiber": 2.2,
+    "sugars": 0.4,
+    "satFat": 0.06,
+    "iron": 2.7,
+    "calcium": 99,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Spinach, raw",
+      "url": "https://www.nutritionvalue.org/Spinach%2C_raw_nutritional_value.html"
+    }
+  },
+  {
+    "name": "spinaci cotti",
+    "kcal": 23,
+    "protein": 3,
+    "carbs": 3.8,
+    "fat": 0.26,
+    "fiber": 2.4,
+    "sugars": 0.43,
+    "satFat": 0.04,
+    "iron": 3.6,
+    "calcium": 136,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Spinach, cooked, boiled",
+      "url": "https://www.nutritionvalue.org/Spinach%2C_without_salt%2C_drained%2C_boiled%2C_cooked_nutritional_value.html"
+    }
+  },
+  {
+    "name": "pomodori pelati",
+    "kcal": 16,
+    "protein": 0.79,
+    "carbs": 3.46,
+    "fat": 0.25,
+    "fiber": 1.9,
+    "sugars": 2.54,
+    "satFat": 0.03,
+    "iron": 0.57,
+    "calcium": 33,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Tomatoes, canned, packed in tomato juice",
+      "url": "https://www.nutritionvalue.org/Tomatoes%2C_packed_in_tomato_juice%2C_canned%2C_ripe%2C_red_nutritional_value.html"
+    }
+  },
+  {
+    "name": "fagiolini",
+    "kcal": 31,
+    "protein": 1.8,
+    "carbs": 7,
+    "fat": 0.2,
+    "fiber": 2.7,
+    "sugars": 3.3,
+    "satFat": 0.1,
+    "iron": 1.03,
+    "calcium": 37,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Beans, snap, green, raw",
+      "url": "https://www.nutritionvalue.org/Beans%2C_raw%2C_green%2C_snap_nutritional_value.html"
+    }
+  },
+  {
+    "name": "gamberi sgusciati",
+    "kcal": 85,
+    "protein": 20.11,
+    "carbs": 0,
+    "fat": 0.51,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0.1,
+    "iron": 0.52,
+    "calcium": 64,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Crustaceans, shrimp, raw",
+      "url": "https://www.nutritionvalue.org/Crustaceans%2C_raw%2C_shrimp_nutritional_value.html"
+    },
+    "note": "Crudi."
+  },
+  {
+    "name": "fiocchi d'avena",
+    "kcal": 379,
+    "protein": 13.2,
+    "carbs": 67.7,
+    "fat": 6.5,
+    "fiber": 10.1,
+    "sugars": 0.99,
+    "satFat": 1.1,
+    "iron": 4.2,
+    "calcium": 52,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Oats, regular and quick, dry",
+      "url": "https://www.nutritionvalue.org/Cereals%2C_dry%2C_not_fortified%2C_regular_and_quick%2C_oats_nutritional_value.html"
+    },
+    "note": "A secco."
+  },
+  {
+    "name": "pasta",
+    "kcal": 353,
+    "protein": 10.9,
+    "carbs": 79.1,
+    "fat": 1.4,
+    "fiber": 2.7,
+    "sugars": 4.2,
+    "satFat": 0.22,
+    "iron": 1.4,
+    "calcium": 22,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Pasta di semola cruda",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/pasta-semola.htm"
+    },
+    "note": "Pasta di semola a secco. Carboidrati disponibili."
+  },
+  {
+    "name": "orecchiette",
+    "kcal": 353,
+    "protein": 10.9,
+    "carbs": 79.1,
+    "fat": 1.4,
+    "fiber": 2.7,
+    "sugars": 4.2,
+    "satFat": 0.22,
+    "iron": 1.4,
+    "calcium": 22,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Pasta di semola cruda",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/pasta-semola.htm"
+    },
+    "note": "Pasta di semola a secco (stesso valore di \"pasta\"). Carboidrati disponibili."
+  },
+  {
+    "name": "pasta trofie",
+    "kcal": 353,
+    "protein": 10.9,
+    "carbs": 79.1,
+    "fat": 1.4,
+    "fiber": 2.7,
+    "sugars": 4.2,
+    "satFat": 0.22,
+    "iron": 1.4,
+    "calcium": 22,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Pasta di semola cruda",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/pasta-semola.htm"
+    },
+    "note": "Pasta di semola a secco (stesso valore di \"pasta\"). Carboidrati disponibili."
+  },
+  {
+    "name": "fettine di vitello",
+    "kcal": 107,
+    "protein": 21.3,
+    "carbs": 0,
+    "fat": 1.8,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0.5,
+    "iron": 0.8,
+    "calcium": 5,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Veal, leg (top round), lean only, raw",
+      "url": "https://www.nutritionvalue.org/Veal%2C_raw%2C_separable_lean_only%2C_leg_%28top_round%29_nutritional_value.html"
+    },
+    "note": "Crudo, solo parte magra."
+  },
+  {
+    "name": "funghi champignon",
+    "kcal": 21,
+    "protein": 3.1,
+    "carbs": 3.3,
+    "fat": 0.3,
+    "fiber": 1,
+    "sugars": 2,
+    "satFat": 0.05,
+    "iron": 0.5,
+    "calcium": 3,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Mushrooms, white, raw",
+      "url": "https://www.nutritionvalue.org/Mushrooms%2C_raw%2C_white_nutritional_value.html"
+    },
+    "note": "Crudi."
+  },
+  {
+    "name": "bietole",
+    "kcal": 19,
+    "protein": 1.81,
+    "carbs": 3.75,
+    "fat": 0.2,
+    "fiber": 1.61,
+    "sugars": 1.11,
+    "satFat": 0.03,
+    "iron": 1.81,
+    "calcium": 50,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Chard, swiss, raw",
+      "url": "https://www.nutritionvalue.org/Chard%2C_raw%2C_swiss_nutritional_value.html"
+    },
+    "note": "Crude."
+  },
+  {
+    "name": "mela",
+    "kcal": 52,
+    "protein": 0.26,
+    "carbs": 13.81,
+    "fat": 0.17,
+    "fiber": 2.4,
+    "sugars": 10.39,
+    "satFat": 0.03,
+    "iron": 0.12,
+    "calcium": 6,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Apples, raw, with skin",
+      "url": "https://www.nutritionvalue.org/Apples%2C_with_skin%2C_raw_nutritional_value.html"
+    }
+  },
+  {
+    "name": "farina 00",
+    "kcal": 340,
+    "protein": 11,
+    "carbs": 77.3,
+    "fat": 0.7,
+    "fiber": 2.2,
+    "sugars": 1.7,
+    "satFat": 0.2,
+    "iron": 0.7,
+    "calcium": 17,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Farina di frumento tenero tipo 00",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/farina-frumento-tipo00.htm"
+    },
+    "note": "Carboidrati disponibili. Acidi grassi saturi non riportati dalla fonte: 0,2 g è il valore USDA per farina di frumento bianca (nutritionvalue.org)."
+  },
+  {
+    "name": "orata intera pulita",
+    "kcal": 159,
+    "protein": 19.7,
+    "carbs": 1.2,
+    "fat": 8.4,
+    "fiber": 0,
+    "sugars": 1.2,
+    "satFat": 1.94,
+    "calcium": 30,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Orata di allevamento",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/orata-allevamento.htm"
+    },
+    "note": "Orata di allevamento, parte edibile; ferro non riportato dalla fonte."
+  },
+  {
+    "name": "succo di limone",
+    "kcal": 22,
+    "protein": 0.37,
+    "carbs": 6.91,
+    "fat": 0.24,
+    "fiber": 0.3,
+    "sugars": 2.52,
+    "satFat": 0.04,
+    "iron": 0.08,
+    "calcium": 6,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Lemon juice, raw",
+      "url": "https://www.nutritionvalue.org/Lemon_juice%2C_raw_nutritional_value.html"
+    }
+  },
+  {
+    "name": "latte",
+    "kcal": 61,
+    "protein": 3.15,
+    "carbs": 4.8,
+    "fat": 3.25,
+    "fiber": 0,
+    "sugars": 4.8,
+    "satFat": 1.87,
+    "iron": 0.03,
+    "calcium": 113,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Milk, whole, 3.25% milkfat",
+      "url": "https://www.nutritionvalue.org/Milk%2C_with_added_vitamin_D%2C_3.25%25_milkfat%2C_whole_nutritional_value.html"
+    },
+    "note": "Latte intero."
+  },
+  {
+    "name": "farro",
+    "kcal": 338,
+    "protein": 14.6,
+    "carbs": 70.2,
+    "fat": 2.43,
+    "fiber": 10.7,
+    "sugars": 6.8,
+    "satFat": 0.41,
+    "iron": 4.44,
+    "calcium": 27,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Spelt, uncooked",
+      "url": "https://www.nutritionvalue.org/Spelt%2C_uncooked_nutritional_value.html"
+    },
+    "note": "Farro (spelt) a secco, crudo."
+  },
+  {
+    "name": "tè verde",
+    "kcal": 1,
+    "protein": 0.22,
+    "carbs": 0,
+    "fat": 0,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0,
+    "iron": 0.02,
+    "calcium": 0,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Tea, green, brewed",
+      "url": "https://www.nutritionvalue.org/Beverages%2C_regular%2C_brewed%2C_green%2C_tea_nutritional_value.html"
+    },
+    "note": "Infuso, per 100 ml."
+  },
+  {
+    "name": "hummus di ceci",
+    "kcal": 240,
+    "protein": 7.8,
+    "carbs": 15.3,
+    "fat": 17.8,
+    "fiber": 5.5,
+    "sugars": 0.6,
+    "satFat": 2.6,
+    "iron": 2.5,
+    "calcium": 47,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Hummus, commercial",
+      "url": "https://www.nutritionvalue.org/Hummus%2C_commercial_nutritional_value.html"
+    },
+    "note": "Hummus commerciale."
+  },
+  {
+    "name": "fagioli borlotti cotti",
+    "kcal": 136,
+    "protein": 9.61,
+    "carbs": 24.46,
+    "fat": 0.46,
+    "fiber": 8.59,
+    "sugars": 0,
+    "satFat": 0.12,
+    "iron": 2.09,
+    "calcium": 49.72,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Beans, cranberry (roman), boiled",
+      "url": "https://www.nutritionvalue.org/Beans%2C_without_salt%2C_boiled%2C_cooked%2C_mature_seeds%2C_cranberry_%28roman%29_nutritional_value.html"
+    },
+    "note": "Fagioli cranberry (roman) lessati senza sale."
+  },
+  {
+    "name": "purè di patate",
+    "kcal": 113,
+    "protein": 1.86,
+    "carbs": 16.81,
+    "fat": 4.22,
+    "fiber": 1.5,
+    "sugars": 1.43,
+    "satFat": 2.61,
+    "iron": 0.26,
+    "calcium": 23.81,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Potatoes, mashed, home-prepared, whole milk and butter",
+      "url": "https://www.nutritionvalue.org/Potatoes%2C_whole_milk_and_butter_added%2C_home-prepared%2C_mashed_nutritional_value.html"
+    },
+    "note": "Preparato in casa con latte intero e burro."
+  },
+  {
+    "name": "salmone (trancio)",
+    "kcal": 208,
+    "protein": 20.42,
+    "carbs": 0,
+    "fat": 13.42,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 3.05,
+    "iron": 0.34,
+    "calcium": 9,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Fish, salmon, Atlantic, farmed, raw",
+      "url": "https://www.nutritionvalue.org/Fish%2C_raw%2C_farmed%2C_Atlantic%2C_salmon_nutritional_value.html"
+    },
+    "note": "Salmone atlantico d'allevamento, crudo."
+  },
+  {
+    "name": "brodo",
+    "kcal": 5,
+    "protein": 0.2,
+    "carbs": 0.9,
+    "fat": 0.1,
+    "fiber": 0,
+    "sugars": 0.5,
+    "satFat": 0.03,
+    "iron": 0.06,
+    "calcium": 3,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Soup, vegetable broth, ready to serve",
+      "url": "https://www.nutritionvalue.org/Soup%2C_ready_to_serve%2C_vegetable_broth_nutritional_value.html"
+    },
+    "note": "Brodo vegetale pronto, per 100 ml."
+  },
+  {
+    "name": "riso integrale cotto",
+    "kcal": 123,
+    "protein": 2.74,
+    "carbs": 25.58,
+    "fat": 0.97,
+    "fiber": 1.6,
+    "sugars": 0.24,
+    "satFat": 0.26,
+    "iron": 0.56,
+    "calcium": 3,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Rice, brown, long-grain, cooked",
+      "url": "https://www.nutritionvalue.org/Rice%2C_cooked%2C_long-grain%2C_brown_nutritional_value.html"
+    }
+  },
+  {
+    "name": "cous cous",
+    "kcal": 376,
+    "protein": 12.75,
+    "carbs": 77.46,
+    "fat": 0.64,
+    "fiber": 5.01,
+    "satFat": 0.12,
+    "iron": 1.08,
+    "calcium": 24,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Couscous, dry",
+      "url": "https://www.nutritionvalue.org/Couscous%2C_dry_nutritional_value.html"
+    },
+    "note": "A secco; zuccheri non riportati dalla fonte."
+  },
+  {
+    "name": "couscous precotto",
+    "kcal": 376,
+    "protein": 12.75,
+    "carbs": 77.46,
+    "fat": 0.64,
+    "fiber": 5.01,
+    "satFat": 0.12,
+    "iron": 1.08,
+    "calcium": 24,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Couscous, dry",
+      "url": "https://www.nutritionvalue.org/Couscous%2C_dry_nutritional_value.html"
+    },
+    "note": "A secco; zuccheri non riportati dalla fonte."
+  },
+  {
+    "name": "lattuga",
+    "kcal": 14,
+    "protein": 1.36,
+    "carbs": 2.86,
+    "fat": 0.15,
+    "fiber": 1.31,
+    "sugars": 0.78,
+    "satFat": 0.02,
+    "iron": 0.86,
+    "calcium": 36,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Lettuce, green leaf, raw",
+      "url": "https://www.nutritionvalue.org/Lettuce%2C_raw%2C_green_leaf_nutritional_value.html"
+    },
+    "note": "Lattuga a foglia verde, cruda."
+  },
+  {
+    "name": "ricotta vaccina",
+    "kcal": 146,
+    "protein": 8.8,
+    "carbs": 3.5,
+    "fat": 10.9,
+    "fiber": 0,
+    "sugars": 3.5,
+    "satFat": 6.82,
+    "iron": 0.4,
+    "calcium": 295,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Ricotta di vacca",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/ricotta-vacca.htm"
+    },
+    "note": "Carboidrati disponibili (solo zuccheri)."
+  },
+  {
+    "name": "salmone affumicato",
+    "kcal": 116,
+    "protein": 18.3,
+    "carbs": 0,
+    "fat": 4.3,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0.93,
+    "iron": 0.85,
+    "calcium": 11,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Fish, salmon, Chinook, smoked",
+      "url": "https://www.nutritionvalue.org/Fish%2C_smoked%2C_Chinook%2C_salmon_nutritional_value.html"
+    },
+    "note": "Salmone Chinook affumicato."
+  },
+  {
+    "name": "riso per insalate",
+    "kcal": 365,
+    "protein": 7.1,
+    "carbs": 79.95,
+    "fat": 0.66,
+    "fiber": 1.3,
+    "sugars": 0.12,
+    "satFat": 0.18,
+    "iron": 4.31,
+    "calcium": 28,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Rice, white, long-grain, raw, enriched",
+      "url": "https://www.nutritionvalue.org/Rice%2C_enriched%2C_raw%2C_regular%2C_long-grain%2C_white_nutritional_value.html"
+    },
+    "note": "Riso bianco a chicco lungo, crudo."
+  },
+  {
+    "name": "pane integrale tostato",
+    "kcal": 277,
+    "protein": 13.6,
+    "carbs": 47.3,
+    "fat": 3.9,
+    "fiber": 6.6,
+    "sugars": 4.9,
+    "satFat": 0.8,
+    "iron": 2.8,
+    "calcium": 177,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Bread, whole wheat, toasted",
+      "url": "https://www.nutritionvalue.org/Bread%2C_whole_wheat%2C_toasted_nutritional_value.html"
+    }
+  },
+  {
+    "name": "tonno fresco",
+    "kcal": 109,
+    "protein": 24.4,
+    "carbs": 0,
+    "fat": 0.49,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0.17,
+    "iron": 0.78,
+    "calcium": 3.5,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Fish, tuna, yellowfin, fresh, raw",
+      "url": "https://www.nutritionvalue.org/Fish%2C_raw%2C_yellowfin%2C_fresh%2C_tuna_nutritional_value.html"
+    },
+    "note": "Tonno pinna gialla crudo."
+  },
+  {
+    "name": "ceci secchi ammollati",
+    "kcal": 378,
+    "protein": 20.5,
+    "carbs": 63,
+    "fat": 6,
+    "fiber": 12.2,
+    "sugars": 10.7,
+    "satFat": 0.6,
+    "iron": 4.31,
+    "calcium": 57,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Chickpeas, mature seeds, raw",
+      "url": "https://www.nutritionvalue.org/Chickpeas_%28garbanzo_beans%2C_bengal_gram%29%2C_raw%2C_mature_seeds_nutritional_value.html"
+    },
+    "note": "Valore a secco (peso prima dell'ammollo), come per i legumi secchi."
+  },
+  {
+    "name": "sciroppo d'acero",
+    "kcal": 260,
+    "protein": 0,
+    "carbs": 67,
+    "fat": 0.06,
+    "fiber": 0,
+    "sugars": 60,
+    "satFat": 0.01,
+    "iron": 0.1,
+    "calcium": 100,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Syrups, maple",
+      "url": "https://www.nutritionvalue.org/Syrups%2C_maple_nutritional_value.html"
+    }
+  },
+  {
+    "name": "pane per hamburger",
+    "kcal": 280,
+    "protein": 9.8,
+    "carbs": 50.1,
+    "fat": 3.9,
+    "fiber": 1.8,
+    "sugars": 7.3,
+    "satFat": 0.8,
+    "iron": 3.4,
+    "calcium": 143,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Rolls, hamburger or hotdog, plain",
+      "url": "https://www.nutritionvalue.org/Rolls%2C_plain%2C_hamburger_or_hotdog_nutritional_value.html"
+    }
+  },
+  {
+    "name": "banana congelata",
+    "kcal": 89,
+    "protein": 1.1,
+    "carbs": 23,
+    "fat": 0.3,
+    "fiber": 2.6,
+    "sugars": 12,
+    "satFat": 0.1,
+    "iron": 0.26,
+    "calcium": 5,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Bananas, raw",
+      "url": "https://www.nutritionvalue.org/Bananas%2C_raw_nutritional_value.html"
+    },
+    "note": "Valore della banana cruda (il congelamento non cambia i nutrienti)."
+  },
+  {
+    "name": "pancetta tesa",
+    "kcal": 337,
+    "protein": 20.9,
+    "carbs": 0,
+    "fat": 28.1,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 9.61,
+    "iron": 0.4,
+    "calcium": 10,
+    "source": {
+      "name": "CREA/INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Pancetta tesa",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/pancetta-tesa.htm"
+    }
+  },
+  {
+    "name": "olio di semi di girasole",
+    "kcal": 884,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 100,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 10.3,
+    "iron": 0,
+    "calcium": 0,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Oil, sunflower, linoleic (approx. 65%)",
+      "url": "https://www.nutritionvalue.org/Oil%2C_%28approx._65%25%29%2C_linoleic%2C_sunflower_nutritional_value.html"
+    }
+  },
+  {
+    "name": "melanzana",
+    "kcal": 24,
+    "protein": 0.98,
+    "carbs": 5.88,
+    "fat": 0.18,
+    "fiber": 3,
+    "sugars": 3.53,
+    "satFat": 0.03,
+    "iron": 0.23,
+    "calcium": 8.54,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Eggplant, raw",
+      "url": "https://www.nutritionvalue.org/Eggplant%2C_raw_nutritional_value.html"
+    }
+  },
+  {
+    "name": "lenticchie",
+    "kcal": 352,
+    "protein": 24.6,
+    "carbs": 63.4,
+    "fat": 1.1,
+    "fiber": 10.7,
+    "sugars": 2,
+    "satFat": 0.15,
+    "iron": 6.5,
+    "calcium": 35,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Lentils, raw",
+      "url": "https://www.nutritionvalue.org/Lentils%2C_raw_nutritional_value.html"
+    },
+    "note": "Secche, crude."
+  },
+  {
+    "name": "prezzemolo",
+    "kcal": 37,
+    "protein": 3,
+    "carbs": 6.3,
+    "fat": 0.79,
+    "fiber": 3.3,
+    "sugars": 0.85,
+    "satFat": 0.13,
+    "iron": 6.2,
+    "calcium": 138,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Parsley, fresh",
+      "url": "https://www.nutritionvalue.org/Parsley%2C_fresh_nutritional_value.html"
+    }
+  },
+  {
+    "name": "aneto o prezzemolo",
+    "kcal": 37,
+    "protein": 3,
+    "carbs": 6.3,
+    "fat": 0.79,
+    "fiber": 3.3,
+    "sugars": 0.85,
+    "satFat": 0.13,
+    "iron": 6.2,
+    "calcium": 138,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Parsley, fresh",
+      "url": "https://www.nutritionvalue.org/Parsley%2C_fresh_nutritional_value.html"
+    },
+    "note": "Valore del prezzemolo fresco."
+  },
+  {
+    "name": "edamame o piselli",
+    "kcal": 81,
+    "protein": 5.4,
+    "carbs": 14.5,
+    "fat": 0.4,
+    "fiber": 5.7,
+    "sugars": 5.7,
+    "satFat": 0.07,
+    "iron": 1.5,
+    "calcium": 25,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Peas, green, raw",
+      "url": "https://www.nutritionvalue.org/Peas%2C_raw%2C_green_nutritional_value.html"
+    },
+    "note": "Valore dei piselli freschi crudi."
+  },
+  {
+    "name": "uvetta",
+    "kcal": 299,
+    "protein": 3.1,
+    "carbs": 79,
+    "fat": 0.5,
+    "fiber": 3.7,
+    "sugars": 59,
+    "satFat": 0.1,
+    "iron": 1.9,
+    "calcium": 50,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Raisins, seedless",
+      "url": "https://www.nutritionvalue.org/Raisins%2C_seedless_nutritional_value.html"
+    }
+  },
+  {
+    "name": "pomodori secchi sott'olio",
+    "kcal": 212,
+    "protein": 5.1,
+    "carbs": 23.3,
+    "fat": 14.1,
+    "fiber": 5.8,
+    "satFat": 1.9,
+    "iron": 2.7,
+    "calcium": 47,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Tomatoes, sun-dried, packed in oil, drained",
+      "url": "https://www.nutritionvalue.org/Tomatoes%2C_drained%2C_packed_in_oil%2C_sun-dried_nutritional_value.html"
+    },
+    "note": "Scolati; zuccheri non riportati dalla fonte."
+  },
+  {
+    "name": "nocciole",
+    "kcal": 628,
+    "protein": 14.9,
+    "carbs": 16.7,
+    "fat": 60.7,
+    "fiber": 9.7,
+    "sugars": 4.3,
+    "satFat": 4.5,
+    "iron": 4.7,
+    "calcium": 114,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Nuts, hazelnuts or filberts",
+      "url": "https://www.nutritionvalue.org/Nuts%2C_hazelnuts_or_filberts_nutritional_value.html"
+    }
+  },
+  {
+    "name": "grana padano",
+    "kcal": 398,
+    "protein": 33,
+    "carbs": 0,
+    "fat": 29,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 18.4,
+    "iron": 0.14,
+    "calcium": 1165,
+    "source": {
+      "name": "Consorzio di Tutela Grana Padano DOP: valori nutrizionali",
+      "url": "https://www.granapadano.it/en-en/the-foundation-of-wellbeing/nutritional-properties/nutritional-values-and-calories-of-grana-padano/"
+    },
+    "note": "Carboidrati inferiori a 1 g riportati come 0. Ferro dalla scheda del Consorzio (sintesi della pagina)."
+  },
+  {
+    "name": "burro di arachidi",
+    "kcal": 588,
+    "protein": 22.22,
+    "carbs": 22.31,
+    "fat": 51.36,
+    "fiber": 5,
+    "sugars": 10.5,
+    "satFat": 10.31,
+    "iron": 1.75,
+    "calcium": 50,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Peanut butter, smooth, with salt",
+      "url": "https://www.nutritionvalue.org/Peanut_butter%2C_with_salt%2C_smooth_style_nutritional_value.html"
+    }
+  },
+  {
+    "name": "senape",
+    "kcal": 60,
+    "protein": 3.8,
+    "carbs": 5.8,
+    "fat": 3.34,
+    "fiber": 4,
+    "sugars": 1,
+    "satFat": 0.22,
+    "iron": 1.6,
+    "calcium": 60,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Mustard, yellow, prepared",
+      "url": "https://www.nutritionvalue.org/Mustard%2C_yellow%2C_prepared_nutritional_value.html"
+    }
+  },
+  {
+    "name": "speck",
+    "kcal": 300,
+    "protein": 30.7,
+    "carbs": 1.2,
+    "fat": 19.1,
+    "fiber": 0,
+    "sugars": 1.2,
+    "satFat": 6.62,
+    "iron": 1.42,
+    "calcium": 8,
+    "source": {
+      "name": "INRAN, Tabelle di composizione degli alimenti (via my-personaltrainer.it): Speck dell'Alto Adige IGP",
+      "url": "https://www.my-personaltrainer.it/tabelle-nutrizionali/Speck_dell_Alto_Adige_IGP.html"
+    },
+    "note": "Carboidrati = zuccheri (voce INRAN \"glucidi\")."
+  },
+  {
+    "name": "cioccolato fondente",
+    "kcal": 599,
+    "protein": 7.8,
+    "carbs": 45.9,
+    "fat": 42.6,
+    "fiber": 10.9,
+    "sugars": 24,
+    "satFat": 24.5,
+    "iron": 11.9,
+    "calcium": 74,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Chocolate, dark, 70-85% cacao solids",
+      "url": "https://www.nutritionvalue.org/Chocolate%2C_70-85%25_cacao_solids%2C_dark_nutritional_value.html"
+    },
+    "note": "Cacao 70-85%."
+  },
+  {
+    "name": "olive",
+    "kcal": 148,
+    "protein": 1.1,
+    "carbs": 3.7,
+    "fat": 15.3,
+    "fiber": 3.3,
+    "sugars": 0.4,
+    "satFat": 2,
+    "iron": 0.37,
+    "calcium": 37,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Olives, green, pickled",
+      "url": "https://www.nutritionvalue.org/Olives%2C_green%2C_canned_or_bottled%2C_pickled_nutritional_value.html"
+    },
+    "note": "Olive verdi in salamoia."
+  },
+  {
+    "name": "pinoli",
+    "kcal": 673,
+    "protein": 13.7,
+    "carbs": 13.1,
+    "fat": 68.4,
+    "fiber": 3.7,
+    "sugars": 3.6,
+    "satFat": 4.9,
+    "iron": 5.54,
+    "calcium": 16,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Nuts, pine nuts, dried",
+      "url": "https://www.nutritionvalue.org/Nuts%2C_dried%2C_pine_nuts_nutritional_value.html"
+    }
+  },
+  {
+    "name": "zucchero di canna",
+    "kcal": 377,
+    "protein": 0,
+    "carbs": 97.33,
+    "fat": 0,
+    "fiber": 0,
+    "sugars": 97,
+    "satFat": 0,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Sugars, brown",
+      "url": "https://www.nutritionvalue.org/Sugars%2C_brown_nutritional_value.html"
+    },
+    "note": "Ferro e calcio non attendibili dalla fonte (porzione da 3 g), omessi."
+  },
+  {
+    "name": "aceto di vino",
+    "kcal": 20,
+    "protein": 0.07,
+    "carbs": 0.27,
+    "fat": 0,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0,
+    "iron": 0.47,
+    "calcium": 7,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Vinegar, red wine",
+      "url": "https://www.nutritionvalue.org/Vinegar%2C_red_wine_nutritional_value.html"
+    },
+    "note": "Aceto di vino rosso."
+  },
+  {
+    "name": "cumino in polvere",
+    "kcal": 375,
+    "protein": 17.6,
+    "carbs": 44.3,
+    "fat": 22.3,
+    "fiber": 10.5,
+    "sugars": 2.4,
+    "satFat": 1.5,
+    "iron": 66.4,
+    "calcium": 952,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Spices, cumin seed",
+      "url": "https://www.nutritionvalue.org/Spices%2C_cumin_seed_nutritional_value.html"
+    },
+    "note": "Valore del seme di cumino."
+  },
+  {
+    "name": "yogurt naturale",
+    "kcal": 61,
+    "protein": 3.47,
+    "carbs": 4.65,
+    "fat": 3.25,
+    "fiber": 0,
+    "sugars": 4.65,
+    "satFat": 2.09,
+    "iron": 0.05,
+    "calcium": 121,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Yogurt, plain, whole milk",
+      "url": "https://www.nutritionvalue.org/Yogurt%2C_whole_milk%2C_plain_nutritional_value.html"
+    },
+    "note": "Yogurt intero bianco."
+  },
+  {
+    "name": "mandorle pelate",
+    "kcal": 590,
+    "protein": 21.41,
+    "carbs": 18.66,
+    "fat": 52.53,
+    "fiber": 9.91,
+    "sugars": 4.63,
+    "satFat": 3.95,
+    "iron": 3.28,
+    "calcium": 236,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Nuts, almonds, blanched",
+      "url": "https://www.nutritionvalue.org/Nuts%2C_blanched%2C_almonds_nutritional_value.html"
+    }
+  },
+  {
+    "name": "olio di semi di sesamo",
+    "kcal": 884,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 100,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 14.2,
+    "iron": 0,
+    "calcium": 0,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Oil, sesame, salad or cooking",
+      "url": "https://www.nutritionvalue.org/Oil%2C_salad_or_cooking%2C_sesame_nutritional_value.html"
+    }
+  },
+  {
+    "name": "semi di sesamo nero",
+    "kcal": 573,
+    "protein": 17.7,
+    "carbs": 23.4,
+    "fat": 49.7,
+    "fiber": 11.8,
+    "sugars": 0.3,
+    "satFat": 6.9,
+    "iron": 14.5,
+    "calcium": 975,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Seeds, sesame seeds, whole, dried",
+      "url": "https://www.nutritionvalue.org/Seeds%2C_dried%2C_whole%2C_sesame_seeds_nutritional_value.html"
+    },
+    "note": "Valore dei semi di sesamo secchi interi (voce generica USDA)."
+  },
+  {
+    "name": "lievito di birra secco",
+    "kcal": 325,
+    "protein": 40.5,
+    "carbs": 42.5,
+    "fat": 7.6,
+    "fiber": 27.5,
+    "sugars": 0,
+    "satFat": 1,
+    "iron": 2.25,
+    "calcium": 25,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Leavening agents, yeast, baker's, active dry",
+      "url": "https://www.nutritionvalue.org/Leavening_agents%2C_active_dry%2C_baker's%2C_yeast_nutritional_value.html"
+    },
+    "note": "Valori ricalcolati da una porzione da 4 g."
+  },
+  {
+    "name": "pepe nero",
+    "kcal": 251,
+    "protein": 10.4,
+    "carbs": 65.3,
+    "fat": 3.3,
+    "fiber": 25.3,
+    "sugars": 0.4,
+    "satFat": 1.4,
+    "iron": 9.6,
+    "calcium": 443,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Spices, black, pepper",
+      "url": "https://www.nutritionvalue.org/Spices%2C_black%2C_pepper_nutritional_value.html"
+    }
+  },
+  {
+    "name": "filetto di maiale",
+    "kcal": 109,
+    "protein": 21,
+    "carbs": 0,
+    "fat": 2.2,
+    "fiber": 0,
+    "sugars": 0,
+    "satFat": 0.7,
+    "iron": 0.98,
+    "calcium": 5,
+    "source": {
+      "name": "USDA FoodData Central (SR Legacy), via nutritionvalue.org: Pork, loin, tenderloin, lean only, raw",
+      "url": "https://www.nutritionvalue.org/Pork%2C_raw%2C_separable_lean_only%2C_tenderloin%2C_loin%2C_fresh_nutritional_value.html"
+    },
+    "note": "Crudo, solo parte magra."
+  }
+]

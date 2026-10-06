@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import '../../src/index.css';
+import '../../src/lib/nutritionData.js';
 import { Main } from '../../src/App.jsx';
 import { DataProvider } from './mock-data.jsx';
 

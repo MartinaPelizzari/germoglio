@@ -18,6 +18,15 @@ export const mealOf = (member, slot) => {
   return { eats: m.eats !== false && wanted, mult, plan: m.plan || [], planText: m.planText || '', note: m.note || '' };
 };
 
+// Il pasto di una persona per un piatto: in modalità "giornata" il piatto può consumare gruppi di altri pasti (item.uses)
+export const mealOfItem = (member, slot, item) => {
+  const meal = mealOf(member, slot);
+  const keys = item?.uses?.[member?.id];
+  if (!keys) return meal;
+  const plan = keys.map((k) => { const [s, gi] = k.split('|'); return mealOf(member, s).plan[Number(gi)]; }).filter(Boolean);
+  return { ...meal, plan };
+};
+
 export const scaleRecipe = (recipe, meal) => {
   const base = (recipe.ingredients || []).map((i) => ({ ...i, qty: i.unit === 'q.b.' ? 0 : i.qty * meal.mult }));
   if (!meal.plan?.length) return base;

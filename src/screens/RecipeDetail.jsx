@@ -4,9 +4,10 @@ import { useData } from '../hooks/data.jsx';
 import { DietBadge, Portal, useBackClose } from '../components/ui.jsx';
 import { DEFAULT_EMOJI, timeLabel } from '../lib/format.js';
 import { recipeKind } from '../lib/meals.js';
-import { formatQty, mealOf, scaleRecipe, sumIngredients } from '../lib/scale.js';
+import { formatQty, mealOfItem, scaleRecipe, sumIngredients } from '../lib/scale.js';
 import { allergenLabel, recipeAllergens } from '../lib/allergens.js';
 import { agoLabel } from '../lib/usage.js';
+import { planReport } from '../lib/adapt.js';
 
 // context (facoltativo): { slot, eaters: [member] } quando si apre da un pasto pianificato
 export default function RecipeDetail({ recipe, context, onClose, onEdit, onDuplicate, onDelete }) {
@@ -29,16 +30,18 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
   const doses = React.useMemo(() => {
     if (view === 'base') return { list: recipe.ingredients, note: 'Dosi di una porzione standard.' };
     if (view === 'all') {
-      const per = members.map((m) => scaleRecipe(recipe, mealOf(m, slot)));
+      const per = members.map((m) => scaleRecipe(recipe, mealOfItem(m, slot, context?.item)));
       return { list: sumIngredients(per), note: `Totale per ${members.map((m) => m.name).join(', ') || 'nessuno'}.` };
     }
     const m = members.find((x) => x.id === view) || household.members.find((x) => x.id === view);
-    const meal = mealOf(m, slot);
+    const meal = mealOfItem(m, slot, context?.item);
     const why = meal.plan.length ? `Dosi dal piano alimentare di ${m.name} (${slot.toLowerCase()}) per gli ingredienti che corrispondono.` : meal.mult !== 1 ? `Porzione di ${m.name} x ${String(meal.mult).replace('.', ',')}.` : `Porzione standard di ${m.name}.`;
     return { list: scaleRecipe(recipe, meal), note: why };
   }, [view, recipe, members, slot, household]);
 
   const tint = 'bg-brand-50';
+  // Per ogni persona con un piano scritto: la ricetta lo rispetta? Se no, perché
+  const reports = context ? members.filter((m) => mealOfItem(m, slot, context.item).plan.length).map((m) => ({ m, r: planReport(recipe, mealOfItem(m, slot, context.item).plan, slot) })) : [];
   const modes = [{ id: context ? 'all' : 'base', label: context ? 'Tutti' : 'Base' }, ...members.map((m) => ({ id: m.id, label: m.name }))];
 
   return (
@@ -71,6 +74,18 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
               </a>
             )}
 
+            {reports.some(({ r }) => r.issues.length) && (
+              <div className="mt-3 mb-2 bg-amber-50 text-amber-900 rounded-2xl p-4 space-y-3">
+                <p className="font-display font-bold">Rispetto al piano alimentare</p>
+                {reports.filter(({ r }) => r.issues.length).map(({ m, r }) => (
+                  <div key={m.id} className="space-y-1">
+                    <p className="text-sm font-bold">{m.name}</p>
+                    {r.issues.map((i) => <p key={i.index} className="text-xs"><b>{i.why}</b> {i.hint}</p>)}
+                    {context.onAdapt && <button onClick={() => context.onAdapt(m)} className="text-xs font-bold underline">Adatta la ricetta al piano di {m.name}</button>}
+                  </div>
+                ))}
+              </div>
+            )}
             <div className="flex items-center justify-between mt-4 mb-2">
               <h3 className="font-display font-bold text-xl text-slate-800 flex items-center gap-2"><ShoppingCart className="w-5 h-5 text-brand-500" /> Ingredienti</h3>
             </div>

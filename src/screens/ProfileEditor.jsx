@@ -9,6 +9,7 @@ import { FOOD_TYPES, GOAL_MODES } from '../lib/goals.js';
 import { parseSlotPlan } from '../lib/dietPlan.js';
 import PlanBox from '../components/PlanBox.jsx';
 import { VisibleSlots } from '../components/SlotPicker.jsx';
+import BalanceMode from '../components/BalanceMode.jsx';
 import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
 import { compressImage } from '../lib/image.js';
 
@@ -28,7 +29,7 @@ function PlanImportBlock({ member, onChange }) {
   );
 }
 
-export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onDelete, onClose }) {
+export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onRelease, canClaim = true, onDelete, onClose }) {
   const [openSlot, setOpenSlot] = React.useState(null);
   const [confirm, setConfirm] = React.useState(false);
   const [photoBusy, setPhotoBusy] = React.useState(false);
@@ -55,7 +56,13 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
     <Sheet title={title || member.name || 'Persona'} onClose={onClose} full>
       <div className="p-5 space-y-6">
         {intro && <p className="text-sm text-brand-800 bg-brand-50 rounded-2xl p-4">{intro}</p>}
-        {free && !mine && (
+        {onRelease && (
+          <div className="bg-amber-50 rounded-2xl p-4 space-y-2">
+            <p className="text-sm text-amber-800">Hai reclamato questo profilo, ma il tuo è un altro. Se non sei tu, rilascialo: tornerà modificabile da tutti.</p>
+            <button onClick={onRelease} className="w-full py-2.5 bg-amber-500 text-white font-bold rounded-xl active:scale-95">Non sono io: rilascia</button>
+          </div>
+        )}
+        {free && !mine && canClaim && (
           <div className="bg-brand-50 rounded-2xl p-4 space-y-2">
             <p className="text-sm text-brand-800">Questa persona non ha un account: la modificate tutti. Se è il tuo profilo, reclamalo: da quel momento lo modifichi solo tu.</p>
             <button onClick={onClaim} className="w-full py-2.5 bg-brand-600 text-white font-bold rounded-xl active:scale-95">Questo profilo sono io</button>
@@ -116,6 +123,7 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
 
         <div>
           <h4 className="font-display font-bold text-lg text-slate-800 mb-1">Piano alimentare</h4>
+          <div className="mb-4"><BalanceMode member={member} onChange={onChange} /></div>
           <p className="text-xs text-slate-400 mb-3">Scrivi cosa può mangiare in ogni pasto, come l'ha scritto la nutrizionista. L'app propone ricette che rispettano il piano e mette le dosi indicate. Esempio: "150 g yogurt oppure 30 g pane".</p>
           <PlanImportBlock member={member} onChange={onChange} />
 
