@@ -1,0 +1,4269 @@
+[
+  {
+    "id": "pranzo-tm-bowl-vegan",
+    "title": "Bowl di riso con tofu glassato",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "piatto unico",
+      "bowl",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cavolo cappuccio viola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Tofu",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate il riso, lessatelo in acqua salata per circa 12 minuti, scolatelo e fatelo raffreddare un poco.",
+      "Cuocete a vapore i broccoli a cimette e le carote a bastoncini per 8 minuti, tenendoli ancora leggermente croccanti, e affettate sottilmente il cavolo viola crudo.",
+      "Stemperate la tahina con il succo di limone, mezza dose della salsa di soia e un cucchiaio di acqua fino a ottenere una salsa liscia e fluida.",
+      "Tagliate il tofu a cubetti, rosolatelo in padella con l'olio finché è dorato e glassatelo per un minuto con la restante salsa di soia e lo sciroppo d'acero.",
+      "Distribuite in una ciotola il riso, le verdure e la proteina, condite con la salsa alla tahina e completate con il sesamo."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane/buddha-bowl-vegan/"
+    },
+    "theme": "bowl",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-bowl-vegetarian",
+    "title": "Bowl di riso con uova e edamame",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "piatto unico",
+      "bowl"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cavolo cappuccio viola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Edamame sgusciati",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate il riso, lessatelo in acqua salata per circa 12 minuti, scolatelo e fatelo raffreddare un poco.",
+      "Cuocete a vapore i broccoli a cimette e le carote a bastoncini per 8 minuti, tenendoli ancora leggermente croccanti, e affettate sottilmente il cavolo viola crudo.",
+      "Stemperate la tahina con il succo di limone, mezza dose della salsa di soia e un cucchiaio di acqua fino a ottenere una salsa liscia e fluida.",
+      "Cuocete le uova per 7 minuti in acqua bollente, raffreddatele e tagliatele a metà; scottate gli edamame per 3 minuti e conditeli con il resto della salsa di soia.",
+      "Distribuite in una ciotola il riso, le verdure e la proteina, condite con la salsa alla tahina e completate con il sesamo."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane/buddha-bowl-vegan/"
+    },
+    "theme": "bowl",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-bowl-omnivore",
+    "title": "Bowl di riso con pollo glassato",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "piatto unico",
+      "bowl"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cavolo cappuccio viola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate il riso, lessatelo in acqua salata per circa 12 minuti, scolatelo e fatelo raffreddare un poco.",
+      "Cuocete a vapore i broccoli a cimette e le carote a bastoncini per 8 minuti, tenendoli ancora leggermente croccanti, e affettate sottilmente il cavolo viola crudo.",
+      "Stemperate la tahina con il succo di limone, mezza dose della salsa di soia e un cucchiaio di acqua fino a ottenere una salsa liscia e fluida.",
+      "Tagliate il pollo a striscioline, rosolatelo in padella con l'olio per 6-7 minuti e glassatelo con il resto della salsa di soia e il miele.",
+      "Distribuite in una ciotola il riso, le verdure e la proteina, condite con la salsa alla tahina e completate con il sesamo."
+    ],
+    "source": {
+      "name": "Vegolosi",
+      "url": "https://www.vegolosi.it/ricette-vegane/buddha-bowl-vegan/"
+    },
+    "theme": "bowl",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-tacos-vegan",
+    "title": "Tacos con guacamole e fagioli neri",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌮",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "piatto unico",
+      "messicano",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortillas di mais",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lime",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Fagioli neri cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiacciate l'avocado con una forchetta e conditelo con il succo di mezzo lime, un pizzico di sale e un po' di cipolla rossa tritata per ottenere il guacamole.",
+      "Tagliate a dadini i pomodori, affettate la lattuga a listarelle e il resto della cipolla a rondelle sottili.",
+      "Scaldate i fagioli con l'olio, il cumino e un goccio d'acqua, schiacciandone una parte per renderli cremosi.",
+      "Scaldate le tortillas in una padella asciutta per un minuto per lato e farcitele con la proteina, il guacamole e l'insalata.",
+      "Terminate con coriandolo e uno spicchio di lime da spremere sopra."
+    ],
+    "source": {
+      "name": "Sonia Peronaci",
+      "url": "https://www.soniaperonaci.it/tacos-con-guacamole-verdure-e-mais/"
+    },
+    "theme": "tacos",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-tacos-vegetarian",
+    "title": "Tacos con guacamole e uova strapazzate",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌮",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "piatto unico",
+      "messicano"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortillas di mais",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lime",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Fagioli neri cotti",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiacciate l'avocado con una forchetta e conditelo con il succo di mezzo lime, un pizzico di sale e un po' di cipolla rossa tritata per ottenere il guacamole.",
+      "Tagliate a dadini i pomodori, affettate la lattuga a listarelle e il resto della cipolla a rondelle sottili.",
+      "Strapazzate le uova nell'olio con la paprika, tenendole morbide, e scaldate a parte i fagioli neri.",
+      "Scaldate le tortillas in una padella asciutta per un minuto per lato e farcitele con la proteina, il guacamole e l'insalata.",
+      "Terminate con coriandolo e uno spicchio di lime da spremere sopra."
+    ],
+    "source": {
+      "name": "Sonia Peronaci",
+      "url": "https://www.soniaperonaci.it/tacos-con-guacamole-verdure-e-mais/"
+    },
+    "theme": "tacos",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-tacos-omnivore",
+    "title": "Tacos con guacamole e tacchino speziato",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌮",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "piatto unico",
+      "messicano"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortillas di mais",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lime",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Petto di tacchino",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiacciate l'avocado con una forchetta e conditelo con il succo di mezzo lime, un pizzico di sale e un po' di cipolla rossa tritata per ottenere il guacamole.",
+      "Tagliate a dadini i pomodori, affettate la lattuga a listarelle e il resto della cipolla a rondelle sottili.",
+      "Tagliate il tacchino a striscioline sottili, rosolatelo nell'olio con la paprika per 6-7 minuti fino a doratura.",
+      "Scaldate le tortillas in una padella asciutta per un minuto per lato e farcitele con la proteina, il guacamole e l'insalata.",
+      "Terminate con coriandolo e uno spicchio di lime da spremere sopra."
+    ],
+    "source": {
+      "name": "Sonia Peronaci",
+      "url": "https://www.soniaperonaci.it/tacos-con-guacamole-verdure-e-mais/"
+    },
+    "theme": "tacos",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-polpette-vegan",
+    "title": "Polpette di lenticchie con sugo e piselli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "piatto unico",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata in un filo d'olio, versate la passata, salate e lasciate sobbollire a fuoco basso per 15 minuti con qualche foglia di basilico.",
+      "Schiacciate le lenticchie, mescolatele con il pangrattato, il prezzemolo e un pizzico di sale, formate delle polpettine e rosolatele in padella con poco olio.",
+      "Immergete le polpette nel sugo e cuocetele per altri 10 minuti, poi servitele con i piselli.",
+      "Cuocete i piselli in poca acqua salata per 8 minuti, conditeli con un filo d'olio e accompagnate il piatto con il pane integrale."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/polpette-di-lenticchie-al-sugo.htm"
+    },
+    "theme": "polpette",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-polpette-vegetarian",
+    "title": "Polpette di ricotta con sugo e piselli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧆",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata in un filo d'olio, versate la passata, salate e lasciate sobbollire a fuoco basso per 15 minuti con qualche foglia di basilico.",
+      "Lavorate la ricotta con l'uovo, il pangrattato e il prezzemolo, formate delle polpettine e rosolatele in padella con poco olio.",
+      "Immergete le polpette nel sugo e cuocetele per altri 10 minuti, poi servitele con i piselli.",
+      "Cuocete i piselli in poca acqua salata per 8 minuti, conditeli con un filo d'olio e accompagnate il piatto con il pane integrale."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/polpette-di-lenticchie-al-sugo.htm"
+    },
+    "theme": "polpette",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-polpette-omnivore",
+    "title": "Polpette di manzo con sugo e piselli",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🧆",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "polpette",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pangrattato",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Manzo macinato magro",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata in un filo d'olio, versate la passata, salate e lasciate sobbollire a fuoco basso per 15 minuti con qualche foglia di basilico.",
+      "Impastate il macinato con mezzo uovo, il pangrattato e il prezzemolo, formate delle polpettine e rosolatele in padella con poco olio.",
+      "Immergete le polpette nel sugo e cuocetele per altri 10 minuti, poi servitele con i piselli.",
+      "Cuocete i piselli in poca acqua salata per 8 minuti, conditeli con un filo d'olio e accompagnate il piatto con il pane integrale."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/polpette-di-lenticchie-al-sugo.htm"
+    },
+    "theme": "polpette",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-ragu-vegan",
+    "title": "Pasta con ragù di tempeh",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "ragù",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tempeh",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate finemente cipolla, carota e sedano e fateli appassire per 5 minuti nell'olio.",
+      "Sbriciolate il tempeh e rosolatelo con il soffritto per 5 minuti, finché prende colore.",
+      "Versate la passata, 250 ml di acqua e il timo, portate a bollore e unite la pasta cruda direttamente nella pentola.",
+      "Cuocete mescolando spesso, aggiungendo acqua calda se serve, finché la pasta è al dente e il sugo si è ristretto, poi aggiustate di sale."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/pasta-con-ragu-di-lenticchie.htm"
+    },
+    "theme": "ragu",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-ragu-vegetarian",
+    "title": "Pasta con ragù di fagioli e ricotta",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍝",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "ragù"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Fagioli borlotti cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate finemente cipolla, carota e sedano e fateli appassire per 5 minuti nell'olio.",
+      "Schiacciate grossolanamente i fagioli e uniteli al soffritto; la ricotta si aggiunge a fine cottura.",
+      "Versate la passata, 250 ml di acqua e il timo, portate a bollore e unite la pasta cruda direttamente nella pentola.",
+      "Cuocete mescolando spesso, aggiungendo acqua calda se serve, finché la pasta è al dente e il sugo si è ristretto; a fuoco spento stemperate la ricotta e aggiustate di sale."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/pasta-con-ragu-di-lenticchie.htm"
+    },
+    "theme": "ragu",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-ragu-omnivore",
+    "title": "Pasta con ragù di manzo e maiale",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "ragù"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Manzo macinato magro",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Maiale macinato magro",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tritate finemente cipolla, carota e sedano e fateli appassire per 5 minuti nell'olio.",
+      "Sgranate i due macinati nel soffritto e rosolateli per 6-7 minuti, finché perdono il colore rosato.",
+      "Versate la passata, 250 ml di acqua e il timo, portate a bollore e unite la pasta cruda direttamente nella pentola.",
+      "Cuocete mescolando spesso, aggiungendo acqua calda se serve, finché la pasta è al dente e il sugo si è ristretto, poi aggiustate di sale."
+    ],
+    "source": {
+      "name": "Misya",
+      "url": "https://www.misya.info/ricetta/pasta-con-ragu-di-lenticchie.htm"
+    },
+    "theme": "ragu",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-ripieni-vegan",
+    "title": "Zucchine ripiene con riso e ceci",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥒",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "verdure ripiene",
+      "forno",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso in acqua salata, scolatelo e lasciatelo intiepidire. Accendete il forno a 190 °C.",
+      "Tagliate le zucchine a metà nel senso della lunghezza, svuotatele con un cucchiaino e tritate la polpa insieme alla cipolla.",
+      "Rosolate la polpa e la cipolla per 5 minuti, schiacciate a metà i ceci e mescolate tutto con il riso e il prezzemolo.",
+      "Disponete le barchette in una teglia oliata, riempitele con il ripieno, cospargete di pangrattato e un filo d'olio e cuocetele per 25 minuti."
+    ],
+    "source": {
+      "name": "Giovanna in cucina",
+      "url": "https://www.giovannaincucina.it/zucchine-ripiene-tonno-ricotta/"
+    },
+    "theme": "ripieni",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-ripieni-vegetarian",
+    "title": "Zucchine ripiene con riso e ricotta",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥒",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "verdure ripiene",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso in acqua salata, scolatelo e lasciatelo intiepidire. Accendete il forno a 190 °C.",
+      "Tagliate le zucchine a metà nel senso della lunghezza, svuotatele con un cucchiaino e tritate la polpa insieme alla cipolla.",
+      "Rosolate la polpa e la cipolla per 5 minuti e mescolatela con il riso, la ricotta, il parmigiano e il prezzemolo.",
+      "Disponete le barchette in una teglia oliata, riempitele con il ripieno, cospargete di pangrattato e un filo d'olio e cuocetele per 25 minuti."
+    ],
+    "source": {
+      "name": "Giovanna in cucina",
+      "url": "https://www.giovannaincucina.it/zucchine-ripiene-tonno-ricotta/"
+    },
+    "theme": "ripieni",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-ripieni-omnivore",
+    "title": "Zucchine ripiene con riso e tonno",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥒",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "verdure ripiene",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tonno al naturale",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso in acqua salata, scolatelo e lasciatelo intiepidire. Accendete il forno a 190 °C.",
+      "Tagliate le zucchine a metà nel senso della lunghezza, svuotatele con un cucchiaino e tritate la polpa insieme alla cipolla.",
+      "Rosolate la polpa e la cipolla per 5 minuti e mescolatela con il riso, il tonno ben sgocciolato e il prezzemolo.",
+      "Disponete le barchette in una teglia oliata, riempitele con il ripieno, cospargete di pangrattato e un filo d'olio e cuocetele per 25 minuti."
+    ],
+    "source": {
+      "name": "Giovanna in cucina",
+      "url": "https://www.giovannaincucina.it/zucchine-ripiene-tonno-ricotta/"
+    },
+    "theme": "ripieni",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-insalatona-vegan",
+    "title": "Insalatona con semi e ceci arrostiti",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "insalata",
+      "piatto unico",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi misti",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lavate e asciugate la lattuga, spezzettatela e mettetela in una ciotola capiente insieme ai pomodorini a metà.",
+      "Tagliate le carote a julienne e i cetrioli a rondelle e uniteli all'insalata.",
+      "Tagliate il pane a cubetti e tostatelo in padella asciutta per qualche minuto per ottenere dei crostini.",
+      "Asciugate i ceci, rosolateli in padella con un po' di olio e paprika finché sono croccanti all'esterno.",
+      "Condite con olio, limone e sale, aggiungete la proteina e i crostini e cospargete con i semi. Se la portate via, tenete il condimento a parte."
+    ],
+    "source": {
+      "name": "Parmalat Zymil",
+      "url": "https://www.parmalat.it/zymil/ricette/insalatona-estiva"
+    },
+    "theme": "insalatona",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-insalatona-vegetarian",
+    "title": "Insalatona con semi e uova sode",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥗",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "insalata",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi misti",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lavate e asciugate la lattuga, spezzettatela e mettetela in una ciotola capiente insieme ai pomodorini a metà.",
+      "Tagliate le carote a julienne e i cetrioli a rondelle e uniteli all'insalata.",
+      "Tagliate il pane a cubetti e tostatelo in padella asciutta per qualche minuto per ottenere dei crostini.",
+      "Lessate le uova per 9 minuti, sgusciatele e tagliatele a spicchi; tagliate a cubetti la mozzarella.",
+      "Condite con olio, limone e sale, aggiungete la proteina e i crostini e cospargete con i semi. Se la portate via, tenete il condimento a parte."
+    ],
+    "source": {
+      "name": "Parmalat Zymil",
+      "url": "https://www.parmalat.it/zymil/ricette/insalatona-estiva"
+    },
+    "theme": "insalatona",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-insalatona-omnivore",
+    "title": "Insalatona con semi e tonno",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥗",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "insalata",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Semi misti",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Tonno al naturale",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lavate e asciugate la lattuga, spezzettatela e mettetela in una ciotola capiente insieme ai pomodorini a metà.",
+      "Tagliate le carote a julienne e i cetrioli a rondelle e uniteli all'insalata.",
+      "Tagliate il pane a cubetti e tostatelo in padella asciutta per qualche minuto per ottenere dei crostini.",
+      "Sgocciolate bene il tonno e sbriciolatelo con una forchetta.",
+      "Condite con olio, limone e sale, aggiungete la proteina e i crostini e cospargete con i semi. Se la portate via, tenete il condimento a parte."
+    ],
+    "source": {
+      "name": "Parmalat Zymil",
+      "url": "https://www.parmalat.it/zymil/ricette/insalatona-estiva"
+    },
+    "theme": "insalatona",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-frittata-vegan",
+    "title": "Tortilla di patate e zucchine con ceci",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "piatto unico",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina di ceci",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Tofu",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbucciate le patate e tagliatele a fettine sottili, affettate la cipolla e riducete a rondelle le zucchine.",
+      "Stufate patate, cipolla e zucchine in una padella antiaderente con l'olio e un goccio d'acqua, coperchio e fuoco basso, per 15-18 minuti.",
+      "Frullate la farina di ceci con il tofu, 120 ml di acqua, sale e pepe fino a una pastella liscia e unitela alle verdure appena intiepidite.",
+      "Rimettete il composto nella padella unta con un filo d'olio e cuocete a fuoco dolce per 6-7 minuti, finché i bordi sono rassodati.",
+      "Girate la tortilla aiutandovi con un piatto e cuocete ancora 4-5 minuti dall'altro lato. Si mangia calda o a temperatura ambiente."
+    ],
+    "source": {
+      "name": "MoltoFood",
+      "url": "https://www.moltofood.it/tortilla-di-patate-ricetta/"
+    },
+    "theme": "frittata",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-frittata-vegetarian",
+    "title": "Tortilla di patate e zucchine con uova e ricotta",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥔",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbucciate le patate e tagliatele a fettine sottili, affettate la cipolla e riducete a rondelle le zucchine.",
+      "Stufate patate, cipolla e zucchine in una padella antiaderente con l'olio e un goccio d'acqua, coperchio e fuoco basso, per 15-18 minuti.",
+      "Sbattete le uova con la ricotta, sale e pepe e unitele alle verdure appena intiepidite.",
+      "Rimettete il composto nella padella unta con un filo d'olio e cuocete a fuoco dolce per 6-7 minuti, finché i bordi sono rassodati.",
+      "Girate la tortilla aiutandovi con un piatto e cuocete ancora 4-5 minuti dall'altro lato. Si mangia calda o a temperatura ambiente."
+    ],
+    "source": {
+      "name": "MoltoFood",
+      "url": "https://www.moltofood.it/tortilla-di-patate-ricetta/"
+    },
+    "theme": "frittata",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-frittata-omnivore",
+    "title": "Tortilla di patate e zucchine con uova e prosciutto",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥔",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "frittata",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbucciate le patate e tagliatele a fettine sottili, affettate la cipolla e riducete a rondelle le zucchine.",
+      "Stufate patate, cipolla e zucchine in una padella antiaderente con l'olio e un goccio d'acqua, coperchio e fuoco basso, per 15-18 minuti.",
+      "Sbattete le uova con sale e pepe, aggiungete il prosciutto a listarelle e unite il tutto alle verdure appena intiepidite.",
+      "Rimettete il composto nella padella unta con un filo d'olio e cuocete a fuoco dolce per 6-7 minuti, finché i bordi sono rassodati.",
+      "Girate la tortilla aiutandovi con un piatto e cuocete ancora 4-5 minuti dall'altro lato. Si mangia calda o a temperatura ambiente."
+    ],
+    "source": {
+      "name": "MoltoFood",
+      "url": "https://www.moltofood.it/tortilla-di-patate-ricetta/"
+    },
+    "theme": "frittata",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-risotto-vegan",
+    "title": "Risotto alle verdure con cannellini",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "riso",
+      "risotto",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il brodo vegetale e tenetelo sul fuoco al minimo. Tritate la cipolla e tagliate le zucchine a dadini.",
+      "Fate appassire la cipolla nell'olio, aggiungete le zucchine e i piselli e cuoceteli per 5 minuti.",
+      "Negli ultimi 5 minuti unite i cannellini; a fuoco spento mantecate con il lievito alimentare e lasciate riposare un minuto.",
+      "Unite il riso e tostatelo per un minuto, poi cuocetelo per circa 16 minuti aggiungendo il brodo un mestolo alla volta."
+    ],
+    "source": {
+      "name": "Cibo Vagare",
+      "url": "https://www.cibovagare.it/ricette/la-ricetta-del-risotto-alle-verdure-1805.html"
+    },
+    "theme": "risotto",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-risotto-vegetarian",
+    "title": "Risotto alle verdure con ricotta e parmigiano",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "riso",
+      "risotto"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il brodo vegetale e tenetelo sul fuoco al minimo. Tritate la cipolla e tagliate le zucchine a dadini.",
+      "Fate appassire la cipolla nell'olio, aggiungete le zucchine e i piselli e cuoceteli per 5 minuti.",
+      "A fuoco spento mantecate con il parmigiano, poi incorporate la ricotta e lasciate riposare un minuto.",
+      "Unite il riso e tostatelo per un minuto, poi cuocetelo per circa 16 minuti aggiungendo il brodo un mestolo alla volta."
+    ],
+    "source": {
+      "name": "Cibo Vagare",
+      "url": "https://www.cibovagare.it/ricette/la-ricetta-del-risotto-alle-verdure-1805.html"
+    },
+    "theme": "risotto",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-risotto-omnivore",
+    "title": "Risotto alle verdure con pollo",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "riso",
+      "risotto"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate il brodo vegetale e tenetelo sul fuoco al minimo. Tritate la cipolla e tagliate le zucchine a dadini.",
+      "Fate appassire la cipolla nell'olio, aggiungete le zucchine e i piselli e cuoceteli per 5 minuti.",
+      "Rosolate a parte il pollo a dadini per 6 minuti, unitelo al riso negli ultimi 5 minuti e mantecate con il parmigiano.",
+      "Unite il riso e tostatelo per un minuto, poi cuocetelo per circa 16 minuti aggiungendo il brodo un mestolo alla volta."
+    ],
+    "source": {
+      "name": "Cibo Vagare",
+      "url": "https://www.cibovagare.it/ricette/la-ricetta-del-risotto-alle-verdure-1805.html"
+    },
+    "theme": "risotto",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-pastaforno-vegan",
+    "title": "Pasta al forno con verdure e tofu",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "forno",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tofu",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbriciolate il tofu e rosolatelo con le verdure per 4 minuti; per la besciamella usate il latte di soia.",
+      "Accendete il forno a 200 °C. Tagliate zucchine e melanzane a dadini e saltatele in padella con l'olio per 8 minuti, unendo i pomodorini a metà cottura.",
+      "Preparate la besciamella leggera scaldando il latte, stemperando la farina in poco latte freddo, versandola nel latte caldo e cuocendo 4-5 minuti fino a farla addensare, con sale e noce moscata.",
+      "Lessate la pasta per metà del tempo indicato, scolatela e mescolatela con le verdure, la proteina e la besciamella.",
+      "Versate in una pirofila e cuocete per 20-25 minuti finché la superficie è dorata."
+    ],
+    "source": {
+      "name": "Ricetta.it",
+      "url": "https://ricetta.it/pasta-al-forno-con-verdure"
+    },
+    "theme": "pastaforno",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-pastaforno-vegetarian",
+    "title": "Pasta al forno con verdure e mozzarella",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate a cubetti la mozzarella, ben sgocciolata, e mescolatela alla ricotta; per la besciamella usate il latte.",
+      "Accendete il forno a 200 °C. Tagliate zucchine e melanzane a dadini e saltatele in padella con l'olio per 8 minuti, unendo i pomodorini a metà cottura.",
+      "Preparate la besciamella leggera scaldando il latte, stemperando la farina in poco latte freddo, versandola nel latte caldo e cuocendo 4-5 minuti fino a farla addensare, con sale e noce moscata.",
+      "Lessate la pasta per metà del tempo indicato, scolatela e mescolatela con le verdure, la proteina e la besciamella.",
+      "Versate in una pirofila e cuocete per 20-25 minuti finché la superficie è dorata."
+    ],
+    "source": {
+      "name": "Ricetta.it",
+      "url": "https://ricetta.it/pasta-al-forno-con-verdure"
+    },
+    "theme": "pastaforno",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-pastaforno-omnivore",
+    "title": "Pasta al forno con verdure e tacchino",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tacchino macinato",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Rosolate il tacchino macinato con le verdure per 8 minuti finché perde il colore rosato; per la besciamella usate il latte.",
+      "Accendete il forno a 200 °C. Tagliate zucchine e melanzane a dadini e saltatele in padella con l'olio per 8 minuti, unendo i pomodorini a metà cottura.",
+      "Preparate la besciamella leggera scaldando il latte, stemperando la farina in poco latte freddo, versandola nel latte caldo e cuocendo 4-5 minuti fino a farla addensare, con sale e noce moscata.",
+      "Lessate la pasta per metà del tempo indicato, scolatela e mescolatela con le verdure, la proteina e la besciamella.",
+      "Versate in una pirofila e cuocete per 20-25 minuti finché la superficie è dorata."
+    ],
+    "source": {
+      "name": "Ricetta.it",
+      "url": "https://ricetta.it/pasta-al-forno-con-verdure"
+    },
+    "theme": "pastaforno",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-burger-vegan",
+    "title": "Burger di ceci con patate al forno e insalata",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "forno",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendete il forno a 210 °C. Tagliate le patate a spicchi, conditele con olio, rosmarino e sale e infornatele per 30 minuti, girandole a metà cottura.",
+      "Frullate grossolanamente i ceci con il pangrattato, un pizzico di sale e un cucchiaio d'acqua e formate un burger compatto.",
+      "Disponete i burger su una teglia con carta da forno e cuoceteli per 15 minuti, girandoli a metà.",
+      "Servite con le patate e un'insalata di lattuga, pomodori e cipolla rossa condita con sale e un filo d'olio."
+    ],
+    "source": {
+      "name": "Cucina Botanica",
+      "url": "https://www.cucinabotanica.com/ricette/burger-di-ceci-e-patate/"
+    },
+    "theme": "burger",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-burger-vegetarian",
+    "title": "Burger di fagioli e provola con patate al forno e insalata",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍔",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Fagioli borlotti cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Provola",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendete il forno a 210 °C. Tagliate le patate a spicchi, conditele con olio, rosmarino e sale e infornatele per 30 minuti, girandole a metà cottura.",
+      "Schiacciate i fagioli con il pangrattato, formate un burger e inserite al centro la provola a cubetti.",
+      "Disponete i burger su una teglia con carta da forno e cuoceteli per 15 minuti, girandoli a metà.",
+      "Servite con le patate e un'insalata di lattuga, pomodori e cipolla rossa condita con sale e un filo d'olio."
+    ],
+    "source": {
+      "name": "Cucina Botanica",
+      "url": "https://www.cucinabotanica.com/ricette/burger-di-ceci-e-patate/"
+    },
+    "theme": "burger",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-burger-omnivore",
+    "title": "Burger di manzo con patate al forno e insalata",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍔",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "burger",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Manzo macinato magro",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Accendete il forno a 210 °C. Tagliate le patate a spicchi, conditele con olio, rosmarino e sale e infornatele per 30 minuti, girandole a metà cottura.",
+      "Impastate il macinato con il pangrattato e un pizzico di sale e formate un burger alto circa 2 cm.",
+      "Disponete i burger su una teglia con carta da forno e cuoceteli per 15 minuti, girandoli a metà.",
+      "Servite con le patate e un'insalata di lattuga, pomodori e cipolla rossa condita con sale e un filo d'olio."
+    ],
+    "source": {
+      "name": "Cucina Botanica",
+      "url": "https://www.cucinabotanica.com/ricette/burger-di-ceci-e-patate/"
+    },
+    "theme": "burger",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-curry-vegan",
+    "title": "Curry di verdure con ceci",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍛",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "curry",
+      "riso",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cavolfiore",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 80,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zenzero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso basmati in acqua salata per 10-12 minuti, scolatelo e tenetelo al caldo.",
+      "Soffriggete la cipolla tritata nell'olio con lo zenzero grattugiato e il curry per un minuto, poi unite cavolfiore e carote a pezzetti e fate insaporire per 3 minuti.",
+      "Aggiungete i ceci insieme al latte di cocco, così si insaporiscono durante la cottura.",
+      "Versate il latte di cocco con 100 ml di acqua e cuocete coperto per 12 minuti finché le verdure sono tenere.",
+      "Unite gli spinaci, lasciateli appassire un paio di minuti, aggiustate di sale e servite sul riso."
+    ],
+    "source": {
+      "name": "Tavolartegusto",
+      "url": "https://www.tavolartegusto.it/ricetta/curry-di-ceci/"
+    },
+    "theme": "curry",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-curry-vegetarian",
+    "title": "Curry di verdure con uova sode",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍛",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "curry",
+      "riso"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cavolfiore",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 80,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zenzero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso basmati in acqua salata per 10-12 minuti, scolatelo e tenetelo al caldo.",
+      "Soffriggete la cipolla tritata nell'olio con lo zenzero grattugiato e il curry per un minuto, poi unite cavolfiore e carote a pezzetti e fate insaporire per 3 minuti.",
+      "Lessate le uova per 9 minuti, sgusciatele e tagliatele a metà; i ceci vanno nel curry insieme al latte di cocco.",
+      "Versate il latte di cocco con 100 ml di acqua e cuocete coperto per 12 minuti finché le verdure sono tenere.",
+      "Unite gli spinaci, lasciateli appassire un paio di minuti, aggiustate di sale e servite sul riso."
+    ],
+    "source": {
+      "name": "Tavolartegusto",
+      "url": "https://www.tavolartegusto.it/ricetta/curry-di-ceci/"
+    },
+    "theme": "curry",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-curry-omnivore",
+    "title": "Curry di verdure con pollo",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍛",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "curry",
+      "riso"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cavolfiore",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 80,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Zenzero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso basmati in acqua salata per 10-12 minuti, scolatelo e tenetelo al caldo.",
+      "Soffriggete la cipolla tritata nell'olio con lo zenzero grattugiato e il curry per un minuto, poi unite cavolfiore e carote a pezzetti e fate insaporire per 3 minuti.",
+      "Aggiungete il pollo a dadini insieme alle verdure e fatelo rosolare 4-5 minuti, così si insaporisce con il curry.",
+      "Versate il latte di cocco con 100 ml di acqua e cuocete coperto per 12 minuti finché le verdure sono tenere.",
+      "Unite gli spinaci, lasciateli appassire un paio di minuti, aggiustate di sale e servite sul riso."
+    ],
+    "source": {
+      "name": "Tavolartegusto",
+      "url": "https://www.tavolartegusto.it/ricetta/curry-di-ceci/"
+    },
+    "theme": "curry",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-wrap-vegan",
+    "title": "Piadina wrap con tofu affumicato e verdure",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🌯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "piatto unico",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Tofu affumicato",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 60,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate cetrioli e carote a bastoncini sottili, i pomodori a fette e la lattuga a striscioline.",
+      "Mescolate lo yogurt con il succo di limone, la menta tritata e un pizzico di sale per fare la salsa.",
+      "Affettate il tofu affumicato a bastoncini e rosolatelo un paio di minuti nell'olio; per la salsa usate lo yogurt di soia.",
+      "Scaldate la piadina per un minuto in padella, spalmatela con la salsa, disponete le verdure e la proteina e chiudetela a pacchetto stretto."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/piadine-vegetariane-con-hummus-e-verdure/"
+    },
+    "theme": "wrap",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-wrap-vegetarian",
+    "title": "Piadina wrap con uova sode, feta e verdure",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🌯",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Feta",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 60,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate cetrioli e carote a bastoncini sottili, i pomodori a fette e la lattuga a striscioline.",
+      "Mescolate lo yogurt con il succo di limone, la menta tritata e un pizzico di sale per fare la salsa.",
+      "Lessate le uova per 9 minuti, sgusciatele e schiacciatele grossolanamente con la feta; per la salsa usate lo yogurt greco.",
+      "Scaldate la piadina per un minuto in padella, spalmatela con la salsa, disponete le verdure e la proteina e chiudetela a pacchetto stretto."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/piadine-vegetariane-con-hummus-e-verdure/"
+    },
+    "theme": "wrap",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-wrap-omnivore",
+    "title": "Piadina wrap con tacchino e verdure",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🌯",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "wrap",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lattuga",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Fesa di tacchino arrosto",
+        "qty": 110,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 60,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate cetrioli e carote a bastoncini sottili, i pomodori a fette e la lattuga a striscioline.",
+      "Mescolate lo yogurt con il succo di limone, la menta tritata e un pizzico di sale per fare la salsa.",
+      "Tagliate la fesa di tacchino a fettine; per la salsa usate lo yogurt greco.",
+      "Scaldate la piadina per un minuto in padella, spalmatela con la salsa, disponete le verdure e la proteina e chiudetela a pacchetto stretto."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/piadine-vegetariane-con-hummus-e-verdure/"
+    },
+    "theme": "wrap",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-gnocchi-vegan",
+    "title": "Gnocchi al pomodoro con seitan",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥟",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "primo",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Seitan",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata nell'olio, aggiungete le zucchine a cubetti e cuocetele 4 minuti.",
+      "Versate la passata, salate e lasciate sobbollire 10-12 minuti con un po' di basilico.",
+      "Tagliate il seitan a cubetti e rosolatelo a parte per 4 minuti, poi uniteli al sugo.",
+      "Cuocete gli gnocchi in acqua salata finché salgono a galla, scolateli e passateli nel sugo per un minuto prima di servire."
+    ],
+    "source": {
+      "name": "Parmigiano Reggiano",
+      "url": "https://www.parmigianoreggiano.com/it/ricette/gnocchi-di-patate-al-pomodoro"
+    },
+    "theme": "gnocchi",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-gnocchi-vegetarian",
+    "title": "Gnocchi al pomodoro con ricotta",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥟",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "primo"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata nell'olio, aggiungete le zucchine a cubetti e cuocetele 4 minuti.",
+      "Versate la passata, salate e lasciate sobbollire 10-12 minuti con un po' di basilico.",
+      "Mescolate la ricotta con il parmigiano e un po' di basilico; sarà messa sopra gli gnocchi a fine cottura.",
+      "Cuocete gli gnocchi in acqua salata finché salgono a galla, scolateli e passateli nel sugo per un minuto prima di servire."
+    ],
+    "source": {
+      "name": "Parmigiano Reggiano",
+      "url": "https://www.parmigianoreggiano.com/it/ricette/gnocchi-di-patate-al-pomodoro"
+    },
+    "theme": "gnocchi",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-gnocchi-omnivore",
+    "title": "Gnocchi al pomodoro con polpettine di tacchino",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥟",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "primo"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tacchino macinato",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla tritata nell'olio, aggiungete le zucchine a cubetti e cuocetele 4 minuti.",
+      "Versate la passata, salate e lasciate sobbollire 10-12 minuti con un po' di basilico.",
+      "Formate delle polpettine con il tacchino macinato e un pizzico di sale e rosolatele a parte per 6 minuti, poi uniteli al sugo.",
+      "Cuocete gli gnocchi in acqua salata finché salgono a galla, scolateli e passateli nel sugo per un minuto prima di servire."
+    ],
+    "source": {
+      "name": "Parmigiano Reggiano",
+      "url": "https://www.parmigianoreggiano.com/it/ricette/gnocchi-di-patate-al-pomodoro"
+    },
+    "theme": "gnocchi",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-zuppa-vegan",
+    "title": "Zuppa di orzo e verdure con borlotti",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "cereali",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 500,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Fagioli borlotti cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate l'orzo. Tritate cipolla, carote e sedano e fateli appassire nell'olio per 5 minuti.",
+      "Aggiungete le zucchine a dadini e l'orzo, mescolate per un minuto e coprite con il brodo caldo e il rosmarino.",
+      "Cuocete a fuoco dolce per 30-35 minuti, aggiungendo altro brodo o acqua se la zuppa si restringe troppo.",
+      "Unite i borlotti negli ultimi 10 minuti di cottura.",
+      "Aggiustate di sale e lasciate riposare 5 minuti prima di servire."
+    ],
+    "source": {
+      "name": "Cibo Crudo",
+      "url": "https://www.cibocrudo.com/blogs/ricette/zuppa-dorzo-con-verdure"
+    },
+    "theme": "zuppa",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-zuppa-vegetarian",
+    "title": "Zuppa di orzo e verdure con uova e parmigiano",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍲",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 500,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate l'orzo. Tritate cipolla, carote e sedano e fateli appassire nell'olio per 5 minuti.",
+      "Aggiungete le zucchine a dadini e l'orzo, mescolate per un minuto e coprite con il brodo caldo e il rosmarino.",
+      "Cuocete a fuoco dolce per 30-35 minuti, aggiungendo altro brodo o acqua se la zuppa si restringe troppo.",
+      "Sbattete le uova con il parmigiano e versatele a filo nella zuppa bollente a fuoco spento, mescolando per ottenere dei filamenti.",
+      "Aggiustate di sale e lasciate riposare 5 minuti prima di servire."
+    ],
+    "source": {
+      "name": "Cibo Crudo",
+      "url": "https://www.cibocrudo.com/blogs/ricette/zuppa-dorzo-con-verdure"
+    },
+    "theme": "zuppa",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-zuppa-omnivore",
+    "title": "Zuppa di orzo e verdure con pollo",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍲",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "zuppa",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 500,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate l'orzo. Tritate cipolla, carote e sedano e fateli appassire nell'olio per 5 minuti.",
+      "Aggiungete le zucchine a dadini e l'orzo, mescolate per un minuto e coprite con il brodo caldo e il rosmarino.",
+      "Cuocete a fuoco dolce per 30-35 minuti, aggiungendo altro brodo o acqua se la zuppa si restringe troppo.",
+      "Tagliate il pollo a dadini e unitelo alla zuppa negli ultimi 12 minuti di cottura.",
+      "Aggiustate di sale e lasciate riposare 5 minuti prima di servire."
+    ],
+    "source": {
+      "name": "Cibo Crudo",
+      "url": "https://www.cibocrudo.com/blogs/ricette/zuppa-dorzo-con-verdure"
+    },
+    "theme": "zuppa",
+    "variant": "omnivore"
+  },
+  {
+    "id": "pranzo-tm-pizza-vegan",
+    "title": "Pizza in padella con verdure grigliate e tofu",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍕",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "pizza",
+      "padella",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 00",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lievito istantaneo per torte salate",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 50,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tofu",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescolate la farina con il lievito e un pizzico di sale, aggiungete l'acqua e metà dell'olio e impastate fino a un panetto liscio.",
+      "Grigliate o saltate in padella le zucchine e i peperoni a fettine per 6-8 minuti, poi teneteli da parte.",
+      "Sbriciolate il tofu e conditelo con il lievito alimentare e un po' di origano.",
+      "Stendete l'impasto in un disco sottile e cuocetelo in una padella unta per 4 minuti coperto, poi giratelo.",
+      "Condite la base cotta con passata, origano, le verdure grigliate e la proteina, coprite e cuocete ancora 3-4 minuti."
+    ],
+    "source": {
+      "name": "MoltoFood",
+      "url": "https://www.moltofood.it/pizzette-in-padella-la-ricetta/"
+    },
+    "theme": "pizza",
+    "variant": "vegan"
+  },
+  {
+    "id": "pranzo-tm-pizza-vegetarian",
+    "title": "Pizza in padella con verdure grigliate e mozzarella",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍕",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pizza",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 00",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lievito istantaneo per torte salate",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 50,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescolate la farina con il lievito e un pizzico di sale, aggiungete l'acqua e metà dell'olio e impastate fino a un panetto liscio.",
+      "Grigliate o saltate in padella le zucchine e i peperoni a fettine per 6-8 minuti, poi teneteli da parte.",
+      "Tagliate la mozzarella a fettine e lasciatela sgocciolare su carta da cucina.",
+      "Stendete l'impasto in un disco sottile e cuocetelo in una padella unta per 4 minuti coperto, poi giratelo.",
+      "Condite la base cotta con passata, origano, le verdure grigliate e la proteina, coprite e cuocete ancora 3-4 minuti."
+    ],
+    "source": {
+      "name": "MoltoFood",
+      "url": "https://www.moltofood.it/pizzette-in-padella-la-ricetta/"
+    },
+    "theme": "pizza",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "pranzo-tm-pizza-omnivore",
+    "title": "Pizza in padella con verdure grigliate e prosciutto cotto",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍕",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "pizza",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 00",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lievito istantaneo per torte salate",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 50,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescolate la farina con il lievito e un pizzico di sale, aggiungete l'acqua e metà dell'olio e impastate fino a un panetto liscio.",
+      "Grigliate o saltate in padella le zucchine e i peperoni a fettine per 6-8 minuti, poi teneteli da parte.",
+      "Tagliate la mozzarella a fettine e lasciatela sgocciolare, poi preparate il prosciutto cotto a listarelle.",
+      "Stendete l'impasto in un disco sottile e cuocetelo in una padella unta per 4 minuti coperto, poi giratelo.",
+      "Condite la base cotta con passata, origano, le verdure grigliate e la proteina, coprite e cuocete ancora 3-4 minuti."
+    ],
+    "source": {
+      "name": "MoltoFood",
+      "url": "https://www.moltofood.it/pizzette-in-padella-la-ricetta/"
+    },
+    "theme": "pizza",
+    "variant": "omnivore"
+  },
+  {
+    "id": "cena-tm-spiedini-vegan",
+    "title": "Spiedini di verdure con tofu e cous cous",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍢",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "spiedini",
+      "cous cous",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Tofu",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate zucchine e peperoni a pezzi della stessa misura della proteina e preparate una marinata con olio, limone e sale.",
+      "Infilzate gli spiedini alternando proteina, verdure e pomodorini, e spennellateli con la marinata.",
+      "Tagliate il tofu a cubetti e lasciatelo nella marinata almeno 15 minuti.",
+      "Cuoceteli in forno a 200 °C per circa 20 minuti, girandoli a metà e spennellandoli con altra marinata.",
+      "Versate sul cous cous 100 ml di acqua bollente salata, coprite per 5 minuti, sgranatelo con una forchetta e profumatelo con la menta. Servite gli spiedini sul cous cous."
+    ],
+    "source": {
+      "name": "Ricette Vegolose",
+      "url": "https://www.ricettevegolose.com/2024/05/spiedini-di-tofu-e-verdure/"
+    },
+    "theme": "spiedini",
+    "variant": "vegan"
+  },
+  {
+    "id": "cena-tm-spiedini-vegetarian",
+    "title": "Spiedini di verdure con halloumi e cous cous",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍢",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "spiedini",
+      "cous cous"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Halloumi",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate zucchine e peperoni a pezzi della stessa misura della proteina e preparate una marinata con olio, limone e sale.",
+      "Infilzate gli spiedini alternando proteina, verdure e pomodorini, e spennellateli con la marinata.",
+      "Tagliate l'halloumi a cubetti; non serve salare, è già saporito.",
+      "Cuoceteli in forno a 200 °C per circa 20 minuti, girandoli a metà e spennellandoli con altra marinata.",
+      "Versate sul cous cous 100 ml di acqua bollente salata, coprite per 5 minuti, sgranatelo con una forchetta e profumatelo con la menta. Servite gli spiedini sul cous cous."
+    ],
+    "source": {
+      "name": "Ricette Vegolose",
+      "url": "https://www.ricettevegolose.com/2024/05/spiedini-di-tofu-e-verdure/"
+    },
+    "theme": "spiedini",
+    "variant": "vegetarian"
+  },
+  {
+    "id": "cena-tm-spiedini-omnivore",
+    "title": "Spiedini di verdure con pollo e cous cous",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍢",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "spiedini",
+      "cous cous"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Petto di pollo",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate zucchine e peperoni a pezzi della stessa misura della proteina e preparate una marinata con olio, limone e sale.",
+      "Infilzate gli spiedini alternando proteina, verdure e pomodorini, e spennellateli con la marinata.",
+      "Tagliate il pollo a cubetti e lasciatelo nella marinata almeno 15 minuti.",
+      "Cuoceteli in forno a 200 °C per circa 20 minuti, girandoli a metà e spennellandoli con altra marinata.",
+      "Versate sul cous cous 100 ml di acqua bollente salata, coprite per 5 minuti, sgranatelo con una forchetta e profumatelo con la menta. Servite gli spiedini sul cous cous."
+    ],
+    "source": {
+      "name": "Ricette Vegolose",
+      "url": "https://www.ricettevegolose.com/2024/05/spiedini-di-tofu-e-verdure/"
+    },
+    "theme": "spiedini",
+    "variant": "omnivore"
+  }
+]
