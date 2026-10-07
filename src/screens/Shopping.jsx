@@ -9,6 +9,7 @@ import { applyPantry } from '../lib/pantry.js';
 import { addWeeks, getWeekId, weekRangeLabel } from '../lib/dates.js';
 import { GROUPS, UNITS } from '../lib/groups.js';
 import { buildShoppingList } from '../lib/shopping.js';
+import { packNeed } from '../lib/packs.js';
 import { formatQty, ingredientKey, normalizeIngredient, sumIngredients } from '../lib/scale.js';
 
 const DAY_LABELS = ['L', 'M', 'M', 'G', 'V', 'S', 'D'];
@@ -80,7 +81,9 @@ export default function Shopping({ weekDate, setWeekDate, days, setDays }) {
             {s.items.map((i) => (
               <label key={i.key} className="flex items-center p-3 rounded-2xl cursor-pointer active:bg-slate-50">
                 <input type="checkbox" className="w-6 h-6 rounded-lg mr-4 accent-emerald-500" checked={isChecked(i.key)} onChange={() => toggle(i.key)} />
-                <span className={`flex-1 font-medium ${isChecked(i.key) ? 'text-slate-400 line-through' : 'text-slate-700'}`}>{cap(i.name)}</span>
+                <span className={`flex-1 font-medium ${isChecked(i.key) ? 'text-slate-400 line-through' : 'text-slate-700'}`}>{cap(i.name)}
+                  {(() => { const pk = !isChecked(i.key) && packNeed(i.name, i.qty, i.unit); return pk && (pk.count > 1 || pk.size >= 2 * i.qty) ? <span className="block text-[10px] font-normal text-slate-400">≈ {pk.count} {pk.count === 1 ? 'confezione' : 'confezioni'} da {pk.size} {pk.unit === 'pz' ? 'pezzi' : pk.unit}{pk.left > 0 && pk.left >= pk.size * 0.3 ? ` · avanzano circa ${pk.left} ${pk.unit === 'pz' ? 'pezzi' : pk.unit}, usali nei prossimi ${pk.shelf} giorni` : ''}</span> : null; })()}
+                </span>
                 {i.unit !== 'q.b.' && <span className={`font-bold px-3 py-1 rounded-lg text-sm ${isChecked(i.key) ? 'bg-slate-100 text-slate-400' : 'bg-brand-50 text-brand-600'}`}>{formatQty(i.qty, i.unit)}{i.have ? <span className="font-normal text-[10px] text-slate-400"> (hai {formatQty(i.have, i.unit)})</span> : null}</span>}
                 <button onClick={(e) => { e.preventDefault(); savePantryItem({ name: i.name, always: false, qty: i.qty + (i.have || 0), unit: i.unit === 'q.b.' ? 'g' : i.unit }); }} aria-label={`Ce l'ho già: ${i.name}`} title="Ce l'ho già" className="ml-2 p-2 text-slate-300 active:text-brand-600"><Home className="w-4 h-4" /></button>
               </label>

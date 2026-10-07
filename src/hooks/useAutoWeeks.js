@@ -1,8 +1,9 @@
 import React from 'react';
 import { useData, usePlans } from '../hooks/data.jsx';
 import { addWeeks, getWeekId } from '../lib/dates.js';
-import { generateWeek } from '../lib/planGen.js';
+import { generateWeekChecked } from '../lib/planGen.js';
 import { buildRecency } from '../lib/usage.js';
+import { monthOfWeek } from '../lib/seasons.js';
 
 // Settimane tenute sempre pianificate in anticipo (3: la corrente e le due successive). Quando ne passa una, se ne aggiunge una in fondo.
 export const HORIZON_WEEKS = 3;
@@ -34,16 +35,16 @@ const getWorker = () => {
   } catch { worker = false; }
   return worker;
 };
-const generate = (recipes, household, favorites, recency, existing) => {
+const generate = (recipes, household, favorites, recency, existing, month) => {
   const w = getWorker();
-  if (!w) return Promise.resolve(generateWeek(recipes, household, { favorites, recency, existing }));
+  if (!w) return Promise.resolve(generateWeekChecked(recipes, household, { favorites, recency, existing, month }).days);
   return new Promise((resolve, reject) => {
     const id = ++seq;
     pending.set(id, { resolve, reject });
     const send = recipes !== sentRecipes ? recipes : undefined; // le ricette si inviano solo quando cambiano
     sentRecipes = recipes;
-    w.postMessage({ id, recipes: send, household, favorites: [...favorites], recency: [...recency], existing });
-  }).catch(() => generateWeek(recipes, household, { favorites, recency, existing }));
+    w.postMessage({ id, recipes: send, household, favorites: [...favorites], recency: [...recency], existing, month });
+  }).catch(() => generateWeekChecked(recipes, household, { favorites, recency, existing, month }).days);
 };
 
 // Una settimana alla volta, a intervalli, così l'app resta sempre reattiva; ogni settimana si tenta una sola volta per sessione
@@ -71,7 +72,7 @@ export function useAutoWeeks() {
       if (!todo) return;
       tried.current.add(`${todo}|${ss}`);
       try {
-        const days = await generate(rr, hh, ff, buildRecency(pp.filter((p) => p.id !== todo), todo));
+        const days = await generate(rr, hh, ff, buildRecency(pp.filter((p) => p.id !== todo), todo), undefined, monthOfWeek(todo));
         await create(todo, days, ss);
       } catch (e) { console.error(e); }
       setTick((t) => t + 1);
@@ -86,7 +87,7 @@ export function useRegenerateWeek() {
   const { household, recipes, favorites, writeWeek } = useData();
   const { plans } = usePlans();
   return async (weekId, existing) => {
-    const days = await generate(recipes, household, favorites, buildRecency(plans.filter((p) => p.id !== weekId), weekId), existing);
+    const days = await generate(recipes, household, favorites, buildRecency(plans.filter((p) => p.id !== weekId), weekId), existing, monthOfWeek(weekId));
     await writeWeek(weekId, days, householdSignature(household));
   };
 }

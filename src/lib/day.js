@@ -12,7 +12,12 @@ export const instanceKey = (slot, gi) => `${slot}|${gi}`;
 // Un gruppo grande di frutta (es. "250 g di frutta") si può dividere in due metà fra due pasti: la chiave "Pasto|1~h1" è la prima metà,
 // "Pasto|1~h2" la seconda; quando le mangi tutte e due il gruppo conta come consumato
 export const parseKey = (key) => { const [base, part] = key.split('~'); const [slot, gi] = base.split('|'); return { slot, gi: Number(gi), part }; };
-export const halveGroup = (group) => ({ ...group, options: group.options.map((o) => (o.qty > 0 ? { ...o, qty: o.qty / 2 } : o)) });
+const halves = new WeakMap();
+// la metà di un gruppo è sempre lo stesso oggetto (serve alla memoria dei confronti con le ricette)
+export const halveGroup = (group) => {
+  if (!halves.has(group)) halves.set(group, { ...group, options: group.options.map((o) => (o.qty > 0 ? { ...o, qty: o.qty / 2 } : o)) });
+  return halves.get(group);
+};
 export const isBigFruit = (group) => group.options.some((o) => o.qty >= 150) && group.options.every((o) => !(o.qty > 0) || o.group === 'fruit');
 
 // Un gruppo si può spostare in un altro pasto solo se ha almeno una quantità
@@ -33,8 +38,9 @@ export const dayInstances = (member) =>
 export const dayInstancesFor = (member, consumed = new Set()) =>
   dayInstances(member).flatMap((inst) => {
     if (!isBigFruit(inst.group) || consumed.has(inst.key)) return [inst];
+    if (consumed.has(`${inst.key}~h1`) && consumed.has(`${inst.key}~h2`)) return []; // le due metà sono già state mangiate
     const k = inst.key;
-    if (consumed.has(`${k}~h1`)) return consumed.has(`${k}~h2`) ? [inst] : [{ ...inst, key: `${k}~h2`, group: halveGroup(inst.group), part: 'h2' }];
+    if (consumed.has(`${k}~h1`)) return consumed.has(`${k}~h2`) ? [] : [{ ...inst, key: `${k}~h2`, group: halveGroup(inst.group), part: 'h2' }];
     if (consumed.has(`${k}~h2`)) return [{ ...inst, key: `${k}~h1`, group: halveGroup(inst.group), part: 'h1' }];
     return [inst];
   });

@@ -270,15 +270,20 @@ export const optionMatches = (opt, ing) => matchScore(opt, ing) > 0;
 const compatUnit = (a, b) => a === b || (['g', 'ml'].includes(a) && ['g', 'ml'].includes(b));
 
 // Per ogni gruppo del piano: l'opzione che la ricetta rispetta e gli ingredienti che la soddisfano
-// Gli stessi calcoli si ripetono migliaia di volte nella generazione (stesse ricette, stessi piani): si ricordano per coppia ricetta-piano
+// Gli stessi calcoli si ripetono migliaia di volte nella generazione (stesse ricette, stessi gruppi del piano): si ricordano per coppia
+// ricetta-gruppi. La chiave sono gli identificativi dei gruppi (non l'array, che cambia a ogni chiamata nella regolazione sulla giornata).
+const gids = new WeakMap();
+let gseq = 0;
+const gid = (g) => { let v = gids.get(g); if (!v) { v = ++gseq; gids.set(g, v); } return v; };
 const memo = (fn) => {
   const cache = new WeakMap();
   return (recipe, groups) => {
-    if (!groups || typeof groups !== 'object') return fn(recipe, groups);
-    let perRecipe = cache.get(groups);
-    if (!perRecipe) { perRecipe = new WeakMap(); cache.set(groups, perRecipe); }
-    if (!perRecipe.has(recipe)) perRecipe.set(recipe, fn(recipe, groups));
-    return perRecipe.get(recipe);
+    if (!Array.isArray(groups)) return fn(recipe, groups);
+    let per = cache.get(recipe);
+    if (!per) { per = new Map(); cache.set(recipe, per); }
+    const key = groups.map(gid).join(',');
+    if (!per.has(key)) per.set(key, fn(recipe, groups));
+    return per.get(key);
   };
 };
 export const planMatches = memo((recipe, groups) => {

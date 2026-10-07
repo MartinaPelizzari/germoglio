@@ -1,6 +1,6 @@
 import { SLOTS, canonicalName, eatersOf, mealOf, mealOfItem, slotPeople } from './scale.js';
-import { isSavory, kindFits, recipeKind, slotKind } from './meals.js';
-import { fits, isSharedSlot, mealConstraints, menuClusters, memberLevel, recipeLevel, rulesFor } from './diet.js';
+import { breakfastClass, isSavory, kindFits, recipeKind, slotKind } from './meals.js';
+import { fits, isSharedSlot, mealConstraints, menuClusters, memberLevel, recipeLevel, ruleCap, rulesFor } from './diet.js';
 import { recipeFoods } from './goals.js';
 import { recencyPenalty } from './usage.js';
 import { describeOption, foodDiet, planMatches, planViolations } from './dietPlan.js';
@@ -8,6 +8,11 @@ import { consumedKeys, dayInstancesFor, halveGroup, instanceKey, isBigFruit, isD
 import { recipeAllergens } from './allergens.js';
 import { containsAvoided } from './diet.js';
 import { resolveItem } from './items.js';
+import { auditScore, auditWeek } from './audit.js';
+import { themeOf } from './themes.js';
+import { colorMass, consistencyOf } from './variety.js';
+import { packFor } from './packs.js';
+import { outOfSeason } from './seasons.js';
 
 // ---- componenti (modo senza piano scritto): carboidrati, proteine, verdure
 export const coveredGroups = (recipes) => {
@@ -56,6 +61,10 @@ export const planFor = (e, slot, state) => {
   for (const inst of dayInstancesFor(e, consumed)) {
     if (consumed.has(inst.key)) continue;
     const ii = SLOTS.indexOf(inst.slot);
+    // la frutta e gli altri gruppi degli spuntini si mangiano a colazione o negli spuntini, mai a pranzo o a cena
+    if (inst.slot !== slot && slotKind(inst.slot) === 'spuntino' && slotKind(slot) === 'principale') continue;
+    // a pranzo e a cena non si anticipano i gruppi dei pasti successivi (niente carboidrati della cena a pranzo): si anticipa solo a colazione e negli spuntini
+    if (inst.slot !== slot && ii > si && slotKind(slot) === 'principale') continue;
     if (inst.slot === slot) mustI.push(inst);
     else if (ii < si && movable(inst.group) && canBorrow(categoryOf(inst.group), slot)) mustI.push(inst); // rimasto indietro: va mangiato qui
     else if (ii > si && movable(inst.group) && canBorrow(categoryOf(inst.group), slot)) later.push(isBigFruit(inst.group) && !inst.part ? { ...inst, key: `${inst.key}~h1`, group: halveGroup(inst.group), part: 'h1' } : inst);
@@ -150,7 +159,8 @@ export const usesFor = (recipe, eaters, slot, state, claimed = new Map()) => {
 };
 
 // ---- stato e punteggio
-export const newState = ({ favorites, recency, counts, day } = {}) => ({
+export const newState = ({ favorites, recency, counts, day, month } = {}) => ({
+  month, // mese (1-12) della settimana: serve alla stagionalità
   used: new Map(),
   optUse: new Map(), // limiti settimanali del piano: chiave -> pasti già usati
   day: day || { consumed: new Map() }, // gruppi del piano già consumati oggi (modalità giornata): persona -> Set di chiavi
@@ -230,21 +240,45 @@ const mainIngredientsOf = (r) => {
   return v;
 };
 const simCache = new Map();
+export const mainCarbOf = (recipe) => mainIngredientsOf(recipe).carb;
+
 const similarity = (a, b) => {
+  if (String(b.id).startsWith('ref:')) return similarityRaw(a, b); // i riferimenti cambiano ogni volta: niente cache
   const key = `${a.id}|${b.id}`;
   if (simCache.has(key)) return simCache.get(key);
   const v = similarityRaw(a, b);
   simCache.set(key, v);
   return v;
 };
+// Tema del piatto (themes.js): due piatti dello stesso tema (frittata e frittata col prosciutto, bowl con tofu e bowl con pollo) si assomigliano
+const familyOf = (r) => themeOf(r);
 const similarityRaw = (a, b) => {
   const x = mainIngredientsOf(a), y = mainIngredientsOf(b);
   const inter = [...x.set].filter((w) => y.set.has(w)).length;
   const union = new Set([...x.set, ...y.set]).size || 1;
-  return inter / union + (x.carb && x.carb === y.carb ? 0.25 : 0);
+  const fa = familyOf(a), fb = b.title ? familyOf(b) : null;
+  // lo stesso tema dichiarato da due ricette (le varianti vegana, vegetariana e onnivora di uno stesso piatto) pesa di più
+  const explicit = a.theme && b.theme && a.theme === b.theme;
+  return inter / union + (x.carb && x.carb === y.carb ? 0.25 : 0) + (explicit ? 0.7 : fa && fb && fa === fb ? 0.4 : 0);
 };
 // simili sì, uguali meno: chi mangia carne o pesce deve avere anche lui il suo piatto (con tetto alla somiglianza e piccola penalità se è proprio lo stesso)
-const similarityBonus = (recipe, reference) => (reference?.length ? 24 * Math.min(0.75, Math.max(...reference.map((r) => similarity(recipe, r)))) - (reference.some((r) => r.id === recipe.id) ? 8 : 0) : 0);
+const similarityBonus = (recipe, reference) => (reference?.length ? 30 * Math.min(0.9, Math.max(...reference.map((r) => similarity(recipe, r)))) - (reference.some((r) => r.id === recipe.id) ? 8 : 0) : 0);
+
+// Meal prep e zero spreco: stessa base del giorno prima (si cuoce doppio) e ingredienti di una confezione già aperta (si finisce prima che vada a male)
+const reuseBonus = (recipe, state) => {
+  let bonus = 0;
+  const prev = state.prevCarb?.get(state.curSlot);
+  const carb = mainIngredientsOf(recipe).carb;
+  if (prev && carb && prev.has(carb) && ['pranzo', 'cena'].includes(String(state.curSlot).toLowerCase())) bonus += 5;
+  if (state.openPacks?.size && slotKind(state.curSlot) === 'principale') {
+    for (const ing of recipe.ingredients || []) {
+      const p = packFor(ing.name);
+      const open = p && state.openPacks.get(p.label);
+      if (open && state.curDay - open.day <= p.shelf && state.curDay > open.day) { bonus += 6; break; }
+    }
+  }
+  return bonus;
+};
 
 const baseScore = (recipe, eaters, state, preferLevel, slot) =>
   - (state.used.get(recipe.id) || 0) * 12
@@ -253,6 +287,9 @@ const baseScore = (recipe, eaters, state, preferLevel, slot) =>
   + goalBonus(recipe, eaters, state)
   + (preferLevel !== undefined && recipeLevel(recipe) === preferLevel ? 8 : 0)
   + similarityBonus(recipe, state.reference)
+  + (colorMass(recipe) >= 80 ? 3 : 0)
+  + reuseBonus(recipe, state)
+  - (state.month ? Math.min(2, outOfSeason(recipe, state.month).length) * 14 : 0)
   + Math.random() * 5;
 
 const best = (pool, scoreFn, min = -Infinity) => {
@@ -271,7 +308,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
   // Il piano scritto di chi mangia ha l'ultima parola: una ricetta che ne copre un gruppo (per esempio l'hummus a colazione)
   // va bene anche se di solito non si mangia a quel pasto. Vale per colazione e spuntini, non per i piatti da pranzo e cena.
   const light = slotKind(slot) !== 'principale';
-  const coversPlanGroup = (r) => light && ['colazione', 'spuntino'].includes(recipeKind(r)) && (slotKind(slot) !== 'colazione' || (BREAKFAST_LIKE.test(r.title) && !NOT_BREAKFAST.test(r.title))) && eaters.some((e) => {
+  const coversPlanGroup = (r) => light && ['colazione', 'spuntino'].includes(recipeKind(r)) && breakfastClass(r) !== 'no' && (slotKind(slot) !== 'colazione' || (BREAKFAST_LIKE.test(r.title) && !NOT_BREAKFAST.test(r.title))) && eaters.some((e) => {
     const pf = planFor(e, slot, state);
     return planMatches(r, pf.groups).some((m, gi) => m && gi < pf.ownCount && strongMatch(r, m));
   });
@@ -297,7 +334,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
         if (!rem.length) break;
         // un contorno copre solo le verdure del piano: non sostituisce mai il carboidrato o la proteina (niente patate al forno da sole)
         const gain = (r) => rem.filter((p) => covers(r, p, slot, state) && (recipeKind(r) !== 'contorno' || categoryOf(p.group) === 'veg')).length;
-        const pick = best(candidates.filter((r) => !chosen.includes(r) && gain(r) > 0 && compatible(r, chosen, main)), (r) => gain(r) * 10 + optionalGain(r, eaters, slot, state) * 6 - (chosen.length && sameBase(r, chosen) ? 25 : 0) - (slot === 'Colazione' && isSavory(r) ? 30 : 0) + extra(r) + baseScore(r, eaters, state, pref, slot), 0);
+        const pick = best(candidates.filter((r) => !chosen.includes(r) && gain(r) > 0 && compatible(r, chosen, main)), (r) => gain(r) * 10 + optionalGain(r, eaters, slot, state) * 6 - (chosen.length && sameBase(r, chosen) ? 25 : 0) - (main && consistencyOf(r) === 'liquido' && chosen.some((c) => consistencyOf(c) === 'liquido') ? 40 : 0) - (slot === 'Colazione' && isSavory(r) ? 30 : 0) + extra(r) + baseScore(r, eaters, state, pref, slot), 0);
         if (!pick) break;
         chosen.push(pick);
       }
@@ -389,6 +426,13 @@ export const registerMeal = (state, items, clusterEaters, day, slot, recipeMap, 
     const recipe = resolveItem(it, recipeMap);
     if (!recipe) continue;
     const eaters = Array.isArray(it.eaters) ? (everyone || clusterEaters).filter((e) => it.eaters.includes(e.id)) : clusterEaters;
+    // confezioni aperte: se il piatto usa meno di una confezione, il resto resta da usare nei giorni dopo
+    if (!it.leftoverOf) for (const ing of recipe.ingredients || []) {
+      const p = packFor(ing.name);
+      if (p && ing.qty > 0 && ing.unit !== 'q.b.' && p.size > ing.qty * Math.max(1, eaters.length)) (state.openPacks ||= new Map()).set(p.label, { day });
+    }
+    // base di carboidrati del giorno (per il meal prep del giorno dopo)
+    if (!it.leftoverOf && ['Pranzo', 'Cena'].includes(slot)) { const c = mainIngredientsOf(recipe).carb; if (c) ((state.todayCarb ||= new Map()).get(slot) || state.todayCarb.set(slot, new Set()).get(slot)).add(c); }
     for (const [pid, keys] of Object.entries(it.uses || {})) { const set = state.day.consumed.get(pid) || new Set(); keys.forEach((k) => set.add(k)); state.day.consumed.set(pid, set); }
     for (const f of recipeFoods(recipe)) for (const m of eaters) ((state.counts[m.id] ||= {})[f] ||= new Set()).add(`${day}|${slot}`);
     // limiti settimanali del piano: ogni pasto che usa un'alternativa limitata la consuma
@@ -411,21 +455,44 @@ export const generateWeek = (recipes, household, ctx = {}) => {
   for (let d = 0; d < 7; d++) {
     days[d] = {};
     state.day = { consumed: new Map() }; // ogni giorno ricomincia con il suo budget
+    state.prevCarb = state.todayCarb || new Map(); // basi di carboidrati di ieri
+    state.todayCarb = new Map();
     for (const slot of SLOTS) {
       state.mealsLeft = 14 - (d * 2 + (slot === 'Cena' || slot === 'Spuntino 2' ? 1 : 0)); // pasti principali ancora da fare questa settimana
+      state.curSlot = slot;
+      state.curDay = d;
       // assenti e ospiti già indicati nel piano esistente restano al loro posto
       const prevData = ctx.existing?.[d]?.[slot];
       const people = slotPeople(household, slot, prevData);
       if (!people.length) continue;
       const items = [];
       const refs = []; // piatti già scelti per gli altri gruppi dello stesso pasto: i menu diversi per dieta devono assomigliarsi
-      for (const cluster of menuClusters(household, d, slot, people, prevData)) {
+      // si parte da chi ha più vincoli (piano scritto, dieta più restrittiva): gli altri si adattano a un menu simile
+      const clusters = menuClusters(household, d, slot, people, prevData).sort((x, y) => {
+        const px = x.eaters.some((e) => mealOf(e, slot).plan.length) ? 0 : 1, py = y.eaters.some((e) => mealOf(e, slot).plan.length) ? 0 : 1;
+        return px - py || (x.level ?? 9) - (y.level ?? 9);
+      });
+      for (const cluster of clusters) {
         const batch = Math.max(1, ...rulesFor(household, d, slot, cluster.eaters).map((r) => r.batch || 1));
         const c = mealConstraints(household, d, slot, cluster.eaters);
+        // se domani a pranzo si mangiano gli avanzi di questa cena, la cena deve andare bene anche per il pranzo di domani (asporto, dieta)
+        if (slot === 'Cena' && d < 6) {
+          const nx = rulesFor(household, d + 1, 'Pranzo', cluster.eaters);
+          if (nx.some((r) => r.leftoverDinner)) { c.takeaway = c.takeaway || nx.some((r) => r.takeaway); c.maxLevel = Math.min(c.maxLevel, ruleCap(nx)); }
+        }
         const key = `${slot}:${cluster.eaters.map((e) => e.id).sort().join(',')}`;
         const prev = carry[key];
         let menu;
-        if (batch > 1 && prev?.left > 0 && prev.items.every((it) => { const r = resolveItem(it, recipeMap); return r && fits(r, c, { ignoreTakeaway: true }); })) {
+        // regola "pranzo con gli avanzi della cena di ieri"
+        const wantsLeftover = slot === 'Pranzo' && d > 0 && rulesFor(household, d, slot, cluster.eaters).some((r) => r.leftoverDinner);
+        const ids = new Set(cluster.eaters.map((e) => e.id));
+        const yesterday = wantsLeftover ? (days[d - 1]?.Cena?.items || []).filter((it) => !it.eaters || it.eaters.some((id) => ids.has(id))) : [];
+        const leftoverMenu = yesterday.length && yesterday.every((it) => { const r = resolveItem(it, recipeMap); return r && !r.isFood && fits(r, c); })
+          ? yesterday.map((it) => ({ ...it, instanceId: crypto.randomUUID(), leftoverOf: it.leftoverOf || it.instanceId, leftoverDay: d - 1, ...(it.eaters ? { eaters: it.eaters.filter((id) => ids.has(id)) } : cluster.split ? { eaters: [...ids] } : {}) }))
+          : null;
+        if (leftoverMenu) {
+          menu = leftoverMenu;
+        } else if (batch > 1 && prev?.left > 0 && prev.items.every((it) => { const r = resolveItem(it, recipeMap); return r && fits(r, c, { ignoreTakeaway: true }); })) {
           menu = prev.items.map((it) => ({ ...it, instanceId: crypto.randomUUID(), leftoverOf: it.leftoverOf || it.instanceId, leftoverDay: prev.day }));
           prev.left--;
         } else {
@@ -436,7 +503,10 @@ export const generateWeek = (recipes, household, ctx = {}) => {
           else delete carry[key];
         }
         registerMeal(state, menu, cluster.eaters, d, slot, recipeMap, people);
-        for (const it of menu) { const r = resolveItem(it, recipeMap); if (r && !r.isFood) refs.push(r); }
+        // il menu di questo gruppo (piatti e alimenti semplici) diventa il riferimento per i gruppi successivi dello stesso pasto,
+        // sia nei pasti condivisi con menu per dieta sia in quelli individuali: chi mangia nello stesso momento mangia cose simili
+        const parts = menu.map((it) => resolveItem(it, recipeMap)).filter(Boolean);
+        if (parts.length) refs.push({ id: `ref:${slot}:${refs.length}`, ingredients: parts.flatMap((r) => r.ingredients || []) });
         items.push(...menu);
       }
       // lo stesso piatto scelto per due gruppi di persone diventa un piatto solo, mangiato da tutti e due
@@ -481,4 +551,20 @@ export const dayStateFor = (household, daySlots, recipeMap, excludeSlot) => {
     consumed.set(m.id, consumedKeys(m, slots, (it) => resolveItem(it, recipeMap), eatersOfItem));
   }
   return { consumed };
+};
+
+
+// Genera la settimana più volte, la controlla (audit.js) e tiene la migliore: i difetti che il generatore non sa evitare al primo colpo
+// (un piatto strano, una frequenza mancata) quasi sempre spariscono in un altro tentativo. Si ferma al primo senza problemi.
+export const generateWeekChecked = (recipes, household, ctx = {}, { tries = 8 } = {}) => {
+  const recipeMap = new Map(recipes.map((r) => [r.id, r]));
+  let best = null;
+  for (let i = 0; i < tries; i++) {
+    const days = generateWeek(recipes, household, ctx);
+    const issues = auditWeek(days, household, recipeMap, { month: ctx.month });
+    const score = auditScore(issues);
+    if (!best || score < best.score) best = { days, issues, score };
+    if (score === 0) break;
+  }
+  return best;
 };

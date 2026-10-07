@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
+import './lib/seasonsData.js';
 import ErrorBoundary, { watchChunkErrors } from './components/ErrorBoundary.jsx';
 import './index.css';
 

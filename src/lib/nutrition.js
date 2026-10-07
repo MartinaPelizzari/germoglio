@@ -15,6 +15,7 @@ const SPOON_ML = { cucchiai: 12, cucchiaini: 4 };
 
 // Equivalenze sicure fra nomi di ingredienti (stesso prodotto scritto in modo diverso)
 const ALIAS = {
+  'lime': 'limone', 'manzo macinato magro': 'macinato di manzo', 'maiale macinato magro': 'filetto di maiale', 'halloumi': 'scamorza',
   'bevanda d avena': 'bevanda di avena', 'latte d avena': 'bevanda di avena', 'latte di avena': 'bevanda di avena',
   'latte di mandorla': 'bevanda di mandorla', 'bevanda di soia': 'latte di soia', 'sciroppo d agave': 'sciroppo d agave',
   'burro d arachidi': 'burro di arachidi', 'cacao amaro': 'cacao amaro in polvere', 'menta': 'menta fresca',

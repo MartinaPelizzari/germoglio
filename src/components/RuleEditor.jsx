@@ -33,6 +33,9 @@ export default function RuleEditor({ rule, onChange, onDelete, onClose, personal
           <div className="flex gap-2">{(personal ? [1, 2, 3, 5, 7] : [1, 2, 3]).map((n) => <button key={n} onClick={() => onChange({ ...rule, batch: n })} className={`flex-1 py-2.5 rounded-xl text-sm font-bold ${(rule.batch || 1) === n ? 'bg-brand-500 text-white' : 'bg-slate-50 text-slate-500'}`}>{n === 1 ? 'Ogni giorno diverso' : n === 7 ? 'Sempre lo stesso' : `Stesso per ${n} giorni`}</button>)}</div>
           <p className="text-xs text-slate-400 mt-2">Con "Proponi" il piatto torna come avanzo nei giorni successivi della regola.</p>
         </div>
+        {rule.slots.includes('Pranzo') && (
+          <label className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl font-semibold text-slate-700"><input type="checkbox" className="w-5 h-5 mt-0.5 accent-emerald-500" checked={!!rule.leftoverDinner} onChange={(e) => onChange({ ...rule, leftoverDinner: e.target.checked })} /> <span>Pranzo con gli avanzi della cena di ieri<span className="block text-xs font-normal text-slate-400">La cena viene scelta adatta al pranzo del giorno dopo (anche d'asporto, se la regola lo chiede).</span></span></label>
+        )}
         <label className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl font-semibold text-slate-700"><input type="checkbox" className="w-5 h-5 accent-emerald-500" checked={rule.takeaway} onChange={(e) => onChange({ ...rule, takeaway: e.target.checked })} /> Piatti d'asporto (da portare in contenitore)</label>
         <button onClick={onDelete} className="w-full py-3 text-red-500 font-bold bg-red-50 rounded-2xl flex items-center justify-center gap-2 active:scale-95"><Trash2 className="w-4 h-4" /> Elimina regola</button>
       </div>

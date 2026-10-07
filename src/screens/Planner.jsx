@@ -18,6 +18,8 @@ import { isSharedSlot, mealConstraints, menuClusters, problemsFor, rulesFor } fr
 import { resolveItem } from '../lib/items.js';
 import { GROUPS } from '../lib/groups.js';
 import { timeLabel } from '../lib/format.js';
+import { prepHint } from '../lib/prep.js';
+import { monthOfWeek } from '../lib/seasons.js';
 
 const GROUP_EMOJI = Object.fromEntries(GROUPS.map((g) => [g.id, g.emoji]));
 const GROUP_NAME = Object.fromEntries(GROUPS.map((g) => [g.id, g.label.toLowerCase()]));
@@ -85,7 +87,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const ppl = people(slot);
     const shared = isSharedSlot(household, slot, data(slot));
     const without = { days: { ...plan.days, [dayIndex]: { ...(plan.days?.[dayIndex] || {}), [slot]: undefined } } };
-    const state = newState({ favorites, recency, counts: weekSets(without, household, recipeMap), day: dayStateNow(slot) });
+    const state = newState({ favorites, recency, counts: weekSets(without, household, recipeMap), day: dayStateNow(slot), month: monthOfWeek(weekId) });
     const out = [];
     let relaxed = false;
     const all = menuClusters(household, dayIndex, slot, ppl, data(slot));
@@ -110,7 +112,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const nd = { ...d0, mode, joined: undefined };
     const ppl = slotPeople(household, slot, d0);
     setModeFor(null);
-    const state = newState({ favorites, recency, counts: {}, day: dayStateNow(slot) });
+    const state = newState({ favorites, recency, counts: {}, day: dayStateNow(slot), month: monthOfWeek(weekId) });
     const out = [];
     for (const cluster of menuClusters(household, dayIndex, slot, ppl, nd)) {
       const r = proposeMenu(recipes, constraintsFor(slot, cluster.eaters), slot, state, cluster);
@@ -153,7 +155,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const cur = resolve(list[index]);
     const eaters = eatersFor(list[index], slot);
     const dayState = dayStateNow(null, list[index].instanceId);
-    const next = swapRecipe(recipes, cur, constraintsFor(slot, eaters), { favorites, recency, day: dayState }, slot);
+    const next = swapRecipe(recipes, cur, constraintsFor(slot, eaters), { favorites, recency, day: dayState, month: monthOfWeek(weekId) }, slot);
     if (!next) return setNotice('Non ci sono altre ricette adatte da proporre.');
     if (list[index].eaters) next.eaters = list[index].eaters;
     const uses = usesFor(recipeMap.get(next.recipeId), eaters, slot, { day: dayState });
@@ -227,6 +229,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
               ? <span className="text-[11px] text-slate-500">Alimento dal piano: {doses.join(' · ')}</span>
               : <span className="flex items-center gap-1 text-[10px] text-slate-500 mt-0.5"><Clock className="w-3 h-3" /> {timeLabel(recipe)}{recipe.takeaway ? ' · asporto' : ''}</span>}
             {item.leftoverOf && <span className="inline-block mt-1 text-[10px] font-bold text-brand-700 bg-white rounded-full px-2 py-0.5">Avanzi di {DAYS[item.leftoverDay] ?? 'un altro giorno'}</span>}
+            {(() => { const h = prepHint(plan.days, dayIndex, slot, item, recipeMap); return h ? <span className="block mt-1 text-[10px] text-slate-500">{h}</span> : null; })()}
             {favorites.has(recipe.id) && <Heart className="inline w-3 h-3 ml-1 fill-rose-500 text-rose-500" />}
           </div>
         </div>

@@ -134,7 +134,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 
 ## Ricettario ampliato
 
-- 543 ricette: 185 colazioni, 135 pranzi, 125 cene, 66 contorni, 32 spuntini. Le ultime 300 circa sono state cercate sul web e riscritte con parole nostre; la maggior parte indica la pagina di ispirazione (`node scripts/check-sources.mjs` controlla che gli indirizzi rispondano; alcuni siti rispondono 403 ai controlli automatici e restano non verificabili).
+- 591 ricette: 185 colazioni, 135 pranzi, 125 cene, 66 contorni, 32 spuntini. Le ultime 300 circa sono state cercate sul web e riscritte con parole nostre; la maggior parte indica la pagina di ispirazione (`node scripts/check-sources.mjs` controlla che gli indirizzi rispondano; alcuni siti rispondono 403 ai controlli automatici e restano non verificabili).
 - Le colazioni nuove sono generali: non tutte rispettano alla lettera un singolo piano, ma l'app le propone solo a chi il piano lo permette (per esempio Lucia, non Martina).
 - La generazione delle settimane è molto più veloce grazie al calcolo in memoria dei confronti fra ricette e piani (`memo` in `src/lib/dietPlan.js`).
 - Le crudité e le insalate non si propongono a colazione; le colazioni salate solo se il piano le prevede.
@@ -146,7 +146,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 
 ## Valori nutrizionali: copertura 100%
 
-- `src/data/nutrition/` ha 453 voci (CREA, USDA, etichette di prodotti) che coprono tutti gli ingredienti delle 543 ricette: `node scripts/check-nutrition.mjs` lo verifica e controlla anche che i nomi non vengano abbinati a cibi sbagliati.
+- `src/data/nutrition/` ha 453 voci (CREA, USDA, etichette di prodotti) che coprono tutti gli ingredienti delle 591 ricette: `node scripts/check-nutrition.mjs` lo verifica e controlla anche che i nomi non vengano abbinati a cibi sbagliati.
 - Il riconoscimento dei nomi è rigoroso: una sola parola in comune non basta ("peperone rosso" non è "vino rosso"), e secco, cotto o soffiato non si confondono col prodotto base. Le equivalenze sicure stanno in `ALIAS` (`src/lib/nutrition.js`).
 - Dove una fonte non riporta un valore c'è `null` e dove il valore è un'equivalenza (per esempio cavolo nero = kale USDA) è scritto in `note`. Le voci da etichetta commerciale sono approssimazioni.
 
@@ -155,3 +155,21 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Nei pasti condivisi con menu diversi per dieta (vegetariana e onnivora), il secondo menu si sceglie simile al primo: stessi ingredienti principali e stessa base (frittata con spinaci e frittata con prosciutto, risotto alla zucca e risotto con salsiccia). Se escono proprio uguali diventano un piatto solo per tutti.
 - `GENERATOR_VERSION` (`src/hooks/useAutoWeeks.js`) fa parte dell'impronta delle settimane: quando cambia il modo di generare i menu, le settimane proposte dall'app e mai toccate a mano si rifanno da sole.
 - Nel piano scritto "bevanda d'avena" e "latte d'avena" sono lo stesso alimento e le precisazioni ("a ridotto contenuto di zuccheri") non contano nel nome.
+
+## Generatore con controllo di qualità
+
+- Ogni settimana si genera più volte (fino a 8 tentativi) e si controlla con `src/lib/audit.js`: l'app tiene il tentativo con meno problemi (`generateWeekChecked` in `src/lib/planGen.js`). I controlli sono: dieta, allergie e ingredienti da evitare; pasti vuoti; colazioni sensate (mai zuppe, legumi, verdure cotte, riso salato, tofu; le salate solo se il piano le prevede); una sola proteina e un solo carboidrato per pasto; contorni mai da soli; regole condivise (un piatto per tutti, asporto, niente liquidi d'asporto); gruppi del piano mangiati una volta sola e mai spostati dagli spuntini a pranzo o a cena; quantità non oltre il piano; frequenze settimanali; menu per gruppi diversi della stessa tavola simili fra loro.
+- Anticipo dei gruppi: la frutta dello spuntino si può mangiare a colazione (divisa a metà), ma a pranzo e a cena non si anticipa nulla dei pasti successivi e la frutta non finisce mai "dopo i pasti".
+- Pasti per più gruppi di persone (menu per dieta o pasti individuali): si parte da chi ha più vincoli e gli altri scelgono piatti della stessa famiglia (frittata, risotto, pasta...) e con ingredienti in comune.
+- Prova: `node scripts/selftest-robust.mjs` (sei famiglie diverse, difetti gravi = 0); con `RUNS=20` si fanno più tentativi.
+- La memoria dei confronti ricetta-piano (`memo` in `dietPlan.js`) tiene la generazione sotto il secondo per settimana anche con piani scritti e regolazione sulla giornata.
+
+## Stagionalità, varietà, temi, avanzi e zero spreco
+
+- **Stagionalità**: `src/data/seasons.json` (175 voci da Dica33 e dal calendario MASAF, fonti e discordanze in `docs/stagionalita.md`). Una ricetta con ortaggi o frutta importanti fuori stagione nel mese della settimana perde punti nella scelta (mai per gli alimenti che il piano indica); i mesi sono allargati di uno prima e uno dopo perché il calendario è indicativo. Prova: a luglio 0 piatti su 166 fuori stagione contro il 16% del ricettario.
+- **Varietà del pasto** (`src/lib/variety.js`): niente due piatti liquidi nello stesso pasto, e un pasto principale con almeno un po' di colore (no "pasto beige").
+- **Temi di ricetta** (`src/lib/themes.js`): 48 ricette "a matrice" (16 temi: bowl, tacos, polpette, ragù, ripieni, insalatona, frittata, risotto, pasta al forno, burger, curry, wrap, gnocchi, zuppa di cereali, pizza in padella, spiedini) con tre varianti (vegana, vegetariana, onnivora) che condividono base e condimento. Chi ha menu diversi nello stesso pasto sceglie varianti dello stesso tema.
+- **Meal prep**: se il pasto ha la stessa base di ieri (riso, patate, pasta...) ha un piccolo bonus, e il Planner suggerisce di cuocere la dose doppia la sera prima.
+- **Avanzi**: nelle regole di un pasto "Pranzo" si può attivare "Pranzo con gli avanzi della cena di ieri": la cena viene scelta adatta (anche d'asporto) e il pranzo dopo è lo stesso piatto, segnato "Avanzi di ...".
+- **Zero spreco** (`src/lib/packs.js`): confezioni tipiche indicative (ricotta 250 g, mozzarella 125 g, tofu 250 g, verza 800 g...). Se un piatto lascia aperta una confezione, nei giorni dopo ha un bonus chi la usa; nella lista della spesa compare "≈ 2 confezioni da 250 g" e quanto avanza.
+- Non fatto: il carico degli elettrodomestici (fuochi e forno).

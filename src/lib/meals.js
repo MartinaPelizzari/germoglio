@@ -36,6 +36,15 @@ export const isSavory = (recipe) => {
   savoryCache.set(recipe, savory);
   return savory;
 };
+// A colazione non vanno zuppe, legumi, verdure cotte, riso salato, tofu...: mai, nemmeno se il piano lo "permette" per caso
+const NEVER_BREAKFAST = /zupp|minestr|vellutat|congee|miso|onigiri|ful medames|shakshuka|menemen|huevos|chilaquiles|tortillas|beans|tofu|dosa|poha|upma|tamagoyaki|frittata|muffin salat|pancake salat|farinata|uova in padella|uova .* (zucchine|pomodor|peperon|spinaci)|crauti|bruschett|crudit|verdure crude|insalat/i;
+const NEVER_BREAKFAST_ING = /\b(zucchine|peperon\w*|cipoll\w*|aglio|funghi|fagioli|lenticch\w*|fave|cannellini|passata|olive|crauti|alga|wakame|nori|cavol\w*|broccol\w*|melanzan\w*|sedano|finocch\w*|riso per sushi|riso schiacciato)\b/i;
+// 'classica' (dolce o di latte e cereali), 'salata' (uova, ricotta, salmone, hummus con pane: solo se il piano la prevede), 'no' (mai a colazione)
+export const breakfastClass = (recipe) => {
+  if (NEVER_BREAKFAST.test(recipe.title) || (recipe.ingredients || []).some((i) => NEVER_BREAKFAST_ING.test(i.name))) return 'no';
+  return isSavory(recipe) ? 'salata' : 'classica';
+};
+
 // Spuntini che vanno bene anche a colazione (dolci o di latte e cereali), non crostini, hummus, popcorn...
 const BREAKFAST_SNACK = /yogurt|pudding|chia|barrett|porridge|overnight|granola|latte/i;
 const NOT_BREAKFAST = /verdur|crudit|insalat|cetriol|carot|sedano|olive|pomodor|hummus con/i;
@@ -46,6 +55,6 @@ export const kindFits = (recipe, slot) => {
   const k = recipeKind(recipe);
   const s = slotKind(slot);
   if (s === 'principale') return k === 'principale' || k === 'contorno';
-  if (s === 'colazione') return k === 'colazione' || (k === 'spuntino' && BREAKFAST_SNACK.test(recipe.title) && !NOT_BREAKFAST.test(recipe.title) && !isSavory(recipe));
+  if (s === 'colazione') return (k === 'colazione' && breakfastClass(recipe) !== 'no') || (k === 'spuntino' && breakfastClass(recipe) !== 'no' && BREAKFAST_SNACK.test(recipe.title) && !NOT_BREAKFAST.test(recipe.title) && !isSavory(recipe));
   return k === 'spuntino' || (k === 'colazione' && !isSavory(recipe));
 };
