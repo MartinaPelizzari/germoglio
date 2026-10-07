@@ -14,7 +14,8 @@ import { FOOD_TYPES } from './foodTypes.js';
 const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 const STOP = new Set(['vaccino', 'vaccina', 'parzialmente', 'scremato', 'scremata', 'di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'basmati', 'volonta']);
 const stem = (t) => (t.length > 4 ? t.slice(0, -1) : t);
-const tokens = (s) => norm(s).split(' ').filter((t) => t && !STOP.has(t)).map(stem);
+// "bevanda d'avena" e "latte d'avena" sono lo stesso prodotto; le precisazioni ("a ridotto contenuto di zuccheri", "entro il 15%") non fanno parte del nome
+const tokens = (s) => norm(s).replace(/\ba ridotto contenuto di \w+/g, ' ').replace(/\bbevanda\b/g, 'latte').split(' ').filter((t) => t && !STOP.has(t)).map(stem);
 
 const UNIT_MAP = { g: 'g', gr: 'g', grammi: 'g', grammo: 'g', kg: 'kg', ml: 'ml', cl: 'cl', dl: 'dl', l: 'l', lt: 'l', pz: 'pz', pezzi: 'pz', pezzo: 'pz', fetta: 'fetta', fette: 'fetta', cucchiaio: 'cucchiai', cucchiai: 'cucchiai', cucchiaino: 'cucchiaini', cucchiaini: 'cucchiaini', vasetto: 'vasetto', vasetti: 'vasetto', frutto: 'pz', frutti: 'pz', porzione: 'pz', porzioni: 'pz', tazza: 'tazza', tazze: 'tazza', bicchiere: 'bicchiere', bicchieri: 'bicchiere' };
 const NUMBER_WORDS = { un: 1, uno: 1, una: 1, due: 2, tre: 3, quattro: 4, cinque: 5, sei: 6 };

@@ -1,6 +1,6 @@
-import { SLOTS, eatersOf, mealOf, mealOfItem, slotPeople } from './scale.js';
+import { SLOTS, canonicalName, eatersOf, mealOf, mealOfItem, slotPeople } from './scale.js';
 import { isSavory, kindFits, recipeKind, slotKind } from './meals.js';
-import { fits, mealConstraints, menuClusters, memberLevel, recipeLevel, rulesFor } from './diet.js';
+import { fits, isSharedSlot, mealConstraints, menuClusters, memberLevel, recipeLevel, rulesFor } from './diet.js';
 import { recipeFoods } from './goals.js';
 import { recencyPenalty } from './usage.js';
 import { describeOption, foodDiet, planMatches, planViolations } from './dietPlan.js';
@@ -218,12 +218,41 @@ const compatible = (recipe, chosen, main) => !main || !['protein', 'carb'].some(
 const BREAKFAST_LIKE = /hummus|yogurt|ricotta|uov|pane|toast|fett|porridge|overnight|muesli|granola|latte|pancake|chia|bircher|skyr|kefir|avena|frutt/i;
 const NOT_BREAKFAST = /verdur|crudit|insalat|cetriol|carot|sedano|olive|pomodor/i;
 
+// Somiglianza fra due piatti (ingredienti principali in comune, stessa base di carboidrati): serve a far mangiare piatti simili
+// a chi in un pasto condiviso ha menu diversi per la dieta
+const ingSetCache = new WeakMap();
+const mainIngredientsOf = (r) => {
+  if (ingSetCache.has(r)) return ingSetCache.get(r);
+  const ings = (r.ingredients || []).filter((i) => i.unit !== 'q.b.' && ['carb', 'protein', 'veg', 'dairy', 'fruit'].includes(i.group));
+  const carb = ings.filter((i) => i.group === 'carb').sort((a, b) => b.qty - a.qty)[0];
+  const v = { set: new Set(ings.map((i) => canonicalName(i.name))), carb: carb ? canonicalName(carb.name) : null };
+  ingSetCache.set(r, v);
+  return v;
+};
+const simCache = new Map();
+const similarity = (a, b) => {
+  const key = `${a.id}|${b.id}`;
+  if (simCache.has(key)) return simCache.get(key);
+  const v = similarityRaw(a, b);
+  simCache.set(key, v);
+  return v;
+};
+const similarityRaw = (a, b) => {
+  const x = mainIngredientsOf(a), y = mainIngredientsOf(b);
+  const inter = [...x.set].filter((w) => y.set.has(w)).length;
+  const union = new Set([...x.set, ...y.set]).size || 1;
+  return inter / union + (x.carb && x.carb === y.carb ? 0.25 : 0);
+};
+// simili sì, uguali meno: chi mangia carne o pesce deve avere anche lui il suo piatto (con tetto alla somiglianza e piccola penalità se è proprio lo stesso)
+const similarityBonus = (recipe, reference) => (reference?.length ? 24 * Math.min(0.75, Math.max(...reference.map((r) => similarity(recipe, r)))) - (reference.some((r) => r.id === recipe.id) ? 8 : 0) : 0);
+
 const baseScore = (recipe, eaters, state, preferLevel, slot) =>
   - (state.used.get(recipe.id) || 0) * 12
   - recencyPenalty(state.recency.get(recipe.id))
   + (state.favorites.has(recipe.id) ? 5 : 0)
   + goalBonus(recipe, eaters, state)
   + (preferLevel !== undefined && recipeLevel(recipe) === preferLevel ? 8 : 0)
+  + similarityBonus(recipe, state.reference)
   + Math.random() * 5;
 
 const best = (pool, scoreFn, min = -Infinity) => {
@@ -389,6 +418,7 @@ export const generateWeek = (recipes, household, ctx = {}) => {
       const people = slotPeople(household, slot, prevData);
       if (!people.length) continue;
       const items = [];
+      const refs = []; // piatti già scelti per gli altri gruppi dello stesso pasto: i menu diversi per dieta devono assomigliarsi
       for (const cluster of menuClusters(household, d, slot, people, prevData)) {
         const batch = Math.max(1, ...rulesFor(household, d, slot, cluster.eaters).map((r) => r.batch || 1));
         const c = mealConstraints(household, d, slot, cluster.eaters);
@@ -399,12 +429,26 @@ export const generateWeek = (recipes, household, ctx = {}) => {
           menu = prev.items.map((it) => ({ ...it, instanceId: crypto.randomUUID(), leftoverOf: it.leftoverOf || it.instanceId, leftoverDay: prev.day }));
           prev.left--;
         } else {
+          state.reference = refs;
           menu = proposeMenu(recipes, c, slot, state, cluster).items;
+          state.reference = null;
           if (batch > 1 && menu.length) carry[key] = { left: batch - 1, items: menu, day: d };
           else delete carry[key];
         }
         registerMeal(state, menu, cluster.eaters, d, slot, recipeMap, people);
+        for (const it of menu) { const r = resolveItem(it, recipeMap); if (r && !r.isFood) refs.push(r); }
         items.push(...menu);
+      }
+      // lo stesso piatto scelto per due gruppi di persone diventa un piatto solo, mangiato da tutti e due
+      for (let a = 0; isSharedSlot(household, slot, prevData) && a < items.length; a++) {
+        for (let b = items.length - 1; b > a; b--) {
+          const x = items[a], y = items[b];
+          if (!x.recipeId || x.recipeId !== y.recipeId || x.leftoverOf || y.leftoverOf || !Array.isArray(x.eaters) || !Array.isArray(y.eaters)) continue;
+          x.eaters = [...new Set([...x.eaters, ...y.eaters])];
+          if (y.uses) x.uses = { ...(x.uses || {}), ...y.uses };
+          items.splice(b, 1);
+        }
+        if (Array.isArray(items[a].eaters) && items[a].eaters.length === people.length) delete items[a].eaters;
       }
       const planned = people.some((p) => mealOf(p, slot).plan.length);
       if (items.length || planned) days[d][slot] = { items, ...(!items.length ? { covered: true } : {}), ...(prevData?.absent?.length ? { absent: prevData.absent } : {}), ...(prevData?.guests?.length ? { guests: prevData.guests } : {}), ...(prevData?.joined && Object.keys(prevData.joined).length ? { joined: prevData.joined } : {}), ...(prevData?.mode ? { mode: prevData.mode } : {}) };

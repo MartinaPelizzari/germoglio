@@ -149,3 +149,9 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - `src/data/nutrition/` ha 453 voci (CREA, USDA, etichette di prodotti) che coprono tutti gli ingredienti delle 543 ricette: `node scripts/check-nutrition.mjs` lo verifica e controlla anche che i nomi non vengano abbinati a cibi sbagliati.
 - Il riconoscimento dei nomi è rigoroso: una sola parola in comune non basta ("peperone rosso" non è "vino rosso"), e secco, cotto o soffiato non si confondono col prodotto base. Le equivalenze sicure stanno in `ALIAS` (`src/lib/nutrition.js`).
 - Dove una fonte non riporta un valore c'è `null` e dove il valore è un'equivalenza (per esempio cavolo nero = kale USDA) è scritto in `note`. Le voci da etichetta commerciale sono approssimazioni.
+
+## Menu simili e rigenerazione dopo un aggiornamento
+
+- Nei pasti condivisi con menu diversi per dieta (vegetariana e onnivora), il secondo menu si sceglie simile al primo: stessi ingredienti principali e stessa base (frittata con spinaci e frittata con prosciutto, risotto alla zucca e risotto con salsiccia). Se escono proprio uguali diventano un piatto solo per tutti.
+- `GENERATOR_VERSION` (`src/hooks/useAutoWeeks.js`) fa parte dell'impronta delle settimane: quando cambia il modo di generare i menu, le settimane proposte dall'app e mai toccate a mano si rifanno da sole.
+- Nel piano scritto "bevanda d'avena" e "latte d'avena" sono lo stesso alimento e le precisazioni ("a ridotto contenuto di zuccheri") non contano nel nome.
