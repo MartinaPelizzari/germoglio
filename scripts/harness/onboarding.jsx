@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import '../../src/index.css';
-import '../../src/lib/nutritionData.js';
 import Onboarding from '../../src/screens/Onboarding.jsx';
 
 // ?joined=1 simula chi è appena entrato in un nucleo con dei profili già creati
