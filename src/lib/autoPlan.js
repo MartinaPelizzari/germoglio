@@ -17,7 +17,7 @@ const r10 = (x) => Math.max(10, Math.round(x / 10) * 10);
 const ALL = ['omnivore', 'pescetarian', 'vegetarian', 'vegan'];
 const NOVEG = ['omnivore', 'pescetarian', 'vegetarian'];
 // alt: alternative usate solo da chi è vegano o ha l'intolleranza indicata
-const YOGURT = { t: 'yogurt', g: 125, flex: 1, d: NOVEG };
+const YOGURT = { t: 'yogurt', kn: 'yogurt bianco intero', g: 125, flex: 1, d: NOVEG };
 const SOY_YOGURT = { t: 'yogurt di soia', g: 125, d: ALL, alt: ['vegan', 'lattosio'] };
 const dairy = [
   YOGURT, { t: 'latte parzialmente scremato', g: 200, u: 'ml', d: NOVEG },
@@ -25,27 +25,27 @@ const dairy = [
 ];
 const breakfastCarb = [
   { t: 'pane', g: 40, carb: 1, step: 10, d: ALL }, { t: 'fette biscottate', g: 30, carb: 1, d: ALL },
-  { t: 'cereali integrali per la colazione', g: 30, carb: 1, d: ALL }, { t: 'fiocchi d\'avena', g: 40, carb: 1, d: ALL },
-  { t: 'pane senza glutine', g: 40, carb: 1, step: 10, d: ALL, alt: ['glutine'] }, { t: 'fette biscottate senza glutine', g: 30, carb: 1, d: ALL, alt: ['glutine'] },
+  { t: 'cereali integrali per la colazione', kn: 'muesli', g: 30, carb: 1, d: ALL }, { t: 'fiocchi d\'avena', g: 40, carb: 1, d: ALL },
+  { t: 'pane senza glutine', kn: 'pane', g: 40, carb: 1, step: 10, d: ALL, alt: ['glutine'] }, { t: 'fette biscottate senza glutine', g: 30, carb: 1, d: ALL, alt: ['glutine'] },
 ];
 const lunchCarb = [
   { t: 'pasta', g: 80, carb: 1, d: ALL }, { t: 'riso', g: 80, carb: 1, d: ALL }, { t: 'farro', g: 80, carb: 1, d: ALL },
-  { t: 'orzo', g: 80, carb: 1, d: ALL }, { t: 'patate', g: 200, carb: 1, w: 2, d: ALL },
+  { t: 'orzo', kn: 'farro', g: 80, carb: 1, d: ALL }, { t: 'patate', g: 200, carb: 1, w: 2, d: ALL },
 ];
-const lunchBread = [{ t: 'pane', g: 50, carb: 1, step: 10, d: ALL }, { t: 'pane integrale', g: 50, carb: 1, step: 10, d: ALL }, { t: 'pane senza glutine', g: 50, carb: 1, step: 10, d: ALL, alt: ['glutine'] }];
+const lunchBread = [{ t: 'pane', g: 50, carb: 1, step: 10, d: ALL }, { t: 'pane integrale', g: 50, carb: 1, step: 10, d: ALL }, { t: 'pane senza glutine', kn: 'pane', g: 50, carb: 1, step: 10, d: ALL, alt: ['glutine'] }];
 const dinnerBread = [{ t: 'pane', g: 40, carb: 1, step: 10, d: ALL }, { t: 'patate', g: 150, carb: 1, w: 2, d: ALL }, { t: 'pane integrale', g: 40, carb: 1, step: 10, d: ALL }, { t: 'pane senza glutine', g: 40, carb: 1, step: 10, d: ALL, alt: ['glutine'] }];
 const protein = (e, diet, extra = 0) => [
-  { t: 'legumi cotti', g: 150, w: diet === 'omnivore' || diet === 'pescetarian' ? 3 + extra : extra ? 4 + extra : 0, d: ALL },
+  { t: 'legumi cotti', kn: 'ceci cotti', g: 150, w: diet === 'omnivore' || diet === 'pescetarian' ? 3 + extra : extra ? 4 + extra : 0, d: ALL },
   { t: 'uova', g: 100, w: Math.round(lerp(e, 2, 3, 4)), d: NOVEG },
-  { t: 'pesce', g: 150, w: Math.round(lerp(e, 2, 2, 3)) + (diet === 'pescetarian' ? 1 : 0), d: ['omnivore', 'pescetarian'] },
+  { t: 'pesce', kn: 'filetto di merluzzo', g: 150, w: Math.round(lerp(e, 2, 2, 3)) + (diet === 'pescetarian' ? 1 : 0), d: ['omnivore', 'pescetarian'] },
   { t: 'carne bianca', kn: 'petto di pollo', g: 100, w: Math.round(lerp(e, 1, 2, 3)), d: ['omnivore'] },
-  { t: 'carne rossa', g: 100, w: 1, d: ['omnivore'] },
+  { t: 'carne rossa', kn: 'fettine di manzo', g: 100, w: 1, d: ['omnivore'] },
   { t: 'formaggio fresco', g: 100, w: 3, d: NOVEG },
   { t: 'tofu', g: 100, w: diet === 'vegan' ? 0 : 2, d: ALL },
 ];
-const FRUIT = { t: 'frutta fresca', g: 150, flex: 1, d: ALL };
+const FRUIT = { t: 'frutta fresca', kn: 'mele', g: 150, flex: 1, d: ALL };
 const NUTS = { t: 'frutta secca', g: 30, w: 2, flex: 1, d: ALL };
-const VEG = { t: 'verdura', g: 200, d: ALL };
+const VEG = { t: 'verdura', kn: 'zucchine', g: 200, d: ALL };
 
 // Toglie le opzioni non adatte (dieta, intolleranze) usando le stesse regole delle ricette
 const usable = (opts, diet, intol) => opts.filter((o) => o.d.includes(diet)
@@ -55,7 +55,7 @@ const usable = (opts, diet, intol) => opts.filter((o) => o.d.includes(diet)
 // Con più energia da coprire crescono i carboidrati e, meno, proteine, frutta, yogurt e frutta secca;
 // oltre una certa soglia si aggiungono anche olio nei pasti principali, frutta secca negli spuntini e frutta a colazione
 const flexOf = (s) => 1 + (s - 1) * 0.6;
-const qtyOf = (o, s, pf) => (o.carb ? o.g * Math.min(s, 2.4) : o.prot ? o.g * pf * (1 + Math.max(0, s - 1) * 0.25) : o.oil ? clamp(10 + (s - 1.4) * 25, 10, 30) : o.flex ? o.g * flexOf(s) : o.g);
+const qtyOf = (o, s, pf) => (o.carb ? o.g * clamp(s, 0.5, 2.4) : o.prot ? o.g * pf * Math.max(0.75, 1 + (s - 1) * 0.25) : o.oil ? clamp(10 + (s - 1) * 25, 10, 30) : o.flex ? o.g * flexOf(s) : o.g);
 const line = (o, s, pf = 1) => {
   const unit = o.u || 'g';
   const q = o.carb && o.step === 10 ? r10(qtyOf(o, s, pf)) : o.prot ? r10(qtyOf(o, s, pf)) : r5(qtyOf(o, s, pf));
@@ -75,7 +75,7 @@ const slotGroups = (slot, ctx, sc) => {
   const { diet, intol, e, fruitSlots } = ctx;
   const U = (o) => usable(o, diet, intol);
   const prot = U(protein(e, diet, ctx.legumes).map((o) => ({ ...o, prot: 1 })));
-  const high = sc > 1.4; // fabbisogni alti: più condimento, spuntini più ricchi, frutta anche a colazione
+  const high = e >= 2300; // fabbisogni alti: più condimento, spuntini più ricchi, frutta anche a colazione
   const withFruit = fruitSlots.has(slot) ? [U([FRUIT])] : [];
   const oil = high ? [U([OIL])] : [];
   switch (slot) {
@@ -96,13 +96,13 @@ export const buildAutoPlan = ({ diet = 'omnivore', intolerances = [], kcal, prot
   const fruitSlots = new Set(order.slice(0, nFruit));
   const ctx = { diet, intol: intolerances, e, fruitSlots, legumes: tweaks.legumes || 0 };
   const pf = clamp(pg / 65, 0.8, 1.6);
-  const baseKcal = 340; // olio dei condimenti (3 porzioni da 10 ml al giorno) e verdure, che stanno nelle ricette
+  const baseKcal = 240; // olio dei condimenti (3 porzioni da 10 ml al giorno), che sta nelle ricette
   const groupsAt = (sc) => Object.fromEntries(eaten.map((sl) => [sl, slotGroups(sl, ctx, sc).filter((g) => g.length)]));
   // energia stimata di una giornata: per ogni gruppo la media delle alternative
   const estimate = (sc, gs = groupsAt(sc)) => baseKcal + eaten.reduce((tot, slot) => tot + gs[slot].reduce((a, g) => a + g.reduce((x, o) => x + kcalOf(o, sc, pf), 0) / g.length, 0), 0);
-  // la prima scala che arriva al fabbisogno (le soglie dei gruppi in più rendono la curva a gradini: si cerca a passi piccoli)
-  let scale = 3.4;
-  for (let sc = 0.6; sc <= 3.4; sc += 0.02) if (estimate(sc) >= e) { scale = sc; break; }
+  // la scala che porta più vicino al fabbisogno (le soglie dei gruppi in più rendono la curva a gradini: si cerca a passi piccoli)
+  let scale = 1, bestGap = Infinity;
+  for (let sc = 0.3; sc <= 3.4; sc += 0.02) { const gap = Math.abs(estimate(sc) - e); if (gap < bestGap - 1) { bestGap = gap; scale = sc; } }
   const gs = groupsAt(scale);
   const texts = {};
   for (const slot of eaten) {

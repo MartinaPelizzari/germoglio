@@ -1,6 +1,8 @@
 import React from 'react';
 import { Camera, ChevronDown, Plus, Trash2, X } from 'lucide-react';
 import PlanSource from '../components/PlanSource.jsx';
+import RuleEditor from '../components/RuleEditor.jsx';
+import { DAYS } from '../lib/dates.js';
 import { MEMBER_COLORS, MEMBER_EMOJIS, isFreeProfile } from '../hooks/data.jsx';
 import { Confirm, Sheet, Avatar } from '../components/ui.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
@@ -32,6 +34,13 @@ function PlanImportBlock({ member, onChange }) {
 
 export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onRelease, canClaim = true, onDelete, onClose }) {
   const [openSlot, setOpenSlot] = React.useState(null);
+  const [ruleId, setRuleId] = React.useState(null);
+  const myRules = member.rules || [];
+  const addRule = () => {
+    const r = { id: crypto.randomUUID(), label: 'Sempre la stessa colazione', slots: ['Colazione'], days: [0, 1, 2, 3, 4, 5, 6], takeaway: false, batch: 7 };
+    onChange({ ...member, rules: [...myRules, r] });
+    setRuleId(r.id);
+  };
   const [confirm, setConfirm] = React.useState(false);
   const [photoBusy, setPhotoBusy] = React.useState(false);
   const fileRef = React.useRef(null);
@@ -123,6 +132,22 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
         </div>
 
         <div>
+          <div className="flex items-center justify-between mb-2">
+            <h4 className="font-display font-bold text-lg text-slate-800">Regole personali</h4>
+            <button onClick={addRule} className="px-3 py-2 bg-white text-brand-700 rounded-xl font-bold text-sm shadow-soft active:scale-95">+ Regola</button>
+          </div>
+          <p className="text-xs text-slate-400 mb-3">Valgono solo per te. Per esempio: la stessa colazione per tutta la settimana, o il pranzo sempre d'asporto.</p>
+          {myRules.length === 0 && <p className="text-xs text-slate-400 bg-slate-50 rounded-2xl p-4">Nessuna regola personale.</p>}
+          <div className="space-y-2">
+            {myRules.map((r) => (
+              <button key={r.id} onClick={() => setRuleId(r.id)} className="w-full bg-slate-50 p-3 rounded-2xl flex items-center gap-3 text-left active:scale-[0.99]">
+                <div className="flex-1 min-w-0"><p className="font-bold text-slate-800 truncate">{r.label || 'Regola'}</p><p className="text-xs text-slate-400 truncate">{r.slots.join(', ')} · {r.days.map((d) => DAYS[d]).join(' ')}{r.takeaway ? ' · asporto' : ''}{(r.batch || 1) > 1 ? ` · stesso piatto ${r.batch} giorni` : ''}</p></div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
           <h4 className="font-display font-bold text-lg text-slate-800 mb-3">Piano alimentare</h4>
           <div className="mb-5"><PlanSource member={member} onChange={onChange} /></div>
           {member.planSource && <label className="flex items-start gap-3 mb-5 text-sm text-slate-700"><input type="checkbox" className="w-5 h-5 mt-0.5 accent-emerald-500" checked={!member.checkinOff} onChange={(e) => onChange({ ...member, checkinOff: !e.target.checked })} /> Una domanda a settimana su come mi sento (la tolgo quando voglio)</label>}
@@ -162,6 +187,7 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
 
         {onDelete && free && <button onClick={() => setConfirm(true)} className="w-full py-3 text-red-500 font-bold bg-red-50 rounded-2xl flex items-center justify-center gap-2 active:scale-95"><Trash2 className="w-4 h-4" /> Elimina questa persona</button>}
       </div>
+      {myRules.find((r) => r.id === ruleId) && <RuleEditor personal rule={myRules.find((r) => r.id === ruleId)} onClose={() => setRuleId(null)} onChange={(r) => onChange({ ...member, rules: myRules.map((x) => (x.id === r.id ? r : x)) })} onDelete={() => { onChange({ ...member, rules: myRules.filter((x) => x.id !== ruleId) }); setRuleId(null); }} />}
       {confirm && <Confirm title={`Eliminare ${member.name || 'questa persona'}?`} msg="I menù già pianificati non la contano più." confirmLabel="Elimina" onCancel={() => setConfirm(false)} onConfirm={() => { setConfirm(false); onDelete(); }} />}
     </Sheet>
   );

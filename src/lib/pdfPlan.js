@@ -5,7 +5,6 @@
 //  - testo corrente ("90 g di pasta  oppure  90 g di riso ...", "ed in aggiunta:");
 //  - tabelle "alimento base | sostituto": ogni riga è un gruppo di alternative. Le righe si trovano dai bordi disegnati
 //    nella pagina (non dal solo testo), perché il testo da solo non dice dove finisce una riga e inizia la successiva.
-import { parseSlotPlan } from './dietPlan.js';
 
 const mul = (a, b) => [a[0] * b[0] + a[2] * b[1], a[1] * b[0] + a[3] * b[1], a[0] * b[2] + a[2] * b[3], a[1] * b[2] + a[3] * b[3], a[0] * b[4] + a[2] * b[5] + a[4], a[1] * b[4] + a[3] * b[5] + a[5]];
 

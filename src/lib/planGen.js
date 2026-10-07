@@ -4,7 +4,7 @@ import { fits, mealConstraints, menuClusters, memberLevel, recipeLevel, rulesFor
 import { recipeFoods } from './goals.js';
 import { recencyPenalty } from './usage.js';
 import { describeOption, foodDiet, planMatches, planViolations } from './dietPlan.js';
-import { consumedKeys, dayInstances, instanceKey, isDayBalanced, movable } from './day.js';
+import { consumedKeys, dayInstancesFor, halveGroup, instanceKey, isBigFruit, isDayBalanced, movable } from './day.js';
 import { recipeAllergens } from './allergens.js';
 import { containsAvoided } from './diet.js';
 import { resolveItem } from './items.js';
@@ -53,12 +53,12 @@ export const planFor = (e, slot, state) => {
   const si = SLOTS.indexOf(slot);
   const mustI = [];
   const later = [];
-  for (const inst of dayInstances(e)) {
+  for (const inst of dayInstancesFor(e, consumed)) {
     if (consumed.has(inst.key)) continue;
     const ii = SLOTS.indexOf(inst.slot);
     if (inst.slot === slot) mustI.push(inst);
     else if (ii < si && movable(inst.group) && canBorrow(categoryOf(inst.group), slot)) mustI.push(inst); // rimasto indietro: va mangiato qui
-    else if (ii > si && movable(inst.group) && canBorrow(categoryOf(inst.group), slot)) later.push(inst);
+    else if (ii > si && movable(inst.group) && canBorrow(categoryOf(inst.group), slot)) later.push(isBigFruit(inst.group) && !inst.part ? { ...inst, key: `${inst.key}~h1`, group: halveGroup(inst.group), part: 'h1' } : inst);
   }
   const ownI = mustI.filter((i) => i.slot === slot);
   const all = [...ownI, ...mustI.filter((i) => i.slot !== slot), ...later];
@@ -107,16 +107,26 @@ const optionFitsPerson = (opt, person) => {
 // Alimenti del piano che hanno senso in quel pasto: a colazione latte, yogurt, cereali, pane, frutta (non riso, pasta o patate),
 // a pranzo e cena il carboidrato è un cereale o una pasta prima che patate o gnocchi da soli
 const BREAKFAST_FOODS = /fiocch|avena|muesli|granola|corn|cereali|pane|fett|biscott|croissant|yogurt|skyr|kefir|latte|bevanda|ricotta|uov|hummus|frutt|soffiat|salmone|affett|frumento|marmellat|miele|cacao|cioccolat|mirtill|kiwi/;
-const sensible = (opts, slot) => {
+// Abbinamenti a colazione: hummus, ricotta, uova, salmone e affettati vanno con pane o fette, mai con cereali, granola o muesli;
+// latte e yogurt vanno con cereali o pane. `taken` sono gli alimenti già scelti per la stessa persona in quel pasto.
+const SPREAD = /hummus|ricotta|salmone|affett|prosciutto|speck|bresaola|uov/;
+const CEREAL = /fiocch|avena|muesli|granola|corn|cereali|soffiat|riso|frumento|croissant|biscott(?!.*integral)/;
+const pairOk = (a, b) => !((SPREAD.test(a) && CEREAL.test(b)) || (SPREAD.test(b) && CEREAL.test(a)));
+const sensible = (opts, slot, taken = [], savory = false) => {
   const kind = slotKind(slot);
   const names = (o) => norm(o.name);
-  const keep = kind === 'colazione' ? opts.filter((o) => BREAKFAST_FOODS.test(names(o))) : kind === 'principale' ? opts.filter((o) => !/patat|gnocchi/.test(names(o))) : opts;
-  return keep.length ? keep : opts;
+  let keep = kind === 'colazione' ? opts.filter((o) => BREAKFAST_FOODS.test(names(o))) : kind === 'principale' ? opts.filter((o) => !/patat|gnocchi/.test(names(o))) : opts;
+  if (!keep.length) keep = opts;
+  if (kind === 'colazione') {
+    const paired = keep.filter((o) => taken.every((t) => pairOk(t, names(o))) && !(savory && CEREAL.test(names(o))));
+    if (paired.length) keep = paired;
+  }
+  return keep;
 };
 
-const pickOption = (pair, slot, state) => {
+const pickOption = (pair, slot, state, taken = [], savory = false) => {
   const opts = pair.group.options.filter((o) => optionFitsPerson(o, pair.eater) && optionAvailable(state, pair.eater.id, slot, o));
-  const pool = sensible(opts.length ? opts : pair.group.options, slot);
+  const pool = sensible(opts.length ? opts : pair.group.options, slot, taken, savory);
   return [...pool].sort((a, b) => (state.used.get(`food:${a.name}`) || 0) - (state.used.get(`food:${b.name}`) || 0) || Math.random() - 0.5)[0];
 };
 
@@ -127,13 +137,14 @@ const entry = (recipe, eaters) => ({ instanceId: crypto.randomUUID(), recipeId: 
 export const usesFor = (recipe, eaters, slot, state, claimed = new Map()) => {
   const uses = {};
   for (const e of eaters) {
-    if (!isDayBalanced(e)) continue;
+    if (!mealOf(e, slot).plan.length && !isDayBalanced(e)) continue;
     const pf = planFor(e, slot, state);
     const taken = claimed.get(e.id) || new Set();
     const keys = planMatches(recipe, pf.groups).map((m, i) => (m && (i < pf.ownCount || strongMatch(recipe, m)) && !taken.has(pf.keys[i]) ? pf.keys[i] : null)).filter(Boolean);
     keys.forEach((k) => taken.add(k));
     claimed.set(e.id, taken);
-    if (keys.length) uses[e.id] = keys;
+    // anche senza gruppi nuovi: così le quantità del piano non si applicano due volte (due ricette con frutta = 250 g in tutto, non 500)
+    uses[e.id] = keys;
   }
   return Object.keys(uses).length ? uses : undefined;
 };
@@ -203,6 +214,10 @@ const supplies = (recipe, cat) => (massOf(recipe)[cat] || 0) >= (SUBSTANTIAL[cat
 // Un pasto principale ha una sola fonte di proteine e una sola di carboidrati: niente "uova e anche pollo", "pasta e anche patate"
 const compatible = (recipe, chosen, main) => !main || !['protein', 'carb'].some((c) => supplies(recipe, c) && chosen.some((x) => supplies(x, c)));
 
+// A colazione, anche se il piano lo permette, un piatto da spuntino deve sembrare una colazione (non crudité o insalate)
+const BREAKFAST_LIKE = /hummus|yogurt|ricotta|uov|pane|toast|fett|porridge|overnight|muesli|granola|latte|pancake|chia|bircher|skyr|kefir|avena|frutt/i;
+const NOT_BREAKFAST = /verdur|crudit|insalat|cetriol|carot|sedano|olive|pomodor/i;
+
 const baseScore = (recipe, eaters, state, preferLevel, slot) =>
   - (state.used.get(recipe.id) || 0) * 12
   - recencyPenalty(state.recency.get(recipe.id))
@@ -227,7 +242,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
   // Il piano scritto di chi mangia ha l'ultima parola: una ricetta che ne copre un gruppo (per esempio l'hummus a colazione)
   // va bene anche se di solito non si mangia a quel pasto. Vale per colazione e spuntini, non per i piatti da pranzo e cena.
   const light = slotKind(slot) !== 'principale';
-  const coversPlanGroup = (r) => light && ['colazione', 'spuntino'].includes(recipeKind(r)) && eaters.some((e) => {
+  const coversPlanGroup = (r) => light && ['colazione', 'spuntino'].includes(recipeKind(r)) && (slotKind(slot) !== 'colazione' || (BREAKFAST_LIKE.test(r.title) && !NOT_BREAKFAST.test(r.title))) && eaters.some((e) => {
     const pf = planFor(e, slot, state);
     return planMatches(r, pf.groups).some((m, gi) => m && gi < pf.ownCount && strongMatch(r, m));
   });
@@ -295,13 +310,22 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
       if (shared.length) common.set(key, shared.sort((a, b) => (state.used.get(`food:${a}`) || 0) - (state.used.get(`food:${b}`) || 0) || Math.random() - 0.5)[0]);
     }
     const seenNth = new Map();
-    for (const p of looseP) {
+    const pickedBy = new Map();
+    const savoryChosen = chosen.some((r) => isSavory(r));
+    for (const p of [...looseP].sort((a, b) => a.gi - b.gi)) {
       const cat = categoryOf(p.group);
       const k = `${p.eater.id}|${cat}`;
       const nth = seenNth.get(k) || 0;
       seenNth.set(k, nth + 1);
       const wanted = common.get(`${cat}#${nth}`);
-      const opt = (wanted && p.group.options.find((o) => norm(o.name) === wanted)) || pickOption(p, slot, state);
+      const taken = pickedBy.get(p.eater.id) || [];
+      let opt = (wanted && p.group.options.find((o) => norm(o.name) === wanted)) || pickOption(p, slot, state, taken, savoryChosen);
+      pickedBy.set(p.eater.id, [...taken, norm(opt.name)]);
+      // "frutta secca" nel piano vuol dire un solo tipo (noci, mandorle...), nella quantità indicata
+      if (/^frutta secca$/i.test(opt.name.trim())) {
+        const nuts = ['noci', 'mandorle', 'nocciole'].filter((n) => optionFitsPerson({ ...opt, name: n }, p.eater));
+        if (nuts.length) opt = { ...opt, name: nuts[Math.floor(Math.random() * nuts.length)] };
+      }
       const key = opt.name.toLowerCase();
       if (!foods.has(key)) foods.set(key, { food: { name: opt.name, qty: opt.qty, unit: opt.unit, group: opt.group }, eaters: new Set(), uses: {} });
       foods.get(key).eaters.add(p.eater.id);
@@ -364,9 +388,9 @@ export const generateWeek = (recipes, household, ctx = {}) => {
       const prevData = ctx.existing?.[d]?.[slot];
       const people = slotPeople(household, slot, prevData);
       if (!people.length) continue;
-      const batch = Math.max(1, ...rulesFor(household, d, slot).map((r) => r.batch || 1));
       const items = [];
       for (const cluster of menuClusters(household, d, slot, people, prevData)) {
+        const batch = Math.max(1, ...rulesFor(household, d, slot, cluster.eaters).map((r) => r.batch || 1));
         const c = mealConstraints(household, d, slot, cluster.eaters);
         const key = `${slot}:${cluster.eaters.map((e) => e.id).sort().join(',')}`;
         const prev = carry[key];

@@ -13,20 +13,47 @@ const PIECE = [
 ];
 const SPOON_ML = { cucchiai: 12, cucchiaini: 4 };
 
+// Equivalenze sicure fra nomi di ingredienti (stesso prodotto scritto in modo diverso)
+const ALIAS = {
+  'bevanda d avena': 'bevanda di avena', 'latte d avena': 'bevanda di avena', 'latte di avena': 'bevanda di avena',
+  'latte di mandorla': 'bevanda di mandorla', 'bevanda di soia': 'latte di soia', 'sciroppo d agave': 'sciroppo d agave',
+  'burro d arachidi': 'burro di arachidi', 'cacao amaro': 'cacao amaro in polvere', 'menta': 'menta fresca',
+  'acqua frizzante': 'acqua', 'olive nere denocciolate': 'olive nere', 'pomodori ciliegini': 'pomodorini', 'pomodori ramati': 'pomodori',
+  'pomodori datterini': 'pomodorini', 'peperone verde': 'peperoni', 'peperone rosso': 'peperoni', 'peperone giallo': 'peperoni',
+  'cavolo nero': 'cavolo nero', 'pistacchi': 'pistacchi sgusciati', 'gamberi': 'gamberi sgusciati', 'orata intera': 'orata intera pulita',
+  'salsiccia': 'salsiccia fresca', 'pane toscano': 'pane raffermo', 'pane da toast': 'pane in cassetta', 'pane per tramezzini': 'pane in cassetta',
+  'spaghetti integrali': 'spaghetti', 'farina di mais per polenta': 'farina di mais', 'cocco disidratato': 'cocco rapè',
+  'mirtilli essiccati': 'mirtilli secchi', 'lievito per dolci senza glutine': 'lievito per dolci', 'riso per sushi': 'riso per insalate',
+  'pane ai cereali in cassetta': 'pane integrale in cassetta', 'pane integrale multicereali': 'pane integrale', 'pane pita integrale': 'pane integrale',
+};
+const words = (n) => n.split(' ').filter(Boolean);
+// parole che cambiano il prodotto (secco, cotto, soffiato...): se l'ingrediente le ha e la voce di tabella no, non è la stessa cosa
+const STATE = /^(secch|secc|essicc|cott|crud|soffi|surgel|congel|affumic|sott|disidrat|lessat)/;
+
 export const lookup = (name) => {
   const n = norm(name);
   if (byName.has(n)) return byName.get(n);
-  // voce più vicina: tutte le parole del nome della tabella contenute nell'ingrediente (o viceversa)
-  const words = new Set(n.split(' '));
+  const alias = ALIAS[n];
+  if (alias && byName.has(norm(alias))) return byName.get(norm(alias));
+  // Voce più vicina: PRIMA tutte le parole della voce di tabella contenute nell'ingrediente (la più specifica vince),
+  // poi tutte le parole dell'ingrediente contenute nella voce di tabella (se la voce non è molto più lunga).
+  // Mai corrispondenze per una sola parola in comune ("peperone rosso" non è "vino rosso", "branzino intero" non è "latte intero").
+  const iw = new Set(words(n));
   let best = null;
   for (const [k, v] of byName) {
-    const kw = k.split(' ');
-    const common = kw.filter((w) => words.has(w)).length;
-    if (!common) continue;
-    const score = common / Math.max(kw.length, words.size);
-    if (!best || score > best.score) best = { score, v };
+    const kw = words(k);
+    if (kw.length && kw.every((w) => iw.has(w)) && ![...iw].some((w) => !kw.includes(w) && STATE.test(w))) {
+      const score = kw.length / iw.size;
+      if (score >= 0.5 && (!best || kw.length > best.len || (kw.length === best.len && score > best.score))) best = { v, len: kw.length, score };
+    }
   }
-  return best && best.score >= 0.5 ? best.v : null;
+  if (best) return best.v;
+  let rev = null;
+  for (const [k, v] of byName) {
+    const kw = words(k);
+    if (iw.size && [...iw].every((w) => kw.includes(w)) && iw.size / kw.length >= 0.6 && (!rev || kw.length < rev.len)) rev = { v, len: kw.length };
+  }
+  return rev ? rev.v : null;
 };
 
 // Peso di un pezzo, se lo conosciamo (altrimenti null)

@@ -12,7 +12,7 @@ import { guessGroup } from './groups.js';
 import { FOOD_TYPES } from './foodTypes.js';
 
 const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
-const STOP = new Set(['di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'basmati', 'volonta']);
+const STOP = new Set(['vaccino', 'vaccina', 'parzialmente', 'scremato', 'scremata', 'di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'basmati', 'volonta']);
 const stem = (t) => (t.length > 4 ? t.slice(0, -1) : t);
 const tokens = (s) => norm(s).split(' ').filter((t) => t && !STOP.has(t)).map(stem);
 
@@ -237,6 +237,8 @@ const foodWords = (id) => FOOD_TYPES.find((f) => f.id === id)?.words || [];
 export const matchScore = (opt, ing) => {
   const name = (ing.name || '').toLowerCase();
   if ((opt.avoid || []).some((w) => norm(name).includes(w))) return 0;
+  // "latte vaccino" non è il latte di soia, di mandorla o di avena
+  if (/vaccin|parzialmente/.test(norm(opt.name)) && /soia|mandorl|avena|cocco|riso|vegetal/.test(norm(name))) return 0;
   const phrase = PHRASES[norm(opt.name).split(' ').slice(0, 2).join(' ')];
   if (phrase) {
     if (phrase.group) {
@@ -267,7 +269,18 @@ export const optionMatches = (opt, ing) => matchScore(opt, ing) > 0;
 const compatUnit = (a, b) => a === b || (['g', 'ml'].includes(a) && ['g', 'ml'].includes(b));
 
 // Per ogni gruppo del piano: l'opzione che la ricetta rispetta e gli ingredienti che la soddisfano
-export const planMatches = (recipe, groups) => {
+// Gli stessi calcoli si ripetono migliaia di volte nella generazione (stesse ricette, stessi piani): si ricordano per coppia ricetta-piano
+const memo = (fn) => {
+  const cache = new WeakMap();
+  return (recipe, groups) => {
+    if (!groups || typeof groups !== 'object') return fn(recipe, groups);
+    let perRecipe = cache.get(groups);
+    if (!perRecipe) { perRecipe = new WeakMap(); cache.set(groups, perRecipe); }
+    if (!perRecipe.has(recipe)) perRecipe.set(recipe, fn(recipe, groups));
+    return perRecipe.get(recipe);
+  };
+};
+export const planMatches = memo((recipe, groups) => {
   const used = new Set();
   return (groups || []).map((g) => {
     let best = null;
@@ -285,13 +298,13 @@ export const planMatches = (recipe, groups) => {
     best.idx.forEach((k) => used.add(k));
     return { option: best.option, idx: best.idx };
   });
-};
+});
 
 // Ingredienti sostanziosi della ricetta che il piano di quel pasto non prevede (es. pane in uno spuntino di sola frutta).
 // Contano carboidrati, proteine, latticini, frutta e grassi in quantità importanti; verdure, spezie e condimenti no.
-const SUBSTANTIAL = { carb: 20, protein: 20, dairy: 20, fruit: 20, fat: 8, other: 8 };
+const SUBSTANTIAL = { carb: 20, protein: 20, dairy: 20, fruit: 10, fat: 5, other: 8 };
 const SWEETS = /cioccolat|zucchero|miele|marmellat|confettur|sciroppo|cacao|nutella/i;
-export const planViolationItems = (recipe, groups) => {
+export const planViolationItems = memo((recipe, groups) => {
   if (!groups?.length) return [];
   const out = [];
   for (const ing of recipe.ingredients || []) {
@@ -302,7 +315,7 @@ export const planViolationItems = (recipe, groups) => {
     if (!groups.some((g) => g.options.some((o) => optionMatches(o, ing)))) out.push({ ing, index: (recipe.ingredients || []).indexOf(ing) });
   }
   return out;
-};
+});
 export const planViolations = (recipe, groups) => planViolationItems(recipe, groups).map((v) => v.ing.name);
 
 export const coveredGroupIndexes = (recipe, groups) => planMatches(recipe, groups).map((m, gi) => (m ? gi : -1)).filter((gi) => gi >= 0);

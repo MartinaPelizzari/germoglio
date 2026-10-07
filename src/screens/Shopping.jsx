@@ -14,7 +14,7 @@ import { formatQty, ingredientKey, normalizeIngredient, sumIngredients } from '.
 const DAY_LABELS = ['L', 'M', 'M', 'G', 'V', 'S', 'D'];
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
-export default function Shopping({ weekDate, setWeekDate, days, setDays, viewMode }) {
+export default function Shopping({ weekDate, setWeekDate, days, setDays }) {
   const { hid, household, me, recipeMap, pantry, savePantryItem } = useData();
   const personal = false; // la spesa è sempre per tutto il nucleo, anche per i pasti individuali di ognuno
   const weekId = getWeekId(weekDate);

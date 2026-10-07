@@ -32,16 +32,16 @@ const getWorker = () => {
   } catch { worker = false; }
   return worker;
 };
-const generate = (recipes, household, favorites, recency) => {
+const generate = (recipes, household, favorites, recency, existing) => {
   const w = getWorker();
-  if (!w) return Promise.resolve(generateWeek(recipes, household, { favorites, recency }));
+  if (!w) return Promise.resolve(generateWeek(recipes, household, { favorites, recency, existing }));
   return new Promise((resolve, reject) => {
     const id = ++seq;
     pending.set(id, { resolve, reject });
     const send = recipes !== sentRecipes ? recipes : undefined; // le ricette si inviano solo quando cambiano
     sentRecipes = recipes;
-    w.postMessage({ id, recipes: send, household, favorites: [...favorites], recency: [...recency] });
-  }).catch(() => generateWeek(recipes, household, { favorites, recency }));
+    w.postMessage({ id, recipes: send, household, favorites: [...favorites], recency: [...recency], existing });
+  }).catch(() => generateWeek(recipes, household, { favorites, recency, existing }));
 };
 
 // Una settimana alla volta, a intervalli, così l'app resta sempre reattiva; ogni settimana si tenta una sola volta per sessione
@@ -76,4 +76,15 @@ export function useAutoWeeks() {
     }, tick === 0 ? 1200 : 2500); // si parte dopo che l'app è comparsa e si va piano: la prima interazione ha la precedenza
     return () => clearTimeout(timer);
   }, [synced, me?.id, recipes.length, sig, tick, plans.length]);
+}
+
+// "Rigenera settimana": rifà il menu di una settimana per tutte le persone, in base a tutte le diete (assenti e ospiti restano).
+// Restituisce una funzione asincrona: l'attesa può durare qualche secondo, quindi chi la usa mostra un'animazione.
+export function useRegenerateWeek() {
+  const { household, recipes, favorites, writeWeek } = useData();
+  const { plans } = usePlans();
+  return async (weekId, existing) => {
+    const days = await generate(recipes, household, favorites, buildRecency(plans.filter((p) => p.id !== weekId), weekId), existing);
+    await writeWeek(weekId, days, householdSignature(household));
+  };
 }

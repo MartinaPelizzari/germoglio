@@ -72,7 +72,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Per la dieta equilibrata l'app chiede sesso, età, altezza, peso, lavoro, allenamenti e obiettivo, poi calcola l'energia (`src/lib/needs.js`: metabolismo basale Schofield come nelle tabelle LARN V, livello di attività, allenamenti con i MET, deficit prudente o aumento graduale) e costruisce un piano pasto per pasto (`src/lib/autoPlan.js`) con porzioni e frequenze CREA 2018 interpolate. La quantità di pasta, riso, pane e altro cresce o cala per far tornare l'energia stimata con quella calcolata.
 - Il piano generato si controlla e si modifica prima di salvare; la settimana si compila da sola alla prima apertura.
 - Cautele: nessun piano automatico per minorenni, gravidanza e allattamento, patologie o terapie, indice di massa corporea sotto 18,5; con storia di disturbi alimentari si usa il mantenimento e non si mostrano calorie; niente diete dimagranti dai 75 anni; soglie minime di sicurezza.
-- Ricerca e fonti: `docs/fabbisogni.md` e `docs/porzioni.md`; valori nutrizionali per 100 g in `src/data/nutrition/` (fonte voce per voce, copertura 98% degli ingredienti delle ricette: `node scripts/check-nutrition.mjs`).
+- Ricerca e fonti: `docs/fabbisogni.md` e `docs/porzioni.md`; valori nutrizionali per 100 g in `src/data/nutrition/` (fonte voce per voce, copertura 100% degli ingredienti delle ricette: `node scripts/check-nutrition.mjs`).
 - Limiti dichiarati: le stime vanno validate da un dietista prima di un uso più ampio; le mappature attività-PAL e le soglie di deficit sono scelte di progetto indicate come tali nel documento.
 - Prova: `node scripts/selftest-needs.mjs`.
 
@@ -120,3 +120,32 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Le calorie del piano creato dall'app arrivano al fabbisogno anche se alto (fino a 4500 kcal): oltre una certa soglia si aggiungono olio nei pasti principali, frutta secca negli spuntini e frutta a colazione. Nelle prove la stima del piano resta entro il 5% dell'obiettivo.
 - Con indice di massa corporea da 30 in su il metabolismo si calcola con Mifflin-St Jeor invece di Schofield, che sovrastima nelle persone obese.
 - Gli "Obiettivi della settimana" stanno in cima al Planner e contano la settimana da lunedì a domenica.
+
+## Colazioni, regole personali, rigenera, spesa
+
+- Colazione: hummus, ricotta, uova e salmone si abbinano solo a pane o fette; latte e yogurt a cereali, granola, muesli o pane; "frutta secca" nel piano diventa un solo tipo (noci, mandorle o nocciole) nella quantità indicata. Le soglie degli ingredienti fuori piano sono più severe (5 g di grassi, 10 g di frutta): le quantità del piano non si superano.
+- Due piatti dello stesso pasto non applicano due volte la stessa quantità del piano (la frutta da 250 g non diventa 500 g).
+- La frutta da 150 g o più si può dividere fra due pasti (metà a colazione, metà allo spuntino) nella regolazione sulla giornata.
+- Regole personali: ogni persona può avere le sue regole (per esempio "sempre la stessa colazione", fino a tutta la settimana) dal profilo; valgono solo per i suoi pasti.
+- La vista "Solo io" / "Famiglia" non c'è più: i pasti individuali mostrano comunque solo i propri; la spesa è per tutti.
+- "Rigenera la settimana" nel Planner rifà il menu di tutta la famiglia (con conferma e animazione di attesa); assenti e ospiti restano.
+- Spesa: un alimento del piano senza quantità ("Cracker integrali", "Stick di carote con hummus") usa una porzione standard (`src/lib/portions.js`), non più 1 g.
+- Altre ricette: 22 colazioni cercate sul web per i piani, 12 con fonte (`colazioni-web.json`).
+
+## Ricettario ampliato
+
+- 543 ricette: 185 colazioni, 135 pranzi, 125 cene, 66 contorni, 32 spuntini. Le ultime 300 circa sono state cercate sul web e riscritte con parole nostre; la maggior parte indica la pagina di ispirazione (`node scripts/check-sources.mjs` controlla che gli indirizzi rispondano; alcuni siti rispondono 403 ai controlli automatici e restano non verificabili).
+- Le colazioni nuove sono generali: non tutte rispettano alla lettera un singolo piano, ma l'app le propone solo a chi il piano lo permette (per esempio Lucia, non Martina).
+- La generazione delle settimane è molto più veloce grazie al calcolo in memoria dei confronti fra ricette e piani (`memo` in `src/lib/dietPlan.js`).
+- Le crudité e le insalate non si propongono a colazione; le colazioni salate solo se il piano le prevede.
+
+## Scambi fra pasti nel piano (default)
+
+- Con un piano scritto, la regolazione sulla giornata è il default (si può scegliere "Per ogni pasto" nel profilo; la dieta creata dall'app resta pasto per pasto). Una colazione con frutta (porridge, yogurt con mela...) prende la frutta dallo spuntino: i 250 g si dividono, per esempio 125 g a colazione e 125 g allo spuntino.
+- "Latte vaccino" nel piano vale per il latte e il latte parzialmente scremato, non per quelli di soia, mandorla o avena.
+
+## Valori nutrizionali: copertura 100%
+
+- `src/data/nutrition/` ha 453 voci (CREA, USDA, etichette di prodotti) che coprono tutti gli ingredienti delle 543 ricette: `node scripts/check-nutrition.mjs` lo verifica e controlla anche che i nomi non vengano abbinati a cibi sbagliati.
+- Il riconoscimento dei nomi è rigoroso: una sola parola in comune non basta ("peperone rosso" non è "vino rosso"), e secco, cotto o soffiato non si confondono col prodotto base. Le equivalenze sicure stanno in `ALIAS` (`src/lib/nutrition.js`).
+- Dove una fonte non riporta un valore c'è `null` e dove il valore è un'equivalenza (per esempio cavolo nero = kale USDA) è scritto in `note`. Le voci da etichetta commerciale sono approssimazioni.

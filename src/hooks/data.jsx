@@ -147,11 +147,13 @@ export function DataProvider({ user, children }) {
         setDoc(ref('profiles', id), stripId(newProfile(id, name, 'omnivore', profiles?.length || 0, { managed: true }))).catch(log);
         return id;
       },
-      // "Questo profilo sono io": da quel momento lo modifica solo il suo proprietario
+      // "Questo profilo sono io": da quel momento lo modifica solo il suo proprietario.
+      // Se si aveva già reclamato un'altra persona per errore, quella torna libera (con tutti i suoi dati) e il nuovo profilo diventa il tuo
       claimProfile: async (id) => {
         const target = profiles.find((p) => p.id === id);
-        // un account è una sola persona: se ne ha già reclamata una, non può reclamarne un'altra
-        if (!target || !isFreeProfile(target) || profiles.some((p) => p.claimedBy === uid)) return;
+        if (!target || !isFreeProfile(target)) return;
+        const previous = profiles.filter((p) => p.claimedBy === uid && p.id !== id);
+        await Promise.all(previous.map((p) => updateDoc(ref('profiles', p.id), { claimedBy: deleteField() }).catch(log)));
         await setDoc(ref('profiles', id), { ...stripId(target), claimedBy: uid });
         if (profiles.some((p) => p.id === uid)) await deleteDoc(ref('profiles', uid)).catch(log);
       },
@@ -161,6 +163,8 @@ export function DataProvider({ user, children }) {
         if (!target || target.claimedBy !== uid) return;
         await updateDoc(ref('profiles', id), { claimedBy: deleteField() }).catch(log);
       },
+      // Rigenerazione voluta dall'utente: sostituisce la settimana (resta una proposta automatica finché non viene modificata a mano)
+      writeWeek: async (weekId, days, sig) => { await setDoc(ref('plans', weekId), { days, auto: true, sig }).catch(log); },
       // Settimane pianificate in anticipo: si scrivono solo se non esistono o se sono ancora proposte automatiche da aggiornare
       // (una settimana toccata a mano non si sovrascrive mai; due telefoni aperti insieme non si pestano i piedi)
       createWeek: async (weekId, days, sig) => {

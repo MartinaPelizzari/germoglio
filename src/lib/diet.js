@@ -16,8 +16,9 @@ export const dietLabel = (id) => DIETS.find((d) => d.id === id)?.label || 'Onniv
 export const recipeLevel = (r) => LEVEL[r.diet] ?? 3;
 export const memberLevel = (m) => LEVEL[m?.diet] ?? 3;
 
-export const rulesFor = (household, day, slot) =>
-  (household.rules || []).filter((r) => r.slots?.includes(slot) && r.days?.includes(day));
+// Regole condivise del nucleo più quelle personali di chi mangia (ognuno può avere le sue: "sempre la stessa colazione")
+export const rulesFor = (household, day, slot, eaters = []) =>
+  [...(household.rules || []), ...eaters.flatMap((m) => m.rules || [])].filter((r) => r.slots?.includes(slot) && r.days?.includes(day));
 
 export const ruleCap = (rules) => rules.reduce((min, r) => (r.dietCap ? Math.min(min, LEVEL[r.dietCap]) : min), 3);
 
@@ -26,7 +27,7 @@ const splitList = (s = '') => s.split(',').map((x) => x.trim().toLowerCase()).fi
 // Vincoli di un pasto: dieta più restrittiva tra chi mangia (limitata dalle regole condivise), asporto,
 // ingredienti da evitare e intolleranze.
 export const mealConstraints = (household, day, slot, eaters) => {
-  const rules = rulesFor(household, day, slot);
+  const rules = rulesFor(household, day, slot, eaters);
   const cap = ruleCap(rules);
   const maxLevel = eaters.length ? Math.min(...eaters.map((m) => Math.min(memberLevel(m), cap))) : cap;
   return {
@@ -59,7 +60,7 @@ export const menuClusters = (household, day, slot, people, data) => {
   const cap = ruleCap(rulesFor(household, day, slot));
   const by = new Map();
   for (const p of people) {
-    const level = main ? Math.min(memberLevel(p), cap) : 0;
+    const level = main ? Math.min(memberLevel(p), cap, ruleCap(rulesFor(household, day, slot, [p]))) : 0;
     if (!by.has(level)) by.set(level, []);
     by.get(level).push(p);
   }
@@ -79,7 +80,7 @@ export const fits = (recipe, c, { ignoreTakeaway = false } = {}) =>
 
 // Motivi per cui un piatto già nel piano non va bene a qualcuno (per mostrare un avviso)
 export const problemsFor = (recipe, household, day, slot, eaters, item) => {
-  const rules = rulesFor(household, day, slot);
+  const rules = rulesFor(household, day, slot, eaters);
   const cap = ruleCap(rules);
   const out = [];
   for (const m of eaters) {

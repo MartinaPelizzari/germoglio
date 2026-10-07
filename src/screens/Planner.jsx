@@ -1,13 +1,13 @@
 import React from 'react';
-import { AlertTriangle, Briefcase, User, Users, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus } from 'lucide-react';
+import { AlertTriangle, Briefcase, RefreshCw, User, Users, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus } from 'lucide-react';
 import { useData, usePlans, useWeekPlan } from '../hooks/data.jsx';
-import { Avatar, Confirm, RecipeThumb, Sheet } from '../components/ui.jsx';
+import { Avatar, Confirm, Portal, RecipeThumb, Sheet, Spinner } from '../components/ui.jsx';
 import RecipePicker from './RecipePicker.jsx';
 import RecipeDetail from './RecipeDetail.jsx';
 import GuestSheet from './GuestSheet.jsx';
 import AdaptSheet from './AdaptSheet.jsx';
 import { planReport } from '../lib/adapt.js';
-import { HORIZON_WEEKS } from '../hooks/useAutoWeeks.js';
+import { HORIZON_WEEKS, useRegenerateWeek } from '../hooks/useAutoWeeks.js';
 import { DAYS, addWeeks, dayNumber, getWeekId, weekRangeLabel } from '../lib/dates.js';
 import { SLOTS, eatersOf, formatQty, mealOf, mealOfItem, scaleRecipe, slotPeople } from '../lib/scale.js';
 import { consumedKeys, dayInstances, isDayBalanced, movable, remainingInstances } from '../lib/day.js';
@@ -22,12 +22,14 @@ import { timeLabel } from '../lib/format.js';
 const GROUP_EMOJI = Object.fromEntries(GROUPS.map((g) => [g.id, g.emoji]));
 const GROUP_NAME = Object.fromEntries(GROUPS.map((g) => [g.id, g.label.toLowerCase()]));
 
-export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, viewMode, onEdit, onDuplicate, onDelete }) {
+export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, onEdit, onDuplicate, onDelete }) {
   const { hid, household, me, recipes, recipeMap, favorites, saveRecipe } = useData();
   const { plans } = usePlans();
-  const personal = viewMode === 'me' && me;
+  const personal = false; // la vista è sempre quella della famiglia: i pasti individuali mostrano comunque solo i miei
   const weekId = getWeekId(weekDate);
   const { plan, saveSlot } = useWeekPlan(hid, weekId);
+  const regenerate = useRegenerateWeek();
+  const [regen, setRegen] = React.useState(null); // null | 'confirm' | 'busy'
   const [picker, setPicker] = React.useState(null); // { slot, action, index, pair, group }
   const [menu, setMenu] = React.useState(null);
   const [view, setView] = React.useState(null);
@@ -278,6 +280,8 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         <button onClick={() => { setWeekDate(addWeeks(weekDate, 1)); setDayIndex(0); }} aria-label="Settimana successiva" className="p-2 rounded-full active:scale-90"><ChevronRight className="text-slate-400" /></button>
       </div>
 
+      <button onClick={() => setRegen('confirm')} disabled={regen === 'busy'} className="w-full py-3 bg-white rounded-2xl shadow-soft text-brand-700 font-bold text-sm flex items-center justify-center gap-2 active:scale-95 disabled:opacity-60"><RefreshCw className="w-4 h-4" /> Rigenera la settimana</button>
+
       <div className="flex gap-1.5 pb-2" role="tablist">
         {DAYS.map((day, idx) => (
           <button key={day} onClick={() => setDayIndex(idx)} role="tab" aria-selected={dayIndex === idx} className={`flex-1 min-w-0 h-[4.5rem] rounded-2xl flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95 ${dayIndex === idx ? 'bg-brand-500 text-white shadow-glow' : 'bg-white text-slate-400 shadow-sm'}`}>
@@ -319,7 +323,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
 
       <div className="space-y-4">
         {visibleSlots.map((slot) => {
-          const rules = rulesFor(household, dayIndex, slot);
+          const rules = rulesFor(household, dayIndex, slot, me ? [me] : []);
           const missing = items(slot).length ? missingFor(slot) : [];
           const menus = menusOf(slot);
           return (
@@ -400,6 +404,23 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
             </div>
           )}
         </div>
+      )}
+
+      {regen === 'confirm' && (
+        <Confirm title="Rigenerare la settimana?" msg="Preparo un nuovo menu per tutta la famiglia, in base alle diete e ai piani di ognuno. I pasti di questa settimana vengono sostituiti (assenti e ospiti restano). Ci vuole qualche secondo." confirmLabel="Rigenera" onCancel={() => setRegen(null)} onConfirm={async () => {
+          setRegen('busy');
+          try { await regenerate(weekId, plan.days); } catch (e) { console.error(e); setNotice('Non sono riuscita a rigenerare la settimana: riprova.'); }
+          setRegen(null);
+        }} />
+      )}
+      {regen === 'busy' && (
+        <Portal><div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/40 backdrop-blur-sm animate-fade-in" role="status" aria-live="polite">
+          <div className="bg-white rounded-3xl p-6 shadow-2xl flex flex-col items-center gap-3 max-w-xs text-center">
+            <Spinner />
+            <p className="font-display font-bold text-slate-800">Sto preparando la settimana</p>
+            <p className="text-xs text-slate-500">Scelgo i pasti in base alle diete e ai piani di tutti. Ci vuole qualche secondo.</p>
+          </div>
+        </div></Portal>
       )}
 
       {picker && (

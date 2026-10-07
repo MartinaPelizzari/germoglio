@@ -6,6 +6,7 @@ import { pieceGrams } from './nutrition.js';
 //  - plan: il piano alimentare scritto dalla nutrizionista (vedi dietPlan.js). Gli ingredienti della ricetta che
 //    corrispondono a un alimento del piano prendono la quantità indicata; gli altri seguono il moltiplicatore.
 import { applyPlanDoses } from './dietPlan.js';
+import { halveGroup } from './day.js';
 import { SLOTS } from './meals.js';
 
 export { SLOTS };
@@ -24,7 +25,7 @@ export const mealOfItem = (member, slot, item) => {
   const meal = mealOf(member, slot);
   const keys = item?.uses?.[member?.id];
   if (!keys) return meal;
-  const plan = keys.map((k) => { const [s, gi] = k.split('|'); return mealOf(member, s).plan[Number(gi)]; }).filter(Boolean);
+  const plan = keys.map((k) => { const [base, part] = k.split('~'); const [s, gi] = base.split('|'); const g = mealOf(member, s).plan[Number(gi)]; return g && part ? halveGroup(g) : g; }).filter(Boolean);
   return { ...meal, plan };
 };
 

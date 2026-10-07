@@ -1,6 +1,6 @@
 import React from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { BookOpen, Calendar, HeartPulse, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, User, Users } from 'lucide-react';
+import { BookOpen, Calendar, HeartPulse, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, Users } from 'lucide-react';
 import { auth } from './firebase.js';
 import { DataProvider, isFreeProfile, useData } from './hooks/data.jsx';
 import { Confirm, Spinner } from './components/ui.jsx';
@@ -27,14 +27,7 @@ const NavBtn = ({ icon: Icon, label, active, onClick }) => (
 );
 
 // Vista famiglia (tutti) o personale (solo io): si ricorda l'ultima scelta
-const loadView = () => { try { return localStorage.getItem('viewMode') === 'me' ? 'me' : 'family'; } catch { return 'family'; } };
 
-function ViewSwitch({ value, onChange }) {
-  const opt = (id, label, Icon) => (
-    <button onClick={() => onChange(id)} aria-pressed={value === id} className={`flex-1 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${value === id ? 'bg-white shadow text-brand-600' : 'text-slate-500'}`}><Icon className="w-3.5 h-3.5" /> {label}</button>
-  );
-  return <div className="flex bg-slate-100 p-1 rounded-xl mb-4" role="group" aria-label="Vista">{opt('family', 'Famiglia', Users)}{opt('me', 'Solo io', User)}</div>;
-}
 
 export function Main() {
   const { household, me, memberCount, saveProfile, claimProfile, joinHousehold, saveRecipe, deleteRecipe, user } = useData();
@@ -50,7 +43,6 @@ export function Main() {
   const [confirm, setConfirm] = React.useState(null);
   const [settings, setSettings] = React.useState(false);
   const [report, setReport] = React.useState(undefined); // undefined = chiusa, null = scelta del sintomo, stringa = sintomo
-  const [viewMode, setViewMode] = React.useState(loadView);
   const [joined, setJoined] = React.useState(false); // appena entrato in un nucleo con un codice
   const [review, setReview] = React.useState(false); // dopo aver reclamato un profilo: controllo dei dati
   const [saveError, setSaveError] = React.useState('');
@@ -78,7 +70,6 @@ export function Main() {
     return () => setTabBackHandler(null);
   }, []);
   React.useEffect(() => { scrollRef.current?.scrollTo(0, 0); }, [tab]);
-  const changeView = (v) => { setViewMode(v); try { localStorage.setItem('viewMode', v); } catch { /* ignora */ } };
 
   if (household === undefined) return <div className="h-full flex items-center justify-center"><Spinner /></div>;
   if (!me) {
@@ -112,7 +103,6 @@ export function Main() {
     setDraft(emptyRecipe());
     setTab('recipes');
   };
-  const shared = memberCount > 1 || household.members.length > 1;
 
   return (
     <div className="h-full w-full flex flex-col bg-surface-ground text-slate-800 overflow-hidden">
@@ -130,12 +120,11 @@ export function Main() {
         <div className="max-w-md mx-auto min-h-full" key={tab}>
           <React.Suspense fallback={<div className="py-10 flex justify-center"><Spinner /></div>}>
           {tab === 'planner' && <CheckInCard onReport={setReport} />}
-          {tab === 'planner' && shared && <ViewSwitch value={viewMode} onChange={changeView} />}
-          {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} viewMode={shared ? viewMode : 'family'} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
+          {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
           {tab === 'recipes' && <RecipeBook filters={filters} setFilters={setFilters} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
           {tab === 'add' && <RecipeForm data={draft} onChange={setDraft} onClose={closeDraft} onSave={save} />}
           {tab === 'family' && <Family />}
-          {tab === 'shopping' && <Shopping weekDate={weekDate} setWeekDate={setWeekDate} days={shopDays} setDays={setShopDays} viewMode={shared ? viewMode : 'family'} />}
+          {tab === 'shopping' && <Shopping weekDate={weekDate} setWeekDate={setWeekDate} days={shopDays} setDays={setShopDays} />}
           </React.Suspense>
         </div>
       </main>
