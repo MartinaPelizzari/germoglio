@@ -104,9 +104,19 @@ const optionFitsPerson = (opt, person) => {
   return level <= memberLevel(person) && !allergic && !avoided;
 };
 
+// Alimenti del piano che hanno senso in quel pasto: a colazione latte, yogurt, cereali, pane, frutta (non riso, pasta o patate),
+// a pranzo e cena il carboidrato è un cereale o una pasta prima che patate o gnocchi da soli
+const BREAKFAST_FOODS = /fiocch|avena|muesli|granola|corn|cereali|pane|fett|biscott|croissant|yogurt|skyr|kefir|latte|bevanda|ricotta|uov|hummus|frutt|soffiat|salmone|affett|frumento|marmellat|miele|cacao|cioccolat|mirtill|kiwi/;
+const sensible = (opts, slot) => {
+  const kind = slotKind(slot);
+  const names = (o) => norm(o.name);
+  const keep = kind === 'colazione' ? opts.filter((o) => BREAKFAST_FOODS.test(names(o))) : kind === 'principale' ? opts.filter((o) => !/patat|gnocchi/.test(names(o))) : opts;
+  return keep.length ? keep : opts;
+};
+
 const pickOption = (pair, slot, state) => {
   const opts = pair.group.options.filter((o) => optionFitsPerson(o, pair.eater) && optionAvailable(state, pair.eater.id, slot, o));
-  const pool = opts.length ? opts : pair.group.options;
+  const pool = sensible(opts.length ? opts : pair.group.options, slot);
   return [...pool].sort((a, b) => (state.used.get(`food:${a.name}`) || 0) - (state.used.get(`food:${b.name}`) || 0) || Math.random() - 0.5)[0];
 };
 
@@ -241,7 +251,8 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
       for (let n = 0; n < 3; n++) {
         const rem = uncoveredPairs(chosen, eaters, slot, state);
         if (!rem.length) break;
-        const gain = (r) => rem.filter((p) => covers(r, p, slot, state)).length;
+        // un contorno copre solo le verdure del piano: non sostituisce mai il carboidrato o la proteina (niente patate al forno da sole)
+        const gain = (r) => rem.filter((p) => covers(r, p, slot, state) && (recipeKind(r) !== 'contorno' || categoryOf(p.group) === 'veg')).length;
         const pick = best(candidates.filter((r) => !chosen.includes(r) && gain(r) > 0 && compatible(r, chosen, main)), (r) => gain(r) * 10 + optionalGain(r, eaters, slot, state) * 6 - (chosen.length && sameBase(r, chosen) ? 25 : 0) - (slot === 'Colazione' && isSavory(r) ? 30 : 0) + extra(r) + baseScore(r, eaters, state, pref, slot), 0);
         if (!pick) break;
         chosen.push(pick);
@@ -279,7 +290,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
     }
     for (const [key, ps] of byKind) {
       if (ps.length < 2) continue;
-      const lists = ps.map((p) => p.group.options.filter((o) => optionFitsPerson(o, p.eater) && optionAvailable(state, p.eater.id, slot, o)).map((o) => norm(o.name)));
+      const lists = ps.map((p) => sensible(p.group.options.filter((o) => optionFitsPerson(o, p.eater) && optionAvailable(state, p.eater.id, slot, o)), slot).map((o) => norm(o.name)));
       const shared = lists[0].filter((n) => lists.every((l) => l.includes(n)));
       if (shared.length) common.set(key, shared.sort((a, b) => (state.used.get(`food:${a}`) || 0) - (state.used.get(`food:${b}`) || 0) || Math.random() - 0.5)[0]);
     }

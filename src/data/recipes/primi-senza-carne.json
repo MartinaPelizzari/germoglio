@@ -1,0 +1,2275 @@
+[
+  {
+    "id": "pranzo-pasta-zucchine-basilico",
+    "title": "Pasta con zucchine e basilico",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 6,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate la pasta in acqua salata.",
+      "Tagliate le zucchine a rondelle sottili e fatele dorare in padella con l'olio e l'aglio per 8 minuti.",
+      "Scolate la pasta al dente, unitela alle zucchine con un mestolino di acqua di cottura e mescolate bene.",
+      "Completate con basilico spezzettato e qualche goccia di limone."
+    ],
+    "source": null,
+    "notes": "Buona anche tiepida o fredda in contenitore."
+  },
+  {
+    "id": "cena-pasta-broccoli-aglio-peperoncino",
+    "title": "Pasta ai broccoli, aglio e peperoncino",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Broccoli",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividete i broccoli in cimette e cuoceteli per 5 minuti nella stessa acqua della pasta.",
+      "Fate insaporire aglio e peperoncino nell'olio a fuoco dolce.",
+      "Scolate pasta e broccoli insieme e saltateli in padella schiacciando le cimette con la forchetta.",
+      "Aggiungete un po' di acqua di cottura per ottenere una crema leggera."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pasta-pomodoro-fresco-basilico",
+    "title": "Pasta al pomodoro fresco e basilico",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "estate"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta di farro",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodori ramati",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 6,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate i pomodori a dadini e lasciateli insaporire con olio, sale e basilico mentre cuoce la pasta.",
+      "Scaldate l'aglio nell'olio e poi toglietelo.",
+      "Scolate la pasta al dente e mescolatela ai pomodori, a crudo o ripassata un minuto in padella.",
+      "Servite con altro basilico fresco."
+    ],
+    "source": null,
+    "notes": "Ottima fredda, il giorno dopo."
+  },
+  {
+    "id": "cena-pasta-cavolfiore-curcuma",
+    "title": "Pasta con cavolfiore e curcuma",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cavolfiore",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividete il cavolfiore in cimette e fate appassire la cipolla tritata con l'olio.",
+      "Unite il cavolfiore, la curcuma, sale e mezzo bicchiere d'acqua, poi cuocete coperto per 15 minuti finché si sfalda.",
+      "Lessate la pasta e scolatela molto al dente.",
+      "Mantecatela nella padella con il cavolfiore e un po' di acqua di cottura."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-risotto-funghi-prezzemolo",
+    "title": "Risotto ai funghi e prezzemolo",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍄",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "riso",
+      "funghi"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Funghi champignon",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affettate i funghi e fateli saltare in padella con metà olio e uno spicchio di prezzemolo; teneteli da parte.",
+      "Tostate il riso con la cipolla tritata e l'olio rimasto.",
+      "Aggiungete il brodo caldo poco alla volta, mescolando, per circa 15 minuti.",
+      "Rimettete i funghi, regolate di sale e finite con prezzemolo fresco."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-riso-verdure-saltate",
+    "title": "Riso con verdure saltate",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "riso",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carota",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Cuocete il riso in acqua salata, scolatelo e lasciatelo raffreddare un attimo.",
+      "Tagliate le verdure a listarelle e saltatele nell'olio con l'aglio per 7 minuti, mantenendole croccanti.",
+      "Unite il riso e la salsa di soia e mescolate a fuoco vivace per due minuti."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-farro-pomodorini-rucola",
+    "title": "Farro con pomodorini e rucola",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "insalata"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete il farro in acqua salata secondo i tempi della confezione e scolatelo.",
+      "Lasciatelo intiepidire e condite con olio, limone e sale.",
+      "Aggiungete pomodorini a metà e cetriolo a dadini.",
+      "Unite la rucola solo al momento di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-orzotto-zucchine-limone",
+    "title": "Orzotto alle zucchine e limone",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🌾",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "orzo",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 300,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fate appassire la cipolla nell'olio e tostate l'orzo per un minuto.",
+      "Aggiungete il brodo a mestoli e cuocete per circa 25 minuti.",
+      "A metà cottura unite le zucchine a dadini.",
+      "Finite con scorza di limone grattugiata e pepe."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-couscous-peperoni-zucchine-menta",
+    "title": "Cous cous con peperoni, zucchine e menta",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cous cous",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Peperone",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Menta",
+        "qty": 5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versate sul cous cous un uguale volume di acqua bollente salata, coprite e lasciate gonfiare cinque minuti.",
+      "Saltate peperone e zucchine a dadini in padella con l'olio per 8 minuti.",
+      "Sgranate il cous cous con la forchetta e unite le verdure.",
+      "Condite con limone e menta tritata."
+    ],
+    "source": null,
+    "notes": "Si mangia anche freddo."
+  },
+  {
+    "id": "pranzo-quinoa-zucchine-carote-prezzemolo",
+    "title": "Quinoa con zucchine, carote e prezzemolo",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "quinoa",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carota",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacquate bene la quinoa e cuocetela in acqua salata per 12 minuti, poi scolatela.",
+      "Grattugiate la carota e tagliate le zucchine a dadini; saltatele per pochi minuti con un po' d'olio.",
+      "Unite la quinoa alle verdure e profumate con prezzemolo e limone."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-polenta-funghi-trifolati",
+    "title": "Polenta con funghi trifolati",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍄",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "polenta",
+      "funghi"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di mais per polenta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Funghi champignon",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Portate a bollore 400 ml di acqua salata, versate la farina a pioggia e cuocete mescolando per il tempo indicato sulla confezione.",
+      "Tagliate i funghi a fette e trifolateli con olio e aglio a fuoco vivo.",
+      "Servite la polenta calda con i funghi e il prezzemolo."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-gnocchi-pomodoro-basilico",
+    "title": "Gnocchi al pomodoro e basilico",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥔",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "gnocchi",
+      "pomodoro"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scaldate olio e aglio, versate la passata con le zucchine a dadini e cuocete 10 minuti.",
+      "Lessate gli gnocchi in acqua salata e scolateli appena vengono a galla.",
+      "Conditeli con il sugo e il basilico strappato a mano."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pasta-lenticchie-spinaci",
+    "title": "Pasta e lenticchie con spinaci",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fate appassire la cipolla nell'olio e aggiungete la passata e le lenticchie.",
+      "Unite gli spinaci e due mestoli d'acqua calda; cuocete 5 minuti.",
+      "Versate la pasta e portatela a cottura nel sugo, aggiungendo acqua se serve.",
+      "Lasciate riposare un paio di minuti prima di servire."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-riso-piselli-menta",
+    "title": "Riso e piselli alla menta",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌱",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "riso"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Piselli",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 300,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Menta",
+        "qty": 4,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggete la cipolla nell'olio, poi unite i piselli e fateli insaporire.",
+      "Versate il riso e il brodo caldo e cuocete per circa 15 minuti mescolando ogni tanto.",
+      "Il piatto deve restare morbido e leggermente brodoso.",
+      "Completate con la menta spezzettata."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-orzotto-fagioli-salvia",
+    "title": "Orzotto con fagioli cannellini e salvia",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🌾",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "orzo"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salvia",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fate appassire carota e sedano tritati nell'olio con la salvia.",
+      "Aggiungete l'orzo, tostatelo e coprite con acqua calda salata.",
+      "Cuocete circa 25 minuti, aggiungendo acqua quando serve.",
+      "Unite i fagioli negli ultimi 5 minuti e schiacciatene qualcuno per rendere il piatto cremoso."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pasta-crema-ceci-pomodorini",
+    "title": "Pasta con crema di ceci e pomodorini",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍝",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "pasta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frullate i ceci con un cucchiaio d'olio, il limone, il sale e qualche cucchiaio d'acqua fino a una crema liscia.",
+      "Cuocete la pasta e scolatela.",
+      "Mescolatela alla crema di ceci con i pomodorini tagliati.",
+      "Servite con la rucola."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-farro-lenticchie-carote-sedano",
+    "title": "Farro e lenticchie con carote e sedano",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aceto di vino",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete il farro in acqua salata e scolatelo.",
+      "Tagliate carota, sedano e cipolla a dadini piccoli.",
+      "Mescolate tutto con le lenticchie, olio, aceto e sale.",
+      "Lasciate insaporire qualche minuto prima di mangiare."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-couscous-cannellini-pomodorini-rucola",
+    "title": "Cous cous con fagioli cannellini e rucola",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "cous cous"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rucola",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Idratate il cous cous con acqua bollente salata per cinque minuti e sgranatelo.",
+      "Aggiungete i fagioli sgocciolati e i pomodorini a spicchi.",
+      "Condite con olio e limone e completate con la rucola."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-riso-ceci-zucchine-curcuma",
+    "title": "Riso con ceci, zucchine e curcuma",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍚",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "riso"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Curcuma",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso in acqua salata fino a cottura.",
+      "Soffriggete l'aglio nell'olio, aggiungete le zucchine a dadini e cuocete 8 minuti.",
+      "Unite i ceci e la curcuma e lasciate insaporire.",
+      "Incorporate il riso scolato e mescolate."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pasta-piselli-pomodoro",
+    "title": "Pasta e piselli al pomodoro",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍲",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "pasta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Piselli",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Rosolate la cipolla nell'olio, aggiungete i pelati schiacciati e i piselli.",
+      "Cuocete 10 minuti con un bicchiere d'acqua.",
+      "Unite la pasta e altra acqua calda, portandola a cottura nel sugo.",
+      "Servite morbida, con un filo d'olio a crudo."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-quinoa-lenticchie-zucca",
+    "title": "Quinoa con lenticchie e zucca",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🎃",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "quinoa"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucca",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate la zucca a cubetti e cuocetela in forno a 200 gradi con olio e rosmarino per 20 minuti.",
+      "Cuocete la quinoa in acqua salata per 12 minuti e scolatela.",
+      "Mescolate quinoa, lenticchie e zucca ancora tiepida.",
+      "Regolate di sale e servite."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pasta-fave-cicoria",
+    "title": "Pasta con fave e cicoria",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fave sgusciate cotte",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cicoria",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate la cicoria in abbondante acqua salata, scolatela e tagliatela grossolanamente; tenete l'acqua.",
+      "Cuocete la pasta nella stessa acqua.",
+      "Fate insaporire aglio e peperoncino nell'olio, unite cicoria e fave.",
+      "Aggiungete la pasta scolata e mescolate con un mestolino di acqua di cottura."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-frittata-pasta-zucchine",
+    "title": "Frittata di spaghetti con zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "uova",
+      "pasta"
+    ],
+    "ingredients": [
+      {
+        "name": "Spaghetti integrali",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 5,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate gli spaghetti molto al dente e scolateli.",
+      "Saltate le zucchine a rondelle in padella antiaderente con un po' d'olio per 6 minuti.",
+      "Sbattete l'uovo con parmigiano e sale e mescolatelo a pasta e zucchine.",
+      "Cuocete la frittata a fuoco medio girandola a metà, fino a doratura."
+    ],
+    "source": null,
+    "notes": "Si mangia volentieri anche tiepida."
+  },
+  {
+    "id": "pranzo-pasta-ricotta-pomodorini",
+    "title": "Pasta con ricotta e pomodorini",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍅",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "formaggio"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fate appassire i pomodorini tagliati con olio e aglio per 8 minuti.",
+      "Cuocete la pasta e scolatela al dente.",
+      "Ammorbidite la ricotta con due cucchiai d'acqua di cottura e uniteli alla pasta.",
+      "Aggiungete il sugo di pomodorini e il basilico."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-insalata-orzo-mozzarella-pomodorini",
+    "title": "Insalata d'orzo con mozzarella e pomodorini",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥗",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "formaggio"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mozzarella light",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete l'orzo in acqua salata per 25 minuti e scolatelo.",
+      "Fatelo raffreddare sotto l'acqua corrente.",
+      "Unite pomodorini, cetriolo e mozzarella a cubetti.",
+      "Condite con olio, sale e basilico."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-gnocchi-spinaci-ricotta",
+    "title": "Gnocchi con spinaci e ricotta",
+    "category": "Cena",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥬",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fate appassire gli spinaci in padella con olio e aglio, poi tritateli grossolanamente.",
+      "Lessate gli gnocchi e scolateli quando salgono a galla.",
+      "Mescolate la ricotta con un po' di acqua di cottura fino a renderla cremosa.",
+      "Unite gnocchi, spinaci e ricotta e servite subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pasta-carbonara-zucchine",
+    "title": "Pasta alla carbonara di zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍝",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pecorino",
+        "qty": 8,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tagliate le zucchine a bastoncini e rosolatele nell'olio finché sono morbide.",
+      "Sbattete l'uovo con il pecorino e il pepe.",
+      "Scolate la pasta, mescolatela alle zucchine fuori dal fuoco e unite la crema di uovo.",
+      "Allungate con un po' di acqua di cottura per ottenere una salsa liscia."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-risotto-spinaci-ricotta",
+    "title": "Risotto agli spinaci e ricotta",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥬",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "riso",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tostate il riso con la cipolla tritata e l'olio.",
+      "Cuocetelo aggiungendo brodo caldo a mestoli per circa 15 minuti.",
+      "Frullate gli spinaci appassiti con un po' di brodo e uniteli al riso a fine cottura.",
+      "Mantecate con la ricotta e servite subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-polenta-uovo-spinaci",
+    "title": "Polenta con spinaci e uovo in camicia",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "polenta",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di mais per polenta",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete la polenta in 350 ml di acqua salata mescolando fino a quando si stacca dalle pareti.",
+      "Saltate gli spinaci con olio e aglio.",
+      "Cuocete l'uovo per tre minuti in acqua leggermente acidulata, appena sotto il bollore.",
+      "Servite la polenta con spinaci e uovo sopra."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-couscous-feta-cetrioli-menta",
+    "title": "Cous cous con feta, cetrioli e menta",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥒",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "cous cous",
+      "formaggio"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Feta",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Menta",
+        "qty": 5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Idratate il cous cous con acqua bollente e lasciatelo gonfiare cinque minuti.",
+      "Sgranatelo e fatelo raffreddare.",
+      "Aggiungete cetriolo, pomodorini e feta a dadini.",
+      "Condite con limone, olio e menta."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-pasta-tonno-zucchine-limone",
+    "title": "Pasta con tonno, zucchine e limone",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta integrale corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tonno al naturale",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Saltate le zucchine a rondelle con olio e aglio per 7 minuti.",
+      "Cuocete la pasta e scolatela.",
+      "Unite il tonno sgocciolato e sbriciolato alle zucchine.",
+      "Mescolate tutto con la pasta e profumate con scorza di limone."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-riso-salmone-zucchine",
+    "title": "Riso con salmone e zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍚",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "riso",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso basmati",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salmone fresco",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessate il riso in acqua salata e scolatelo.",
+      "Cuocete il salmone a cubetti in padella con un po' d'olio per 5 minuti.",
+      "Aggiungete le zucchine a dadini e cuocetele fino a farle ammorbidire.",
+      "Unite il riso e condite con limone."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-couscous-tonno-peperoni-capperi",
+    "title": "Cous cous con tonno, peperoni e capperi",
+    "category": "Pranzo",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥗",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "cous cous",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Cous cous",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Tonno al naturale",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Peperone",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Capperi",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Idratate il cous cous con acqua bollente salata per cinque minuti.",
+      "Tagliate a dadini peperone e pomodorini.",
+      "Sgranate il cous cous e mescolatelo con le verdure e il tonno sgocciolato.",
+      "Completate con capperi dissalati e olio."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-orzo-salmone-affumicato-asparagi",
+    "title": "Orzo con salmone affumicato e asparagi",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🌾",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "orzo",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Orzo perlato",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Asparagi",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuocete l'orzo in acqua salata per 25 minuti e scolatelo.",
+      "Lessate le punte degli asparagi per 5 minuti e tagliatele a pezzetti.",
+      "Mescolate orzo e asparagi con olio e limone.",
+      "Aggiungete il salmone a striscioline e servite."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-linguine-vongole-zucchine",
+    "title": "Linguine con vongole e zucchine",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🐚",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pasta",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Linguine",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Vongole",
+        "qty": 200,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Fate aprire le vongole in padella coperta con olio e aglio, poi sgusciatene metà e filtrate il liquido.",
+      "Rosolate le zucchine a julienne in un'altra padella.",
+      "Cuocete le linguine molto al dente e finite la cottura con le zucchine e il fondo delle vongole.",
+      "Unite le vongole e il prezzemolo."
+    ],
+    "source": null
+  },
+  {
+    "id": "pranzo-gnocchi-gamberi-zucchine",
+    "title": "Gnocchi con gamberi e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🦐",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "pesce"
+    ],
+    "ingredients": [
+      {
+        "name": "Gnocchi di patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Gamberi sgusciati",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Saltate in padella aglio, zucchine a dadini e pomodorini per 6 minuti.",
+      "Aggiungete i gamberi e cuoceteli per 3 minuti.",
+      "Lessate gli gnocchi e scolateli appena affiorano.",
+      "Fateli saltare nel condimento per un minuto."
+    ],
+    "source": null
+  }
+]

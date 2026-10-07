@@ -52,9 +52,10 @@ const usable = (opts, diet, intol) => opts.filter((o) => o.d.includes(diet)
   && (!o.alt || o.alt.includes(diet) || o.alt.some((a) => intol.includes(a)))
   && !intol.some((a) => recipeAllergens({ ingredients: [{ name: o.t }] }).has(a)));
 
-// Con più energia da coprire crescono i carboidrati e, meno, frutta, yogurt e frutta secca
+// Con più energia da coprire crescono i carboidrati e, meno, proteine, frutta, yogurt e frutta secca;
+// oltre una certa soglia si aggiungono anche olio nei pasti principali, frutta secca negli spuntini e frutta a colazione
 const flexOf = (s) => 1 + (s - 1) * 0.6;
-const qtyOf = (o, s, pf) => (o.carb ? o.g * s : o.prot ? o.g * pf : o.flex ? o.g * flexOf(s) : o.g);
+const qtyOf = (o, s, pf) => (o.carb ? o.g * Math.min(s, 2.4) : o.prot ? o.g * pf * (1 + Math.max(0, s - 1) * 0.25) : o.oil ? clamp(10 + (s - 1.4) * 25, 10, 30) : o.flex ? o.g * flexOf(s) : o.g);
 const line = (o, s, pf = 1) => {
   const unit = o.u || 'g';
   const q = o.carb && o.step === 10 ? r10(qtyOf(o, s, pf)) : o.prot ? r10(qtyOf(o, s, pf)) : r5(qtyOf(o, s, pf));
@@ -66,43 +67,48 @@ const kcalOf = (o, s, pf) => {
   return v ? (v.kcal * qtyOf(o, s, pf)) / 100 : 0;
 };
 
+const OIL = { t: 'olio extravergine d\'oliva', g: 10, oil: 1, d: ALL };
+const NUTS_DAILY = { t: 'frutta secca', g: 20, w: 5, flex: 1, d: ALL };
+
 // Gruppi di un pasto: ogni gruppo è una lista di alternative (da mangiare insieme ai gruppi vicini)
-const slotGroups = (slot, ctx) => {
+const slotGroups = (slot, ctx, sc) => {
   const { diet, intol, e, fruitSlots } = ctx;
   const U = (o) => usable(o, diet, intol);
   const prot = U(protein(e, diet, ctx.legumes).map((o) => ({ ...o, prot: 1 })));
+  const high = sc > 1.4; // fabbisogni alti: più condimento, spuntini più ricchi, frutta anche a colazione
   const withFruit = fruitSlots.has(slot) ? [U([FRUIT])] : [];
+  const oil = high ? [U([OIL])] : [];
   switch (slot) {
-    case 'Colazione': return [U(dairy), U(breakfastCarb), ...withFruit];
-    case 'Spuntino 1': return [U([FRUIT])];
-    case 'Spuntino 2': return [U([FRUIT, YOGURT, SOY_YOGURT, NUTS])];
-    case 'Pranzo': return [U(lunchCarb), prot, U([VEG]), ...withFruit];
-    case 'Cena': return [prot, U([VEG]), U(dinnerBread), ...withFruit];
+    case 'Colazione': return [U(dairy), U(breakfastCarb), ...(withFruit.length || !high ? withFruit : [U([FRUIT])])];
+    case 'Spuntino 1': return [U([FRUIT]), ...(high ? [U([NUTS_DAILY])] : [])];
+    case 'Spuntino 2': return high ? [U([FRUIT, YOGURT, SOY_YOGURT]), U([NUTS_DAILY])] : [U([FRUIT, YOGURT, SOY_YOGURT, NUTS])];
+    case 'Pranzo': return [U(lunchCarb), prot, U([VEG]), ...oil, ...withFruit];
+    case 'Cena': return [prot, U([VEG]), U(dinnerBread), ...oil, ...withFruit];
     default: return [];
   }
 };
 
 // eaten: pasti che la persona consuma; restituisce { texts, estKcal, scale }
 export const buildAutoPlan = ({ diet = 'omnivore', intolerances = [], kcal, protein: pg = 65, eaten = SLOTS, tweaks = {} }) => {
-  const e = clamp(kcal * (1 + (tweaks.kcalPct || 0) / 100), 1200, 3200);
+  const e = clamp(kcal * (1 + (tweaks.kcalPct || 0) / 100), 1200, 4500);
   const nFruit = Math.round(lerp(e, 2, 3, 3));
   const order = ['Spuntino 1', 'Spuntino 2', 'Colazione', 'Cena', 'Pranzo'].filter((s) => eaten.includes(s));
   const fruitSlots = new Set(order.slice(0, nFruit));
   const ctx = { diet, intol: intolerances, e, fruitSlots, legumes: tweaks.legumes || 0 };
   const pf = clamp(pg / 65, 0.8, 1.6);
-  const oilKcal = 240 + 100; // olio dei condimenti (3 porzioni da 10 ml al giorno) e verdure, che stanno nelle ricette
-  const groupsBySlot = Object.fromEntries(eaten.map((s) => [s, slotGroups(s, ctx).filter((g) => g.length)]));
+  const baseKcal = 340; // olio dei condimenti (3 porzioni da 10 ml al giorno) e verdure, che stanno nelle ricette
+  const groupsAt = (sc) => Object.fromEntries(eaten.map((sl) => [sl, slotGroups(sl, ctx, sc).filter((g) => g.length)]));
   // energia stimata di una giornata: per ogni gruppo la media delle alternative
-  const estimate = (sc) => oilKcal + eaten.reduce((tot, slot) => tot + groupsBySlot[slot].reduce((a, g) => a + g.reduce((x, o) => x + kcalOf(o, sc, pf), 0) / g.length, 0), 0);
-  let lo = 0.6, hi = 2.6;
-  for (let i = 0; i < 24; i++) { const mid = (lo + hi) / 2; if (estimate(mid) < e) lo = mid; else hi = mid; }
-  const scale = clamp((lo + hi) / 2, 0.6, 2.6);
+  const estimate = (sc, gs = groupsAt(sc)) => baseKcal + eaten.reduce((tot, slot) => tot + gs[slot].reduce((a, g) => a + g.reduce((x, o) => x + kcalOf(o, sc, pf), 0) / g.length, 0), 0);
+  // la prima scala che arriva al fabbisogno (le soglie dei gruppi in più rendono la curva a gradini: si cerca a passi piccoli)
+  let scale = 3.4;
+  for (let sc = 0.6; sc <= 3.4; sc += 0.02) if (estimate(sc) >= e) { scale = sc; break; }
+  const gs = groupsAt(scale);
   const texts = {};
   for (const slot of eaten) {
-    const gs = groupsBySlot[slot];
-    if (gs.length) texts[slot] = gs.map((g) => g.map((o) => line(o, scale, pf)).join('\n')).join('\n\n');
+    if (gs[slot].length) texts[slot] = gs[slot].map((g) => g.map((o) => line(o, scale, pf)).join('\n')).join('\n\n');
   }
-  const estKcal = Math.round(estimate(scale));
+  const estKcal = Math.round(estimate(scale, gs));
   return { texts, estKcal, scale: Math.round(scale * 100) / 100 };
 };
 

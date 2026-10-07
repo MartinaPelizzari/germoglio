@@ -111,3 +111,12 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Le frequenze settimanali di ogni persona pesano sempre di più man mano che restano meno pasti (nelle prove sono rispettate nel 100% delle settimane); un massimo già raggiunto scoraggia il cibo in più.
 - Nei piani, "legumi cotti", "carne rossa", "pesce fresco" ecc. valgono per tutte le ricette di quel tipo (ceci, lenticchie, manzo...).
 - Prova: `node scripts/selftest-menus.mjs` (famiglia con regola d'asporto, piani diversi, intolleranza, frequenze).
+
+## Contorni, primi piatti, liquidi e calorie
+
+- Un contorno copre solo le verdure del piano e non sta mai da solo: a pranzo e cena serve un piatto vero o un carboidrato/proteina del piano (niente patate al forno da sole). I carboidrati "semplici" scelti dal piano sono prima cereali e pasta, poi patate o gnocchi; a colazione solo cibi da colazione (mai riso o pasta).
+- Zuppe, vellutate e minestre non sono mai d'asporto: compaiono a cena, o a pranzo quando il pranzo è a casa.
+- Ricette aggiunte: 30 contorni di verdura, 36 primi piatti e piatti unici senza carne, 24 colazioni semplici pensate per i piani con latte o yogurt più cereali, pane e frutta.
+- Le calorie del piano creato dall'app arrivano al fabbisogno anche se alto (fino a 4500 kcal): oltre una certa soglia si aggiungono olio nei pasti principali, frutta secca negli spuntini e frutta a colazione. Nelle prove la stima del piano resta entro il 5% dell'obiettivo.
+- Con indice di massa corporea da 30 in su il metabolismo si calcola con Mifflin-St Jeor invece di Schofield, che sovrastima nelle persone obese.
+- Gli "Obiettivi della settimana" stanno in cima al Planner e contano la settimana da lunedì a domenica.

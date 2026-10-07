@@ -287,6 +287,33 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         ))}
       </div>
 
+      {membersWithGoals.length > 0 && (
+        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
+          <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
+            <Target className="w-5 h-5 text-brand-600" />
+            <span className="flex-1 font-display font-bold text-slate-800">Obiettivi della settimana</span>
+            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${goalsOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {goalsOpen && (
+            <div className="px-4 pb-4 space-y-4">
+              {membersWithGoals.map((m) => (
+                <div key={m.id}>
+                  <div className="flex items-center gap-2 mb-2"><Avatar member={m} size="w-6 h-6 text-sm" /><span className="text-sm font-bold text-slate-700">{m.name}</span></div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {m.goals.map((g) => {
+                      const n = counts[m.id]?.[g.food] || 0;
+                      const st = goalStatus(g, n);
+                      return <span key={g.id} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${st === 'ok' ? 'bg-brand-50 text-brand-700' : st === 'short' ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'}`}>{foodLabel(g.food)} {n}/{g.times}{g.mode === 'max' ? ' max' : g.mode === 'exact' ? ' esatti' : ''}</span>;
+                    })}
+                  </div>
+                </div>
+              ))}
+              <p className="text-[11px] text-slate-400">Conta i pasti della settimana in cui ognuno mangia quell'alimento. Con "Proponi" l'app cerca di rispettare gli obiettivi, ma non li garantisce: controlla qui.</p>
+            </div>
+          )}
+        </div>
+      )}
+
       {preparing && <p className="text-sm text-brand-800 bg-brand-50 p-3 rounded-2xl">Sto preparando i pasti di questa settimana: ci vuole qualche secondo.</p>}
       {notice && <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-2xl">{notice}</p>}
 
@@ -356,34 +383,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           );
         })}
       </div>
-
-      {membersWithGoals.length > 0 && me?.planSource !== 'auto' && (
-        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
-          <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
-            <Target className="w-5 h-5 text-brand-600" />
-            <span className="flex-1 font-display font-bold text-slate-800">Obiettivi della settimana</span>
-            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${goalsOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {goalsOpen && (
-            <div className="px-4 pb-4 space-y-4">
-              {membersWithGoals.map((m) => (
-                <div key={m.id}>
-                  <div className="flex items-center gap-2 mb-2"><Avatar member={m} size="w-6 h-6 text-sm" /><span className="text-sm font-bold text-slate-700">{m.name}</span></div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {m.goals.map((g) => {
-                      const n = counts[m.id]?.[g.food] || 0;
-                      const st = goalStatus(g, n);
-                      return <span key={g.id} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${st === 'ok' ? 'bg-brand-50 text-brand-700' : st === 'short' ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'}`}>{foodLabel(g.food)} {n}/{g.times}{g.mode === 'max' ? ' max' : g.mode === 'exact' ? ' esatti' : ''}</span>;
-                    })}
-                  </div>
-                </div>
-              ))}
-              <p className="text-[11px] text-slate-400">Conta i pasti della settimana in cui ognuno mangia quell'alimento. Con "Proponi" l'app cerca di rispettare gli obiettivi, ma non li garantisce: controlla qui.</p>
-            </div>
-          )}
-        </div>
-      )}
-
 
       {me && me.planSource !== 'auto' && isDayBalanced(me) && dayPlanned(me) && (
         <div className="bg-white rounded-3xl shadow-soft overflow-hidden">

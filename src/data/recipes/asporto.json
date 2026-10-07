@@ -1037,7 +1037,7 @@
     "minutes": 35,
     "emoji": "🍜",
     "diet": "vegan",
-    "takeaway": true,
+    "takeaway": false,
     "tags": [
       "zuppa",
       "thermos",

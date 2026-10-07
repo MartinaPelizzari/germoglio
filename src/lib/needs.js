@@ -6,7 +6,10 @@
 export const bmi = (b) => (b?.weight && b?.height ? b.weight / (b.height / 100) ** 2 : null);
 
 // Metabolismo basale: equazioni di Schofield come riprodotte dalle tabelle LARN V (docs/fabbisogni.md, 1.2, versione B)
-export const bmr = ({ sex, age, weight }) => {
+export const bmr = ({ sex, age, weight, height }) => {
+  // Con un indice di massa corporea da 30 in su le equazioni di Schofield (ricavate su persone normopeso) sovrastimano il metabolismo:
+  // si usa Mifflin-St Jeor, validata anche nelle persone obese (docs/fabbisogni.md, S12)
+  if (height && weight / (height / 100) ** 2 >= 30) return 10 * weight + 6.25 * height - 5 * age + (sex === 'M' ? 5 : -161);
   const band = age < 30 ? 0 : age < 60 ? 1 : 2;
   const F = [[14.82, 486.6], [8.13, 845.6], [9.08, 658.8]];
   const M = [[15.06, 692.2], [11.47, 873.1], [11.71, 587.7]];

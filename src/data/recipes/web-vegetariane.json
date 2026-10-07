@@ -370,7 +370,7 @@
     "minutes": 60,
     "emoji": "🍲",
     "diet": "vegan",
-    "takeaway": true,
+    "takeaway": false,
     "tags": [
       "zuppa",
       "legumi"

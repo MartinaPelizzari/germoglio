@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "colazione-yogurt-avena-mela-cotta",
+    "title": "Yogurt con avena e mela cotta",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍎",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "frutta cotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt bianco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia la mela a cubetti e cuocila in un pentolino con due cucchiai d'acqua e la cannella per 5 minuti, finché si ammorbidisce.",
+      "Tosta i fiocchi d'avena in una padella asciutta per un paio di minuti.",
+      "Metti lo yogurt in una ciotola e completa con la mela tiepida e l'avena."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-parfait-greco-muesli-kiwi",
+    "title": "Parfait di yogurt greco, muesli e kiwi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "parfait",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Muesli",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Kiwi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Sbuccia i kiwi e tagliali a pezzetti.",
+      "In un vasetto alterna strati di yogurt greco, muesli e kiwi.",
+      "Chiudi e conserva in frigo fino al momento di partire."
+    ],
+    "source": null,
+    "notes": "Il muesli resta più croccante se lo aggiungi poco prima di mangiare."
+  },
+  {
+    "id": "colazione-skyr-cornflakes-banana",
+    "title": "Skyr con cornflakes e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍌",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "skyr",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Skyr",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cornflakes",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Metti lo skyr in una ciotola.",
+      "Affetta la banana a rondelle e disponila sopra.",
+      "Aggiungi i cornflakes all'ultimo per mantenerli croccanti."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-kefir-granola-pera",
+    "title": "Kefir con granola e pera",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "kefir",
+      "granola"
+    ],
+    "ingredients": [
+      {
+        "name": "Kefir",
+        "qty": 150,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pera",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Versa il kefir in una ciotola.",
+      "Taglia la pera a dadini e uniscila al kefir.",
+      "Cospargi con la granola e mangia subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-bowl-yogurt-farro-soffiato-susine",
+    "title": "Bowl di yogurt, farro soffiato e susine",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "bowl",
+      "yogurt"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt bianco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Farro soffiato",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Susine",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Lava le susine, eliminando il nocciolo, e tagliale a spicchi.",
+      "Versa lo yogurt in una ciotola e aggiungi le susine.",
+      "Completa con il farro soffiato."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-yogurt-greco-arancia-avena-miele",
+    "title": "Yogurt greco con arancia, avena e miele",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🍊",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "agrumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Arancia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pela l'arancia al vivo e ricava gli spicchi, tagliandoli a pezzi.",
+      "Tosta leggermente i fiocchi d'avena in padella.",
+      "Componi la ciotola con lo yogurt, l'avena e l'arancia, poi finisci con il miele."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-skyr-muesli-mela-grattugiata",
+    "title": "Skyr con muesli e mela grattugiata",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍏",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "skyr",
+      "muesli"
+    ],
+    "ingredients": [
+      {
+        "name": "Skyr",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Muesli",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Grattugia la mela con la buccia, se è ben lavata.",
+      "Mescola lo skyr con la mela grattugiata.",
+      "Aggiungi il muesli e servi."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-kefir-fiocchi-frumento-banana",
+    "title": "Kefir con fiocchi di frumento e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "kefir",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Kefir",
+        "qty": 150,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi di frumento",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Versa il kefir in una ciotola.",
+      "Taglia la banana a fettine e mettila sopra.",
+      "Unisci i fiocchi di frumento e mescola appena prima di mangiare."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-parfait-skyr-granola-kiwi",
+    "title": "Parfait di skyr, granola e kiwi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "parfait",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Skyr",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Kiwi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Sbuccia i kiwi e tagliali a cubetti.",
+      "In un vasetto metti uno strato di skyr, uno di kiwi e uno di granola.",
+      "Ripeti gli strati fino a esaurire gli ingredienti e chiudi il vasetto."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-yogurt-pera-cotta-avena-noci",
+    "title": "Yogurt con pera cotta, avena e noci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 12,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "frutta cotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt bianco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pera",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia la pera a dadini e cuocila con un goccio d'acqua per 6 minuti.",
+      "Tosta i fiocchi d'avena in padella e trita grossolanamente le noci.",
+      "Versa lo yogurt in una ciotola e completa con pera tiepida, avena e noci."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-yogurt-greco-granola-arancia",
+    "title": "Yogurt greco con granola e arancia",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍊",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "granola"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Arancia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Pela l'arancia al vivo e taglia gli spicchi a pezzetti.",
+      "Metti lo yogurt in una ciotola con l'arancia.",
+      "Cospargi con la granola."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-porridge-avena-banana",
+    "title": "Porridge d'avena semplice con banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "porridge",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Metti i fiocchi d'avena e il latte in un pentolino e porta a leggero bollore.",
+      "Cuoci per 5 minuti mescolando, finché la consistenza è cremosa.",
+      "Versa in una ciotola o in un contenitore, aggiungi la banana a rondelle e la cannella."
+    ],
+    "source": null,
+    "notes": "Con la bevanda d'avena diventa vegano."
+  },
+  {
+    "id": "colazione-overnight-oats-mela",
+    "title": "Overnight oats semplici con mela",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🫙",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "overnight oats",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Bevanda d'avena",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "La sera prima mescola in un vasetto i fiocchi d'avena, la bevanda d'avena e la cannella.",
+      "Chiudi e lascia in frigo tutta la notte.",
+      "Al mattino aggiungi la mela a dadini o grattugiata e mescola."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-latte-cornflakes-arancia",
+    "title": "Latte con cornflakes e arancia",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 3,
+    "emoji": "🥛",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "latte",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Cornflakes",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Arancia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Versa i cornflakes in una ciotola.",
+      "Aggiungi il latte freddo o appena tiepido.",
+      "Accompagna con l'arancia sbucciata a spicchi."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-fette-biscottate-marmellata-latte-pera",
+    "title": "Fette biscottate con marmellata, latte e pera",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "fette biscottate",
+      "classica"
+    ],
+    "ingredients": [
+      {
+        "name": "Fette biscottate integrali",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Marmellata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Pera",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Spalma un velo di marmellata sulle fette biscottate.",
+      "Scalda il latte, se ti piace tiepido, e versalo in una tazza.",
+      "Mangia la pera a fette insieme alle fette biscottate."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-latte-avena-muesli-banana",
+    "title": "Bevanda d'avena con muesli e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 3,
+    "emoji": "🍌",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "bevanda vegetale",
+      "muesli"
+    ],
+    "ingredients": [
+      {
+        "name": "Bevanda d'avena",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Muesli",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Banana",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Metti il muesli in una ciotola.",
+      "Versa la bevanda d'avena e lascia ammorbidire un minuto.",
+      "Aggiungi la banana a rondelle e servi."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-latte-fiocchi-frumento-susine",
+    "title": "Latte con fiocchi di frumento e susine",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 3,
+    "emoji": "🥛",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "latte",
+      "cereali"
+    ],
+    "ingredients": [
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi di frumento",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Susine",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Versa i fiocchi di frumento in una ciotola e copri con il latte.",
+      "Taglia le susine a spicchi.",
+      "Unisci la frutta ai fiocchi e mangia subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-fette-biscottate-ricotta-pera",
+    "title": "Fette biscottate con ricotta e pera",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "ricotta",
+      "fette biscottate"
+    ],
+    "ingredients": [
+      {
+        "name": "Fette biscottate integrali",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pera",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Marmellata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola la ricotta con un velo di marmellata.",
+      "Spalmala sulle fette biscottate.",
+      "Affetta la pera e servila a fianco o sopra le fette."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pane-integrale-hummus-carote",
+    "title": "Pane integrale con hummus e carote crude",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "pane"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carota",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mela",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Spalma l'hummus sul pane integrale, tostato se preferisci.",
+      "Pela le carote e tagliale a bastoncini.",
+      "Mangia il pane con le carote crude e la mela come frutto finale."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-toast-marmellata-yogurt",
+    "title": "Pane tostato con marmellata e yogurt",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 7,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "toast",
+      "yogurt"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Marmellata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt bianco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Pera",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Tosta il pane integrale in tostapane o in padella.",
+      "Spalma un velo di marmellata.",
+      "Servi con lo yogurt bianco e la pera a fette."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pane-ricotta-marmellata-arancia",
+    "title": "Pane integrale con ricotta, marmellata e arancia",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍊",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "ricotta",
+      "pane"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta vaccina",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Marmellata",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Arancia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Spalma la ricotta sul pane integrale.",
+      "Aggiungi un velo di marmellata.",
+      "Accompagna con l'arancia sbucciata."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-uova-strapazzate-pane-mela",
+    "title": "Uova strapazzate con pane integrale",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "uova",
+      "salata"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti le uova in una ciotola con un pizzico di pepe.",
+      "Cuocile in una padella antiaderente a fuoco basso mescolando finché sono cremose.",
+      "Servi con il pane integrale tostato e la mela."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-segale-salmone-yogurt",
+    "title": "Pane di segale con salmone affumicato e yogurt",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "salmone",
+      "salata"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane di segale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Kiwi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Tosta leggermente il pane di segale.",
+      "Spalma un po' di yogurt greco e appoggia le fette di salmone, con qualche goccia di limone.",
+      "Mangia a parte lo yogurt rimasto con i kiwi a pezzetti."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-omelette-fette-biscottate-pera",
+    "title": "Omelette semplice con fette biscottate",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "omelette",
+      "salata"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Fette biscottate integrali",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pera",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Erba cipollina",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti le uova con l'erba cipollina tritata.",
+      "Versale in una padella antiaderente calda e cuoci a fuoco medio, ripiegando l'omelette a metà.",
+      "Servi con le fette biscottate e la pera."
+    ],
+    "source": null
+  }
+]

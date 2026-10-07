@@ -1565,7 +1565,7 @@
     "minutes": 45,
     "emoji": "🍲",
     "diet": "pescetarian",
-    "takeaway": true,
+    "takeaway": false,
     "tags": [
       "zuppa",
       "pesce"

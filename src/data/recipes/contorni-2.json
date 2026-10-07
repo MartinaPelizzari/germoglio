@@ -1,0 +1,1613 @@
+[
+  {
+    "id": "contorno-finocchi-arance-insalata",
+    "title": "Insalata di finocchi e arance",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍊",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "inverno"
+    ],
+    "ingredients": [
+      {
+        "name": "Finocchi",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Arancia",
+        "qty": 1,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina le barbe dure dei finocchi, lavali e affettali sottilissimi, meglio con la mandolina.",
+      "Sbuccia l'arancia a vivo, eliminando la pellicina bianca, e tagliala a spicchi raccogliendo il succo.",
+      "Unisci finocchi e arance in una ciotola e condisci con l'olio, il succo raccolto, sale e una macinata di pepe.",
+      "Lascia riposare cinque minuti prima di servire, così i finocchi si ammorbidiscono."
+    ],
+    "source": null,
+    "notes": "Si conserva in frigorifero per qualche ora, ma è più croccante appena fatta."
+  },
+  {
+    "id": "contorno-carote-limone-crude",
+    "title": "Carote crude al limone e prezzemolo",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Carote",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pela le carote e grattugiale con la grattugia a fori larghi.",
+      "Spremi il limone e mescolalo all'olio con un pizzico di sale.",
+      "Condisci le carote con l'emulsione e lascia insaporire per qualche minuto.",
+      "Completa con prezzemolo tritato fine."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-rucola-pomodorini",
+    "title": "Rucola e pomodorini",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "estate",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Rucola",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di vino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava e asciuga bene la rucola, poi mettila in una ciotola capiente.",
+      "Taglia i pomodorini a metà e uniscili alla rucola.",
+      "Condisci all'ultimo momento con olio, aceto e sale, mescolando con delicatezza."
+    ],
+    "source": null,
+    "notes": "Condire solo al momento di servire evita che la rucola appassisca."
+  },
+  {
+    "id": "contorno-cavolo-cappuccio-limone",
+    "title": "Insalata di cavolo cappuccio e limone",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 12,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "inverno"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolo cappuccio",
+        "qty": 180,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di cumino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina le foglie esterne del cavolo e affettalo molto fine, privandolo del torsolo.",
+      "Mettilo in una ciotola con un pizzico di sale e massaggialo qualche minuto per ammorbidirlo.",
+      "Aggiungi la carota grattugiata, il succo di limone, l'olio e il cumino.",
+      "Mescola e lascia riposare almeno dieci minuti prima di servire."
+    ],
+    "source": null,
+    "notes": "Migliora dopo un'ora in frigorifero."
+  },
+  {
+    "id": "contorno-zucca-forno-rosmarino",
+    "title": "Zucca al forno con rosmarino",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🎃",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "autunno",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucca",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Taglia la zucca a spicchi o a cubi di circa due centimetri, tenendo la buccia se è sottile.",
+      "Disponila su una teglia con carta forno, condiscila con olio, sale, pepe e rosmarino.",
+      "Cuoci per 25 minuti circa, girando a metà, finché è morbida e leggermente caramellata."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-spinaci-limone-aglio",
+    "title": "Spinaci saltati al limone",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 12,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Spinaci freschi",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava gli spinaci e scolali senza asciugarli troppo.",
+      "Scalda l'olio con lo spicchio d'aglio schiacciato in una padella capiente.",
+      "Aggiungi gli spinaci, copri e lasciali appassire per 4-5 minuti mescolando ogni tanto.",
+      "Togli l'aglio, sala e finisci con qualche goccia di succo di limone."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-cime-di-rapa-peperoncino",
+    "title": "Cime di rapa ripassate",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "peperoncino"
+    ],
+    "ingredients": [
+      {
+        "name": "Cime di rapa",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci le cime di rapa tenendo le foglie tenere e le cimette, elimina i gambi più duri.",
+      "Sbollentale in acqua salata per 4-5 minuti e scolale.",
+      "Scalda l'olio con aglio e peperoncino, poi unisci le cime.",
+      "Saltale per cinque minuti a fiamma vivace, regolando di sale."
+    ],
+    "source": null,
+    "notes": "Ottime accanto a un secondo di legumi o di pesce."
+  },
+  {
+    "id": "contorno-cavolo-nero-stufato",
+    "title": "Cavolo nero stufato",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "inverno",
+      "stufato"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolo nero",
+        "qty": 220,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina la costa centrale del cavolo nero e taglia le foglie a strisce larghe.",
+      "Scaldale in una pentola con l'olio e l'aglio.",
+      "Aggiungi il cavolo, i pelati schiacciati, un mestolo d'acqua e sale.",
+      "Copri e cuoci a fuoco dolce per 20 minuti, finché le foglie sono tenere."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-verza-saltata",
+    "title": "Verza saltata in padella",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Verza",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di finocchio",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia la verza a listarelle sottili, eliminando il torsolo.",
+      "Soffriggi la cipolla affettata nell'olio con un cucchiaio d'acqua.",
+      "Unisci la verza e i semi di finocchio e cuoci a fiamma media, mescolando, per 15-18 minuti.",
+      "Aggiusta di sale e servi tiepida."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-fagiolini-pomodorini",
+    "title": "Fagiolini e pomodorini al vapore",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🫛",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "vapore"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagiolini",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i fagiolini e cuocili al vapore per circa 12 minuti, finché sono teneri ma sodi.",
+      "Taglia i pomodorini a spicchi e condiscili con sale e basilico spezzettato.",
+      "Unisci i fagiolini ancora tiepidi ai pomodorini e condisci con l'olio."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-peperoni-forno-origano",
+    "title": "Peperoni al forno con origano",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🫑",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Peperoni",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Taglia i peperoni a falde larghe, eliminando semi e filamenti.",
+      "Disponili in teglia con olio, aglio in camicia, origano e sale.",
+      "Cuoci 30 minuti circa, girandoli una volta, finché la pelle si raggrinzisce e i bordi sono dorati."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-melanzane-padella-menta",
+    "title": "Melanzane in padella alla menta",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 220,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Aceto di vino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le melanzane a cubetti e salale leggermente, lasciandole scolare dieci minuti.",
+      "Tamponale con carta da cucina.",
+      "Cuocile in padella antiaderente con olio e aglio, a fuoco medio, per 12-15 minuti, mescolando spesso.",
+      "Spegni, aggiungi l'aceto e la menta spezzettata e mescola."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-finocchi-padella-semi",
+    "title": "Finocchi brasati in padella",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Finocchi",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Semi di finocchio",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i finocchi e tagliali a spicchi sottili.",
+      "Scalda l'olio in padella e fai rosolare i finocchi per cinque minuti.",
+      "Aggiungi mezzo bicchiere d'acqua, sale e semi di finocchio, copri e cuoci a fuoco dolce per 15 minuti.",
+      "Scopri, fai asciugare il fondo e spruzza con il limone."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-asparagi-vapore-limone",
+    "title": "Asparagi al vapore con limone",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 18,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "primavera",
+      "vapore"
+    ],
+    "ingredients": [
+      {
+        "name": "Asparagi",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Spezza la parte legnosa dei gambi degli asparagi e pela leggermente la base.",
+      "Cuocili al vapore per 8-10 minuti, finché una forchetta entra con poca resistenza.",
+      "Condisci con olio, scorza e succo di limone, sale e pepe."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-carciofi-padella-mentuccia",
+    "title": "Carciofi in padella con mentuccia",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "primavera",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Carciofi",
+        "qty": 2,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Mentuccia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci i carciofi eliminando le foglie esterne dure e tagliali a spicchi, tenendoli in acqua e limone.",
+      "Scola e asciuga gli spicchi.",
+      "Scalda l'olio con l'aglio, unisci i carciofi e rosolali due minuti.",
+      "Aggiungi mezzo bicchiere d'acqua e sale, copri e cuoci 15 minuti.",
+      "Finisci con mentuccia tritata."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-radicchio-forno-balsamico",
+    "title": "Radicchio al forno con aceto balsamico",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Radicchio",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto balsamico",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Taglia il radicchio a spicchi, lasciando intatto il torsolo perché non si sfaldino.",
+      "Disponilo in teglia, condiscilo con olio e sale e cuoci 15-18 minuti.",
+      "Fuori dal forno, irrora con l'aceto balsamico."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-cicoria-ripassata",
+    "title": "Cicoria ripassata all'aglio",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "ripassato"
+    ],
+    "ingredients": [
+      {
+        "name": "Cicoria",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava la cicoria in più acque e lessala in acqua salata per 8-10 minuti.",
+      "Scolala, strizzala leggermente e tagliala grossolanamente.",
+      "Scalda l'olio con aglio e peperoncino e ripassa la cicoria per cinque minuti."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-sedano-pomodoro-stufato",
+    "title": "Sedano stufato al pomodoro",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌿",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "stufato",
+      "inverno"
+    ],
+    "ingredients": [
+      {
+        "name": "Sedano",
+        "qty": 220,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina i filamenti del sedano e tagliane le coste a pezzi di quattro centimetri.",
+      "Soffriggi la cipolla tritata nell'olio con un cucchiaio d'acqua.",
+      "Aggiungi il sedano, la passata e sale, copri e cuoci a fuoco basso per 20 minuti.",
+      "Se il fondo si asciuga troppo, aggiungi un goccio d'acqua."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-porri-forno",
+    "title": "Porri al forno al timo",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🧅",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Porri",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Pulisci i porri, tagliali a tronchetti di cinque centimetri e lessali due minuti.",
+      "Disponili in teglia, condiscili con olio, sale e timo.",
+      "Cuoci per 20 minuti finché sono dorati in superficie."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-cetrioli-menta-limone",
+    "title": "Insalata di cetrioli, menta e limone",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥒",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "estate"
+    ],
+    "ingredients": [
+      {
+        "name": "Cetrioli",
+        "qty": 220,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava i cetrioli e affettali a rondelle sottili, senza sbucciarli se la buccia è tenera.",
+      "Taglia la cipolla rossa a velo.",
+      "Condisci con olio, succo di limone, sale e foglioline di menta.",
+      "Mescola e lascia riposare cinque minuti."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-pomodori-insalata-basilico",
+    "title": "Insalata di pomodori e basilico",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "crudo",
+      "estate",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pomodori",
+        "qty": 220,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 15,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava i pomodori e tagliali a spicchi.",
+      "Affetta la cipolla rossa sottilissima.",
+      "Condisci con olio, sale, origano e basilico spezzato a mano.",
+      "Lascia insaporire dieci minuti a temperatura ambiente."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-rape-forno",
+    "title": "Rape al forno alle erbe",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "autunno",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Rape",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Pela le rape e tagliale a spicchi di circa due centimetri.",
+      "Condiscile in teglia con olio, erbe, sale e pepe.",
+      "Cuoci per 30-35 minuti, girandole a metà, finché sono morbide e dorate."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-barbabietola-limone",
+    "title": "Barbabietola al limone e prezzemolo",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "autunno",
+      "crudo"
+    ],
+    "ingredients": [
+      {
+        "name": "Barbabietola cotta",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia la barbabietola già cotta a cubetti o a fettine.",
+      "Emulsiona olio, succo di limone e un pizzico di sale.",
+      "Condisci la barbabietola e lasciala insaporire dieci minuti.",
+      "Completa con prezzemolo tritato."
+    ],
+    "source": null,
+    "notes": "Usare barbabietola cotta al naturale, non quella sott'aceto."
+  },
+  {
+    "id": "contorno-zucchine-forno-erbe",
+    "title": "Zucchine al forno alle erbe",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥒",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 230,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 200 gradi.",
+      "Taglia le zucchine a bastoncini o a metà nel senso della lunghezza.",
+      "Disponile in teglia, condiscile con olio, erbe e sale.",
+      "Cuoci 20-25 minuti, finché sono dorate ai bordi."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-carote-vapore-timo",
+    "title": "Carote al vapore al timo",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "vapore",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Carote",
+        "qty": 220,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pela le carote e tagliale a rondelle spesse.",
+      "Cuocile al vapore per 12-15 minuti, finché sono tenere.",
+      "Condisci ancora calde con olio, timo e un pizzico di sale."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-broccoli-vapore-limone",
+    "title": "Broccoli al vapore con limone",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 18,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "vapore",
+      "inverno"
+    ],
+    "ingredients": [
+      {
+        "name": "Broccoli",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividi i broccoli in cimette di dimensione simile.",
+      "Cuocili al vapore per 8-10 minuti, restando ben verdi.",
+      "Mescola olio, succo di limone, aglio grattugiato finissimo e sale.",
+      "Condisci i broccoli e servi."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-cavolfiore-padella-paprika",
+    "title": "Cavolfiore in padella con paprika",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥦",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "inverno",
+      "padella"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolfiore",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Dividi il cavolfiore in cimette piccole.",
+      "Scalda l'olio con l'aglio schiacciato e rosola le cimette a fuoco vivace per cinque minuti.",
+      "Aggiungi paprika, sale e due cucchiai d'acqua, copri e cuoci 10-12 minuti.",
+      "Scopri e fai asciugare per un minuto."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-fagioli-cannellini-salvia",
+    "title": "Fagioli cannellini alla salvia",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🫘",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola e sciacqua i fagioli.",
+      "Scalda l'olio con aglio e qualche foglia di salvia.",
+      "Unisci i fagioli e scaldali cinque minuti con due cucchiai d'acqua.",
+      "Regola di sale e servi caldi."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-bietole-pomodoro-lenticchie",
+    "title": "Bietole e lenticchie in padella",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "legumi",
+      "inverno"
+    ],
+    "ingredients": [
+      {
+        "name": "Bietole",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Lenticchie cotte",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava le bietole e tagliale a strisce, tenendo separati i gambi.",
+      "Scalda l'olio con l'aglio e cuoci per primi i gambi per cinque minuti.",
+      "Aggiungi foglie e lenticchie scolate, sale e un goccio d'acqua.",
+      "Cuoci coperto per 8 minuti e mescola."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-pomodori-forno-origano",
+    "title": "Pomodori al forno con origano",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "estate",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Pomodori",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Origano",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 gradi.",
+      "Taglia i pomodori a metà e disponili in teglia con il taglio rivolto verso l'alto.",
+      "Condiscili con olio, aglio tritato, origano e sale.",
+      "Cuoci per 25-30 minuti, finché sono morbidi e leggermente asciutti."
+    ],
+    "source": null
+  }
+]
