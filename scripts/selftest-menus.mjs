@@ -9,12 +9,14 @@ import { eatersOf } from '../src/lib/scale.js';
 import { resolveItem } from '../src/lib/items.js';
 import { recipeFoods } from '../src/lib/goals.js';
 import { recipeKind } from '../src/lib/meals.js';
+import { setSeasons, outOfSeason } from '../src/lib/seasons.js';
 
 const nd = new URL('../src/data/nutrition/', import.meta.url);
 setNutrition(fs.readdirSync(nd).filter((f) => f.endsWith('.json')).flatMap((f) => JSON.parse(fs.readFileSync(new URL(f, nd)))));
 const rd = new URL('../src/data/recipes/', import.meta.url);
 const recipes = fs.readdirSync(rd).filter((f) => f.endsWith('.json')).flatMap((f) => JSON.parse(fs.readFileSync(new URL(f, rd), 'utf8')));
 const map = new Map(recipes.map((r) => [r.id, r]));
+setSeasons(JSON.parse(fs.readFileSync(new URL('../src/data/seasons.json', import.meta.url))));
 
 const body = { sex: 'F', age: 30, height: 165, weight: 60, work: 'sedentary', workouts: 0, goal: 'maintain' };
 const auto = (id, name, diet, extra = {}) => { const n = computeNeeds({ ...body, diet }); const { meals } = autoMeals({ diet, kcal: n.kcal, protein: n.protein, intolerances: extra.intolerances || [] }); return { id, name, diet, meals, planSource: 'auto', ...extra }; };
@@ -95,6 +97,31 @@ for (let run = 0; run < 10; run++) {
   if ([1, 2, 3, 4, 5, 6].every((d) => mine(d) === mine(0))) sameWeeks++;
   if (new Set([0, 1, 2, 3, 4, 5, 6].map(theirs)).size > 3) varied++;
 }
+// pranzo con gli avanzi della cena di ieri
+const lh = { members: [{ id: 'a', name: 'A', diet: 'vegetarian', meals: {} }, { id: 'b', name: 'B', diet: 'omnivore', meals: {} }], rules: [{ id: 'l', label: 'Avanzi', slots: ['Pranzo'], days: [1, 2, 3, 4], takeaway: true, leftoverDinner: true, batch: 1 }] };
+let leftOk = 0, leftTot = 0;
+for (let run = 0; run < 6; run++) {
+  const ds = generateWeek(recipes, lh, { month: 10 });
+  for (let d = 1; d <= 4; d++) {
+    leftTot++;
+    const lunch = ds[d].Pranzo?.items || [];
+    const dinner = (ds[d - 1].Cena?.items || []).map((it) => it.recipeId).sort().join();
+    if (lunch.length && lunch.every((it) => it.leftoverOf) && lunch.map((it) => it.recipeId).sort().join() === dinner && lunch.every((it) => map.get(it.recipeId).takeaway)) leftOk++;
+  }
+}
+console.log(`Pranzo con gli avanzi della cena (d'asporto): ${leftOk}/${leftTot}`);
+check(leftOk === leftTot, 'avanzi della cena non rispettati');
+
+// stagionalità: a luglio poche ricette con ortaggi o frutta di inverno
+let off = 0, offTot = 0;
+for (let run = 0; run < 6; run++) {
+  const ds = generateWeek(recipes, { members: [{ id: 'v', name: 'V', diet: 'vegetarian', meals: {} }, { id: 'o', name: 'O', diet: 'omnivore', meals: {} }], rules: [] }, { month: 7 });
+  for (let d = 0; d < 7; d++) for (const sl of ['Pranzo', 'Cena']) for (const it of ds[d][sl]?.items || []) { offTot++; if (outOfSeason(map.get(it.recipeId), 7).length) off++; }
+}
+const base = recipes.filter((r) => outOfSeason(r, 7).length).length / recipes.length;
+console.log(`Piatti fuori stagione a luglio: ${off}/${offTot} contro ${(base * 100).toFixed(0)}% nel ricettario`);
+check(off / offTot < base * 0.6, 'la stagionalità non riduce i piatti fuori stagione');
+
 console.log(`Regola personale: stessa colazione tutta la settimana ${sameWeeks}/10; l'altra persona varia ${varied}/10`);
 check(sameWeeks === 10, 'regola personale "stessa colazione" non rispettata');
 check(varied >= 8, 'la regola personale ha cambiato anche l\'altra persona');
