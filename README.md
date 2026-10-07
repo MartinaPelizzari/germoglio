@@ -102,3 +102,12 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - I piani delle settimane e lo storico d'uso stanno in un contesto a parte (`usePlans`): ogni settimana scritta non rifà il rendering di tutta l'app.
 - Schermate secondarie (Ricette, Spesa, Famiglia, Impostazioni, Profilo, Onboarding), valori nutrizionali e lettore PDF si caricano solo quando servono; il lettore PDF non è nella cache di installazione. Font solo latini; firebase in un file a parte.
 - All'avvio: Firestore usa un solo gestore di schede e il rilevamento automatico del long polling (evita attese di diversi secondi su alcuni telefoni); il nucleo si ricorda sul telefono; le settimane si preparano solo dopo che i dati sono arrivati dal server e circa un secondo dopo la comparsa dell'app. Se l'app si rompe compare un messaggio con il motivo e il pulsante Ricarica (`ErrorBoundary`); un pezzo dell'app non scaricato dopo un aggiornamento fa ricaricare una volta da solo.
+
+## Menu settimanali: regole di coerenza
+
+- Colazione dolce di default: niente bruschette, hummus, crostini o popcorn; i piatti salati (uova col prosciutto, toast col tacchino...) compaiono solo se il piano di qualcuno prevede proteine o verdure a colazione.
+- Un pasto principale ha una sola fonte di proteine e una sola di carboidrati, per ogni persona (`compatible` in `src/lib/planGen.js`).
+- Se una regola condivisa impone un piatto unico (per esempio pranzo feriale d'asporto uguale per tutti) e nessuna ricetta rispetta alla lettera tutti i piani, si sceglie quella che li copre di più (segnalata "fuori piano" dove serve) invece di dare a ognuno alimenti diversi; gli alimenti semplici dei piani sono gli stessi per tutti quando possibile.
+- Le frequenze settimanali di ogni persona pesano sempre di più man mano che restano meno pasti (nelle prove sono rispettate nel 100% delle settimane); un massimo già raggiunto scoraggia il cibo in più.
+- Nei piani, "legumi cotti", "carne rossa", "pesce fresco" ecc. valgono per tutte le ricette di quel tipo (ceci, lenticchie, manzo...).
+- Prova: `node scripts/selftest-menus.mjs` (famiglia con regola d'asporto, piani diversi, intolleranza, frequenze).

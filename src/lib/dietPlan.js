@@ -227,7 +227,9 @@ export const optionLimits = (o) => [o.maxPerWeek ? `max ${o.maxPerWeek} ${o.maxP
 
 const GENERIC = { frutt: { group: 'fruit' }, verdur: { group: 'veg' }, ortagg: { group: 'veg' }, cereal: { group: 'carb' }, legum: { food: ['legumi'] }, carn: { food: ['carne-bianca', 'carne-rossa'] }, pesc: { food: ['pesce'] }, formagg: { food: ['formaggi'] } };
 // Espressioni di due parole che non si capiscono dai singoli termini
-const PHRASES = { 'frutta fresca': { group: 'fruit' }, 'frutta secca': { food: ['frutta-secca'] }, 'verdure cotte': { group: 'veg' }, 'cioccolato fondente': { words: ['cioccolato fondente', 'cioccolato'] } };
+const PHRASES = { hummus: { words: ['hummus', 'ceci', 'tahin'] }, 'frutta fresca': { group: 'fruit' }, 'frutta secca': { food: ['frutta-secca'] }, 'verdure cotte': { group: 'veg' }, 'cioccolato fondente': { words: ['cioccolato fondente', 'cioccolato'] } };
+// parole che descrivono lo stato o il tipo di un alimento, non l'alimento
+const STATE_WORDS = new Set(['cotti', 'cotto', 'cotte', 'cotta', 'secchi', 'secco', 'secche', 'secca', 'crudo', 'crudi', 'cruda', 'crude', 'lessati', 'lessato', 'magra', 'magro', 'fresco', 'fresca', 'freschi', 'fresche', 'rossa', 'rosse', 'bianca', 'bianche', 'intero', 'intera']);
 const foodWords = (id) => FOOD_TYPES.find((f) => f.id === id)?.words || [];
 
 // 2 = corrispondenza per parole ("pane integrale" con "Pane integrale tostato"), 1 = categoria generica ("frutta fresca"
@@ -249,10 +251,14 @@ export const matchScore = (opt, ing) => {
   const o = tokens(opt.name);
   if (!o.length) return 0;
   if (o.every((t) => i.includes(t))) return 2;
-  const g = GENERIC[o[0]];
-  if (o.length === 1 && g) {
+  // "legumi cotti", "carne rossa", "pesce fresco": le parole che descrivono solo lo stato o il tipo non tolgono il significato generico
+  const words = norm(opt.name).split(' ');
+  const core = tokens(words.filter((w) => !STATE_WORDS.has(w)).join(' '));
+  const g = GENERIC[core[0]];
+  if (core.length === 1 && g) {
     if (g.group) return (ing.group || guessGroup(ing.name)) === g.group ? 1 : 0;
-    return g.food.some((f) => foodWords(f).some((w) => name.includes(w))) ? 1 : 0;
+    const kinds = words.includes('rossa') || words.includes('rosse') ? g.food.filter((f) => f !== 'carne-bianca') : words.includes('bianca') || words.includes('bianche') ? g.food.filter((f) => f !== 'carne-rossa') : g.food;
+    return kinds.some((f) => foodWords(f).some((w) => name.includes(w))) ? 1 : 0;
   }
   return 0;
 };

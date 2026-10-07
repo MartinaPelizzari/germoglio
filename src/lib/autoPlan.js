@@ -38,7 +38,7 @@ const protein = (e, diet, extra = 0) => [
   { t: 'legumi cotti', g: 150, w: diet === 'omnivore' || diet === 'pescetarian' ? 3 + extra : extra ? 4 + extra : 0, d: ALL },
   { t: 'uova', g: 100, w: Math.round(lerp(e, 2, 3, 4)), d: NOVEG },
   { t: 'pesce', g: 150, w: Math.round(lerp(e, 2, 2, 3)) + (diet === 'pescetarian' ? 1 : 0), d: ['omnivore', 'pescetarian'] },
-  { t: 'petto di pollo', g: 100, w: Math.round(lerp(e, 1, 2, 3)), d: ['omnivore'] },
+  { t: 'carne bianca', kn: 'petto di pollo', g: 100, w: Math.round(lerp(e, 1, 2, 3)), d: ['omnivore'] },
   { t: 'carne rossa', g: 100, w: 1, d: ['omnivore'] },
   { t: 'formaggio fresco', g: 100, w: 3, d: NOVEG },
   { t: 'tofu', g: 100, w: diet === 'vegan' ? 0 : 2, d: ALL },
@@ -62,7 +62,7 @@ const line = (o, s, pf = 1) => {
   return `${q} ${unit} ${o.t}${note}`;
 };
 const kcalOf = (o, s, pf) => {
-  const v = lookup(o.t);
+  const v = lookup(o.kn || o.t);
   return v ? (v.kcal * qtyOf(o, s, pf)) / 100 : 0;
 };
 

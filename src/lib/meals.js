@@ -25,11 +25,26 @@ export const recipeKind = (recipe) => {
   return kind;
 };
 
-// Un piatto è adatto a un pasto se ne ha il tipo; i contorni accompagnano i pasti principali
+// Colazioni salate (uova col prosciutto, toast col tacchino, tofu...): ammesse, ma solo se il piano di chi mangia le prevede
+const SAVORY_BREAKFAST = ['prosciutto', 'speck', 'bacon', 'pancetta', 'tacchino', 'tonno', 'salmone', 'tofu', 'feta', 'formaggio fresco', 'pomodor', 'spinaci', 'zucchin', 'hummus', 'ceci', 'olive', 'avocado', 'cipollotto', 'broccol'];
+const savoryCache = new WeakMap();
+export const isSavory = (recipe) => {
+  if (savoryCache.has(recipe)) return savoryCache.get(recipe);
+  const names = (recipe.ingredients || []).map((i) => (i.name || '').toLowerCase());
+  const hasFlour = names.some((n) => /farina|fiocchi|avena|zucchero|miele|cacao|marmellata|sciroppo|datteri/.test(n));
+  const savory = names.some((n) => SAVORY_BREAKFAST.some((w) => n.includes(w))) || (names.some((n) => /\buov/.test(n)) && !hasFlour);
+  savoryCache.set(recipe, savory);
+  return savory;
+};
+// Spuntini che vanno bene anche a colazione (dolci o di latte e cereali), non crostini, hummus, popcorn...
+const BREAKFAST_SNACK = /yogurt|pudding|chia|barrett|porridge|overnight|granola|latte/i;
+
+// Un piatto è adatto a un pasto se ne ha il tipo; i contorni accompagnano i pasti principali.
+// A colazione non entrano i piatti da spuntino salato (bruschette, hummus, crostini...); gli spuntini sono dolci o di frutta.
 export const kindFits = (recipe, slot) => {
   const k = recipeKind(recipe);
   const s = slotKind(slot);
   if (s === 'principale') return k === 'principale' || k === 'contorno';
-  if (s === 'colazione') return k === 'colazione' || k === 'spuntino';
-  return k === 'spuntino' || k === 'colazione';
+  if (s === 'colazione') return k === 'colazione' || (k === 'spuntino' && BREAKFAST_SNACK.test(recipe.title) && !isSavory(recipe));
+  return k === 'spuntino' || (k === 'colazione' && !isSavory(recipe));
 };
