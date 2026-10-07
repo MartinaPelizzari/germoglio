@@ -57,7 +57,7 @@ for (const c of cases) {
   if (c.diet === 'vegetarian') check(!/pesce|pollo|carne rossa/.test(all), 'vegetariano con carne o pesce');
   for (const a of c.intolerances || []) check(!Object.values(texts).some((t) => t.split('\n').some((l) => recipeAllergens({ ingredients: [{ name: l.replace(/^\S+\s\S+\s/, '') }] }).has(a))), `${c.name}: contiene ${a}`);
   // settimana generata: nessun buco, nessun errore
-  const me = { id: 'm', name: 'Prova', diet: c.diet, intolerances: c.intolerances || [], meals };
+  const me = { id: 'm', name: 'Prova', diet: c.diet, intolerances: c.intolerances || [], planSource: 'auto', meals };
   for (let run = 0; run < 5; run++) {
     const days = generateWeek(recipes, { members: [me], rules: [] });
     const empty = [0, 1, 2, 3, 4, 5, 6].flatMap((i) => SLOTS.filter((s) => !days[i]?.[s]?.items?.length).map((s) => `${i}:${s}`));

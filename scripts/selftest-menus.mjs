@@ -37,7 +37,8 @@ for (let run = 0; run < RUNS; run++) {
   for (let d = 0; d < 7; d++) {
     // pranzi feriali: un solo piatto per tutti e d'asporto
     if (d < 5) {
-      const items = days[d].Pranzo?.items || [];
+      // la frutta del piano non mangiata prima (modalità giornata) si aggiunge a chi ce l'ha: non conta come piatto diverso
+      const items = (days[d].Pranzo?.items || []).filter((it) => !(it.food && it.food.group === 'fruit' || it.food && /frutt/i.test(it.food.name)));
       check(items.length > 0, 'pranzo feriale vuoto');
       if (items.some((it) => it.food) && process.env.DEBUG) console.log('esempio:', items.map((it) => (map.get(it.recipeId)?.title || `[${it.food.name}]`) + (it.eaters ? `<${it.eaters.join('')}>` : '')).join(' + '));
       check(items.every((it) => !it.food), 'pranzo feriale con alimenti sparsi invece di un piatto');
@@ -83,6 +84,20 @@ for (let run = 0; run < 30; run++) {
     if (/bruschett|crostin|popcorn|ceci croccanti/i.test(names)) odd++;
   }
 }
+// regola personale: sempre la stessa colazione per tutta la settimana (solo per chi la ha)
+const pr = { id: 'p', name: 'Con regola', diet: 'vegetarian', meals: {}, rules: [{ id: 'r1', label: 'Stessa colazione', slots: ['Colazione'], days: [0, 1, 2, 3, 4, 5, 6], takeaway: false, batch: 7 }] };
+const other = { id: 'q', name: 'Senza regola', diet: 'vegetarian', meals: {} };
+let sameWeeks = 0, varied = 0;
+for (let run = 0; run < 10; run++) {
+  const ds = generateWeek(recipes, { members: [pr, other], rules: [] });
+  const mine = (d) => (ds[d].Colazione?.items || []).filter((it) => !it.eaters || it.eaters.includes('p')).map((it) => it.recipeId || it.food?.name).join(',');
+  const theirs = (d) => (ds[d].Colazione?.items || []).filter((it) => !it.eaters || it.eaters.includes('q')).map((it) => it.recipeId || it.food?.name).join(',');
+  if ([1, 2, 3, 4, 5, 6].every((d) => mine(d) === mine(0))) sameWeeks++;
+  if (new Set([0, 1, 2, 3, 4, 5, 6].map(theirs)).size > 3) varied++;
+}
+console.log(`Regola personale: stessa colazione tutta la settimana ${sameWeeks}/10; l'altra persona varia ${varied}/10`);
+check(sameWeeks === 10, 'regola personale "stessa colazione" non rispettata');
+check(varied >= 8, 'la regola personale ha cambiato anche l\'altra persona');
 console.log(`Colazioni con hummus: ${hummusDays}/${total}; strane: ${odd}`);
 check(hummusDays > 0 && hummusDays < total * 0.5, 'hummus a colazione: troppo o per niente');
 check(odd <= total * 0.05, 'colazioni strane (bruschette, crostini...) oltre il 5%');
