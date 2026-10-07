@@ -10,7 +10,7 @@ import { DEFAULT_SHARED } from '../lib/diet.js';
 export const Ctx = React.createContext(null);
 export const useData = () => React.useContext(Ctx);
 // Piani delle settimane e storico d'uso: in un contesto a parte, così ogni settimana scritta non rifà il rendering di tutta l'app
-export const PlansCtx = React.createContext({ plans: [], plansLoaded: false, lastUse: new Map() });
+export const PlansCtx = React.createContext({ plans: [], plansLoaded: false, synced: false, lastUse: new Map() });
 export const usePlans = () => React.useContext(PlansCtx);
 
 export { MEMBER_COLORS, MEMBER_EMOJIS };
@@ -53,7 +53,9 @@ const makeCode = () => Array.from(crypto.getRandomValues(new Uint8Array(8)), (b)
 
 export function DataProvider({ user, children }) {
   const uid = user.uid;
-  const [hid, setHid] = React.useState(undefined);
+  // l'ultimo nucleo usato si ricorda sul telefono: si può partire subito senza aspettare di rileggere l'account
+  const [hid, setHidState] = React.useState(() => { try { return localStorage.getItem(`germoglio-hid-${uid}`) || undefined; } catch { return undefined; } });
+  const setHid = (id) => { setHidState(id); try { localStorage.setItem(`germoglio-hid-${uid}`, id); } catch { /* ignora */ } };
   const [profiles, setProfiles] = React.useState(undefined); // undefined = in caricamento
   const [settings, setSettings] = React.useState({ rules: [] });
   const [prefs, setPrefs] = React.useState({ favorites: [] });
@@ -61,6 +63,7 @@ export function DataProvider({ user, children }) {
   const [pantry, setPantry] = React.useState([]);
   const [plans, setPlans] = React.useState([]);
   const [plansLoaded, setPlansLoaded] = React.useState(false);
+  const [synced, setSynced] = React.useState(false); // tutti i dati principali sono arrivati dal server (non solo dalla cache del telefono)
   const [memberCount, setMemberCount] = React.useState(1);
   const creating = React.useRef(false);
 
@@ -77,17 +80,20 @@ export function DataProvider({ user, children }) {
   React.useEffect(() => {
     if (!hid) return undefined;
     setProfiles(undefined);
+    setSynced(false);
+    const got = new Set();
+    const mark = (k, s) => { if (!s.metadata.fromCache && !got.has(k)) { got.add(k); if (got.size === 5) setSynced(true); } };
     const h = (...p) => [db, 'households', hid, ...p];
-    const cutoff = getWeekId(addWeeks(new Date(), -10));
+    const cutoff = getWeekId(addWeeks(new Date(), -6));
     const unsubs = [
       onSnapshot(doc(...h()), (s) => setMemberCount(s.exists() ? (s.data().memberUids || []).length : 1)),
-      onSnapshot(collection(...h('profiles')), (s) => setProfiles(s.docs.map((d) => ({ ...d.data(), id: d.id })).sort((a, b) => (a.createdAt || '').localeCompare(b.createdAt || '')))),
-      onSnapshot(doc(...h('settings', 'household')), (s) => setSettings({ rules: [], ...(s.exists() ? s.data() : {}) })),
-      onSnapshot(doc(...h('settings', 'prefs')), (s) => setPrefs(s.exists() ? { favorites: [], ...s.data() } : { favorites: [] })),
-      onSnapshot(collection(...h('recipes')), (s) => setUserRecipes(s.docs.map((d) => ({ ...d.data(), id: d.id, own: true })))),
+      onSnapshot(collection(...h('profiles')), (s) => { mark('p', s); setProfiles(s.docs.map((d) => ({ ...d.data(), id: d.id })).sort((a, b) => (a.createdAt || '').localeCompare(b.createdAt || ''))); }),
+      onSnapshot(doc(...h('settings', 'household')), (s) => { mark('s', s); setSettings({ rules: [], ...(s.exists() ? s.data() : {}) }); }),
+      onSnapshot(doc(...h('settings', 'prefs')), (s) => { mark('f', s); setPrefs(s.exists() ? { favorites: [], ...s.data() } : { favorites: [] }); }),
+      onSnapshot(collection(...h('recipes')), (s) => { mark('r', s); setUserRecipes(s.docs.map((d) => ({ ...d.data(), id: d.id, own: true }))); }),
       onSnapshot(collection(...h('pantry')), (s) => setPantry(s.docs.map((d) => ({ ...d.data(), id: d.id })))),
       // Piani delle ultime settimane e di quelle future: servono per lo storico
-      onSnapshot(query(collection(...h('plans')), where(documentId(), '>=', cutoff)), (s) => { setPlans(s.docs.map((d) => ({ id: d.id, ...d.data() }))); setPlansLoaded(true); }),
+      onSnapshot(query(collection(...h('plans')), where(documentId(), '>=', cutoff)), (s) => { mark('l', s); setPlans(s.docs.map((d) => ({ id: d.id, ...d.data() }))); setPlansLoaded(true); }),
     ];
     return () => unsubs.forEach((u) => u());
   }, [hid]);
@@ -227,7 +233,7 @@ export function DataProvider({ user, children }) {
   }, [uid, user, hid, household, settings, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, memberCount]);
 
   if (!hid) return <div className="h-full flex items-center justify-center"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-500" /></div>;
-  const plansValue = React.useMemo(() => ({ plans, plansLoaded, lastUse }), [plans, plansLoaded, lastUse]);
+  const plansValue = React.useMemo(() => ({ plans, plansLoaded, synced, lastUse }), [plans, plansLoaded, synced, lastUse]);
   return <Ctx.Provider value={value}><PlansCtx.Provider value={plansValue}>{children}</PlansCtx.Provider></Ctx.Provider>;
 }
 

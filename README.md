@@ -85,7 +85,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 
 ## Settimane pianificate in anticipo
 
-- Non c'è più "Proponi la settimana": l'app tiene sempre pianificate le prossime 16 settimane (circa 4 mesi, `src/hooks/useAutoWeeks.js`). Quando ne passa una, ne aggiunge una in fondo, tenendo conto dei piatti già pianificati per non ripeterli.
+- Non c'è più "Proponi la settimana": l'app tiene sempre pianificate 3 settimane, la corrente e le due successive (`src/hooks/useAutoWeeks.js`, costante `HORIZON_WEEKS`). Quando ne passa una, ne aggiunge una in fondo, tenendo conto dei piatti già pianificati per non ripeterli.
 - Le settimane proposte dall'app sono segnate `auto` e portano l'impronta (`sig`) di persone, diete, piani, pasti condivisi e regole con cui sono state fatte: una modifica a mano toglie il segno `auto` e la settimana non viene più toccata; se l'impronta cambia (per esempio dopo aver cambiato il piano di qualcuno), le settimane `auto` si rifanno da sole, una ogni pochi secondi. Ogni settimana si tenta una sola volta per sessione, così un errore di scrittura non provoca cicli.
 - Un singolo pasto si può comunque rifare con "Proponi" sul pasto.
 - Nei pasti individuali si vede solo chi li mangia; i pasti condivisi mostrano tutti. La lista della spesa è sempre per tutto il nucleo, anche per i pasti individuali di ognuno.
@@ -98,6 +98,7 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 
 ## Prestazioni
 
-- Le settimane si generano in un worker (`src/workers/weekGen.worker.js`), non sul thread principale: durante la preparazione dei 4 mesi l'interfaccia non si blocca.
+- Le settimane si generano in un worker (`src/workers/weekGen.worker.js`), non sul thread principale: durante la preparazione delle settimane l'interfaccia non si blocca.
 - I piani delle settimane e lo storico d'uso stanno in un contesto a parte (`usePlans`): ogni settimana scritta non rifà il rendering di tutta l'app.
 - Schermate secondarie (Ricette, Spesa, Famiglia, Impostazioni, Profilo, Onboarding), valori nutrizionali e lettore PDF si caricano solo quando servono; il lettore PDF non è nella cache di installazione. Font solo latini; firebase in un file a parte.
+- All'avvio: Firestore usa un solo gestore di schede e il rilevamento automatico del long polling (evita attese di diversi secondi su alcuni telefoni); il nucleo si ricorda sul telefono; le settimane si preparano solo dopo che i dati sono arrivati dal server e circa un secondo dopo la comparsa dell'app. Se l'app si rompe compare un messaggio con il motivo e il pulsante Ricarica (`ErrorBoundary`); un pezzo dell'app non scaricato dopo un aggiornamento fa ricaricare una volta da solo.

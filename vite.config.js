@@ -29,6 +29,7 @@ export default defineConfig({
       // Il lettore PDF (1,4 MB) serve solo a chi carica un piano: non si scarica all'installazione, ma si tiene in cache dopo il primo uso
       workbox: {
         navigateFallback: 'index.html',
+        cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,png,svg,woff2}'],
         globIgnores: ['**/pdf.worker*', '**/pdf.min*'],
         runtimeCaching: [{ urlPattern: /pdf\.(worker\.)?min.*\.m?js$/, handler: 'CacheFirst', options: { cacheName: 'pdf-reader', expiration: { maxEntries: 4 } } }],

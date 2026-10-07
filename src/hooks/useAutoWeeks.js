@@ -4,8 +4,8 @@ import { addWeeks, getWeekId } from '../lib/dates.js';
 import { generateWeek } from '../lib/planGen.js';
 import { buildRecency } from '../lib/usage.js';
 
-// Settimane tenute sempre pianificate in anticipo (circa 4 mesi). Quando ne passa una, se ne aggiunge una in fondo.
-export const HORIZON_WEEKS = 16;
+// Settimane tenute sempre pianificate in anticipo (3: la corrente e le due successive). Quando ne passa una, se ne aggiunge una in fondo.
+export const HORIZON_WEEKS = 3;
 
 // Impronta di tutto ciò che influisce sui pasti: persone, diete, piani alimentari, pasti condivisi, regole.
 // Se cambia, le settimane proposte dall'app e mai toccate a mano si rifanno da sole.
@@ -48,7 +48,7 @@ const generate = (recipes, household, favorites, recency) => {
 // (se la scrittura fallisce non si riprova in continuazione).
 export function useAutoWeeks() {
   const { me, household, recipes, favorites, createWeek } = useData();
-  const { plans, plansLoaded } = usePlans();
+  const { plans, synced } = usePlans();
   const tried = React.useRef(new Set());
   const sig = React.useMemo(() => householdSignature(household), [household]);
   const latest = React.useRef({});
@@ -56,7 +56,7 @@ export function useAutoWeeks() {
   const [tick, setTick] = React.useState(0);
 
   React.useEffect(() => {
-    if (!plansLoaded || !me || !household || !recipes.length) return undefined;
+    if (!synced || !me || !household || !recipes.length) return undefined;
     const timer = setTimeout(async () => {
       const { household: hh, recipes: rr, favorites: ff, plans: pp, sig: ss, createWeek: create } = latest.current;
       const have = new Map(pp.map((p) => [p.id, p]));
@@ -73,7 +73,7 @@ export function useAutoWeeks() {
         await create(todo, days, ss);
       } catch (e) { console.error(e); }
       setTick((t) => t + 1);
-    }, tick === 0 ? 400 : 800);
+    }, tick === 0 ? 1200 : 2500); // si parte dopo che l'app è comparsa e si va piano: la prima interazione ha la precedenza
     return () => clearTimeout(timer);
-  }, [plansLoaded, me?.id, recipes.length, sig, tick, plans.length]);
+  }, [synced, me?.id, recipes.length, sig, tick, plans.length]);
 }

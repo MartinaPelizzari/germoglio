@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager } from 'firebase/firestore';
+import { initializeFirestore, persistentLocalCache, persistentSingleTabManager } from 'firebase/firestore';
 
 // Queste chiavi non sono segrete: identificano il progetto. A proteggere i dati sono le regole di
 // sicurezza in firestore.rules (ognuno legge e scrive solo sotto users/<proprio uid>).
@@ -15,7 +15,10 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-// Cache locale: l'app funziona anche senza rete e si risincronizza da sola
+// Cache locale: l'app funziona anche senza rete e si risincronizza da sola.
+// Un solo gestore di schede (l'app si usa in una finestra sola: meno lavoro all'avvio) e rilevamento automatico del
+// "long polling": su alcuni telefoni e reti la connessione normale impiega diversi secondi a ripiegare, e l'app sembra ferma.
 export const db = initializeFirestore(app, {
-  localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
+  localCache: persistentLocalCache({ tabManager: persistentSingleTabManager() }),
+  experimentalAutoDetectLongPolling: true,
 });
