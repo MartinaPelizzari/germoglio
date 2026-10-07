@@ -43,6 +43,6 @@ export function DataProvider({ children }) {
     savePantryItem: (i) => { store.pantry = [...store.pantry, { ...i, id: String(Math.random()) }]; emit(); }, deletePantryItem: (id) => { store.pantry = store.pantry.filter((p) => p.id !== id); emit(); },
     uid2: 1, overrideIds: [], restoreAllSeeds() {}, restoreRecipe() {}, addManagedProfile: () => { const id = 'p-' + Math.random().toString(36).slice(2, 7); store.members = [...store.members, { id, name: '', diet: 'omnivore', emoji: '🙂', color: '#10b981', managed: true, intolerances: [], goals: [], meals: {}, createdAt: String(Date.now()) }]; emit(); return id; }, claimProfile() {}, deleteProfile() {}, createInvite: async () => 'ABCD2345', joinHousehold: async () => {}, leaveHousehold: async () => {},
   }), [store.favorites.length, store.pantry.length, store.members]); // eslint-disable-line
-  const plansValue = React.useMemo(() => ({ plans: store.plans, plansLoaded: true, lastUse: new Map() }), [store.plans]);
+  const plansValue = React.useMemo(() => ({ plans: store.plans, plansLoaded: true, synced: true, lastUse: new Map() }), [store.plans]);
   return <Ctx.Provider value={value}><PlansCtx.Provider value={plansValue}>{children}</PlansCtx.Provider></Ctx.Provider>;
 }
