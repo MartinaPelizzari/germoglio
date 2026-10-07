@@ -8,6 +8,7 @@ import { setNutrition } from '../src/lib/nutrition.js';
 import { eatersOf } from '../src/lib/scale.js';
 import { resolveItem } from '../src/lib/items.js';
 import { recipeFoods } from '../src/lib/goals.js';
+import { recipeKind } from '../src/lib/meals.js';
 
 const nd = new URL('../src/data/nutrition/', import.meta.url);
 setNutrition(fs.readdirSync(nd).filter((f) => f.endsWith('.json')).flatMap((f) => JSON.parse(fs.readFileSync(new URL(f, nd)))));
@@ -55,6 +56,10 @@ for (let run = 0; run < RUNS; run++) {
         const mine = (data?.items || []).filter((it) => eatersOf(it, house, slot, data).some((e) => e.id === p.id));
         const n = mine.filter((it) => { const r = resolveItem(it, map); return r && (it.food ? ['protein'].includes(it.food.group) : protein(r) >= 40); }).length;
         check(n <= 1, `${slot}: ${n} proteine per ${p.name}`);
+        // un contorno non sta mai da solo: serve un piatto vero o un carboidrato/proteina
+        check(!mine.length || mine.some((it) => (it.food ? it.food.group !== 'veg' : recipeKind(resolveItem(it, map)) !== 'contorno')), `${slot}: solo contorni per ${p.name}`);
+        // niente zuppe o vellutate d'asporto
+        check(mine.every((it) => !it.recipeId || !(!map.get(it.recipeId).takeaway === false && /vellutat|zupp|minestr/i.test(map.get(it.recipeId).title)) || !rules[0].days.includes(d) || slot !== 'Pranzo'), 'zuppa a pranzo d\'asporto');
       }
     }
     for (const slot of ['Pranzo', 'Cena']) for (const it of days[d][slot]?.items || []) {

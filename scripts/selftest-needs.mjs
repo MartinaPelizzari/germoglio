@@ -41,6 +41,7 @@ const cases = [
   { name: 'vegana allenata', diet: 'vegan', body: { ...base, sex: 'M', weight: 75, height: 180, workouts: 4, minutes: 60, intensity: 'moderate' } },
   { name: 'vegetariana senza lattosio', diet: 'vegetarian', intolerances: ['lattosio'], body: base },
   { name: 'pescetariana senza glutine', diet: 'pescetarian', intolerances: ['glutine'], body: { ...base, goal: 'lose' } },
+  { name: 'padre 110 kg magazziniere', diet: 'omnivore', body: { sex: 'M', age: 45, height: 175, weight: 110, work: 'active', workouts: 0, goal: 'lose' } },
   { name: 'uomo onnivoro in aumento', diet: 'omnivore', body: { sex: 'M', age: 25, height: 182, weight: 72, work: 'light', workouts: 3, minutes: 60, intensity: 'intense', goal: 'gain' } },
 ];
 for (const c of cases) {
@@ -49,7 +50,7 @@ for (const c of cases) {
   console.log(`\n${c.name}: obiettivo ${needs.kcal} kcal, stima del piano ${estKcal} kcal`);
   console.log('  Pranzo:', texts.Pranzo.replace(/\n+/g, ' + '));
   console.log('  Cena:', texts.Cena.replace(/\n+/g, ' + '));
-  check(needs.kcal > 2500 ? estKcal > needs.kcal * 0.7 : Math.abs(estKcal - needs.kcal) < needs.kcal * 0.1, `${c.name}: stima lontana dal fabbisogno (${estKcal} vs ${needs.kcal})`);
+  check(Math.abs(estKcal - needs.kcal) < needs.kcal * 0.05, `${c.name}: stima lontana dal fabbisogno (${estKcal} vs ${needs.kcal})`);
   check(SLOTS.every((s) => meals[s]?.plan?.length), `${c.name}: pasto senza gruppi`);
   const all = Object.values(texts).join('\n');
   if (c.diet === 'vegan') check(!/yogurt\b(?! di soia)|uova|pesce|pollo|carne|formaggio|latte parz/.test(all), 'vegano con prodotti animali');
