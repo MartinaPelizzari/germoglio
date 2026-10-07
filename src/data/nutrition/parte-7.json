@@ -1,0 +1,459 @@
+[
+ {
+  "name": "Crauti",
+  "kcal": 19,
+  "protein": 0.91,
+  "carbs": 4.28,
+  "fat": 0.14,
+  "fiber": 2.9,
+  "sugars": 1.78,
+  "satFat": 0.034,
+  "iron": 1.47,
+  "calcium": 30,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 169279: Sauerkraut, canned, solids and liquids",
+   "url": "https://fdc.nal.usda.gov/food-details/169279/nutrients"
+  },
+  "note": "Crauti in scatola con liquido"
+ },
+ {
+  "name": "Porri",
+  "kcal": 35,
+  "protein": 2.1,
+  "carbs": 5.2,
+  "fat": 0.1,
+  "fiber": 2.9,
+  "sugars": 5.2,
+  "satFat": null,
+  "iron": 0.8,
+  "calcium": 54,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Porri, crudi (cod. 005650)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005650"
+  }
+ },
+ {
+  "name": "Agnello (spalla o cosciotto)",
+  "kcal": 102,
+  "protein": 20.0,
+  "carbs": 0.0,
+  "fat": 2.5,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 1.15,
+  "iron": 2.0,
+  "calcium": 10,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Agnello, coscio, crudo (cod. 104030)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/104030"
+  },
+  "note": "Voce CREA del coscio crudo, usata anche per la spalla. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Baccalà dissalato",
+  "kcal": 95,
+  "protein": 21.6,
+  "carbs": 0.0,
+  "fat": 1.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": null,
+  "iron": 2.3,
+  "calcium": 31,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Merluzzo o nasello, baccalà, ammollato (cod. 121450)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/121450"
+  },
+  "note": "Baccalà ammollato (dissalato)"
+ },
+ {
+  "name": "Sfoglie di pasta all'uovo",
+  "kcal": 288,
+  "protein": 11.3,
+  "carbs": 54.7,
+  "fat": 2.3,
+  "fiber": null,
+  "sugars": null,
+  "satFat": 0.328,
+  "iron": 3.35,
+  "calcium": 15,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 169727: Pasta, fresh-refrigerated, plain, as purchased",
+   "url": "https://fdc.nal.usda.gov/food-details/169727/nutrients"
+  },
+  "note": "Sostituzione: pasta fresca all'uovo non cotta (USDA), come equivalente delle sfoglie; valori per prodotto crudo"
+ },
+ {
+  "name": "Funghi porcini secchi",
+  "kcal": 304,
+  "protein": 30,
+  "carbs": 26,
+  "fat": 4.4,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Coop, Funghi porcini secchi: valori medi per 100 g (scheda FatSecret Italia)",
+   "url": "https://www.fatsecret.it/calorie-nutrizione/coop/funghi-porcini-secchi/100g"
+  },
+  "note": "Valori da etichetta commerciale Coop (solo macronutrienti dichiarati); non esiste una voce CREA per i porcini secchi (CREA riporta solo i crudi, cod. 006030). Valori variabili tra marche"
+ },
+ {
+  "name": "Erbe di Provenza",
+  "kcal": 276,
+  "protein": 9.11,
+  "carbs": 63.9,
+  "fat": 7.43,
+  "fiber": 37.0,
+  "sugars": 1.71,
+  "satFat": 2.73,
+  "iron": 124,
+  "calcium": 1890,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170938: Spices, thyme, dried",
+   "url": "https://fdc.nal.usda.gov/food-details/170938/nutrients"
+  },
+  "note": "Sostituzione: timo secco (USDA) come erba aromatica essiccata più vicina alla miscela; la miscela reale varia per composizione"
+ },
+ {
+  "name": "Emmental",
+  "kcal": 393,
+  "protein": 27.0,
+  "carbs": 1.44,
+  "fat": 31.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 18.2,
+  "iron": 0.13,
+  "calcium": 890,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 171251: Cheese, swiss",
+   "url": "https://fdc.nal.usda.gov/food-details/171251/nutrients"
+  },
+  "note": "Sostituzione: formaggio Swiss USDA, equivalente dell'Emmental"
+ },
+ {
+  "name": "Fave secche decorticate",
+  "kcal": 343,
+  "protein": 25.2,
+  "carbs": 53.6,
+  "fat": 3.0,
+  "fiber": 7.0,
+  "sugars": 4.9,
+  "satFat": 0.64,
+  "iron": 5.0,
+  "calcium": 90,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fave, secche, sgusciate, crude (cod. 004420)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004420"
+  },
+  "note": "Fave secche sgusciate, crude. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Pere",
+  "kcal": 43,
+  "protein": 0.3,
+  "carbs": 8.8,
+  "fat": 0.1,
+  "fiber": 3.8,
+  "sugars": 8.8,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 11,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pere, fresche, senza buccia (cod. 007260)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007260"
+  },
+  "note": "Voce CREA generica 'senza buccia'"
+ },
+ {
+  "name": "Cozze",
+  "kcal": 84,
+  "protein": 11.7,
+  "carbs": 3.4,
+  "fat": 2.7,
+  "fiber": 0.0,
+  "sugars": 0.3,
+  "satFat": 0.81,
+  "iron": 5.8,
+  "calcium": 88,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cozza o mitilo (cod. 127120)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/127120"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Pollo macinato",
+  "kcal": 143,
+  "protein": 17.4,
+  "carbs": 0.04,
+  "fat": 8.1,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 2.3,
+  "iron": 0.82,
+  "calcium": 6,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 171116: Chicken, ground, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/171116/nutrients"
+  },
+  "note": "Pollo macinato crudo"
+ },
+ {
+  "name": "Polpa di coniglio",
+  "kcal": 118,
+  "protein": 19.9,
+  "carbs": 0.0,
+  "fat": 4.3,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 1.89,
+  "iron": 1.0,
+  "calcium": 22,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Coniglio intero, crudo (cod. 107010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/107010"
+  },
+  "note": "Voce CREA del coniglio intero crudo (parte edibile), equivalente della polpa. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Pasta di farro",
+  "kcal": 344,
+  "protein": 12,
+  "carbs": 68,
+  "fat": 1.8,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Alce Nero, Spaghetti di farro: valori per 100 g (scheda FatSecret Italia)",
+   "url": "https://www.fatsecret.it/calorie-nutrizione/alce-nero/spaghetti-di-farro/100g"
+  },
+  "note": "Valori da etichetta Alce Nero (pasta di farro secca, solo macronutrienti dichiarati)"
+ },
+ {
+  "name": "Fave sgusciate cotte",
+  "kcal": 146,
+  "protein": 11.0,
+  "carbs": 22.4,
+  "fat": 1.3,
+  "fiber": 3.0,
+  "sugars": 2.1,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fave, secche, sgusciate, cotte, bollite (cod. 004425)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/004425"
+  },
+  "note": "Ferro e calcio non riportati da CREA per questa voce"
+ },
+ {
+  "name": "Pecorino",
+  "kcal": 404,
+  "protein": 28.8,
+  "carbs": 0.2,
+  "fat": 32.0,
+  "fiber": 0.0,
+  "sugars": 0.2,
+  "satFat": null,
+  "iron": 0.6,
+  "calcium": 607,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pecorino (cod. 166050)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/166050"
+  }
+ },
+ {
+  "name": "Linguine",
+  "kcal": 341,
+  "protein": 13.5,
+  "carbs": 72.7,
+  "fat": 1.2,
+  "fiber": 1.7,
+  "sugars": 2.2,
+  "satFat": 0.25,
+  "iron": 1.4,
+  "calcium": 22,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pasta di semola (cod. 000800)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000800"
+  },
+  "note": "Sostituzione: pasta di semola secca (CREA), come equivalente delle linguine; valori per prodotto crudo. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Vongole",
+  "kcal": 65,
+  "protein": 9.8,
+  "carbs": 3.9,
+  "fat": 1.2,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.4,
+  "iron": null,
+  "calcium": 219,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Vongola (cod. 127170)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/127170"
+  },
+  "note": "Ferro non riportato da CREA per questa voce. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Mais per popcorn",
+  "kcal": 357,
+  "protein": 9.2,
+  "carbs": 75.1,
+  "fat": 3.8,
+  "fiber": 2.0,
+  "sugars": 2.5,
+  "satFat": 0.71,
+  "iron": 2.4,
+  "calcium": 15,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mais (cod. 000060)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000060"
+  },
+  "note": "Sostituzione: granella di mais (CREA), equivalente dei chicchi per popcorn; valori per chicchi secchi non scoppiati. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Frutti rossi secchi",
+  "kcal": 308,
+  "protein": 0.17,
+  "carbs": 82.8,
+  "fat": 1.09,
+  "fiber": 5.3,
+  "sugars": 72.6,
+  "satFat": 0.088,
+  "iron": 0.39,
+  "calcium": 9,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 171723: Cranberries, dried, sweetened",
+   "url": "https://fdc.nal.usda.gov/food-details/171723/nutrients"
+  },
+  "note": "Sostituzione: mirtilli rossi secchi zuccherati (USDA), prodotto più vicino ai frutti rossi essiccati; i mix commerciali variano"
+ },
+ {
+  "name": "Erbe aromatiche miste",
+  "kcal": 30,
+  "protein": 3.7,
+  "carbs": 0.0,
+  "fat": 0.6,
+  "fiber": 5.0,
+  "sugars": 0.0,
+  "satFat": null,
+  "iron": 4.2,
+  "calcium": 220,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Prezzemolo, fresco (cod. 006840)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006840"
+  },
+  "note": "Sostituzione: prezzemolo fresco (CREA) come erba aromatica fresca; carboidrati e zuccheri 'tr' (tracce) in CREA, riportati come 0"
+ },
+ {
+  "name": "Songino",
+  "kcal": 17,
+  "protein": 1.1,
+  "carbs": 2.2,
+  "fat": 0.1,
+  "fiber": 1.5,
+  "sugars": 2.2,
+  "satFat": null,
+  "iron": 0.9,
+  "calcium": 46,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Lattuga, da taglio, fresca (cod. 005430)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005430"
+  },
+  "note": "Sostituzione: lattuga da taglio fresca (CREA): nessuna voce CREA per songino/valerianella"
+ },
+ {
+  "name": "Formaggio vegetale tipo feta",
+  "kcal": 305,
+  "protein": 0,
+  "carbs": 11,
+  "fat": 29,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Violife, Greek White (alternativa vegetale alla feta): valori per 100 g (scheda FatSecret Italia)",
+   "url": "https://www.fatsecret.it/calorie-nutrizione/violife/greek-white/100g"
+  },
+  "note": "Valori da etichetta Violife Greek White (a base di olio di cocco, amido); solo macronutrienti dichiarati nella scheda aperta"
+ },
+ {
+  "name": "Misticanza",
+  "kcal": 16,
+  "protein": 1.5,
+  "carbs": 1.4,
+  "fat": 0.2,
+  "fiber": 1.6,
+  "sugars": 1.4,
+  "satFat": null,
+  "iron": 0.5,
+  "calcium": 38,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Lattughino, fresco (cod. 005435)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005435"
+  },
+  "note": "Sostituzione: lattughino fresco (CREA) come equivalente di insalata mista da taglio"
+ },
+ {
+  "name": "Crema di lenticchie e curry",
+  "kcal": 275,
+  "protein": 6.2,
+  "carbs": 17.5,
+  "fat": 19.2,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "NOA, Crema spalmabile lenticchie e curry: valori per 100 g (scheda FatSecret Italia)",
+   "url": "https://www.fatsecret.it/calorie-nutrizione/noa/crema-spalmabile-lenticchie-e-curry/100g"
+  },
+  "note": "Valori da etichetta NOA (solo macronutrienti dichiarati); prodotto tipico, le ricette variano"
+ },
+ {
+  "name": "Acqua di cottura della pasta",
+  "kcal": 0,
+  "protein": 0.0,
+  "carbs": 0.0,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.0,
+  "iron": 0.0,
+  "calcium": 3,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 175103: Beverages, water, tap, municipal",
+   "url": "https://fdc.nal.usda.gov/food-details/175103/nutrients"
+  },
+  "note": "Sostituzione: acqua di rubinetto (USDA); l'acqua di cottura contiene tracce di amido e sale non quantificabili in modo affidabile"
+ },
+ {
+  "name": "Crespelle",
+  "kcal": 187,
+  "protein": 7.6,
+  "carbs": 35.7,
+  "fat": 1.1,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Surgital, Plain crêpes 17 cm (Pastificio Bacchini): valori per 100 g",
+   "url": "https://www.surgital.it/en/product/plain-crespelle/"
+  },
+  "note": "Valori da etichetta Surgital (crespelle nature surgelate/fresche; ingredienti: latte, farina, uova, sale, zucchero); solo macronutrienti dichiarati"
+ }
+]

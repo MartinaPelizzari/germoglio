@@ -1,0 +1,2049 @@
+[
+  {
+    "id": "colazione-fn-pancake-integrali-albumi",
+    "title": "Pancake integrali agli albumi e limone",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pancake",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Albumi",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Fragole",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Marmellata di fragole",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "fruit"
+      },
+      {
+        "name": "Cocco disidratato",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Mescola la farina integrale con il lievito e la scorza di limone grattugiata.",
+      "Aggiungi gli albumi e lavora con una frusta finché non restano grumi, poi lascia riposare la pastella una decina di minuti.",
+      "Scalda una padella antiaderente leggermente unta e cuoci piccoli mestoli di pastella a fuoco medio-basso, girandoli quando compaiono le bollicine.",
+      "Servi i pancake con le fragole a pezzetti, la marmellata e una spolverata di cocco."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Il ricettario di Timo e Lavanda",
+      "url": "https://blog.giallozafferano.it/ilricettariotimoelavanda/ricetta-pancakes-integrali-senza-zucchero/"
+    },
+    "notes": "La pastella si conserva in frigorifero fino a due giorni."
+  },
+  {
+    "id": "colazione-fn-pancake-avena-senza-glutine",
+    "title": "Pancake di avena senza glutine",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pancake",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di avena senza glutine",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte di avena",
+        "qty": 100,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito per dolci senza glutine",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla o sbatti l'uovo con il latte di avena e l'olio fino a ottenere un liquido omogeneo.",
+      "Unisci la farina di avena certificata senza glutine, il lievito e un pizzico di sale e mescola senza lavorare troppo.",
+      "Cuoci piccoli dischi di impasto in una padella antiaderente appena unta, a fuoco medio-basso, girandoli quando si formano le bollicine.",
+      "Impila i pancake e completa con i mirtilli."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Timo e lenticchie",
+      "url": "https://blog.giallozafferano.it/timoelenticchie/ricetta-pancake-di-avena-integrale-senza-zuccheri/"
+    },
+    "notes": "Si conservano 2-3 giorni in frigorifero o si congelano."
+  },
+  {
+    "id": "colazione-fn-pancake-vegani-farro",
+    "title": "Pancake vegani di farro integrale",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "pancake",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di farro integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 60,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Acqua frizzante",
+        "qty": 25,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di mais",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Mescola in una ciotola la farina di farro, il lievito, lo zucchero, la cannella e un pizzico di sale.",
+      "Versa il latte di soia, l'acqua frizzante e l'olio e amalgama fino a ottenere un impasto denso.",
+      "Scalda una padella leggermente unta e cuoci cucchiaiate di impasto a fuoco moderato, un paio di minuti per lato.",
+      "Servi i pancake caldi con i frutti di bosco."
+    ],
+    "source": {
+      "name": "My-personaltrainer.it",
+      "url": "https://www.my-personaltrainer.it/Tv/Ricette/Dolci_Dessert/pancakes-vegani.html"
+    }
+  },
+  {
+    "id": "colazione-fn-pancake-ceci-salati",
+    "title": "Pancake salati di farina di ceci con spinaci e parmigiano",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 25,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pancake salati",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di ceci",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 80,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Parmigiano",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "protein"
+      },
+      {
+        "name": "Lievito in polvere senza glutine",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti l'uovo con il latte, poi unisci il parmigiano grattugiato e un pizzico di sale.",
+      "Setaccia la farina di ceci con il lievito e incorporala al liquido, mescolando fino a eliminare i grumi.",
+      "Fai appassire gli spinaci in padella con l'olio, strizzali, tritali e uniscili all'impasto.",
+      "Cuoci piccoli mestoli di impasto in una padella antiaderente, a fuoco medio, girandoli quando compaiono le bollicine."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Allacciate il grembiule",
+      "url": "https://blog.giallozafferano.it/allacciateilgrembiule/pancake-con-farina-di-ceci/"
+    },
+    "notes": "La ricetta di partenza è per pancake dolci o salati: qui la versione salata, con spinaci. Verifica che il lievito sia senza glutine."
+  },
+  {
+    "id": "colazione-fn-crepes-banana-yogurt",
+    "title": "Crêpes alla banana e yogurt senza uova",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "crêpes",
+      "senza uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina 00",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 140,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Yogurt bianco",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Banana",
+        "qty": 30,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Lamponi",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Frulla la banana con lo yogurt, l'olio e il latte fino a ottenere un liquido liscio.",
+      "Aggiungi le due farine e frulla ancora, poi lascia riposare la pastella una decina di minuti.",
+      "Scalda una padella antiaderente appena unta, versa un mestolino di pastella e inclinala per stenderla, cuocendo circa un minuto per lato.",
+      "Farcisci le crêpes con i lamponi e ripiegale."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Inventa ricette",
+      "url": "https://blog.giallozafferano.it/inventaricette/ricetta-crepes-senza-uova/"
+    },
+    "notes": "Con la ricetta originale si ottengono circa 5 crêpes: qui sono previste 2 o 3."
+  },
+  {
+    "id": "colazione-fn-waffle-yogurt-crusca-avena",
+    "title": "Waffle allo yogurt e crusca d'avena",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🧇",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "waffle",
+      "fibre"
+    ],
+    "ingredients": [
+      {
+        "name": "Crusca d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di farro",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 65,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Sbatti l'uovo con lo yogurt greco e lo sciroppo d'acero finché il composto è omogeneo.",
+      "Aggiungi la crusca, la farina di farro e il lievito e mescola fino a un impasto consistente.",
+      "Scalda la piastra per waffle, ungila appena e cuoci l'impasto fino a doratura.",
+      "Servi con i frutti di bosco freschi."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/waffle-allo-yogurt-e-crusca-davena/"
+    },
+    "notes": "I waffle freddi si congelano e si scaldano nel tostapane."
+  },
+  {
+    "id": "colazione-fn-waffle-albumi-yogurt-greco",
+    "title": "Waffle leggeri con albumi e yogurt greco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🧇",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "waffle",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Albumi",
+        "qty": 35,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 3,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Farina di avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pesca",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Unisci lo yogurt greco e gli albumi, poi aggiungi l'olio.",
+      "Incorpora la farina di avena setacciata con il lievito e mescola fino a eliminare i grumi.",
+      "Cuoci l'impasto nella piastra per waffle leggermente unta, finché è ben dorato.",
+      "Servi con la pesca a fettine e un filo di sciroppo d'acero."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Le ricette di Libellula",
+      "url": "https://blog.giallozafferano.it/ricettedilibellula/ricetta-waffle-albumi-yogurt/"
+    },
+    "notes": "Senza condimenti si conservano 2 giorni in frigorifero; scaldali prima di servirli."
+  },
+  {
+    "id": "colazione-fn-ciambellone-integrale-yogurt-cacao",
+    "title": "Ciambellone integrale allo yogurt e cacao",
+    "category": "Colazione",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍩",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "ciambellone",
+      "senza burro"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 6,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 22,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 10,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.4,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt bianco",
+        "qty": 15,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Monta i tuorli con lo zucchero, poi aggiungi lo yogurt e l'olio a filo.",
+      "Mescola la farina integrale con il cacao e il lievito, incorporali al composto e unisci la scorza di limone.",
+      "Monta gli albumi a neve e incorporali con delicatezza, dal basso verso l'alto.",
+      "Versa in uno stampo da ciambella oliato e cuoci a 180 °C in forno statico per circa 40 minuti, controllando con uno stecchino.",
+      "Lascia intiepidire prima di sformare e servi una fetta con un bicchiere di latte."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/ricetta-ciambellone-integrale-allo-yogurt-e-cacao/"
+    },
+    "notes": "Ricetta pensata per 8 fette, con zucchero ridotto rispetto all'originale. Quantità per una fetta."
+  },
+  {
+    "id": "colazione-fn-muffin-integrali-mele-carote",
+    "title": "Muffin integrali con mele e carote",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🧁",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "muffin",
+      "senza burro"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Carota",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 20,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 15,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbuccia e grattugia la mela e la carota e bagnale con qualche goccia di succo di limone.",
+      "Monta l'uovo con lo zucchero fino a renderlo spumoso e aggiungi l'olio.",
+      "Setaccia la farina con il lievito e la cannella e incorporala al composto, poi unisci mela e carota.",
+      "Riempi due pirottini per due terzi e cuoci a 180 °C per circa 20 minuti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Le ricette di Simo",
+      "url": "https://blog.giallozafferano.it/lericettedisimo/muffin-integrali-con-mele-ecarote/"
+    },
+    "notes": "Quantità per 2 muffin. Si conservano 3-4 giorni in contenitore ermetico e si possono congelare."
+  },
+  {
+    "id": "colazione-fn-muffin-carote-senza-glutine-vegani",
+    "title": "Muffin vegani alle carote e arancia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🧁",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "muffin",
+      "senza glutine",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di grano saraceno",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Eritritolo",
+        "qty": 18,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Olio di cocco",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Acqua",
+        "qty": 15,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Carota",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo d'arancia",
+        "qty": 30,
+        "unit": "ml",
+        "group": "fruit"
+      },
+      {
+        "name": "Lievito per dolci senza glutine",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di arancia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava, pela e trita finemente la carota.",
+      "Mescola in una ciotola la farina di grano saraceno, l'eritritolo, il lievito, un pizzico di sale e la scorza di arancia.",
+      "Emulsiona l'olio di cocco sciolto con l'acqua e il succo d'arancia, versa sul composto asciutto e unisci la carota.",
+      "Distribuisci in tre stampini da muffin e cuoci a 180 °C in forno ventilato per circa 20 minuti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Timo e lenticchie",
+      "url": "https://blog.giallozafferano.it/timoelenticchie/muffin-alle-carote-senza-uova-e-burro/"
+    },
+    "notes": "Quantità per 3 muffin. Usa farina e lievito certificati senza glutine."
+  },
+  {
+    "id": "colazione-fn-banana-bread-integrale-noci",
+    "title": "Banana bread senza burro con noci",
+    "category": "Colazione",
+    "time": "lunga",
+    "minutes": 65,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "banana bread",
+      "senza burro"
+    ],
+    "ingredients": [
+      {
+        "name": "Banana",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Farina 0",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 30,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 10,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Noci",
+        "qty": 12,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiaccia le banane con una forchetta e uniscile all'uovo, all'olio e al latte.",
+      "Aggiungi le farine setacciate con il lievito e la cannella, poi le noci tritate grossolanamente.",
+      "Versa in uno stampo da plumcake oliato e cuoci a 180 °C in forno statico per circa 50 minuti.",
+      "Lascia raffreddare, poi taglia una fetta spessa."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Foodiamo",
+      "url": "https://blog.giallozafferano.it/foodiamo/ricetta-banana-bread-senza-zucchero-e-senza-burro/"
+    },
+    "notes": "Nessuno zucchero aggiunto: dolcifica con le banane ben mature. Quantità per una fetta di un plumcake da 6."
+  },
+  {
+    "id": "colazione-fn-banana-bread-vegano-cioccolato",
+    "title": "Banana bread vegano con cioccolato fondente",
+    "category": "Colazione",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍞",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "banana bread",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 35,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 35,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 15,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 15,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 12,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla o schiaccia le banane e mescolale con il latte di soia, l'olio e lo zucchero.",
+      "Incorpora le due farine setacciate con il lievito, mescolando solo finché l'impasto è omogeneo.",
+      "Versa nello stampo da plumcake, decora con scaglie di cioccolato e qualche rondella di banana.",
+      "Cuoci a 180 °C in forno statico per circa 40 minuti, finché lo stecchino esce pulito."
+    ],
+    "source": {
+      "name": "Sky TG24",
+      "url": "https://tg24.sky.it/lifestyle/ricette/banana-bread-light-vegano-ricetta"
+    },
+    "notes": "Quantità per una fetta, con zucchero ridotto."
+  },
+  {
+    "id": "colazione-fn-biscotti-integrali-limone",
+    "title": "Biscotti integrali al limone da inzuppo",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍪",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "biscotti",
+      "senza burro"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 35,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 10,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 9,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Monta l'uovo con lo zucchero, la scorza di limone, l'olio e un pizzico di sale.",
+      "Aggiungi la farina con il lievito e lavora fino a ottenere una frolla omogenea.",
+      "Stendi l'impasto a circa 5 mm tra due fogli di carta forno e ricava i biscotti con uno stampino.",
+      "Cuoci a 170 °C in forno statico per circa 18 minuti, poi lascia raffreddare e servi con il latte."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Dulcis in forno",
+      "url": "https://blog.giallozafferano.it/dulcisinforno/biscotti-integrali/"
+    },
+    "notes": "Quantità per circa 5 biscotti. Con la dose intera se ne fanno 18; si conservano un mese in una scatola di latta."
+  },
+  {
+    "id": "colazione-fn-clafoutis-pesche",
+    "title": "Clafoutis individuale alle pesche",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "clafoutis",
+      "senza burro"
+    ],
+    "ingredients": [
+      {
+        "name": "Pesca",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 80,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava le pesche, tagliale a spicchi e disponile in una pirofila individuale appena unta.",
+      "Sbatti l'uovo con lo zucchero, aggiungi il latte e poi la farina setacciata e la scorza di limone, finché la pastella è liscia.",
+      "Versa la pastella sulla frutta.",
+      "Cuoci a 180 °C in forno statico per 25-30 minuti, finché è dorato e rassodato."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cucina di Chicca",
+      "url": "https://blog.giallozafferano.it/cucinadichicca/claufoutis-alle-pesche-dolce-senza-burro-facile-leggero/"
+    },
+    "notes": "La ricetta di partenza prevede più zucchero e un po' di rum. Qui le dosi sono per un tortino da una persona; con le pere funziona allo stesso modo."
+  },
+  {
+    "id": "colazione-fn-torta-carote-integrale-noci",
+    "title": "Torta di carote integrale con noci",
+    "category": "Colazione",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🥕",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "torta",
+      "senza burro"
+    ],
+    "ingredients": [
+      {
+        "name": "Carota",
+        "qty": 45,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 22,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchero di canna integrale",
+        "qty": 20,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Noci",
+        "qty": 22,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 14,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.4,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "g",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla le noci fino a ridurle in polvere grossolana, poi frulla anche le carote a pezzetti.",
+      "Monta le uova con lo zucchero fino a ottenere un composto spumoso e aggiungi l'olio a filo.",
+      "Incorpora le carote, poi la farina setacciata con il lievito, le noci e la scorza di limone.",
+      "Versa in uno stampo da 22 cm e cuoci a 180 °C in forno statico per 40-45 minuti.",
+      "Lascia raffreddare e taglia una fetta."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/torta-di-carote-integrale.html"
+    },
+    "notes": "Quantità per una fetta di una torta da 12. Resta morbida per diversi giorni."
+  },
+  {
+    "id": "colazione-fn-torta-carote-mandorle-senza-glutine",
+    "title": "Torta di carote e mandorle senza glutine",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 55,
+    "emoji": "🥕",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "torta",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Carota",
+        "qty": 25,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mandorle pelate",
+        "qty": 25,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Albumi",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 20,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Amido di mais",
+        "qty": 6,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Scorza di arancia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla separatamente le mandorle, fino a ridurle in farina, e le carote, fino a una purea.",
+      "Monta gli albumi con lo zucchero a neve molto ferma e incorpora l'amido di mais.",
+      "Aggiungi con una spatola, piano, le mandorle, la scorza d'arancia e le carote, senza smontare il composto.",
+      "Versa in uno stampo da 24 cm foderato e cuoci a 180 °C in forno statico per circa 30 minuti.",
+      "Raffredda completamente prima di tagliare."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/torta-di-carote-con-soli-albumi.html"
+    },
+    "notes": "Senza glutine, burro, olio e lattosio. Quantità per una fetta di una torta da 8-10, con zucchero leggermente ridotto."
+  },
+  {
+    "id": "colazione-fn-baked-oatmeal-mela-noci",
+    "title": "Porridge al forno con mela e noci",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍎",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "baked oatmeal",
+      "cotto al forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 50,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Mela",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 6,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio di cocco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Ammolla l'uvetta in poca acqua o succo d'arancia per almeno un'ora, poi scolala.",
+      "Mescola latte, uovo e olio, poi unisci i fiocchi d'avena, l'uvetta, il lievito e la cannella.",
+      "Versa nella pirofila unta e compatta, poi distribuisci in superficie la mela a dadini e le noci.",
+      "Cuoci a 180 °C in forno statico per circa 35 minuti, finché la superficie è dorata."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Valeria Ciccotti",
+      "url": "https://blog.giallozafferano.it/valeriaciccotti/torta-porridge-al-forno/"
+    },
+    "notes": "Quantità per una porzione di una teglia da 6. Si conserva 3 giorni."
+  },
+  {
+    "id": "colazione-fn-granola-forno-yogurt-soia",
+    "title": "Granola al forno con yogurt di soia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "granola",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Noci",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Mirtilli essiccati",
+        "qty": 8,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Mescola i fiocchi d'avena con mandorle e noci tritate grossolanamente.",
+      "Scalda lo sciroppo d'acero con l'olio e un cucchiaio d'acqua, versa sul mix e amalgama bene.",
+      "Stendi su una teglia con carta forno e cuoci a 180 °C per 10-15 minuti, mescolando a metà.",
+      "Lascia raffreddare del tutto, unisci i mirtilli essiccati e servi sopra lo yogurt di soia."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/granola.html"
+    },
+    "notes": "La granola si prepara in dose più grande: si conserva circa due settimane in un contenitore ermetico. Qui la quantità è per una porzione."
+  },
+  {
+    "id": "colazione-fn-granola-senza-glutine-miglio",
+    "title": "Granola senza glutine al miele con yogurt",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "granola",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi di miglio",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Riso soffiato",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Quinoa soffiata",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 8,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Mescola i fiocchi di miglio, il riso e la quinoa soffiati, la frutta secca tritata e l'uvetta.",
+      "Scalda miele, sciroppo d'acero e poca acqua fino a ottenere uno sciroppo fluido e versalo sui cereali.",
+      "Distribuisci su carta forno in uno strato sottile e cuoci a 160 °C ventilato per circa 20 minuti, mescolando ogni 5.",
+      "Fai raffreddare, poi servi sopra lo yogurt greco."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Dolci pasticci di Fra",
+      "url": "https://blog.giallozafferano.it/dolcipasticcidifra/ricetta-granola-senza-glutine-fatta-in-casa/"
+    },
+    "notes": "Verifica che cereali soffiati e fiocchi siano certificati senza glutine. Quantità per una porzione; la granola si conserva 3-4 settimane."
+  },
+  {
+    "id": "colazione-fn-barrette-cereali-frutta-secca",
+    "title": "Barrette ai cereali e frutta secca",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍫",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "barrette",
+      "da portare"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di farro",
+        "qty": 8,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Frutta secca mista",
+        "qty": 30,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Mirtilli essiccati",
+        "qty": 7,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Semi di girasole",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Miele",
+        "qty": 20,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola i fiocchi d'avena, la farina di farro, la frutta secca tritata, i mirtilli e i semi.",
+      "Unisci miele e sciroppo d'acero e amalgama finché tutto è ben legato.",
+      "Stendi il composto in una teglia con carta forno, pressalo bene e livellalo.",
+      "Cuoci a 180 °C per 20-25 minuti fino a doratura, lascia raffreddare del tutto e taglia le barrette."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/barrette-ai-cereali-e-frutta-secca.html"
+    },
+    "notes": "Quantità per 2 barrette. Senza latte né uova."
+  },
+  {
+    "id": "colazione-fn-frittelle-mele-forno",
+    "title": "Frittelle di mele frullate al forno",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍎",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "frittelle",
+      "al forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fecola di patate",
+        "qty": 8,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 12,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 10,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbuccia le mele, eliminando il torsolo, e frullale fino a ottenere una purea liscia.",
+      "Sbatti l'uovo con lo zucchero, aggiungi l'olio e la purea di mele.",
+      "Incorpora farina, fecola, lievito e scorza di limone fino a un composto cremoso.",
+      "Forma 3 palline su una teglia con carta forno e cuoci a 180 °C per 18-20 minuti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Ricette pane e dolci",
+      "url": "https://blog.giallozafferano.it/ricettepanedolci/frittelle-con-mele-frullate/"
+    },
+    "notes": "Con la farina 00 della ricetta originale sono più chiare e soffici. Si conservano 2 giorni."
+  },
+  {
+    "id": "colazione-fn-mele-forno-uvetta-pinoli",
+    "title": "Mele al forno con uvetta, pinoli e yogurt di soia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 55,
+    "emoji": "🍎",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "mele al forno",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 180,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 10,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Pinoli",
+        "qty": 7,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Metti l'uvetta a bagno in acqua tiepida per 10 minuti, poi scolala.",
+      "Lava la mela e togli il torsolo senza bucare il fondo.",
+      "Mescola uvetta, pinoli, zucchero e cannella e riempi la cavità.",
+      "Sistema la mela in una pirofila con poca acqua e il succo di limone sul fondo e cuoci a 180 °C per 35-40 minuti, finché è morbida.",
+      "Servila tiepida con lo yogurt di soia."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Anna Torte",
+      "url": "https://blog.giallozafferano.it/annatorte/ricetta-mele-al-forno-ripiene-di-uvetta-pinoli-e-cannella/"
+    },
+    "notes": "Nella ricetta di partenza lo zucchero è circa 40 g per 6 mele; qui è ridotto."
+  },
+  {
+    "id": "colazione-fn-risolatte-cannella-arancia",
+    "title": "Risolatte alla cannella e arancia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "budino di riso",
+      "cotto"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 12,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di arancia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Albicocche secche",
+        "qty": 20,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Scalda il latte con lo zucchero e la scorza d'arancia fino a sfiorare il bollore.",
+      "Aggiungi il riso e cuoci a fuoco dolce per circa 30 minuti, mescolando di tanto in tanto.",
+      "Elimina la scorza, versa il risolatte in una ciotola e lascialo intiepidire.",
+      "Spolvera con la cannella e completa con le albicocche secche a pezzetti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Valeria Ciccotti",
+      "url": "https://blog.giallozafferano.it/valeriaciccotti/risolatte/"
+    },
+    "notes": "Si conserva due giorni in frigorifero in un contenitore ermetico. Con latte di mandorla o di cocco diventa vegano."
+  },
+  {
+    "id": "colazione-fn-muffin-salati-zucchine-scamorza",
+    "title": "Muffin salati con zucchine e scamorza",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🧁",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "muffin salati",
+      "da portare"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Scamorza",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.33,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 30,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Lievito per torte salate",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti l'uovo con l'olio e il latte, poi aggiungi un pizzico di sale.",
+      "Incorpora le farine setacciate con il lievito fino a un impasto liscio.",
+      "Taglia le zucchine a rondelle sottili e la scamorza a dadini e uniscile all'impasto.",
+      "Distribuisci in 2 pirottini riempiendoli per due terzi e cuoci a 180 °C per 20-25 minuti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog La cucina di Vane",
+      "url": "https://blog.giallozafferano.it/lacucinadivane/ricetta-muffin-salati-con-zucchine-e-scamorza/"
+    },
+    "notes": "Quantità per 2 muffin. Scaldali brevemente per far tornare filante il formaggio."
+  },
+  {
+    "id": "colazione-fn-tortine-carote-vegan",
+    "title": "Tortine vegane alle carote e nocciole",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "tortine",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di farro",
+        "qty": 45,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina di riso",
+        "qty": 8,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carota",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchero di canna integrale",
+        "qty": 18,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Latte di riso",
+        "qty": 25,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 12,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Scorza di arancia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Lievito per dolci",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Grattugia le carote e mescolale con l'olio e il latte di riso.",
+      "Aggiungi le nocciole tritate, la scorza d'arancia, la cannella e lo zucchero.",
+      "Incorpora le farine con il lievito fino a ottenere un impasto cremoso.",
+      "Versa in 2 pirottini e cuoci a 180 °C ventilato per 25-30 minuti, fino a doratura."
+    ],
+    "source": {
+      "name": "Greenme",
+      "url": "https://www.greenme.it/salute-e-alimentazione/mangiare-sostenibile/tortine-carote-ricetta-vegan/"
+    },
+    "notes": "Quantità per 2 tortine. Si conservano 3 giorni."
+  },
+  {
+    "id": "colazione-fn-frittata-albumi-verdure",
+    "title": "Frittata di albumi con zucchine e pomodorini",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "salato",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Albumi",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori ciliegini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Erba cipollina",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le zucchine a rondelle sottili e i pomodorini a metà.",
+      "Scalda l'olio in una padella antiaderente e cuoci le zucchine per 4-5 minuti, aggiungendo i pomodorini alla fine.",
+      "Sbatti gli albumi con l'uovo e un pizzico di sale, versali sulle verdure e cuoci a fuoco basso con il coperchio finché è rassodata.",
+      "Girala o finiscila sotto il grill, poi servila con erba cipollina e il pane integrale."
+    ],
+    "source": null,
+    "notes": "Si può portare in ufficio e mangiare anche tiepida."
+  },
+  {
+    "id": "colazione-fn-crepes-integrali-banana-mandorle",
+    "title": "Crêpes integrali vegane con banana e crema di mandorle",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "crêpes",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 120,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Crema di mandorle",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola la farina integrale con il latte di soia, l'olio e un pizzico di sale, sbattendo fino a una pastella liscia e fluida; falla riposare 15 minuti.",
+      "Scalda una padella antiaderente leggermente unta e cuoci 2 crêpes, un minuto per lato.",
+      "Spalma la crema di mandorle sulle crêpes e aggiungi la banana a rondelle.",
+      "Chiudile a ventaglio e spolverizza con la cannella."
+    ],
+    "source": null,
+    "notes": "Con la farina di grano saraceno diventano senza glutine, se i prodotti sono certificati."
+  },
+  {
+    "id": "colazione-fn-semolino-soia-pera",
+    "title": "Budino di semolino al latte di soia con pera",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 20,
+    "emoji": "🍐",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "budino",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Semolino",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pera",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scalda il latte di soia con la scorza di limone e lo sciroppo d'acero senza farlo bollire.",
+      "Versa a pioggia il semolino mescolando con la frusta e cuoci a fuoco basso per 3-4 minuti, finché si addensa.",
+      "Versa nella ciotola o in uno stampino e lascia intiepidire.",
+      "Servi con la pera a cubetti e le mandorle tritate."
+    ],
+    "source": null,
+    "notes": "Può essere preparato la sera prima e conservato in frigorifero."
+  }
+]

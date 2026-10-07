@@ -1,0 +1,3156 @@
+[
+  {
+    "id": "pranzo-pe-lasagne-verdure",
+    "title": "Lasagne di verdure con besciamella leggera",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 65,
+    "emoji": "🥘",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "forno",
+      "verdure",
+      "weekend"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta per lasagne",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia a cubetti piccoli zucchine, carote e cipolla e cuocili in padella con l'olio e i piselli per una decina di minuti, coperti, finché sono teneri. Sala e lascia intiepidire.",
+      "Prepara una besciamella leggera: scalda il latte, aggiungi la farina setacciata mescolando con la frusta e cuoci a fuoco dolce fino a un velo cremoso, con sale e un po' di noce moscata.",
+      "Scotta le sfoglie di pasta per un minuto in acqua salata, poi stendile su un canovaccio.",
+      "In una pirofila alterna besciamella, pasta, verdure e parmigiano, fino a esaurire gli ingredienti, chiudendo con besciamella e formaggio.",
+      "Cuoci a 180 gradi per circa 30 minuti, finché la superficie è dorata. Lascia riposare 10 minuti prima di tagliare."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Piatti pronti in un attimo",
+      "url": "https://blog.giallozafferano.it/piattiprontiinunattimo/lasagne-alle-verdure/"
+    },
+    "notes": "Le dosi sono riportate a una porzione: per una teglia moltiplica per il numero di persone. Si conserva 2 giorni in frigorifero e si scalda bene."
+  },
+  {
+    "id": "cena-pe-parmigiana-leggera",
+    "title": "Parmigiana di melanzane leggera al forno",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 75,
+    "emoji": "🍆",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "forno",
+      "melanzane",
+      "senza frittura"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 250,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affetta le melanzane a rondelle di mezzo centimetro, salale e lasciale riposare 30 minuti, poi asciugale bene.",
+      "Disponile su una teglia con carta forno, spennellale con un filo d'olio e cuocile a 200 gradi per 20 minuti, girandole a metà, invece di friggerle.",
+      "Prepara il sugo: soffriggi la cipolla tritata, versa la passata, aggiungi il basilico e cuoci 15 minuti.",
+      "In una pirofila alterna sugo, melanzane, mozzarella a dadini e parmigiano, formando due o tre strati.",
+      "Inforna a 200 gradi per 25 minuti, gratina gli ultimi minuti e lascia riposare prima di servire con il pane."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Dulcisinforno",
+      "url": "https://blog.giallozafferano.it/dulcisinforno/parmigiana-di-melanzane-al-forno/"
+    },
+    "notes": "Rispetto alla versione classica le melanzane sono cotte al forno e non fritte: meno olio, stesso risultato filante."
+  },
+  {
+    "id": "cena-pe-polpettone-forno",
+    "title": "Polpettone al forno con patate e fagiolini",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 75,
+    "emoji": "🍖",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "forno",
+      "carne",
+      "weekend"
+    ],
+    "ingredients": [
+      {
+        "name": "Carne macinata di manzo",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Salsiccia",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fagiolini",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Impasta il macinato con la salsiccia sbriciolata, l'uovo, il parmigiano, metà del pangrattato, il prezzemolo, sale e pepe fino a ottenere un composto compatto.",
+      "Modella il polpettone su un foglio di carta forno, premendo bene per non lasciare vuoti, e cospargilo con il pangrattato rimasto.",
+      "Avvolgilo nella carta e cuocilo a 180 gradi per 20 minuti, poi scoprilo e prosegui per altri 30 minuti.",
+      "Nel frattempo taglia le patate a spicchi, condiscile con olio e sale e infornale insieme al polpettone.",
+      "Lessa i fagiolini, condiscili con un filo d'olio e servi il polpettone a fette con i contorni."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Le ricette di Bea",
+      "url": "https://blog.giallozafferano.it/lericettedibea/polpettone-classico-al-forno/"
+    },
+    "notes": "Freddo il giorno dopo è ottimo in un panino o nel contenitore per l'ufficio."
+  },
+  {
+    "id": "cena-pe-arista-patate",
+    "title": "Arista di maiale al forno con patate",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 85,
+    "emoji": "🥩",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "arrosto",
+      "forno",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Arista di maiale",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia carota, cipolla e sedano a cubetti e sbuccia le patate, riducendole a tocchi regolari.",
+      "Rosola l'arista legata in una padella con l'olio e il soffritto per 10 minuti, girandola su tutti i lati.",
+      "Trasferisci in una pirofila con le patate, il vino e il rosmarino, sala e copri con un foglio di alluminio o carta forno.",
+      "Cuoci a 200 gradi per 35-40 minuti, poi togli la copertura e prosegui per altri 20-25 minuti, bagnando con il fondo di cottura.",
+      "Lascia riposare l'arrosto 10 minuti prima di affettarlo e servilo con le patate e l'insalata."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog La cucina di Loredana",
+      "url": "https://blog.giallozafferano.it/lacucinadiloredana/ricetta-arista-al-forno-con-patate/"
+    },
+    "notes": "Il maiale deve arrivare ben cotto: la temperatura interna va oltre i 70 gradi."
+  },
+  {
+    "id": "cena-pe-spezzatino-vitello-piselli",
+    "title": "Spezzatino di vitello con piselli e polenta",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 80,
+    "emoji": "🍲",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "brasato",
+      "carne",
+      "weekend"
+    ],
+    "ingredients": [
+      {
+        "name": "Bocconcini di vitello",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Piselli",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Polenta istantanea",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Trita carota e cipolla e falle appassire nell'olio in una pentola dal fondo spesso.",
+      "Infarina leggermente i bocconcini, uniscili al soffritto e rosolali girandoli spesso per 10 minuti.",
+      "Sfuma con il vino, lascia evaporare, aggiungi la passata e un mestolo d'acqua, copri e cuoci a fuoco dolce per circa 45 minuti.",
+      "Unisci i piselli e prosegui per 15-20 minuti, scoprendo alla fine per restringere il sugo.",
+      "Prepara la polenta istantanea seguendo la confezione e servila con lo spezzatino."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/spezzatino-con-piselli-e-patate/"
+    },
+    "notes": "Il vitello cuoce più in fretta del manzo; se usi il manzo allunga di mezz'ora."
+  },
+  {
+    "id": "cena-pe-involtini-pollo-spinaci-speck",
+    "title": "Involtini di pollo, spinaci e speck al forno",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🍗",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "involtini",
+      "forno",
+      "pollo"
+    ],
+    "ingredients": [
+      {
+        "name": "Petto di pollo a fette",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mozzarella",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Speck",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 180,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salvia",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 20,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Batti le fette di pollo fino a renderle sottili. Lessa gli spinaci, strizzali bene e conditi con sale e un filo d'olio.",
+      "Su ogni fetta distribuisci gli spinaci e la mozzarella a listarelle, poi arrotola.",
+      "Avvolgi ogni involtino con lo speck e fissalo con uno stuzzicadenti insieme a una foglia di salvia.",
+      "Taglia le patate a spicchi, condiscile e disponile in teglia con gli involtini.",
+      "Bagna con il vino e cuoci a 190 gradi per 25-30 minuti, rigirando una volta."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/involtini-di-pollo-e-speck/"
+    }
+  },
+  {
+    "id": "pranzo-pe-arrotolato-tacchino-spinaci",
+    "title": "Arrotolato di tacchino con spinaci e prosciutto cotto",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 75,
+    "emoji": "🦃",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "arrosto",
+      "tacchino",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Fesa di tacchino a fette",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Provola",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Couscous",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 20,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Erbe aromatiche miste",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci gli spinaci in padella finché appassiscono e lasciali raffreddare.",
+      "Stendi le fette di tacchino su un foglio di pellicola, battile appena e condiscile con sale e pepe.",
+      "Distribuisci spinaci, prosciutto e provola a lamelle, poi arrotola aiutandoti con la pellicola e lascia riposare in frigorifero 30 minuti.",
+      "Legalo con lo spago, rosolalo in padella, spostalo in una pirofila, sfuma con il vino e cuoci a 190 gradi per circa 35 minuti.",
+      "Prepara il couscous con acqua bollente salata, sgranalo e servilo con l'arrotolato affettato."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/ricetta-arrotolato-di-tacchino-con-spinaci-e-prosciutto/"
+    },
+    "notes": "Buono anche freddo: si taglia meglio dopo un riposo in frigorifero."
+  },
+  {
+    "id": "cena-pe-agnello-curry-couscous",
+    "title": "Agnello speziato al curry con couscous e uvetta",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 85,
+    "emoji": "🍛",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "agnello",
+      "spezie",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Agnello (spalla o cosciotto)",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cumino",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Couscous",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 10,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia l'agnello a pezzi, massaggialo con curry, cumino e sale e, se hai tempo, lascialo riposare in frigorifero qualche ora.",
+      "Rosola la carne nell'olio in una casseruola, toglila e nello stesso fondo fai appassire la cipolla a fette.",
+      "Rimetti l'agnello, aggiungi la passata e un bicchiere d'acqua, copri e cuoci a fuoco basso per circa un'ora, finché è tenero.",
+      "Unisci le zucchine a pezzi e il latte di cocco e cuoci scoperto per 10 minuti, per addensare.",
+      "Idrata il couscous con la stessa quantità di acqua bollente salata, sgranalo con l'uvetta e servilo con l'agnello e un cucchiaio di yogurt."
+    ],
+    "source": {
+      "name": "ZWILLING, ricette di ispirazione",
+      "url": "https://www.zwilling.com/it/magazine/ricette-di-ispirazione/recipe-culinary-world-middle-east-tajine-curry-lamb-with-couscous.html"
+    },
+    "notes": "Ispirato a una tajine al curry: la marinatura di una notte rende la carne più morbida ma non è indispensabile."
+  },
+  {
+    "id": "pranzo-pe-lasagne-ragu-zucchine",
+    "title": "Lasagne con ragù di manzo e zucchine",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 90,
+    "emoji": "🍝",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "lasagne",
+      "forno",
+      "weekend"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta per lasagne",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carne macinata di manzo",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 120,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 12,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggi la cipolla nell'olio, aggiungi il macinato e rosolalo sgranandolo, poi versa la passata e cuoci a fuoco dolce per 30 minuti.",
+      "Grattugia le zucchine, saltale in padella per 5 minuti e uniscile al ragù negli ultimi minuti.",
+      "Prepara una besciamella leggera con latte, farina e sale, cuocendola finché è vellutata.",
+      "Scotta le sfoglie, poi in una pirofila alterna ragù, besciamella, pasta e parmigiano.",
+      "Inforna a 180 gradi per 30 minuti e lascia riposare 10 minuti prima di servire."
+    ],
+    "source": null,
+    "notes": "Le dosi sono per una porzione: per la teglia moltiplica per il numero di commensali."
+  },
+  {
+    "id": "cena-pe-pollo-cacciatora-polenta",
+    "title": "Pollo alla cacciatora con polenta",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 70,
+    "emoji": "🍗",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "stufato",
+      "pollo",
+      "weekend"
+    ],
+    "ingredients": [
+      {
+        "name": "Cosce di pollo (senza pelle)",
+        "qty": 160,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori pelati",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Polenta istantanea",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Vino bianco",
+        "qty": 30,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Rosola le cosce di pollo nell'olio fino a doratura su tutti i lati e mettile da parte.",
+      "Nello stesso tegame fai appassire cipolla e peperone a pezzetti con il rosmarino.",
+      "Rimetti il pollo, sfuma con il vino e lascialo evaporare.",
+      "Aggiungi i pelati schiacciati, le olive e un po' d'acqua, copri e cuoci a fuoco basso per 40 minuti, girando di tanto in tanto.",
+      "Cuoci la polenta istantanea e servila con il pollo e il suo sugo."
+    ],
+    "source": null
+  },
+  {
+    "id": "cena-pe-branzino-forno-patate",
+    "title": "Branzino al forno con patate, limone e timo",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pesce",
+      "forno",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Branzino (intero)",
+        "qty": 300,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Alloro",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fatti pulire il pesce dal pescivendolo, risciacqualo e asciugalo. Riempi la pancia con aglio, alloro, qualche fetta di limone e un pizzico di sale.",
+      "Affetta le patate a mezzo centimetro e condiscile con olio, sale, pepe e timo.",
+      "Disponi le patate in uno strato unico in una teglia ampia, aggiungi i pomodorini e appoggia sopra il branzino.",
+      "Completa con altre fette di limone e un filo d'olio e cuoci a 180 gradi per 40 minuti.",
+      "Sfiletta il pesce a tavola, eliminando la lisca, e servilo con le patate."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/branzino-al-forno-con-patate/"
+    }
+  },
+  {
+    "id": "cena-pe-baccala-umido-patate-olive",
+    "title": "Baccalà in umido con patate e olive",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pesce",
+      "umido",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Baccalà dissalato",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Polpa di pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Insalata mista",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Controlla il baccalà e togli le lische rimaste, poi taglialo a pezzi. Taglia le patate a dadi non troppo piccoli.",
+      "Fai appassire la cipolla nell'olio, unisci le patate, la polpa di pomodoro e un bicchiere d'acqua, sala poco perché il baccalà è già sapido.",
+      "Aggiungi il baccalà, copri e cuoci a fuoco dolce per 20-25 minuti, rigirando con delicatezza.",
+      "Unisci le olive, cuoci altri 5-10 minuti e termina con prezzemolo tritato e pepe.",
+      "Servi con l'insalata condita con poco olio."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cucina prediletta",
+      "url": "https://blog.giallozafferano.it/cucinaprediletta/ricetta-baccala-in-umido-con-patate-e-olive/"
+    }
+  },
+  {
+    "id": "pranzo-pe-risotto-gamberi-zucchine",
+    "title": "Risotto con gamberi e zucchine",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍤",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "gamberi",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Gamberi",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Alloro",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Acqua",
+        "qty": 400,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sguscia i gamberi, togli il filo intestinale e conserva carapaci e teste: le userai per il brodo.",
+      "Fai bollire gli scarti in acqua con alloro e un pezzetto d'aglio per 15 minuti, poi filtra il brodo e tienilo caldo.",
+      "Rosola le zucchine a dadini con l'aglio nell'olio per 5 minuti, poi elimina l'aglio e tosta il riso.",
+      "Cuoci il riso aggiungendo il brodo a mestoli per circa 10 minuti.",
+      "Unisci i gamberi, cuoci altri 5 minuti, sala e lascia riposare 2 minuti prima di servire."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/risotto-gamberi-e-zucchine/"
+    }
+  },
+  {
+    "id": "cena-pe-orata-cartoccio-carote-couscous",
+    "title": "Orata al cartoccio con carote, limone e couscous",
+    "category": "Cena",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🐠",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "pesce",
+      "cartoccio",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Orata (intera)",
+        "qty": 280,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Carote",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Couscous",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Limone",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Alloro",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Pulisci l'orata, asciugala e riempi la pancia con alloro, rosmarino, un po' di aglio o limone e sale.",
+      "Su un foglio grande di carta forno stendi carote e cipolla a fette sottili, appoggia il pesce e aggiungi fette di limone.",
+      "Condisci con olio, sale e pepe e chiudi bene il cartoccio, poi trasferiscilo su una teglia.",
+      "Cuoci a 180 gradi per 40 minuti.",
+      "Idrata il couscous con acqua bollente salata, sgranalo e servilo con il pesce e le verdure del cartoccio."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/orata-al-cartoccio/"
+    },
+    "notes": "Meglio la carta forno dell'alluminio, soprattutto con il limone."
+  },
+  {
+    "id": "pranzo-pe-cannelloni-ricotta-spinaci",
+    "title": "Cannelloni di ricotta e spinaci al forno",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 80,
+    "emoji": "🥘",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta al forno",
+      "ricotta",
+      "ospiti"
+    ],
+    "ingredients": [
+      {
+        "name": "Sfoglie di pasta all'uovo",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 100,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 10,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Noce moscata",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci gli spinaci in padella con l'olio e l'aglio finché non evapora l'acqua, poi tritali e lasciali raffreddare.",
+      "Mescola spinaci, ricotta setacciata, uovo, metà del parmigiano, noce moscata e sale.",
+      "Ritaglia la pasta in rettangoli, riempili con il ripieno e arrotolali formando i cannelloni.",
+      "Prepara una besciamella leggera con latte, farina e sale. Copri il fondo della teglia con la passata, disponi i cannelloni e velali con la besciamella e il parmigiano.",
+      "Cuoci a 180 gradi per 25 minuti, poi qualche minuto in modalità grill."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/cannelloni-ricotta-e-spinaci-la-ricetta-che-piaceva-anche-a-dannunzio/"
+    },
+    "notes": "Puoi usare le sfoglie fresche già pronte per risparmiare tempo."
+  },
+  {
+    "id": "pranzo-pe-gnocchi-patate-sugo-ceci",
+    "title": "Gnocchi di patate fatti in casa con sugo di pomodoro e ceci",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 80,
+    "emoji": "🥔",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "gnocchi",
+      "fatti in casa",
+      "weekend"
+    ],
+    "ingredients": [
+      {
+        "name": "Patate",
+        "qty": 200,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Farina 00",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lessa le patate con la buccia per circa 40 minuti, sbucciale e schiacciale ancora calde, poi lasciale raffreddare.",
+      "Aggiungi la farina e un pizzico di sale e impasta poco e con delicatezza, altrimenti gli gnocchi risultano duri.",
+      "Forma dei filoncini, tagliali a tocchetti e rigali con una forchetta. Lasciali riposare su un canovaccio infarinato.",
+      "Prepara il sugo: scalda l'olio con l'aglio, aggiungi le zucchine a dadini, la passata, i ceci e il basilico e cuoci 15 minuti.",
+      "Lessa gli gnocchi in acqua salata, scolali quando vengono a galla e saltali nel sugo."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Rossella in padella",
+      "url": "https://blog.giallozafferano.it/rossellainpadella/gnocchi-di-patate-fatti-in-casa/"
+    },
+    "notes": "La ricetta di partenza usa anche un uovo; qui è omesso e basta usare patate asciutte e poca farina."
+  },
+  {
+    "id": "pranzo-pe-torta-salata-verdure-ricotta",
+    "title": "Torta salata integrale di spinaci, bietole e ricotta",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 85,
+    "emoji": "🥧",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "torta salata",
+      "verdure",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1.5,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Bietole",
+        "qty": 70,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 5,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Impasta la farina con un cucchiaio di olio, un pizzico di sale e acqua tiepida quanto basta, forma un panetto elastico e lascialo riposare 30 minuti.",
+      "Fai appassire la cipolla con l'olio, aggiungi spinaci, bietole e piselli e cuoci finché l'acqua è evaporata. Lascia raffreddare.",
+      "Unisci alle verdure la ricotta, le uova e il parmigiano e aggiusta di sale.",
+      "Stendi la pasta sottile, rivesti una teglia con carta forno lasciando sbordare i bordi, versa il ripieno e ripiega i lembi.",
+      "Cospargi con il pangrattato e un filo d'olio e cuoci a 180 gradi per 30-35 minuti. È ottima tiepida o fredda."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cucina italiana e dintorni",
+      "url": "https://blog.giallozafferano.it/cucinaitalianaedintorni/torta-salata-al-mix-di-verdure/"
+    },
+    "notes": "Una porzione corrisponde a circa un sesto della torta."
+  },
+  {
+    "id": "pranzo-pe-pasta-forno-verdure-ricotta",
+    "title": "Pasta al forno con verdure e ricotta senza besciamella",
+    "category": "Pranzo",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🍝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "pasta al forno",
+      "verdure",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta corta",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Porro",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Funghi champignon",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia a cubetti zucchine, carote e peperone, a rondelle il porro e a fettine i funghi.",
+      "Salta le verdure in padella con l'olio a fuoco vivace per circa 10 minuti, con un pizzico di sale.",
+      "Trasferiscile in una ciotola, aggiungi la ricotta e il pepe e mescola fino a ottenere un condimento cremoso.",
+      "Lessa la pasta molto al dente, scolala e uniscila alle verdure.",
+      "Versa in una pirofila, cospargi di parmigiano e gratina a 180 gradi per 15-20 minuti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/pasta-al-forno-con-verdure-e-ricotta/"
+    }
+  },
+  {
+    "id": "cena-pe-risotto-porcini",
+    "title": "Risotto ai funghi porcini secchi",
+    "category": "Cena",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "risotto",
+      "funghi",
+      "autunno"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Funghi porcini secchi",
+        "qty": 10,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Burro",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Brodo vegetale",
+        "qty": 350,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Metti i porcini a bagno in acqua tiepida per 20 minuti, poi strizzali e tritali, filtrando e tenendo l'acqua di ammollo.",
+      "Trita finemente la cipolla e falla appassire dolcemente nell'olio.",
+      "Aggiungi il riso e tostalo un minuto, poi comincia a bagnarlo con il brodo caldo a mestoli.",
+      "A metà cottura unisci i funghi e l'acqua di ammollo filtrata e prosegui fino a cottura, circa 16-18 minuti in tutto.",
+      "Manteca fuori dal fuoco con burro e parmigiano e lascia riposare un minuto."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/risotto-ai-funghi-porcini-secchi/"
+    },
+    "notes": "L'acqua di ammollo è la parte più profumata: usala tutta, ben filtrata."
+  },
+  {
+    "id": "pranzo-pe-curry-ceci-spinaci-basmati",
+    "title": "Curry di ceci e spinaci con riso basmati",
+    "category": "Pranzo",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍛",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "curry",
+      "legumi",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Ceci cotti",
+        "qty": 120,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Riso basmati",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Spinaci",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 5,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 50,
+        "unit": "ml",
+        "group": "fat"
+      },
+      {
+        "name": "Concentrato di pomodoro",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Curry in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cumino",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Soffriggi cipolla, aglio e zenzero tritati nell'olio, poi aggiungi curry, cumino e concentrato e lascia tostare un minuto.",
+      "Versa il latte di cocco con qualche cucchiaio d'acqua e cuoci finché la base diventa una crema.",
+      "Unisci i ceci scolati, copri e cuoci per 10 minuti, aggiungendo acqua se asciuga troppo.",
+      "Aggiungi gli spinaci e falli appassire, poi completa con il coriandolo tritato e aggiusta di sale.",
+      "Cuoci il basmati con il doppio del suo peso di acqua, a pentola coperta, e sgranalo con la forchetta prima di servire con il curry."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/curry-di-ceci-con-riso-basmati"
+    },
+    "notes": "Migliora il giorno dopo; conserva riso e curry in contenitori separati."
+  },
+  {
+    "id": "contorno-pe-caponata-forno",
+    "title": "Caponata di melanzane al forno",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍆",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "siciliano",
+      "agrodolce",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olive verdi",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pinoli",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Capperi",
+        "qty": 5,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Aceto di mele",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le melanzane a cubetti, condiscile con metà dell'olio e cuocile in forno a 200 gradi per 20 minuti, al posto della frittura.",
+      "In padella fai appassire cipolla e sedano a pezzetti con i pinoli.",
+      "Aggiungi i pomodorini e lasciali ammorbidire, poi unisci olive e capperi dissalati.",
+      "Versa le melanzane, aggiungi zucchero e aceto e cuoci finché l'odore dell'aceto svanisce.",
+      "Servi a temperatura ambiente: è ancora più buona dopo qualche ora di riposo."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/caponata-di-verdure/"
+    },
+    "notes": "Si conserva 4 giorni in frigorifero."
+  },
+  {
+    "id": "contorno-pe-ratatouille-forno",
+    "title": "Ratatouille al forno a strati",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "provenzale",
+      "forno",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Melanzane",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Erbe di Provenza",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Prepara una base: soffriggi cipolla e aglio tritati con metà dell'olio, aggiungi il peperone e metà dei pomodori e cuoci fino a ottenere una salsa.",
+      "Versa la salsa sul fondo di una pirofila.",
+      "Affetta melanzane, zucchine e pomodori a rondelle sottili e disponile a spirale o a file, in modo che si sovrappongano.",
+      "Condisci con olio, erbe, sale e pepe, copri con carta forno e cuoci a 180 gradi per 40 minuti, scoprendo gli ultimi 10."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/ratatouille/"
+    },
+    "notes": "Si può servire caldo, tiepido o freddo; si conserva 3 giorni."
+  },
+  {
+    "id": "contorno-pe-peperoni-ripieni-scamorza",
+    "title": "Peperoni ripieni di carote e scamorza",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 55,
+    "emoji": "🫑",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "verdure ripiene",
+      "forno",
+      "vegetariano"
+    ],
+    "ingredients": [
+      {
+        "name": "Peperoni",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Carote",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 0.25,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Scamorza",
+        "qty": 25,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Timo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il peperone a metà o taglia la calotta, elimina semi e filamenti bianchi e sala leggermente l'interno.",
+      "Grattugia la carota, tritala con la cipolla e falle stufare a fuoco basso con l'olio e il timo.",
+      "Mescola le verdure con parmigiano, uovo e pangrattato, aggiungendone quanto basta per un impasto morbido ma non liquido.",
+      "Riempi i peperoni senza comprimere, copri con la scamorza a dadini.",
+      "Cuoci a 180 gradi per circa 30 minuti, finché i peperoni sono teneri e la superficie dorata."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/peperoni-ripieni-vegetariani/"
+    }
+  },
+  {
+    "id": "contorno-pe-sformato-zucchine-patate",
+    "title": "Sformato leggero di zucchine e patate",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 60,
+    "emoji": "🥘",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "sformato",
+      "forno",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Patate",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 40,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Parmigiano reggiano",
+        "qty": 15,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pangrattato",
+        "qty": 5,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le zucchine a tocchetti e saltale con la cipolla tritata e l'olio per 5 minuti, devono restare un po' croccanti.",
+      "Lessa le patate a pezzi per 7 minuti e scolale.",
+      "Sbatti la ricotta con il latte e metà del parmigiano, sala e pepa.",
+      "Metti le verdure in una pirofila unta, versa il composto e cospargi di pangrattato e del parmigiano rimasto.",
+      "Cuoci a 180 gradi per circa 40 minuti, finché la superficie è dorata."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/sformato-di-zucchine/"
+    },
+    "notes": "Rispetto alla ricetta di partenza la panna è sostituita da ricotta e latte."
+  },
+  {
+    "id": "contorno-pe-pure-cannellini-limone",
+    "title": "Purè di cannellini al limone e rosmarino",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🫘",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "purè",
+      "legumi",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Rosmarino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola i cannellini e frullali con un po' del loro liquido fino a ottenere una crema liscia, passandoli al passaverdure se vuoi un risultato più fine.",
+      "Prepara un'emulsione con olio, succo di limone, aghi di rosmarino tritati finemente e sale.",
+      "Incorpora il condimento alla crema, regolando la consistenza con acqua tiepida.",
+      "Servi in un piatto, con un filo d'olio e un pizzico di paprika."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Zia Lora",
+      "url": "https://blog.giallozafferano.it/zialora/pure-di-fagioli-cannellini/"
+    },
+    "notes": "Con i fagioli secchi servono 12 ore di ammollo e circa un'ora di cottura; con quelli già cotti è pronto in 15 minuti."
+  },
+  {
+    "id": "contorno-pe-zucchine-ripiene-gratinate",
+    "title": "Zucchine ripiene di olive e pomodorini gratinate",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🥒",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "verdure ripiene",
+      "forno",
+      "gratinato"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 200,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Mais",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olive nere",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Emmental",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci le zucchine intere al vapore per 5 minuti, tagliale a metà nel senso della lunghezza e svuotale con un cucchiaino, lasciando mezzo centimetro di polpa.",
+      "Trita la polpa con la cipolla e uniscila a mais, pomodorini a cubetti e olive a fettine, salando poco.",
+      "Riempi le barchette, copri con l'emmental grattugiato e un filo d'olio.",
+      "Cuoci a 180 gradi per circa 20 minuti, finché il formaggio forma una crosticina."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/zucchine-ripiene-vegetariane/"
+    }
+  },
+  {
+    "id": "contorno-pe-insalata-farro-zucca-radicchio",
+    "title": "Insalata tiepida di farro, zucca, radicchio e borlotti",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "cereali",
+      "legumi",
+      "autunno"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro perlato",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucca",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Radicchio rosso",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Fagioli borlotti cotti",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci il farro in acqua bollente per 35-40 minuti, salando solo verso la fine, poi scolalo.",
+      "Taglia la zucca a cubetti e rosolala in padella con poco olio per una decina di minuti, finché è tenera.",
+      "Aggiungi il radicchio a listarelle e fallo appassire per pochi minuti.",
+      "Unisci farro, verdure e fagioli in una ciotola, lascia intiepidire e condisci con olio, prezzemolo, sale e pepe."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Pelle di pollo",
+      "url": "https://blog.giallozafferano.it/pelledipollo/insalata-invernale-di-farro-con-radicchio-zucca/"
+    },
+    "notes": "Si prepara in anticipo: tiepida o a temperatura ambiente."
+  },
+  {
+    "id": "contorno-pe-crema-fave-cicoria",
+    "title": "Crema di fave con cicoria ripassata",
+    "category": "Contorno",
+    "time": "lunga",
+    "minutes": 50,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "pugliese",
+      "purè"
+    ],
+    "ingredients": [
+      {
+        "name": "Fave secche decorticate",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cicoria",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Alloro",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Peperoncino",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lascia le fave in ammollo per un paio d'ore, poi scolale e sciacquale.",
+      "Cuocile con acqua, alloro e un po' d'aglio, in pentola a pressione 15 minuti dal fischio o in casseruola per circa 40 minuti.",
+      "Elimina l'alloro, sala, aggiungi metà dell'olio e frulla, regolando la cremosità con un po' d'acqua di cottura.",
+      "Lessa la cicoria in acqua salata, scolala e ripassala in padella con aglio, olio e peperoncino.",
+      "Servi la crema calda accanto alla cicoria."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Ortaggi che passione",
+      "url": "https://blog.giallozafferano.it/ortaggichepassionebysara/ricetta-crema-di-fave-secche/"
+    },
+    "notes": "Ispirata alla crema di fave secche e al classico abbinamento pugliese con le verdure amare."
+  },
+  {
+    "id": "contorno-pe-verdure-grigliate-salsa-yogurt",
+    "title": "Verdure grigliate con salsa allo yogurt e cetriolo",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍆",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "griglia",
+      "salsa leggera",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Zucchine",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Melanzane",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperoni",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 60,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Menta",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia zucchine, melanzane e peperoni a fette spesse e spennellale con poco olio.",
+      "Cuocile su una griglia ben calda per qualche minuto per lato, finché sono morbide e segnate.",
+      "Sbuccia il cetriolo, eliminane i semi e frullalo con lo yogurt, un po' di menta e un pizzico di sale.",
+      "Servi le verdure tiepide con la salsa a parte e un filo d'olio."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Annatorte",
+      "url": "https://blog.giallozafferano.it/annatorte/salsa-allo-yogurt-greco/"
+    },
+    "notes": "La salsa si conserva in frigorifero un paio di giorni ed è più saporita il giorno dopo."
+  },
+  {
+    "id": "contorno-pe-insalata-lenticchie-barbabietola",
+    "title": "Insalata di lenticchie, barbabietola e arancia",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "legumi",
+      "insalata",
+      "agrumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie cotte",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Barbabietola cotta",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Arancia",
+        "qty": 0.5,
+        "unit": "pz",
+        "group": "fruit"
+      },
+      {
+        "name": "Rucola",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di mele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola le lenticchie e sciacquale. Taglia la barbabietola a cubetti e l'arancia a spicchi, eliminando la pellicina.",
+      "Emulsiona olio, aceto e sale con un cucchiaio di succo d'arancia.",
+      "Unisci lenticchie, barbabietola, arancia e rucola e condisci.",
+      "Completa con le noci spezzettate e servi subito."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-pe-insalata-cavolo-nero-ceci-melograno",
+    "title": "Insalata di cavolo nero, ceci e melograno",
+    "category": "Contorno",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "insalata",
+      "legumi",
+      "invernale"
+    ],
+    "ingredients": [
+      {
+        "name": "Cavolo nero",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Melograno",
+        "qty": 30,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Elimina la costa centrale del cavolo nero e taglia le foglie a striscioline molto sottili.",
+      "Massaggiale per un minuto con olio, limone e sale per renderle più tenere.",
+      "Aggiungi i ceci scolati e le mandorle tritate grossolanamente.",
+      "Lascia riposare 10 minuti e completa con i chicchi di melograno."
+    ],
+    "source": null
+  },
+  {
+    "id": "contorno-pe-pure-patate-dolci-carote",
+    "title": "Purè di patate dolci e carote allo zenzero",
+    "category": "Contorno",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "purè",
+      "verdure",
+      "autunno"
+    ],
+    "ingredients": [
+      {
+        "name": "Patata dolce",
+        "qty": 120,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Carote",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 3,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbuccia patata dolce e carote e tagliale a pezzi regolari.",
+      "Cuocile a vapore o in acqua per 20 minuti, finché si schiacciano con una forchetta.",
+      "Schiacciale con lo zenzero grattugiato, l'olio, sale e pepe, aggiungendo un cucchiaio di acqua di cottura se serve.",
+      "Servi caldo, con un filo d'olio a crudo."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-pe-mousse-yogurt-fragole",
+    "title": "Mousse di yogurt greco e fragole",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍓",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "mousse",
+      "yogurt",
+      "frutta"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco 0%",
+        "qty": 200,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fragole",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Monta lo yogurt con le fruste elettriche a velocità alta per alcuni minuti, finché diventa soffice come una mousse.",
+      "Lava le fragole, asciugale e schiacciale grossolanamente.",
+      "Incorpora la frutta allo yogurt mescolando dal basso verso l'alto e versa in un bicchiere.",
+      "Fai riposare in frigorifero per almeno un'ora prima di mangiare."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cucina nonna Lina",
+      "url": "https://blog.giallozafferano.it/cucinanonnalina/mousse-light-alle-fragole/"
+    },
+    "notes": "Con pesche o albicocche in stagione. Il tempo indicato non comprende il riposo in frigorifero."
+  },
+  {
+    "id": "spuntino-pe-mousse-ricotta-fragole",
+    "title": "Mousse di ricotta, yogurt e fragole",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍓",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "mousse",
+      "ricotta",
+      "frutta"
+    ],
+    "ingredients": [
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Yogurt bianco",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fragole",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Setaccia la ricotta in una ciotola per renderla liscia.",
+      "Frulla le fragole con lo yogurt e lo zucchero fino a ottenere una purea.",
+      "Incorpora la purea alla ricotta con movimenti dal basso verso l'alto, per mantenere il composto soffice.",
+      "Versa in un bicchierino e decora con qualche fragola a pezzetti."
+    ],
+    "source": {
+      "name": "Greenme",
+      "url": "https://www.greenme.it/salute-e-alimentazione/ricette/mousse-di-ricotta-fragole/"
+    },
+    "notes": "Da consumare entro il giorno dopo, conservata in frigorifero coperta."
+  },
+  {
+    "id": "spuntino-pe-gallette-hummus-cetriolo",
+    "title": "Gallette di riso con hummus e cetriolo",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍘",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "gallette",
+      "legumi"
+    ],
+    "ingredients": [
+      {
+        "name": "Gallette di riso",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ceci cotti",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Cumino",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta leggermente i semi di sesamo in una padella asciutta.",
+      "Frulla i ceci con il sesamo, il limone, il cumino, l'olio e un pizzico di sale, aggiungendo acqua fino a una crema morbida.",
+      "Spalma l'hummus sulle gallette e completa con cetriolo a rondelle."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/hummus-di-ceci/"
+    },
+    "notes": "L'hummus avanzato si conserva 3 giorni in frigorifero in un contenitore chiuso."
+  },
+  {
+    "id": "spuntino-pe-crudite-salsa-yogurt",
+    "title": "Verdure crude con salsa allo yogurt e cetriolo",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥕",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "crudité",
+      "yogurt",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Carote",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sedano",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Finocchi",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia carote, sedano e finocchio a bastoncini.",
+      "Frulla il cetriolo sbucciato e privato dei semi con lo yogurt, il prezzemolo, l'olio e un pizzico di sale.",
+      "Servi la salsa in una ciotolina con le verdure per intingere."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Annatorte",
+      "url": "https://blog.giallozafferano.it/annatorte/salsa-allo-yogurt-greco/"
+    },
+    "notes": "Versione ridotta della salsa di partenza: senape e basilico sono facoltativi."
+  },
+  {
+    "id": "spuntino-pe-gallette-ricotta-pera",
+    "title": "Gallette con ricotta, pera e noci",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "gallette",
+      "ricotta",
+      "frutta"
+    ],
+    "ingredients": [
+      {
+        "name": "Gallette di riso",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pere",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Spalma la ricotta sulle gallette.",
+      "Taglia la pera a fettine sottili e disponila sopra.",
+      "Completa con le noci spezzettate e un pizzico di cannella."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-pe-mini-toast-ricotta-pomodorini",
+    "title": "Mini toast integrali con ricotta e pomodorini",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "toast",
+      "ricotta",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta il pane integrale e taglialo a quadrotti.",
+      "Condisci la ricotta con sale e qualche foglia di basilico tritata.",
+      "Spalma la ricotta sul pane e disponi i pomodorini a fettine, con un filo d'olio."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-pe-mela-burro-mandorle-cioccolato",
+    "title": "Mela con burro di mandorle e cioccolato fondente",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍎",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "frutta",
+      "frutta secca",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Burro di mandorle",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 10,
+        "unit": "g",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava la mela e tagliala a spicchi, eliminando il torsolo.",
+      "Spalma sottilmente il burro di mandorle sugli spicchi.",
+      "Grattugia o spezzetta il cioccolato fondente e distribuiscilo sopra."
+    ],
+    "source": null
+  },
+  {
+    "id": "spuntino-pe-coppa-frutta-yogurt-mandorle",
+    "title": "Coppa di frutta mista, yogurt e mandorle",
+    "category": "Spuntino",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "frutta",
+      "yogurt",
+      "frutta secca"
+    ],
+    "ingredients": [
+      {
+        "name": "Kiwi",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Arancia",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Yogurt bianco",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cannella",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbuccia kiwi e arancia e tagliali a pezzetti.",
+      "Metti lo yogurt in una coppa e distribuisci sopra la frutta.",
+      "Completa con le mandorle tritate grossolanamente e un pizzico di cannella."
+    ],
+    "source": null
+  }
+]

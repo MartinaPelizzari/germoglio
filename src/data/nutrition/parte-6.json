@@ -1,0 +1,477 @@
+[
+ {
+  "name": "Uva nera",
+  "kcal": 53,
+  "protein": 0.5,
+  "carbs": 12.6,
+  "fat": 0.1,
+  "fiber": 1.6,
+  "sugars": 12.6,
+  "satFat": null,
+  "iron": 0.4,
+  "calcium": 33,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Uva, nera, fresca (cod. 007400)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007400"
+  },
+  "note": "Grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Mandorle a scaglie",
+  "kcal": 628,
+  "protein": 22.0,
+  "carbs": 4.6,
+  "fat": 55.3,
+  "fiber": 12.7,
+  "sugars": 3.7,
+  "satFat": 4.63,
+  "iron": 3.0,
+  "calcium": 240,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mandorle dolci, secche (cod. 008540)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008540"
+  },
+  "note": "Valori delle mandorle dolci secche, uguali per la versione a scaglie. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Purea di mela",
+  "kcal": 42,
+  "protein": 0.17,
+  "carbs": 11.3,
+  "fat": 0.1,
+  "fiber": 1.1,
+  "sugars": 9.39,
+  "satFat": 0.01,
+  "iron": 0.23,
+  "calcium": 4,
+  "source": {
+   "name": "USDA FoodData Central: Applesauce, canned, unsweetened (FDC ID 171695)",
+   "url": "https://fdc.nal.usda.gov/food-details/171695/nutrients"
+  },
+  "note": "Purea di mela senza zuccheri aggiunti"
+ },
+ {
+  "name": "Albume",
+  "kcal": 43,
+  "protein": 10.7,
+  "carbs": 0.0,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.0,
+  "iron": 0.1,
+  "calcium": 7,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Uova di gallina, albume (cod. 182010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/182010"
+  },
+  "note": "CREA riporta lipidi, carboidrati e zuccheri in tracce (tr), qui 0"
+ },
+ {
+  "name": "Melone",
+  "kcal": 34,
+  "protein": 0.8,
+  "carbs": 7.4,
+  "fat": 0.2,
+  "fiber": 0.7,
+  "sugars": 7.4,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 19,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Melone, d'estate, fresco (cod. 007230)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007230"
+  },
+  "note": "Grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Farina di avena senza glutine",
+  "kcal": 378,
+  "protein": 12.6,
+  "carbs": 66.3,
+  "fat": 7.1,
+  "fiber": 7.6,
+  "sugars": 1.2,
+  "satFat": 1.46,
+  "iron": 4.2,
+  "calcium": 80,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Farina d'avena (cod. 000200)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000200"
+  },
+  "note": "Valore della farina d'avena: la versione senza glutine ha la stessa composizione. Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Lievito in polvere senza glutine",
+  "kcal": 51,
+  "protein": 0.1,
+  "carbs": 24.1,
+  "fat": 0.0,
+  "fiber": 0.2,
+  "sugars": 0.0,
+  "satFat": 0.0,
+  "iron": 11.3,
+  "calcium": 7360,
+  "source": {
+   "name": "USDA FoodData Central: Leavening agents, baking powder, double-acting, straight phosphate (FDC ID 172804)",
+   "url": "https://fdc.nal.usda.gov/food-details/172804/nutrients"
+  },
+  "note": "Voce USDA equivalente più vicina: il lievito senza glutine usa amido di mais o riso al posto del frumento, quindi macro approssimativi. Non è un valore di etichetta"
+ },
+ {
+  "name": "Eritritolo",
+  "kcal": 0,
+  "protein": 0,
+  "carbs": 100,
+  "fat": 0,
+  "fiber": null,
+  "sugars": 0,
+  "satFat": 0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Eritritolo Eridania",
+   "url": "https://world.openfoodfacts.org/product/8000121701918"
+  },
+  "note": "Polialcol: in etichetta i 100 g sono dichiarati come carboidrati, zuccheri 0; energia 0 kcal secondo la normativa UE"
+ },
+ {
+  "name": "Succo d'arancia",
+  "kcal": 33,
+  "protein": 0.5,
+  "carbs": 8.2,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": 8.2,
+  "satFat": 0.0,
+  "iron": 0.2,
+  "calcium": 15,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Arance succo, fresco (cod. 008010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008010"
+  },
+  "note": "Spremuta fresca. Lipidi in tracce (tr) in CREA, qui 0"
+ },
+ {
+  "name": "Fiocchi di miglio",
+  "kcal": 342,
+  "protein": 11.0,
+  "carbs": 67.8,
+  "fat": 4.2,
+  "fiber": 3.1,
+  "sugars": 4.9,
+  "satFat": null,
+  "iron": 3.5,
+  "calcium": 17,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Miglio, decorticato (cod. 000081)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000081"
+  },
+  "note": "Valori del miglio decorticato, equivalente per i fiocchi. Grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Labneh",
+  "kcal": 193,
+  "protein": 8.1,
+  "carbs": 4.1,
+  "fat": 16.0,
+  "fiber": null,
+  "sugars": 4.0,
+  "satFat": 11.0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Labneh Kolios",
+   "url": "https://world.openfoodfacts.org/product/5201704063109"
+  },
+  "note": "Valori dichiarati in etichetta di un labneh in commercio"
+ },
+ {
+  "name": "Riso a chicco tondo",
+  "kcal": 334,
+  "protein": 6.7,
+  "carbs": 80.4,
+  "fat": 0.4,
+  "fiber": 1.0,
+  "sugars": 0.2,
+  "satFat": 0.1,
+  "iron": 0.8,
+  "calcium": 24,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Riso, brillato (cod. 000100)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000100"
+  },
+  "note": "Riso brillato crudo (originario/tondo). Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Salmone al naturale o cotto",
+  "kcal": 206,
+  "protein": 22.1,
+  "carbs": 0.0,
+  "fat": 12.4,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 2.4,
+  "iron": 0.34,
+  "calcium": 15,
+  "source": {
+   "name": "USDA FoodData Central: Fish, salmon, Atlantic, farmed, cooked, dry heat (FDC ID 175168)",
+   "url": "https://fdc.nal.usda.gov/food-details/175168/nutrients"
+  },
+  "note": "Salmone atlantico di allevamento cotto; voce più vicina a salmone cotto o al naturale"
+ },
+ {
+  "name": "Alga nori",
+  "kcal": 308,
+  "protein": 40.7,
+  "carbs": 7.2,
+  "fat": 5.9,
+  "fiber": null,
+  "sugars": 0.5,
+  "satFat": 1.9,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Alga nori Terra Sana",
+   "url": "https://world.openfoodfacts.org/product/8713576271935"
+  },
+  "note": "Alga nori essiccata, valori dichiarati in etichetta"
+ },
+ {
+  "name": "Miso",
+  "kcal": 198,
+  "protein": 12.8,
+  "carbs": 25.4,
+  "fat": 6.01,
+  "fiber": 5.4,
+  "sugars": 6.2,
+  "satFat": 1.02,
+  "iron": 2.49,
+  "calcium": 57,
+  "source": {
+   "name": "USDA FoodData Central: Miso (FDC ID 172442)",
+   "url": "https://fdc.nal.usda.gov/food-details/172442/nutrients"
+  }
+ },
+ {
+  "name": "Alga wakame secca",
+  "kcal": 195,
+  "protein": 12.6,
+  "carbs": 17.2,
+  "fat": 1.3,
+  "fiber": 32.2,
+  "sugars": 0.5,
+  "satFat": 0.4,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Algas wakame deshidratadas Algamar",
+   "url": "https://world.openfoodfacts.org/product/8437002393069"
+  },
+  "note": "Alga essiccata, valori dichiarati in etichetta"
+ },
+ {
+  "name": "Alga kombu",
+  "kcal": 243,
+  "protein": 9.3,
+  "carbs": 35.9,
+  "fat": 0.1,
+  "fiber": 30.5,
+  "sugars": 0.5,
+  "satFat": 0.1,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Kombu Laminaria Algamar",
+   "url": "https://world.openfoodfacts.org/product/8437002393021"
+  },
+  "note": "Alga essiccata, valori dichiarati in etichetta"
+ },
+ {
+  "name": "Riso schiacciato (poha)",
+  "kcal": 361.3,
+  "protein": 7.4,
+  "carbs": 77.2,
+  "fat": 1.6,
+  "fiber": 4.3,
+  "sugars": 0.5,
+  "satFat": 0.7,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Poha (thick) Fortune",
+   "url": "https://world.openfoodfacts.org/product/8906008812817"
+  },
+  "note": "Riso schiacciato secco, valori dichiarati in etichetta"
+ },
+ {
+  "name": "Semola di grano duro",
+  "kcal": 346,
+  "protein": 11.5,
+  "carbs": 76.9,
+  "fat": 0.5,
+  "fiber": 3.6,
+  "sugars": 1.9,
+  "satFat": 0.14,
+  "iron": 1.3,
+  "calcium": 17,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Semola (cod. 000310)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000310"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Granola di avena e mandorle",
+  "kcal": 464,
+  "protein": 11.0,
+  "carbs": 59.0,
+  "fat": 19.0,
+  "fiber": 6.8,
+  "sugars": 3.9,
+  "satFat": 2.1,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Granola avena e mandorle Probios, senza zuccheri aggiunti",
+   "url": "https://world.openfoodfacts.org/product/8018699026883"
+  },
+  "note": "Valori dichiarati in etichetta"
+ },
+ {
+  "name": "Bevanda di mandorla",
+  "kcal": 26,
+  "protein": 0.4,
+  "carbs": 3.3,
+  "fat": 1.2,
+  "fiber": 0.2,
+  "sugars": 3.2,
+  "satFat": 0.2,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Bevanda di mandorla Conad Verso Natura",
+   "url": "https://world.openfoodfacts.org/product/8003170071179"
+  },
+  "note": "Valori dichiarati in etichetta; varia molto con la percentuale di mandorle e gli zuccheri aggiunti"
+ },
+ {
+  "name": "Frutti rossi",
+  "kcal": 51,
+  "protein": 0.9,
+  "carbs": 7.3,
+  "fat": 0.6,
+  "fiber": 6.2,
+  "sugars": 6.7,
+  "satFat": 0.0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Frutti di bosco surgelati Conad",
+   "url": "https://world.openfoodfacts.org/product/8003170089501"
+  },
+  "note": "Misto di frutti di bosco surgelati, valori dichiarati in etichetta"
+ },
+ {
+  "name": "Bagel ai semi",
+  "kcal": 313,
+  "protein": 9.8,
+  "carbs": 57.0,
+  "fat": 4.7,
+  "fiber": 2.8,
+  "sugars": 5.2,
+  "satFat": 0.5,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Bagel con semi di papavero Metro Chef",
+   "url": "https://world.openfoodfacts.org/product/8026924071232"
+  },
+  "note": "Valori dichiarati in etichetta di un bagel con semi"
+ },
+ {
+  "name": "Anacardi",
+  "kcal": 604,
+  "protein": 15.0,
+  "carbs": 33.0,
+  "fat": 46.0,
+  "fiber": 3.0,
+  "sugars": 5.6,
+  "satFat": 9.42,
+  "iron": 6.0,
+  "calcium": 45,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Anacardi (cod. 008610)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008610"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Squacquerone",
+  "kcal": 231,
+  "protein": 14.0,
+  "carbs": 1.5,
+  "fat": 19.0,
+  "fiber": null,
+  "sugars": 1.5,
+  "satFat": 14.0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Squacquerone Comellini",
+   "url": "https://world.openfoodfacts.org/product/8015895000037"
+  },
+  "note": "Valori dichiarati in etichetta"
+ },
+ {
+  "name": "Crescenza",
+  "kcal": 281,
+  "protein": 16.1,
+  "carbs": 1.9,
+  "fat": 23.3,
+  "fiber": 0.0,
+  "sugars": 1.9,
+  "satFat": null,
+  "iron": 0.1,
+  "calcium": 557,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Crescenza (cod. 160890)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/160890"
+  },
+  "note": "Grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Confettura di fragole",
+  "kcal": 190,
+  "protein": 0.4,
+  "carbs": 46.0,
+  "fat": 0.0,
+  "fiber": 1.3,
+  "sugars": 42.0,
+  "satFat": 0.0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Confettura extra fragole Zuegg",
+   "url": "https://world.openfoodfacts.org/product/80298342"
+  },
+  "note": "Valori dichiarati in etichetta"
+ },
+ {
+  "name": "Base per pinsa",
+  "kcal": 235,
+  "protein": 7.3,
+  "carbs": 46.4,
+  "fat": 1.8,
+  "fiber": 1.9,
+  "sugars": 1.1,
+  "satFat": 0.3,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Etichetta di prodotto (Open Food Facts): Pinsami base pinsa",
+   "url": "https://world.openfoodfacts.org/product/8055186190344"
+  },
+  "note": "Valori dichiarati in etichetta"
+ }
+]

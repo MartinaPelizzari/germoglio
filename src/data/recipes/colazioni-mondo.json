@@ -1,0 +1,1929 @@
+[
+  {
+    "id": "colazione-mn-yogurt-greco-miele-noci-uvetta",
+    "title": "Yogurt greco con miele, noci tostate e uvetta",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 7,
+    "emoji": "🍯",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "greca",
+      "veloce",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 200,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Noci",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 15,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le noci in una padella asciutta per un paio di minuti, finché non profumano, poi spezzettale grossolanamente.",
+      "Versa lo yogurt in una ciotola o in un vasetto e distribuisci sopra uvetta e noci.",
+      "Completa con un filo di miele e una spolverata di cannella."
+    ],
+    "source": {
+      "name": "Discover Greece, colazione greca",
+      "url": "https://www.discovergreece.com/it/gastronomy/greek-breakfast"
+    },
+    "notes": "Per l'asporto porta le noci a parte e aggiungile all'ultimo."
+  },
+  {
+    "id": "colazione-mn-labneh-pane-olive",
+    "title": "Labneh con pane tostato e olive",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫒",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "mediorientale",
+      "toast"
+    ],
+    "ingredients": [
+      {
+        "name": "Labneh",
+        "qty": 80,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olive nere denocciolate",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Origano secco",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le fette di pane finché sono dorate e croccanti.",
+      "Spalma il labneh sul pane in uno strato generoso e distribuisci le olive affettate.",
+      "Condisci con olio e un pizzico di origano e servi con il cetriolo a rondelle."
+    ],
+    "source": {
+      "name": "Palestine in a Dish",
+      "url": "https://palestineinadish.com/recipes/breakfast-brunch/labneh-and-olives-on-toast-light-refreshing-healthy-popular/print/3390/"
+    },
+    "notes": "Il labneh si trova nei negozi etnici e in alcuni supermercati; in alternativa usa yogurt greco ben scolato in un colino per una notte."
+  },
+  {
+    "id": "colazione-mn-ful-medames-leggero",
+    "title": "Ful medames leggero con pane pita",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🫘",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "egiziana",
+      "legumi",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Fave cotte",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pane pita integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodori ciliegini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda le fave con un paio di cucchiai d'acqua, l'aglio schiacciato e il cumino per circa 10 minuti.",
+      "Schiacciale grossolanamente con una forchetta, lasciando qualche pezzo intero, e condisci con limone, olio e sale.",
+      "Servi in una ciotola con pomodorini e cetriolo a cubetti, prezzemolo tritato e la pita scaldata."
+    ],
+    "source": {
+      "name": "This Healthy Table",
+      "url": "https://thishealthytable.com/blog/ful-medames/"
+    },
+    "notes": "Aggiungi mezzo uovo sodo per una versione vegetariana più proteica."
+  },
+  {
+    "id": "colazione-mn-shakshuka-colazione",
+    "title": "Shakshuka da colazione con pane integrale",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "mediorientale",
+      "uova",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone rosso",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Soffriggi cipolla e aglio affettati in olio, unisci il peperone a dadini con le spezie e cuoci circa 8 minuti.",
+      "Versa la passata e lascia addensare per altri 8 minuti, aggiustando di sale.",
+      "Crea due incavi nel sugo, rompici le uova, copri e cuoci a fuoco basso finché gli albumi sono rappresi.",
+      "Cospargi di prezzemolo e servi con il pane tostato per fare la scarpetta."
+    ],
+    "source": {
+      "name": "Le ricette di Simo, GialloZafferano",
+      "url": "https://blog.giallozafferano.it/lericettedisimo/shakshuka-ricetta/"
+    },
+    "notes": "Senza pane diventa senza glutine."
+  },
+  {
+    "id": "colazione-mn-menemen-turco",
+    "title": "Menemen turco con peperoni e pomodori",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍅",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "turca",
+      "uova",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori maturi",
+        "qty": 150,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Peperone verde",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Peperoncino in fiocchi",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda l'olio e cuoci il peperone a pezzetti per qualche minuto, poi aggiungi i pomodori a cubetti.",
+      "Lascia stufare finché i pomodori si disfano e il fondo diventa denso, circa 10 minuti.",
+      "Sbatti leggermente le uova con un pizzico di sale, versale nel sugo e mescola piano finché sono cremose.",
+      "Servi subito nella padella con il pane e, a piacere, il peperoncino."
+    ],
+    "source": {
+      "name": "Istanbul.com",
+      "url": "https://istanbul.com/it/blog/traditional-turkish-foods/menemen-turkish-scrambled-eggs-with-tomatoes"
+    }
+  },
+  {
+    "id": "colazione-mn-uova-zucchine-pomodori-turca",
+    "title": "Uova in padella con zucchine e pomodori alla turca",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥒",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "turca",
+      "uova",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchine",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori maturi",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Menta secca",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Rosola la cipolla affettata in olio, unisci le zucchine a rondelle e cuocile per 6-7 minuti.",
+      "Aggiungi i pomodori a pezzi e sala, poi cuoci finché si sono ammorbiditi.",
+      "Rompi le uova sulle verdure, copri e cuoci a fuoco dolce per 3-4 minuti.",
+      "Profuma con la menta e servi con il pane."
+    ],
+    "source": null,
+    "notes": "Ispirata alla tradizione delle uova in padella turche con verdure di stagione."
+  },
+  {
+    "id": "colazione-mn-congee-riso-uovo-zenzero",
+    "title": "Congee di riso con uovo e zenzero",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "cinese",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso a chicco tondo",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 500,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zenzero fresco",
+        "qty": 5,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Cipollotto",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Sciacqua il riso e cuocilo nell'acqua a fuoco basso per circa 30 minuti, mescolando ogni tanto, finché diventa una crema densa.",
+      "Nel frattempo cuoci l'uovo in camicia o sodo di 7 minuti.",
+      "Versa il congee in una ciotola e completa con uovo, zenzero grattugiato, cipollotto affettato, salsa di soia e olio di sesamo."
+    ],
+    "source": {
+      "name": "What To Cook Today",
+      "url": "https://whattocooktoday.com/wprm_print/easy-and-quick-chinese-rice-congee-with-leftover-cooked-rice"
+    },
+    "notes": "Con riso già cotto avanzato si prepara in 10 minuti: frullalo con il brodo e scalda."
+  },
+  {
+    "id": "colazione-mn-onigiri-salmone-nori",
+    "title": "Onigiri al salmone con alga nori",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍙",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "giapponese",
+      "riso",
+      "asporto"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso per sushi",
+        "qty": 90,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Salmone al naturale o cotto",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Alga nori",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci il riso in acqua leggermente salata e lascialo intiepidire.",
+      "Sbriciola il salmone e mescolalo con il sesamo.",
+      "Con le mani inumidite d'acqua e sale forma due triangoli di riso, mettendo al centro un po' di salmone.",
+      "Avvolgi la base di ogni onigiri in una striscia di alga nori."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/cucina/onigiri-giapponesi-come-farli-in-casa/"
+    },
+    "notes": "Metti l'alga all'ultimo se devi trasportarli, così resta croccante."
+  },
+  {
+    "id": "colazione-mn-zuppa-miso-tofu-alga",
+    "title": "Zuppa di miso leggera con tofu e alga",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍜",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "giapponese",
+      "brodo",
+      "leggera"
+    ],
+    "ingredients": [
+      {
+        "name": "Acqua",
+        "qty": 300,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Miso",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Tofu",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Alga wakame secca",
+        "qty": 2,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipollotto",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Alga kombu",
+        "qty": 2,
+        "unit": "g",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Scalda l'acqua con il pezzetto di kombu e toglilo appena prima del bollore.",
+      "Aggiungi il tofu a cubetti e la wakame reidratata e riscalda per 2 minuti.",
+      "Spegni il fuoco, sciogli il miso con un mestolino di brodo e versalo nella pentola senza bollire.",
+      "Servi con il cipollotto affettato."
+    ],
+    "source": null,
+    "notes": "Abbinala a un onigiri per una colazione giapponese completa."
+  },
+  {
+    "id": "colazione-mn-tamagoyaki",
+    "title": "Tamagoyaki con riso e cetrioli",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍳",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "giapponese",
+      "uova",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Salsa di soia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Riso per sushi cotto",
+        "qty": 100,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Sbatti le uova con zucchero, salsa di soia e un cucchiaio d'acqua, senza montarle.",
+      "In una padellina leggermente unta versa un velo di uovo e, quando è quasi rappreso, arrotolalo su sé stesso.",
+      "Ripeti con il resto dell'uovo, ungendo la padella ogni volta, finché ottieni un rotolo.",
+      "Lascialo riposare un minuto, tagliatelo a fette e servi con riso e cetriolo."
+    ],
+    "source": {
+      "name": "Suki Desu",
+      "url": "https://skdesu.com/it/tamagoyaki-omelette-giapponese/"
+    }
+  },
+  {
+    "id": "colazione-mn-poha-indiano",
+    "title": "Poha indiano con arachidi e limone",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥜",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "indiana",
+      "speziata"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso schiacciato (poha)",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Arachidi",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Patata",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di senape",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Prezzemolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacqua il poha in un colino fino a ammorbidirlo e lascialo scolare.",
+      "Scalda l'olio, tosta le arachidi, poi unisci i semi di senape e, appena scoppiettano, cipolla e patata a dadini piccoli; cuoci finché la patata è tenera.",
+      "Aggiungi curcuma e sale, poi il poha, mescola delicatamente e scalda 3 minuti coperto.",
+      "Finisci con limone e prezzemolo (o coriandolo)."
+    ],
+    "source": {
+      "name": "Swasthi's Recipes",
+      "url": "https://www.indianhealthyrecipes.com/wprm_print/poha-recipe-indian-breakfast"
+    },
+    "notes": "Il poha si trova nei negozi indiani e in alcuni supermercati; resta buono tiepido."
+  },
+  {
+    "id": "colazione-mn-upma-semola-verdure",
+    "title": "Upma di semola con verdure",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥕",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "indiana",
+      "semola"
+    ],
+    "ingredients": [
+      {
+        "name": "Semola di grano duro",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 200,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Carote",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Piselli",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Arachidi",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di senape",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta la semola a secco per 3-4 minuti finché profuma, poi mettila da parte.",
+      "Scalda l'olio, fai scoppiettare i semi di senape e rosola cipolla, carote e arachidi; aggiungi i piselli.",
+      "Versa l'acqua calda salata e, a bollore, unisci la semola a pioggia mescolando perché non si formino grumi.",
+      "Cuoci finché il composto assorbe tutto il liquido e finisci con il limone."
+    ],
+    "source": {
+      "name": "Cooking The Globe",
+      "url": "https://cookingtheglobe.com/wprm_print/vegetable-upma-indian-cream-of-wheat-breakfast-recipe"
+    }
+  },
+  {
+    "id": "colazione-mn-dosa-veloce-lenticchie-rosse",
+    "title": "Dosa veloce di lenticchie rosse con yogurt di soia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🥞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "indiana",
+      "senza glutine",
+      "senza lattosio"
+    ],
+    "ingredients": [
+      {
+        "name": "Lenticchie rosse decorticate",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Acqua",
+        "qty": 120,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma in polvere",
+        "qty": 0.25,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt di soia naturale",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Ammolla le lenticchie in acqua per almeno un'ora, poi scolale.",
+      "Frullale con l'acqua, cumino, curcuma e sale fino a ottenere una pastella fluida.",
+      "Cuoci mezzo mestolo alla volta in una padella antiaderente appena unta, stendendo in un disco sottile, per 2 minuti per lato.",
+      "Servi le crêpe con yogurt di soia e cetriolo a dadini."
+    ],
+    "source": null,
+    "notes": "Versione semplificata senza fermentazione: non è la dosa tradizionale ma ne ricorda forma e accompagnamento."
+  },
+  {
+    "id": "colazione-mn-porridge-scozzese-miele-noci",
+    "title": "Porridge scozzese con miele e noci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "inglese",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa i fiocchi d'avena e il latte in un pentolino con un pizzico di sale.",
+      "Porta a bollore e cuoci a fuoco medio per circa 5 minuti, mescolando, finché è cremoso.",
+      "Servi con noci spezzettate, miele e mirtilli."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/porridge-classico/"
+    },
+    "notes": "Con acqua o bevanda vegetale e sciroppo d'acero diventa vegano."
+  },
+  {
+    "id": "colazione-mn-beans-on-toast-cannellini",
+    "title": "Beans on toast con cannellini al pomodoro",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "inglese",
+      "legumi",
+      "piatto unico"
+    ],
+    "ingredients": [
+      {
+        "name": "Fagioli cannellini cotti",
+        "qty": 130,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Paprika dolce",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Rosola la cipolla tritata in olio, aggiungi la passata, la paprika e i fagioli.",
+      "Scalda a fiamma dolce per 8 minuti senza far bollire forte, finché il sugo si stringe.",
+      "Tosta il pane e distribuisci i fagioli sopra."
+    ],
+    "source": {
+      "name": "Christina's Cucina",
+      "url": "https://www.christinascucina.com/wprm_print/beans-on-toast-the-proper-british-way-recipe-by-a-brit"
+    },
+    "notes": "Versione casalinga più leggera dei fagioli in scatola zuccherati."
+  },
+  {
+    "id": "colazione-mn-avocado-toast-uovo-sodo-lime",
+    "title": "Avocado toast con uovo sodo e lime",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥑",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "americana",
+      "toast",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 70,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pomodori ciliegini",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci l'uovo sodo per 8 minuti, raffreddalo e affettalo.",
+      "Schiaccia l'avocado con lime, sale e pepe.",
+      "Tosta il pane, spalmaci la crema di avocado e disponi uovo e pomodorini tagliati a metà."
+    ],
+    "source": {
+      "name": "A tavola con Tea, GialloZafferano",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-avocado-toast-con-uova/"
+    },
+    "notes": "Va mangiato presto perché l'avocado si ossida."
+  },
+  {
+    "id": "colazione-mn-parfait-granola-mandorle-mirtilli",
+    "title": "Parfait con yogurt greco, granola di mandorle e mirtilli",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "vasetto",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 170,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola di avena e mandorle",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Alterna in un bicchiere o vasetto uno strato di yogurt, uno di mirtilli e uno di granola.",
+      "Ripeti finché gli ingredienti sono finiti e termina con un filo di miele."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/granola-fatta-in-casa/"
+    },
+    "notes": "La granola si prepara in casa: avena, mandorle, miele e un po' d'olio, cotti in forno a 160 gradi per circa 30 minuti. Porta la granola a parte se viaggia."
+  },
+  {
+    "id": "colazione-mn-huevos-rancheros-leggeri",
+    "title": "Huevos rancheros leggeri",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🌮",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "messicana",
+      "uova",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortillas di mais",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodori maturi",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla rossa",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Avocado",
+        "qty": 50,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Prepara la salsa fresca tagliando pomodori, cipolla e coriandolo a pezzetti e condendo con sale e metà dell'olio.",
+      "Scalda le tortillas in una padella asciutta per qualche secondo per lato.",
+      "Cuoci le uova all'occhio di bue con il resto dell'olio, coperte, 2-3 minuti.",
+      "Appoggia un uovo su ogni tortilla e servi con salsa e fettine di avocado."
+    ],
+    "source": {
+      "name": "Il chicco di mais, GialloZafferano",
+      "url": "https://blog.giallozafferano.it/ilchiccodimais/uova-alla-messicana-huevos-rancheros/"
+    },
+    "notes": "Le tortillas di solo mais sono senza glutine: controlla l'etichetta."
+  },
+  {
+    "id": "colazione-mn-chilaquiles-forno-leggeri",
+    "title": "Chilaquiles leggeri con tortillas al forno",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🌶️",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "messicana",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortillas di mais",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Passata di pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Avocado",
+        "qty": 40,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Formaggio fresco",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Peperoncino in fiocchi",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Taglia le tortillas in spicchi, ungile appena e cuocile in forno a 200 gradi per 10 minuti finché sono croccanti.",
+      "Scalda la passata con cipolla tritata e peperoncino per 5-6 minuti.",
+      "Unisci gli spicchi di tortilla alla salsa e mescola un minuto: devono ammorbidirsi restando un po' croccanti.",
+      "Servi con un uovo all'occhio di bue, il formaggio sbriciolato, l'avocado e il coriandolo."
+    ],
+    "source": {
+      "name": "Downshiftology",
+      "url": "https://downshiftology.com/recipes/chilaquiles/"
+    },
+    "notes": "Cottura al forno al posto della frittura per una versione più leggera."
+  },
+  {
+    "id": "colazione-mn-tortillas-fagioli-avocado",
+    "title": "Tortillas con fagioli neri e avocado",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🌯",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "messicana",
+      "legumi",
+      "asporto"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortillas di frumento integrali",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Fagioli neri cotti",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pomodori ciliegini",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cumino in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Coriandolo",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda i fagioli in padella con cumino e un cucchiaio d'acqua, schiacciandone una parte.",
+      "Schiaccia l'avocado con lime e sale e taglia i pomodorini a pezzetti.",
+      "Scalda le tortillas, farciscile con fagioli, avocado e pomodorini, aggiungi il coriandolo e chiudi a fagottino."
+    ],
+    "source": null,
+    "notes": "Con i fagioli borlotti o cannellini è altrettanto buona."
+  },
+  {
+    "id": "colazione-mn-segale-skyr-frutti-bosco",
+    "title": "Pane di segale con skyr e frutti di bosco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🫐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "nordica",
+      "proteica",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane di segale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Skyr",
+        "qty": 120,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Semi di zucca",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Se vuoi, tosta leggermente il pane di segale.",
+      "Spalma lo skyr sul pane in uno strato spesso.",
+      "Completa con i frutti di bosco, i semi di zucca e un filo di miele."
+    ],
+    "source": null,
+    "notes": "Lo skyr è ormai nei banchi frigo dei supermercati italiani; in alternativa yogurt greco."
+  },
+  {
+    "id": "colazione-mn-uova-salmone-segale",
+    "title": "Uova strapazzate e salmone affumicato su pane di segale",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🐟",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "nordica",
+      "uova",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane di segale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Erba cipollina",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Cetrioli",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti le uova con un pizzico di pepe e cuocile in una padella con il burro a fuoco basso, mescolando, finché sono morbide e cremose.",
+      "Tosta il pane di segale.",
+      "Adagia sul pane le uova e le fette di salmone, completa con erba cipollina e servi con il cetriolo."
+    ],
+    "source": {
+      "name": "Marco Togni, colazione in Norvegia",
+      "url": "https://www.marcotogni.it/colazione-norvegia/"
+    }
+  },
+  {
+    "id": "colazione-mn-tofu-scramble-peperoni-funghi",
+    "title": "Tofu scramble con peperoni e funghi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍄",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "proteica",
+      "senza lattosio"
+    ],
+    "ingredients": [
+      {
+        "name": "Tofu",
+        "qty": 150,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Peperone rosso",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Funghi champignon",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Cipolla",
+        "qty": 30,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Curcuma in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Lievito alimentare in scaglie",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scola il tofu e pressalo con carta da cucina, poi sbriciolalo con le mani.",
+      "Rosola in olio cipolla, peperone e funghi a pezzetti per 6-7 minuti.",
+      "Aggiungi il tofu con curcuma e sale e cuoci 6 minuti finché l'acqua evapora e ricorda delle uova strapazzate.",
+      "Spegni, spolvera con il lievito alimentare e servi con il pane tostato."
+    ],
+    "source": {
+      "name": "VegNews",
+      "url": "https://vegnews.com/vegan-recipes/veggie-tofu-scramble"
+    },
+    "notes": "Senza pane diventa senza glutine."
+  },
+  {
+    "id": "colazione-mn-pancake-ceci-dolci-vegani",
+    "title": "Pancake di farina di ceci con banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "senza glutine",
+      "senza lattosio",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di ceci",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Bevanda di soia",
+        "qty": 70,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Lievito per dolci senza glutine",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiaccia metà della banana e mescolala con la bevanda di soia.",
+      "Unisci la farina di ceci setacciata e il lievito e mescola fino a eliminare i grumi; lascia riposare 5 minuti.",
+      "Cuoci piccoli mestoli di pastella in una padella antiaderente appena unta, finché compaiono bollicine, poi gira.",
+      "Servi con la banana rimasta a fette e lo sciroppo d'acero."
+    ],
+    "source": {
+      "name": "Allacciate il grembiule, GialloZafferano",
+      "url": "https://blog.giallozafferano.it/allacciateilgrembiule/pancake-con-farina-di-ceci/"
+    },
+    "notes": "Il lievito va scelto senza glutine; la farina di ceci va controllata in etichetta per tracce."
+  },
+  {
+    "id": "colazione-mn-chia-pudding-vaniglia-frutti-rossi",
+    "title": "Budino di chia alla vaniglia con frutti rossi e nocciole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫐",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "senza glutine",
+      "senza lattosio",
+      "overnight"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 25,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Bevanda di mandorla",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Estratto di vaniglia",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Frutti rossi",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Mescola i semi di chia con la bevanda di mandorla, lo sciroppo d'acero e la vaniglia.",
+      "Dopo 10 minuti mescola di nuovo per evitare i grumi, poi copri e metti in frigorifero per almeno 8 ore.",
+      "Al mattino completa con frutti rossi e nocciole tritate."
+    ],
+    "source": {
+      "name": "My-personaltrainer.it",
+      "url": "https://www.my-personaltrainer.it/Tv/Ricette/Dolci_Dessert/chia-pudding.html"
+    },
+    "notes": "Si conserva in frigorifero 2-3 giorni."
+  },
+  {
+    "id": "colazione-mn-farinata-ceci-dolce-mele",
+    "title": "Farinata di ceci dolce con mele",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍎",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "senza glutine",
+      "senza lattosio",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di ceci",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Acqua",
+        "qty": 150,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Mele",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sbatti la farina di ceci con l'acqua fino a ottenere una pastella liscia e lasciala riposare almeno 4 ore; elimina la schiuma.",
+      "Scalda il forno a 220 gradi, unta una teglia piccola e versa la pastella con olio e un pizzico di sale.",
+      "Disponi sopra le mele a fettine con la cannella e cuoci circa 25 minuti, finché è dorata.",
+      "Fai intiepidire e taglia a fette."
+    ],
+    "source": {
+      "name": "Timo e lenticchie, GialloZafferano",
+      "url": "https://blog.giallozafferano.it/timoelenticchie/ricetta-farinata-cecina-alle-mele-senza-glutine/"
+    },
+    "notes": "Il tempo di riposo della pastella non è compreso nei minuti indicati."
+  },
+  {
+    "id": "colazione-mn-banana-pancakes-due-ingredienti",
+    "title": "Banana pancakes a due ingredienti",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍌",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "senza glutine",
+      "senza lattosio",
+      "proteica"
+    ],
+    "ingredients": [
+      {
+        "name": "Banana",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Schiaccia la banana con una forchetta in un piatto fondo.",
+      "Aggiungi le uova e mescola senza frullare, fino a un composto omogeneo.",
+      "Cuoci piccoli mestoli in una padella leggermente unta per 1-2 minuti per lato.",
+      "Servi con frutti di bosco e miele."
+    ],
+    "source": {
+      "name": "Renata Briano, GialloZafferano",
+      "url": "https://blog.giallozafferano.it/renatabriano/ricetta-pancakes-di-banane-senza-zucchero-farina-e-latte/"
+    },
+    "notes": "Con la banana molto matura risultano più dolci e non serve altro zucchero."
+  },
+  {
+    "id": "colazione-mn-crepes-grano-saraceno-ricotta",
+    "title": "Crêpes di grano saraceno con ricotta e mirtilli",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🥞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "senza glutine",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di grano saraceno",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 80,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Sbatti uovo e latte con un pizzico di sale e incorpora la farina fino a una pastella liscia; lasciala riposare 10 minuti.",
+      "Cuoci due crêpe sottili in una padella antiaderente unta con il burro, un minuto per lato.",
+      "Farcisci con ricotta e mirtilli, ripiega e completa con il miele."
+    ],
+    "source": null,
+    "notes": "Il grano saraceno è naturalmente privo di glutine: scegli una farina con indicazione senza glutine in etichetta."
+  }
+]

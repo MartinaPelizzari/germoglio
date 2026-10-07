@@ -1,0 +1,1032 @@
+[
+  {
+    "id": "web-colazione-overnight-yogurt-greco-kiwi",
+    "title": "Overnight oats con yogurt greco e kiwi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥝",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "overnight",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Kiwi",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "In un vasetto mescola i fiocchi d'avena con metà dello yogurt greco e un paio di cucchiai d'acqua, finché non ci sono più grumi.",
+      "Sbuccia i kiwi e taglia metà di un frutto a cubetti: uniscili allo yogurt rimasto e versali sopra la base di avena.",
+      "Chiudi e lascia riposare in frigorifero per tutta la notte.",
+      "Al mattino completa con il resto del kiwi a fettine."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-porridge-overnight-oats-kiwi-e-granola/"
+    },
+    "notes": "Si conserva due giorni in frigorifero."
+  },
+  {
+    "id": "web-colazione-overnight-yogurt-mela-cannella",
+    "title": "Overnight oats allo yogurt con mela e cannella",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍎",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "overnight",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola in un barattolo i fiocchi d'avena, lo yogurt e due cucchiai d'acqua.",
+      "Taglia la mela a dadini piccoli, uniscine due terzi e spolvera con la cannella.",
+      "Chiudi il barattolo e riponilo in frigorifero per almeno 4 ore, meglio tutta la notte.",
+      "Prima di mangiare aggiungi la mela rimasta per avere un tocco croccante."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-porridge-overnight-oats-mela-e-cannella/"
+    }
+  },
+  {
+    "id": "web-colazione-coppa-yogurt-greco-muesli-pera",
+    "title": "Coppa di yogurt greco, muesli e pera",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "coppa",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Muesli",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pera",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Lava la pera e tagliala a cubetti piccoli senza sbucciarla.",
+      "In un bicchiere o vasetto alterna strati di muesli, yogurt e pera.",
+      "Finisci con un pizzico di cannella e mangia subito, o chiudi e porta con te tenendo il muesli per ultimo."
+    ],
+    "source": {
+      "name": "Ricette dal Mondo",
+      "url": "https://www.ricettedalmondo.it/coppe-di-muesli-yogurt-e-confettura.html"
+    },
+    "notes": "Idea degli strati ripresa da una coppa di muesli e yogurt; qui la confettura è sostituita dalla frutta fresca."
+  },
+  {
+    "id": "web-colazione-yogurt-greco-avena-mela-cruda",
+    "title": "Yogurt greco con fiocchi d'avena e mela cruda",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍏",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia la mela a pezzetti dopo aver tolto il torsolo.",
+      "Versa in una ciotola uno strato di yogurt, uno di fiocchi e uno di mela, e ripeti.",
+      "Completa con la cannella e servi."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Una cameriera in cucina",
+      "url": "https://blog.giallozafferano.it/unacamerieraincucina2701/ricetta-yogurt-greco-con-fiocchi-di-avena-e-mela/"
+    }
+  },
+  {
+    "id": "web-colazione-bircher-mela-noci",
+    "title": "Bircher con mela grattugiata e noci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🌰",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "bircher",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt bianco intero",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola i fiocchi con lo yogurt e un paio di cucchiai d'acqua, poi lasciali ammorbidire in frigorifero per tutta la notte.",
+      "Il mattino grattugia la mela con la buccia e condiscila subito con qualche goccia di limone perché non scurisca.",
+      "Unisci la mela al composto e mescola.",
+      "Spezzetta le noci sopra e servi freddo."
+    ],
+    "source": {
+      "name": "InnerBuddies",
+      "url": "https://www.innerbuddies.com/it/pages/recipe/bircher-muesli-with-berries-and-walnuts"
+    }
+  },
+  {
+    "id": "web-colazione-bircher-frutti-bosco",
+    "title": "Bircher allo yogurt con frutti di bosco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "bircher",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt bianco intero",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "La sera prima ammolla i fiocchi nello yogurt allungato con poca acqua e metti in frigorifero.",
+      "Al mattino rimescola e, se serve, aggiungi un goccio d'acqua per ammorbidire.",
+      "Lava i frutti di bosco e distribuiscili sopra."
+    ],
+    "source": {
+      "name": "InnerBuddies",
+      "url": "https://www.innerbuddies.com/it/pages/recipe/bircher-muesli-with-berries-and-walnuts"
+    }
+  },
+  {
+    "id": "web-colazione-toast-hummus-pomodoro",
+    "title": "Pane integrale tostato con hummus e pomodoro",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pomodoro",
+        "qty": 100,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta il pane finché diventa dorato e croccante.",
+      "Spalmalo con l'hummus in uno strato uniforme.",
+      "Affetta il pomodoro a rondelle sottili e disponilo sopra.",
+      "Completa con una macinata di pepe."
+    ],
+    "source": {
+      "name": "InnerBuddies",
+      "url": "https://www.innerbuddies.com/it/pages/recipe/whole-grain-toast-with-hummus-and-tomato"
+    },
+    "notes": "Per l'asporto tieni il pomodoro a parte e aggiungilo all'ultimo."
+  },
+  {
+    "id": "web-colazione-pane-hummus-crauti",
+    "title": "Pane integrale con hummus e crauti",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥬",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Crauti",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Tosta il pane fino a doratura.",
+      "Distribuisci l'hummus su tutta la superficie.",
+      "Scola bene i crauti e adagiali sopra."
+    ],
+    "source": {
+      "name": "InnerBuddies",
+      "url": "https://www.innerbuddies.com/it/pages/recipe/whole-grain-bread-with-hummus-and-sauerkraut"
+    }
+  },
+  {
+    "id": "web-colazione-pane-hummus-rucola-pomodorini",
+    "title": "Pane integrale con hummus, rucola e pomodorini",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥗",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 20,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodorini",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Scalda il pane in tostapane o in padella.",
+      "Spalma l'hummus e distribuisci le foglie di rucola.",
+      "Taglia i pomodorini a metà e disponili sopra, schiacciandoli leggermente."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-pane-hummus-cetrioli",
+    "title": "Pane integrale con hummus e cetrioli",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥒",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "hummus",
+      "fresco"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 80,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Affetta il cetriolo molto sottile.",
+      "Spalma l'hummus sul pane, anche non tostato.",
+      "Sovrapponi le fettine di cetriolo e finisci con il pepe."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-pane-pomodoro-basilico-yogurt",
+    "title": "Pane integrale con pomodoro e basilico e yogurt",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "salato",
+      "yogurt"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodoro",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Basilico",
+        "qty": 4,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Yogurt bianco intero",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Tosta il pane e strofina sulla superficie la polpa di mezzo pomodoro tagliato.",
+      "Taglia il resto del pomodoro a dadini, disponilo sul pane con le foglie di basilico e condisci con l'olio.",
+      "Servi accanto lo yogurt bianco, da mangiare a cucchiaiate."
+    ],
+    "source": {
+      "name": "InnerBuddies",
+      "url": "https://www.innerbuddies.com/it/pages/recipe/whole-grain-pan-con-tomate"
+    },
+    "notes": "Variante della tostata al pomodoro, con yogurt per completare il gruppo dei latticini."
+  },
+  {
+    "id": "web-colazione-fette-yogurt-fragole",
+    "title": "Fette biscottate con yogurt greco e fragole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍓",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "fette biscottate",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fette biscottate integrali",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Fragole",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Lava le fragole, tolte le foglioline, e tagliale a fettine.",
+      "Spezzetta le fette biscottate in una ciotola e coprile con lo yogurt.",
+      "Disponi le fragole sopra e mangia subito, così le fette restano croccanti."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-latte-pane-cubetti-mela",
+    "title": "Ciotola di latte con pane integrale a cubetti e mela",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "latte",
+      "pane"
+    ],
+    "ingredients": [
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il pane a dadini e tostali in padella asciutta per 3 minuti.",
+      "Scalda il latte senza farlo bollire e versalo in una ciotola.",
+      "Aggiungi i cubetti di pane e la mela a pezzetti, spolverando di cannella."
+    ],
+    "source": {
+      "name": "Torrinomedica",
+      "url": "https://www.torrinomedica.it/approfondimenti/dietologia/dieta-mediterranea/come-impostare-una-colazione-in-stile-dieta-mediterranea/"
+    }
+  },
+  {
+    "id": "web-colazione-pane-marmellata-latte-avena",
+    "title": "Pane tostato con marmellata e latte d'avena",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍞",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "marmellata",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 60,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Marmellata di albicocche",
+        "qty": 15,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Latte d'avena",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Pera",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Tosta il pane e spalma la marmellata in strato sottile.",
+      "Scalda o servi freddo il latte d'avena in una tazza.",
+      "Accompagna con la pera a spicchi."
+    ],
+    "source": null,
+    "notes": "Scegli una marmellata con poco zucchero o solo frutta."
+  },
+  {
+    "id": "web-colazione-fiocchi-frumento-avena-mela",
+    "title": "Fiocchi di frumento con latte d'avena e mela",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥣",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "cereali",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi di frumento integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte d'avena",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Mela",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Taglia la mela a dadini.",
+      "Versa i fiocchi in una ciotola e aggiungi il latte d'avena.",
+      "Completa con la mela e mangia subito, finché i fiocchi sono croccanti."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-mela-forno-yogurt-granola",
+    "title": "Mela al forno con yogurt e granola",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍎",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "mela al forno",
+      "granola"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 °C, elimina il torsolo alla mela e tagliala a spicchi.",
+      "Cuocila in una teglia con la cannella e un cucchiaio d'acqua per circa 15 minuti, finché è tenera.",
+      "Metti lo yogurt in una ciotola, aggiungi la mela tiepida e la granola."
+    ],
+    "source": null,
+    "notes": "La mela si può cuocere anche in microonde per 3 minuti."
+  },
+  {
+    "id": "web-colazione-granola-overnight-mela-pera",
+    "title": "Granola overnight con yogurt, mela e pera",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "overnight",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt bianco intero",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mela",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Pera",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Grattugia la mela e la pera e mescolale con lo yogurt.",
+      "In un vasetto alterna uno strato di composto e uno di granola, finendo con la granola.",
+      "Chiudi e lascia in frigorifero tutta la notte: la granola si ammorbidisce."
+    ],
+    "source": {
+      "name": "ZWILLING Magazine",
+      "url": "https://www.zwilling.com/it/magazine/ricette-di-ispirazione/ricette-fresh-save/overnight-granola-bowls-with-yogurt-apple-and-pear.html"
+    },
+    "notes": "Versione senza miele e senza uvetta."
+  },
+  {
+    "id": "web-colazione-yogurt-riso-soffiato-kiwi-nocciole",
+    "title": "Yogurt con riso soffiato, kiwi e nocciole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥝",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "soffiato"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt bianco intero",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Riso soffiato",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Kiwi",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Pela e affetta i kiwi, trita grossolanamente le nocciole.",
+      "In una ciotola alterna kiwi, yogurt e riso soffiato.",
+      "Finisci con la granella di nocciole."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Dolci poco dolci",
+      "url": "https://blog.giallozafferano.it/dolcipocodolci/colazione-senza-glutine-con-yogurt-kiwi-semi-nocciole-e-miglio/"
+    },
+    "notes": "Rielaborazione senza cioccolato né semi."
+  },
+  {
+    "id": "web-colazione-porridge-latte-pera-cannella",
+    "title": "Porridge d'avena al latte con pera e cannella",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Pera",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa i fiocchi e il latte in un pentolino e cuoci a fuoco dolce per 5-6 minuti, mescolando.",
+      "Taglia la pera a cubetti e uniscine metà negli ultimi minuti.",
+      "Versa nella ciotola e completa con la pera rimasta e la cannella."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-porridge-avena-susine",
+    "title": "Porridge con latte d'avena e susine",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍑",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte d'avena",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Susine",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Scalda il latte d'avena con i fiocchi e cuoci per 5 minuti a fuoco basso.",
+      "Taglia le susine a spicchi e saltale un paio di minuti in padella con un cucchiaio d'acqua.",
+      "Servi il porridge con le susine tiepide e la cannella."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-yogurt-cornflakes-pesca",
+    "title": "Yogurt con cornflakes e pesca",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "yogurt",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Yogurt bianco intero",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cornflakes",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pesca",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Taglia la pesca a fettine.",
+      "Metti lo yogurt in una ciotola e disponi sopra le fettine di pesca.",
+      "Aggiungi i cornflakes all'ultimo momento per non farli ammorbidire."
+    ],
+    "source": null
+  },
+  {
+    "id": "web-colazione-farro-soffiato-latte-frutti-bosco",
+    "title": "Farro soffiato con latte e frutti di bosco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🫐",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "cereali",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Farro soffiato",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte parzialmente scremato",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Lava i frutti di bosco e, se sono surgelati, falli scongelare qualche minuto.",
+      "Versa il farro soffiato in una ciotola e unisci il latte freddo o tiepido.",
+      "Aggiungi i frutti di bosco e mangia subito."
+    ],
+    "source": null
+  }
+]

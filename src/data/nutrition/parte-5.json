@@ -1,0 +1,474 @@
+[
+ {
+  "name": "Frutti di bosco",
+  "kcal": 52,
+  "protein": 0.76,
+  "carbs": 12.47,
+  "fat": 0.34,
+  "fiber": 4.1,
+  "sugars": 6.59,
+  "satFat": 0.023,
+  "iron": 0.55,
+  "calcium": 17,
+  "source": {
+   "name": "USDA FoodData Central (Survey FNDDS), FDC 2709272: Berries, frozen",
+   "url": "https://fdc.nal.usda.gov/food-details/2709272/nutrients"
+  },
+  "note": "Misto di frutti di bosco surgelati"
+ },
+ {
+  "name": "Fragole",
+  "kcal": 30,
+  "protein": 0.9,
+  "carbs": 5.3,
+  "fat": 0.4,
+  "fiber": 1.6,
+  "sugars": 5.3,
+  "satFat": null,
+  "iron": 0.8,
+  "calcium": 35,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fragole, fresche (cod. 007730)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007730"
+  }
+ },
+ {
+  "name": "Salvia",
+  "kcal": 132,
+  "protein": 3.9,
+  "carbs": 15.6,
+  "fat": 4.6,
+  "fiber": 8.2,
+  "sugars": 15.6,
+  "satFat": null,
+  "iron": null,
+  "calcium": 600,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Salvia, fresco (cod. 006860)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006860"
+  },
+  "note": "Erba fresca da CREA; USDA ha solo la salvia macinata (315 kcal/100 g), non adatta alla salvia fresca. Ferro e grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Muesli",
+  "kcal": 374,
+  "protein": 9.7,
+  "carbs": 71.7,
+  "fat": 6.0,
+  "fiber": 6.4,
+  "sugars": 26.2,
+  "satFat": 0.25,
+  "iron": 5.6,
+  "calcium": 110,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Muesli (cod. 003040)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/003040"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Zucchero",
+  "kcal": 392,
+  "protein": 0.0,
+  "carbs": 104.5,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": 104.5,
+  "satFat": 0.0,
+  "iron": 0.3,
+  "calcium": 1,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Zucchero, saccarosio (cod. 201500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/201500"
+  },
+  "note": "Carboidrati 104.5 g come riportato da CREA (espressi come monosaccaridi)"
+ },
+ {
+  "name": "Skyr",
+  "kcal": 62,
+  "protein": 11.2,
+  "carbs": 3.71,
+  "fat": 0.18,
+  "fiber": null,
+  "sugars": 3.71,
+  "satFat": 0.12,
+  "iron": null,
+  "calcium": 107,
+  "source": {
+   "name": "USDA FoodData Central (Branded), FDC 2183172: Isey Skyr Natural 170g",
+   "url": "https://fdc.nal.usda.gov/food-details/2183172/nutrients"
+  },
+  "note": "Etichetta di uno skyr naturale (prodotto commerciale, circa 0% grassi); fibre e ferro non dichiarati"
+ },
+ {
+  "name": "Yogurt bianco intero",
+  "kcal": 66,
+  "protein": 3.8,
+  "carbs": 4.3,
+  "fat": 3.9,
+  "fiber": 0.0,
+  "sugars": 4.3,
+  "satFat": 2.65,
+  "iron": 0.1,
+  "calcium": 125,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Yogurt, da latte intero (cod. 150010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/150010"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Estratto di vaniglia",
+  "kcal": 288,
+  "protein": 0.06,
+  "carbs": 12.6,
+  "fat": 0.06,
+  "fiber": 0.0,
+  "sugars": 12.6,
+  "satFat": 0.01,
+  "iron": 0.12,
+  "calcium": 11,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 173471: Vanilla extract",
+   "url": "https://fdc.nal.usda.gov/food-details/173471/nutrients"
+  },
+  "note": "Estratto alcolico con zuccheri"
+ },
+ {
+  "name": "Susine",
+  "kcal": 45,
+  "protein": 0.5,
+  "carbs": 10.5,
+  "fat": 0.1,
+  "fiber": 1.5,
+  "sugars": 10.5,
+  "satFat": null,
+  "iron": 0.2,
+  "calcium": 13,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Prugne, fresche (cod. 007340)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007340"
+  },
+  "note": "Voce CREA Prugne fresche (susine)"
+ },
+ {
+  "name": "Fette biscottate integrali",
+  "kcal": 394,
+  "protein": 14.2,
+  "carbs": 63.0,
+  "fat": 10.0,
+  "fiber": 5.4,
+  "sugars": 1.1,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fette biscottate, integrali (cod. 001510)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/001510"
+  },
+  "note": "Ferro, calcio e grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Marmellata",
+  "kcal": 227,
+  "protein": 0.5,
+  "carbs": 58.7,
+  "fat": 0.0,
+  "fiber": 2.2,
+  "sugars": 58.7,
+  "satFat": null,
+  "iron": 1.4,
+  "calcium": 18,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Marmellata (cod. 204500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/204500"
+  },
+  "note": "Lipidi in tracce (0)"
+ },
+ {
+  "name": "Albumi",
+  "kcal": 43,
+  "protein": 10.7,
+  "carbs": 0.0,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.0,
+  "iron": 0.1,
+  "calcium": 7,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Uova di gallina, albume (cod. 182010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/182010"
+  },
+  "note": "Lipidi e carboidrati in tracce (0)"
+ },
+ {
+  "name": "Seitan",
+  "kcal": 107,
+  "protein": 17.9,
+  "carbs": 9.52,
+  "fat": 0.77,
+  "fiber": 1.2,
+  "sugars": 1.19,
+  "satFat": 0.0,
+  "iron": 1.71,
+  "calcium": 48,
+  "source": {
+   "name": "USDA FoodData Central (Branded), FDC 1863058: Seitan, Original (Pacific Foods)",
+   "url": "https://fdc.nal.usda.gov/food-details/1863058/nutrients"
+  },
+  "note": "Etichetta di un seitan commerciale; non esiste voce CREA/SR specifica"
+ },
+ {
+  "name": "Cornflakes",
+  "kcal": 367,
+  "protein": 6.6,
+  "carbs": 87.4,
+  "fat": 0.8,
+  "fiber": 2.8,
+  "sugars": 10.4,
+  "satFat": null,
+  "iron": 2.8,
+  "calcium": 74,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Corn flakes (cod. 003020)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/003020"
+  }
+ },
+ {
+  "name": "Kefir",
+  "kcal": 52,
+  "protein": 3.59,
+  "carbs": 7.48,
+  "fat": 0.96,
+  "fiber": 0.0,
+  "sugars": 6.91,
+  "satFat": 0.596,
+  "iron": 0.04,
+  "calcium": 124,
+  "source": {
+   "name": "USDA FoodData Central (Survey FNDDS), FDC 2705394: Kefir",
+   "url": "https://fdc.nal.usda.gov/food-details/2705394/nutrients"
+  }
+ },
+ {
+  "name": "Bagel",
+  "kcal": 264,
+  "protein": 10.6,
+  "carbs": 52.4,
+  "fat": 1.32,
+  "fiber": 1.6,
+  "sugars": 8.43,
+  "satFat": 0.36,
+  "iron": 3.57,
+  "calcium": 219,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 174899: Bagels, plain, enriched, with calcium propionate",
+   "url": "https://fdc.nal.usda.gov/food-details/174899/nutrients"
+  },
+  "note": "Bagel semplice"
+ },
+ {
+  "name": "Cicoria",
+  "kcal": 17,
+  "protein": 1.4,
+  "carbs": 0.7,
+  "fat": 0.2,
+  "fiber": 3.6,
+  "sugars": 0.7,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 74,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Cicoria, di campo, cruda (cod. 005240)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005240"
+  },
+  "note": "Cicoria di campo cruda"
+ },
+ {
+  "name": "Alloro",
+  "kcal": 313,
+  "protein": 7.61,
+  "carbs": 75.0,
+  "fat": 8.36,
+  "fiber": 26.3,
+  "sugars": null,
+  "satFat": 2.28,
+  "iron": 43.0,
+  "calcium": 834,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170917: Spices, bay leaf",
+   "url": "https://fdc.nal.usda.gov/food-details/170917/nutrients"
+  },
+  "note": "Foglie secche; si usano in quantità minime"
+ },
+ {
+  "name": "Fiocchi di frumento",
+  "kcal": 359,
+  "protein": 10.06,
+  "carbs": 76.27,
+  "fat": 1.47,
+  "fiber": 10.4,
+  "sugars": 14.0,
+  "satFat": 0.13,
+  "iron": 27.62,
+  "calcium": 19,
+  "source": {
+   "name": "USDA FoodData Central (Survey FNDDS), FDC 2708480: Cereal, wheat flakes",
+   "url": "https://fdc.nal.usda.gov/food-details/2708480/nutrients"
+  },
+  "note": "Cereali da colazione a fiocchi di frumento; il ferro alto deriva da fortificazione"
+ },
+ {
+  "name": "Frutta secca mista",
+  "kcal": 607,
+  "protein": 19.5,
+  "carbs": 22.4,
+  "fat": 53.5,
+  "fiber": 6.4,
+  "sugars": 5.0,
+  "satFat": 8.01,
+  "iron": 3.73,
+  "calcium": 87,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 170585: Nuts, mixed nuts, dry roasted, with peanuts, without salt added",
+   "url": "https://fdc.nal.usda.gov/food-details/170585/nutrients"
+  },
+  "note": "Mix generico di frutta secca (contiene arachidi); voce equivalente più vicina"
+ },
+ {
+  "name": "Semolino",
+  "kcal": 346,
+  "protein": 11.5,
+  "carbs": 76.9,
+  "fat": 0.5,
+  "fiber": 3.6,
+  "sugars": 1.9,
+  "satFat": 0.14,
+  "iron": 1.3,
+  "calcium": 17,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Semola (cod. 000310)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000310"
+  },
+  "note": "Voce CREA Semola (semolino); Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Scamorza",
+  "kcal": 334,
+  "protein": 25.0,
+  "carbs": 1.0,
+  "fat": 25.6,
+  "fiber": 0.0,
+  "sugars": 1.0,
+  "satFat": null,
+  "iron": 0.3,
+  "calcium": 512,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Scamorza (cod. 167200)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/167200"
+  },
+  "note": "Grassi saturi non riportati da CREA"
+ },
+ {
+  "name": "Formaggio a fette",
+  "kcal": 310,
+  "protein": 15.6,
+  "carbs": 8.19,
+  "fat": 23.9,
+  "fiber": null,
+  "sugars": null,
+  "satFat": 13.7,
+  "iron": 1.3,
+  "calcium": 1500,
+  "source": {
+   "name": "USDA FoodData Central (Foundation), FDC 2647439: Cheese, pasteurized process cheese food or product, American, singles",
+   "url": "https://fdc.nal.usda.gov/food-details/2647439/nutrients"
+  },
+  "note": "Formaggio fuso a fette (sottilette); kcal calcolate con fattori Atwater. Fibre e zuccheri non riportati"
+ },
+ {
+  "name": "Fette biscottate",
+  "kcal": 387,
+  "protein": 11.3,
+  "carbs": 75.0,
+  "fat": 6.0,
+  "fiber": 3.5,
+  "sugars": 2.2,
+  "satFat": null,
+  "iron": 3.8,
+  "calcium": 55,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Fette biscottate (cod. 001500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/001500"
+  }
+ },
+ {
+  "name": "Mandorle a lamelle",
+  "kcal": 628,
+  "protein": 22.0,
+  "carbs": 4.6,
+  "fat": 55.3,
+  "fiber": 12.7,
+  "sugars": 3.7,
+  "satFat": 4.63,
+  "iron": 3.0,
+  "calcium": 240,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Mandorle dolci, secche (cod. 008540)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/008540"
+  },
+  "note": "Valori delle mandorle secche (le lamelle sono lo stesso prodotto affettato); Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ },
+ {
+  "name": "Pasta per lasagne",
+  "kcal": 346,
+  "protein": 13.0,
+  "carbs": 71.0,
+  "fat": 2.4,
+  "fiber": 3.2,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 2.1,
+  "calcium": 22,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pasta all'uovo, secca (cod. 000870)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000870"
+  },
+  "note": "Sfoglie di pasta all'uovo secca"
+ },
+ {
+  "name": "Valeriana",
+  "kcal": 21,
+  "protein": 2.0,
+  "carbs": 3.6,
+  "fat": 0.4,
+  "fiber": null,
+  "sugars": null,
+  "satFat": null,
+  "iron": 2.18,
+  "calcium": 38,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 169219: Cornsalad, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/169219/nutrients"
+  },
+  "note": "Valerianella (corn salad) cruda; fibre, zuccheri e saturi non riportati"
+ },
+ {
+  "name": "Grano saraceno",
+  "kcal": 329,
+  "protein": 12.4,
+  "carbs": 61.2,
+  "fat": 3.3,
+  "fiber": 10.0,
+  "sugars": null,
+  "satFat": 0.71,
+  "iron": 4.0,
+  "calcium": 110,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Grano saraceno (cod. 000050)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000050"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA x lipidi totali"
+ }
+]

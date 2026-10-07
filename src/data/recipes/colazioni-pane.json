@@ -1,0 +1,1562 @@
+[
+  {
+    "id": "colazione-pn-french-toast-cannella",
+    "title": "French toast alla cannella",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍞",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "french toast",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale in cassetta",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte",
+        "qty": 60,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Sbatti l'uovo con il latte, lo zucchero e la cannella in un piatto fondo.",
+      "Passa le due fette nella pastella, girandole perché si impregnino da entrambi i lati.",
+      "Fai sciogliere il burro in una padella antiaderente a fuoco medio e cuoci le fette un paio di minuti per lato, finché sono dorate.",
+      "Servile calde, con un po' di frutta fresca a piacere."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/french-toast/"
+    },
+    "notes": "Altra fonte consultata: Catia in cucina, French toast integrali alla cannella."
+  },
+  {
+    "id": "colazione-pn-french-toast-vegano-banana",
+    "title": "French toast vegano alla banana",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🍌",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "french toast",
+      "vegano",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane ai cereali in cassetta",
+        "qty": 3,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Banana",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 100,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Curcuma in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 50,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'agave",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla la banana con il latte di soia, la cannella e la curcuma fino a ottenere una crema liscia.",
+      "Immergi le fette nel composto per pochi secondi, senza lasciarle in ammollo, e adagiale su una teglia con carta da forno.",
+      "Inforna a 180 °C per 10-15 minuti, girandole a metà cottura.",
+      "Servi con i mirtilli e un filo di sciroppo d'agave."
+    ],
+    "source": {
+      "name": "My-personaltrainer",
+      "url": "https://www.my-personaltrainer.it/Tv/Ricette/Dolci_Dessert/french-toast-light-senza-uova-e-al-forno.html"
+    }
+  },
+  {
+    "id": "colazione-pn-french-toast-salato",
+    "title": "French toast salato con prosciutto e formaggio",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🧀",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "french toast",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane in cassetta",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Formaggio a fette",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Latte",
+        "qty": 25,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Prepara un toast con prosciutto e formaggio tra le due fette di pane e premi bene i bordi.",
+      "Sbatti l'uovo con il latte e un po' di pepe.",
+      "Sciogli il burro in padella, passa il toast nell'uovo da entrambi i lati e cuocilo a fuoco medio-basso per circa 2 minuti per lato.",
+      "Servilo subito, quando il formaggio è filante."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/ricetta-french-toast-salati/"
+    },
+    "notes": "Altra fonte consultata: A tavola con Tea, French toast salato."
+  },
+  {
+    "id": "colazione-pn-bagel-salmone-cetriolo",
+    "title": "Bagel con salmone, formaggio fresco e cetriolo",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥯",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "bagel",
+      "salmone"
+    ],
+    "ingredients": [
+      {
+        "name": "Bagel",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Formaggio fresco spalmabile",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 40,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia il bagel a metà e scaldalo qualche minuto in tostapane o in forno.",
+      "Spalma il formaggio fresco su entrambe le metà.",
+      "Distribuisci il salmone e il cetriolo affettato sottile, poi macina un po' di pepe e richiudi."
+    ],
+    "source": {
+      "name": "I pasticcini di Dina",
+      "url": "https://blog.giallozafferano.it/ipasticcinidinina/ricetta-bagel-ai-semi/"
+    }
+  },
+  {
+    "id": "colazione-pn-bagel-salmone-avocado",
+    "title": "Bagel con salmone, avocado e cipollotto",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥑",
+    "diet": "pescetarian",
+    "takeaway": true,
+    "tags": [
+      "bagel",
+      "avocado"
+    ],
+    "ingredients": [
+      {
+        "name": "Bagel ai semi",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Formaggio fresco spalmabile",
+        "qty": 30,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cipollotto",
+        "qty": 10,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Apri il bagel e tostalo leggermente.",
+      "Spalma il formaggio sulla base e adagia l'avocado a fettine.",
+      "Aggiungi il salmone, il cipollotto affettato fine e una macinata di pepe, poi chiudi."
+    ],
+    "source": {
+      "name": "Passione cooking",
+      "url": "https://blog.giallozafferano.it/passionecooking/ricetta-bagel-con-salmone-e-avocado/"
+    }
+  },
+  {
+    "id": "colazione-pn-uova-camicia-prosciutto-crudo",
+    "title": "Uovo in camicia su pane tostato con prosciutto crudo",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍳",
+    "diet": "omnivore",
+    "takeaway": false,
+    "tags": [
+      "uova",
+      "brunch"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane casereccio",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto crudo",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Aceto di vino bianco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Porta a bollore una pentola d'acqua con l'aceto, poi abbassa il fuoco e crea un piccolo vortice con un cucchiaio.",
+      "Versa l'uovo, sgusciato prima in una tazzina, e cuocilo 2-3 minuti finché l'albume è rappreso. Scolalo con la schiumarola.",
+      "Tosta il pane, adagia il prosciutto e sopra l'uovo.",
+      "Finisci con pepe macinato. Niente salsa olandese: il tuorlo morbido fa da condimento."
+    ],
+    "source": {
+      "name": "A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-uova-alla-benedict/"
+    },
+    "notes": "Versione alleggerita delle uova alla Benedict, senza salsa olandese."
+  },
+  {
+    "id": "colazione-pn-uovo-camicia-avocado-toast",
+    "title": "Uovo in camicia su avocado toast",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "avocado",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 60,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Cuoci l'uovo in acqua appena sobbollente con un vortice al centro per circa 3 minuti, poi scolalo e tamponalo con carta da cucina.",
+      "Intanto tosta il pane e schiaccia l'avocado con limone, sale e pepe.",
+      "Spalma l'avocado sul pane e posa l'uovo sopra."
+    ],
+    "source": {
+      "name": "Strong R Fast R",
+      "url": "https://www.strongrfastr.com/it/ricette/3342-uf_poch_sur_toast__lavocat"
+    }
+  },
+  {
+    "id": "colazione-pn-avocado-toast-uova-sode",
+    "title": "Avocado toast con uovo sodo e parmigiano",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "avocado",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 70,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano Reggiano",
+        "qty": 10,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai rassodare l'uovo per 8 minuti in acqua bollente, raffreddalo e affettalo.",
+      "Tosta il pane. Schiaccia l'avocado con lime, olio, sale e pepe.",
+      "Spalma la crema sul pane, disponi l'uovo e completa con scaglie di parmigiano."
+    ],
+    "source": {
+      "name": "A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-avocado-toast-con-uova/"
+    }
+  },
+  {
+    "id": "colazione-pn-avocado-toast-tahina-sesamo",
+    "title": "Avocado toast vegano con tahina e sesamo",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🌱",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "avocado",
+      "vegano"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale multicereali",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 70,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Tahina",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di sesamo",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta il pane su entrambi i lati.",
+      "Spalma la tahina sul pane caldo e adagia l'avocado a dadini, subito irrorato con il limone perché non scurisca.",
+      "Cospargi di sesamo."
+    ],
+    "source": {
+      "name": "Ortaggi che passione",
+      "url": "https://blog.giallozafferano.it/ortaggichepassionebysara/ricetta-avocado-toast-vegan/"
+    }
+  },
+  {
+    "id": "colazione-pn-sandwich-burro-arachidi-banana",
+    "title": "Sandwich al burro di arachidi e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥜",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "sandwich",
+      "banana"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale in cassetta",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Burro di arachidi",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Tosta le due fette di pane.",
+      "Spalma il burro di arachidi su una fetta e disponi la banana a rondelle.",
+      "Copri con l'altra fetta e taglia a metà."
+    ],
+    "source": {
+      "name": "Strong R Fast R",
+      "url": "https://www.strongrfastr.com/it/ricette/295-peanut_butter__banana_breakfast_sandwich"
+    },
+    "notes": "Verifica che il pane non contenga latte o uova se segui una dieta vegana."
+  },
+  {
+    "id": "colazione-pn-toast-arachidi-banana-anacardi",
+    "title": "Toast aperto con burro di arachidi, banana e anacardi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🍌",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "toast",
+      "banana"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane da toast",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Burro di arachidi",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Anacardi",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cacao amaro in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Tosta le fette di pane.",
+      "Spalma il burro di arachidi su ciascuna e copri con la banana a rondelle.",
+      "Trita grossolanamente gli anacardi, spargili sopra e spolvera con un velo di cacao."
+    ],
+    "source": {
+      "name": "Viaggiando mangiando",
+      "url": "https://blog.giallozafferano.it/viaggiandomangiando/ricetta-banana-toast-stati-uniti/"
+    },
+    "notes": "Ispirato al banana toast americano, senza sciroppo al cioccolato."
+  },
+  {
+    "id": "colazione-pn-tartine-ricotta-montata-miele",
+    "title": "Tartine di ricotta montata, miele e limone",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍯",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "tartine",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane in cassetta",
+        "qty": 2,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 100,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Miele",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Scorza di limone",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      },
+      {
+        "name": "Menta fresca",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Lavora la ricotta con una forchetta o con le fruste finché è liscia e cremosa.",
+      "Unisci il miele e un po' di scorza di limone grattugiata.",
+      "Tosta o griglia il pane, tagliato a metà, e spalma la crema.",
+      "Decora con foglioline di menta."
+    ],
+    "source": {
+      "name": "Asilannablu",
+      "url": "https://blog.giallozafferano.it/asilannablu/ricetta-tartine-di-ricotta-montata/"
+    }
+  },
+  {
+    "id": "colazione-pn-tartine-ricotta-noci",
+    "title": "Tartine di ricotta, parmigiano e noci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🌰",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "tartine",
+      "noci"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane per tramezzini",
+        "qty": 3,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Parmigiano Reggiano",
+        "qty": 8,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Pepe rosa",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola la ricotta con il parmigiano e un pizzico di sale.",
+      "Spalma la crema su una fetta e chiudila con un'altra, poi ricava dei triangolini o delle stelline.",
+      "Completa con un ciuffo di crema, gherigli di noce spezzettati e qualche grano di pepe rosa."
+    ],
+    "source": {
+      "name": "Cucina di Chicca",
+      "url": "https://blog.giallozafferano.it/cucinadichicca/tartine-ricotta-e-noci-antipasto-veloce/"
+    },
+    "notes": "Per l'asporto conserva la crema a parte e farcisci all'ultimo."
+  },
+  {
+    "id": "colazione-pn-fette-biscottate-ricotta-fichi-secchi",
+    "title": "Fette biscottate con ricotta, miele e fichi secchi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "fette biscottate",
+      "ricotta"
+    ],
+    "ingredients": [
+      {
+        "name": "Fette biscottate",
+        "qty": 3,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Fichi secchi",
+        "qty": 30,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Mescola la ricotta con il miele fino a una crema liscia.",
+      "Taglia i fichi a pezzetti e trita le nocciole.",
+      "Spalma la crema sulle fette biscottate e decora con fichi e nocciole."
+    ],
+    "source": {
+      "name": "MSP, ricetta pane tostato con ricotta e frutta secca",
+      "url": "https://blog.giallozafferano.it/msp/pane-tostato-ricotta-frutta-secca/"
+    },
+    "notes": "Variante della ricetta con albicocche secche."
+  },
+  {
+    "id": "colazione-pn-bruschetta-pomodoro-leggera",
+    "title": "Bruschetta leggera al pomodoro e basilico",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍅",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "bruschetta",
+      "pomodoro"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane toscano",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 120,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Aglio",
+        "qty": 1,
+        "unit": "pz",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Basilico fresco",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      },
+      {
+        "name": "Sale",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia i pomodori a cubetti piccoli e condiscili con olio, sale e basilico spezzettato. Lascia riposare 5 minuti.",
+      "Tosta il pane in padella o nel tostapane e strofina la superficie con lo spicchio d'aglio.",
+      "Copri con il pomodoro e servi subito, per evitare che il pane si ammorbidisca."
+    ],
+    "source": {
+      "name": "Allacciate il grembiule",
+      "url": "https://blog.giallozafferano.it/allacciateilgrembiule/bruschetta-al-pomodoro/"
+    },
+    "notes": "Una sola fetta e un solo cucchiaino d'olio per tenerla leggera."
+  },
+  {
+    "id": "colazione-pn-pane-tostato-ricotta-pesca-menta",
+    "title": "Pane tostato con ricotta, pesca e menta",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "ricotta",
+      "frutta"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane di segale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Pesca",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Menta fresca",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Tosta il pane.",
+      "Spalma la ricotta, appena addolcita con metà del miele.",
+      "Disponi la pesca a spicchi, un filo di miele e foglie di menta."
+    ],
+    "source": null,
+    "notes": "In inverno sostituisci la pesca con una pera."
+  },
+  {
+    "id": "colazione-pn-panino-bagel-uova-prosciutto-formaggio",
+    "title": "Bagel con uova, prosciutto e formaggio",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥯",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "bagel",
+      "uova"
+    ],
+    "ingredients": [
+      {
+        "name": "Bagel",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Formaggio a fette",
+        "qty": 20,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scalda l'olio in padella e cuoci le uova all'occhio di bue o strapazzate, come preferisci.",
+      "Scalda il prosciutto per un minuto accanto alle uova.",
+      "Tosta il bagel e farciscilo con uova, formaggio e prosciutto."
+    ],
+    "source": {
+      "name": "Strong R Fast R",
+      "url": "https://www.strongrfastr.com/it/ricette/51-small_egg_cheese_and_ham_sandwich_on_a_bagel"
+    },
+    "notes": "Si può preparare la sera prima e scaldare in ufficio."
+  },
+  {
+    "id": "colazione-pn-piadina-dolce-ricotta-miele",
+    "title": "Piadina dolce con ricotta, miele e frutta",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🌯",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "piadina",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 80,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Fragole",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle a lamelle",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scalda la piadina in padella antiaderente un minuto per lato.",
+      "Spalma la ricotta mescolata con il miele su metà piadina.",
+      "Aggiungi le fragole a fettine e le mandorle, poi piega a mezzaluna."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/piadina-la-ricetta-perfetta/"
+    },
+    "notes": "Piadina di base ispirata alla piadina romagnola."
+  },
+  {
+    "id": "colazione-pn-piadina-squacquerone-crudo",
+    "title": "Piadina romagnola con squacquerone e prosciutto crudo",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥙",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "piadina",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Piadina",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Squacquerone",
+        "qty": 50,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Prosciutto crudo",
+        "qty": 30,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 10,
+        "unit": "g",
+        "group": "veg"
+      }
+    ],
+    "steps": [
+      "Scalda la piadina in una padella ben calda per un minuto per lato.",
+      "Spalma lo squacquerone su metà piadina e aggiungi il prosciutto e la rucola.",
+      "Piega a metà e mangia calda."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/piadina-la-ricetta-perfetta/"
+    }
+  },
+  {
+    "id": "colazione-pn-pane-marmellata-albicocche-casa",
+    "title": "Pane con marmellata di albicocche fatta in casa",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍑",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "marmellata",
+      "fatto in casa"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Albicocche",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Zucchero",
+        "qty": 30,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Taglia le albicocche a pezzi e mettile in un pentolino con lo zucchero e il limone.",
+      "Cuoci a fuoco dolce per circa 20 minuti, mescolando, finché la frutta si disfa e il composto si addensa.",
+      "Lascia intiepidire: una parte basta per questa porzione, il resto va in un barattolo in frigo.",
+      "Spalma sul pane tostato."
+    ],
+    "source": {
+      "name": "Valeria Ciccotti",
+      "url": "https://blog.giallozafferano.it/valeriaciccotti/marmellata-di-albicocche/"
+    },
+    "notes": "Nella ricetta originale si usa 1 kg di frutta con 350 g di zucchero; qui il piccolo lotto si conserva in frigo 5-7 giorni."
+  },
+  {
+    "id": "colazione-pn-fette-biscottate-yogurt-mirtilli",
+    "title": "Fette biscottate con yogurt greco, mirtilli e miele",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🫐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "fette biscottate",
+      "yogurt"
+    ],
+    "ingredients": [
+      {
+        "name": "Fette biscottate",
+        "qty": 3,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Spalma lo yogurt greco su ogni fetta biscottata poco prima di mangiare.",
+      "Aggiungi i mirtilli e un filo di miele."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pn-tramezzini-ricotta-cotto",
+    "title": "Tramezzini con ricotta e prosciutto cotto",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥪",
+    "diet": "omnivore",
+    "takeaway": true,
+    "tags": [
+      "tramezzini",
+      "salato"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane per tramezzini",
+        "qty": 4,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 60,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Prosciutto cotto",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Rucola",
+        "qty": 10,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Condisci la ricotta con sale e pepe.",
+      "Spalmala su due fette, aggiungi prosciutto e rucola e chiudi con le altre.",
+      "Taglia a triangoli e avvolgi nella pellicola se devi portarli via."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pn-avocado-toast-salmone-uovo",
+    "title": "Avocado toast con salmone e uovo sodo",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🍣",
+    "diet": "pescetarian",
+    "takeaway": false,
+    "tags": [
+      "avocado",
+      "salmone"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Avocado",
+        "qty": 70,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Salmone affumicato",
+        "qty": 40,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Uova",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Succo di lime",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai sodo l'uovo (8 minuti), raffreddalo e affettalo.",
+      "Tosta il pane e spalma l'avocado schiacciato con lime, sale e pepe.",
+      "Completa con salmone e uovo, da mangiare subito."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/avocado-toast.html"
+    }
+  },
+  {
+    "id": "colazione-pn-toast-crescenza-miele-noci",
+    "title": "Pane tostato con crescenza, miele e noci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 8,
+    "emoji": "🍯",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "crescenza",
+      "miele"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Crescenza",
+        "qty": 50,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Tosta il pane.",
+      "Spalma la crescenza ancora sul pane caldo, così si ammorbidisce.",
+      "Aggiungi le noci spezzettate e il miele."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pn-pane-burro-fragole",
+    "title": "Pane e burro con confettura di fragole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍓",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "classico",
+      "confettura"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Burro",
+        "qty": 8,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Confettura di fragole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Taglia il pane a fette e, se vuoi, tostalo appena.",
+      "Spalma il burro e poi la confettura."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pn-uova-camicia-spinaci-pane",
+    "title": "Uova in camicia con spinaci su pane integrale",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥬",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "uova",
+      "verdure"
+    ],
+    "ingredients": [
+      {
+        "name": "Pane integrale",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Uova",
+        "qty": 2,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Spinaci freschi",
+        "qty": 60,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Aceto di vino bianco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pepe nero",
+        "qty": 0,
+        "unit": "q.b.",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Fai appassire gli spinaci in padella con un filo d'olio per 2 minuti.",
+      "Cuoci le uova in acqua sobbollente e aceto, con un leggero vortice, per 2-3 minuti, poi scolale.",
+      "Tosta il pane, sistema spinaci e uova e finisci con pepe nero."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/uova-in-camicia/"
+    }
+  },
+  {
+    "id": "colazione-pn-bagel-hummus-cetriolo",
+    "title": "Bagel con hummus, cetriolo e pomodoro",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥒",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bagel",
+      "hummus"
+    ],
+    "ingredients": [
+      {
+        "name": "Bagel",
+        "qty": 1,
+        "unit": "pz",
+        "group": "carb"
+      },
+      {
+        "name": "Hummus",
+        "qty": 50,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Cetriolo",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Pomodori",
+        "qty": 50,
+        "unit": "g",
+        "group": "veg"
+      },
+      {
+        "name": "Olio extravergine d'oliva",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Tosta il bagel aperto a metà.",
+      "Spalma l'hummus e disponi cetriolo e pomodoro a fettine.",
+      "Condisci con olio e sale e chiudi."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-pn-pinsa-dolce-ricotta-pistacchi",
+    "title": "Pinsa dolce con ricotta, miele e pistacchi",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 12,
+    "emoji": "🥧",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "pinsa",
+      "dolce"
+    ],
+    "ingredients": [
+      {
+        "name": "Base per pinsa",
+        "qty": 80,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Ricotta",
+        "qty": 70,
+        "unit": "g",
+        "group": "protein"
+      },
+      {
+        "name": "Miele",
+        "qty": 2,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pistacchi",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Scalda la base per pinsa in forno a 200 °C per 5 minuti.",
+      "Lasciala intiepidire e stendi la ricotta mescolata con il miele.",
+      "Cospargi di pistacchi tritati e taglia a spicchi."
+    ],
+    "source": null
+  }
+]

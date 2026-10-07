@@ -1,0 +1,409 @@
+[
+ {
+  "name": "Mirtilli secchi",
+  "kcal": 317,
+  "protein": 2.5,
+  "carbs": 80.0,
+  "fat": 2.5,
+  "fiber": 7.5,
+  "sugars": 67.5,
+  "satFat": 0.2,
+  "iron": 0.9,
+  "calcium": 19,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168158: Blueberries, dried, sweetened",
+   "url": "https://fdc.nal.usda.gov/food-details/168158/nutrients"
+  },
+  "note": "Mirtilli essiccati zuccherati; carboidrati per differenza (USDA)"
+ },
+ {
+  "name": "Burro di nocciole",
+  "kcal": 703,
+  "protein": 16.9,
+  "carbs": 5.1,
+  "fat": 66.7,
+  "fiber": 7.5,
+  "sugars": 3.6,
+  "satFat": 4.2,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Nocciola 100% (Damiano), pasta di nocciole",
+   "url": "https://world.openfoodfacts.org/product/8002352000624"
+  },
+  "note": "Pasta di nocciole 100% (prodotto italiano); ferro e calcio non in etichetta"
+ },
+ {
+  "name": "Marmellata di fragole",
+  "kcal": 227,
+  "protein": 0.5,
+  "carbs": 58.7,
+  "fat": 0.0,
+  "fiber": 2.2,
+  "sugars": 58.7,
+  "satFat": null,
+  "iron": 1.4,
+  "calcium": 18,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Marmellata (cod. 204500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/204500"
+  },
+  "note": "Dato CREA per marmellata generica (non specifico fragola); lipidi 'tr' riportati come 0"
+ },
+ {
+  "name": "Crusca d'avena",
+  "kcal": 246,
+  "protein": 17.3,
+  "carbs": 66.2,
+  "fat": 7.03,
+  "fiber": 15.4,
+  "sugars": 1.45,
+  "satFat": 1.33,
+  "iron": 5.41,
+  "calcium": 58,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 168872: Oat bran, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/168872/nutrients"
+  },
+  "note": "Carboidrati per differenza (USDA)"
+ },
+ {
+  "name": "Quinoa soffiata",
+  "kcal": 385,
+  "protein": 14.3,
+  "carbs": 58.2,
+  "fat": 8.1,
+  "fiber": 10.8,
+  "sugars": 1.5,
+  "satFat": 1.0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Quinoa soffiata (Bertoncini)",
+   "url": "https://world.openfoodfacts.org/product/8001863300452"
+  },
+  "note": "Etichetta di prodotto italiano; altri marchi variano molto (352-385 kcal)"
+ },
+ {
+  "name": "Riso per sushi cotto",
+  "kcal": 100,
+  "protein": 2.0,
+  "carbs": 24.2,
+  "fat": 0.1,
+  "fiber": 0.2,
+  "sugars": 0.1,
+  "satFat": null,
+  "iron": 0.2,
+  "calcium": 10,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Riso, brillato, cotto, bollito (cod. 000105)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000105"
+  },
+  "note": "Valore del riso brillato cotto in bianco, senza condimento per sushi (aceto/zucchero)"
+ },
+ {
+  "name": "Patata",
+  "kcal": 72,
+  "protein": 2.0,
+  "carbs": 16.0,
+  "fat": 0.1,
+  "fiber": 1.8,
+  "sugars": 1.0,
+  "satFat": null,
+  "iron": 0.6,
+  "calcium": 10,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Patate, crude (cod. 006500)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/006500"
+  },
+  "note": "Patata cruda"
+ },
+ {
+  "name": "Tortillas di frumento integrali",
+  "kcal": 298,
+  "protein": 9.7,
+  "carbs": 47.0,
+  "fat": 6.0,
+  "fiber": 8.0,
+  "sugars": 2.6,
+  "satFat": 1.4,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Wraps blé complet (Carrefour)",
+   "url": "https://world.openfoodfacts.org/product/3560071253080"
+  },
+  "note": "Unica etichetta integrale trovata e' francese (Carrefour); non trovata una tortilla integrale italiana su OFF"
+ },
+ {
+  "name": "Pane da toast",
+  "kcal": 280,
+  "protein": 8.4,
+  "carbs": 52.0,
+  "fat": 4.4,
+  "fiber": 2.8,
+  "sugars": 3.6,
+  "satFat": 0.4,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Pane da Toast (Daily Bread)",
+   "url": "https://world.openfoodfacts.org/product/8032998906585"
+  },
+  "note": "Una sola etichetta italiana trovata"
+ },
+ {
+  "name": "Albicocche",
+  "kcal": 42,
+  "protein": 0.4,
+  "carbs": 9.8,
+  "fat": 0.1,
+  "fiber": 1.5,
+  "sugars": 9.8,
+  "satFat": null,
+  "iron": 0.5,
+  "calcium": 16,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Albicocche, fresche (cod. 007000)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/007000"
+  },
+  "note": "Albicocche fresche"
+ },
+ {
+  "name": "Pane",
+  "kcal": 268,
+  "protein": 8.1,
+  "carbs": 59.5,
+  "fat": 0.5,
+  "fiber": 3.8,
+  "sugars": 2.0,
+  "satFat": null,
+  "iron": 0.7,
+  "calcium": 17,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Pane bianco (cod. 000530)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000530"
+  }
+ },
+ {
+  "name": "Rape",
+  "kcal": 24,
+  "protein": 1.0,
+  "carbs": 4.0,
+  "fat": 0.0,
+  "fiber": 2.6,
+  "sugars": 3.8,
+  "satFat": null,
+  "iron": 0.6,
+  "calcium": 40,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Rape, crude (cod. 005660)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005660"
+  },
+  "note": "Rape crude"
+ },
+ {
+  "name": "Arista di maiale",
+  "kcal": 146,
+  "protein": 20.7,
+  "carbs": 0.0,
+  "fat": 7.0,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 2.45,
+  "iron": 1.3,
+  "calcium": 7,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Maiale, lombo, crudo (cod. 105210)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/105210"
+  },
+  "note": "Arista = lombo di maiale, crudo. Grassi saturi calcolati da % acidi grassi saturi CREA (35,01%) x lipidi"
+ },
+ {
+  "name": "Bocconcini di vitello",
+  "kcal": 109,
+  "protein": 20.3,
+  "carbs": 0.0,
+  "fat": 2.5,
+  "fiber": 0.0,
+  "sugars": null,
+  "satFat": 0.75,
+  "iron": 0.88,
+  "calcium": 17,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 173843: Veal, cubed for stew (leg and shoulder), separable lean only, raw",
+   "url": "https://fdc.nal.usda.gov/food-details/173843/nutrients"
+  },
+  "note": "Crudo, solo parte magra; il CREA non ha tagli di vitello a bocconcini"
+ },
+ {
+  "name": "Branzino (intero)",
+  "kcal": 82,
+  "protein": 16.5,
+  "carbs": 0.6,
+  "fat": 1.5,
+  "fiber": 0.0,
+  "sugars": 0.6,
+  "satFat": 0.5,
+  "iron": 4.1,
+  "calcium": 20,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Spigola (cod. 123200)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/123200"
+  },
+  "note": "Branzino = spigola; dato per parte edule del pesce crudo (selvatico). Il ferro CREA (4.1) appare alto, riportato com'e'. Grassi saturi calcolati da % saturi CREA (33,33%)"
+ },
+ {
+  "name": "Polpa di pomodoro",
+  "kcal": 26,
+  "protein": 1.2,
+  "carbs": 3.9,
+  "fat": 0.2,
+  "fiber": null,
+  "sugars": 2.8,
+  "satFat": 0.1,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Polpa di pomodoro (Mutti)",
+   "url": "https://world.openfoodfacts.org/product/8005110851346"
+  },
+  "note": "Etichetta di prodotto italiano; CREA pelati in scatola: 22 kcal"
+ },
+ {
+  "name": "Polpo cotto",
+  "kcal": 164,
+  "protein": 29.8,
+  "carbs": 4.4,
+  "fat": 2.08,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 0.453,
+  "iron": 9.54,
+  "calcium": 106,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 174249: Mollusks, octopus, common, cooked, moist heat",
+   "url": "https://fdc.nal.usda.gov/food-details/174249/nutrients"
+  },
+  "note": "Cotto a vapore/bollito (USDA); CREA ha solo il polpo crudo (57 kcal, cod. 127150)"
+ },
+ {
+  "name": "Tonno sott'olio",
+  "kcal": 192,
+  "protein": 25.2,
+  "carbs": 0.0,
+  "fat": 10.1,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": null,
+  "iron": 1.7,
+  "calcium": 7,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Tonno sott'olio, sgocciolato (cod. 123610)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/123610"
+  },
+  "note": "Sgocciolato"
+ },
+ {
+  "name": "Filetto di sgombro",
+  "kcal": 170,
+  "protein": 17.0,
+  "carbs": 0.5,
+  "fat": 11.1,
+  "fiber": 0.0,
+  "sugars": 0.5,
+  "satFat": 3.16,
+  "iron": 1.2,
+  "calcium": 38,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Sgombro o maccarello (cod. 123000)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/123000"
+  },
+  "note": "Crudo. Grassi saturi calcolati da % saturi CREA (28,5%)"
+ },
+ {
+  "name": "Filetto di trota",
+  "kcal": 118,
+  "protein": 20.3,
+  "carbs": 0.0,
+  "fat": 4.1,
+  "fiber": 0.0,
+  "sugars": 0.0,
+  "satFat": 1.17,
+  "iron": 2.0,
+  "calcium": 29,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Trota iridea d'allevamento, filetti (cod. 124050)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/124050"
+  },
+  "note": "Crudo. Grassi saturi calcolati da % saturi CREA (28,46%)"
+ },
+ {
+  "name": "Salmone fresco",
+  "kcal": 185,
+  "protein": 18.4,
+  "carbs": 1.0,
+  "fat": 12.0,
+  "fiber": 0.0,
+  "sugars": 1.0,
+  "satFat": 3.38,
+  "iron": 0.7,
+  "calcium": 27,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Salmone (cod. 122400)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/122400"
+  },
+  "note": "Crudo. Grassi saturi calcolati da % saturi CREA (28,13%)"
+ },
+ {
+  "name": "Semi misti",
+  "kcal": 623,
+  "protein": 27.0,
+  "carbs": 7.0,
+  "fat": 51.0,
+  "fiber": 14.0,
+  "sugars": 4.0,
+  "satFat": 5.0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Semi misti tostati (Naturasi)",
+   "url": "https://world.openfoodfacts.org/product/8019010432369"
+  },
+  "note": "Mix di semi tostati; la composizione varia molto tra marchi (514-623 kcal)"
+ },
+ {
+  "name": "Rosmarino secco",
+  "kcal": 331,
+  "protein": 4.88,
+  "carbs": 64.1,
+  "fat": 15.2,
+  "fiber": 42.6,
+  "sugars": null,
+  "satFat": 7.37,
+  "iron": 29.2,
+  "calcium": 1280,
+  "source": {
+   "name": "USDA FoodData Central (SR Legacy), FDC 171333: Spices, rosemary, dried",
+   "url": "https://fdc.nal.usda.gov/food-details/171333/nutrients"
+  },
+  "note": "Carboidrati per differenza (includono la fibra)"
+ },
+ {
+  "name": "Pasta di lenticchie rosse",
+  "kcal": 334,
+  "protein": 26.0,
+  "carbs": 50.0,
+  "fat": 1.7,
+  "fiber": 7.6,
+  "sugars": 1.2,
+  "satFat": 0.4,
+  "iron": 5.2,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Sedanini lenticchie rosse bio (Felicia)",
+   "url": "https://world.openfoodfacts.org/product/8032804430471"
+  },
+  "note": "Pasta cruda, etichetta italiana"
+ }
+]

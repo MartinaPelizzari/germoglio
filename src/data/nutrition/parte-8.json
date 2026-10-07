@@ -1,0 +1,410 @@
+[
+ {
+  "name": "Granola",
+  "kcal": 428,
+  "protein": 8.7,
+  "carbs": 65,
+  "fat": 13.2,
+  "fiber": 3.2,
+  "sugars": 17.9,
+  "satFat": 1.7,
+  "iron": 3.2,
+  "calcium": 203,
+  "source": {
+   "name": "Open Food Facts, etichetta: Granola Miele, Nestlé",
+   "url": "https://it.openfoodfacts.org/product/7613035619456"
+  },
+  "note": "Granola commerciale (Nestlé, al miele); i valori variano molto tra prodotti (430-570 kcal). Ferro e calcio convertiti da g a mg dall'etichetta."
+ },
+ {
+  "name": "Sciroppo d'agave",
+  "kcal": 297,
+  "protein": 0,
+  "carbs": 71,
+  "fat": 0,
+  "fiber": 5.8,
+  "sugars": 69,
+  "satFat": 0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Sciroppo d'agave, Eridania",
+   "url": "https://it.openfoodfacts.org/product/8000121200008"
+  },
+  "note": "Prodotto commerciale; valori tra marche 290-310 kcal."
+ },
+ {
+  "name": "Latte d'avena",
+  "kcal": 53,
+  "protein": 0.4,
+  "carbs": 9.3,
+  "fat": 1.4,
+  "fiber": 0.8,
+  "sugars": 5.1,
+  "satFat": 0.3,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Bevanda a base di avena, Conad Verso Natura",
+   "url": "https://it.openfoodfacts.org/product/8003170060104"
+  },
+  "note": "Valori di un prodotto commerciale italiano (bevanda d'avena senza fortificazione); ferro e calcio non dichiarati in etichetta. I valori variano tra marche (38-65 kcal)."
+ },
+ {
+  "name": "Latte di avena",
+  "kcal": 53,
+  "protein": 0.4,
+  "carbs": 9.3,
+  "fat": 1.4,
+  "fiber": 0.8,
+  "sugars": 5.1,
+  "satFat": 0.3,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Bevanda a base di avena, Conad Verso Natura",
+   "url": "https://it.openfoodfacts.org/product/8003170060104"
+  },
+  "note": "Valori di un prodotto commerciale italiano (bevanda d'avena senza fortificazione); ferro e calcio non dichiarati in etichetta. I valori variano tra marche (38-65 kcal)."
+ },
+ {
+  "name": "Bevanda d'avena",
+  "kcal": 53,
+  "protein": 0.4,
+  "carbs": 9.3,
+  "fat": 1.4,
+  "fiber": 0.8,
+  "sugars": 5.1,
+  "satFat": 0.3,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Bevanda a base di avena, Conad Verso Natura",
+   "url": "https://it.openfoodfacts.org/product/8003170060104"
+  },
+  "note": "Valori di un prodotto commerciale italiano (bevanda d'avena senza fortificazione); ferro e calcio non dichiarati in etichetta. I valori variano tra marche (38-65 kcal)."
+ },
+ {
+  "name": "Olio di cocco",
+  "kcal": 899,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 99.9,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 91.8,
+  "iron": 0,
+  "calcium": 0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Olio di cocco (cod. 009620)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/009620"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA (91,94%) x lipidi totali; ferro in tracce (0)."
+ },
+ {
+  "name": "Farina di farro",
+  "kcal": 349,
+  "protein": 13.5,
+  "carbs": 69,
+  "fat": 1.3,
+  "fiber": 3.7,
+  "sugars": 0.8,
+  "satFat": 0.2,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Farina di farro, Rieper",
+   "url": "https://it.openfoodfacts.org/product/8002003001253"
+  },
+  "note": "Farina di farro commerciale (tipo non integrale); la versione integrale ha più fibra."
+ },
+ {
+  "name": "Cavolo nero",
+  "kcal": 35,
+  "protein": 2.92,
+  "carbs": 4.42,
+  "fat": 1.49,
+  "fiber": 4.1,
+  "sugars": 0.99,
+  "satFat": 0.18,
+  "iron": 1.6,
+  "calcium": 254,
+  "source": {
+   "name": "USDA FoodData Central SR Legacy: Kale, raw (FDC 168421), via mirror GetFoodFacts",
+   "url": "https://getfoodfacts.com/food/kale-raw-168421"
+  },
+  "note": "Cavolo nero non presente in CREA; valori del kale crudo USDA, specie affine (Brassica oleracea)."
+ },
+ {
+  "name": "Sgombro sott'olio",
+  "kcal": 260,
+  "protein": 19,
+  "carbs": 1.6,
+  "fat": 19,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 3.2,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Filetti di sgombro all'olio di oliva, Amati",
+   "url": "https://it.openfoodfacts.org/product/8004320000339"
+  },
+  "note": "Valori per il prodotto con olio di conserva non sgocciolato; sgocciolato è più magro (circa 160-230 kcal a seconda del marchio)."
+ },
+ {
+  "name": "Farro soffiato",
+  "kcal": 362,
+  "protein": 14,
+  "carbs": 68,
+  "fat": 2.5,
+  "fiber": 6.6,
+  "sugars": 1,
+  "satFat": 0.4,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Farro soffiato integrale bio, Poggio del Farro",
+   "url": "https://it.openfoodfacts.org/product/8033413347907"
+  },
+  "note": "Farro soffiato (prodotto già espanso), non farro in chicchi."
+ },
+ {
+  "name": "Latte di riso",
+  "kcal": 57,
+  "protein": 0.3,
+  "carbs": 12,
+  "fat": 0.8,
+  "fiber": 0,
+  "sugars": 9.1,
+  "satFat": 0.2,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Bevanda di riso, Granarolo",
+   "url": "https://it.openfoodfacts.org/product/8002670500516"
+  },
+  "note": "Bevanda di riso commerciale; ferro e calcio non dichiarati. Valori tra marche 49-57 kcal."
+ },
+ {
+  "name": "Farina di riso",
+  "kcal": 332,
+  "protein": 7.3,
+  "carbs": 79.1,
+  "fat": 0.5,
+  "fiber": 1,
+  "sugars": 0,
+  "satFat": null,
+  "iron": 0.4,
+  "calcium": 7,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Farina di riso (cod. 000270)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/000270"
+  },
+  "note": "Zuccheri solubili in tracce (0); grassi saturi non disponibili in CREA."
+ },
+ {
+  "name": "Olio di semi di mais",
+  "kcal": 899,
+  "protein": 0,
+  "carbs": 0,
+  "fat": 99.9,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 15.7,
+  "iron": 0.1,
+  "calcium": 0,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Olio di mais (cod. 009660)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/009660"
+  },
+  "note": "Grassi saturi calcolati da % acidi grassi saturi CREA (15,68%) x lipidi totali; calcio in tracce (0)."
+ },
+ {
+  "name": "Mirtilli essiccati",
+  "kcal": 325,
+  "protein": 3,
+  "carbs": 75,
+  "fat": 0.5,
+  "fiber": null,
+  "sugars": 45,
+  "satFat": 0.1,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Mirtilli essiccati, Penny",
+   "url": "https://it.openfoodfacts.org/product/8024370105129"
+  },
+  "note": "Prodotto essiccato (Penny), non frutta fresca; dato di etichetta senza fibra. Dubbio: lista ingredienti non verificata (specie e zuccheri aggiunti), altri prodotti simili vanno da 281 a 350 kcal."
+ },
+ {
+  "name": "Riso soffiato",
+  "kcal": 354,
+  "protein": 6.0,
+  "carbs": 85.1,
+  "fat": 1.0,
+  "fiber": 1,
+  "sugars": 9,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Riso, soffiato, da prima colazione (cod. 003050)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/003050"
+  },
+  "note": "Riso soffiato da prima colazione (CREA); ferro, calcio e grassi saturi non disponibili."
+ },
+ {
+  "name": "Semi di senape",
+  "kcal": 508,
+  "protein": 26.1,
+  "carbs": 28.1,
+  "fat": 36.2,
+  "fiber": 12.2,
+  "sugars": 6.79,
+  "satFat": 1.99,
+  "iron": 9.21,
+  "calcium": 266,
+  "source": {
+   "name": "USDA FoodData Central SR Legacy: Spices, mustard seed, ground (FDC 170929), via mirror GetFoodFacts",
+   "url": "https://getfoodfacts.com/food/spices-mustard-seed-ground-170929"
+  },
+  "note": "Valori USDA per semi di senape macinati (unica voce SR); i semi interi hanno composizione molto simile. Non in CREA."
+ },
+ {
+  "name": "Tortillas di mais",
+  "kcal": 222,
+  "protein": 5.7,
+  "carbs": 46.6,
+  "fat": 2.5,
+  "fiber": 5.2,
+  "sugars": null,
+  "satFat": 0.33,
+  "iron": 1.4,
+  "calcium": 175,
+  "source": {
+   "name": "USDA FoodData Central SR Legacy: Tortillas, ready-to-bake or -fry, corn, without added salt (FDC 173241), via mirror GetFoodFacts",
+   "url": "https://getfoodfacts.com/food/tortillas-ready-to-bake-or-fry-corn-without-added-salt-173241"
+  },
+  "note": "Tortillas morbide di solo mais (tipo messicano); prodotti commerciali italiani 'tortillas di mais' sono spesso chips (circa 480 kcal) o miste con grano (circa 310 kcal)."
+ },
+ {
+  "name": "Pane per tramezzini",
+  "kcal": 244,
+  "protein": 7.9,
+  "carbs": 45.4,
+  "fat": 2.7,
+  "fiber": 3,
+  "sugars": 4.5,
+  "satFat": 0.5,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Pane per tramezzini, Coop",
+   "url": "https://it.openfoodfacts.org/product/8001120936486"
+  },
+  "note": "Prodotto commerciale; valori tra marche 244-253 kcal."
+ },
+ {
+  "name": "Barbabietola cotta",
+  "kcal": 43,
+  "protein": 2.1,
+  "carbs": 7.8,
+  "fat": 0,
+  "fiber": 2.6,
+  "sugars": 7.8,
+  "satFat": null,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Barbabietole rosse, cotte, bollite (cod. 005065)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/005065"
+  },
+  "note": "Lipidi in tracce (0); ferro, calcio e grassi saturi non disponibili."
+ },
+ {
+  "name": "Carne macinata di manzo",
+  "kcal": 215,
+  "protein": 18.8,
+  "carbs": 0,
+  "fat": 15.3,
+  "fiber": 0,
+  "sugars": 0,
+  "satFat": 5.9,
+  "iron": 2.1,
+  "calcium": 11.8,
+  "source": {
+   "name": "USDA Beef, ground, 85% lean meat / 15% fat, raw (NBD 23567), via Recipal",
+   "url": "https://www.recipal.com/ingredients/6903-nutrition-facts-calories-protein-carbs-fat-beef-ground-85-lean-meat-15-fat-raw"
+  },
+  "note": "Dati USDA (Beef, ground, 85% lean meat / 15% fat, raw, NBD 23567), valori per 100 g calcolati dalla porzione di 85 g; il macinato italiano varia in base al taglio e alla percentuale di grasso."
+ },
+ {
+  "name": "Gallette di riso",
+  "kcal": 379,
+  "protein": 8.4,
+  "carbs": 80,
+  "fat": 2.2,
+  "fiber": 1.18,
+  "sugars": 0.3,
+  "satFat": 0.5,
+  "iron": 1.76,
+  "calcium": 41.2,
+  "source": {
+   "name": "Open Food Facts, etichetta: Gallette di riso, Certossa",
+   "url": "https://it.openfoodfacts.org/product/40899404"
+  },
+  "note": "Prodotto commerciale; ferro e calcio convertiti da g a mg e probabilmente stimati dal produttore. Altre marche 350-386 kcal."
+ },
+ {
+  "name": "Aceto di riso",
+  "kcal": 19,
+  "protein": 0.5,
+  "carbs": 0.5,
+  "fat": 0,
+  "fiber": null,
+  "sugars": 0.5,
+  "satFat": 0,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Aceto di riso, Taino (Salvia)",
+   "url": "https://it.openfoodfacts.org/product/8053904172375"
+  },
+  "note": "Aceto di riso naturale non condito; le versioni 'per sushi' contengono zucchero e hanno più kcal. Valori di etichette molto variabili (3-20 kcal)."
+ },
+ {
+  "name": "Bocconcini di soia secchi",
+  "kcal": 354,
+  "protein": 50,
+  "carbs": 14,
+  "fat": 7.5,
+  "fiber": 15,
+  "sugars": 6.2,
+  "satFat": 1.6,
+  "iron": null,
+  "calcium": null,
+  "source": {
+   "name": "Open Food Facts, etichetta: Bocconcini di soia, Terranostra",
+   "url": "https://it.openfoodfacts.org/product/8016979521455"
+  },
+  "note": "Prodotto secco (non reidratato); valori tra marche 325-374 kcal e 45-52 g di proteine."
+ },
+ {
+  "name": "Crema di arachidi",
+  "kcal": 625,
+  "protein": 24.9,
+  "carbs": 8.0,
+  "fat": 53.7,
+  "fiber": 6.0,
+  "sugars": 4.4,
+  "satFat": 11.2,
+  "iron": 2.5,
+  "calcium": 47,
+  "source": {
+   "name": "CREA Alimenti e Nutrizione, Tabelle di composizione degli alimenti: Burro d'arachidi (cod. 009010)",
+   "url": "https://www.alimentinutrizione.it/tabelle-nutrizionali/009010"
+  },
+  "note": "CREA 'burro d'arachidi' usato come equivalente; grassi saturi calcolati da % CREA (20,82%) x lipidi. Le creme commerciali italiane sono simili (601-645 kcal, 24-28 g proteine)."
+ }
+]

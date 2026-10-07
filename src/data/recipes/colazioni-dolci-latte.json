@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "colazione-dl-chia-cocco-mirtilli",
+    "title": "Chia pudding al latte di cocco e mirtilli",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🫐",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "vasetto",
+      "senza cottura"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Estratto di vaniglia",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mirtilli",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'agave",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa il latte di cocco in un vasetto, unisci i semi di chia e la vaniglia e mescola bene.",
+      "Dopo 10 minuti mescola di nuovo con una forchetta, così i semi non formano grumi.",
+      "Chiudi e lascia in frigorifero almeno 4 ore, meglio tutta la notte.",
+      "Al momento di mangiare rimescola, aggiungi lo sciroppo d'agave e completa con i mirtilli."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Il ricettario di Timo e Lavanda",
+      "url": "https://blog.giallozafferano.it/ilricettariotimoelavanda/chia-pudding-latte-cocco-paleo-low-carb/"
+    },
+    "notes": "Si conserva 2 giorni in frigorifero; aggiungi la frutta solo al momento."
+  },
+  {
+    "id": "colazione-dl-chia-riso-fragole",
+    "title": "Chia pudding al latte di riso e fragole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍓",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "vasetto",
+      "senza cottura"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di riso",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Sciroppo d'agave",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Fragole",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Mescola in una ciotola il latte di riso, i semi di chia e lo sciroppo d'agave.",
+      "Copri e lascia in frigorifero per tutta la notte, finché il composto non si è addensato come un budino.",
+      "Trasferisci in una coppetta o in un vasetto e completa con le fragole a pezzetti."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/chia-pudding/"
+    },
+    "notes": "Il latte di riso è naturalmente dolce: se preferisci, usa un altro latte vegetale."
+  },
+  {
+    "id": "colazione-dl-porridge-saraceno-banana",
+    "title": "Porridge di grano saraceno con banana e crema di nocciole",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍌",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Grano saraceno",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Banana",
+        "qty": 60,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 10,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Crema di nocciole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Cuoci il grano saraceno in acqua bollente per 10 minuti e scolalo.",
+      "Rimettilo nel pentolino con il latte di soia e fallo sobbollire a fuoco basso per circa 20 minuti, mescolando ogni tanto, finché il liquido è assorbito.",
+      "Togli dal fuoco e lascia riposare 5 minuti, poi mescola lo sciroppo d'acero, il cioccolato tritato e la crema di nocciole.",
+      "Servi in una ciotola con la banana a rondelle."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Un'esplosione di bontà",
+      "url": "https://blog.giallozafferano.it/unesplosionedibonta/porridge-di-grano-saraceno-senza-glutine-vegano/"
+    },
+    "notes": "Il grano saraceno cotto si prepara in anticipo e si conserva 3 giorni in frigorifero."
+  },
+  {
+    "id": "colazione-dl-porridge-quinoa-uva-mandorle",
+    "title": "Porridge di quinoa alla vaniglia con uva e mandorle",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍇",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "quinoa"
+    ],
+    "ingredients": [
+      {
+        "name": "Quinoa",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Acqua",
+        "qty": 75,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Uva nera",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Mandorle a scaglie",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Estratto di vaniglia",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Sciacqua bene la quinoa sotto l'acqua corrente per togliere il retrogusto amaro.",
+      "Porta a bollore il latte di soia con l'acqua, aggiungi la quinoa e lo sciroppo d'acero e cuoci circa 15 minuti.",
+      "Unisci metà dell'uva tagliata a metà e la vaniglia, e prosegui per altri 8-10 minuti finché il porridge è cremoso.",
+      "Servi con l'uva rimasta e le mandorle a scaglie."
+    ],
+    "source": {
+      "name": "My-personaltrainer.it",
+      "url": "https://www.my-personaltrainer.it/Tv/Ricette/Dolci_Dessert/porridge-quinoa-vegan-senza-glutine.html"
+    },
+    "notes": "Con la quinoa già cotta il tempo scende a 10 minuti: basta scaldarla nel latte."
+  },
+  {
+    "id": "colazione-dl-overnight-banana-arachidi",
+    "title": "Overnight oats con banana, crema di arachidi e yogurt di soia",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🥜",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "overnight",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte d'avena",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Yogurt di soia",
+        "qty": 80,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Crema di arachidi",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Metti i fiocchi d'avena in un barattolo, versa il latte d'avena e mescola.",
+      "Lascia in frigorifero tutta la notte, o almeno per 3 ore.",
+      "Al mattino aggiungi lo yogurt di soia, la crema di arachidi e la banana a fettine."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Studenti ai fornelli",
+      "url": "https://blog.giallozafferano.it/studentiaifornelli/ricetta-3-idee-di-porridge-overnight-senza-cottura/"
+    },
+    "notes": "Se vuoi portarlo con te, tieni la banana separata e aggiungila all'ultimo."
+  },
+  {
+    "id": "colazione-dl-smoothie-bowl-banana-frutti-bosco",
+    "title": "Smoothie bowl banana e frutti di bosco con granola",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🫐",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "smoothie bowl",
+      "frullato"
+    ],
+    "ingredients": [
+      {
+        "name": "Banana",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 100,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Semi di chia",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Taglia la banana a pezzi (meglio se già fredda o congelata) e mettila nel frullatore con i frutti di bosco surgelati e il latte di soia.",
+      "Frulla prima piano, poi più forte, fino a una crema densa; se è troppo dura aggiungi un goccio di latte.",
+      "Versa in una ciotola e completa con granola e semi di chia."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cucina prediletta",
+      "url": "https://blog.giallozafferano.it/cucinaprediletta/frullato-frutti-di-bosco-e-banane/"
+    },
+    "notes": "Mangiala subito, altrimenti la granola perde croccantezza."
+  },
+  {
+    "id": "colazione-dl-granola-padella-latte-pesca",
+    "title": "Granola in padella con latte e pesca",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "granola",
+      "senza forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Latte",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Pesca",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Scalda in una padella l'olio con lo sciroppo d'acero e un cucchiaio d'acqua, finché è fluido.",
+      "Aggiungi i fiocchi d'avena e tostali per 5 minuti mescolando, poi le nocciole tritate per altri 3-4 minuti.",
+      "Lascia raffreddare completamente: diventerà croccante.",
+      "Servi in una ciotola con il latte freddo e la pesca a spicchi."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/granola-in-padella.html"
+    },
+    "notes": "Raddoppiando o triplicando le dosi ottieni una scorta per più giorni: si conserva in un vasetto ermetico fino a 2 settimane."
+  },
+  {
+    "id": "colazione-dl-crumble-mela-padella-yogurt",
+    "title": "Crumble di mela in padella con yogurt greco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍏",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "crumble",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Olio di cocco",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Scalda l'olio di cocco in una padella e cuoci la mela a pezzetti per 4-5 minuti, finché si ammorbidisce.",
+      "Aggiungi i fiocchi d'avena, lo sciroppo d'acero e la cannella e tostali mescolando fino a farli dorare.",
+      "Versa lo yogurt in una ciotola e copri con il crumble ancora tiepido."
+    ],
+    "source": null,
+    "notes": "Una versione vegana si ottiene con yogurt di soia."
+  },
+  {
+    "id": "colazione-dl-granola-cioccolato-latte-soia",
+    "title": "Granola al cioccolato e purea di mela con latte di soia",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍫",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "granola",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Frutta secca mista",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Purea di mela",
+        "qty": 20,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 10,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di girasole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di soia",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Scalda il forno a 180 °C e fondi il cioccolato a bagnomaria o al microonde.",
+      "Mescola i fiocchi d'avena con la frutta secca tritata, poi unisci purea di mela, sciroppo d'acero, olio e cioccolato fuso, fino a rivestire bene tutti i fiocchi.",
+      "Stendi sottile su una teglia con carta da forno e cuoci 20-25 minuti, girando a metà.",
+      "Lascia raffreddare del tutto sulla teglia, poi servi con il latte di soia."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-granola-al-cioccolato-fatta-in-casa/"
+    },
+    "notes": "Conviene prepararne una teglia intera (circa 8 porzioni): si conserva croccante due settimane in un barattolo chiuso."
+  },
+  {
+    "id": "colazione-dl-latte-mandorla-casa-muesli",
+    "title": "Latte di mandorla fatto in casa con muesli e fragole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🥛",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "latte vegetale",
+      "fatto in casa"
+    ],
+    "ingredients": [
+      {
+        "name": "Mandorle",
+        "qty": 40,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Acqua",
+        "qty": 200,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Muesli",
+        "qty": 50,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fragole",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Sciroppo d'agave",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "La sera prima metti le mandorle in ammollo in acqua fredda per 10-12 ore.",
+      "Scolale, sciacquale e frullale con 200 ml di acqua fresca per un paio di minuti.",
+      "Filtra il liquido con un colino a maglie fitte o un telo, premendo bene, e addolcisci con lo sciroppo d'agave.",
+      "Versa il latte sul muesli e completa con le fragole a pezzetti."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Il ricettario di Timo e Lavanda",
+      "url": "https://blog.giallozafferano.it/ilricettariotimoelavanda/ricetta-latte-di-mandorla-fatto-in-casa/"
+    },
+    "notes": "Il latte si conserva in frigorifero fino a 3 giorni; la polpa filtrata si può congelare e usare nei dolci."
+  },
+  {
+    "id": "colazione-dl-latte-avena-casa-banana",
+    "title": "Latte d'avena fatto in casa con muesli e banana",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🌾",
+    "diet": "vegan",
+    "takeaway": false,
+    "tags": [
+      "latte vegetale",
+      "fatto in casa"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 15,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 200,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Muesli",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Versa sui fiocchi d'avena un po' d'acqua bollente e lasciali in ammollo per 30 minuti.",
+      "Frullali con il resto dell'acqua fredda e filtra con un colino.",
+      "Versa il latte ottenuto sul muesli e aggiungi la banana a rondelle."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/latte-di-avena-fatto-in-casa/"
+    },
+    "notes": "Prepara una dose più grande (50 g di fiocchi e 700 ml di acqua) e conservala in frigorifero fino a 5 giorni."
+  },
+  {
+    "id": "colazione-dl-bircher-latte-mandorla-lino",
+    "title": "Bircher muesli con latte di mandorla e semi di lino",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍎",
+    "diet": "vegan",
+    "takeaway": true,
+    "tags": [
+      "bircher",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte di mandorla",
+        "qty": 80,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Mela",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di lino",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "La sera prima mescola i fiocchi d'avena con il latte di mandorla in un barattolo e lascia in frigorifero.",
+      "Al mattino grattugia la mela con la buccia e condiscila subito con il limone, così non scurisce.",
+      "Unisci la mela all'avena e completa con le mandorle tritate e i semi di lino pestati."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Timo e lenticchie",
+      "url": "https://blog.giallozafferano.it/timoelenticchie/bircher-muesli-ricetta-originale/"
+    },
+    "notes": "Nella versione originale il latte era poco; puoi aumentarlo se ti piace più cremoso."
+  },
+  {
+    "id": "colazione-dl-barrette-avena-arachidi-yogurt",
+    "title": "Barrette morbide di avena e arachidi con yogurt",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 20,
+    "emoji": "🥜",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "barrette",
+      "da portare"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 70,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 30,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Burro d'arachidi",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Albume",
+        "qty": 1,
+        "unit": "pz",
+        "group": "protein"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 2,
+        "unit": "cucchiai",
+        "group": "fruit"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Trita le mandorle al coltello e mescolale in una ciotola con i fiocchi d'avena, il burro d'arachidi e il miele.",
+      "Aggiungi l'albume e l'uvetta e amalgama bene.",
+      "Pressa il composto in una pirofila rivestita di carta da forno e lascia in frigorifero per un'ora, poi taglia a barrette.",
+      "Mangiane due con lo yogurt greco."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/ricette/barrette-proteiche-fatte-in-casa/"
+    },
+    "notes": "Si conservano in frigorifero per pochi giorni: non contengono conservanti."
+  },
+  {
+    "id": "colazione-dl-barrette-cereali-frutta-secca-latte",
+    "title": "Barrette ai cereali e frutta secca con latte",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🥣",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "barrette",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Mandorle",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Semi di girasole",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Mirtilli secchi",
+        "qty": 10,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Sciroppo d'acero",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Latte",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Mescola i fiocchi d'avena con la frutta secca tritata, i semi e i mirtilli secchi.",
+      "Unisci miele e sciroppo d'acero e amalgama fino a rendere il composto appiccicoso.",
+      "Pressalo bene in una teglia con carta da forno e cuoci a 180 °C per 20-25 minuti, finché è dorato.",
+      "Lascia raffreddare del tutto, taglia a barrette e mangiane una o due con un bicchiere di latte."
+    ],
+    "source": {
+      "name": "Ricette dal mondo",
+      "url": "https://www.ricettedalmondo.it/barrette-ai-cereali-e-frutta-secca.html"
+    },
+    "notes": "Le dosi sono per una porzione: per avere una scorta settimanale moltiplicale per 6 o 8."
+  },
+  {
+    "id": "colazione-dl-chia-yogurt-melone",
+    "title": "Chia pudding con yogurt e melone",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍈",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Yogurt bianco",
+        "qty": 80,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Melone",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Menta",
+        "qty": 3,
+        "unit": "pz",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Mescola i semi di chia con il latte di cocco, copri e lascia in frigorifero almeno 5 ore o tutta la notte.",
+      "In un vasetto alterna strati di budino di chia, yogurt e cubetti di melone.",
+      "Completa con altri pezzetti di frutta e qualche foglia di menta."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cotto in un click",
+      "url": "https://blog.giallozafferano.it/cottoinunclick/ricetta-budino-di-chia-con-yogurt/"
+    },
+    "notes": "Puoi sostituire il latte di cocco con latte di mandorla, riso o avena."
+  },
+  {
+    "id": "colazione-dl-chia-cacao-banana-yogurt",
+    "title": "Chia pudding al cacao e banana con yogurt greco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍫",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte d'avena",
+        "qty": 120,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Cacao amaro",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 100,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 5,
+        "unit": "g",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Frulla metà della banana con i fiocchi d'avena, i semi di chia, il cacao e il latte d'avena per un paio di minuti.",
+      "Versa in un vasetto e lascia in frigorifero almeno 2 ore, meglio tutta la notte: i semi gonfieranno e il composto si addenserà.",
+      "Al momento di servire copri con lo yogurt greco, la banana rimasta a fettine e il cioccolato tritato."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog La cucina di Fefè",
+      "url": "https://blog.giallozafferano.it/lacucinadifefe/banana-chia-pudding/"
+    },
+    "notes": "Si conserva fino a 3 giorni in frigorifero (senza il topping)."
+  },
+  {
+    "id": "colazione-dl-chia-fragole-cocco-miele",
+    "title": "Chia pudding cremoso alle fragole e latte di cocco",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍓",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "chia",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Semi di chia",
+        "qty": 20,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Latte di cocco",
+        "qty": 150,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Estratto di vaniglia",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Fragole",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Sbatti con una piccola frusta il latte di cocco con i semi di chia, metà del miele e la vaniglia; dopo 5 minuti rimescola per sciogliere i grumi.",
+      "Copri e metti in frigorifero per almeno 4 ore.",
+      "Frulla la metà delle fragole con il miele rimasto per fare una salsa liscia.",
+      "Versa il budino in un bicchiere, copri con la salsa e decora con le fragole a metà."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog A tavola con Tea",
+      "url": "https://blog.giallozafferano.it/atavolacontea/ricetta-chia-pudding-alle-fragole/"
+    },
+    "notes": "Aggiungi la salsa di fragole solo al momento di servire."
+  },
+  {
+    "id": "colazione-dl-porridge-avena-nocciole-cioccolato",
+    "title": "Porridge d'avena alle nocciole e cioccolato",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 25,
+    "emoji": "🌰",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Acqua",
+        "qty": 120,
+        "unit": "ml",
+        "group": "other"
+      },
+      {
+        "name": "Latte",
+        "qty": 120,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Cioccolato fondente",
+        "qty": 10,
+        "unit": "g",
+        "group": "other"
+      },
+      {
+        "name": "Burro di nocciole",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "Metti in un pentolino i fiocchi d'avena con acqua e latte e cuoci a fuoco dolce, mescolando, finché il liquido è assorbito e la crema è densa.",
+      "Per un porridge ancora più liscio frulla con un minipimer una parte del composto.",
+      "Versa in una ciotola e completa con nocciole tritate, cioccolato a scaglie e burro di nocciole."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Studenti ai fornelli",
+      "url": "https://blog.giallozafferano.it/studentiaifornelli/porridge-alle-nocciole-e-cioccolato/"
+    },
+    "notes": "Per la versione vegana usa latte di avena o di soia al posto del latte."
+  },
+  {
+    "id": "colazione-dl-crema-riso-pera-cannella",
+    "title": "Crema di farina di riso con pera e cannella",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "senza glutine"
+    ],
+    "ingredients": [
+      {
+        "name": "Farina di riso",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Pera",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      }
+    ],
+    "steps": [
+      "Versa la farina di riso in un pentolino e aggiungi il latte a filo, mescolando con una frusta per non fare grumi.",
+      "Cuoci a fuoco medio-basso, sempre mescolando, finché si addensa, poi ancora 1-2 minuti.",
+      "Trasferisci in una ciotola e aggiungi la pera a dadini, la cannella e il miele."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Il ricettario di Timo e Lavanda",
+      "url": "https://blog.giallozafferano.it/ilricettariotimoelavanda/crema-di-riso-con-farina-di-riso/"
+    },
+    "notes": "Con una bevanda di riso o di mandorla e lo sciroppo d'agave diventa vegana."
+  },
+  {
+    "id": "colazione-dl-riso-latte-pesca-cannella",
+    "title": "Riso al latte cremoso con pesca e cannella",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 35,
+    "emoji": "🍚",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "riso",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Riso Carnaroli",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte",
+        "qty": 250,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Pesca",
+        "qty": 130,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Metti riso, latte e zucchero in un pentolino e porta a leggero bollore.",
+      "Abbassa la fiamma e cuoci circa 25 minuti, mescolando spesso, finché il riso si è quasi sfaldato in una crema.",
+      "Servi tiepido con la cannella e la pesca a cubetti."
+    ],
+    "source": null,
+    "notes": "Si può preparare la sera prima e scaldare al mattino con un goccio di latte."
+  },
+  {
+    "id": "colazione-dl-bircher-yogurt-pera-noci",
+    "title": "Bircher alla pera con yogurt e noci",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 10,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "bircher",
+      "vasetto"
+    ],
+    "ingredients": [
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte",
+        "qty": 60,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Yogurt naturale",
+        "qty": 80,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Pera",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Noci",
+        "qty": 15,
+        "unit": "g",
+        "group": "fat"
+      }
+    ],
+    "steps": [
+      "La sera prima unisci in un barattolo fiocchi d'avena, latte e yogurt e mescola.",
+      "Il mattino dopo grattugia la pera con la buccia, spruzzala di limone e uniscila al composto.",
+      "Completa con le noci spezzettate."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Timo e lenticchie",
+      "url": "https://blog.giallozafferano.it/timoelenticchie/bircher-muesli-ricetta-originale/"
+    },
+    "notes": "Variante della ricetta originale svizzera: con mela al posto della pera, o latte di mandorla, diventa vegana."
+  },
+  {
+    "id": "colazione-dl-mela-forno-uvetta-pinoli-yogurt",
+    "title": "Mela al forno con uvetta e pinoli e yogurt greco",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 45,
+    "emoji": "🍎",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "frutta cotta",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Mela",
+        "qty": 180,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Uvetta",
+        "qty": 15,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Pinoli",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Metti a bagno l'uvetta in acqua tiepida per 10 minuti e scolala.",
+      "Elimina il torsolo della mela lasciando intatto il fondo e riempi la cavità con uvetta, pinoli, zucchero e cannella.",
+      "Mettila in una pirofila con un dito d'acqua e il succo di limone e cuoci a 180 °C per 35-40 minuti, finché è morbida.",
+      "Servila tiepida accanto allo yogurt greco."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Anna torte",
+      "url": "https://blog.giallozafferano.it/annatorte/ricetta-mele-al-forno-ripiene-di-uvetta-pinoli-e-cannella/"
+    },
+    "notes": "Si può cuocere in anticipo e scaldare in pochi secondi al microonde."
+  },
+  {
+    "id": "colazione-dl-pera-forno-crumble-avena-skyr",
+    "title": "Pera al forno con crumble di avena e skyr",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 40,
+    "emoji": "🍐",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "frutta cotta",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Pera",
+        "qty": 170,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Noci",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Miele",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Cannella in polvere",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Skyr",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Taglia la pera a metà e togli il torsolo, poi disponila in una teglia con il taglio verso l'alto.",
+      "Mescola i fiocchi d'avena con le noci tritate, il miele e la cannella e distribuisci il tutto sulle metà di pera.",
+      "Cuoci a 180 °C per circa 30 minuti, finché la pera è tenera e il crumble dorato.",
+      "Servi tiepida con lo skyr freddo."
+    ],
+    "source": null
+  },
+  {
+    "id": "colazione-dl-yogurt-pesche-caramellate-granola",
+    "title": "Yogurt greco con pesche caramellate e granola",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "frutta cotta",
+      "yogurt"
+    ],
+    "ingredients": [
+      {
+        "name": "Pesca",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Burro",
+        "qty": 5,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Granola",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      }
+    ],
+    "steps": [
+      "Taglia la pesca a spicchi.",
+      "Sciogli il burro in una padella antiaderente, aggiungi lo zucchero e cuoci gli spicchi 3-4 minuti per lato, finché sono dorati e lucidi.",
+      "Metti lo yogurt in una ciotola, adagia sopra le pesche tiepide con il loro sughetto e completa con la granola."
+    ],
+    "source": null,
+    "notes": "Con pesche noci o albicocche funziona altrettanto bene."
+  },
+  {
+    "id": "colazione-dl-skyr-cacao-banana-nocciole",
+    "title": "Skyr al cacao con banana e nocciole",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🍌",
+    "diet": "vegetarian",
+    "takeaway": true,
+    "tags": [
+      "skyr",
+      "veloce"
+    ],
+    "ingredients": [
+      {
+        "name": "Skyr",
+        "qty": 150,
+        "unit": "g",
+        "group": "dairy"
+      },
+      {
+        "name": "Cacao amaro",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Banana",
+        "qty": 100,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Nocciole",
+        "qty": 10,
+        "unit": "g",
+        "group": "fat"
+      },
+      {
+        "name": "Muesli",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      }
+    ],
+    "steps": [
+      "Mescola lo skyr con il cacao fino a ottenere una crema omogenea, dolcificando se vuoi con un po' di banana schiacciata.",
+      "Versa in una ciotola o un vasetto e aggiungi la banana a rondelle.",
+      "Completa con le nocciole tritate e il muesli."
+    ],
+    "source": null,
+    "notes": "Aggiungi il muesli solo prima di mangiare, per tenerlo croccante."
+  },
+  {
+    "id": "colazione-dl-frullato-kefir-frutti-bosco-avena",
+    "title": "Frullato di kefir, frutti di bosco e avena",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 5,
+    "emoji": "🥤",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "kefir",
+      "frullato"
+    ],
+    "ingredients": [
+      {
+        "name": "Kefir",
+        "qty": 200,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Banana",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Frutti di bosco",
+        "qty": 80,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 30,
+        "unit": "g",
+        "group": "carb"
+      }
+    ],
+    "steps": [
+      "Metti nel frullatore il kefir ben freddo, la banana a pezzi e i frutti di bosco ancora surgelati.",
+      "Unisci i fiocchi d'avena e frulla fino a ottenere una bevanda omogenea.",
+      "Se è troppo densa allungala con un goccio d'acqua o di latte e bevila subito."
+    ],
+    "source": {
+      "name": "GialloZafferano, blog Cucina prediletta",
+      "url": "https://blog.giallozafferano.it/cucinaprediletta/frullato-frutti-di-bosco-e-banane/"
+    },
+    "notes": "Con i fiocchi d'avena resta più saziante di un normale frullato."
+  },
+  {
+    "id": "colazione-dl-crumble-fragole-avena-yogurt",
+    "title": "Crumble di fragole e avena al forno con yogurt",
+    "category": "Colazione",
+    "time": "media",
+    "minutes": 30,
+    "emoji": "🍓",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "crumble",
+      "forno"
+    ],
+    "ingredients": [
+      {
+        "name": "Fragole",
+        "qty": 150,
+        "unit": "g",
+        "group": "fruit"
+      },
+      {
+        "name": "Succo di limone",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Farina integrale",
+        "qty": 20,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Fiocchi d'avena",
+        "qty": 25,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "other"
+      },
+      {
+        "name": "Olio di semi di mais",
+        "qty": 1,
+        "unit": "cucchiai",
+        "group": "fat"
+      },
+      {
+        "name": "Yogurt greco",
+        "qty": 125,
+        "unit": "g",
+        "group": "dairy"
+      }
+    ],
+    "steps": [
+      "Taglia le fragole a pezzetti e mescolale con il succo di limone e metà dello zucchero in una ciotolina da forno.",
+      "Impasta con le dita farina, fiocchi d'avena, lo zucchero rimasto, l'olio e un cucchiaio d'acqua fino a ottenere delle briciole.",
+      "Sbriciola il composto sulle fragole e cuoci a 180 °C per circa 20 minuti.",
+      "Servi tiepido con lo yogurt greco."
+    ],
+    "source": {
+      "name": "My-personaltrainer.it",
+      "url": "https://www.my-personaltrainer.it/Tv/Ricette/Ricette_dietetiche/crumble-di-fragole-con-fiocchi-d-avena-senza-burro.html"
+    },
+    "notes": "Si può fare con lamponi, mirtilli o pesche; in versione vegana usa yogurt di soia."
+  },
+  {
+    "id": "colazione-dl-semolino-vaniglia-susine",
+    "title": "Porridge di semolino alla vaniglia con susine",
+    "category": "Colazione",
+    "time": "breve",
+    "minutes": 15,
+    "emoji": "🍑",
+    "diet": "vegetarian",
+    "takeaway": false,
+    "tags": [
+      "porridge",
+      "caldo"
+    ],
+    "ingredients": [
+      {
+        "name": "Semolino",
+        "qty": 40,
+        "unit": "g",
+        "group": "carb"
+      },
+      {
+        "name": "Latte",
+        "qty": 250,
+        "unit": "ml",
+        "group": "dairy"
+      },
+      {
+        "name": "Zucchero di canna",
+        "qty": 1,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Estratto di vaniglia",
+        "qty": 0.5,
+        "unit": "cucchiaini",
+        "group": "other"
+      },
+      {
+        "name": "Susine",
+        "qty": 120,
+        "unit": "g",
+        "group": "fruit"
+      }
+    ],
+    "steps": [
+      "Scalda il latte con lo zucchero e la vaniglia, senza farlo bollire forte.",
+      "Versa il semolino a pioggia mescolando con una frusta e cuoci a fuoco dolce per circa 10 minuti, finché è cremoso.",
+      "Servi tiepido con le susine a spicchi."
+    ],
+    "source": {
+      "name": "Dissapore",
+      "url": "https://www.dissapore.com/cucina/porridge-non-di-avena-da-provare-10-varianti-ottime/"
+    },
+    "notes": "Se le susine non sono di stagione usa mele cotte o frutti di bosco."
+  }
+]
