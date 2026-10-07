@@ -3,6 +3,7 @@ import { HeartPulse, Copy, Check } from 'lucide-react';
 import { Confirm, Sheet } from './ui.jsx';
 import { useData } from '../hooks/data.jsx';
 import { autoPlanFor } from './PlanSource.jsx';
+import { loadNutrition } from '../lib/nutritionData.js';
 import { mealsFromTexts } from './PlanImport.jsx';
 import {
   ADJUSTMENTS, CHECKIN_ANSWERS, CHECKIN_QUESTIONS, DAY, RED_FLAGS, SYMPTOMS, applyAdjustment, assess, checkinDue, followUpDue, summaryText,
@@ -33,7 +34,8 @@ export function ReportSheet({ symptom: initial, onClose }) {
     const entry = { date: new Date().toISOString(), symptom, level: r.level };
     saveProfile({ ...me, reports: [...(me.reports || []), entry].slice(-20) });
   };
-  const apply = () => {
+  const apply = async () => {
+    await loadNutrition();
     const updated = applyAdjustment(me, result.adjustment);
     const { texts } = autoPlanFor(updated);
     if (!texts) return;

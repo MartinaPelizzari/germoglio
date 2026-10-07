@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, Plus, Search } from 'lucide-react';
-import { useData } from '../hooks/data.jsx';
+import { useData, usePlans } from '../hooks/data.jsx';
 import { Sheet, RecipeThumb, DietBadge } from '../components/ui.jsx';
 import { timeLabel } from '../lib/format.js';
 import { coveredGroups, pairLabel, planAllows } from '../lib/planGen.js';
@@ -13,7 +13,8 @@ import { agoLabel } from '../lib/usage.js';
 // slot e constraints: pasto e vincoli di chi mangia. pair: gruppo del piano da completare (con la persona).
 // group: componente da completare (senza piano). onSelect riceve { recipe } oppure { food } (alimento semplice).
 export default function RecipePicker({ title, slot, constraints, pair, group, recipes, dayState, onSelect, onClose }) {
-  const { favorites, lastUse } = useData();
+  const { favorites } = useData();
+  const { lastUse } = usePlans();
   const [q, setQ] = React.useState('');
   const [onlyFit, setOnlyFit] = React.useState(Boolean(constraints));
   const [onlySlot, setOnlySlot] = React.useState(Boolean(slot) && !pair);

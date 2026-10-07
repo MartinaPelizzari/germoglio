@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, ChevronRight, Plus, Trash2, UserPlus } from 'lucide-react';
+import { Briefcase, ChevronRight, Trash2, UserPlus } from 'lucide-react';
 import { useData, canEditProfile, isFreeProfile } from '../hooks/data.jsx';
 import { Avatar, Confirm, Sheet } from '../components/ui.jsx';
 import ProfileEditor from './ProfileEditor.jsx';

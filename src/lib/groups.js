@@ -9,7 +9,6 @@ export const GROUPS = [
 ];
 
 // Gruppi per cui si può fissare una dose in grammi nella scheda persona
-export const TARGET_GROUPS = GROUPS.filter((g) => g.id !== 'other');
 
 export const GROUP_LABEL = Object.fromEntries(GROUPS.map((g) => [g.id, g.label]));
 

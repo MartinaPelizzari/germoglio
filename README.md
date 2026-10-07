@@ -95,3 +95,9 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - Lo stesso ingrediente scritto in modi diversi finisce in una sola riga: maiuscole, singolare e plurale, parole che non cambiano cosa si compra ("fresco", "in polvere", "congelato", "parmigiano reggiano"/"parmigiano") e ordine delle parole (`canonicalName` in `src/lib/scale.js`).
 - Le unità diverse si convertono quando ha senso: g e ml alla pari (1 ml = 1 g), un cucchiaio 12 e un cucchiaino 4, un pezzo il suo peso medio (100 g se non si conosce) quando c'è già una quantità in g o ml, "q.b." assorbito da una quantità vera. Ceci cotti e secchi, farine diverse, pelati e pomodori restano separati.
 - Le conversioni sono approssimate (per esempio 1 ml = 1 g): vanno bene per la spesa, non per la dieta. Prova: `node scripts/selftest-shopping.mjs`.
+
+## Prestazioni
+
+- Le settimane si generano in un worker (`src/workers/weekGen.worker.js`), non sul thread principale: durante la preparazione dei 4 mesi l'interfaccia non si blocca.
+- I piani delle settimane e lo storico d'uso stanno in un contesto a parte (`usePlans`): ogni settimana scritta non rifà il rendering di tutta l'app.
+- Schermate secondarie (Ricette, Spesa, Famiglia, Impostazioni, Profilo, Onboarding), valori nutrizionali e lettore PDF si caricano solo quando servono; il lettore PDF non è nella cache di installazione. Font solo latini; firebase in un file a parte.

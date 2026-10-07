@@ -5,15 +5,16 @@ import { auth } from './firebase.js';
 import { DataProvider, isFreeProfile, useData } from './hooks/data.jsx';
 import { Confirm, Spinner } from './components/ui.jsx';
 import AuthScreen from './screens/AuthScreen.jsx';
-import Onboarding from './screens/Onboarding.jsx';
+const Onboarding = React.lazy(() => import('./screens/Onboarding.jsx'));
 import Planner from './screens/Planner.jsx';
-import RecipeBook from './screens/RecipeBook.jsx';
+const RecipeBook = React.lazy(() => import('./screens/RecipeBook.jsx'));
 import RecipeForm, { emptyRecipe, fromDraft, toDraft } from './screens/RecipeForm.jsx';
-import Shopping from './screens/Shopping.jsx';
-import Family from './screens/Family.jsx';
-import Settings from './screens/Settings.jsx';
-import { CheckInCard, ReportSheet } from './components/Wellbeing.jsx';
-import ProfileEditor from './screens/ProfileEditor.jsx';
+const Shopping = React.lazy(() => import('./screens/Shopping.jsx'));
+const Family = React.lazy(() => import('./screens/Family.jsx'));
+const Settings = React.lazy(() => import('./screens/Settings.jsx'));
+import { CheckInCard } from './components/Wellbeing.jsx';
+const ReportSheet = React.lazy(() => import('./components/Wellbeing.jsx').then((m) => ({ default: m.ReportSheet })));
+const ProfileEditor = React.lazy(() => import('./screens/ProfileEditor.jsx'));
 import { useAutoWeeks } from './hooks/useAutoWeeks.js';
 import { todayIndex } from './lib/dates.js';
 import { pushTabState, setTabBackHandler } from './lib/backstack.js';
@@ -82,6 +83,7 @@ export function Main() {
   if (household === undefined) return <div className="h-full flex items-center justify-center"><Spinner /></div>;
   if (!me) {
     return (
+      <React.Suspense fallback={<div className="h-full flex items-center justify-center"><Spinner /></div>}>
       <Onboarding
         user={user}
         index={household.members.length}
@@ -91,6 +93,7 @@ export function Main() {
         onClaim={async (id) => { await claimProfile(id); setReview(true); }}
         onDone={saveProfile}
       />
+      </React.Suspense>
     );
   }
 
@@ -125,6 +128,7 @@ export function Main() {
 
       <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden px-4 pt-4 pb-10" style={{ overscrollBehaviorY: 'contain', WebkitOverflowScrolling: 'touch' }}>
         <div className="max-w-md mx-auto min-h-full" key={tab}>
+          <React.Suspense fallback={<div className="py-10 flex justify-center"><Spinner /></div>}>
           {tab === 'planner' && <CheckInCard onReport={setReport} />}
           {tab === 'planner' && shared && <ViewSwitch value={viewMode} onChange={changeView} />}
           {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} viewMode={shared ? viewMode : 'family'} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
@@ -132,6 +136,7 @@ export function Main() {
           {tab === 'add' && <RecipeForm data={draft} onChange={setDraft} onClose={closeDraft} onSave={save} />}
           {tab === 'family' && <Family />}
           {tab === 'shopping' && <Shopping weekDate={weekDate} setWeekDate={setWeekDate} days={shopDays} setDays={setShopDays} viewMode={shared ? viewMode : 'family'} />}
+          </React.Suspense>
         </div>
       </main>
 
@@ -145,7 +150,9 @@ export function Main() {
         </div>
       </nav>
 
+      <React.Suspense fallback={null}>
       {review && <ProfileEditor member={me} mine title="Controlla i tuoi dati" intro="Questo profilo era stato creato da qualcuno della famiglia. Controlla che nome, dieta, intolleranze e piano alimentare siano giusti e correggi quello che non torna." onChange={saveProfile} onClose={() => setReview(false)} />}
+      </React.Suspense>
       {saveError && (
         <div role="alert" className="fixed left-3 right-3 z-[120] bg-red-600 text-white text-sm rounded-2xl p-4 shadow-2xl" style={{ top: 'calc(var(--safe-top) + 0.75rem)' }}>
           <div className="flex gap-3">
@@ -154,8 +161,12 @@ export function Main() {
           </div>
         </div>
       )}
+      <React.Suspense fallback={null}>
       {report !== undefined && <ReportSheet symptom={report} onClose={() => setReport(undefined)} />}
+      </React.Suspense>
+      <React.Suspense fallback={null}>
       {settings && <Settings onClose={() => setSettings(false)} />}
+      </React.Suspense>
       {confirm && <Confirm title={confirm.title} msg={confirm.msg} onConfirm={confirm.action} onCancel={() => setConfirm(null)} />}
     </div>
   );

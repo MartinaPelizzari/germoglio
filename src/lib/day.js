@@ -23,11 +23,6 @@ export const dayInstances = (member) =>
     return m.eats ? m.plan.map((group, gi) => ({ key: instanceKey(slot, gi), slot, gi, group })) : [];
   });
 
-export const groupForKey = (member, key) => {
-  const { slot, gi } = parseKey(key);
-  return mealOf(member, slot).plan[gi];
-};
-
 // Gruppi che la ricetta (o l'alimento) consuma, scegliendo fra i gruppi indicati: restituisce le chiavi
 export const keysCovered = (recipe, instances) => {
   const matches = planMatches(recipe, instances.map((i) => i.group));

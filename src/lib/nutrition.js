@@ -4,7 +4,6 @@ const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''
 let byName = new Map();
 // I dati si caricano a parte (nutritionData.js nell'app, direttamente nelle prove da terminale)
 export const setNutrition = (list) => { byName = new Map(list.map((n) => [norm(n.name), n])); };
-export const nutritionCount = () => byName.size;
 
 // Peso approssimativo di un "pezzo" o di un cucchiaio, quando la ricetta non usa i grammi
 const PIECE = [
@@ -39,21 +38,3 @@ export const gramsOf = (ing) => {
   if (SPOON_ML[ing.unit]) return ing.qty * (/olio|burro|miele|tahin|crema|burro/.test(norm(ing.name)) ? SPOON_ML[ing.unit] * 0.9 : SPOON_ML[ing.unit]);
   return 0;
 };
-
-const ZERO = { kcal: 0, protein: 0, carbs: 0, fat: 0, fiber: 0, sugars: 0, satFat: 0, iron: 0, calcium: 0 };
-
-// Totali di un elenco di ingredienti { name, qty, unit }. `unknown` elenca quelli senza dati (restano fuori dal totale).
-export const nutritionOf = (ingredients) => {
-  const t = { ...ZERO };
-  const unknown = [];
-  for (const ing of ingredients) {
-    if (!ing.qty || ing.unit === 'q.b.') continue;
-    const v = lookup(ing.name);
-    const g = gramsOf(ing);
-    if (!v || !g) { if (g > 15) unknown.push(ing.name); continue; }
-    for (const k of Object.keys(ZERO)) t[k] += ((v[k] || 0) * g) / 100;
-  }
-  return { ...t, unknown };
-};
-
-export const round = (x, d = 0) => Math.round(x * 10 ** d) / 10 ** d;

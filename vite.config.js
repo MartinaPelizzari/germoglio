@@ -26,7 +26,16 @@ export default defineConfig({
           { src: 'icon.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
-      workbox: { navigateFallback: 'index.html', globPatterns: ['**/*.{js,css,html,png,svg,woff2}'] },
+      // Il lettore PDF (1,4 MB) serve solo a chi carica un piano: non si scarica all'installazione, ma si tiene in cache dopo il primo uso
+      workbox: {
+        navigateFallback: 'index.html',
+        globPatterns: ['**/*.{js,css,html,png,svg,woff2}'],
+        globIgnores: ['**/pdf.worker*', '**/pdf.min*'],
+        runtimeCaching: [{ urlPattern: /pdf\.(worker\.)?min.*\.m?js$/, handler: 'CacheFirst', options: { cacheName: 'pdf-reader', expiration: { maxEntries: 4 } } }],
+      },
     }),
   ],
+  build: {
+    rollupOptions: { output: { manualChunks: (id) => (id.includes('node_modules/firebase') || id.includes('node_modules/@firebase') ? 'firebase' : undefined) } },
+  },
 });

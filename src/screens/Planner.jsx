@@ -1,31 +1,33 @@
 import React from 'react';
 import { AlertTriangle, Briefcase, User, Users, ChevronDown, ChevronLeft, ChevronRight, Clock, CopyPlus, Heart, MoreHorizontal, Plus, RotateCw, Search, Sparkles, Target, Trash2, UserPlus } from 'lucide-react';
-import { useData, useWeekPlan } from '../hooks/data.jsx';
+import { useData, usePlans, useWeekPlan } from '../hooks/data.jsx';
 import { Avatar, Confirm, RecipeThumb, Sheet } from '../components/ui.jsx';
 import RecipePicker from './RecipePicker.jsx';
 import RecipeDetail from './RecipeDetail.jsx';
 import GuestSheet from './GuestSheet.jsx';
 import AdaptSheet from './AdaptSheet.jsx';
 import { planReport } from '../lib/adapt.js';
+import { HORIZON_WEEKS } from '../hooks/useAutoWeeks.js';
 import { DAYS, addWeeks, dayNumber, getWeekId, weekRangeLabel } from '../lib/dates.js';
 import { SLOTS, eatersOf, formatQty, mealOf, mealOfItem, scaleRecipe, slotPeople } from '../lib/scale.js';
 import { consumedKeys, dayInstances, isDayBalanced, movable, remainingInstances } from '../lib/day.js';
-import { canBorrow, categoryOf, coarseRequired, dayStateFor, generateWeek, missingGroups, newState, pairLabel, proposeMenu, registerMeal, swapRecipe, uncoveredPairs, usesFor } from '../lib/planGen.js';
+import { canBorrow, categoryOf, coarseRequired, dayStateFor, missingGroups, newState, pairLabel, proposeMenu, registerMeal, swapRecipe, uncoveredPairs, usesFor } from '../lib/planGen.js';
 import { goalStatus, foodLabel, weekCounts, weekSets } from '../lib/goals.js';
 import { buildRecency } from '../lib/usage.js';
 import { isSharedSlot, mealConstraints, menuClusters, problemsFor, rulesFor } from '../lib/diet.js';
 import { resolveItem } from '../lib/items.js';
 import { GROUPS } from '../lib/groups.js';
-import { DEFAULT_EMOJI, timeLabel } from '../lib/format.js';
+import { timeLabel } from '../lib/format.js';
 
 const GROUP_EMOJI = Object.fromEntries(GROUPS.map((g) => [g.id, g.emoji]));
 const GROUP_NAME = Object.fromEntries(GROUPS.map((g) => [g.id, g.label.toLowerCase()]));
 
 export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, viewMode, onEdit, onDuplicate, onDelete }) {
-  const { hid, household, me, recipes, recipeMap, favorites, plans, saveRecipe } = useData();
+  const { hid, household, me, recipes, recipeMap, favorites, saveRecipe } = useData();
+  const { plans } = usePlans();
   const personal = viewMode === 'me' && me;
   const weekId = getWeekId(weekDate);
-  const { plan, saveSlot, replaceAll } = useWeekPlan(hid, weekId);
+  const { plan, saveSlot } = useWeekPlan(hid, weekId);
   const [picker, setPicker] = React.useState(null); // { slot, action, index, pair, group }
   const [menu, setMenu] = React.useState(null);
   const [view, setView] = React.useState(null);
@@ -39,6 +41,8 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const [modeFor, setModeFor] = React.useState(null); // { slot, mode }: cambio tra pasto condiviso e individuale
   const recency = React.useMemo(() => buildRecency(plans, weekId), [plans, weekId]);
 
+  // la settimana non c'è ancora: l'app la sta preparando in automatico (solo per le settimane da oggi in avanti, entro l'orizzonte)
+  const preparing = !Object.keys(plan.days || {}).length && weekId >= getWeekId(new Date()) && weekId <= getWeekId(addWeeks(new Date(), HORIZON_WEEKS - 1)) && !!me;
   const data = (slot) => plan.days?.[dayIndex]?.[slot];
   const items = (slot) => data(slot)?.items || [];
   const people = (slot) => slotPeople(household, slot, data(slot));
@@ -283,51 +287,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         ))}
       </div>
 
-      {membersWithGoals.length > 0 && me?.planSource !== 'auto' && (
-        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
-          <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
-            <Target className="w-5 h-5 text-brand-600" />
-            <span className="flex-1 font-display font-bold text-slate-800">Obiettivi della settimana</span>
-            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${goalsOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {goalsOpen && (
-            <div className="px-4 pb-4 space-y-4">
-              {membersWithGoals.map((m) => (
-                <div key={m.id}>
-                  <div className="flex items-center gap-2 mb-2"><Avatar member={m} size="w-6 h-6 text-sm" /><span className="text-sm font-bold text-slate-700">{m.name}</span></div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {m.goals.map((g) => {
-                      const n = counts[m.id]?.[g.food] || 0;
-                      const st = goalStatus(g, n);
-                      return <span key={g.id} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${st === 'ok' ? 'bg-brand-50 text-brand-700' : st === 'short' ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'}`}>{foodLabel(g.food)} {n}/{g.times}{g.mode === 'max' ? ' max' : g.mode === 'exact' ? ' esatti' : ''}</span>;
-                    })}
-                  </div>
-                </div>
-              ))}
-              <p className="text-[11px] text-slate-400">Conta i pasti della settimana in cui ognuno mangia quell'alimento. Con "Proponi" l'app cerca di rispettare gli obiettivi, ma non li garantisce: controlla qui.</p>
-            </div>
-          )}
-        </div>
-      )}
-
-
-      {me && me.planSource !== 'auto' && isDayBalanced(me) && dayPlanned(me) && (
-        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
-          <button onClick={() => setDayOpen(!dayOpen)} className="w-full p-4 flex items-center gap-2 text-left">
-            <Target className="w-5 h-5 text-brand-600" />
-            <span className="flex-1 font-display font-bold text-slate-800">La tua giornata: {dayStatus.total - dayStatus.left.length} di {dayStatus.total} gruppi del piano</span>
-            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${dayOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {dayOpen && (
-            <div className="px-4 pb-4 space-y-2">
-              <p className="text-[11px] text-slate-400">Le quantità del piano valgono per tutta la giornata: puoi mangiare un gruppo in un pasto diverso da quello in cui è scritto. Quelli rimasti compaiono come "manca" o "dalla giornata" nei pasti.</p>
-              <div className="flex flex-wrap gap-1.5">
-                {dayStatus.all.map((i) => <span key={i.key} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${dayStatus.consumed.has(i.key) ? 'bg-brand-50 text-brand-700' : 'bg-amber-50 text-amber-700'}`}>{dayStatus.consumed.has(i.key) ? '✓ ' : ''}{pairLabel({ group: i.group })} <span className="opacity-60">({i.slot.toLowerCase()})</span></span>)}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
+      {preparing && <p className="text-sm text-brand-800 bg-brand-50 p-3 rounded-2xl">Sto preparando i pasti di questa settimana: ci vuole qualche secondo.</p>}
       {notice && <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-2xl">{notice}</p>}
 
       <div className="space-y-4">
@@ -396,6 +356,52 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           );
         })}
       </div>
+
+      {membersWithGoals.length > 0 && me?.planSource !== 'auto' && (
+        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
+          <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
+            <Target className="w-5 h-5 text-brand-600" />
+            <span className="flex-1 font-display font-bold text-slate-800">Obiettivi della settimana</span>
+            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${goalsOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {goalsOpen && (
+            <div className="px-4 pb-4 space-y-4">
+              {membersWithGoals.map((m) => (
+                <div key={m.id}>
+                  <div className="flex items-center gap-2 mb-2"><Avatar member={m} size="w-6 h-6 text-sm" /><span className="text-sm font-bold text-slate-700">{m.name}</span></div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {m.goals.map((g) => {
+                      const n = counts[m.id]?.[g.food] || 0;
+                      const st = goalStatus(g, n);
+                      return <span key={g.id} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${st === 'ok' ? 'bg-brand-50 text-brand-700' : st === 'short' ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'}`}>{foodLabel(g.food)} {n}/{g.times}{g.mode === 'max' ? ' max' : g.mode === 'exact' ? ' esatti' : ''}</span>;
+                    })}
+                  </div>
+                </div>
+              ))}
+              <p className="text-[11px] text-slate-400">Conta i pasti della settimana in cui ognuno mangia quell'alimento. Con "Proponi" l'app cerca di rispettare gli obiettivi, ma non li garantisce: controlla qui.</p>
+            </div>
+          )}
+        </div>
+      )}
+
+
+      {me && me.planSource !== 'auto' && isDayBalanced(me) && dayPlanned(me) && (
+        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
+          <button onClick={() => setDayOpen(!dayOpen)} className="w-full p-4 flex items-center gap-2 text-left">
+            <Target className="w-5 h-5 text-brand-600" />
+            <span className="flex-1 font-display font-bold text-slate-800">La tua giornata: {dayStatus.total - dayStatus.left.length} di {dayStatus.total} gruppi del piano</span>
+            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${dayOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {dayOpen && (
+            <div className="px-4 pb-4 space-y-2">
+              <p className="text-[11px] text-slate-400">Le quantità del piano valgono per tutta la giornata: puoi mangiare un gruppo in un pasto diverso da quello in cui è scritto. Quelli rimasti compaiono come "manca" o "dalla giornata" nei pasti.</p>
+              <div className="flex flex-wrap gap-1.5">
+                {dayStatus.all.map((i) => <span key={i.key} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${dayStatus.consumed.has(i.key) ? 'bg-brand-50 text-brand-700' : 'bg-amber-50 text-amber-700'}`}>{dayStatus.consumed.has(i.key) ? '✓ ' : ''}{pairLabel({ group: i.group })} <span className="opacity-60">({i.slot.toLowerCase()})</span></span>)}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {picker && (
         <RecipePicker

@@ -9,6 +9,9 @@ import { DEFAULT_SHARED } from '../lib/diet.js';
 
 export const Ctx = React.createContext(null);
 export const useData = () => React.useContext(Ctx);
+// Piani delle settimane e storico d'uso: in un contesto a parte, così ogni settimana scritta non rifà il rendering di tutta l'app
+export const PlansCtx = React.createContext({ plans: [], plansLoaded: false, lastUse: new Map() });
+export const usePlans = () => React.useContext(PlansCtx);
 
 export { MEMBER_COLORS, MEMBER_EMOJIS };
 
@@ -129,7 +132,7 @@ export function DataProvider({ user, children }) {
     // Gli errori di salvataggio (es. regole di Firebase non aggiornate) si mostrano all'utente invece di restare nascosti
     const log = (e) => { console.error(e); window.dispatchEvent(new CustomEvent('germoglio-error', { detail: e?.code || e?.message || 'errore' })); };
     return {
-      uid, user, hid, household, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, plansLoaded, lastUse, memberCount,
+      uid, user, hid, household, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, memberCount,
       // Le scritture non vengono attese: offline Firestore le mette in coda e le invia al ritorno della rete
       saveProfile: (p) => { setDoc(ref('profiles', p.id || uid), stripId(p)).catch(log); },
       // Persona del nucleo senza app (es. un familiare): la modifica chiunque finché nessuno la reclama
@@ -221,28 +224,21 @@ export function DataProvider({ user, children }) {
         await setDoc(doc(db, 'users', uid), { householdId: fresh.id });
       },
     };
-  }, [uid, user, hid, household, settings, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, plans, plansLoaded, lastUse, memberCount]);
+  }, [uid, user, hid, household, settings, me, recipes, overrideIds, recipeMap, userRecipes, prefs, favorites, pantry, memberCount]);
 
   if (!hid) return <div className="h-full flex items-center justify-center"><div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-brand-500" /></div>;
-  return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
+  const plansValue = React.useMemo(() => ({ plans, plansLoaded, lastUse }), [plans, plansLoaded, lastUse]);
+  return <Ctx.Provider value={value}><PlansCtx.Provider value={plansValue}>{children}</PlansCtx.Provider></Ctx.Provider>;
 }
 
 // Piano settimanale: households/<hid>/plans/<weekId> con { days: { 0: { Pranzo: { items, absent, guests } } } }
-// loaded/exists: il piano è già arrivato dal database / esiste. createIfMissing scrive il piano proposto solo se nessuno
-// l'ha già creato (per la settimana precompilata: due telefoni aperti insieme non si sovrascrivono).
 export function useWeekPlan(hid, weekId) {
-  const [state, setState] = React.useState({ plan: { days: {} }, loaded: false, exists: false });
+  const [plan, setPlan] = React.useState({ days: {} });
   React.useEffect(() => {
-    setState({ plan: { days: {} }, loaded: false, exists: false });
-    return onSnapshot(doc(db, 'households', hid, 'plans', weekId), (s) => setState({ plan: s.exists() ? s.data() : { days: {} }, loaded: true, exists: s.exists() }));
+    setPlan({ days: {} });
+    return onSnapshot(doc(db, 'households', hid, 'plans', weekId), (s) => setPlan(s.exists() ? s.data() : { days: {} }));
   }, [hid, weekId]);
-  const ref = doc(db, 'households', hid, 'plans', weekId);
   // una modifica a mano toglie la settimana dalle "proposte automatiche": non verrà rifatta da sola
-  const saveSlot = (day, slot, data) => setDoc(ref, { auto: false, days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
-  const replaceAll = (days) => setDoc(ref, { days }).catch(console.error);
-  const createIfMissing = async (days) => {
-    try { await runTransaction(db, async (tx) => { if (!(await tx.get(ref)).exists()) tx.set(ref, { days, auto: true }); }); }
-    catch { /* offline o già creato: si ritenterà */ }
-  };
-  return { plan: state.plan, loaded: state.loaded, exists: state.exists, saveSlot, replaceAll, createIfMissing };
+  const saveSlot = (day, slot, data) => setDoc(doc(db, 'households', hid, 'plans', weekId), { auto: false, days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
+  return { plan, saveSlot };
 }

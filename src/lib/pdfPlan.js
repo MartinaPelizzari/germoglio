@@ -229,4 +229,3 @@ const canonicalSlot = (entries) => {
 export const readPlanPdf = async (pdfjs, data) => planFromPages(await readPdfPages(pdfjs, data));
 
 // Per l'anteprima: quanti gruppi e alternative ha capito
-export const summarize = (text) => Object.fromEntries(Object.entries(text).map(([slot, t]) => [slot, parseSlotPlan(t)]));

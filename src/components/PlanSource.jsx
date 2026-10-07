@@ -6,6 +6,7 @@ import { buildAutoPlan } from '../lib/autoPlan.js';
 import { SLOTS } from '../lib/meals.js';
 import { mealOf } from '../lib/scale.js';
 import { mealsFromTexts } from './PlanImport.jsx';
+import { useNutrition } from '../hooks/useNutrition.js';
 
 // Riepilogo di fabbisogni e avvertenze, usato in onboarding e nel profilo
 export function NeedsSummary({ needs, estKcal }) {
@@ -37,10 +38,11 @@ export const autoPlanFor = (member) => {
 // "Hai un piano alimentare o vuoi che creiamo insieme la dieta giusta per te?"
 // Con il piano della nutrizionista non si fanno domande: il piano è già fatto su misura.
 export default function PlanSource({ member, onChange }) {
+  const nutritionReady = useNutrition();
   const source = member.planSource || '';
   const [ask, setAsk] = React.useState(false);
   const body = member.body || { workouts: 0 };
-  const result = React.useMemo(() => (source === 'auto' && bodyComplete(body) ? autoPlanFor({ ...member, body }) : null), [source, member.body, member.tweaks, member.diet, member.intolerances, member.visibleSlots]);
+  const result = React.useMemo(() => (source === 'auto' && bodyComplete(body) ? autoPlanFor({ ...member, body }) : null), [source, member.body, member.tweaks, member.diet, member.intolerances, member.visibleSlots, nutritionReady]);
   const btn = (on) => `w-full p-3.5 rounded-2xl text-left active:scale-95 ${on ? 'bg-brand-500 text-white' : 'bg-slate-50 text-slate-600'}`;
   const apply = () => {
     if (!result?.texts) return;

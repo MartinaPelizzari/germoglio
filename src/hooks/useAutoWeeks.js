@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../hooks/data.jsx';
+import { useData, usePlans } from '../hooks/data.jsx';
 import { addWeeks, getWeekId } from '../lib/dates.js';
 import { generateWeek } from '../lib/planGen.js';
 import { buildRecency } from '../lib/usage.js';
@@ -18,10 +18,37 @@ export const householdSignature = (household) => {
   return String(h >>> 0);
 };
 
+// Generazione in un worker (thread separato); se il browser non lo supporta si ricade sul thread principale
+let worker = null;
+let sentRecipes = null;
+let seq = 0;
+const pending = new Map();
+const getWorker = () => {
+  if (worker !== null) return worker;
+  try {
+    worker = new Worker(new URL('../workers/weekGen.worker.js', import.meta.url), { type: 'module' });
+    worker.onmessage = (e) => { const p = pending.get(e.data.id); pending.delete(e.data.id); if (p) (e.data.error ? p.reject(new Error(e.data.error)) : p.resolve(e.data.days)); };
+    worker.onerror = () => { worker = false; pending.forEach((p) => p.reject(new Error('worker'))); pending.clear(); };
+  } catch { worker = false; }
+  return worker;
+};
+const generate = (recipes, household, favorites, recency) => {
+  const w = getWorker();
+  if (!w) return Promise.resolve(generateWeek(recipes, household, { favorites, recency }));
+  return new Promise((resolve, reject) => {
+    const id = ++seq;
+    pending.set(id, { resolve, reject });
+    const send = recipes !== sentRecipes ? recipes : undefined; // le ricette si inviano solo quando cambiano
+    sentRecipes = recipes;
+    w.postMessage({ id, recipes: send, household, favorites: [...favorites], recency: [...recency] });
+  }).catch(() => generateWeek(recipes, household, { favorites, recency }));
+};
+
 // Una settimana alla volta, a intervalli, così l'app resta sempre reattiva; ogni settimana si tenta una sola volta per sessione
 // (se la scrittura fallisce non si riprova in continuazione).
 export function useAutoWeeks() {
-  const { me, household, recipes, favorites, plans, plansLoaded, createWeek } = useData();
+  const { me, household, recipes, favorites, createWeek } = useData();
+  const { plans, plansLoaded } = usePlans();
   const tried = React.useRef(new Set());
   const sig = React.useMemo(() => householdSignature(household), [household]);
   const latest = React.useRef({});
@@ -42,7 +69,7 @@ export function useAutoWeeks() {
       if (!todo) return;
       tried.current.add(`${todo}|${ss}`);
       try {
-        const days = generateWeek(rr, hh, { favorites: ff, recency: buildRecency(pp.filter((p) => p.id !== todo), todo) });
+        const days = await generate(rr, hh, ff, buildRecency(pp.filter((p) => p.id !== todo), todo));
         await create(todo, days, ss);
       } catch (e) { console.error(e); }
       setTick((t) => t + 1);

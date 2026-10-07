@@ -8,6 +8,7 @@ import { DIETS } from '../lib/diet.js';
 import { ALLERGENS } from '../lib/allergens.js';
 import { computeNeeds } from '../lib/needs.js';
 import { buildAutoPlan } from '../lib/autoPlan.js';
+import { useNutrition } from '../hooks/useNutrition.js';
 import { SLOTS } from '../lib/meals.js';
 import { mealOf } from '../lib/scale.js';
 
@@ -19,13 +20,14 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
   const [code, setCode] = React.useState('');
   const [busy, setBusy] = React.useState(false);
   const [err, setErr] = React.useState('');
+  const nutritionReady = useNutrition();
   const [body, setBody] = React.useState({ workouts: 0 });
   const [intol, setIntol] = React.useState([]);
   const finish = (texts, extra = {}) => onDone({ ...newProfile(user.uid, name.trim(), diet, index), intolerances: intol, ...extra, meals: texts ? mealsFromTexts(texts) : {} });
   const needs = React.useMemo(() => (bodyComplete(body) ? computeNeeds({ ...body, diet }) : null), [body, diet]);
   // pasti che la persona mangia: nel profilo appena creato sono tutti
   const eaten = SLOTS.filter((s) => mealOf({}, s).eats);
-  const auto = React.useMemo(() => (needs && !needs.blocked ? buildAutoPlan({ diet, intolerances: intol, kcal: needs.kcal, protein: needs.protein, eaten }) : null), [needs, diet, intol]);
+  const auto = React.useMemo(() => (needs && !needs.blocked ? buildAutoPlan({ diet, intolerances: intol, kcal: needs.kcal, protein: needs.protein, eaten }) : null), [needs, diet, intol, nutritionReady]);
 
   const join = async () => {
     setBusy(true);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Clock, ExternalLink, Pencil, Copy, Trash2, ChevronLeft, ShoppingCart, Heart } from 'lucide-react';
-import { useData } from '../hooks/data.jsx';
+import { useData, usePlans } from '../hooks/data.jsx';
 import { DietBadge, Portal, useBackClose } from '../components/ui.jsx';
 import { DEFAULT_EMOJI, timeLabel } from '../lib/format.js';
 import { recipeKind } from '../lib/meals.js';
@@ -12,7 +12,8 @@ import { planReport } from '../lib/adapt.js';
 // context (facoltativo): { slot, eaters: [member] } quando si apre da un pasto pianificato
 export default function RecipeDetail({ recipe, context, onClose, onEdit, onDuplicate, onDelete }) {
   useBackClose(onClose);
-  const { household, favorites, toggleFavorite, lastUse, restoreRecipe } = useData();
+  const { household, favorites, toggleFavorite, restoreRecipe } = useData();
+  const { lastUse } = usePlans();
   const fav = favorites.has(recipe.id);
   const allergens = [...recipeAllergens(recipe)];
   const ago = lastUse.get(recipe.id);
