@@ -46,7 +46,7 @@ const families = {
   'Intolleranze varie': { members: [auto('a', 'A', 'vegetarian', { intolerances: ['glutine', 'lattosio'] }), auto('b', 'B', 'omnivore', { intolerances: ['uova', 'guscio'] })], rules: [] },
 };
 
-const HEAVY = ['dieta', 'vuoto', 'colazione', 'spostato', 'doppio', 'contorno', 'doppioGruppo', 'regola'];
+const HEAVY = ['dieta', 'vuoto', 'colazione', 'spostato', 'doppio', 'contorno', 'doppioGruppo', 'regola', 'proteine', 'dose', 'fuoripiano', 'elettrodomestico'];
 const RUNS = Number(process.env.RUNS || 12);
 let fails = 0;
 for (const [name, house] of Object.entries(families)) {
@@ -61,7 +61,10 @@ for (const [name, house] of Object.entries(families)) {
     const best = generateWeekChecked(recipes, house, { month: MONTH }, { tries: 8 });
     if (!best.issues.length) chkClean++;
     for (const i of best.issues.filter((x) => !HEAVY.includes(x.kind))) light[i.kind + ': ' + i.msg.slice(0, 60)] = (light[i.kind + ': ' + i.msg.slice(0, 60)] || 0) + 1;
-    const heavy = best.issues.filter((i) => HEAVY.includes(i.kind));
+    // dosi e piatti fuori piano che nessuna combinazione può evitare (es. regola "pranzo d'asporto in un piatto" contro piani rigidi)
+    // sono ammessi solo se la settimana li dichiara nei suoi "problemi": l'app non deve mai sforare in silenzio
+    const declared = new Set((best.problems || []).map((q) => `${q.kind}|${q.day}|${q.slot}|${q.msg}`));
+    const heavy = best.issues.filter((i) => HEAVY.includes(i.kind) && !(['dose', 'fuoripiano'].includes(i.kind) && declared.has(`${i.kind}|${i.day}|${i.slot}|${i.msg}`)));
     if (heavy.length) { chkHeavy++; for (const i of heavy) kinds[i.kind + ': ' + i.msg.slice(0, 70)] = (kinds[i.kind + ': ' + i.msg.slice(0, 70)] || 0) + 1; }
   }
   console.log(`${name}: senza controllo ${rawClean}/${RUNS} perfette (${rawHeavy} con difetti gravi); con controllo ${chkClean}/${RUNS} perfette, ${chkHeavy} con difetti gravi`);

@@ -1,5 +1,6 @@
 // Prova dell'accorpamento delle righe della spesa
 import { sumIngredients, formatQty } from '../src/lib/scale.js';
+import { applyPantry, setStock } from '../src/lib/pantry.js';
 let ko = 0;
 const check = (c, m) => { if (!c) { ko++; console.log('KO', m); } };
 const row = (list, re) => list.filter((r) => re.test(r.name));
@@ -30,5 +31,22 @@ check(l.length === 1 && l[0].qty === 160, 'cipolla pezzo e grammi ' + JSON.strin
 l = sum(['Foglie di basilico', 5, 'foglie'], ['basilico', 3, 'foglie']);
 check(l.length === 2 || l.length === 1, 'basilico non crasha');
 check(formatQty(58, 'ml') === '60 ml', 'formato');
+
+// dispensa con quantità parziali: se ne hai 500 g di ceci cotti e ne servono 650, in lista restano 150 g
+{
+  const list = [{ name: 'Ceci cotti', qty: 650, unit: 'g', group: 'protein' }, { name: 'Uova', qty: 3, unit: 'pz', group: 'protein' }];
+  let r = applyPantry(list, [{ id: '1', name: 'Ceci cotti', qty: 500, unit: 'g', always: false }]);
+  const ceci = r.needed.find((x) => /ceci/i.test(x.name));
+  check(ceci && ceci.qty === 150 && ceci.have === 500, 'ceci: ne mancano 150 g ' + JSON.stringify(r.needed));
+  r = applyPantry(list, [{ id: '1', name: 'Ceci cotti', qty: 700, unit: 'g', always: false }]);
+  check(!r.needed.some((x) => /ceci/i.test(x.name)) && r.covered.some((x) => /ceci/i.test(x.name)), 'ceci coperti da 700 g');
+  r = applyPantry(list, [{ id: '1', name: 'Uova', qty: 110, unit: 'g', always: false }]);
+  const uova = r.needed.find((x) => /uova/i.test(x.name));
+  check(uova && uova.qty < 3 && uova.qty > 0, 'uova in grammi sottratte da una voce in pezzi ' + JSON.stringify(uova));
+  const st = setStock([{ id: '1', name: 'ceci cotti', qty: 100, unit: 'g' }, { id: '2', name: 'Ceci cotti', qty: 50, unit: 'g' }], { name: 'Ceci cotti', unit: 'g' }, 500);
+  check(st.save.id === '1' && st.save.qty === 500 && st.remove.join() === '2', 'impostare la scorta aggiorna una voce e toglie i doppioni');
+  check(setStock([{ id: '1', name: 'Ceci cotti', qty: 100, unit: 'g' }], { name: 'Ceci cotti', unit: 'g' }, 0).remove.join() === '1', 'quantità zero toglie la scorta');
+  check(setStock([], { name: 'Lenticchie', unit: 'g' }, 200).save.qty === 200, 'nuova scorta');
+}
 console.log(ko ? ko + ' problemi' : 'Tutto ok.');
 process.exit(ko ? 1 : 0);
