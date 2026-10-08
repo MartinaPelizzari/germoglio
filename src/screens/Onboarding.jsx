@@ -1,5 +1,6 @@
 import React from 'react';
-import { newProfile } from '../hooks/data.jsx';
+import { newProfile, useData } from '../hooks/data.jsx';
+import AppliancePicker from '../components/AppliancePicker.jsx';
 import { Avatar } from '../components/ui.jsx';
 import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
 import BodyForm, { bodyComplete } from '../components/BodyForm.jsx';
@@ -23,7 +24,9 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
   const nutritionReady = useNutrition();
   const [body, setBody] = React.useState({ workouts: 0 });
   const [intol, setIntol] = React.useState([]);
-  const finish = (texts, extra = {}) => onDone({ ...newProfile(user.uid, name.trim(), diet, index), intolerances: intol, ...extra, meals: texts ? mealsFromTexts(texts) : {} });
+  const { recipes } = useData();
+  const [appliances, setAppliances] = React.useState(undefined); // undefined = in casa c'è tutto
+  const finish = (texts, extra = {}) => onDone({ ...newProfile(user.uid, name.trim(), diet, index), intolerances: intol, ...extra, meals: texts ? mealsFromTexts(texts) : {} }, appliances === undefined ? undefined : { appliances });
   const needs = React.useMemo(() => (bodyComplete(body) ? computeNeeds({ ...body, diet }) : null), [body, diet]);
   // pasti che la persona mangia: nel profilo appena creato sono tutti
   const eaten = SLOTS.filter((s) => mealOf({}, s).eats);
@@ -73,6 +76,21 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
             ))}
           </div>
           <button onClick={() => setStep(1)} className="w-full py-3 text-slate-600 font-bold bg-white border border-slate-200 rounded-2xl active:scale-95">Nessuno di questi, creo il mio profilo</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (step === 'kitchen') {
+    return (
+      <div className="min-h-[100dvh] flex justify-center px-4 py-6 bg-surface-ground pt-safe pb-safe overflow-y-auto">
+        <div className="w-full max-w-sm bg-white p-6 rounded-3xl shadow-soft space-y-5 animate-fade-in h-fit">
+          <div>
+            <h1 className="font-display font-extrabold text-2xl text-slate-900">Cosa hai in cucina?</h1>
+            <p className="text-sm text-slate-500 mt-1">Non ti propongo ricette che richiedono ciò che non hai. Puoi cambiare tutto più tardi da Famiglia.</p>
+          </div>
+          <AppliancePicker recipes={recipes} value={appliances} onChange={setAppliances} />
+          <button onClick={() => setStep('source')} className="w-full py-4 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95">Avanti</button>
         </div>
       </div>
     );
@@ -168,7 +186,7 @@ export default function Onboarding({ user, index = 0, joined = false, freeProfil
             ))}
           </div>
         </div>
-        <button disabled={!name.trim()} onClick={() => setStep('source')} className="w-full py-4 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95 disabled:opacity-50">
+        <button disabled={!name.trim()} onClick={() => setStep(joined ? 'source' : 'kitchen')} className="w-full py-4 bg-brand-600 text-white font-display font-bold rounded-2xl shadow-glow active:scale-95 disabled:opacity-50">
           Avanti
         </button>
       </div>

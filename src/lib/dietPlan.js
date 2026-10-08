@@ -10,6 +10,7 @@
 //   1 frutto
 import { guessGroup } from './groups.js';
 import { FOOD_TYPES } from './foodTypes.js';
+import { pieceGrams } from './nutrition.js';
 
 const norm = (s = '') => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
 const STOP = new Set(['vaccino', 'vaccina', 'parzialmente', 'scremato', 'scremata', 'di', 'd', 'del', 'della', 'dei', 'delle', 'con', 'e', 'a', 'al', 'alla', 'in', 'per', 'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'una', 'fresco', 'fresca', 'freschi', 'fresche', 'naturale', 'intero', 'intera', 'magro', 'magra', 'biologico', 'cotto', 'cotta', 'crudo', 'cruda', 'qb', 'circa', 'ca', 'stagione', 'tipo', 'bianco', 'bianca', 'vaccino', 'parzialmente', 'scremato', 'scremata', 'integrale', 'integrali', 'basmati', 'volonta']);
@@ -330,10 +331,12 @@ export const coveredGroupIndexes = (recipe, groups) => planMatches(recipe, group
 export const applyPlanDoses = (ingredients, groups) => {
   const out = ingredients.map((i) => ({ ...i }));
   const matches = planMatches({ ingredients: out }, groups);
+  // grammi di un ingrediente: g e ml sono già grammi, i pezzi (2 kiwi) si pesano con il peso medio del pezzo
+  const gramsOf = (ing, optUnit) => (compatUnit(ing.unit, optUnit) ? ing.qty : ing.unit === 'pz' && ['g', 'ml'].includes(optUnit) && pieceGrams(ing.name) ? ing.qty * pieceGrams(ing.name) : 0);
   for (const m of matches) {
     if (!m || !(m.option.qty > 0)) continue;
-    const compat = m.idx.filter((k) => compatUnit(out[k].unit, m.option.unit) && out[k].qty > 0);
-    const total = compat.reduce((a, k) => a + out[k].qty, 0);
+    const compat = m.idx.filter((k) => out[k].qty > 0 && gramsOf(out[k], m.option.unit) > 0);
+    const total = compat.reduce((a, k) => a + gramsOf(out[k], m.option.unit), 0);
     if (!total) continue;
     const factor = m.option.qty / total;
     compat.forEach((k) => { out[k].qty *= factor; });

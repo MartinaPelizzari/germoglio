@@ -11,7 +11,7 @@ import { HORIZON_WEEKS, useRegenerateWeek } from '../hooks/useAutoWeeks.js';
 import { DAYS, addWeeks, dayNumber, getWeekId, weekRangeLabel } from '../lib/dates.js';
 import { SLOTS, eatersOf, formatQty, mealOf, mealOfItem, scaleRecipe, slotPeople } from '../lib/scale.js';
 import { consumedKeys, dayInstances, isDayBalanced, movable, remainingInstances } from '../lib/day.js';
-import { canBorrow, categoryOf, coarseRequired, dayStateFor, missingGroups, newState, pairLabel, proposeMenu, registerMeal, swapRecipe, uncoveredPairs, usesFor } from '../lib/planGen.js';
+import { canBorrow, categoryOf, coarseRequired, dayStateFor, missingGroups, newState, pairLabel, menusForSlot, proposeMenu, registerMeal, swapRecipe, uncoveredPairs, usesFor } from '../lib/planGen.js';
 import { goalStatus, foodLabel, weekCounts, weekSets } from '../lib/goals.js';
 import { buildRecency } from '../lib/usage.js';
 import { isSharedSlot, mealConstraints, menuClusters, problemsFor, rulesFor } from '../lib/diet.js';
@@ -36,12 +36,14 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const [menu, setMenu] = React.useState(null);
   const [view, setView] = React.useState(null);
   const [notice, setNotice] = React.useState('');
-  const [goalsOpen, setGoalsOpen] = React.useState(false);
+  const [goalsOpen, setGoalsOpen] = React.useState(true);
+  const [checksOpen, setChecksOpen] = React.useState(false); // i riepiloghi dei gruppi e degli obiettivi servono solo a controllare: chiusi di default
   const [leftover, setLeftover] = React.useState(null);
   const [guestFor, setGuestFor] = React.useState(null);
   const [adapt, setAdapt] = React.useState(null); // { recipe, person, slot, item }: adattamento di una ricetta al piano
-  const [dayOpen, setDayOpen] = React.useState(false);
+  const [dayOpen, setDayOpen] = React.useState(true);
   const [joinFor, setJoinFor] = React.useState(null); // pasto individuale a cui aggiungere familiari
+  const [whoFor, setWhoFor] = React.useState(null); // pasto di cui si gestiscono chi mangia, ospiti e modalità
   const [modeFor, setModeFor] = React.useState(null); // { slot, mode }: cambio tra pasto condiviso e individuale
   const recency = React.useMemo(() => buildRecency(plans, weekId), [plans, weekId]);
 
@@ -93,12 +95,9 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const all = menuClusters(household, dayIndex, slot, ppl, data(slot));
     // pasto individuale: si rifà solo il mio menu, quello degli altri non si tocca
     const mine = shared || !me || !ppl.some((p) => p.id === me.id) ? all : all.filter((c) => c.eaters.some((e) => e.id === me.id));
-    for (const cluster of mine) {
-      const r = proposeMenu(recipes, constraintsFor(slot, cluster.eaters), slot, state, cluster);
-      relaxed = relaxed || r.relaxed;
-      registerMeal(state, r.items, cluster.eaters, dayIndex, slot, recipeMap, ppl);
-      out.push(...r.items);
-    }
+    const made = menusForSlot(recipes, household, dayIndex, slot, mine, state, recipeMap, ppl, constraintsFor);
+    relaxed = made.relaxed;
+    out.push(...made.items);
     if (!out.length) return setNotice(`Nessuna proposta adatta per ${slot.toLowerCase()}. Controlla dieta, piano e regole in Famiglia.`);
     setNotice(relaxed ? "Non ho trovato ricette d'asporto adatte: ne ho proposta una normale." : '');
     const mineIds = new Set(mine.flatMap((c) => c.eaters.map((e) => e.id)));
@@ -114,11 +113,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     setModeFor(null);
     const state = newState({ favorites, recency, counts: {}, day: dayStateNow(slot), month: monthOfWeek(weekId) });
     const out = [];
-    for (const cluster of menuClusters(household, dayIndex, slot, ppl, nd)) {
-      const r = proposeMenu(recipes, constraintsFor(slot, cluster.eaters), slot, state, cluster);
-      registerMeal(state, r.items, cluster.eaters, dayIndex, slot, recipeMap, ppl);
-      out.push(...r.items);
-    }
+    out.push(...menusForSlot(recipes, household, dayIndex, slot, menuClusters(household, dayIndex, slot, ppl, nd), state, recipeMap, ppl, constraintsFor).items);
     saveSlot(dayIndex, slot, { items: out, mode, joined: Object.fromEntries(Object.keys(d0.joined || {}).map((k) => [k, []])) });
   };
 
@@ -126,7 +121,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const createAdapted = (adapted) => {
     const { slot, item } = adapt;
     const id = saveRecipe(adapted);
-    save(slot, items(slot).map((it) => (it.instanceId === item.instanceId ? { ...it, recipeId: id } : it)));
+    save(slot, items(slot).map((it) => { if (it.instanceId !== item.instanceId) return it; const { variant, ...rest } = it; return { ...rest, recipeId: id }; }));
     setAdapt(null);
     setView(null);
   };
@@ -166,7 +161,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const addLeftovers = (item, targetDays, targetSlot) => {
     targetDays.forEach((d) => {
       const existing = plan.days?.[d]?.[targetSlot]?.items || [];
-      saveSlot(d, targetSlot, { items: [...existing, { instanceId: crypto.randomUUID(), ...(item.food ? { food: item.food } : { recipeId: item.recipeId }), leftoverOf: item.instanceId, leftoverDay: dayIndex, ...(item.eaters ? { eaters: item.eaters } : {}) }] });
+      saveSlot(d, targetSlot, { items: [...existing, { instanceId: crypto.randomUUID(), ...(item.food ? { food: item.food } : { recipeId: item.recipeId, ...(item.variant ? { variant: item.variant } : {}) }), leftoverOf: item.instanceId, leftoverDay: dayIndex, ...(item.eaters ? { eaters: item.eaters } : {}) }] });
     });
     setLeftover(null);
   };
@@ -274,16 +269,17 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const counts = React.useMemo(() => weekCounts(plan, household, recipeMap), [plan, household, recipeMap]);
   const membersWithGoals = household.members.filter((m) => (m.goals || []).length && (!personal || m.id === me.id));
   const pickerSlot = picker?.slot;
+  const goalsRows = membersWithGoals.length > 0;
+  const dayRows = Boolean(me && me.planSource !== 'auto' && isDayBalanced(me) && dayPlanned(me));
 
   return (
     <div className="space-y-5 animate-fade-in">
       <div className="bg-white p-4 rounded-3xl shadow-soft flex items-center justify-between">
         <button onClick={() => { setWeekDate(addWeeks(weekDate, -1)); setDayIndex(0); }} aria-label="Settimana precedente" className="p-2 rounded-full active:scale-90"><ChevronLeft className="text-slate-400" /></button>
-        <div className="text-center"><p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Settimana</p><h2 className="text-lg font-display font-bold text-slate-800">{weekRangeLabel(weekDate)}</h2></div>
+        <div className="text-center"><p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Settimana</p><h2 className="text-lg font-display font-bold text-slate-800">{weekRangeLabel(weekDate)}</h2><button onClick={() => setRegen('confirm')} disabled={regen === 'busy'} className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-slate-400 active:scale-95 disabled:opacity-60"><RefreshCw className="w-3.5 h-3.5" /> Rigenera la settimana</button></div>
         <button onClick={() => { setWeekDate(addWeeks(weekDate, 1)); setDayIndex(0); }} aria-label="Settimana successiva" className="p-2 rounded-full active:scale-90"><ChevronRight className="text-slate-400" /></button>
       </div>
 
-      <button onClick={() => setRegen('confirm')} disabled={regen === 'busy'} className="w-full py-3 bg-white rounded-2xl shadow-soft text-brand-700 font-bold text-sm flex items-center justify-center gap-2 active:scale-95 disabled:opacity-60"><RefreshCw className="w-4 h-4" /> Rigenera la settimana</button>
 
       <div className="flex gap-1.5 pb-2" role="tablist">
         {DAYS.map((day, idx) => (
@@ -294,33 +290,19 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         ))}
       </div>
 
-      {membersWithGoals.length > 0 && (
-        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
-          <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
-            <Target className="w-5 h-5 text-brand-600" />
-            <span className="flex-1 font-display font-bold text-slate-800">Obiettivi della settimana</span>
-            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${goalsOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {goalsOpen && (
-            <div className="px-4 pb-4 space-y-4">
-              {membersWithGoals.map((m) => (
-                <div key={m.id}>
-                  <div className="flex items-center gap-2 mb-2"><Avatar member={m} size="w-6 h-6 text-sm" /><span className="text-sm font-bold text-slate-700">{m.name}</span></div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {m.goals.map((g) => {
-                      const n = counts[m.id]?.[g.food] || 0;
-                      const st = goalStatus(g, n);
-                      return <span key={g.id} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${st === 'ok' ? 'bg-brand-50 text-brand-700' : st === 'short' ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'}`}>{foodLabel(g.food)} {n}/{g.times}{g.mode === 'max' ? ' max' : g.mode === 'exact' ? ' esatti' : ''}</span>;
-                    })}
-                  </div>
-                </div>
-              ))}
-              <p className="text-[11px] text-slate-400">Conta i pasti della settimana in cui ognuno mangia quell'alimento. Con "Proponi" l'app cerca di rispettare gli obiettivi, ma non li garantisce: controlla qui.</p>
-            </div>
-          )}
+      {(plan.problems || []).filter((x) => x.day === dayIndex).length > 0 && (
+        <div className="text-sm text-amber-900 bg-amber-50 p-3 rounded-2xl space-y-1" role="alert">
+          <p className="font-bold">Non ho trovato una combinazione che rispetti tutti i piani per questo giorno:</p>
+          {(plan.problems || []).filter((x) => x.day === dayIndex).map((x, i) => <p key={i} className="text-xs">{x.slot ? `${x.slot}: ` : ''}{x.msg}</p>)}
+          <p className="text-xs">Puoi cambiare il piatto a mano o premere "Rigenera la settimana".</p>
         </div>
       )}
-
+      {(plan.problems || []).filter((x) => x.day === -1).length > 0 && (
+        <div className="text-xs text-amber-900 bg-amber-50 p-3 rounded-2xl space-y-1" role="alert">
+          <p className="font-bold text-sm">Nella settimana non tornano alcune regole:</p>
+          {(plan.problems || []).filter((x) => x.day === -1).map((x, i) => <p key={i}>{x.msg}</p>)}
+        </div>
+      )}
       {preparing && <p className="text-sm text-brand-800 bg-brand-50 p-3 rounded-2xl">Sto preparando i pasti di questa settimana: ci vuole qualche secondo.</p>}
       {notice && <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-2xl">{notice}</p>}
 
@@ -332,36 +314,23 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           return (
             <div key={slot} className="bg-white rounded-[24px] p-4 shadow-soft">
               <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-brand-600 uppercase tracking-wider">{slot}</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-brand-600 uppercase tracking-wider">{slot}</span>
-                  <button onClick={() => setPicker({ slot, action: 'add' })} aria-label={`Aggiungi a ${slot}`} className="w-9 h-9 bg-brand-50 text-brand-600 rounded-full flex items-center justify-center active:scale-90"><Plus className="w-5 h-5" /></button>
+                  <button onClick={() => proposeSlot(slot)} aria-label={`Proponi ${slot}`} className="px-3 py-2 bg-brand-50 rounded-full text-brand-700 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Proponi</button>
+                  <button onClick={() => setPicker({ slot, action: 'add' })} aria-label={`Aggiungi a ${slot}`} className="w-9 h-9 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center active:scale-90"><Plus className="w-5 h-5" /></button>
                 </div>
-                <button onClick={() => proposeSlot(slot)} aria-label={`Proponi ${slot}`} className="px-3 py-2 bg-slate-50 rounded-full text-slate-600 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Proponi</button>
               </div>
-              <button onClick={() => setModeFor({ slot, mode: isSharedSlot(household, slot, data(slot)) ? 'individual' : 'shared' })} aria-label={`Pasto ${isSharedSlot(household, slot, data(slot)) ? 'condiviso' : 'individuale'}: tocca per cambiare`} className="mb-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 text-[11px] font-bold text-slate-600 active:scale-95">
-                {isSharedSlot(household, slot, data(slot)) ? <Users className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />}
-                {isSharedSlot(household, slot, data(slot)) ? 'Condiviso con la famiglia' : 'Individuale'} · cambia
-              </button>
-              {isSharedSlot(household, slot, data(slot)) ? (!personal && (
-                <div className="flex items-center gap-1.5 flex-wrap mb-3">
-                  {household.members.filter((m) => mealOf(m, slot).eats).map((m) => {
-                    const here = !(data(slot)?.absent || []).includes(m.id);
-                    return <Avatar key={m.id} member={m} active={here} onClick={() => setAbsent(slot, m.id)} title={here ? `${m.name} c'è: tocca se non c'è` : `${m.name} non c'è`} />;
-                  })}
-                  {(data(slot)?.guests || []).map((g) => (
-                    <button key={g.id} onClick={() => setGuests(slot, data(slot).guests.filter((x) => x.id !== g.id))} title={`Togli ${g.name}`} aria-label={`Togli ospite ${g.name}`} className="px-2 py-1 rounded-full bg-slate-100 text-[11px] font-semibold text-slate-600 active:scale-95">{g.emoji} {g.name} ✕</button>
-                  ))}
-                  <button onClick={() => setGuestFor(slot)} aria-label="Aggiungi ospite" className="px-2.5 py-1.5 rounded-full bg-slate-50 text-[11px] font-bold text-slate-500 flex items-center gap-1 active:scale-95"><UserPlus className="w-3.5 h-3.5" /> Ospite</button>
-                </div>
-              )) : me && people(slot).some((p) => p.id === me.id) && (
-                <div className="flex items-center gap-1.5 flex-wrap mb-3">
-                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-1">Pasto individuale</span>
-                  {(data(slot)?.joined?.[me.id] || []).map((id) => { const m = household.members.find((x) => x.id === id); return m ? <Avatar key={id} member={m} title={`${m.name} mangia con te`} /> : null; })}
-                  {household.members.some((m) => m.id !== me.id && mealOf(m, slot).eats) && (
-                    <button onClick={() => setJoinFor(slot)} aria-label="Aggiungi un familiare al mio pasto" className="px-2.5 py-1.5 rounded-full bg-slate-50 text-[11px] font-bold text-slate-500 flex items-center gap-1 active:scale-95"><UserPlus className="w-3.5 h-3.5" /> Aggiungi persone</button>
-                  )}
-                </div>
-              )}
+              {(() => {
+                const sh = isSharedSlot(household, slot, data(slot));
+                const n = people(slot).length + (data(slot)?.guests || []).length;
+                const withMe = (data(slot)?.joined?.[me?.id] || []).length;
+                const text = sh ? `Condiviso · ${n} ${n === 1 ? 'persona' : 'persone'}` : `Individuale${withMe ? ` · con altre ${withMe}` : ''}`;
+                return (
+                  <button onClick={() => setWhoFor(slot)} aria-label={`${slot}: chi mangia (${text}). Tocca per cambiare`} className="mb-3 inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-slate-100 text-[11px] font-bold text-slate-600 active:scale-95">
+                    {sh ? <Users className="w-3.5 h-3.5" /> : <User className="w-3.5 h-3.5" />} {text} <ChevronDown className="w-3 h-3 opacity-60" />
+                  </button>
+                );
+              })()}
               {rules.length > 0 && (
                 <p className="text-[11px] text-brand-700 bg-brand-50 rounded-lg px-2 py-1 mb-2 flex items-center gap-1"><Briefcase className="w-3 h-3" /> {rules.map((r) => r.label).join(', ')}</p>
               )}
@@ -391,6 +360,40 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         })}
       </div>
 
+      {(goalsRows || dayRows) && (
+        <div className="space-y-3 pt-2">
+          <button onClick={() => setChecksOpen(!checksOpen)} aria-expanded={checksOpen} className="w-full flex items-center justify-center gap-1.5 text-xs font-semibold text-slate-400 py-2 active:scale-95">
+            <Target className="w-3.5 h-3.5" /> Controlli del piano
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${checksOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {checksOpen && (
+            <div className="space-y-3">
+      {membersWithGoals.length > 0 && (
+        <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
+          <button onClick={() => setGoalsOpen(!goalsOpen)} className="w-full p-4 flex items-center gap-2 text-left">
+            <Target className="w-5 h-5 text-brand-600" />
+            <span className="flex-1 font-display font-bold text-slate-800">Obiettivi della settimana</span>
+            <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${goalsOpen ? 'rotate-180' : ''}`} />
+          </button>
+          {goalsOpen && (
+            <div className="px-4 pb-4 space-y-4">
+              {membersWithGoals.map((m) => (
+                <div key={m.id}>
+                  <div className="flex items-center gap-2 mb-2"><Avatar member={m} size="w-6 h-6 text-sm" /><span className="text-sm font-bold text-slate-700">{m.name}</span></div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {m.goals.map((g) => {
+                      const n = counts[m.id]?.[g.food] || 0;
+                      const st = goalStatus(g, n);
+                      return <span key={g.id} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${st === 'ok' ? 'bg-brand-50 text-brand-700' : st === 'short' ? 'bg-amber-50 text-amber-700' : 'bg-rose-50 text-rose-700'}`}>{foodLabel(g.food)} {n}/{g.times}{g.mode === 'max' ? ' max' : g.mode === 'exact' ? ' esatti' : ''}</span>;
+                    })}
+                  </div>
+                </div>
+              ))}
+              <p className="text-[11px] text-slate-400">Conta i pasti della settimana in cui ognuno mangia quell'alimento. Con "Proponi" l'app cerca di rispettare gli obiettivi, ma non li garantisce: controlla qui.</p>
+            </div>
+          )}
+        </div>
+      )}
       {me && me.planSource !== 'auto' && isDayBalanced(me) && dayPlanned(me) && (
         <div className="bg-white rounded-3xl shadow-soft overflow-hidden">
           <button onClick={() => setDayOpen(!dayOpen)} className="w-full p-4 flex items-center gap-2 text-left">
@@ -404,6 +407,11 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
               <div className="flex flex-wrap gap-1.5">
                 {dayStatus.all.map((i) => <span key={i.key} className={`text-xs font-semibold rounded-full px-2.5 py-1 ${dayStatus.consumed.has(i.key) ? 'bg-brand-50 text-brand-700' : 'bg-amber-50 text-amber-700'}`}>{dayStatus.consumed.has(i.key) ? '✓ ' : ''}{pairLabel({ group: i.group })} <span className="opacity-60">({i.slot.toLowerCase()})</span></span>)}
               </div>
+            </div>
+          )}
+        </div>
+      )}
+
             </div>
           )}
         </div>
@@ -468,6 +476,49 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           </div>
         </Sheet>
       )}
+      {whoFor && (() => {
+        const slot = whoFor;
+        const sh = isSharedSlot(household, slot, data(slot));
+        const seg = (on) => `flex-1 py-2.5 rounded-xl text-sm font-bold ${on ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-500'}`;
+        return (
+          <Sheet title={`${slot}: chi mangia`} onClose={() => setWhoFor(null)}>
+            <div className="p-5 space-y-5">
+              <div>
+                <p className="text-xs font-bold text-slate-400 uppercase mb-2">Tipo di pasto ({DAYS[dayIndex]} {dayNumber(weekDate, dayIndex)})</p>
+                <div role="group" aria-label="Tipo di pasto" className="flex gap-1 bg-slate-100 rounded-2xl p-1">
+                  <button aria-pressed={sh} onClick={() => !sh && setModeFor({ slot, mode: 'shared' })} className={seg(sh)}>Condiviso</button>
+                  <button aria-pressed={!sh} onClick={() => sh && setModeFor({ slot, mode: 'individual' })} className={seg(!sh)}>Individuale</button>
+                </div>
+                <p className="text-[11px] text-slate-400 mt-2">{sh ? 'Un pasto per tutta la famiglia, con menu separati solo per chi segue una dieta diversa.' : 'Ognuno ha il proprio menu; puoi aggiungere familiari al tuo.'}</p>
+              </div>
+              {sh && !personal && (
+                <div className="space-y-2">
+                  <p className="text-xs font-bold text-slate-400 uppercase">Chi c'è</p>
+                  {household.members.filter((m) => mealOf(m, slot).eats).map((m) => {
+                    const here = !(data(slot)?.absent || []).includes(m.id);
+                    return (
+                      <button key={m.id} role="switch" aria-checked={here} onClick={() => setAbsent(slot, m.id)} className="w-full flex items-center gap-3 p-2 rounded-2xl bg-slate-50 text-left active:scale-[0.99]">
+                        <Avatar member={m} size="w-9 h-9 text-lg" active={here} /><span className={`flex-1 font-bold ${here ? 'text-slate-700' : 'text-slate-300'}`}>{m.name}</span><span className="text-xs font-bold text-slate-400">{here ? 'Mangia' : "Non c'è"}</span>
+                      </button>
+                    );
+                  })}
+                  {(data(slot)?.guests || []).map((g) => (
+                    <div key={g.id} className="flex items-center gap-3 p-2 rounded-2xl bg-slate-50"><span className="text-xl w-9 text-center">{g.emoji}</span><span className="flex-1 font-bold text-slate-700">{g.name} <span className="text-xs font-semibold text-slate-400">ospite</span></span><button onClick={() => setGuests(slot, data(slot).guests.filter((x) => x.id !== g.id))} aria-label={`Togli ospite ${g.name}`} className="p-2 text-slate-400"><Trash2 className="w-4 h-4" /></button></div>
+                  ))}
+                  <button onClick={() => { setWhoFor(null); setGuestFor(slot); }} className="w-full py-2.5 bg-white border border-dashed border-slate-300 rounded-2xl text-sm font-bold text-slate-500 flex items-center justify-center gap-1.5 active:scale-[0.98]"><UserPlus className="w-4 h-4" /> Aggiungi un ospite</button>
+                </div>
+              )}
+              {!sh && me && people(slot).some((p) => p.id === me.id) && household.members.some((m) => m.id !== me.id && mealOf(m, slot).eats) && (
+                <div className="space-y-2">
+                  <p className="text-xs font-bold text-slate-400 uppercase">Mangia con te</p>
+                  <div className="flex items-center gap-1.5 flex-wrap">{(data(slot)?.joined?.[me.id] || []).map((id) => { const m = household.members.find((x) => x.id === id); return m ? <Avatar key={id} member={m} title={`${m.name} mangia con te`} /> : null; })}</div>
+                  <button onClick={() => { setWhoFor(null); setJoinFor(slot); }} className="w-full py-2.5 bg-white border border-dashed border-slate-300 rounded-2xl text-sm font-bold text-slate-500 flex items-center justify-center gap-1.5 active:scale-[0.98]"><UserPlus className="w-4 h-4" /> Aggiungi persone al mio pasto</button>
+                </div>
+              )}
+            </div>
+          </Sheet>
+        );
+      })()}
       {guestFor && <GuestSheet slot={guestFor} onClose={() => setGuestFor(null)} onAdd={(g) => { setGuests(guestFor, [...(data(guestFor)?.guests || []), g]); setGuestFor(null); }} />}
       {leftover && (
         <Sheet title="Riporta come avanzo" onClose={() => setLeftover(null)}>

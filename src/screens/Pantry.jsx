@@ -20,9 +20,9 @@ export default function Pantry({ onClose }) {
   };
 
   return (
-    <Sheet title="Dispensa" onClose={onClose} full>
+    <Sheet title="Cosa ho in casa" onClose={onClose} full>
       <div className="p-5 space-y-5">
-        <p className="text-sm text-slate-500">Quello che segni qui viene tolto dalla lista della spesa. Non si aggiorna da solo quando cucini: correggi le quantità quando serve.</p>
+        <p className="text-sm text-slate-500">Quello che segni qui viene tolto dalla lista della spesa, anche solo in parte: se ne hai 500 g di ceci cotti e ne servono 650, in lista restano 150 g. Le quantità non scendono da sole quando cucini: correggile quando serve. Puoi anche segnarle direttamente dalla lista, con "Ne ho già…".</p>
 
         <div className="bg-slate-50 rounded-2xl p-4 space-y-3">
           <input className="w-full p-3 bg-white rounded-xl border-none focus:ring-2 focus:ring-brand-500" placeholder="Es. Ceci cotti" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} aria-label="Nome" />

@@ -30,7 +30,7 @@ const NavBtn = ({ icon: Icon, label, active, onClick }) => (
 
 
 export function Main() {
-  const { household, me, memberCount, saveProfile, claimProfile, joinHousehold, saveRecipe, deleteRecipe, user } = useData();
+  const { household, me, memberCount, saveProfile, saveSettings, claimProfile, joinHousehold, saveRecipe, deleteRecipe, user } = useData();
   useAutoWeeks();
   const [tab, setTabState] = React.useState('planner');
   const tabRef = React.useRef('planner');
@@ -82,7 +82,7 @@ export function Main() {
         freeProfiles={household.members.filter(isFreeProfile)}
         onJoin={async (code) => { await joinHousehold(code); setJoined(true); }}
         onClaim={async (id) => { await claimProfile(id); setReview(true); }}
-        onDone={saveProfile}
+        onDone={(profile, extra) => { saveProfile(profile); if (extra) saveSettings(extra); }}
       />
       </React.Suspense>
     );
@@ -154,7 +154,7 @@ export function Main() {
       {report !== undefined && <ReportSheet symptom={report} onClose={() => setReport(undefined)} />}
       </React.Suspense>
       <React.Suspense fallback={null}>
-      {settings && <Settings onClose={() => setSettings(false)} />}
+      {settings && <Settings onClose={() => setSettings(false)} onGoFamily={() => { setSettings(false); setTab('family'); }} />}
       </React.Suspense>
       {confirm && <Confirm title={confirm.title} msg={confirm.msg} onConfirm={confirm.action} onCancel={() => setConfirm(null)} />}
     </div>

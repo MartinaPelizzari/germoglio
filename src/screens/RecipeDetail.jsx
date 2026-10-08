@@ -1,8 +1,9 @@
 import React from 'react';
-import { Clock, ExternalLink, Pencil, Copy, Trash2, ChevronLeft, ShoppingCart, Heart } from 'lucide-react';
+import { Clock, ExternalLink, Pencil, Copy, Trash2, ChevronLeft, ShoppingCart, Heart, MoreHorizontal } from 'lucide-react';
 import { useData, usePlans } from '../hooks/data.jsx';
 import { DietBadge, Portal, useBackClose } from '../components/ui.jsx';
 import { DEFAULT_EMOJI, timeLabel } from '../lib/format.js';
+import { applianceLabel, appliancesNeeded } from '../lib/appliances.js';
 import { recipeKind } from '../lib/meals.js';
 import { formatQty, mealOfItem, scaleRecipe, sumIngredients } from '../lib/scale.js';
 import { allergenLabel, recipeAllergens } from '../lib/allergens.js';
@@ -21,6 +22,7 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
   const kind = recipeKind(recipe);
   const slot = context?.slot || (kind === 'colazione' ? 'Colazione' : kind === 'spuntino' ? 'Spuntino 1' : 'Pranzo');
   const [view, setView] = React.useState(context ? 'all' : 'base');
+  const [more, setMore] = React.useState(false);
 
   React.useEffect(() => {
     const prev = document.body.style.overflow;
@@ -55,15 +57,23 @@ export default function RecipeDetail({ recipe, context, onClose, onEdit, onDupli
             <button onClick={onClose} aria-label="Chiudi" className="absolute top-5 left-5 mt-[var(--safe-top)] p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><ChevronLeft className="w-6 h-6 text-slate-800" /></button>
             <div className="absolute top-5 right-5 mt-[var(--safe-top)] flex gap-2">
               <button onClick={() => toggleFavorite(recipe.id)} aria-label={fav ? 'Togli dai preferiti' : 'Aggiungi ai preferiti'} aria-pressed={fav} className="p-3 bg-white/70 backdrop-blur-md rounded-full active:scale-95"><Heart className={`w-5 h-5 ${fav ? 'fill-rose-500 text-rose-500' : 'text-slate-600'}`} /></button>
-              {!recipe.isFood && <button onClick={onDuplicate} aria-label="Salva una copia" title="Salva una copia" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-slate-600 active:scale-95"><Copy className="w-5 h-5" /></button>}
-              <button onClick={onEdit} aria-label="Modifica ricetta" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-brand-700 active:scale-95"><Pencil className="w-5 h-5" /></button>
-              <button onClick={onDelete} aria-label="Elimina ricetta" className="p-3 bg-white/70 backdrop-blur-md rounded-full text-red-500 active:scale-95"><Trash2 className="w-5 h-5" /></button>
+              <div className="relative">
+                <button onClick={() => setMore(!more)} aria-label="Altre azioni" aria-expanded={more} className="p-3 bg-white/70 backdrop-blur-md rounded-full text-slate-600 active:scale-95"><MoreHorizontal className="w-5 h-5" /></button>
+                {more && (
+                  <div role="menu" className="absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-2xl py-1.5 z-10 animate-fade-in">
+                    <button role="menuitem" onClick={() => { setMore(false); onEdit(); }} className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 text-left active:bg-slate-50"><Pencil className="w-4 h-4" /> Modifica</button>
+                    {!recipe.isFood && <button role="menuitem" onClick={() => { setMore(false); onDuplicate(); }} className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 text-left active:bg-slate-50"><Copy className="w-4 h-4" /> Salva una copia</button>}
+                    <button role="menuitem" onClick={() => { setMore(false); onDelete(); }} className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-red-600 text-left active:bg-red-50 border-t border-slate-100"><Trash2 className="w-4 h-4" /> Elimina</button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           <div className="px-6 pt-6 pb-32 -mt-6 relative bg-white rounded-t-[32px]">
             <div className="flex flex-wrap items-center gap-2 mb-3">
               <DietBadge diet={recipe.diet} />
               <span className="flex items-center gap-1 text-xs text-slate-500 font-semibold"><Clock className="w-3.5 h-3.5" /> {timeLabel(recipe)}</span>
+              {appliancesNeeded(recipe).length > 0 && <span className="text-xs text-slate-500 font-semibold">Serve: {appliancesNeeded(recipe).map((id) => applianceLabel(id).toLowerCase()).join(', ')}</span>}
             </div>
             <h1 className="font-display font-extrabold text-3xl text-slate-900 mb-2 leading-tight">{recipe.title}</h1>
             {recipe.overridden && <button onClick={() => { restoreRecipe(recipe.id); onClose(); }} className="text-xs font-bold text-brand-700 underline mb-2 block">Questa ricetta è stata modificata: ripristina l'originale</button>}

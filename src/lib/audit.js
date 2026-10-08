@@ -2,14 +2,18 @@
 // Serve a due cose: scegliere il migliore fra più tentativi di generazione (generateWeekChecked) e far fallire le prove
 // automatiche se il generatore introduce di nuovo un difetto. Ogni problema ha un peso: i difetti gravi (dieta,
 // allergie, pasti vuoti) pesano più di quelli di coerenza.
+import { applianceLabel, missingAppliances } from './appliances.js';
 import { SLOTS, eatersOf, mealOf, mealOfItem, scaleRecipe } from './scale.js';
 import { breakfastClass, recipeKind, slotKind } from './meals.js';
 import { isDayBalanced, parseKey } from './day.js';
 import { problemsFor, rulesFor } from './diet.js';
 import { resolveItem } from './items.js';
-import { recipeFoods } from './goals.js';
-import { planMatches } from './dietPlan.js';
+import { foodsAtSlot } from './goals.js';
+import { planMatches, planViolations } from './dietPlan.js';
+import { pieceGrams } from './nutrition.js';
 import { outOfSeason } from './seasons.js';
+import { proteinGoals, needsQuota, planProteinTypes, MAIN_SLOTS } from './quota.js';
+import { proteinSourceOf, proteinTypeOfName } from './protein.js';
 import { MIN_COLOR_GRAMS, colorMass, consistencyOf } from './variety.js';
 
 const approx = (ing) => (['g', 'ml'].includes(ing.unit) ? ing.qty : ing.unit === 'pz' ? ing.qty * (ing.group === 'fruit' ? 120 : ing.group === 'protein' ? 55 : 50) : ing.unit === 'cucchiai' ? ing.qty * 10 : ing.unit === 'cucchiaini' ? ing.qty * 4 : 0);
@@ -18,7 +22,7 @@ const massOf = (recipe, group) => (recipe.ingredients || []).reduce((a, i) => a 
 // Soglie sotto cui un ingrediente è solo un contorno
 const SUBSTANTIAL = { protein: 40, carb: 70 };
 
-const WEIGHT = { liquidi: 20, beige: 5, stagione: 8, sforo: 20, somiglianza: 6, dieta: 100, vuoto: 100, colazione: 30, spostato: 30, doppio: 20, contorno: 20, regola: 25, frequenza: 8, gruppo: 15, doppioGruppo: 25 };
+const WEIGHT = { elettrodomestico: 100, dose: 30, fuoripiano: 30, proteine: 60, vincoli: 40, liquidi: 20, beige: 5, stagione: 8, sforo: 20, somiglianza: 6, dieta: 100, vuoto: 100, colazione: 30, spostato: 30, doppio: 20, contorno: 20, regola: 25, frequenza: 8, gruppo: 15, doppioGruppo: 25 };
 
 export const auditWeek = (days, household, recipeMap, { month } = {}) => {
   const issues = [];
@@ -52,7 +56,7 @@ export const auditWeek = (days, household, recipeMap, { month } = {}) => {
           if (month && outOfSeason(recipe, month).length) add('stagione', d, slot, `${recipe.title}: ${outOfSeason(recipe, month).join(', ')} fuori stagione`);
           if (rules.some((r) => r.takeaway) && /vellutat|zupp|minestr/i.test(recipe.title)) add('regola', d, slot, `${recipe.title} (liquido) in un pasto d'asporto`);
         }
-        const foods = recipeFoods(recipe);
+        const foods = foodsAtSlot(recipe, slot);
         for (const e of eaters) for (const f of foods) ((counts[e.id] ||= {})[f] ||= new Set()).add(`${d}|${slot}`);
       }
 
@@ -172,6 +176,68 @@ export const auditWeek = (days, household, recipeMap, { month } = {}) => {
         }
       }
     }
+  }
+
+  // dosi esatte: per ogni persona con un piano, la quantità mangiata di ogni gruppo coincide con quella del piano (5% o 5 g di tolleranza)
+  // e nei piatti non ci sono ingredienti sostanziosi che il piano non prevede
+  for (let d = 0; d < 7; d++) {
+    for (const slot of SLOTS) {
+      const data = days[d]?.[slot];
+      for (const it of data?.items || []) {
+        const recipe = resolveItem(it, recipeMap);
+        if (!recipe) continue;
+        if (!recipe.isFood) { const no = missingAppliances(recipe, household.appliances); if (no.length) add('elettrodomestico', d, slot, `${recipe.title} richiede ${no.map((id) => applianceLabel(id).toLowerCase()).join(', ')}, che la casa non ha`); }
+        for (const p of eatersOf(it, household, slot, data)) {
+          const own = mealOf(p, slot);
+          if (!own.plan.length) continue;
+          const meal = mealOfItem(p, slot, it);
+          const scaled = scaleRecipe(recipe, meal);
+          planMatches(recipe, meal.plan).forEach((m) => {
+            if (!m || !(m.option.qty > 0)) return;
+            const gr = (ing) => (['g', 'ml'].includes(ing.unit) ? ing.qty : ing.unit === 'pz' && pieceGrams(ing.name) ? ing.qty * pieceGrams(ing.name) : 0);
+            const compat = m.idx.filter((k) => gr(recipe.ingredients[k]) > 0 && (recipe.ingredients[k].unit === m.option.unit || ['g', 'ml'].includes(m.option.unit)));
+            if (!compat.length) return; // unità non confrontabili (es. 1 frutto contro un piatto in cucchiai): non verificabile
+            const actual = compat.reduce((a, k) => a + gr(scaled[k]), 0);
+            // il piano può dare pezzi (1 kiwi): si confronta in grammi con il peso medio del pezzo, se noto
+            const pg = m.option.unit === 'pz' ? pieceGrams(m.option.name) : 0;
+            if (m.option.unit === 'pz' && !pg) return;
+            const target = m.option.unit === 'pz' ? m.option.qty * pg : m.option.qty;
+            const u = m.option.unit === 'pz' ? 'g' : m.option.unit;
+            if (Math.abs(actual - target) > Math.max(target * 0.05, 5)) add('dose', d, slot, `${p.name}: ${recipe.title} ha ${Math.round(actual)} ${u} di ${m.option.name} contro ${Math.round(target)} del piano`);
+          });
+          const off = planViolations(recipe, [...meal.plan, ...own.plan]);
+          if (off.length && !recipe.isFood) add('fuoripiano', d, slot, `${p.name}: ${recipe.title} contiene ${[...new Set(off)].slice(0, 3).join(', ').toLowerCase()} che il piano non prevede`);
+        }
+      }
+    }
+  }
+
+  // fonte proteica principale: chi ha frequenze sui gruppi proteici mangia ESATTAMENTE un gruppo proteico a ogni pranzo e cena con proteine nel piano,
+  // il conteggio riguarda solo i suoi pasti e la somma dei gruppi è uguale al numero di quei pasti
+  for (const p of people.filter(needsQuota)) {
+    const tally = {};
+    let meals = 0;
+    for (let d = 0; d < 7; d++) for (const slot of MAIN_SLOTS) {
+      if (!mealOf(p, slot).eats || !planProteinTypes(p, slot).size) continue;
+      const data = days[d]?.[slot];
+      if ((data?.absent || []).includes(p.id)) continue;
+      meals++;
+      const sources = new Set();
+      for (const it of data?.items || []) {
+        if (!eatersOf(it, household, slot, data).some((e) => e.id === p.id)) continue;
+        const r = resolveItem(it, recipeMap);
+        const src = r ? (it.food ? proteinTypeOfName(it.food.name) : proteinSourceOf(r)) : null;
+        if (src) sources.add(src);
+      }
+      if (sources.size !== 1) add('proteine', d, slot, `${p.name}: ${sources.size} gruppi proteici (${[...sources].join(', ') || 'nessuno'}) invece di uno`);
+      else tally[[...sources][0]] = (tally[[...sources][0]] || 0) + 1;
+    }
+    const sum = Object.values(tally).reduce((a, b) => a + b, 0);
+    for (const g of proteinGoals(p)) {
+      const n = tally[g.food] || 0;
+      if ((g.mode === 'exact' && n !== g.times) || (g.mode === 'min' && n < g.times) || (g.mode === 'max' && n > g.times)) add('proteine', -1, '', `${p.name}: ${g.food} ${n} volte (richiesto ${g.mode === 'exact' ? 'esattamente' : g.mode === 'min' ? 'almeno' : 'al massimo'} ${g.times})`);
+    }
+    if (sum !== meals) add('proteine', -1, '', `${p.name}: la somma dei gruppi proteici è ${sum} su ${meals} pasti`);
   }
 
   // frequenze settimanali di ogni persona

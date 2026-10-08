@@ -1,6 +1,7 @@
 import { foodDiet } from './dietPlan.js';
 import { GROUPS } from './groups.js';
 import { defaultParts } from './portions.js';
+import { deriveRecipe } from './variants.js';
 
 // Un piatto del piano è una ricetta oppure un alimento semplice preso dal piano della nutrizionista
 // (es. "yogurt 150 g"). Gli alimenti semplici si trattano come ricette di un solo ingrediente.
@@ -15,5 +16,8 @@ export const resolveItem = (item, recipeMap) => {
       steps: [], takeaway: true,
     };
   }
-  return recipeMap.get(item?.recipeId);
+  const base = recipeMap.get(item?.recipeId);
+  // variante derivata: la ricetta base con un'altra fonte proteica (variants.js)
+  if (base && item.variant) return deriveRecipe(base, item.variant);
+  return base;
 };

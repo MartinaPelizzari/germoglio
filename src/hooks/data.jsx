@@ -115,7 +115,7 @@ export function DataProvider({ user, children }) {
   const favorites = React.useMemo(() => new Set(prefs.favorites || []), [prefs]);
   const me = profiles?.find((p) => p.claimedBy === uid) || profiles?.find((p) => p.id === uid) || null;
   // "household" è ciò che usa tutta la logica: persone del nucleo (i profili) e regole condivise
-  const household = React.useMemo(() => (profiles ? { members: profiles, rules: settings.rules || [], sharedSlots: settings.sharedSlots ?? DEFAULT_SHARED } : undefined), [profiles, settings]);
+  const household = React.useMemo(() => (profiles ? { members: profiles, rules: settings.rules || [], sharedSlots: settings.sharedSlots ?? DEFAULT_SHARED, appliances: settings.appliances } : undefined), [profiles, settings]);
 
   // recipeId -> settimane dall'ultima volta, contando fino alla settimana corrente
   const lastUse = React.useMemo(() => {
@@ -164,15 +164,15 @@ export function DataProvider({ user, children }) {
         await updateDoc(ref('profiles', id), { claimedBy: deleteField() }).catch(log);
       },
       // Rigenerazione voluta dall'utente: sostituisce la settimana (resta una proposta automatica finché non viene modificata a mano)
-      writeWeek: async (weekId, days, sig) => { await setDoc(ref('plans', weekId), { days, auto: true, sig }).catch(log); },
+      writeWeek: async (weekId, days, sig, problems = []) => { await setDoc(ref('plans', weekId), { days, auto: true, sig, problems }).catch(log); },
       // Settimane pianificate in anticipo: si scrivono solo se non esistono o se sono ancora proposte automatiche da aggiornare
       // (una settimana toccata a mano non si sovrascrive mai; due telefoni aperti insieme non si pestano i piedi)
-      createWeek: async (weekId, days, sig) => {
+      createWeek: async (weekId, days, sig, problems = []) => {
         try {
           await runTransaction(db, async (tx) => {
             const r = ref('plans', weekId);
             const snap = await tx.get(r);
-            if (!snap.exists() || (snap.data().auto === true && snap.data().sig !== sig)) tx.set(r, { days, auto: true, sig });
+            if (!snap.exists() || (snap.data().auto === true && snap.data().sig !== sig)) tx.set(r, { days, auto: true, sig, problems });
           });
         } catch { /* offline o già creata: nessun tentativo ripetuto */ }
       },
@@ -249,6 +249,6 @@ export function useWeekPlan(hid, weekId) {
     return onSnapshot(doc(db, 'households', hid, 'plans', weekId), (s) => setPlan(s.exists() ? s.data() : { days: {} }));
   }, [hid, weekId]);
   // una modifica a mano toglie la settimana dalle "proposte automatiche": non verrà rifatta da sola
-  const saveSlot = (day, slot, data) => setDoc(doc(db, 'households', hid, 'plans', weekId), { auto: false, days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
+  const saveSlot = (day, slot, data) => setDoc(doc(db, 'households', hid, 'plans', weekId), { auto: false, problems: [], days: { [day]: { [slot]: data } } }, { merge: true }).catch(console.error);
   return { plan, saveSlot };
 }

@@ -92,3 +92,35 @@ export const DietBadge = ({ diet }) => {
   const [cls, label] = DIET_STYLE[diet] || DIET_STYLE.omnivore;
   return <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${cls}`}>{label}</span>;
 };
+
+// Schede a segmenti: un solo gruppo di scelte alla volta, per non mostrare tutto insieme
+export function Tabs({ tabs, value, onChange, label = 'Sezioni', className = '' }) {
+  return (
+    <div role="tablist" aria-label={label} className={`flex gap-1 bg-slate-100 rounded-2xl p-1 ${className}`}>
+      {tabs.map((t) => (
+        <button key={t.id} role="tab" aria-selected={value === t.id} onClick={() => onChange(t.id)} className={`flex-1 min-w-0 py-2 rounded-xl text-sm font-bold truncate transition-colors ${value === t.id ? 'bg-white text-brand-700 shadow-sm' : 'text-slate-500'}`}>{t.label}</button>
+      ))}
+    </div>
+  );
+}
+
+// Blocco con titolo e spiegazione breve: stesso aspetto in tutte le impostazioni
+export const Block = ({ title, hint, children, className = '' }) => (
+  <section className={`space-y-3 ${className}`}>
+    {(title || hint) && (
+      <div>
+        {title && <h4 className="font-display font-bold text-base text-slate-800">{title}</h4>}
+        {hint && <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">{hint}</p>}
+      </div>
+    )}
+    {children}
+  </section>
+);
+
+// Interruttore (sì/no) con testo
+export const Toggle = ({ on, onChange, label, hint, disabled }) => (
+  <button role="switch" aria-checked={on} disabled={disabled} onClick={() => onChange(!on)} className="w-full flex items-center gap-3 text-left py-1 disabled:opacity-50">
+    <span className="flex-1 min-w-0"><span className="block text-sm font-semibold text-slate-700">{label}</span>{hint && <span className="block text-[11px] text-slate-400">{hint}</span>}</span>
+    <span className={`relative w-11 h-6 rounded-full shrink-0 transition-colors ${on ? 'bg-brand-500' : 'bg-slate-200'}`}><span className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform ${on ? 'translate-x-5' : ''}`} /></span>
+  </button>
+);

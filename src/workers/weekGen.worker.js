@@ -7,8 +7,8 @@ self.onmessage = (e) => {
   const { id, recipes: r, household, favorites, recency, existing, month } = e.data;
   if (r) recipes = r;
   try {
-    const { days } = generateWeekChecked(recipes, household, { favorites: new Set(favorites), recency: new Map(recency), existing, month });
-    self.postMessage({ id, days });
+    const { days, problems } = generateWeekChecked(recipes, household, { favorites: new Set(favorites), recency: new Map(recency), existing, month });
+    self.postMessage({ id, days, problems });
   } catch (err) {
     self.postMessage({ id, error: String(err?.message || err) });
   }

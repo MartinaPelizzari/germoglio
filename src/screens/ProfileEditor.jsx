@@ -4,7 +4,7 @@ import PlanSource from '../components/PlanSource.jsx';
 import RuleEditor from '../components/RuleEditor.jsx';
 import { DAYS } from '../lib/dates.js';
 import { MEMBER_COLORS, MEMBER_EMOJIS, isFreeProfile } from '../hooks/data.jsx';
-import { Confirm, Sheet, Avatar } from '../components/ui.jsx';
+import { Confirm, Sheet, Avatar, Tabs } from '../components/ui.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
 import { DIETS } from '../lib/diet.js';
 import { ALLERGENS } from '../lib/allergens.js';
@@ -33,6 +33,8 @@ function PlanImportBlock({ member, onChange }) {
 }
 
 export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onRelease, canClaim = true, onDelete, onClose }) {
+  const [tab, setTab] = React.useState('persona');
+  const [look, setLook] = React.useState(false);
   const [openSlot, setOpenSlot] = React.useState(null);
   const [ruleId, setRuleId] = React.useState(null);
   const myRules = member.rules || [];
@@ -79,6 +81,9 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
           </div>
         )}
 
+        <div className="sticky top-0 z-10 -mx-5 px-5 py-2 bg-white/95 backdrop-blur"><Tabs tabs={[{ id: 'persona', label: 'Persona' }, { id: 'piano', label: 'Piano' }, { id: 'regole', label: 'Regole' }]} value={tab} onChange={setTab} label="Sezioni del profilo" /></div>
+        {tab === 'persona' && (
+          <div className="space-y-6">
         <div className="flex items-center gap-4">
           <button onClick={() => fileRef.current?.click()} aria-label="Cambia foto" className="relative shrink-0">
             <Avatar member={member} size="w-20 h-20 text-4xl" />
@@ -91,16 +96,20 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
             {photoBusy && <p className="text-xs text-slate-400">Carico la foto...</p>}
           </div>
         </div>
+        <div>
+          <button onClick={() => setLook(!look)} aria-expanded={look} className="text-xs font-bold text-brand-700 flex items-center gap-1 active:scale-95">Cambia aspetto <ChevronDown className={`w-3.5 h-3.5 transition-transform ${look ? 'rotate-180' : ''}`} /></button>
+          {look && <div className="space-y-4 mt-3">
         {!member.photo && (
-          <div className="flex flex-wrap gap-2">{MEMBER_EMOJIS.map((e) => <button key={e} onClick={() => onChange({ ...member, emoji: e })} className={`text-2xl w-11 h-11 rounded-xl ${member.emoji === e ? 'bg-brand-100 ring-2 ring-brand-500' : 'bg-slate-50'}`}>{e}</button>)}</div>
-        )}
-        <div className="flex gap-2">{MEMBER_COLORS.map((c) => <button key={c} aria-label={`Colore ${c}`} onClick={() => onChange({ ...member, color: c })} className={`w-8 h-8 rounded-full ${member.color === c ? 'ring-2 ring-offset-2 ring-slate-400' : ''}`} style={{ background: c }} />)}</div>
+            <div className="flex flex-wrap gap-2">{MEMBER_EMOJIS.map((e) => <button key={e} onClick={() => onChange({ ...member, emoji: e })} className={`text-2xl w-11 h-11 rounded-xl ${member.emoji === e ? 'bg-brand-100 ring-2 ring-brand-500' : 'bg-slate-50'}`}>{e}</button>)}</div>
+          )}
+          <div className="flex gap-2">{MEMBER_COLORS.map((c) => <button key={c} aria-label={`Colore ${c}`} onClick={() => onChange({ ...member, color: c })} className={`w-8 h-8 rounded-full ${member.color === c ? 'ring-2 ring-offset-2 ring-slate-400' : ''}`} style={{ background: c }} />)}</div>
 
+          </div>}
+        </div>
         <div>
           <p className={label}>Dieta</p>
           <div className="grid grid-cols-2 gap-2">{DIETS.map((d) => <button key={d.id} onClick={() => onChange({ ...member, diet: d.id })} className={chip(member.diet === d.id)}>{d.label}</button>)}</div>
         </div>
-        <VisibleSlots member={member} onChange={onChange} />
         <div>
           <p className={label}>Da evitare (allergie, cibi che non mangia)</p>
           <input className="w-full p-3 bg-slate-50 rounded-xl border-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Es. glutine, arachidi, funghi (separati da virgola)" value={member.avoid || ''} onChange={(e) => onChange({ ...member, avoid: e.target.value })} aria-label="Ingredienti da evitare" />
@@ -115,43 +124,17 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
           </div>
           <p className="text-[11px] text-slate-400 mt-2">Il riconoscimento è una stima dai nomi degli ingredienti: controlla sempre le etichette, soprattutto per le allergie.</p>
         </div>
-        <div>
-          <p className={label}>Frequenze settimanali (dalla nutrizionista)</p>
-          <div className="space-y-2">
-            {(member.goals || []).map((g) => (
-              <div key={g.id} className="flex items-center gap-2 bg-slate-50 rounded-xl p-2">
-                <select className="bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.mode} onChange={(e) => patchGoal(g.id, { mode: e.target.value })} aria-label="Modalità">{GOAL_MODES.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}</select>
-                <input type="number" inputMode="numeric" min="0" max="21" className="w-12 text-center bg-white rounded-lg p-2 text-sm" value={g.times} onChange={(e) => patchGoal(g.id, { times: Math.max(0, Number(e.target.value) || 0) })} aria-label="Volte a settimana" />
-                <span className="text-xs text-slate-400">volte</span>
-                <select className="flex-1 min-w-0 bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.food} onChange={(e) => patchGoal(g.id, { food: e.target.value })} aria-label="Alimento">{FOOD_TYPES.map((f) => <option key={f.id} value={f.id}>{f.label}</option>)}</select>
-                <button onClick={() => onChange({ ...member, goals: member.goals.filter((x) => x.id !== g.id) })} aria-label="Elimina" className="p-1.5 text-slate-300"><X className="w-4 h-4" /></button>
-              </div>
-            ))}
-            <button onClick={() => onChange({ ...member, goals: [...(member.goals || []), { id: crypto.randomUUID(), food: 'legumi', times: 3, mode: 'min' }] })} className="px-3 py-2 bg-white border border-dashed border-slate-300 rounded-xl text-xs font-bold text-slate-500 flex items-center gap-1.5 active:scale-95"><Plus className="w-3.5 h-3.5" /> Aggiungi frequenza (es. legumi 3 volte)</button>
+        {onDelete && free && <button onClick={() => setConfirm(true)} className="w-full py-3 text-red-500 font-bold bg-red-50 rounded-2xl flex items-center justify-center gap-2 active:scale-95"><Trash2 className="w-4 h-4" /> Elimina questa persona</button>}
           </div>
-        </div>
-
-        <div>
-          <div className="flex items-center justify-between mb-2">
-            <h4 className="font-display font-bold text-lg text-slate-800">Regole personali</h4>
-            <button onClick={addRule} className="px-3 py-2 bg-white text-brand-700 rounded-xl font-bold text-sm shadow-soft active:scale-95">+ Regola</button>
-          </div>
-          <p className="text-xs text-slate-400 mb-3">Valgono solo per te. Per esempio: la stessa colazione per tutta la settimana, o il pranzo sempre d'asporto.</p>
-          {myRules.length === 0 && <p className="text-xs text-slate-400 bg-slate-50 rounded-2xl p-4">Nessuna regola personale.</p>}
-          <div className="space-y-2">
-            {myRules.map((r) => (
-              <button key={r.id} onClick={() => setRuleId(r.id)} className="w-full bg-slate-50 p-3 rounded-2xl flex items-center gap-3 text-left active:scale-[0.99]">
-                <div className="flex-1 min-w-0"><p className="font-bold text-slate-800 truncate">{r.label || 'Regola'}</p><p className="text-xs text-slate-400 truncate">{r.slots.join(', ')} · {r.days.map((d) => DAYS[d]).join(' ')}{r.takeaway ? ' · asporto' : ''}{(r.batch || 1) > 1 ? ` · stesso piatto ${r.batch} giorni` : ''}</p></div>
-              </button>
-            ))}
-          </div>
-        </div>
-
+        )}
+        {tab === 'piano' && (
+          <div className="space-y-6">
         <div>
           <h4 className="font-display font-bold text-lg text-slate-800 mb-3">Piano alimentare</h4>
           <div className="mb-5"><PlanSource member={member} onChange={onChange} /></div>
           {member.planSource && <label className="flex items-start gap-3 mb-5 text-sm text-slate-700"><input type="checkbox" className="w-5 h-5 mt-0.5 accent-emerald-500" checked={!member.checkinOff} onChange={(e) => onChange({ ...member, checkinOff: !e.target.checked })} /> Una domanda a settimana su come mi sento (la tolgo quando voglio)</label>}
           <div className="mb-4"><BalanceMode member={member} onChange={onChange} /></div>
+          <div className="mb-5"><VisibleSlots member={member} onChange={onChange} /></div>
           <p className="text-xs text-slate-400 mb-3">Scrivi cosa può mangiare in ogni pasto, come l'ha scritto la nutrizionista. L'app propone ricette che rispettano il piano e mette le dosi indicate. Esempio: "150 g yogurt oppure 30 g pane".</p>
           {member.planSource !== 'auto' && <PlanImportBlock member={member} onChange={onChange} />}
 
@@ -185,7 +168,44 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
           </div>
         </div>
 
-        {onDelete && free && <button onClick={() => setConfirm(true)} className="w-full py-3 text-red-500 font-bold bg-red-50 rounded-2xl flex items-center justify-center gap-2 active:scale-95"><Trash2 className="w-4 h-4" /> Elimina questa persona</button>}
+        <div>
+          <p className={label}>Frequenze settimanali (dalla nutrizionista)</p>
+          <div className="space-y-2">
+            {(member.goals || []).map((g) => (
+              <div key={g.id} className="flex items-center gap-2 bg-slate-50 rounded-xl p-2">
+                <select className="bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.mode} onChange={(e) => patchGoal(g.id, { mode: e.target.value })} aria-label="Modalità">{GOAL_MODES.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}</select>
+                <input type="number" inputMode="numeric" min="0" max="21" className="w-12 text-center bg-white rounded-lg p-2 text-sm" value={g.times} onChange={(e) => patchGoal(g.id, { times: Math.max(0, Number(e.target.value) || 0) })} aria-label="Volte a settimana" />
+                <span className="text-xs text-slate-400">volte</span>
+                <select className="flex-1 min-w-0 bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.food} onChange={(e) => patchGoal(g.id, { food: e.target.value })} aria-label="Alimento">{FOOD_TYPES.map((f) => <option key={f.id} value={f.id}>{f.label}</option>)}</select>
+                <button onClick={() => onChange({ ...member, goals: member.goals.filter((x) => x.id !== g.id) })} aria-label="Elimina" className="p-1.5 text-slate-300"><X className="w-4 h-4" /></button>
+              </div>
+            ))}
+            <button onClick={() => onChange({ ...member, goals: [...(member.goals || []), { id: crypto.randomUUID(), food: 'legumi', times: 3, mode: 'min' }] })} className="px-3 py-2 bg-white border border-dashed border-slate-300 rounded-xl text-xs font-bold text-slate-500 flex items-center gap-1.5 active:scale-95"><Plus className="w-3.5 h-3.5" /> Aggiungi frequenza (es. legumi 3 volte)</button>
+          </div>
+        </div>
+
+          </div>
+        )}
+        {tab === 'regole' && (
+          <div className="space-y-6">
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <h4 className="font-display font-bold text-lg text-slate-800">Regole personali</h4>
+            <button onClick={addRule} className="px-3 py-2 bg-white text-brand-700 rounded-xl font-bold text-sm shadow-soft active:scale-95">+ Regola</button>
+          </div>
+          <p className="text-xs text-slate-400 mb-3">Valgono solo per te. Per esempio: la stessa colazione per tutta la settimana, o il pranzo sempre d'asporto.</p>
+          {myRules.length === 0 && <p className="text-xs text-slate-400 bg-slate-50 rounded-2xl p-4">Nessuna regola personale.</p>}
+          <div className="space-y-2">
+            {myRules.map((r) => (
+              <button key={r.id} onClick={() => setRuleId(r.id)} className="w-full bg-slate-50 p-3 rounded-2xl flex items-center gap-3 text-left active:scale-[0.99]">
+                <div className="flex-1 min-w-0"><p className="font-bold text-slate-800 truncate">{r.label || 'Regola'}</p><p className="text-xs text-slate-400 truncate">{r.slots.join(', ')} · {r.days.map((d) => DAYS[d]).join(' ')}{r.takeaway ? ' · asporto' : ''}{(r.batch || 1) > 1 ? ` · stesso piatto ${r.batch} giorni` : ''}</p></div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+          </div>
+        )}
       </div>
       {myRules.find((r) => r.id === ruleId) && <RuleEditor personal rule={myRules.find((r) => r.id === ruleId)} onClose={() => setRuleId(null)} onChange={(r) => onChange({ ...member, rules: myRules.map((x) => (x.id === r.id ? r : x)) })} onDelete={() => { onChange({ ...member, rules: myRules.filter((x) => x.id !== ruleId) }); setRuleId(null); }} />}
       {confirm && <Confirm title={`Eliminare ${member.name || 'questa persona'}?`} msg="I menù già pianificati non la contano più." confirmLabel="Elimina" onCancel={() => setConfirm(false)} onConfirm={() => { setConfirm(false); onDelete(); }} />}

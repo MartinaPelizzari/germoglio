@@ -1,3 +1,4 @@
+import { applianceLabel, missingAppliances } from './appliances.js';
 import { eatersOf, mealOf, mealOfItem, slotPeople } from './scale.js';
 import { allergenLabel, recipeAllergens } from './allergens.js';
 import { planViolations } from './dietPlan.js';
@@ -35,6 +36,7 @@ export const mealConstraints = (household, day, slot, eaters) => {
     takeaway: rules.some((r) => r.takeaway),
     avoid: [...new Set(eaters.flatMap((m) => splitList(m.avoid)))],
     intolerances: [...new Set(eaters.flatMap((m) => m.intolerances || []))],
+    appliances: household.appliances, // elettrodomestici di casa (undefined = tutti)
     rules,
     eaters,
   };
@@ -76,6 +78,7 @@ export const hasIntolerance = (recipe, list = []) => list.some((a) => recipeAlle
 
 export const fits = (recipe, c, { ignoreTakeaway = false } = {}) =>
   recipeLevel(recipe) <= c.maxLevel && !containsAvoided(recipe, c.avoid) && !hasIntolerance(recipe, c.intolerances) &&
+  !missingAppliances(recipe, c.appliances).length &&
   (ignoreTakeaway || !c.takeaway || recipe.takeaway);
 
 // Motivi per cui un piatto già nel piano non va bene a qualcuno (per mostrare un avviso)
@@ -93,6 +96,8 @@ export const problemsFor = (recipe, household, day, slot, eaters, item) => {
       if (off.length) out.push(`${m.name}: fuori dal piano (${[...new Set(off)].slice(0, 3).join(', ').toLowerCase()})`);
     }
   }
+  const noTool = recipe.isFood ? [] : missingAppliances(recipe, household.appliances);
+  if (noTool.length) out.push(`richiede ${noTool.map((id) => applianceLabel(id).toLowerCase()).join(', ')}, che non hai`);
   if (rules.some((r) => r.takeaway) && !recipe.takeaway && !recipe.isFood) out.push('non adatta all\'asporto');
   return out;
 };
