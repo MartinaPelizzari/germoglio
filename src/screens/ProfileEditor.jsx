@@ -4,7 +4,8 @@ import PlanSource from '../components/PlanSource.jsx';
 import RuleEditor from '../components/RuleEditor.jsx';
 import { DAYS } from '../lib/dates.js';
 import { MEMBER_COLORS, MEMBER_EMOJIS, isFreeProfile } from '../hooks/data.jsx';
-import { Confirm, Sheet, Avatar, Tabs } from '../components/ui.jsx';
+import { Confirm, Sheet, Avatar, Tabs, Toggle } from '../components/ui.jsx';
+import PlanView from '../components/PlanView.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
 import { DIETS } from '../lib/diet.js';
 import { ALLERGENS } from '../lib/allergens.js';
@@ -14,7 +15,7 @@ import PlanBox from '../components/PlanBox.jsx';
 import { VisibleSlots } from '../components/SlotPicker.jsx';
 import BalanceMode from '../components/BalanceMode.jsx';
 import PlanImport, { mealsFromTexts } from '../components/PlanImport.jsx';
-import { compressImage } from '../lib/image.js';
+import PhotoCropper from '../components/PhotoCropper.jsx';
 
 const MULTS = [0.5, 0.75, 1, 1.25, 1.5, 2];
 
@@ -35,6 +36,8 @@ function PlanImportBlock({ member, onChange }) {
 export default function ProfileEditor({ member, mine, title, intro, onChange, onClaim, onRelease, canClaim = true, onDelete, onClose }) {
   const [tab, setTab] = React.useState('persona');
   const [look, setLook] = React.useState(false);
+  const [planMode, setPlanMode] = React.useState(null); // null: il piano si legge; 'edit': si corregge il testo; 'new': si crea un piano nuovo
+  const [optOpen, setOptOpen] = React.useState(false);
   const [openSlot, setOpenSlot] = React.useState(null);
   const [ruleId, setRuleId] = React.useState(null);
   const myRules = member.rules || [];
@@ -44,7 +47,6 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
     setRuleId(r.id);
   };
   const [confirm, setConfirm] = React.useState(false);
-  const [photoBusy, setPhotoBusy] = React.useState(false);
   const fileRef = React.useRef(null);
   const free = isFreeProfile(member);
 
@@ -52,12 +54,10 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
   const setPlanText = (slot, text) => patchMeal(slot, { planText: text, plan: parseSlotPlan(text) });
   const patchGoal = (id, patch) => onChange({ ...member, goals: member.goals.map((g) => (g.id === id ? { ...g, ...patch } : g)) });
 
-  const pickPhoto = async (e) => {
+  const [cropFile, setCropFile] = React.useState(null);
+  const pickPhoto = (e) => {
     const f = e.target.files?.[0];
-    if (!f) return;
-    setPhotoBusy(true);
-    try { onChange({ ...member, photo: await compressImage(f, 256, 0.8) }); } catch { alert('Non riesco a leggere questa foto.'); }
-    setPhotoBusy(false);
+    if (f) setCropFile(f);
     e.target.value = '';
   };
 
@@ -93,7 +93,6 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
           <div className="flex-1 space-y-2">
             <input className="w-full p-3 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-brand-500 font-bold" value={member.name} onChange={(e) => onChange({ ...member, name: e.target.value })} placeholder="Nome" aria-label="Nome" />
             {member.photo && <button onClick={() => onChange({ ...member, photo: null })} className="text-xs font-bold text-red-500">Togli la foto</button>}
-            {photoBusy && <p className="text-xs text-slate-400">Carico la foto...</p>}
           </div>
         </div>
         <div>
@@ -129,15 +128,57 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
         )}
         {tab === 'piano' && (
           <div className="space-y-6">
+            {!planMode ? (
+              <>
+                <div>
+                  <h4 className="font-display font-bold text-lg text-slate-800">Il tuo piano</h4>
+                  <p className="text-xs text-slate-500">{member.planSource === 'nutritionist' ? 'Piano della nutrizionista, seguito alla lettera.' : member.planSource === 'auto' ? 'Dieta equilibrata calcolata dai tuoi dati.' : 'Nessun piano scelto: le ricette usano le porzioni standard.'}</p>
+                </div>
+                <PlanView member={member} />
+                <div className="space-y-2">
+                  <button onClick={() => setPlanMode('edit')} className="w-full py-3 bg-brand-600 text-white rounded-2xl font-bold active:scale-[0.98]">Modifica il piano</button>
+                  <button onClick={() => setPlanMode('new')} className="w-full py-3 bg-white border border-slate-200 text-slate-700 rounded-2xl font-bold active:scale-[0.98]">Crea un nuovo piano</button>
+                  <p className="text-[11px] text-slate-400">NB: il nuovo piano sostituirà quello attualmente presente.</p>
+                </div>
+                <div className="border border-slate-100 rounded-2xl overflow-hidden">
+                  <button onClick={() => setOptOpen(!optOpen)} aria-expanded={optOpen} className="w-full flex items-center justify-between p-3.5 text-left">
+                    <span className="font-bold text-slate-700">Opzioni del piano</span>
+                    <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${optOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {optOpen && (
+                    <div className="px-3.5 pb-4 space-y-6 border-t border-slate-100 pt-4">
+                      <BalanceMode member={member} onChange={onChange} />
+                      <VisibleSlots member={member} onChange={onChange} />
+                      {member.planSource && <Toggle on={!member.checkinOff} onChange={(v) => onChange({ ...member, checkinOff: !v })} label="Una domanda a settimana su come mi sento" hint="Puoi toglierla quando vuoi" />}
         <div>
-          <h4 className="font-display font-bold text-lg text-slate-800 mb-3">Piano alimentare</h4>
-          <div className="mb-5"><PlanSource member={member} onChange={onChange} /></div>
-          {member.planSource && <label className="flex items-start gap-3 mb-5 text-sm text-slate-700"><input type="checkbox" className="w-5 h-5 mt-0.5 accent-emerald-500" checked={!member.checkinOff} onChange={(e) => onChange({ ...member, checkinOff: !e.target.checked })} /> Una domanda a settimana su come mi sento (la tolgo quando voglio)</label>}
-          <div className="mb-4"><BalanceMode member={member} onChange={onChange} /></div>
-          <div className="mb-5"><VisibleSlots member={member} onChange={onChange} /></div>
-          <p className="text-xs text-slate-400 mb-3">Scrivi cosa può mangiare in ogni pasto, come l'ha scritto la nutrizionista. L'app propone ricette che rispettano il piano e mette le dosi indicate. Esempio: "150 g yogurt oppure 30 g pane".</p>
-          {member.planSource !== 'auto' && <PlanImportBlock member={member} onChange={onChange} />}
+          <p className={label}>Frequenze settimanali (dalla nutrizionista)</p>
+          <div className="space-y-2">
+            {(member.goals || []).map((g) => (
+              <div key={g.id} className="flex items-center gap-2 bg-slate-50 rounded-xl p-2">
+                <select className="bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.mode} onChange={(e) => patchGoal(g.id, { mode: e.target.value })} aria-label="Modalità">{GOAL_MODES.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}</select>
+                <input type="number" inputMode="numeric" min="0" max="21" className="w-12 text-center bg-white rounded-lg p-2 text-sm" value={g.times} onChange={(e) => patchGoal(g.id, { times: Math.max(0, Number(e.target.value) || 0) })} aria-label="Volte a settimana" />
+                <span className="text-xs text-slate-400">volte</span>
+                <select className="flex-1 min-w-0 bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.food} onChange={(e) => patchGoal(g.id, { food: e.target.value })} aria-label="Alimento">{FOOD_TYPES.map((f) => <option key={f.id} value={f.id}>{f.label}</option>)}</select>
+                <button onClick={() => onChange({ ...member, goals: member.goals.filter((x) => x.id !== g.id) })} aria-label="Elimina" className="p-1.5 text-slate-300"><X className="w-4 h-4" /></button>
+              </div>
+            ))}
+            <button onClick={() => onChange({ ...member, goals: [...(member.goals || []), { id: crypto.randomUUID(), food: 'legumi', times: 3, mode: 'min' }] })} className="px-3 py-2 bg-white border border-dashed border-slate-300 rounded-xl text-xs font-bold text-slate-500 flex items-center gap-1.5 active:scale-95"><Plus className="w-3.5 h-3.5" /> Aggiungi frequenza (es. legumi 3 volte)</button>
+          </div>
+        </div>
 
+
+
+                    </div>
+                  )}
+                </div>
+              </>
+            ) : planMode === 'edit' ? (
+              <>
+                <div className="flex items-center justify-between gap-3">
+                  <h4 className="font-display font-bold text-lg text-slate-800">Modifica il piano</h4>
+                  <button onClick={() => setPlanMode(null)} className="px-4 py-2 bg-brand-600 text-white rounded-xl font-bold text-sm active:scale-95">Fatto</button>
+                </div>
+                <p className="text-xs text-slate-400">Scrivi cosa può mangiare in ogni pasto, come l'ha scritto la nutrizionista. L'app propone ricette che rispettano il piano e mette le dosi indicate. Esempio: "150 g yogurt oppure 30 g pane".</p>
           <div className="space-y-2">
             {SLOTS.map((slot) => {
               const meal = mealOf(member, slot);
@@ -166,24 +207,19 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
               );
             })}
           </div>
-        </div>
 
-        <div>
-          <p className={label}>Frequenze settimanali (dalla nutrizionista)</p>
-          <div className="space-y-2">
-            {(member.goals || []).map((g) => (
-              <div key={g.id} className="flex items-center gap-2 bg-slate-50 rounded-xl p-2">
-                <select className="bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.mode} onChange={(e) => patchGoal(g.id, { mode: e.target.value })} aria-label="Modalità">{GOAL_MODES.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}</select>
-                <input type="number" inputMode="numeric" min="0" max="21" className="w-12 text-center bg-white rounded-lg p-2 text-sm" value={g.times} onChange={(e) => patchGoal(g.id, { times: Math.max(0, Number(e.target.value) || 0) })} aria-label="Volte a settimana" />
-                <span className="text-xs text-slate-400">volte</span>
-                <select className="flex-1 min-w-0 bg-white rounded-lg p-2 text-xs font-bold text-slate-600" value={g.food} onChange={(e) => patchGoal(g.id, { food: e.target.value })} aria-label="Alimento">{FOOD_TYPES.map((f) => <option key={f.id} value={f.id}>{f.label}</option>)}</select>
-                <button onClick={() => onChange({ ...member, goals: member.goals.filter((x) => x.id !== g.id) })} aria-label="Elimina" className="p-1.5 text-slate-300"><X className="w-4 h-4" /></button>
-              </div>
-            ))}
-            <button onClick={() => onChange({ ...member, goals: [...(member.goals || []), { id: crypto.randomUUID(), food: 'legumi', times: 3, mode: 'min' }] })} className="px-3 py-2 bg-white border border-dashed border-slate-300 rounded-xl text-xs font-bold text-slate-500 flex items-center gap-1.5 active:scale-95"><Plus className="w-3.5 h-3.5" /> Aggiungi frequenza (es. legumi 3 volte)</button>
-          </div>
-        </div>
-
+              </>
+            ) : (
+              <>
+                <div className="flex items-center justify-between gap-3">
+                  <h4 className="font-display font-bold text-lg text-slate-800">Nuovo piano</h4>
+                  <button onClick={() => setPlanMode(null)} className="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm active:scale-95">Indietro</button>
+                </div>
+                <p className="text-sm text-amber-900 bg-amber-50 rounded-2xl p-3">NB: il nuovo piano sostituirà quello attualmente presente.</p>
+                <PlanSource member={member} onChange={onChange} />
+                {member.planSource !== 'auto' && <PlanImportBlock member={member} onChange={onChange} />}
+              </>
+            )}
           </div>
         )}
         {tab === 'regole' && (
@@ -208,6 +244,7 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
         )}
       </div>
       {myRules.find((r) => r.id === ruleId) && <RuleEditor personal rule={myRules.find((r) => r.id === ruleId)} onClose={() => setRuleId(null)} onChange={(r) => onChange({ ...member, rules: myRules.map((x) => (x.id === r.id ? r : x)) })} onDelete={() => { onChange({ ...member, rules: myRules.filter((x) => x.id !== ruleId) }); setRuleId(null); }} />}
+      {cropFile && <PhotoCropper file={cropFile} onCancel={() => setCropFile(null)} onDone={(photo) => { onChange({ ...member, photo }); setCropFile(null); }} />}
       {confirm && <Confirm title={`Eliminare ${member.name || 'questa persona'}?`} msg="I menù già pianificati non la contano più." confirmLabel="Elimina" onCancel={() => setConfirm(false)} onConfirm={() => { setConfirm(false); onDelete(); }} />}
     </Sheet>
   );

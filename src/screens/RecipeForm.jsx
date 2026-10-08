@@ -2,7 +2,7 @@ import React from 'react';
 import { Camera, Plus, Trash2, X, Pencil } from 'lucide-react';
 import { DEFAULT_EMOJI, FOOD_EMOJIS } from '../lib/format.js';
 import { GROUPS, UNITS, guessGroup } from '../lib/groups.js';
-import { compressImage } from '../lib/image.js';
+import PhotoCropper from '../components/PhotoCropper.jsx';
 
 export const emptyRecipe = () => ({
   id: null, own: true, title: '', time: 'media', minutes: '', diet: 'vegan', takeaway: false, emoji: null, photo: null,
@@ -34,19 +34,16 @@ export const fromDraft = (d) => {
 
 export default function RecipeForm({ data, onChange, onClose, onSave }) {
   const [emojiOpen, setEmojiOpen] = React.useState(false);
-  const [photoBusy, setPhotoBusy] = React.useState(false);
   const fileRef = React.useRef(null);
 
   const setIng = (i, patch) => onChange({ ...data, ingredients: data.ingredients.map((x, k) => (k === i ? { ...x, ...patch } : x)) });
   const input = 'w-full p-3 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-brand-500';
   const label = 'block text-xs font-bold text-slate-400 uppercase mb-2';
 
-  const pickPhoto = async (e) => {
+  const [cropFile, setCropFile] = React.useState(null);
+  const pickPhoto = (e) => {
     const f = e.target.files?.[0];
-    if (!f) return;
-    setPhotoBusy(true);
-    try { onChange({ ...data, photo: await compressImage(f) }); } catch { alert('Non riesco a leggere questa foto.'); }
-    setPhotoBusy(false);
+    if (f) setCropFile(f);
     e.target.value = '';
   };
 
@@ -62,7 +59,7 @@ export default function RecipeForm({ data, onChange, onClose, onSave }) {
           {data.photo ? <img src={data.photo} alt="" className="w-full h-full object-cover" /> : <button onClick={() => setEmojiOpen(!emojiOpen)} aria-label="Scegli emoji" className="text-7xl relative">{data.emoji || DEFAULT_EMOJI}<span className="absolute -bottom-1 -right-3 bg-white p-1.5 rounded-full shadow"><Pencil className="w-3.5 h-3.5 text-slate-500" /></span></button>}
           <div className="absolute bottom-3 right-3 flex gap-2">
             {data.photo && <button onClick={() => onChange({ ...data, photo: null })} className="px-3 py-2 bg-white/90 rounded-full text-xs font-bold text-red-500 active:scale-95">Togli foto</button>}
-            <button onClick={() => fileRef.current?.click()} disabled={photoBusy} className="px-4 py-2 bg-white/90 rounded-full text-sm font-bold text-brand-700 flex items-center gap-2 active:scale-95"><Camera className="w-4 h-4" /> {photoBusy ? '...' : data.photo ? 'Cambia' : 'Foto del piatto'}</button>
+            <button onClick={() => fileRef.current?.click()} className="px-4 py-2 bg-white/90 rounded-full text-sm font-bold text-brand-700 flex items-center gap-2 active:scale-95"><Camera className="w-4 h-4" /> {data.photo ? 'Cambia' : 'Foto del piatto'}</button>
           </div>
           <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={pickPhoto} />
         </div>
@@ -113,6 +110,7 @@ export default function RecipeForm({ data, onChange, onClose, onSave }) {
         <textarea className={`${input} min-h-[140px]`} placeholder="Descrivi i passaggi..." value={data.stepsText} onChange={(e) => onChange({ ...data, stepsText: e.target.value })} aria-label="Procedimento" />
       </div>
       <button onClick={onSave} className="w-full py-4 bg-brand-600 text-white font-display font-bold text-lg rounded-2xl shadow-glow active:scale-95">{data.id ? 'Salva modifiche' : 'Aggiungi ricetta'}</button>
+      {cropFile && <PhotoCropper file={cropFile} aspect={4 / 3} out={800} quality={0.72} title="Ritaglia la foto del piatto" onCancel={() => setCropFile(null)} onDone={(photo) => { onChange({ ...data, photo }); setCropFile(null); }} />}
     </div>
   );
 }

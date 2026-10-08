@@ -48,7 +48,9 @@ export const slotPeople = (household, slot, data) => {
 export const eatersOf = (item, household, slot, data) => {
   const all = [...(household?.members || []), ...(data?.guests || [])];
   const ids = Array.isArray(item?.eaters) ? item.eaters : slotPeople(household, slot, data).map((m) => m.id);
-  return all.filter((m) => ids.includes(m.id));
+  // chi nel profilo non mangia più questo pasto non lo mangia nemmeno nei menu già fatti (le impostazioni valgono subito, senza rigenerare)
+  const guests = data?.guests || [];
+  return all.filter((m) => ids.includes(m.id) && (guests.includes(m) || mealOf(m, slot).eats));
 };
 
 const UNIT_ALIAS = { gr: 'g', g: 'g', kg: 'kg', l: 'l', ml: 'ml', pz: 'pz', 'q.b.': 'q.b.', qb: 'q.b.', fetta: 'pz', fette: 'pz' };

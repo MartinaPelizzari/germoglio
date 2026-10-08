@@ -22,4 +22,5 @@ h1, h2, h3, h4, .font-display { font-family: 'Outfit Variable', Outfit, sans-ser
 :root { --safe-top: env(safe-area-inset-top, 0px); --safe-bottom: env(safe-area-inset-bottom, 0px); }
 .pt-safe { padding-top: var(--safe-top); }
 .pb-safe { padding-bottom: var(--safe-bottom); }
-input, select, textarea { font-size: 16px; } /* evita lo zoom automatico su iPhone */
+/* iPhone zooma la pagina quando si tocca un campo con testo sotto i 16 px: le classi di Tailwind (text-sm, text-xs) lo riducevano, quindi qui si forza */
+input, select, textarea { font-size: 16px !important; }

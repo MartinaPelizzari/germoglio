@@ -1,12 +1,16 @@
 import React from 'react';
 import { Heart, Search, SlidersHorizontal } from 'lucide-react';
 import { useData } from '../hooks/data.jsx';
-import { DietBadge, RecipeThumb } from '../components/ui.jsx';
+import { DietBadge, RecipeThumb, Sheet } from '../components/ui.jsx';
 import RecipeDetail from './RecipeDetail.jsx';
 import { timeLabel } from '../lib/format.js';
 import { ALLERGENS, recipeAllergens } from '../lib/allergens.js';
 import { DIETS, recipeLevel } from '../lib/diet.js';
 import { FOOD_TYPES, recipeFoods } from '../lib/goals.js';
+
+const TIME_LABEL = { breve: 'Breve', media: 'Media', lunga: 'Lunga' };
+const DIET_FILTER_LABEL = { vegan: 'Per vegani', vegetarian: 'Per vegetariani', pescetarian: 'Per pescetariani', omnivore: 'Per onnivori', asporto: 'D\'asporto' };
+const ORIGIN_LABEL = { preferite: 'Preferite', mie: 'Create da me', base: 'Precaricate' };
 
 export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, onDelete }) {
   const { recipes, favorites, toggleFavorite } = useData();
@@ -33,7 +37,10 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
 
   const activeCount = (time !== 'Tutte') + (diet !== 'Tutte') + (origin !== 'tutte') + contains.length + free.length;
   const reset = () => set({ time: 'Tutte', diet: 'Tutte', origin: 'tutte', free: [], contains: [] });
-  const pill = (active) => `px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all ${active ? 'bg-brand-600 text-white' : 'bg-white text-slate-500 shadow-sm'}`;
+  const tag = 'px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap bg-brand-50 text-brand-700 active:scale-95';
+  const fl = 'block text-[10px] font-bold text-slate-400 uppercase mb-2';
+  const selCls = 'w-full p-3 bg-slate-50 rounded-xl border-none focus:ring-2 focus:ring-brand-500 font-semibold text-slate-700';
+  const pill = (active) => `px-3.5 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all ${active ? 'bg-brand-600 text-white' : 'bg-slate-50 text-slate-500'}`;
 
   return (
     <div className="animate-fade-in">
@@ -45,32 +52,13 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
           </div>
           <button onClick={() => setShowFilters(!showFilters)} aria-label={`Filtri${activeCount ? `, ${activeCount} attivi` : ''}`} aria-expanded={showFilters} className={`relative p-3 rounded-2xl ${showFilters ? 'bg-brand-500 text-white' : 'bg-white text-slate-400 shadow-soft'}`}><SlidersHorizontal className="w-6 h-6" />{activeCount > 0 && <span className="absolute -top-1 -right-1 min-w-[1.25rem] h-5 px-1 rounded-full bg-brand-600 text-white text-[11px] font-bold flex items-center justify-center">{activeCount}</span>}</button>
         </div>
-        {showFilters && (
-          <div className="space-y-2 px-1 animate-fade-in">
-            <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
-              <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0 w-14">Tempo</span>
-              {[['Tutte', 'Ogni tempo'], ['breve', 'Breve'], ['media', 'Media'], ['lunga', 'Lunga']].map(([v, l]) => <button key={v} onClick={() => set({ time: v })} className={pill(time === v)}>{l}</button>)}
-            </div>
-            <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
-              <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0 w-14">Adatte a</span>
-              {[['Tutte', 'Tutti'], ['vegan', 'Vegani'], ['vegetarian', 'Vegetariani'], ['pescetarian', 'Pescetariani'], ['omnivore', 'Onnivori'], ['asporto', 'Asporto']].map(([v, l]) => <button key={v} onClick={() => set({ diet: v })} className={pill(diet === v)}>{l}</button>)}
-            </div>
-            <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
-              <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0 w-14">Quali</span>
-              {[['tutte', 'Ovunque'], ['preferite', 'Preferite'], ['mie', 'Le mie'], ['base', 'Precaricate']].map(([v, l]) => <button key={v} onClick={() => set({ origin: v })} className={pill(origin === v)}>{l}</button>)}
-            </div>
-            <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
-              <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0 w-14">Con</span>
-              {FOOD_TYPES.filter((f) => ['legumi', 'pesce', 'carne-bianca', 'carne-rossa', 'salumi', 'uova', 'formaggi', 'frutta-secca'].includes(f.id)).map((f) => <button key={f.id} onClick={() => set({ contains: contains.includes(f.id) ? contains.filter((x) => x !== f.id) : [...contains, f.id] })} className={pill(contains.includes(f.id))}>{f.label}</button>)}
-            </div>
-            <div className="flex gap-2 overflow-x-auto no-scrollbar items-center">
-              <span className="text-[10px] font-bold text-slate-400 uppercase shrink-0 w-14">Senza</span>
-              {ALLERGENS.map((a) => <button key={a.id} onClick={() => set({ free: free.includes(a.id) ? free.filter((x) => x !== a.id) : [...free, a.id] })} className={pill(free.includes(a.id))}>{a.label}</button>)}
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-[11px] text-slate-400">{free.length > 0 ? 'Stima automatica dagli ingredienti: controlla sempre le etichette.' : ''}</p>
-              {activeCount > 0 && <button onClick={reset} className="text-xs font-bold text-brand-700 active:scale-95">Azzera i filtri</button>}
-            </div>
+        {activeCount > 0 && (
+          <div className="flex gap-1.5 overflow-x-auto no-scrollbar px-1" aria-label="Filtri attivi">
+            {time !== 'Tutte' && <button onClick={() => set({ time: 'Tutte' })} className={tag}>{TIME_LABEL[time]} ✕</button>}
+            {diet !== 'Tutte' && <button onClick={() => set({ diet: 'Tutte' })} className={tag}>{DIET_FILTER_LABEL[diet]} ✕</button>}
+            {origin !== 'tutte' && <button onClick={() => set({ origin: 'tutte' })} className={tag}>{ORIGIN_LABEL[origin]} ✕</button>}
+            {contains.map((f) => <button key={f} onClick={() => set({ contains: contains.filter((x) => x !== f) })} className={tag}>Con {FOOD_TYPES.find((t) => t.id === f)?.label.toLowerCase()} ✕</button>)}
+            {free.map((a) => <button key={a} onClick={() => set({ free: free.filter((x) => x !== a) })} className={tag}>Senza {ALLERGENS.find((t) => t.id === a)?.label.toLowerCase()} ✕</button>)}
           </div>
         )}
       </div>
@@ -92,6 +80,33 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
         {list.length === 0 && <p className="text-center text-slate-400 py-12">Nessuna ricetta trovata</p>}
       </div>
 
+      {showFilters && (
+        <Sheet title="Filtri" onClose={() => setShowFilters(false)}>
+          <div className="p-5 space-y-5">
+            <div className="grid grid-cols-1 gap-4">
+              <label className="block"><span className={fl}>Tempo</span>
+                <select className={selCls} value={time} onChange={(e) => set({ time: e.target.value })}>{Object.entries({ Tutte: 'Qualsiasi', ...TIME_LABEL }).map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>
+              <label className="block"><span className={fl}>Adatte a</span>
+                <select className={selCls} value={diet} onChange={(e) => set({ diet: e.target.value })}>{Object.entries({ Tutte: 'Tutte le diete', ...DIET_FILTER_LABEL }).map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>
+              <label className="block"><span className={fl}>Quali ricette</span>
+                <select className={selCls} value={origin} onChange={(e) => set({ origin: e.target.value })}>{Object.entries({ tutte: 'Tutte', ...ORIGIN_LABEL }).map(([v, l]) => <option key={v} value={v}>{l}</option>)}</select></label>
+            </div>
+            <div>
+              <p className={fl}>Con (anche più di uno)</p>
+              <div className="flex flex-wrap gap-2">{FOOD_TYPES.filter((f) => ['legumi', 'pesce', 'carne-bianca', 'carne-rossa', 'salumi', 'uova', 'formaggi', 'frutta-secca'].includes(f.id)).map((f) => <button key={f.id} aria-pressed={contains.includes(f.id)} onClick={() => set({ contains: contains.includes(f.id) ? contains.filter((x) => x !== f.id) : [...contains, f.id] })} className={pill(contains.includes(f.id))}>{f.label}</button>)}</div>
+            </div>
+            <div>
+              <p className={fl}>Senza</p>
+              <div className="flex flex-wrap gap-2">{ALLERGENS.map((a) => <button key={a.id} aria-pressed={free.includes(a.id)} onClick={() => set({ free: free.includes(a.id) ? free.filter((x) => x !== a.id) : [...free, a.id] })} className={pill(free.includes(a.id))}>{a.label}</button>)}</div>
+              {free.length > 0 && <p className="text-[11px] text-slate-400 mt-2">Stima automatica dagli ingredienti: controlla sempre le etichette.</p>}
+            </div>
+            <div className="grid grid-cols-2 gap-2 pt-1">
+              <button onClick={reset} disabled={!activeCount} className="py-3 bg-slate-100 text-slate-600 font-bold rounded-2xl disabled:opacity-40 active:scale-95">Azzera</button>
+              <button onClick={() => setShowFilters(false)} className="py-3 bg-brand-600 text-white font-bold rounded-2xl active:scale-95">Mostra {list.length} ricette</button>
+            </div>
+          </div>
+        </Sheet>
+      )}
       {sel && (
         <RecipeDetail recipe={sel} onClose={() => setSel(null)}
           onEdit={() => { const r = sel; setSel(null); onEdit(r); }}

@@ -7,7 +7,7 @@ import RecipeDetail from './RecipeDetail.jsx';
 import GuestSheet from './GuestSheet.jsx';
 import AdaptSheet from './AdaptSheet.jsx';
 import { planReport } from '../lib/adapt.js';
-import { HORIZON_WEEKS, useRegenerateWeek } from '../hooks/useAutoWeeks.js';
+import { HORIZON_WEEKS, householdSignature, useRegenerateWeek } from '../hooks/useAutoWeeks.js';
 import { DAYS, addWeeks, dayNumber, getWeekId, weekRangeLabel } from '../lib/dates.js';
 import { SLOTS, eatersOf, formatQty, mealOf, mealOfItem, scaleRecipe, slotPeople } from '../lib/scale.js';
 import { consumedKeys, dayInstances, isDayBalanced, movable, remainingInstances } from '../lib/day.js';
@@ -43,6 +43,8 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const [adapt, setAdapt] = React.useState(null); // { recipe, person, slot, item }: adattamento di una ricetta al piano
   const [dayOpen, setDayOpen] = React.useState(true);
   const [joinFor, setJoinFor] = React.useState(null); // pasto individuale a cui aggiungere familiari
+  const [eatFor, setEatFor] = React.useState(null); // { slot, index }: chi mangia un piatto
+  const [undo, setUndo] = React.useState(null); // { slot, items }: menu precedente, per annullare una nuova proposta
   const [whoFor, setWhoFor] = React.useState(null); // pasto di cui si gestiscono chi mangia, ospiti e modalità
   const [modeFor, setModeFor] = React.useState(null); // { slot, mode }: cambio tra pasto condiviso e individuale
   const recency = React.useMemo(() => buildRecency(plans, weekId), [plans, weekId]);
@@ -50,7 +52,8 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   // la settimana non c'è ancora: l'app la sta preparando in automatico (solo per le settimane da oggi in avanti, entro l'orizzonte)
   const preparing = !Object.keys(plan.days || {}).length && weekId >= getWeekId(new Date()) && weekId <= getWeekId(addWeeks(new Date(), HORIZON_WEEKS - 1)) && !!me;
   const data = (slot) => plan.days?.[dayIndex]?.[slot];
-  const items = (slot) => data(slot)?.items || [];
+  // un piatto che non ha più nessuno che lo mangia (per esempio perché il profilo di chi lo mangiava non prevede più questo pasto) non si mostra
+  const items = (slot) => (data(slot)?.items || []).filter((it) => !household.members.length || eatersOf(it, household, slot, data(slot)).length > 0);
   const people = (slot) => slotPeople(household, slot, data(slot));
   const resolve = (item) => resolveItem(item, recipeMap);
   const eatersFor = (item, slot) => eatersOf(item, household, slot, data(slot));
@@ -101,8 +104,10 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     if (!out.length) return setNotice(`Nessuna proposta adatta per ${slot.toLowerCase()}. Controlla dieta, piano e regole in Famiglia.`);
     setNotice(relaxed ? "Non ho trovato ricette d'asporto adatte: ne ho proposta una normale." : '');
     const mineIds = new Set(mine.flatMap((c) => c.eaters.map((e) => e.id)));
+    const before = data(slot)?.items || [];
     const keep = shared ? [] : items(slot).filter((it) => !eatersFor(it, slot).some((e) => mineIds.has(e.id)));
     save(slot, [...keep, ...out]);
+    if (before.length) setUndo({ slot, items: before });
   };
 
   // Passa un singolo pasto di questo giorno da condiviso a individuale (o viceversa) e ricalcola i menu di tutti
@@ -214,19 +219,28 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const eaters = eatersFor(item, slot);
     const problems = problemsFor(recipe, household, dayIndex, slot, eaters, item);
     const doses = recipe.isFood ? eaters.map((e) => { const q = scaleRecipe(recipe, mealOfItem(e, slot, item))[0]; return `${personal ? '' : `${e.name} `}${formatQty(q.qty, q.unit)}`.trim(); }) : [];
+    const many = people(slot).length + (data(slot)?.guests || []).length > 1 && (isSharedSlot(household, slot, data(slot)) || eaters.length > 1);
     return (
       <div key={item.instanceId || index} className="bg-brand-50 border border-brand-100 rounded-2xl p-3 flex flex-col gap-2 shadow-sm animate-fade-in">
-        <div className={`flex items-center gap-3 ${recipe.isFood ? '' : 'cursor-pointer'}`} onClick={recipe.isFood ? undefined : () => setView({ recipe, slot, item })} role={recipe.isFood ? undefined : 'button'} aria-label={recipe.isFood ? undefined : `Dettagli: ${recipe.title}`}>
-          <RecipeThumb recipe={recipe} className="w-14 h-14 rounded-xl text-2xl" />
-          <div className="flex-1 min-w-0">
-            <h4 className="font-display font-bold text-slate-800 text-sm leading-snug line-clamp-2">{recipe.title}</h4>
-            {recipe.isFood
-              ? <span className="text-[11px] text-slate-500">Alimento dal piano: {doses.join(' · ')}</span>
-              : <span className="flex items-center gap-1 text-[10px] text-slate-500 mt-0.5"><Clock className="w-3 h-3" /> {timeLabel(recipe)}{recipe.takeaway ? ' · asporto' : ''}</span>}
-            {item.leftoverOf && <span className="inline-block mt-1 text-[10px] font-bold text-brand-700 bg-white rounded-full px-2 py-0.5">Avanzi di {DAYS[item.leftoverDay] ?? 'un altro giorno'}</span>}
-            {(() => { const h = prepHint(plan.days, dayIndex, slot, item, recipeMap); return h ? <span className="block mt-1 text-[10px] text-slate-500">{h}</span> : null; })()}
-            {favorites.has(recipe.id) && <Heart className="inline w-3 h-3 ml-1 fill-rose-500 text-rose-500" />}
+        <div className="flex items-start gap-1">
+          <div className={`flex-1 min-w-0 flex items-center gap-3 ${recipe.isFood ? '' : 'cursor-pointer'}`} onClick={recipe.isFood ? undefined : () => setView({ recipe, slot, item })} role={recipe.isFood ? undefined : 'button'} aria-label={recipe.isFood ? undefined : `Dettagli: ${recipe.title}`}>
+            <RecipeThumb recipe={recipe} className="w-14 h-14 rounded-xl text-2xl" />
+            <div className="flex-1 min-w-0">
+              <h4 className="font-display font-bold text-slate-800 text-sm leading-snug line-clamp-2">{recipe.title}{favorites.has(recipe.id) && <Heart className="inline w-3 h-3 ml-1 fill-rose-500 text-rose-500" />}</h4>
+              {recipe.isFood
+                ? <span className="text-[11px] text-slate-500">Alimento dal piano: {doses.join(' · ')}</span>
+                : <span className="flex items-center gap-1 text-[10px] text-slate-500 mt-0.5"><Clock className="w-3 h-3" /> {timeLabel(recipe)}{recipe.takeaway ? ' · asporto' : ''}</span>}
+              {item.leftoverOf && <span className="inline-block mt-1 text-[10px] font-bold text-brand-700 bg-white rounded-full px-2 py-0.5">Avanzi di {DAYS[item.leftoverDay] ?? 'un altro giorno'}</span>}
+              {(() => { const h = prepHint(plan.days, dayIndex, slot, item, recipeMap); return h ? <span className="block mt-1 text-[10px] text-slate-500">{h}</span> : null; })()}
+              {many && eaters.length > 0 && (
+                <span className="flex items-center gap-1 mt-1.5" aria-label={`Lo mangiano: ${eaters.map((e) => e.name).join(', ')}`}>
+                  {eaters.map((e) => <Avatar key={e.id} member={e} size="w-5 h-5 text-[10px]" title={e.name} />)}
+                  {eaters.length === people(slot).length + (data(slot)?.guests || []).length ? <span className="text-[10px] text-slate-400 ml-0.5">tutti</span> : null}
+                </span>
+              )}
+            </div>
           </div>
+          <button onClick={() => setMenu({ slot, index, recipe })} aria-label={`Opzioni: ${recipe.title}`} className="text-slate-400 p-2 -mr-1 rounded-xl active:scale-90 shrink-0"><MoreHorizontal className="w-5 h-5" /></button>
         </div>
         {problems.length > 0 && (
           <div className="text-[11px] text-amber-700 bg-amber-50 rounded-lg px-2 py-1.5 space-y-1">
@@ -234,15 +248,6 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
             {!recipe.isFood && adaptTarget(recipe, slot, eaters, item) && <button onClick={() => setAdapt({ recipe, person: adaptTarget(recipe, slot, eaters, item), slot, item })} className="font-bold underline">Perché? Adatta al piano</button>}
           </div>
         )}
-        <div className="flex justify-between items-center">
-          <div className="flex gap-1.5" role="group" aria-label="Chi lo mangia">
-            {[...household.members, ...(data(slot)?.guests || [])].filter((m) => (mineOnly(slot) ? eaters.some((e) => e.id === m.id) : people(slot).some((p) => p.id === m.id) || eaters.some((e) => e.id === m.id))).map((m) => {
-              const on = eaters.some((e) => e.id === m.id);
-              return <Avatar key={m.id} member={m} active={on} onClick={() => toggleEater(slot, index, m.id)} title={`${m.name}: ${on ? 'mangia' : 'non mangia'}`} />;
-            })}
-          </div>
-          <button onClick={() => setMenu({ slot, index, recipe })} aria-label="Opzioni" className="text-slate-400 p-2 rounded-xl active:scale-90"><MoreHorizontal className="w-5 h-5" /></button>
-        </div>
       </div>
     );
   };
@@ -303,8 +308,23 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           {(plan.problems || []).filter((x) => x.day === -1).map((x, i) => <p key={i}>{x.msg}</p>)}
         </div>
       )}
+      {plan.auto === false && plan.sig && plan.sig !== householdSignature(household) && regen !== 'busy' && (
+        <div className="text-xs text-slate-600 bg-white shadow-soft p-3 rounded-2xl flex items-center justify-between gap-3" role="status">
+          <span>Dopo le tue modifiche a questa settimana sono cambiate delle impostazioni: i pasti già fatti le rispettano solo in parte.</span>
+          <button onClick={() => setRegen('confirm')} className="shrink-0 px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 font-bold active:scale-95">Aggiorna</button>
+        </div>
+      )}
       {preparing && <p className="text-sm text-brand-800 bg-brand-50 p-3 rounded-2xl">Sto preparando i pasti di questa settimana: ci vuole qualche secondo.</p>}
       {notice && <p className="text-sm text-amber-700 bg-amber-50 p-3 rounded-2xl">{notice}</p>}
+      {undo && (
+        <div role="status" className="flex items-center justify-between gap-3 text-sm text-slate-700 bg-white shadow-soft p-3 rounded-2xl">
+          <span>Ho cambiato il menu di {undo.slot.toLowerCase()}.</span>
+          <span className="flex items-center gap-1 shrink-0">
+            <button onClick={() => { save(undo.slot, undo.items); setUndo(null); }} className="px-3 py-1.5 rounded-full bg-brand-50 text-brand-700 font-bold text-xs active:scale-95">Annulla</button>
+            <button onClick={() => setUndo(null)} aria-label="Chiudi" className="p-1.5 text-slate-400">✕</button>
+          </span>
+        </div>
+      )}
 
       <div className="space-y-4">
         {visibleSlots.map((slot) => {
@@ -313,12 +333,9 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           const menus = menusOf(slot);
           return (
             <div key={slot} className="bg-white rounded-[24px] p-4 shadow-soft">
-              <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center justify-between mb-2 min-h-[2.25rem]">
                 <span className="text-xs font-bold text-brand-600 uppercase tracking-wider">{slot}</span>
-                <div className="flex items-center gap-2">
-                  <button onClick={() => proposeSlot(slot)} aria-label={`Proponi ${slot}`} className="px-3 py-2 bg-brand-50 rounded-full text-brand-700 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Proponi</button>
-                  <button onClick={() => setPicker({ slot, action: 'add' })} aria-label={`Aggiungi a ${slot}`} className="w-9 h-9 bg-slate-50 text-slate-500 rounded-full flex items-center justify-center active:scale-90"><Plus className="w-5 h-5" /></button>
-                </div>
+                {items(slot).length > 0 && <button onClick={() => proposeSlot(slot)} aria-label={`Nuova proposta per ${slot}`} className="px-3 py-2 bg-brand-50 rounded-full text-brand-700 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Nuova proposta</button>}
               </div>
               {(() => {
                 const sh = isSharedSlot(household, slot, data(slot));
@@ -343,7 +360,15 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                 {items(slot).length === 0 && data(slot)?.covered
                   ? <div className="rounded-2xl bg-slate-50 p-4 text-center text-slate-400 text-xs font-medium">Già coperto dal resto della giornata: hai mangiato qui i suoi alimenti in un altro pasto.</div>
                   : items(slot).length === 0
-                  ? <div onClick={() => proposeSlot(slot)} className="border-2 border-dashed border-slate-100 rounded-2xl p-4 text-center text-slate-400 text-xs font-medium cursor-pointer active:scale-[0.98]">Tocca per una proposta, o usa + per scegliere tu</div>
+                  ? (
+                    <div className="rounded-2xl bg-slate-50 p-4 text-center space-y-3">
+                      <p className="text-xs text-slate-400">Nessun piatto in questo pasto</p>
+                      <div className="flex gap-2 justify-center">
+                        <button onClick={() => proposeSlot(slot)} className="px-4 py-2.5 bg-brand-600 text-white rounded-full text-sm font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Proponi un menu</button>
+                        <button onClick={() => setPicker({ slot, action: 'add' })} className="px-4 py-2.5 bg-white text-slate-600 rounded-full text-sm font-bold active:scale-95">Scegli tu</button>
+                      </div>
+                    </div>
+                  )
                   : menus.map((mn, k) => (
                     <div key={k} className="space-y-2">
                       {menus.length > 1 && !personal && (
@@ -354,6 +379,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                       {mn.list.map(([it, i]) => renderItem(it, slot, i))}
                     </div>
                   ))}
+                {items(slot).length > 0 && <button onClick={() => setPicker({ slot, action: 'add' })} aria-label={`Aggiungi un piatto a ${slot}`} className="w-full py-2.5 border-2 border-dashed border-slate-100 rounded-2xl text-xs font-bold text-slate-400 flex items-center justify-center gap-1 active:scale-[0.98]"><Plus className="w-4 h-4" /> Aggiungi un piatto</button>}
               </div>
             </div>
           );
@@ -452,6 +478,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         <Sheet title={menu.recipe.title} onClose={() => setMenu(null)}>
           <div className="p-5 space-y-3">
             {!menu.recipe.isFood && <button onClick={() => { swap(menu.slot, menu.index); setMenu(null); }} className="w-full p-4 bg-brand-50 rounded-2xl flex items-center gap-4 text-brand-700 font-bold active:scale-[0.98]"><RotateCw className="w-6 h-6" /> Cambia a caso</button>}
+            {people(menu.slot).length + (data(menu.slot)?.guests || []).length > 1 && <button onClick={() => { setEatFor({ slot: menu.slot, index: menu.index }); setMenu(null); }} className="w-full p-4 bg-slate-50 rounded-2xl flex items-center gap-4 text-slate-700 font-bold active:scale-[0.98]"><Users className="w-6 h-6" /> Chi lo mangia</button>}
             <button onClick={() => { setPicker({ slot: menu.slot, action: 'replace', index: menu.index }); setMenu(null); }} className="w-full p-4 bg-slate-50 rounded-2xl flex items-center gap-4 text-slate-700 font-bold active:scale-[0.98]"><Search className="w-6 h-6" /> Scegli tu</button>
             <button onClick={() => { setLeftover({ slot: menu.slot, item: items(menu.slot)[menu.index], targets: [], targetSlot: menu.slot }); setMenu(null); }} className="w-full p-4 bg-slate-50 rounded-2xl flex items-center gap-4 text-slate-700 font-bold active:scale-[0.98]"><CopyPlus className="w-6 h-6" /> Riporta come avanzo</button>
             <button onClick={() => { remove(menu.slot, menu.index); setMenu(null); }} className="w-full p-4 bg-red-50 rounded-2xl flex items-center gap-4 text-red-600 font-bold active:scale-[0.98]"><Trash2 className="w-6 h-6" /> Rimuovi dal piano</button>
@@ -476,6 +503,28 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
           </div>
         </Sheet>
       )}
+      {eatFor && (() => {
+        const list = items(eatFor.slot);
+        const it = list[eatFor.index];
+        if (!it) return null;
+        const cur = eatersFor(it, eatFor.slot).map((m) => m.id);
+        const rec = resolve(it);
+        return (
+          <Sheet title="Chi lo mangia" onClose={() => setEatFor(null)}>
+            <div className="p-5 space-y-3">
+              <p className="text-sm text-slate-500">{rec?.title}. Togli chi non lo mangia: la spesa e le dosi si aggiornano.</p>
+              {[...household.members.filter((m) => people(eatFor.slot).some((p) => p.id === m.id) || cur.includes(m.id)), ...(data(eatFor.slot)?.guests || [])].map((m) => {
+                const on = cur.includes(m.id);
+                return (
+                  <button key={m.id} role="switch" aria-checked={on} onClick={() => toggleEater(eatFor.slot, eatFor.index, m.id)} className="w-full flex items-center gap-3 p-2 rounded-2xl bg-slate-50 text-left active:scale-[0.99]">
+                    <Avatar member={m} size="w-9 h-9 text-lg" active={on} /><span className={`flex-1 font-bold ${on ? 'text-slate-700' : 'text-slate-300'}`}>{m.name}</span><span className="text-xs font-bold text-slate-400">{on ? 'Lo mangia' : 'No'}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </Sheet>
+        );
+      })()}
       {whoFor && (() => {
         const slot = whoFor;
         const sh = isSharedSlot(household, slot, data(slot));

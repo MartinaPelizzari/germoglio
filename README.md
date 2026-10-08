@@ -195,3 +195,13 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - **Aggiungi alla lista** (in alto nella Spesa): prodotti che non vengono dal menu, per esempio il detersivo. Senza quantità restano "q.b." e compaiono nella sezione "Altro da comprare" della settimana.
 - **Ne ho già…** (sotto ogni voce): si scrive quanta se ne ha in casa. Con 500 g di ceci cotti e 650 g necessari, in lista restano 150 g; con 650 g o più la voce passa in "già in dispensa", da dove si può correggere. L'inserimento sostituisce la scorta di quell'ingrediente (non la somma) e toglie eventuali doppioni. "Cosa ho in casa" (la dispensa) mostra e modifica le stesse scorte. Pezzi e grammi si convertono col peso medio del pezzo, se noto (2 uova ≈ 100 g). Prova: `node scripts/selftest-shopping.mjs`.
 - Il dettaglio ricetta raggruppa Modifica, Salva una copia ed Elimina in un menu "…" (l'eliminazione non è più accanto ai preferiti).
+
+## Piano leggibile, filtri, impostazioni subito valide, Planner più semplice
+
+- **Profilo, scheda Piano**: si apre con il piano da leggere (un riquadro per pasto, le alternative una accanto all'altra); "Modifica" mostra la scelta della fonte (nutrizionista o dieta equilibrata), l'importazione e il testo dei pasti. Aderenza, pasti da vedere, domanda settimanale e frequenze stanno in "Opzioni del piano", chiuse.
+- **Ritaglio delle foto** (`PhotoCropper.jsx`): si trascina la foto e si regola lo zoom; per il profilo dentro un cerchio, per le ricette in un riquadro 4:3 (800 px).
+- **Scheda Piano, versione finale**: il piano è un elenco a tendina per pasto; sotto ci sono "Modifica il piano" (apre solo i testi dei pasti) e "Crea un nuovo piano" (fonte, PDF o dati del corpo; con l'avviso che sostituisce quello attuale).
+- **Filtri del ricettario**: una scheda con menu a tendina (tempo, adatte a, quali ricette) e scelte multiple (con, senza); i filtri attivi compaiono sotto la ricerca e si tolgono con un tocco.
+- **Impostazioni subito valide**: chi nel profilo non mangia più un pasto non lo mangia nemmeno nei menu già fatti (`eatersOf` in `scale.js`), senza rigenerare; un piatto senza più nessun partecipante sparisce. Se una settimana modificata a mano è stata fatta prima di un cambio di impostazioni, il Planner lo dice e propone "Aggiorna". Prova: `node scripts/selftest-slots.mjs`.
+- **Planner**: per ogni pasto un solo pulsante evidenziato ("Nuova proposta", oppure "Proponi un menu" e "Scegli tu" se è vuoto), "Aggiungi un piatto" a fine lista, opzioni del piatto nel menu "…" (compreso "Chi lo mangia"), partecipanti solo in lettura, "Annulla" dopo una nuova proposta.
+- **Zoom su iPhone**: i campi di testo hanno sempre 16 px (`index.css`), così il browser non ingrandisce la pagina quando si tocca un campo.
