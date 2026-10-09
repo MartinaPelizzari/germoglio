@@ -58,5 +58,19 @@ console.log('Lunedì colazione:', days2[0].Colazione.items.map((it) => `${resolv
 const all = { ...house, sharedSlots: ['Colazione', 'Pranzo', 'Spuntino 1', 'Spuntino 2', 'Cena'] };
 const d3 = generateWeek(recipes, all);
 check(d3[0].Colazione.items.length >= 1, 'colazione condivisa');
+
+// 5. togliere una persona da tutti i pasti vale subito sui menu già fatti, senza rigenerare
+{
+  const base = { ...house, members: house.members.map((m) => ({ ...m, visibleSlots: undefined })), sharedSlots: ['Pranzo', 'Cena'] };
+  const week = generateWeek(recipes, base);
+  const gone = { ...base, members: base.members.map((m) => (m.id === 's' ? { ...m, visibleSlots: [] } : m)) };
+  let still = 0, shown = 0;
+  for (const d of Object.values(week)) for (const [slot, data] of Object.entries(d)) for (const it of data.items || []) {
+    if (eatersOf(it, gone, slot, data).some((e) => e.id === 's')) still++;
+    if (eatersOf(it, base, slot, data).some((e) => e.id === 's')) shown++;
+  }
+  check(shown > 0, 'prima la sorella mangia qualcosa');
+  check(still === 0, `la sorella è stata tolta da tutti i pasti ma mangia ancora ${still} piatti nei menu già fatti`);
+}
 console.log(ko ? `\n${ko} problemi` : '\nTutto ok.');
 process.exit(ko ? 1 : 0);
