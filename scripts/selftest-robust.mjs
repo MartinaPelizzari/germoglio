@@ -19,7 +19,7 @@ const recipes = fs.readdirSync(rd).filter((f) => f.endsWith('.json')).flatMap((f
 const map = new Map(recipes.map((r) => [r.id, r]));
 
 const body = { sex: 'F', age: 32, height: 166, weight: 62, work: 'sedentary', workouts: 0, goal: 'maintain' };
-const auto = (id, name, diet, extra = {}, b = body) => { const n = computeNeeds({ ...b, diet }); const { meals } = autoMeals({ diet, kcal: n.kcal, protein: n.protein, intolerances: extra.intolerances || [] }); return { id, name, diet, meals, planSource: 'auto', ...extra }; };
+const auto = (id, name, diet, extra = {}, b = body) => { const n = computeNeeds({ ...b, diet }); const { meals } = autoMeals({ diet, kcal: n.kcal, protein: n.protein, intolerances: extra.intolerances || [] }); return { id, name, diet, meals, planSource: 'auto', body: b, ...extra }; };
 const written = (id, name, diet, text, extra = {}) => ({ id, name, diet, planSource: 'nutritionist', meals: Object.fromEntries(Object.entries(text).map(([s, t]) => [s, { planText: t, plan: parseSlotPlan(t) }])), ...extra });
 
 const PLAN_A = { // vegetariana, frutta e frutta secca negli spuntini, hummus a colazione
@@ -41,12 +41,13 @@ const families = {
   'Singola, piano scritto onnivoro': { members: [written('a', 'Lucia', 'omnivore', PLAN_B, { goals: [{ id: 'g', food: 'pesce', times: 2, mode: 'min' }] })], rules: [] },
   'Singole automatiche (4 diete)': { members: [auto('a', 'A', 'omnivore'), auto('b', 'B', 'vegetarian'), auto('c', 'C', 'vegan'), auto('d', 'D', 'pescetarian')], rules: [] },
   'Famiglia con regola feriale': { members: [written('a', 'Martina', 'vegetarian', PLAN_A), written('b', 'Lucia', 'omnivore', PLAN_B, { intolerances: ['glutine'] }), { id: 'c', name: 'Mamma', diet: 'omnivore', meals: {} }, auto('d', 'Papà', 'omnivore', {}, { sex: 'M', age: 50, height: 175, weight: 110, work: 'active', workouts: 0, goal: 'lose' })], rules: rulesWeekday },
+  'Presenza per giorno (papà non pranza in settimana, io non ceno lun e mer)': { members: [written('a', 'Martina', 'vegetarian', PLAN_A, { away: [{ id: 'x', slots: ['Cena'], days: [0, 2] }] }), written('b', 'Lucia', 'omnivore', PLAN_B), { id: 'c', name: 'Mamma', diet: 'omnivore', meals: {} }, auto('d', 'Papà', 'omnivore', { away: [{ id: 'y', slots: ['Pranzo'], days: [0, 1, 2, 3, 4] }] }, { sex: 'M', age: 58, height: 175, weight: 80, work: 'active', workouts: 0, goal: 'maintain' })], rules: [] },
   'Famiglia senza regole': { members: [written('a', 'Martina', 'vegetarian', PLAN_A), { id: 'c', name: 'Mamma', diet: 'omnivore', meals: {} }, { id: 'e', name: 'Papà', diet: 'omnivore', intolerances: ['lattosio'], meals: {} }], rules: [] },
   'Cena individuale (non condivisa)': { members: [written('a', 'Martina', 'vegetarian', PLAN_A), written('b', 'Lucia', 'omnivore', PLAN_B), { id: 'c', name: 'Mamma', diet: 'omnivore', meals: {} }], rules: [], sharedSlots: ['Pranzo'] },
   'Intolleranze varie': { members: [auto('a', 'A', 'vegetarian', { intolerances: ['glutine', 'lattosio'] }), auto('b', 'B', 'omnivore', { intolerances: ['uova', 'guscio'] })], rules: [] },
 };
 
-const HEAVY = ['dieta', 'vuoto', 'colazione', 'spostato', 'doppio', 'contorno', 'doppioGruppo', 'regola', 'proteine', 'dose', 'fuoripiano', 'elettrodomestico'];
+const HEAVY = ['dieta', 'vuoto', 'colazione', 'spostato', 'doppio', 'contorno', 'doppioGruppo', 'regola', 'proteine', 'dose', 'fuoripiano', 'elettrodomestico', 'porzione'];
 const RUNS = Number(process.env.RUNS || 12);
 let fails = 0;
 for (const [name, house] of Object.entries(families)) {

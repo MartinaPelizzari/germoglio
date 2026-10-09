@@ -1,6 +1,7 @@
 // Prova di fabbisogni e dieta equilibrata generata: energia, diete, intolleranze, settimana generata
+import { portionIssue } from '../src/lib/portionLimits.js';
 import fs from 'node:fs';
-import { computeNeeds, bmr, bmrMifflin } from '../src/lib/needs.js';
+import { computeNeeds, bmr, bmrMifflin, bmrSchofield, driReference } from '../src/lib/needs.js';
 import { autoMeals } from '../src/lib/autoPlan.js';
 import { setNutrition } from '../src/lib/nutrition.js';
 import { generateWeek } from '../src/lib/planGen.js';
@@ -16,7 +17,21 @@ const check = (c, m) => { if (!c) { ko++; console.log('KO', m); } };
 
 // formule: esempio del documento (uomo 30 anni, 68,9 kg, 175 cm → B 1663, Mifflin 1638)
 const ex = { sex: 'M', age: 30, weight: 68.9, height: 175 };
-check(Math.round(bmr(ex)) === 1663 && Math.round(bmrMifflin(ex)) === 1638, 'BMR di esempio ' + bmr(ex));
+check(Math.round(bmrSchofield(ex)) === 1663 && Math.round(bmrMifflin(ex)) === 1638, 'BMR di esempio ' + bmrSchofield(ex));
+check(Math.round(bmr(ex)) === 1638, 'il BMR usato dall\'app è Mifflin-St Jeor (usa anche l\'altezza): ' + bmr(ex));
+check(bmr({ sex: 'F', age: 85, weight: 60, height: 160 }) === bmrSchofield({ sex: 'F', age: 85, weight: 60 }), 'fuori da 19-78 anni si ricade su Schofield');
+
+// il caso "mamma": donna di 56 anni, 157 cm, lavoro dinamico, nessun allenamento (il peso non è noto: si provano più valori).
+// Il fabbisogno deve restare vicino ai riferimenti indipendenti (DRI 2023: da "inattiva" a "poco attiva", ±10%) e non superarli
+for (const weight of [55, 65, 75, 85]) {
+  const b = { sex: 'F', age: 56, height: 157, weight, work: 'light', workouts: 0, goal: 'maintain' };
+  const n = computeNeeds(b);
+  const ref = driReference(b);
+  const inactive = driReference({ ...b, work: 'sedentary' }).kcal;
+  check(ref && n.dri?.kcal === ref.kcal, 'riferimento DRI presente');
+  check(n.kcal <= ref.kcal * 1.02 && n.kcal >= inactive * 0.9, `mamma ${weight} kg: ${n.kcal} kcal fuori dall'intervallo dei riferimenti (${inactive}-${ref.kcal})`);
+  check(n.kcal <= 2250, `mamma ${weight} kg: ${n.kcal} kcal sono troppe per una donna di 157 cm con lavoro dinamico`);
+}
 
 const base = { sex: 'F', age: 34, height: 165, weight: 60, work: 'sedentary', workouts: 0, goal: 'maintain' };
 const n0 = computeNeeds(base);
@@ -50,7 +65,12 @@ for (const c of cases) {
   console.log(`\n${c.name}: obiettivo ${needs.kcal} kcal, stima del piano ${estKcal} kcal`);
   console.log('  Pranzo:', texts.Pranzo.replace(/\n+/g, ' + '));
   console.log('  Cena:', texts.Cena.replace(/\n+/g, ' + '));
-  check(Math.abs(estKcal - needs.kcal) < needs.kcal * 0.05, `${c.name}: stima lontana dal fabbisogno (${estKcal} vs ${needs.kcal})`);
+  // i tetti di porzione possono lasciare il piano un po' sotto il fabbisogno (oltre l'8% l'app lo dice a chi lo crea): meglio che porzioni fuori scala
+  check(Math.abs(estKcal - needs.kcal) < needs.kcal * 0.08, `${c.name}: stima lontana dal fabbisogno (${estKcal} vs ${needs.kcal})`);
+  for (const [slot, t] of Object.entries(texts)) for (const l of t.split('\n').filter(Boolean)) {
+    const mm = l.match(/^(\d+(?:,\d+)?)\s*(g|ml|pz)?\s+(.*?)(?:\s*\[.*\])?$/);
+    if (mm) { const iss = portionIssue(mm[3], Number(mm[1].replace(',', '.')), mm[2] || 'pz', needs.kcal); check(!iss, `${c.name}: ${slot}: ${l} è fuori scala (massimo ${iss?.max} ${iss?.unit})`); }
+  }
   check(SLOTS.every((s) => meals[s]?.plan?.length), `${c.name}: pasto senza gruppi`);
   const all = Object.values(texts).join('\n');
   if (c.diet === 'vegan') check(!/yogurt\b(?! di soia)|uova|pesce|pollo|carne|formaggio|latte parz/.test(all), 'vegano con prodotti animali');

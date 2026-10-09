@@ -318,3 +318,20 @@ Cautele: la lettura di alcune tabelle LARN V è avvenuta sulle immagini delle pa
 - S19: Compendium of Physical Activities, sito (definizione di MET). https://pacompendium.com/
 
 Pagine tentate e non leggibili: NICE NG69 e NG246 (HTTP 403), PMC10818145 (richiesta reCAPTCHA), PubMed 28642676 (cookie), jandonline (403).
+
+## Revisione del 9 ottobre 2026: metabolismo basale con l'altezza e confronto con le DRI 2023
+
+Motivo: per una donna di 56 anni e 157 cm (lavoro "in piedi o in movimento", nessun allenamento) l'app proponeva 2060-2220 kcal e porzioni da 155 g di pasta; la persona che usa l'app l'ha giudicato eccessivo.
+
+Cosa risulta (calcoli miei sulle formule delle sezioni 1 e 2, confronto con una fonte indipendente):
+- Le equazioni di Schofield/Oxford dei LARN (versione B) dipendono solo da peso, età e sesso. Per una donna di 157 cm danno un metabolismo basale più alto di Mifflin-St Jeor, che usa anche l'altezza: a 55 kg 1293 contro 1090 kcal, a 65 kg 1374 contro 1190, a 85 kg 1537 contro 1390 (da +11% a +19%).
+- Le equazioni EER delle DRI 2023 (National Academies; riportate da Health Canada), ricavate da misure del dispendio con acqua doppiamente marcata, per la stessa donna danno: inattiva 1730-2090 kcal, poco attiva 1890-2250 kcal, attiva 2020-2390 kcal tra 55 e 85 kg [S16, S17]. Il vecchio calcolo (BMR Schofield × 1,6) stava circa il 9-10% sopra la "poco attiva".
+- Nei confronti trovati in letteratura (donne portoghesi normopeso, donne con eccesso di grasso, donne arabe giovani) Mifflin-St Jeor risulta fra le equazioni più vicine alla misura, ma l'errore cambia direzione a seconda della popolazione [S18]: non esiste una formula esatta, per questo l'app mostra anche il riferimento DRI e permette di regolare le calorie del piano (da -20% a +10%).
+
+Cambiamenti nell'app: BMR con Mifflin-St Jeor tra 19 e 78 anni (Schofield versione B fuori da questo intervallo); PAL invariati (1,4 / 1,6 / 1,8); nel riepilogo compare il valore DRI di confronto; nella creazione del piano c'è la regolazione delle calorie. Con questi cambi, per la donna di 56 anni e 157 cm: 1740-2220 kcal per "in piedi o in movimento" tra 55 e 85 kg (DRI poco attiva: 1890-2250).
+
+Resta una scelta dell'utente il livello di attività: la V revisione LARN stima 1,6 per un lavoro d'ufficio e 1,8 per un lavoro in piedi, quindi le etichette dell'app sono già prudenti; per chi si sente meno attiva "Seduto" (1,4) dà 1530-1950 kcal.
+
+- S16: Health Canada, "Dietary reference intakes tables: Equations to estimate energy requirement". https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/dietary-reference-intakes/tables/equations-estimate-energy-requirement.html
+- S17: National Academies, "Dietary Reference Intakes for Energy" (2023), capitoli 7 e 9. https://www.nationalacademies.org/read/26818/chapter/9
+- S18: confronto fra equazioni del metabolismo basale in donne (Comparison of predictive equations for resting metabolic rate in Portuguese women, Motricidade 2020; Congruent Validity of Resting Energy Expenditure Predictive Equations in Young Adults, PMC6413219). Non ho verificato i dati dei singoli studi oltre alle sintesi di ricerca.
