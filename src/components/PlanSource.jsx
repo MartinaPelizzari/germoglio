@@ -16,6 +16,7 @@ export function NeedsSummary({ needs, estKcal }) {
       {!needs.hideNumbers && (
         <div className="bg-brand-50 rounded-2xl p-4 text-sm text-brand-900 space-y-1">
           <p><b>Energia stimata:</b> circa {needs.kcal} kcal al giorno (metabolismo basale {needs.bmr}, attività {String(needs.pal).replace('.', ',')}{needs.workout ? `, allenamenti +${needs.workout}` : ''}).</p>
+          {needs.dri && <p className="text-xs">Per controllo: le tabelle DRI 2023 (National Academies), ricavate da misure del dispendio reale, danno circa {needs.dri.kcal} kcal per una persona {{ inactive: 'poco attiva', low: 'moderatamente attiva', active: 'attiva' }[needs.dri.level]} come te.</p>}
           <p><b>Proteine:</b> circa {needs.protein} g · <b>fibra:</b> almeno {needs.fiber} g · carboidrati 45-60% e grassi 20-35% dell'energia.</p>
           {gap && <p className="text-xs">Il piano copre circa {estKcal} kcal: per arrivare al tuo fabbisogno aggiungi uno spuntino o aumenta le porzioni.</p>}
         </div>
@@ -37,7 +38,7 @@ export const autoPlanFor = (member) => {
 
 // "Hai un piano alimentare o vuoi che creiamo insieme la dieta giusta per te?"
 // Con il piano della nutrizionista non si fanno domande: il piano è già fatto su misura.
-export default function PlanSource({ member, onChange }) {
+export default function PlanSource({ member, onChange, onDone }) {
   const nutritionReady = useNutrition();
   const source = member.planSource || '';
   const [ask, setAsk] = React.useState(false);
@@ -48,6 +49,7 @@ export default function PlanSource({ member, onChange }) {
     if (!result?.texts) return;
     onChange({ ...member, body, autoPlan: true, meals: mealsFromTexts(result.texts, member.meals) });
     setAsk(false);
+    onDone?.(); // il piano creato si vede subito
   };
   return (
     <div className="space-y-3">
@@ -67,6 +69,13 @@ export default function PlanSource({ member, onChange }) {
           {result?.texts && (
             <>
               <NeedsSummary needs={result.needs} estKcal={result.estKcal} />
+              <label className="block">
+                <span className="block text-[10px] font-bold text-slate-400 uppercase mb-2">Se ti sembrano troppe o poche, regola le calorie</span>
+                <select className="w-full p-3 bg-slate-50 rounded-xl border-none focus:ring-2 focus:ring-brand-500 font-semibold text-slate-700" value={member.tweaks?.kcalPct || 0} onChange={(e) => onChange({ ...member, tweaks: { ...(member.tweaks || {}), kcalPct: Number(e.target.value) } })}>
+                  {[-20, -15, -10, -5, 0, 5, 10].map((v) => <option key={v} value={v}>{v === 0 ? 'Quelle calcolate' : `${v > 0 ? '+' : ''}${v}%`}{v !== 0 && !result.needs.hideNumbers ? ` (circa ${Math.round((result.needs.kcal * (1 + v / 100)) / 10) * 10} kcal)` : ''}</option>)}
+                </select>
+                <span className="block text-[11px] text-slate-400 mt-1">Premi "Ricalcola il piano" per applicarla.</span>
+              </label>
               <button onClick={() => (member.autoPlan ? setAsk(true) : apply())} className="w-full py-3 bg-brand-600 text-white font-bold rounded-xl active:scale-95">{member.autoPlan ? 'Ricalcola il piano' : 'Crea il piano'}</button>
               <p className="text-[11px] text-slate-400">Sono stime generali, non una prescrizione medica o dietetica. Dopo averlo creato puoi modificare ogni pasto qui sotto.</p>
             </>

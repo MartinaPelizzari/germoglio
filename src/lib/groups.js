@@ -16,7 +16,7 @@ export const UNITS = ['g', 'ml', 'pz', 'cucchiai', 'cucchiaini', 'q.b.'];
 
 const KEYWORDS = [
   ['dairy', ['latte', 'yogurt', 'bevanda di', 'panna vegetale', 'kefir']],
-  ['fat', ['olio', 'burro', 'noci', 'mandorl', 'nocciol', 'pistacch', 'anacard', 'arachid', 'semi', 'tahin', 'olive', 'avocado', 'pinoli', 'cocco']],
+  ['fat', ['frutta secca', 'frutta a guscio', 'olio', 'burro', 'noci', 'mandorl', 'nocciol', 'pistacch', 'anacard', 'arachid', 'semi', 'tahin', 'olive', 'avocado', 'pinoli', 'cocco']],
   ['carb', ['pasta', 'riso', 'farro', 'orzo', 'quinoa', 'couscous', 'pane', 'farina', 'fiocchi', 'avena', 'patat', 'gnocchi', 'polenta', 'cereali', 'granola', 'piadina', 'tortilla', 'cracker', 'grissini', 'fette biscottate', 'pangrattato', 'miglio', 'grano saraceno']],
   ['protein', ['ceci', 'lenticchie', 'fagioli', 'piselli', 'tofu', 'tempeh', 'seitan', 'soia', 'uova', 'uovo', 'ricotta', 'feta', 'formaggio', 'parmigiano', 'edamame', 'fave', 'hummus', 'proteine', 'legum', 'pesce', 'carne', 'pollo', 'tacchino', 'manzo', 'vitello', 'maiale', 'suino', 'agnello', 'coniglio', 'salmone', 'tonno', 'merluzzo', 'orata', 'branzino', 'sgombro', 'gamber', 'calamar', 'polpo', 'cozze', 'vongol', 'prosciutto', 'bresaola', 'salsiccia', 'speck', 'mortadella', 'affettat', 'pancetta', 'mozzarella', 'scamorza', 'provola', 'caprino', 'stracchino', 'crescenza', 'pecorino', 'grana', 'albume', 'burger', 'polpett']],
   ['fruit', ['mela', 'mele', 'banana', 'pera', 'arancia', 'limone', 'frutti', 'fragol', 'mirtill', 'dattert', 'uvetta', 'fico', 'fichi', 'melograno', 'kiwi', 'pesca', 'ananas', 'mango', 'frutta']],

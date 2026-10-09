@@ -37,6 +37,38 @@ export const scaleRecipe = (recipe, meal) => {
   return base.map((b, k) => (planned[k].qty !== (recipe.ingredients[k].qty) ? { ...b, qty: planned[k].qty } : b));
 };
 
+// ---- Presenza ai pasti per giorno
+// member.away = [{ id, slots: ['Pranzo'], days: [0..6] }]: schemi ricorrenti di "questo pasto non lo mangio" (0 = lunedì).
+// Nel singolo pasto di un giorno: absent = [id] segnati assenti a mano, here = [id] segnati presenti nonostante lo schema.
+// Lo schema non viene mai copiato nei menu: si legge sempre dal profilo, così una modifica vale subito.
+export const awayByRule = (member, slot, day) => day != null && (member?.away || []).some((r) => (r.slots || []).includes(slot) && (r.days || []).includes(day));
+
+const awayMemo = new WeakMap();
+// La persona "in quel giorno": una copia in cui i pasti esclusi dallo schema (e non riattivati a mano) hanno eats = false.
+// Tutto il resto del codice (porzioni, spesa, quote, giornata) legge già `eats`, quindi lavora su questa copia senza altre modifiche.
+export const memberOnDay = (member, day, daySlots) => {
+  const rules = member?.away;
+  if (!rules?.length || day == null) return member;
+  const off = new Set();
+  for (const r of rules) if ((r.days || []).includes(day)) for (const sl of r.slots || []) if (!daySlots?.[sl]?.here?.includes(member.id)) off.add(sl);
+  if (!off.size) return member;
+  const key = [...off].sort().join('|');
+  let byKey = awayMemo.get(member);
+  if (!byKey) awayMemo.set(member, (byKey = new Map()));
+  if (!byKey.has(key)) byKey.set(key, { ...member, meals: { ...member.meals, ...Object.fromEntries([...off].map((sl) => [sl, { ...(member.meals?.[sl] || {}), eats: false }])) } });
+  return byKey.get(key);
+};
+// La famiglia in quel giorno (daySlots = i pasti già pianificati del giorno, per le correzioni a mano)
+export const householdOnDay = (household, day, daySlots) => {
+  if (!household?.members?.some((m) => m.away?.length)) return household;
+  return { ...household, members: household.members.map((m) => memberOnDay(m, day, daySlots)) };
+};
+// Presente a un pasto di un giorno? (mangia il pasto, lo schema non lo esclude, non è stato segnato assente)
+export const isPresent = (member, slot, day, data) => {
+  if (!mealOf(member, slot).eats || (data?.absent || []).includes(member.id)) return false;
+  return !awayByRule(member, slot, day) || (data?.here || []).includes(member.id);
+};
+
 // Chi c'è a un pasto: chi di solito lo mangia, meno gli assenti di quel giorno, più gli ospiti.
 // data = { items, absent: [id], guests: [persona] } del pasto pianificato (facoltativo).
 export const slotPeople = (household, slot, data) => {

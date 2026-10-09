@@ -1,7 +1,7 @@
 // Frequenze settimanali indicate dalla nutrizionista (es. legumi 3 volte a settimana).
 // Il conteggio è in pasti: un pasto con ceci e un altro con lenticchie sono 2 pasti con legumi.
 // Per legumi, pesce, carne, uova e formaggi conta solo la fonte proteica principale del pasto (protein.js), non ogni ingrediente.
-import { eatersOf } from './scale.js';
+import { eatersOf, householdOnDay } from './scale.js';
 import { FOOD_TYPES, foodLabel } from './foodTypes.js';
 import { resolveItem } from './items.js';
 import { PROTEIN_TYPES, proteinSourceOf } from './protein.js';
@@ -42,12 +42,13 @@ export const foodsAtSlot = (recipe, slot) => {
 export const weekSets = (plan, household, recipeMap) => {
   const seen = {};
   for (const [day, slots] of Object.entries(plan?.days || {})) {
+    const hh = householdOnDay(household, Number(day), slots);
     for (const [slot, data] of Object.entries(slots || {})) {
       for (const item of data?.items || []) {
         const recipe = resolveItem(item, recipeMap);
         if (!recipe) continue;
         const foods = foodsAtSlot(recipe, slot);
-        for (const m of eatersOf(item, household, slot, data)) {
+        for (const m of eatersOf(item, hh, slot, data)) {
           if (m.id.startsWith('g-')) continue; // gli ospiti non hanno obiettivi
           for (const f of foods) ((seen[m.id] ||= {})[f] ||= new Set()).add(`${day}|${slot}`);
         }

@@ -1,4 +1,5 @@
-import { SLOTS, canonicalName, eatersOf, mealOf, mealOfItem, slotPeople } from './scale.js';
+import { energyOf, portionIssue } from './portionLimits.js';
+import { SLOTS, canonicalName, eatersOf, householdOnDay, mealOf, mealOfItem, memberOnDay, scaleRecipe, slotPeople } from './scale.js';
 import { breakfastClass, isSavory, kindFits, recipeKind, slotKind } from './meals.js';
 import { fits, isSharedSlot, mealConstraints, menuClusters, memberLevel, recipeLevel, ruleCap, rulesFor } from './diet.js';
 import { foodsAtSlot, recipeFoods } from './goals.js';
@@ -199,7 +200,16 @@ const planAvoids = (recipe, eaters, slot, state) => {
   const words = [...new Set(eaters.flatMap((e) => planFor(e, slot, state).groups.flatMap((g) => g.options.flatMap((o) => o.avoid || []))))];
   return words.some((w) => (recipe.ingredients || []).some((i) => i.name.toLowerCase().includes(w)));
 };
-export const planAllows = (recipe, eaters, slot, state) => !planAvoids(recipe, eaters, slot, state) && withinPlan(recipe, eaters, slot, state) && borrowOk(recipe, eaters, slot, state);
+// Le dosi del piano che crea l'app (non quelle di una nutrizionista) non devono portare nessun ingrediente oltre il limite di porzione:
+// una ricetta il cui ingrediente, con la dose del piano, esce fuori scala (210 g di tempeh dalla dose dei "legumi cotti") non è adatta a quella persona
+const portionsOk = (recipe, eaters, slot, state) => eaters.every((e) => {
+  if (e.planSource !== 'auto' || recipe.isFood) return true;
+  const meal = mealOf(e, slot);
+  if (!meal.plan.length) return true;
+  const kcal = energyOf(e);
+  return !scaleRecipe(recipe, { ...meal, plan: planFor(e, slot, state).groups }).some((ing) => portionIssue(ing.name, ing.qty, ing.unit, kcal));
+});
+export const planAllows = (recipe, eaters, slot, state) => !planAvoids(recipe, eaters, slot, state) && withinPlan(recipe, eaters, slot, state) && borrowOk(recipe, eaters, slot, state) && portionsOk(recipe, eaters, slot, state);
 
 // Al massimo un gruppo anticipato da un pasto successivo per persona (un frutto a colazione, non mezza giornata in un colpo)
 const borrowOk = (recipe, eaters, slot, state) => eaters.every((e) => {
@@ -428,7 +438,7 @@ export const proposeMenu = (recipes, constraints, slot, state, { split = false, 
         if (nuts.length) opt = { ...opt, name: nuts[Math.floor(Math.random() * nuts.length)] };
       }
       const key = opt.name.toLowerCase();
-      if (!foods.has(key)) foods.set(key, { food: { name: opt.name, qty: opt.qty, unit: opt.unit, group: opt.group }, eaters: new Set(), uses: {} });
+      if (!foods.has(key)) foods.set(key, { food: { name: opt.name, qty: opt.qty, unit: opt.unit, group: /\b(noci|noce|mandorl\w*|nocciol\w*|pistacch\w*|anacard\w*|arachid\w*|pinoli|frutta secca|semi)\b/i.test(opt.name) ? 'fat' : opt.group }, eaters: new Set(), uses: {} });
       foods.get(key).eaters.add(p.eater.id);
       if (isDayBalanced(p.eater)) (foods.get(key).uses[p.eater.id] ||= []).push(p.key);
     }
@@ -482,20 +492,25 @@ export const registerMeal = (state, items, clusterEaters, day, slot, recipeMap, 
 };
 
 // Settimana intera. Con una regola "cucina una volta ogni N giorni" lo stesso piatto torna come avanzo nei giorni successivi.
-export const generateWeek = (recipes, household, ctx = {}) => {
+export const generateWeek = (recipes, householdAll, ctx = {}) => {
   const state = newState(ctx);
-  const quota = ctx.quota || allocateProteins(household);
+  const quota = ctx.quota || allocateProteins(householdAll, Math.random, ctx.existing);
   state.quota = quota.map; // quote proteiche settimanali di chi ha frequenze sui gruppi proteici
   const recipeMap = new Map(recipes.map((r) => [r.id, r]));
   const carry = {};
   const days = {};
+  // pasti principali in cui c'è almeno una persona (lo schema di presenza di ognuno può escluderne alcuni)
+  const mainActive = [];
+  for (let d = 0; d < 7; d++) for (const sl of ['Pranzo', 'Cena']) mainActive.push(slotPeople(householdOnDay(householdAll, d, ctx.existing?.[d]), sl, ctx.existing?.[d]?.[sl]).length > 0);
   for (let d = 0; d < 7; d++) {
     days[d] = {};
+    // la famiglia di questo giorno: chi per schema non mangia un pasto, in quel pasto non c'è (salvo correzione fatta a mano nel piano)
+    const household = householdOnDay(householdAll, d, ctx.existing?.[d]);
     state.day = { consumed: new Map() }; // ogni giorno ricomincia con il suo budget
     state.prevCarb = state.todayCarb || new Map(); // basi di carboidrati di ieri
     state.todayCarb = new Map();
     for (const slot of SLOTS) {
-      state.mealsLeft = 14 - (d * 2 + (slot === 'Cena' || slot === 'Spuntino 2' ? 1 : 0)); // pasti principali ancora da fare questa settimana
+      state.mealsLeft = mainActive.slice(d * 2 + (slot === 'Cena' || slot === 'Spuntino 2' ? 1 : 0)).filter(Boolean).length; // pasti principali ancora da fare questa settimana (solo quelli con qualcuno)
       state.curSlot = slot;
       state.curDay = d;
       // assenti e ospiti già indicati nel piano esistente restano al loro posto
@@ -562,7 +577,7 @@ export const generateWeek = (recipes, household, ctx = {}) => {
         if (Array.isArray(items[a].eaters) && items[a].eaters.length === people.length) delete items[a].eaters;
       }
       const planned = people.some((p) => mealOf(p, slot).plan.length);
-      if (items.length || planned) days[d][slot] = { items, ...(!items.length ? { covered: true } : {}), ...(prevData?.absent?.length ? { absent: prevData.absent } : {}), ...(prevData?.guests?.length ? { guests: prevData.guests } : {}), ...(prevData?.joined && Object.keys(prevData.joined).length ? { joined: prevData.joined } : {}), ...(prevData?.mode ? { mode: prevData.mode } : {}) };
+      if (items.length || planned) days[d][slot] = { items, ...(!items.length ? { covered: true } : {}), ...(prevData?.absent?.length ? { absent: prevData.absent } : {}), ...(prevData?.here?.length ? { here: prevData.here } : {}), ...(prevData?.guests?.length ? { guests: prevData.guests } : {}), ...(prevData?.joined && Object.keys(prevData.joined).length ? { joined: prevData.joined } : {}), ...(prevData?.mode ? { mode: prevData.mode } : {}) };
     }
   }
   return days;
@@ -601,10 +616,17 @@ export const generateWeekChecked = (recipes, household, ctx = {}, { tries = 8 } 
   const recipeMap = new Map(recipes.map((r) => [r.id, r]));
   let best = null;
   for (let i = 0; i < tries; i++) {
-    const quota = allocateProteins(household);
+    const quota = allocateProteins(household, Math.random, ctx.existing);
     const days = generateWeek(recipes, household, { ...ctx, quota });
     const issues = auditWeek(days, household, recipeMap, { month: ctx.month });
     for (const q of quota.problems) issues.push({ kind: 'vincoli', day: -1, slot: '', msg: q.msg, weight: 40 });
+    // frequenze settimanali non proteiche: se i pasti attivi sono meno delle volte richieste, nessun menu può rispettarle
+    for (const m of household.members) for (const g of m.goals || []) {
+      if (PROTEIN_TYPES.includes(g.food) || g.mode === 'max') continue;
+      let active = 0;
+      for (let d = 0; d < 7; d++) for (const sl of SLOTS) if (mealOf(memberOnDay(m, d, ctx.existing?.[d]), sl).eats) active++;
+      if (g.times > active) issues.push({ kind: 'vincoli', day: -1, slot: '', msg: `${m.name}: ${g.food} ${g.times} volte a settimana, ma i suoi pasti attivi sono ${active}`, weight: 40 });
+    }
     const score = auditScore(issues);
     if (!best || score < best.score) best = { days, issues, score };
     if (score === 0) break;

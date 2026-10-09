@@ -6,6 +6,7 @@ import { DAYS } from '../lib/dates.js';
 import { MEMBER_COLORS, MEMBER_EMOJIS, isFreeProfile } from '../hooks/data.jsx';
 import { Confirm, Sheet, Avatar, Tabs, Toggle } from '../components/ui.jsx';
 import PlanView from '../components/PlanView.jsx';
+import PresenceEditor from '../components/PresenceEditor.jsx';
 import { SLOTS, mealOf } from '../lib/scale.js';
 import { DIETS } from '../lib/diet.js';
 import { ALLERGENS } from '../lib/allergens.js';
@@ -20,14 +21,14 @@ import PhotoCropper from '../components/PhotoCropper.jsx';
 const MULTS = [0.5, 0.75, 1, 1.25, 1.5, 2];
 
 // Importa il piano da PDF o testo e lo applica ai pasti dopo la verifica
-function PlanImportBlock({ member, onChange }) {
+function PlanImportBlock({ member, onChange, onDone }) {
   const [open, setOpen] = React.useState(false);
   return (
     <div className="mb-3">
       {!open ? (
         <button onClick={() => setOpen(true)} className="w-full py-3 bg-brand-50 text-brand-700 font-bold rounded-xl active:scale-95">Carica il PDF del piano o incolla il testo</button>
       ) : (
-        <PlanImport applyLabel="Applica ai pasti" onApply={(texts) => { onChange({ ...member, meals: mealsFromTexts(texts, member.meals) }); setOpen(false); }} onSkip={() => setOpen(false)} />
+        <PlanImport applyLabel="Applica ai pasti" onApply={(texts) => { onChange({ ...member, meals: mealsFromTexts(texts, member.meals) }); setOpen(false); onDone?.(); }} onSkip={() => setOpen(false)} />
       )}
     </div>
   );
@@ -81,7 +82,7 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
           </div>
         )}
 
-        <div className="sticky top-0 z-10 -mx-5 px-5 py-2 bg-white/95 backdrop-blur"><Tabs tabs={[{ id: 'persona', label: 'Persona' }, { id: 'piano', label: 'Piano' }, { id: 'regole', label: 'Regole' }]} value={tab} onChange={setTab} label="Sezioni del profilo" /></div>
+        <div className="sticky top-0 z-10 -mx-5 px-5 py-2 bg-white/95 backdrop-blur"><Tabs tabs={[{ id: 'persona', label: 'Persona' }, { id: 'piano', label: 'Piano' }, { id: 'presenza', label: 'Presenza' }, { id: 'regole', label: 'Regole' }]} value={tab} onChange={setTab} label="Sezioni del profilo" /></div>
         {tab === 'persona' && (
           <div className="space-y-6">
         <div className="flex items-center gap-4">
@@ -216,12 +217,13 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
                   <button onClick={() => setPlanMode(null)} className="px-4 py-2 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm active:scale-95">Indietro</button>
                 </div>
                 <p className="text-sm text-amber-900 bg-amber-50 rounded-2xl p-3">NB: il nuovo piano sostituirà quello attualmente presente.</p>
-                <PlanSource member={member} onChange={onChange} />
-                {member.planSource !== 'auto' && <PlanImportBlock member={member} onChange={onChange} />}
+                <PlanSource member={member} onChange={onChange} onDone={() => setPlanMode(null)} />
+                {member.planSource !== 'auto' && <PlanImportBlock member={member} onChange={onChange} onDone={() => setPlanMode(null)} />}
               </>
             )}
           </div>
         )}
+        {tab === 'presenza' && <PresenceEditor member={member} onChange={onChange} />}
         {tab === 'regole' && (
           <div className="space-y-6">
         <div>

@@ -5,16 +5,19 @@
 
 export const bmi = (b) => (b?.weight && b?.height ? b.weight / (b.height / 100) ** 2 : null);
 
-// Metabolismo basale: equazioni di Schofield come riprodotte dalle tabelle LARN V (docs/fabbisogni.md, 1.2, versione B)
-export const bmr = ({ sex, age, weight, height }) => {
-  // Con un indice di massa corporea da 30 in su le equazioni di Schofield (ricavate su persone normopeso) sovrastimano il metabolismo:
-  // si usa Mifflin-St Jeor, validata anche nelle persone obese (docs/fabbisogni.md, S12)
-  if (height && weight / (height / 100) ** 2 >= 30) return 10 * weight + 6.25 * height - 5 * age + (sex === 'M' ? 5 : -161);
+// Metabolismo basale. Mifflin-St Jeor (validata per 19-78 anni): usa anche l'altezza, quindi non sovrastima le persone basse come fanno le
+// equazioni di Schofield/Oxford dei LARN, che dipendono solo da peso, età e sesso (per una donna di 157 cm sono circa il 13-19% più alte).
+// Fuori da 19-78 anni (non validata) si ricade su Schofield nella versione delle tabelle LARN V. Fonti e confronti in docs/fabbisogni.md.
+export const bmrSchofield = ({ sex, age, weight }) => {
   const band = age < 30 ? 0 : age < 60 ? 1 : 2;
   const F = [[14.82, 486.6], [8.13, 845.6], [9.08, 658.8]];
   const M = [[15.06, 692.2], [11.47, 873.1], [11.71, 587.7]];
   const [a, c] = (sex === 'M' ? M : F)[band];
   return a * weight + c;
+};
+export const bmr = ({ sex, age, weight, height }) => {
+  if (height && age >= 19 && age <= 78) return 10 * weight + 6.25 * height - 5 * age + (sex === 'M' ? 5 : -161);
+  return bmrSchofield({ sex, age, weight });
 };
 // Alternativa per confronto
 export const bmrMifflin = ({ sex, age, weight, height }) => 10 * weight + 6.25 * height - 5 * age + (sex === 'M' ? 5 : -161);
@@ -31,6 +34,20 @@ export const workoutKcal = (b) => {
 };
 
 const round10 = (x) => Math.round(x / 10) * 10;
+
+// Riferimento di confronto: equazioni EER delle DRI 2023 (National Academies; Health Canada), ricavate da misure di dispendio energetico con acqua doppiamente marcata.
+// Una per sesso e livello di attività: [costante, età, altezza, peso]. Non sostituiscono il calcolo dell'app: servono a controllarlo.
+const DRI = {
+  F: { inactive: [584.90, -7.01, 5.72, 11.71], low: [575.77, -7.01, 6.60, 12.14], active: [710.25, -7.01, 6.54, 12.34] },
+  M: { inactive: [753.07, -10.83, 6.50, 14.10], low: [581.47, -10.83, 8.30, 14.94], active: [1004.82, -10.83, 6.52, 15.91] },
+};
+const DRI_LEVEL = { sedentary: 'inactive', light: 'low', active: 'active' };
+export const driReference = (b = {}) => {
+  const lvl = DRI_LEVEL[b.work];
+  if (!lvl || !b.weight || !b.height || !b.age || (b.workouts || 0) >= 3) return null;
+  const [c, a, h, w] = DRI[b.sex === 'M' ? 'M' : 'F'][lvl];
+  return { level: lvl, kcal: round10(c + a * b.age + h * b.height + w * b.weight) };
+};
 
 // Perché l'app non propone un piano in automatico (sezione 6 del documento)
 export const blockReason = (b = {}) => {
@@ -77,7 +94,7 @@ export const computeNeeds = (b = {}) => {
   if (bmiV >= 30 && goal === 'lose') notes.push('Con questo indice di massa corporea conviene farsi seguire da un professionista.');
   return {
     blocked: null, hideNumbers, goal,
-    bmr: round10(base), pal, workout: round10(workoutKcal(b)), tdee: round10(tdee), kcal: target,
+    dri: driReference(b), bmr: round10(base), pal, workout: round10(workoutKcal(b)), tdee: round10(tdee), kcal: target,
     protein, fiber, carbsPct: [45, 60], fatPct: [20, 35], bmi: bmiV ? Math.round(bmiV * 10) / 10 : null,
     watch, notes,
   };

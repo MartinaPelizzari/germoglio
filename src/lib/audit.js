@@ -2,8 +2,9 @@
 // Serve a due cose: scegliere il migliore fra più tentativi di generazione (generateWeekChecked) e far fallire le prove
 // automatiche se il generatore introduce di nuovo un difetto. Ogni problema ha un peso: i difetti gravi (dieta,
 // allergie, pasti vuoti) pesano più di quelli di coerenza.
+import { energyOf, portionIssue } from './portionLimits.js';
 import { applianceLabel, missingAppliances } from './appliances.js';
-import { SLOTS, eatersOf, mealOf, mealOfItem, scaleRecipe } from './scale.js';
+import { SLOTS, eatersOf, householdOnDay, mealOf, mealOfItem, memberOnDay, scaleRecipe } from './scale.js';
 import { breakfastClass, recipeKind, slotKind } from './meals.js';
 import { isDayBalanced, parseKey } from './day.js';
 import { problemsFor, rulesFor } from './diet.js';
@@ -22,16 +23,19 @@ const massOf = (recipe, group) => (recipe.ingredients || []).reduce((a, i) => a 
 // Soglie sotto cui un ingrediente è solo un contorno
 const SUBSTANTIAL = { protein: 40, carb: 70 };
 
-const WEIGHT = { elettrodomestico: 100, dose: 30, fuoripiano: 30, proteine: 60, vincoli: 40, liquidi: 20, beige: 5, stagione: 8, sforo: 20, somiglianza: 6, dieta: 100, vuoto: 100, colazione: 30, spostato: 30, doppio: 20, contorno: 20, regola: 25, frequenza: 8, gruppo: 15, doppioGruppo: 25 };
+const WEIGHT = { porzione: 40, elettrodomestico: 100, dose: 30, fuoripiano: 30, proteine: 60, vincoli: 40, liquidi: 20, beige: 5, stagione: 8, sforo: 20, somiglianza: 6, dieta: 100, vuoto: 100, colazione: 30, spostato: 30, doppio: 20, contorno: 20, regola: 25, frequenza: 8, gruppo: 15, doppioGruppo: 25 };
 
-export const auditWeek = (days, household, recipeMap, { month } = {}) => {
+export const auditWeek = (days, householdAll, recipeMap, { month } = {}) => {
   const issues = [];
   const add = (kind, day, slot, msg) => issues.push({ kind, day, slot, msg, weight: WEIGHT[kind] || 10 });
-  const people = household.members;
+  const people = householdAll.members;
+  const household = householdAll; // per i controlli settimanali; nei cicli per giorno si usa la famiglia di quel giorno (schemi di presenza)
   const counts = {}; // persona -> alimento -> set di "giorno|pasto"
 
   for (let d = 0; d < 7; d++) {
     const day = days[d] || {};
+    const household = householdOnDay(householdAll, d, day);
+    const people = household.members;
     for (const slot of SLOTS) {
       const data = day[slot];
       const main = slotKind(slot) === 'principale';
@@ -181,6 +185,7 @@ export const auditWeek = (days, household, recipeMap, { month } = {}) => {
   // dosi esatte: per ogni persona con un piano, la quantità mangiata di ogni gruppo coincide con quella del piano (5% o 5 g di tolleranza)
   // e nei piatti non ci sono ingredienti sostanziosi che il piano non prevede
   for (let d = 0; d < 7; d++) {
+    const household = householdOnDay(householdAll, d, days[d]);
     for (const slot of SLOTS) {
       const data = days[d]?.[slot];
       for (const it of data?.items || []) {
@@ -192,6 +197,12 @@ export const auditWeek = (days, household, recipeMap, { month } = {}) => {
           if (!own.plan.length) continue;
           const meal = mealOfItem(p, slot, it);
           const scaled = scaleRecipe(recipe, meal);
+          // quantità fuori scala (solo per le dosi scelte dall'app: quelle di una dieta della nutrizionista sono la dieta e non si giudicano)
+          if (p.planSource === 'auto') {
+            const kcal = energyOf(p);
+            const seen = new Set();
+            scaled.forEach((ing) => { const bad = portionIssue(ing.name, ing.qty, ing.unit, kcal); if (bad && !seen.has(bad.label)) { seen.add(bad.label); add('porzione', d, slot, `${p.name}: ${recipe.title} ha ${bad.qty} ${bad.unit} di ${bad.label}, oltre il limite di ${bad.max} ${bad.unit} per un pasto (standard ${bad.std})`); } });
+          }
           planMatches(recipe, meal.plan).forEach((m) => {
             if (!m || !(m.option.qty > 0)) return;
             const gr = (ing) => (['g', 'ml'].includes(ing.unit) ? ing.qty : ing.unit === 'pz' && pieceGrams(ing.name) ? ing.qty * pieceGrams(ing.name) : 0);
@@ -218,13 +229,14 @@ export const auditWeek = (days, household, recipeMap, { month } = {}) => {
     const tally = {};
     let meals = 0;
     for (let d = 0; d < 7; d++) for (const slot of MAIN_SLOTS) {
-      if (!mealOf(p, slot).eats || !planProteinTypes(p, slot).size) continue;
+      const hhd = householdOnDay(householdAll, d, days[d]);
+      if (!mealOf(memberOnDay(p, d, days[d]), slot).eats || !planProteinTypes(p, slot).size) continue;
       const data = days[d]?.[slot];
       if ((data?.absent || []).includes(p.id)) continue;
       meals++;
       const sources = new Set();
       for (const it of data?.items || []) {
-        if (!eatersOf(it, household, slot, data).some((e) => e.id === p.id)) continue;
+        if (!eatersOf(it, hhd, slot, data).some((e) => e.id === p.id)) continue;
         const r = resolveItem(it, recipeMap);
         const src = r ? (it.food ? proteinTypeOfName(it.food.name) : proteinSourceOf(r)) : null;
         if (src) sources.add(src);

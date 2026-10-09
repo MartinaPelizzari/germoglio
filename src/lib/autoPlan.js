@@ -7,6 +7,7 @@ import { recipeAllergens } from './allergens.js';
 import { lookup } from './nutrition.js';
 import { parseSlotPlan } from './dietPlan.js';
 import { SLOTS } from './meals.js';
+import { maxPortion, targetFactor } from './portionLimits.js';
 
 const lerp = (e, a, b, c) => (e <= 2000 ? a + ((b - a) * (Math.max(e, 1200) - 1500)) / 500 : b + ((c - b) * (Math.min(e, 2500) - 2000)) / 500);
 const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
@@ -55,16 +56,21 @@ const usable = (opts, diet, intol) => opts.filter((o) => o.d.includes(diet)
 // Con più energia da coprire crescono i carboidrati e, meno, proteine, frutta, yogurt e frutta secca;
 // oltre una certa soglia si aggiungono anche olio nei pasti principali, frutta secca negli spuntini e frutta a colazione
 const flexOf = (s) => 1 + (s - 1) * 0.6;
-const qtyOf = (o, s, pf) => (o.carb ? o.g * clamp(s, 0.5, 2.4) : o.prot ? o.g * pf * Math.max(0.75, 1 + (s - 1) * 0.25) : o.oil ? clamp(10 + (s - 1) * 25, 10, 30) : o.flex ? o.g * flexOf(s) : o.g);
-const line = (o, s, pf = 1) => {
+// capMul: tetto delle porzioni rispetto allo standard in base all'energia (limitFactor/targetFactor in portionLimits.js).
+// Senza tetto tutta l'energia in più finiva nei carboidrati (155 g di pasta, 80 g di pane); ora l'eccesso va in più gruppi e, se non basta, il piano resta sotto il fabbisogno e lo dice.
+const qtyOf = (o, s, pf, capMul = 1.25) => (o.carb ? o.g * clamp(s, 0.5, capMul) : o.prot ? o.g * Math.min(pf * Math.max(0.75, 1 + (s - 1) * 0.25), capMul + 0.25) : o.oil ? clamp(10 + (s - 1) * 25, 10, 20) : o.flex ? o.g * Math.min(flexOf(s), Math.max(1.5, capMul)) : o.g);
+const line = (o, s, pf = 1, capMul, e) => {
   const unit = o.u || 'g';
-  const q = o.carb && o.step === 10 ? r10(qtyOf(o, s, pf)) : o.prot ? r10(qtyOf(o, s, pf)) : r5(qtyOf(o, s, pf));
+  let q = o.carb && o.step === 10 ? r10(qtyOf(o, s, pf, capMul)) : o.prot ? r10(qtyOf(o, s, pf, capMul)) : r5(qtyOf(o, s, pf, capMul));
+  // rete di sicurezza: una quantità oltre il limite di porzione non esce mai dal piano
+  const lim = maxPortion(o.kn || o.t, e);
+  if (lim && q > lim.max) q = lim.max;
   const note = o.w ? ` [${o.w} volte a settimana]` : '';
   return `${q} ${unit} ${o.t}${note}`;
 };
-const kcalOf = (o, s, pf) => {
+const kcalOf = (o, s, pf, capMul) => {
   const v = lookup(o.kn || o.t);
-  return v ? (v.kcal * qtyOf(o, s, pf)) / 100 : 0;
+  return v ? (v.kcal * qtyOf(o, s, pf, capMul)) / 100 : 0;
 };
 
 const OIL = { t: 'olio extravergine d\'oliva', g: 10, oil: 1, d: ALL };
@@ -75,7 +81,7 @@ const slotGroups = (slot, ctx, sc) => {
   const { diet, intol, e, fruitSlots } = ctx;
   const U = (o) => usable(o, diet, intol);
   const prot = U(protein(e, diet, ctx.legumes).map((o) => ({ ...o, prot: 1 })));
-  const high = e >= 2300; // fabbisogni alti: più condimento, spuntini più ricchi, frutta anche a colazione
+  const high = ctx.high ?? e >= 2300; // fabbisogni alti: più condimento, spuntini più ricchi, frutta anche a colazione
   const withFruit = fruitSlots.has(slot) ? [U([FRUIT])] : [];
   const oil = high ? [U([OIL])] : [];
   switch (slot) {
@@ -94,22 +100,31 @@ export const buildAutoPlan = ({ diet = 'omnivore', intolerances = [], kcal, prot
   const nFruit = Math.round(lerp(e, 2, 3, 3));
   const order = ['Spuntino 1', 'Spuntino 2', 'Colazione', 'Cena', 'Pranzo'].filter((s) => eaten.includes(s));
   const fruitSlots = new Set(order.slice(0, nFruit));
-  const ctx = { diet, intol: intolerances, e, fruitSlots, legumes: tweaks.legumes || 0 };
   const pf = clamp(pg / 65, 0.8, 1.6);
+  const capMul = targetFactor(e); // tetto delle porzioni rispetto allo standard: 1,25 sotto 2400 kcal, 1,5 sotto 3000, 2 sopra
   const baseKcal = 240; // olio dei condimenti (3 porzioni da 10 ml al giorno), che sta nelle ricette
-  const groupsAt = (sc) => Object.fromEntries(eaten.map((sl) => [sl, slotGroups(sl, ctx, sc).filter((g) => g.length)]));
-  // energia stimata di una giornata: per ogni gruppo la media delle alternative
-  const estimate = (sc, gs = groupsAt(sc)) => baseKcal + eaten.reduce((tot, slot) => tot + gs[slot].reduce((a, g) => a + g.reduce((x, o) => x + kcalOf(o, sc, pf), 0) / g.length, 0), 0);
-  // la scala che porta più vicino al fabbisogno (le soglie dei gruppi in più rendono la curva a gradini: si cerca a passi piccoli)
-  let scale = 1, bestGap = Infinity;
-  for (let sc = 0.3; sc <= 3.4; sc += 0.02) { const gap = Math.abs(estimate(sc) - e); if (gap < bestGap - 1) { bestGap = gap; scale = sc; } }
-  const gs = groupsAt(scale);
-  const texts = {};
-  for (const slot of eaten) {
-    if (gs[slot].length) texts[slot] = gs[slot].map((g) => g.map((o) => line(o, scale, pf)).join('\n')).join('\n\n');
+  // Con i tetti le porzioni dei carboidrati non crescono oltre: se l'energia non torna, si prova con i gruppi in più (olio nei pasti principali,
+  // frutta secca, frutta a colazione). Se anche così il piano resta sotto il fabbisogno, resta sotto: lo dice NeedsSummary.
+  let best = null;
+  for (const high of e >= 2300 ? [true] : [false, true]) {
+    const ctx = { diet, intol: intolerances, e, fruitSlots, legumes: tweaks.legumes || 0, high };
+    const groupsAt = (sc) => Object.fromEntries(eaten.map((sl) => [sl, slotGroups(sl, ctx, sc).filter((g) => g.length)]));
+    // energia stimata di una giornata: per ogni gruppo la media delle alternative
+    const estimate = (sc, gs = groupsAt(sc)) => baseKcal + eaten.reduce((tot, slot) => tot + gs[slot].reduce((a, g) => a + g.reduce((x, o) => x + kcalOf(o, sc, pf, capMul), 0) / g.length, 0), 0);
+    // la scala che porta più vicino al fabbisogno (le soglie dei gruppi in più rendono la curva a gradini: si cerca a passi piccoli)
+    let scale = 1, bestGap = Infinity;
+    for (let sc = 0.3; sc <= 3.4; sc += 0.02) { const gap = Math.abs(estimate(sc) - e); if (gap < bestGap - 1) { bestGap = gap; scale = sc; } }
+    const gs = groupsAt(scale);
+    const texts = {};
+    for (const slot of eaten) {
+      if (gs[slot].length) texts[slot] = gs[slot].map((g) => g.map((o) => line(o, scale, pf, capMul, e)).join('\n')).join('\n\n');
+    }
+    const cand = { texts, estKcal: Math.round(estimate(scale, gs)), scale: Math.round(scale * 100) / 100, gap: bestGap };
+    if (!best || cand.gap < best.gap - 1) best = cand;
+    if (cand.gap <= e * 0.06) break; // già vicino al fabbisogno senza gruppi in più
   }
-  const estKcal = Math.round(estimate(scale, gs));
-  return { texts, estKcal, scale: Math.round(scale * 100) / 100 };
+  const { gap, ...result } = best;
+  return result;
 };
 
 // Pasti pronti da salvare nel profilo

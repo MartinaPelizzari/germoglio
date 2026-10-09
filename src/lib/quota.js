@@ -1,9 +1,9 @@
 // Quote proteiche settimanali: se una persona ha frequenze sui gruppi proteici (legumi almeno 2, pesce esattamente 2...) e il piano
 // prevede una fonte proteica a pranzo e a cena, ogni pasto riceve PRIMA il suo gruppo proteico, in modo che le frequenze tornino per forza
-// e la somma dei gruppi sia uguale al numero dei pasti proteici (14 con pranzo e cena tutti i giorni).
+// e la somma dei gruppi sia uguale al numero dei pasti proteici attivi (14 con pranzo e cena tutti i giorni, meno se la persona salta dei pasti).
 import { PROTEIN_TYPES, proteinTypeOfName } from './protein.js';
 import { memberLevel, ruleCap, rulesFor } from './diet.js';
-import { mealOf } from './scale.js';
+import { mealOf, memberOnDay } from './scale.js';
 
 const LEVEL_TYPES = [['legumi'], ['legumi', 'uova', 'formaggi'], ['legumi', 'uova', 'formaggi', 'pesce'], PROTEIN_TYPES];
 export const MAIN_SLOTS = ['Pranzo', 'Cena'];
@@ -23,7 +23,8 @@ export const needsQuota = (member) => proteinGoals(member).length > 0 && MAIN_SL
 const shuffle = (a, rnd) => { const x = [...a]; for (let i = x.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [x[i], x[j]] = [x[j], x[i]]; } return x; };
 
 // Assegna un gruppo proteico a ogni pasto principale di ogni persona con frequenze: { map: Map("persona|giorno|pasto" → tipo), problems: [{ person, msg }] }
-export const allocateProteins = (household, rnd = Math.random) => {
+// existing: i pasti già pianificati (le presenze corrette a mano restano valide)
+export const allocateProteins = (household, rnd = Math.random, existing) => {
   const map = new Map();
   const problems = [];
   for (const m of household.members.filter(needsQuota)) {
@@ -33,7 +34,8 @@ export const allocateProteins = (household, rnd = Math.random) => {
     const types = goals.map((g) => g.food);
     const slots = [];
     for (let d = 0; d < 7; d++) for (const slot of MAIN_SLOTS) {
-      if (!mealOf(m, slot).eats) continue;
+      // pasto attivo per quella persona quel giorno (lo schema di presenza può escluderlo): il totale dei pasti proteici è quello dei pasti attivi
+      if (!mealOf(memberOnDay(m, d, existing?.[d]), slot).eats) continue;
       const allowedByPlan = planProteinTypes(m, slot);
       if (!allowedByPlan.size) continue;
       const level = Math.min(memberLevel(m), ruleCap(rulesFor(household, d, slot, [m])));

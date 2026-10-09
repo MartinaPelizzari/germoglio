@@ -236,15 +236,34 @@ const foodWords = (id) => FOOD_TYPES.find((f) => f.id === id)?.words || [];
 
 // 2 = corrispondenza per parole ("pane integrale" con "Pane integrale tostato"), 1 = categoria generica ("frutta fresca"
 // con una mela, "cereali" con il riso), 0 = nessuna
+// Crudo/secco e cotto non pesano uguale (100 g di lenticchie secche sono circa 250-300 g da cotte): se il piano e la ricetta dichiarano
+// stati diversi per legumi e cereali, la dose del piano non si applica a quell'ingrediente (meglio non abbinarli che sbagliare la dose).
+// Senza stato dichiarato si segue la convenzione: cereali a crudo, legumi come li scrive la ricetta.
+const STATEFUL = /\b(ceci|lenticch\w*|fagiol\w*|fave|piselli|legumi|riso|pasta|farro|orzo|quinoa|couscous|cous cous|bulgur|miglio|mais|spaghett\w*|penne|fusilli)\b/;
+const stateOf = (s) => {
+  const n = ` ${norm(s)} `;
+  if (/ (cott[aeio]|lessat[aeio]|bollit[aeio]) /.test(n)) return 'cotto';
+  if (/ (secch[ie]|secco|crud[aeio]|a crudo) /.test(n)) return 'secco';
+  return null;
+};
+export const stateClash = (optName, ingName) => {
+  if (!STATEFUL.test(norm(ingName)) || !STATEFUL.test(norm(optName))) return false;
+  // i cereali delle ricette (e della tabella nutrizionale) sono sempre a crudo, anche quando il nome non lo dice
+  const CEREAL = /\b(riso|pasta|farro|orzo|quinoa|couscous|cous cous|bulgur|miglio|mais|spaghett\w*|penne|fusilli)\b/;
+  const a = stateOf(optName), b = stateOf(ingName) || (CEREAL.test(norm(ingName)) ? 'secco' : null);
+  return !!a && !!b && a !== b;
+};
+
 export const matchScore = (opt, ing) => {
   const name = (ing.name || '').toLowerCase();
+  if (stateClash(opt.name, ing.name || '')) return 0;
   if ((opt.avoid || []).some((w) => norm(name).includes(w))) return 0;
   // "latte vaccino" non è il latte di soia, di mandorla o di avena
   if (/vaccin|parzialmente/.test(norm(opt.name)) && /soia|mandorl|avena|cocco|riso|vegetal/.test(norm(name))) return 0;
   const phrase = PHRASES[norm(opt.name).split(' ').slice(0, 2).join(' ')];
   if (phrase) {
     if (phrase.group) {
-      if (phrase.group === 'fruit' && norm(opt.name).startsWith('frutta fresca') && /datter|uvetta|secc|marmellat|confettur|succo|sciropp|cocco/.test(name)) return 0; // la frutta fresca non è secca né in vasetto
+      if (phrase.group === 'fruit' && norm(opt.name).startsWith('frutta fresca') && /datter|uvetta|secc|marmellat|confettur|succo|sciropp|cocco|noci\b|noce\b|mandorl|nocciol|pistacch|anacard|arachid|pinoli|pinolo/.test(name)) return 0; // la frutta fresca non è secca, a guscio né in vasetto
       return (ing.group || guessGroup(ing.name)) === phrase.group ? 1 : 0;
     }
     if (phrase.words) return phrase.words.some((w) => name.includes(w)) ? 2 : 0;

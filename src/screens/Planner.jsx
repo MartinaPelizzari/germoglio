@@ -9,7 +9,7 @@ import AdaptSheet from './AdaptSheet.jsx';
 import { planReport } from '../lib/adapt.js';
 import { HORIZON_WEEKS, householdSignature, useRegenerateWeek } from '../hooks/useAutoWeeks.js';
 import { DAYS, addWeeks, dayNumber, getWeekId, weekRangeLabel } from '../lib/dates.js';
-import { SLOTS, eatersOf, formatQty, mealOf, mealOfItem, scaleRecipe, slotPeople } from '../lib/scale.js';
+import { SLOTS, awayByRule, eatersOf, formatQty, householdOnDay, isPresent, mealOf, mealOfItem, scaleRecipe, slotPeople } from '../lib/scale.js';
 import { consumedKeys, dayInstances, isDayBalanced, movable, remainingInstances } from '../lib/day.js';
 import { canBorrow, categoryOf, coarseRequired, dayStateFor, missingGroups, newState, pairLabel, menusForSlot, proposeMenu, registerMeal, swapRecipe, uncoveredPairs, usesFor } from '../lib/planGen.js';
 import { goalStatus, foodLabel, weekCounts, weekSets } from '../lib/goals.js';
@@ -52,26 +52,30 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   // la settimana non c'è ancora: l'app la sta preparando in automatico (solo per le settimane da oggi in avanti, entro l'orizzonte)
   const preparing = !Object.keys(plan.days || {}).length && weekId >= getWeekId(new Date()) && weekId <= getWeekId(addWeeks(new Date(), HORIZON_WEEKS - 1)) && !!me;
   const data = (slot) => plan.days?.[dayIndex]?.[slot];
+  // la famiglia in questo giorno: chi per schema salta un pasto, in quel pasto non c'è (le correzioni del giorno hanno la precedenza)
+  const hh = React.useMemo(() => householdOnDay(household, dayIndex, plan.days?.[dayIndex]), [household, dayIndex, plan]);
   // un piatto che non ha più nessuno che lo mangia (per esempio perché il profilo di chi lo mangiava non prevede più questo pasto) non si mostra
-  const items = (slot) => (data(slot)?.items || []).filter((it) => !household.members.length || eatersOf(it, household, slot, data(slot)).length > 0);
-  const people = (slot) => slotPeople(household, slot, data(slot));
+  const items = (slot) => (data(slot)?.items || []).filter((it) => !hh.members.length || eatersOf(it, hh, slot, data(slot)).length > 0);
+  const people = (slot) => slotPeople(hh, slot, data(slot));
   const resolve = (item) => resolveItem(item, recipeMap);
-  const eatersFor = (item, slot) => eatersOf(item, household, slot, data(slot));
-  const constraintsFor = (slot, eaters = people(slot)) => mealConstraints(household, dayIndex, slot, eaters.length ? eaters : household.members);
+  const eatersFor = (item, slot) => eatersOf(item, hh, slot, data(slot));
+  const constraintsFor = (slot, eaters = people(slot)) => mealConstraints(hh, dayIndex, slot, eaters.length ? eaters : hh.members);
   // Gruppi del piano già consumati oggi (per chi regola sulla giornata), escludendo un pasto o un piatto che si sta rifacendo
   const dayStateNow = (excludeSlot, excludeInstance) => {
     const d = plan.days?.[dayIndex] || {};
     const cleaned = Object.fromEntries(Object.entries(d).map(([sl, dt]) => [sl, excludeInstance ? { ...dt, items: (dt?.items || []).filter((it) => it.instanceId !== excludeInstance) } : dt]));
-    return dayStateFor(household, cleaned, recipeMap, excludeSlot);
+    return dayStateFor(hh, cleaned, recipeMap, excludeSlot);
   };
-  const eatersFn = (it, sl, dt) => eatersOf(it, household, sl, dt);
+  const eatersFn = (it, sl, dt) => eatersOf(it, hh, sl, dt);
   const shared = (slot) => isSharedSlot(household, slot, data(slot));
   // Nei pasti individuali ognuno vede solo il proprio menu (e quello di chi ci ha aggiunto); i pasti condivisi li vedono tutti
   const mineOnly = (slot) => personal || !shared(slot);
   // Vista personale: solo i pasti e i piatti in cui ci sono io
   const iEat = (item, slot) => eatersFor(item, slot).some((m) => m.id === me?.id);
   const mySlots = me?.visibleSlots || SLOTS;
-  const visibleSlots = SLOTS.filter((s) => mySlots.includes(s) && (mineOnly(s) ? (me && (people(s).some((m) => m.id === me.id) || items(s).some((it) => iEat(it, s)))) : (people(s).length || items(s).length)));
+  // un pasto che io di solito faccio ma oggi no (schema di presenza o assenza segnata): resta visibile per poterlo riattivare
+  const meAway = (s) => !!me && mealOf(me, s).eats && !isPresent(me, s, dayIndex, data(s));
+  const visibleSlots = SLOTS.filter((s) => mySlots.includes(s) && (meAway(s) || (mineOnly(s) ? (me && (people(s).some((m) => m.id === me.id) || items(s).some((it) => iEat(it, s)))) : (people(s).length || items(s).length))));
   const entry = (sel, eaters) => ({ instanceId: crypto.randomUUID(), ...(sel.food ? { food: sel.food } : { recipeId: sel.recipe.id }), ...(eaters ? { eaters } : {}) });
   const save = (slot, list) => saveSlot(dayIndex, slot, { items: list });
   // Nei pasti individuali un piatto aggiunto a mano è il mio (e di chi ho aggiunto al mio pasto)
@@ -84,7 +88,19 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
       .map((it) => (Array.isArray(it.eaters) && it.eaters.includes(me.id) ? { ...it, eaters: [me.id, ...ids] } : it));
     saveSlot(dayIndex, slot, { items: list, joined: { ...(data(slot)?.joined || {}), [me.id]: ids } });
   };
-  const setAbsent = (slot, id) => { const cur = data(slot)?.absent || []; saveSlot(dayIndex, slot, { items: items(slot), absent: cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id] }); };
+  // Presente / assente a un pasto di questo giorno. Lo schema del profilo ("pranzo solo nel weekend") si corregge solo per questo giorno:
+  // absent = segnato assente a mano, here = segnato presente nonostante lo schema.
+  const setAbsent = (slot, id) => {
+    const d0 = data(slot) || {};
+    const member = household.members.find((m) => m.id === id);
+    const byRule = awayByRule(member, slot, dayIndex);
+    const present = isPresent(member, slot, dayIndex, d0);
+    const absent = (d0.absent || []).filter((x) => x !== id);
+    const here = (d0.here || []).filter((x) => x !== id);
+    if (!present && byRule) here.push(id);
+    if (present && !byRule) absent.push(id);
+    saveSlot(dayIndex, slot, { items: items(slot), absent, here });
+  };
   const setGuests = (slot, guests) => saveSlot(dayIndex, slot, { items: items(slot), guests });
 
   // Proposta per un pasto: un menu per ogni gruppo di persone con dieta diversa (se nessuna regola impone lo stesso piatto)
@@ -95,10 +111,10 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     const state = newState({ favorites, recency, counts: weekSets(without, household, recipeMap), day: dayStateNow(slot), month: monthOfWeek(weekId) });
     const out = [];
     let relaxed = false;
-    const all = menuClusters(household, dayIndex, slot, ppl, data(slot));
+    const all = menuClusters(hh, dayIndex, slot, ppl, data(slot));
     // pasto individuale: si rifà solo il mio menu, quello degli altri non si tocca
     const mine = shared || !me || !ppl.some((p) => p.id === me.id) ? all : all.filter((c) => c.eaters.some((e) => e.id === me.id));
-    const made = menusForSlot(recipes, household, dayIndex, slot, mine, state, recipeMap, ppl, constraintsFor);
+    const made = menusForSlot(recipes, hh, dayIndex, slot, mine, state, recipeMap, ppl, constraintsFor);
     relaxed = made.relaxed;
     out.push(...made.items);
     if (!out.length) return setNotice(`Nessuna proposta adatta per ${slot.toLowerCase()}. Controlla dieta, piano e regole in Famiglia.`);
@@ -114,11 +130,11 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   const changeMode = (slot, mode) => {
     const d0 = data(slot) || {};
     const nd = { ...d0, mode, joined: undefined };
-    const ppl = slotPeople(household, slot, d0);
+    const ppl = slotPeople(hh, slot, d0);
     setModeFor(null);
     const state = newState({ favorites, recency, counts: {}, day: dayStateNow(slot), month: monthOfWeek(weekId) });
     const out = [];
-    out.push(...menusForSlot(recipes, household, dayIndex, slot, menuClusters(household, dayIndex, slot, ppl, nd), state, recipeMap, ppl, constraintsFor).items);
+    out.push(...menusForSlot(recipes, hh, dayIndex, slot, menuClusters(hh, dayIndex, slot, ppl, nd), state, recipeMap, ppl, constraintsFor).items);
     saveSlot(dayIndex, slot, { items: out, mode, joined: Object.fromEntries(Object.keys(d0.joined || {}).map((k) => [k, []])) });
   };
 
@@ -138,7 +154,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
     setPicker(null);
     const list = items(slot);
     const old = action === 'replace' ? list[index] : null;
-    const idsOf = (explicit) => (explicit ? household.members.concat(data(slot)?.guests || []).filter((m) => explicit.includes(m.id)) : people(slot));
+    const idsOf = (explicit) => (explicit ? hh.members.concat(data(slot)?.guests || []).filter((m) => explicit.includes(m.id)) : people(slot));
     const eaters = idsOf(pair ? [pair.eater.id] : old?.eaters || defaultEaters(slot));
     // modalità giornata: quali gruppi del giorno consuma il piatto (servono per le dosi e per il conto della giornata)
     const dayState = dayStateNow(null, old?.instanceId);
@@ -217,7 +233,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
       );
     }
     const eaters = eatersFor(item, slot);
-    const problems = problemsFor(recipe, household, dayIndex, slot, eaters, item);
+    const problems = problemsFor(recipe, hh, dayIndex, slot, eaters, item);
     const doses = recipe.isFood ? eaters.map((e) => { const q = scaleRecipe(recipe, mealOfItem(e, slot, item))[0]; return `${personal ? '' : `${e.name} `}${formatQty(q.qty, q.unit)}`.trim(); }) : [];
     const many = people(slot).length + (data(slot)?.guests || []).length > 1 && (isSharedSlot(household, slot, data(slot)) || eaters.length > 1);
     return (
@@ -266,11 +282,12 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
   };
 
   const dayStatus = React.useMemo(() => {
-    if (!me || !isDayBalanced(me)) return { all: [], consumed: new Set(), left: [], total: 0 };
-    const consumed = consumedKeys(me, plan.days?.[dayIndex] || {}, (it) => resolveItem(it, recipeMap), (it, sl, dt) => eatersOf(it, household, sl, dt));
-    const all = dayInstances(me).filter((i) => movable(i.group));
+    const meDay = me && hh.members.find((m) => m.id === me.id); // io in questo giorno (senza i pasti che salto)
+    if (!meDay || !isDayBalanced(meDay)) return { all: [], consumed: new Set(), left: [], total: 0 };
+    const consumed = consumedKeys(meDay, plan.days?.[dayIndex] || {}, (it) => resolveItem(it, recipeMap), (it, sl, dt) => eatersOf(it, hh, sl, dt));
+    const all = dayInstances(meDay).filter((i) => movable(i.group));
     return { all, consumed, left: all.filter((i) => !consumed.has(i.key)), total: all.length };
-  }, [me, plan, dayIndex, household, recipeMap]);
+  }, [me, plan, dayIndex, hh, recipeMap]);
   const counts = React.useMemo(() => weekCounts(plan, household, recipeMap), [plan, household, recipeMap]);
   const membersWithGoals = household.members.filter((m) => (m.goals || []).length && (!personal || m.id === me.id));
   const pickerSlot = picker?.slot;
@@ -328,14 +345,14 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
 
       <div className="space-y-4">
         {visibleSlots.map((slot) => {
-          const rules = rulesFor(household, dayIndex, slot, me ? [me] : []);
+          const rules = rulesFor(hh, dayIndex, slot, me ? [me] : []);
           const missing = items(slot).length ? missingFor(slot) : [];
           const menus = menusOf(slot);
           return (
             <div key={slot} className="bg-white rounded-[24px] p-4 shadow-soft">
               <div className="flex items-center justify-between mb-2 min-h-[2.25rem]">
                 <span className="text-xs font-bold text-brand-600 uppercase tracking-wider">{slot}</span>
-                {items(slot).length > 0 && <button onClick={() => proposeSlot(slot)} aria-label={`Nuova proposta per ${slot}`} className="px-3 py-2 bg-brand-50 rounded-full text-brand-700 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Nuova proposta</button>}
+                {items(slot).length > 0 && !(meAway(slot) && mineOnly(slot)) && <button onClick={() => proposeSlot(slot)} aria-label={`Nuova proposta per ${slot}`} className="px-3 py-2 bg-brand-50 rounded-full text-brand-700 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Nuova proposta</button>}
               </div>
               {(() => {
                 const sh = isSharedSlot(household, slot, data(slot));
@@ -356,7 +373,13 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                   {missing.map((m) => <button key={m.key} onClick={() => setPicker({ slot, action: 'add', pair: m.pair, group: m.group })} className={`text-[11px] font-semibold rounded-full px-2 py-1 active:scale-95 ${m.borrowed ? 'bg-sky-50 text-sky-700' : 'bg-amber-50 text-amber-700'}`}>{m.group ? `${GROUP_EMOJI[m.group]} ` : ''}{m.borrowed ? `dalla giornata (${m.borrowed.toLowerCase()}): ` : 'manca: '}{m.label} +</button>)}
                 </div>
               )}
-              <div className="space-y-3">
+              {meAway(slot) && (
+                <div className="flex items-center justify-between gap-2 text-xs bg-slate-50 rounded-xl px-3 py-2 mb-3">
+                  <span className="text-slate-500">Oggi questo pasto non lo mangi{awayByRule(me, slot, dayIndex) ? ' (è nel tuo schema di presenza)' : ''}.</span>
+                  <button onClick={() => setAbsent(slot, me.id)} className="font-bold text-brand-700 shrink-0">Mangio comunque</button>
+                </div>
+              )}
+              {!(meAway(slot) && mineOnly(slot)) && <div className="space-y-3">
                 {items(slot).length === 0 && data(slot)?.covered
                   ? <div className="rounded-2xl bg-slate-50 p-4 text-center text-slate-400 text-xs font-medium">Già coperto dal resto della giornata: hai mangiato qui i suoi alimenti in un altro pasto.</div>
                   : items(slot).length === 0
@@ -380,7 +403,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                     </div>
                   ))}
                 {items(slot).length > 0 && <button onClick={() => setPicker({ slot, action: 'add' })} aria-label={`Aggiungi un piatto a ${slot}`} className="w-full py-2.5 border-2 border-dashed border-slate-100 rounded-2xl text-xs font-bold text-slate-400 flex items-center justify-center gap-1 active:scale-[0.98]"><Plus className="w-4 h-4" /> Aggiungi un piatto</button>}
-              </div>
+              </div>}
             </div>
           );
         })}
@@ -491,7 +514,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
         <Sheet title={`Mangia con te: ${joinFor.toLowerCase()}`} onClose={() => setJoinFor(null)}>
           <div className="p-5 space-y-3">
             <p className="text-sm text-slate-500">Chi aggiungi mangia lo stesso menu del tuo (con le sue dosi). Il suo menu individuale di questo pasto viene sostituito.</p>
-            {household.members.filter((m) => m.id !== me.id && mealOf(m, joinFor).eats).map((m) => {
+            {hh.members.filter((m) => m.id !== me.id && mealOf(m, joinFor).eats).map((m) => {
               const on = (data(joinFor)?.joined?.[me.id] || []).includes(m.id);
               const ids = data(joinFor)?.joined?.[me.id] || [];
               return (
@@ -544,20 +567,24 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                 <div className="space-y-2">
                   <p className="text-xs font-bold text-slate-400 uppercase">Chi c'è</p>
                   {household.members.filter((m) => mealOf(m, slot).eats).map((m) => {
-                    const here = !(data(slot)?.absent || []).includes(m.id);
+                    const here = isPresent(m, slot, dayIndex, data(slot));
+                    const byRule = awayByRule(m, slot, dayIndex);
                     return (
                       <button key={m.id} role="switch" aria-checked={here} onClick={() => setAbsent(slot, m.id)} className="w-full flex items-center gap-3 p-2 rounded-2xl bg-slate-50 text-left active:scale-[0.99]">
-                        <Avatar member={m} size="w-9 h-9 text-lg" active={here} /><span className={`flex-1 font-bold ${here ? 'text-slate-700' : 'text-slate-300'}`}>{m.name}</span><span className="text-xs font-bold text-slate-400">{here ? 'Mangia' : "Non c'è"}</span>
+                        <Avatar member={m} size="w-9 h-9 text-lg" active={here} />
+                        <span className="flex-1 min-w-0"><span className={`block font-bold ${here ? 'text-slate-700' : 'text-slate-300'}`}>{m.name}</span>{byRule && <span className="block text-[10px] text-slate-400">{here ? 'Oggi c\'è, anche se di solito questo pasto lo salta' : 'Di solito questo pasto lo salta'}</span>}</span>
+                        <span className="text-xs font-bold text-slate-400">{here ? 'Mangia' : "Non c'è"}</span>
                       </button>
                     );
                   })}
                   {(data(slot)?.guests || []).map((g) => (
                     <div key={g.id} className="flex items-center gap-3 p-2 rounded-2xl bg-slate-50"><span className="text-xl w-9 text-center">{g.emoji}</span><span className="flex-1 font-bold text-slate-700">{g.name} <span className="text-xs font-semibold text-slate-400">ospite</span></span><button onClick={() => setGuests(slot, data(slot).guests.filter((x) => x.id !== g.id))} aria-label={`Togli ospite ${g.name}`} className="p-2 text-slate-400"><Trash2 className="w-4 h-4" /></button></div>
                   ))}
+                  <p className="text-[11px] text-slate-400">Chi c'è conta nelle dosi e nella spesa subito. Per adattare anche i piatti (per esempio una variante in meno) premi "Nuova proposta" sul pasto.</p>
                   <button onClick={() => { setWhoFor(null); setGuestFor(slot); }} className="w-full py-2.5 bg-white border border-dashed border-slate-300 rounded-2xl text-sm font-bold text-slate-500 flex items-center justify-center gap-1.5 active:scale-[0.98]"><UserPlus className="w-4 h-4" /> Aggiungi un ospite</button>
                 </div>
               )}
-              {!sh && me && people(slot).some((p) => p.id === me.id) && household.members.some((m) => m.id !== me.id && mealOf(m, slot).eats) && (
+              {!sh && me && people(slot).some((p) => p.id === me.id) && hh.members.some((m) => m.id !== me.id && mealOf(m, slot).eats) && (
                 <div className="space-y-2">
                   <p className="text-xs font-bold text-slate-400 uppercase">Mangia con te</p>
                   <div className="flex items-center gap-1.5 flex-wrap">{(data(slot)?.joined?.[me.id] || []).map((id) => { const m = household.members.find((x) => x.id === id); return m ? <Avatar key={id} member={m} title={`${m.name} mangia con te`} /> : null; })}</div>
