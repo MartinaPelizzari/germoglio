@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Search, SlidersHorizontal } from 'lucide-react';
+import { Heart, Plus, Search, SlidersHorizontal } from 'lucide-react';
 import { useData } from '../hooks/data.jsx';
 import { DietBadge, RecipeThumb, Sheet } from '../components/ui.jsx';
 import RecipeDetail from './RecipeDetail.jsx';
@@ -12,7 +12,7 @@ const TIME_LABEL = { breve: 'Breve', media: 'Media', lunga: 'Lunga' };
 const DIET_FILTER_LABEL = { vegan: 'Per vegani', vegetarian: 'Per vegetariani', pescetarian: 'Per pescetariani', omnivore: 'Per onnivori', asporto: 'D\'asporto' };
 const ORIGIN_LABEL = { preferite: 'Preferite', mie: 'Create da me', base: 'Precaricate' };
 
-export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, onDelete }) {
+export default function RecipeBook({ filters, setFilters, onNew, onEdit, onDuplicate, onDelete }) {
   const { recipes, favorites, toggleFavorite } = useData();
   const [sel, setSel] = React.useState(null);
   const [showFilters, setShowFilters] = React.useState(false);
@@ -51,6 +51,7 @@ export default function RecipeBook({ filters, setFilters, onEdit, onDuplicate, o
             <input className="w-full pl-12 pr-4 py-3 bg-white rounded-2xl shadow-soft border-none focus:ring-2 focus:ring-brand-500" placeholder="Cerca ricetta o ingrediente" value={q} onChange={(e) => set({ q: e.target.value })} aria-label="Cerca" />
           </div>
           <button onClick={() => setShowFilters(!showFilters)} aria-label={`Filtri${activeCount ? `, ${activeCount} attivi` : ''}`} aria-expanded={showFilters} className={`relative p-3 rounded-2xl ${showFilters ? 'bg-brand-500 text-white' : 'bg-white text-slate-400 shadow-soft'}`}><SlidersHorizontal className="w-6 h-6" />{activeCount > 0 && <span className="absolute -top-1 -right-1 min-w-[1.25rem] h-5 px-1 rounded-full bg-brand-600 text-white text-[11px] font-bold flex items-center justify-center">{activeCount}</span>}</button>
+          {onNew && <button onClick={onNew} aria-label="Nuova ricetta" className="px-3.5 rounded-2xl bg-brand-600 text-white font-bold text-sm flex items-center gap-1 shadow-glow active:scale-95"><Plus className="w-5 h-5" /> <span className="hidden min-[380px]:inline">Nuova</span></button>}
         </div>
         {activeCount > 0 && (
           <div className="flex gap-1.5 overflow-x-auto no-scrollbar px-1" aria-label="Filtri attivi">

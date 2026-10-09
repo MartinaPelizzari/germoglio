@@ -1,12 +1,12 @@
 import React from 'react';
 import { signOut } from 'firebase/auth';
-import { Check, Copy, Download, LogOut, Upload } from 'lucide-react';
+import { Check, Copy, Download, HeartPulse, LogOut, Upload } from 'lucide-react';
 import { auth } from '../firebase.js';
 import { useData } from '../hooks/data.jsx';
 import { Block, Confirm, Sheet, Tabs } from '../components/ui.jsx';
 import { convertLegacyRecipe } from '../lib/legacy.js';
 
-export default function Settings({ onClose, onGoFamily }) {
+export default function Settings({ onClose, onGoFamily, onReport }) {
   const { user, userRecipes, saveRecipe, household, me, overrideIds, restoreAllSeeds, memberCount, createInvite, joinHousehold, leaveHousehold } = useData();
   const [code, setCode] = React.useState('');
   const [joinCode, setJoinCode] = React.useState('');
@@ -60,6 +60,11 @@ export default function Settings({ onClose, onGoFamily }) {
         {tab === 'account' && (
           <div className="space-y-5">
             <p className="text-sm text-slate-500">Accesso come <b className="text-slate-700">{user.email}</b></p>
+            {onReport && (
+              <Block title="Come ti senti col piano?" hint="Stanchezza, fame, disturbi o altro: rispondi a poche domande e ti do dei consigli, o ritocco il piano. Non sostituisce un medico.">
+                <button onClick={onReport} className="w-full py-3 bg-rose-50 text-rose-700 font-bold rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98]"><HeartPulse className="w-5 h-5" /> Ho una segnalazione da fare</button>
+              </Block>
+            )}
             <Block title="Il tuo profilo e il tuo piano" hint="Dieta, intolleranze, piano alimentare, pasti che vuoi vedere e come rispettare le quantità si cambiano dalla scheda Famiglia, aprendo il tuo profilo.">
               {onGoFamily && <button onClick={onGoFamily} className="w-full py-3 bg-brand-50 text-brand-700 font-bold rounded-2xl active:scale-[0.98]">Apri Famiglia</button>}
             </Block>

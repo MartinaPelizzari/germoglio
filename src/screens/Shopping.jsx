@@ -26,6 +26,7 @@ export default function Shopping({ weekDate, setWeekDate, days, setDays }) {
   const [pantryOpen, setPantryOpen] = React.useState(false);
   const [showCovered, setShowCovered] = React.useState(false);
   const [form, setForm] = React.useState({ name: '', qty: '', unit: 'g' });
+  const [daysOpen, setDaysOpen] = React.useState(false);
   const [haveFor, setHaveFor] = React.useState(null); // voce di cui si indica quanto se ne ha già
   const [haveQty, setHaveQty] = React.useState('');
   const applyHave = (item, qty) => {
@@ -78,9 +79,15 @@ export default function Shopping({ weekDate, setWeekDate, days, setDays }) {
         <button onClick={() => setAdding(true)} className="py-3 bg-brand-600 text-white rounded-2xl text-sm font-bold flex items-center justify-center gap-1.5 shadow-glow active:scale-95"><Plus className="w-4 h-4" /> Aggiungi alla lista</button>
         <button onClick={() => setPantryOpen(true)} className="py-3 bg-white text-slate-600 rounded-2xl text-sm font-bold flex items-center justify-center gap-1.5 shadow-sm active:scale-95"><Package className="w-4 h-4" /> Cosa ho in casa</button>
       </div>
-      <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-1 mb-2">Giorni compresi nella spesa</p>
-      <div className="flex justify-between mb-4 px-1" role="group" aria-label="Giorni da includere">
-        {DAY_LABELS.map((d, idx) => <button key={idx} onClick={() => toggleDay(idx)} aria-pressed={days.includes(idx)} className={`w-10 h-10 rounded-full font-bold text-xs active:scale-95 ${days.includes(idx) ? 'bg-brand-500 text-white' : 'bg-white text-slate-400 shadow-sm'}`}>{d}</button>)}
+      <div className="mb-4 px-1">
+        <button onClick={() => setDaysOpen(!daysOpen)} aria-expanded={daysOpen} className="text-xs font-bold text-slate-500 flex items-center gap-1 active:scale-95">
+          Spesa per {days.length === 7 ? 'tutta la settimana' : days.length === 0 ? 'nessun giorno' : `${days.length} ${days.length === 1 ? 'giorno' : 'giorni'}`} <span className="text-brand-700">· {daysOpen ? 'chiudi' : 'cambia'}</span>
+        </button>
+        {daysOpen && (
+          <div className="flex justify-between mt-3" role="group" aria-label="Giorni da includere">
+            {DAY_LABELS.map((d, idx) => <button key={idx} onClick={() => toggleDay(idx)} aria-pressed={days.includes(idx)} className={`w-10 h-10 rounded-full font-bold text-xs active:scale-95 ${days.includes(idx) ? 'bg-brand-500 text-white' : 'bg-white text-slate-400 shadow-sm'}`}>{d}</button>)}
+          </div>
+        )}
       </div>
 
       <div className="bg-white rounded-[32px] shadow-soft p-3 pb-8 relative min-h-[50vh]">

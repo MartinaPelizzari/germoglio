@@ -1,6 +1,6 @@
 import React from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-import { BookOpen, Calendar, HeartPulse, Leaf, Plus, Settings as SettingsIcon, ShoppingCart, Users } from 'lucide-react';
+import { BookOpen, Calendar, Leaf, Settings as SettingsIcon, ShoppingCart, Users } from 'lucide-react';
 import { auth } from './firebase.js';
 import { DataProvider, isFreeProfile, useData } from './hooks/data.jsx';
 import { Confirm, Spinner } from './components/ui.jsx';
@@ -110,7 +110,6 @@ export function Main() {
         <div className="h-14 flex justify-between items-center">
           <div className="flex items-center gap-2"><div className="bg-brand-100 p-2 rounded-xl text-brand-600"><Leaf className="w-5 h-5" /></div><h1 className="font-display font-bold text-xl text-slate-900 tracking-tight">Germoglio</h1></div>
           <div className="flex items-center">
-          <button onClick={() => setReport(null)} aria-label="Ho una segnalazione da fare" title="Ho una segnalazione da fare" className="p-2.5 rounded-full text-slate-500 active:scale-90"><HeartPulse className="w-5 h-5" /></button>
           <button onClick={() => setSettings(true)} aria-label="Impostazioni" className="p-2.5 -mr-2 rounded-full text-slate-500 active:scale-90"><SettingsIcon className="w-5 h-5" /></button>
           </div>
         </div>
@@ -121,7 +120,7 @@ export function Main() {
           <React.Suspense fallback={<div className="py-10 flex justify-center"><Spinner /></div>}>
           {tab === 'planner' && <CheckInCard onReport={setReport} />}
           {tab === 'planner' && <Planner weekDate={weekDate} setWeekDate={setWeekDate} dayIndex={dayIndex} setDayIndex={setDayIndex} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
-          {tab === 'recipes' && <RecipeBook filters={filters} setFilters={setFilters} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
+          {tab === 'recipes' && <RecipeBook filters={filters} setFilters={setFilters} onNew={() => { setDraft(emptyRecipe()); setTab('add'); }} onEdit={edit} onDuplicate={duplicate} onDelete={askDelete} />}
           {tab === 'add' && <RecipeForm data={draft} onChange={setDraft} onClose={closeDraft} onSave={save} />}
           {tab === 'family' && <Family />}
           {tab === 'shopping' && <Shopping weekDate={weekDate} setWeekDate={setWeekDate} days={shopDays} setDays={setShopDays} />}
@@ -133,7 +132,6 @@ export function Main() {
         <div className="flex justify-around items-end px-2 pt-2 pb-1 max-w-md mx-auto">
           <NavBtn icon={Calendar} label="Planner" active={tab === 'planner'} onClick={() => setTab('planner')} />
           <NavBtn icon={BookOpen} label="Ricette" active={tab === 'recipes'} onClick={() => setTab('recipes')} />
-          <button onClick={() => setTab('add')} aria-label="Aggiungi ricetta" className="relative -top-4 bg-brand-500 text-white rounded-2xl p-3.5 shadow-glow active:scale-95"><Plus className="w-6 h-6" /></button>
           <NavBtn icon={ShoppingCart} label="Spesa" active={tab === 'shopping'} onClick={() => setTab('shopping')} />
           <NavBtn icon={Users} label="Famiglia" active={tab === 'family'} onClick={() => setTab('family')} />
         </div>
@@ -154,7 +152,7 @@ export function Main() {
       {report !== undefined && <ReportSheet symptom={report} onClose={() => setReport(undefined)} />}
       </React.Suspense>
       <React.Suspense fallback={null}>
-      {settings && <Settings onClose={() => setSettings(false)} onGoFamily={() => { setSettings(false); setTab('family'); }} />}
+      {settings && <Settings onClose={() => setSettings(false)} onGoFamily={() => { setSettings(false); setTab('family'); }} onReport={() => { setSettings(false); setReport(null); }} />}
       </React.Suspense>
       {confirm && <Confirm title={confirm.title} msg={confirm.msg} onConfirm={confirm.action} onCancel={() => setConfirm(null)} />}
     </div>

@@ -82,7 +82,7 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
           </div>
         )}
 
-        <div className="sticky top-0 z-10 -mx-5 px-5 py-2 bg-white/95 backdrop-blur"><Tabs tabs={[{ id: 'persona', label: 'Persona' }, { id: 'piano', label: 'Piano' }, { id: 'presenza', label: 'Presenza' }, { id: 'regole', label: 'Regole' }]} value={tab} onChange={setTab} label="Sezioni del profilo" /></div>
+        <div className="sticky top-0 z-10 -mx-5 px-5 py-2 bg-white/95 backdrop-blur"><Tabs tabs={[{ id: 'persona', label: 'Persona' }, { id: 'piano', label: 'Piano' }, { id: 'abitudini', label: 'Abitudini' }]} value={tab} onChange={setTab} label="Sezioni del profilo" /></div>
         {tab === 'persona' && (
           <div className="space-y-6">
         <div className="flex items-center gap-4">
@@ -223,9 +223,9 @@ export default function ProfileEditor({ member, mine, title, intro, onChange, on
             )}
           </div>
         )}
-        {tab === 'presenza' && <PresenceEditor member={member} onChange={onChange} />}
-        {tab === 'regole' && (
-          <div className="space-y-6">
+        {tab === 'abitudini' && (
+          <div className="space-y-8">
+            <PresenceEditor member={member} onChange={onChange} />
         <div>
           <div className="flex items-center justify-between mb-2">
             <h4 className="font-display font-bold text-lg text-slate-800">Regole personali</h4>

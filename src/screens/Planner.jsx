@@ -354,7 +354,7 @@ export default function Planner({ weekDate, setWeekDate, dayIndex, setDayIndex, 
                 <span className="text-xs font-bold text-brand-600 uppercase tracking-wider">{slot}</span>
                 {items(slot).length > 0 && !(meAway(slot) && mineOnly(slot)) && <button onClick={() => proposeSlot(slot)} aria-label={`Nuova proposta per ${slot}`} className="px-3 py-2 bg-brand-50 rounded-full text-brand-700 text-xs font-bold flex items-center gap-1.5 active:scale-95"><Sparkles className="w-4 h-4" /> Nuova proposta</button>}
               </div>
-              {(() => {
+              {household.members.filter((m) => mealOf(m, slot).eats).length > 1 && (() => {
                 const sh = isSharedSlot(household, slot, data(slot));
                 const n = people(slot).length + (data(slot)?.guests || []).length;
                 const withMe = (data(slot)?.joined?.[me?.id] || []).length;

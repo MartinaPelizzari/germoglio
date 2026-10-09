@@ -28,7 +28,7 @@ export default function Family() {
   return (
     <div className="space-y-4 animate-fade-in pb-6">
       <h2 className="font-display font-extrabold text-2xl text-slate-900">Famiglia</h2>
-      <Tabs tabs={[{ id: 'people', label: 'Persone' }, { id: 'home', label: 'Casa e regole' }]} value={tab} onChange={setTab} label="Famiglia" />
+      <Tabs tabs={[{ id: 'people', label: 'Persone' }, { id: 'home', label: 'Casa' }]} value={tab} onChange={setTab} label="Famiglia" />
       {tab === 'people' && <p className="text-sm text-slate-500">Ognuno ha il proprio profilo (dieta, piano alimentare, intolleranze). Chi non usa l'app lo crei tu: lo modificate tutti finché non lo reclama dal suo account.</p>}
       {tab === 'people' && household.members.map((m) => {
         const editable = canEditProfile(m, uid);

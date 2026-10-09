@@ -213,3 +213,11 @@ Le ricette stanno in `src/data/recipes/*.json` (schema in `src/data/recipes/SPEC
 - **Crudo e cotto**: i cereali delle ricette sono a crudo; se il piano dice "pasta cotta" o "legumi cotti" e la ricetta ha l'ingrediente in stato diverso, la dose non si applica (prima si applicava lo stesso peso).
 - **Frutta secca**: un alimento sciolto come "nocciole" prendeva il gruppo "frutta" e la dose della frutta fresca (180 g di nocciole): corretto in `groups.js`, `dietPlan.js` e `planGen.js`.
 - **Fabbisogno**: metabolismo basale con Mifflin-St Jeor (usa l'altezza), confronto con le DRI 2023 nel riepilogo e regolazione delle calorie del piano; motivi e numeri in `docs/fabbisogni.md`.
+
+## Revisione dei percorsi (ottobre 2026)
+
+- **Navigazione**: quattro schede uguali (Planner, Ricette, Spesa, Famiglia) e un solo pulsante in alto (Impostazioni). Il "+" al centro è sparito: "Nuova ricetta" sta nel Ricettario, accanto alla ricerca. Il cuore delle segnalazioni di benessere è in Impostazioni > Account ("Come ti senti col piano?"); la domanda settimanale resta in cima al Planner.
+- **Profilo**: tre schede, Persona (chi sei e cosa non mangi), Piano (il piano, da leggere; "Modifica il piano" e "Crea un nuovo piano" in basso) e Abitudini (pasti che salti in certi giorni e regole personali).
+- **Famiglia**: Persone e Casa (pasti condivisi, cucina, regole condivise).
+- **Planner**: "chi mangia" compare solo nei pasti in cui mangiano più persone; nelle case con una persona sola non c'è.
+- **Spesa**: i giorni compresi sono una riga ("Spesa per tutta la settimana · cambia") invece di sette cerchi sempre in vista.
